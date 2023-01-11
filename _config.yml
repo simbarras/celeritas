@@ -6,3 +6,4 @@ plugins:
 include:
 - _sources
 - _static
+- _*.html

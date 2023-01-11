@@ -1,0 +1,376 @@
+\_form#0=30x11:$ 10^{-11} $
+\_form#1=154x28:\[
+ FF(E,cos)^2 = \Sigma_{j} \frac{a_j}{[1 + b_j x]^{n}}
+\]
+\_form#2=94x15:$ x= E^{2}(1-cos\theta) $
+\_form#3=184x14:$ \ln(Z)/3 + f_c (Coulomb correction) $
+\_form#4=151x14:$ ((Fel-fc)+Finel*invZ)$
+\_form#5=88x14:$ (1.0+invZ)/12 $
+\_form#6=43x14:$ \tau = t/\lambda $
+\_form#7=8x10:$ \lambda $
+\_form#8=26x10:$ \cos\theta $
+\_form#9=96x14:$ \kappa = \xi / T_\textrm{max} > 10 $
+\_form#10=71x13:$ \Delta E > \kappa T_{max} $
+\_form#11=29x11:$ T_{max} $
+\_form#12=56x13:$ \Delta E > \kappa T_{c} $
+\_form#13=64x11:$ T_{max} \le 2 T_c
+$
+\_form#14=14x11:$ T_c $
+\_form#15=63x14:$ \kappa = \xi / T_{max} $
+\_form#16=8x6:$ \kappa $
+\_form#17=8x6:$
+\kappa $
+\_form#18=14x13:$ E_1 $
+\_form#19=14x13:$ E_2 $
+\_form#20=14x13:$
+E_2 $
+\_form#21=28x15:$ 1 / E^2 $
+\_form#22=143x28:\[
+    p(\kappa) \propto \frac{\dif \sigma}{\dif k}s
+              \propto \frac{1}{\kappa} \chi_Z(E, \kappa)
+  \]
+\_form#23=46x14:$ \kappa = k / E $
+\_form#24=58x11:$ \kappa_c < \kappa < 1
+  $
+\_form#25=11x9:$ \kappa_c $
+\_form#26=14x13:$ E_c $
+\_form#27=20x14:$ 1/\kappa $
+\_form#28=9x9:$ \chi $
+\_form#29=79x30:\[
+  p_1(\kappa) \frac{1}{\ln 1/\kappa_c} \frac{1}{\kappa}
+  \]
+\_form#30=91x14:\[
+  \kappa = \exp( \xi \ln \kappa_c ) \,,
+  \]
+\_form#31=128x31:\[
+  p_2(\kappa) = \frac{\chi_Z(E, \kappa)}{\max_\kappa \chi_Z(E, \kappa)}
+  \]
+\_form#32=11x14:$d_\rho$
+\_form#33=119x16:\[
+   \kappa_\mathrm{min} = \ln (E_c^2 + d_\rho E^2)
+  \]
+\_form#34=126x16:\[
+   \kappa_\mathrm{max} = \ln (E^2 + d_\rho E^2) \, .
+  \]
+\_form#35=46x14:$ k = \kappa / E $
+\_form#36=226x24:\[
+   k = \sqrt{ \exp(\kappa_\mathrm{min} + \xi [\kappa_\mathrm{max} -
+\kappa_\mathrm{min}]) - d_\rho E^2}
+  \]
+\_form#37=6x10:$\theta$
+\_form#38=5x9:$t$
+\_form#39=50x10:$u = \cos\theta$
+\_form#40=63x14:$\exp(-t/\lambda_{1})$
+\_form#41=81x18:$\frac{1+2e^{-\kappa r}}{3} - e^{-2r}$
+\_form#42=46x14:$r = t/\lambda_{1}$
+\_form#43=55x14:$\kappa = \lambda_{1}/\lambda_{2}$
+\_form#44=26x10:$\cos\theta$
+\_form#45=9x6:$u$
+\_form#46=249x14:\[
+  g(u) = q [ p g_1(u) + (1-p) g_2(u) ] - (1 - q) g_3(u)
+\]
+\_form#47=58x14:$p,q \in [0,1]$
+\_form#48=10x9:$g_i$
+\_form#49=260x28:\[
+  g_1(u) = c_1 e^{-a(1-u)},
+  g_2(u) = \frac{c_2}{(b-u)^d},
+  g_3(u) = c_3
+\]
+\_form#50=6x10:$d$
+\_form#51=11x9:$g_1$
+\_form#52=60x23:$ \exp(-\frac{\theta^{2}}{2\theta_{0}^{2}}), $
+\_form#53=46x14:$\theta_0 \approx 1/1$
+\_form#54=13x9:$g_2$
+\_form#55=28x10:$b \approx 1$
+\_form#56=31x11:$\cos\theta^{2}$
+\_form#57=161x30:\[
+  \theta_0 = \frac{13.6\rm{MeV}}{\beta c p} z_{ch} \sqrt{\ln(t/X_o)} c
+\]
+\_form#58=40x13:$p, \beta\c, z_{ch}$
+\_form#59=28x14:$t/X_0$
+\_form#60=5x6:$c$
+\_form#61=69x13:$ Phi = \phi \pm \psi $
+\_form#62=98x14:$ psi \sim \exp(-\beta*v) $
+\_form#63=9x13:$\beta$
+\_form#64=155x26:\[
+    t(z) = \langle t \rangle = -\lambda_{1} \log(1 - \frac{z}{\lambda_{1}})
+\]
+\_form#65=148x18:$ t(z) = \frac{1}{\alpha} [ 1 - (1-\alpha w z)^{1/w}] $
+\_form#66=73x18:$ w = 1 + \frac{1}{\alpha \lambda_{10}}$
+\_form#67=6x6:$ z $
+\_form#68=5x9:$ t $
+\_form#69=126x28:\[
+    \langle z \rangle = \lambda_{1} [ 1 - \exp({-\frac{t}{\lambda_{1}}})]
+\]
+\_form#70=11x13:$\lambda_{1}$
+\_form#71=104x14:\[
+    \lambda_{1} (t) = \lambda_{10} (1 - \alpha t)
+\]
+\_form#72=64x19:$ \alpha = \frac{\lambda_{10} - \lambda_{11}}{t\lambda_{10}} $
+\_form#73=48x14:$ \alpha = 1/r_0 $
+\_form#74=11x9:$ r_o $
+\_form#75=44x14:$ \lambda_{10} (\lambda_{11}) $
+\_form#76=6x10:$ \delta $
+\_form#77=5x6:$ \epsilon $
+\_form#78=29x14:$ \Phi_1(\delta) $
+\_form#79=29x14:$ \Phi_2(\delta) $
+\_form#80=29x14:$ F_1(\delta) $
+\_form#81=29x14:$ F_2(\delta) $
+\_form#82=111x14:$ F_1 = 3\Phi_1(\delta) - \Phi_2(\delta) $
+\_form#83=136x14:$ F_2 =
+1.5\Phi_1(\delta) - 0.5\Phi_2(\delta) $
+\_form#84=6x10:$
+\delta $
+\_form#85=68x15:$ [\delta_\textrm{min},
+\delta_\textrm{max}] $
+\_form#86=99x15:$
+\delta_\textrm{min} = \delta(\epsilon = 1/2)$
+\_form#87=14x13:$ \Phi_1 $
+\_form#88=14x13:$ \Phi_2 $
+\_form#89=246x29:\[
+ \frac{\sigma^+}{\sigma^-}
+     = \exp( 2 \pi \alpha Z [ \beta^{-1}(E - k_c) - \beta^{-1}(E - k) ] )
+ \]
+\_form#90=203x39:\[
+\beta^{-1}(E) = \frac{c}{v} = \sqrt{1 - \left( \frac{m_e c^2}{E + m_e c^2}
+\right)^2}
+\,,
+ \]
+\_form#91=8x6:$ \alpha $
+\_form#92=10x10:$E$
+\_form#93=11x13:$k_c$
+\_form#94=6x10:$ k $
+\_form#95=39x19:$ \frac{\sigma^+}{\sigma^-} = 1 $
+\_form#96=45x14:$ k / E = 0 $
+\_form#97=48x14:$ k / E \to 1
+ $
+\_form#98=9x13:$ \beta $
+\_form#99=598x39:\[
+\beta^{-1}(K)
+ = \frac{K + m c^2}{\sqrt{K (K + 2 m c^2)}}
+ = \frac{K + mc^2}{\sqrt{K^2 + 2 K mc^2 + (mc^2)^2 - (mc^2)^2}}
+ = \frac{K + mc^2}{\sqrt{(K + mc^2)^2 - mc^2}}
+ = 1/\sqrt{1 - \left( \frac{mc^2}{K + mc^2} \right)^2}
+ = 1 / \beta(K)
+ \]
+\_form#100=324x16:\[
+\sigma(E)
+  = a_1 / E + a_2 / E^2 + a_3 / E^3 + a_4 / E^4 + a_5 / E^5 + a_6 / E^6
+  \: ,
+\]
+\_form#101=389x16:\[
+ \Phi (E, \cos) = R(\cos\theta) f(E, \cos)
+  R = [1 + cos^{2}]
+  f = [FF(E, cos) + AS(E)]^{2}
+\]
+\_form#102=120x29:\[
+  \chi(Z,E,\kappa) = \frac{\beta^2}{Z^2} k \frac{\dif \sigma}{\dif k},
+\]
+\_form#103=16x18:$ \frac{\dif \sigma}{\dif k} $
+\_form#104=28x14:$ xi(s) $
+\_form#105=24x14:$ G(s)
+$
+\_form#106=21x14:$ \phi(s) $
+\_form#107=45x14:$ \epsilon = E / k $
+\_form#108=23x14:$ g(s) $
+\_form#109=120x16:$ \Delta = max (\delta_{pos}^{2}, \epsilon \delta_{mom}^{2}) $
+\_form#110=163x36:\[
+  d = |\vec{AM}| \sin(\theta) = \frac{\vec{AM} \times \vec{AB}}{|\vec{AB}|}
+\]
+\_form#111=85x14:$dy/dx = f(x, y)$
+\_form#112=25x10:$ y_{n+1} $
+\_form#113=25x15:$ y^{*}_{n+1} $
+\_form#114=514x38:\[
+   y_{n+1}     = y_n + h \sum_{n=1}^{6} b_i  k_i + O(h^6)
+   y^{*}_{n+1} = y_n + h \sum_{n=1}^{7} b*_i k_i + O(h^5)
+   y_{error}   = y_{n+1} - y^{*}_{n+1} = \sum_{n=1}^{7} (b^{*}_i - b_i) k_i
+ \]
+\_form#115=8x10:$h$
+\_form#116=46x13:$x_n + h c_i$
+\_form#117=159x18:\[
+   y_{n+1/2}   = y_n + (h/2) \Sigma_{n=1}^{7} c^{*}_i k_i
+ \]
+\_form#118=10x10:$c^{*}$
+\_form#119=381x29:\[
+ m \frac{d^2 \vec{x}}{d t^2} = (q/c)(\vec{v} \times  \vec{B})
+ s = |v|t
+ \vec{y} = d\vec{x}/ds
+ \frac{d\vec{x}}{ds} = \vec{v}/|v|
+ \frac{d\vec{y}}{ds} = (q/pc)(\vec{y} \times \vec{B})
+\]
+\_form#120=80x28:\[
+ \frac{\dif y_{i}}{\dif s} = f_i (s, y_{i})
+\]
+\_form#121=270x28:\[
+ y_{n+1} - y_{n} = h f(x_n, y_n) = \frac{h}{6} (k_1 + 2 k_2 + 2 k_3 + k_4)
+\]
+\_form#122=223x28:\[
+ \Delta = y_2 - y_1, y(x+h) = y_2 + \frac{\Delta}{15} + \mathrm{O}(h^{6})
+\]
+\_form#123=74x14:$B = (0, 0, B_z)$
+\_form#124=116x14:$R = m gamma v/(qB)$
+\_form#125=64x14:$ -sign(q B_z)$
+\_form#126=58x14:$B(0, 0, B_z)$
+\_form#127=46x10:$ds = v dt$
+\_form#128=345x16:\[
+ d^2 x/ds^2 =  q/p (dy/ds) B_z
+ d^2 y/ds^2 = -q/p (dx/ds) B_z
+ d^2 z/ds^2 =  0
+\]
+\_form#129=15x9:$p_{\perp}$
+\_form#130=271x16:\[
+ (x, y) = M(\phi) (x_0, y_0)^T
+ (px, py) = M(\phi) (px_0, py_0)^T
+\]
+\_form#131=46x14:$\phi = s/R$
+\_form#132=30x14:$M(\phi)$
+\_form#133=8x9:$ y $
+\_form#134=184x31:\[
+\frac{f_y(y) - f_y(y_l)}{f_y(y_r) - f_y(y_l)}
+= \frac{f_x(x) - f_x(x_l)}{f_x(x_r) - f_x(x_l)}
+\]
+\_form#135=51x14:$ f_d(v) = v $
+\_form#136=6x10:$ d $
+\_form#137=69x14:$ f_d(v) = \log v $
+\_form#138=8x9:$y$
+\_form#139=271x31:\[
+ y = f^{-1}_y \left( f_y(y_l) + \frac{ p_y(n_y(y_l), y_r) }{ p_x(n_x(x_l),
+x_r)} \times p_x(n_x(x_l), x) \right)
+\]
+\_form#140=150x14:$p_y(y_1, y_2) \equiv f_y(y_1) + f_y(y_2)$
+\_form#141=125x16:$n_y(y_1) \equiv f^{-1}_y( - f_y(y_1) )$
+\_form#142=51x14:$ f_y(y) = y $
+\_form#143=70x14:$ f_y(y) = \log y $
+\_form#144=104x34:\[
+ E = E_\mathrm{min} \left( \frac{r}{r_\mathrm{min}} \right)^2
+\]
+\_form#145=190x14:\[
+f(x) = a_0 + x * (a_1 + x * (a_2 + ...))
+\]
+\_form#146=88x31:\[
+ r = r_\mathrm{min} \sqrt{\frac{E}{E_\mathrm{min}}}
+\]
+\_form#147=83x11:$0 <= x < x_\mathrm{max}$
+\_form#148=81x11:$0 <= y < y_\mathrm{max}$
+\_form#149=125x29:\[
+pc/E = \beta ; \quad \beta^2 = \frac{p^2 c^2}{E^2}
+\]
+\_form#150=98x15:\[
+E^2 = p^2 c^2 + m^2 c^4
+\]
+\_form#151=75x14:\[
+E = K + mc^2
+\]
+\_form#152=185x35:\[
+\beta^2 = 1 - \left( \frac{mc^2}{K + mc^2} \right)^2
+        = 1 - \gamma^{-2}
+\]
+\_form#153=9x9:$ \gamma $
+\_form#154=90x33:\[
+\gamma = \frac{1}{\sqrt{1 - v^2 / c^2}}
+\]
+\_form#155=120x15:\[
+E = \gamma mc^2 = K + mc^2
+\]
+\_form#156=70x28:\[
+\gamma = 1 + \frac{K}{mc^2}
+ \]
+\_form#157=90x29:\[
+p^2 = \frac{E^2}{c^2} - m^2 c^2
+\]
+\_form#158=118x29:\[
+p^2 = \frac{K^2}{c^2} + 2 * m * K
+\]
+\_form#159=165x33:\[
+  \frac{dE}{dx} = N_Z \int_0^{T_c} \frac{d \sigma_Z(E, T)}{dT} T dT
+\]
+\_form#160=101x33:\[
+  R = \int_0 ^{E_0} - \frac{dx}{dE} dE .
+\]
+\_form#161=181x39:\[
+  p = 1 - \exp \left( -\int_{E_0}^{E_1} n \sigma(E) \dif s \right),
+\]
+\_form#162=14x13:$ E_0 $
+\_form#163=26x9:$ \sigma_{max} $
+\_form#164=19x10:$ \sigma_{E_0} $
+\_form#165=31x14:$ \sigma(E_1) $
+\_form#166=63x30:\[
+  p = \frac{\sigma(E_1)}{\sigma_{\max}}.
+\]
+\_form#167=49x14:$ [\xi E_0, E_0) $
+\_form#168=8x13:$ \xi $
+\_form#169=53x13:$ \xi = 1 -
+\alpha $
+\_form#170=25x9:$ \sigma_{\max}
+$
+\_form#171=150x14:$ \sigma_{\max} = \max(
+\sigma(E_0), \sigma(\xi E_0) ) $
+\_form#172=25x9:$ \sigma_{\max} $
+\_form#173=136x24:\[
+  s = \alpha r + \rho (1 - \alpha) (2 - \frac{\rho}{r})
+\]
+\_form#174=8x6:$
+  \alpha $
+\_form#175=253x33:\[
+  f(x; \alpha, \beta) = \frac{x^{\alpha - 1} e^{-x / \beta}}{\beta^\alpha
+\Gamma(\alpha)} \quad \mathrm{for}\  x > 0, \quad \alpha, \beta > 0
+  \]
+\_form#176=151x16:$ d = \alpha - 1/3 $ and $ c = 1 / \sqrt{9d} $
+\_form#177=64x14:$ Z \sim N(0,1) $
+\_form#178=64x14:$ U \sim U(0,1) $
+\_form#179=75x15:$ v = (1 + cZ)^3 $
+\_form#180=171x15:$ \log U < Z^2 / 2 + d(1 - v + \log v) $
+\_form#181=13x10:$ dv $
+\_form#182=98x13:$ U < 1 - 0.0331 Z^4 $
+\_form#183=30x11:$ \alpha \ge 1 $
+\_form#184=30x10:$ \alpha < 1 $
+\_form#185=75x14:$ X \sim \Gamma(\alpha + 1) $
+\_form#186=80x16:$ X U^{1/\alpha} \sim \Gamma(\alpha) $
+\_form#187=271x16:\[
+x_1 = \sqrt{-2 \ln \xi_1} \cos(2 \pi \xi_2)
+x_2 = \sqrt{-2 \ln \xi_1} \sin(2 \pi \xi_2)
+ \]
+\_form#188=94x29:\[
+f(k; \lambda) = \frac{\lambda^k e^{-\lambda}}{k!}.
+\]
+\_form#189=71x36:\[
+\prod_{k = 1}^n U_k \le e^{-\lambda}
+\]
+\_form#190=58x10:$ X = n - 1 $
+\_form#191=28x11:$ \lambda + 1 $
+\_form#192=36x13:$ \lambda \le 16 $
+\_form#193=36x11:$ \lambda > 16 $
+\_form#194=25x14:$ [a, b) $
+\_form#195=216x30:\[
+ f(x; a, b) = \frac{1}{x (\ln b - \ln a)} \quad \mathrm{for} a \le x < b
+ \]
+\_form#196=163x35:\[
+x = a \left( \frac{b}{a} \right)^{\xi}
+  = a \exp\!\left(\xi \log \frac{b}{a} \right)
+ \]
+\_form#197=55x13:$ \xi' = 1 - \xi $
+\_form#198=73x19:$ y_i = \sum_{j=0}^{i-1} x_j $
+\_form#199=35x11:$ y_0 = 0 $
+\_form#200=204x13:\[
+\Omega =   \sin\theta\cos\phi\mathbf{i}
+         + \sin\theta\sin\phi\mathbf{j}
+         + \cos\theta\mathbf{k} \,.
+\]
+\_form#201=94x15:\[
+ y^2 + z^2 - R^2 = 0
+\]
+\_form#202=89x14:\[
+a x^2 + b^2 + c = 0
+\]
+\_form#203=136x16:\[
+x = -b/2 \pm \sqrt{(b/2)^2 - c}.
+\]
+\_form#204=318x15:\[
+ ax^2 + by^2 + cz^2 + dxy + eyz + fzx + gx + hy + iz + j = 0
+\]
+\_form#205=56x11:\[
+\vec x \cdot \vec n >= 0
+\]
+\_form#206=46x11:\[
+\vec x \cdot \vec n > 0
+\]

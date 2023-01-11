@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ORANGE &mdash; Celeritas v0.1.4 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Celeritas" href="celeritas.html" />
+    <link rel="prev" title="Core package" href="corecel.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Celeritas
+            <img src="../_static/celeritas-thumbnail.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.1.4
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../infrastructure.html">Infrastructure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="corecel.html">Core package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ORANGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="celeritas.html">Celeritas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../acknowledgments.html">Acknowledgments</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/release-history.html">Release History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/development.html">Development Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Celeritas</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../api.html">API documentation</a> &raquo;</li>
+      <li>ORANGE</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/orange.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="orange">
+<h1>ORANGE<a class="headerlink" href="#orange" title="Permalink to this heading"></a></h1>
+<p>The ORANGE (Oak Ridge Advanced Nested Geometry Engine) package is currently
+under development as the version in SCALE is ported to GPU.</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas12OrangeParamsE">
+<span id="_CPPv3N9celeritas12OrangeParamsE"></span><span id="_CPPv2N9celeritas12OrangeParamsE"></span><span id="celeritas::OrangeParams"></span><span class="target" id="d6/d3e/classceleritas_1_1_orange_params"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OrangeParams</span></span></span><a class="headerlink" href="#_CPPv4N9celeritas12OrangeParamsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Persistent model data for an ORANGE geometry. </p>
+<p>This class initializes and manages the data used by ORANGE (surfaces, volumes) and provides a host-based interface for them. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-unnamed-group">Unnamed Group</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas12OrangeParams7HostRefE">
+<span id="_CPPv3N9celeritas12OrangeParams7HostRefE"></span><span id="_CPPv2N9celeritas12OrangeParams7HostRefE"></span><span class="target" id="d6/d3e/classceleritas_1_1_orange_params_1a213db3937c29a633ba31c0ef006302f8"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HostRef</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="corecel.html#_CPPv4II_9Ownership_8MemSpaceE0EN9celeritas8HostCRefE" title="celeritas::HostCRef"><span class="n"><span class="pre">HostCRef</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">OrangeParamsData</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N9celeritas12OrangeParams7HostRefE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>References to constructed data </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas12OrangeParams9DeviceRefE">
+<span id="_CPPv3N9celeritas12OrangeParams9DeviceRefE"></span><span id="_CPPv2N9celeritas12OrangeParams9DeviceRefE"></span><span class="target" id="d6/d3e/classceleritas_1_1_orange_params_1a346a9d21da9989951b304406aca6df33"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DeviceRef</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="corecel.html#_CPPv4II_9Ownership_8MemSpaceE0EN9celeritas10DeviceCRefE" title="celeritas::DeviceCRef"><span class="n"><span class="pre">DeviceCRef</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">OrangeParamsData</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N9celeritas12OrangeParams9DeviceRefE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>References to constructed data </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas12OrangeParams17SpanConstVolumeIdE">
+<span id="_CPPv3N9celeritas12OrangeParams17SpanConstVolumeIdE"></span><span id="_CPPv2N9celeritas12OrangeParams17SpanConstVolumeIdE"></span><span class="target" id="d6/d3e/classceleritas_1_1_orange_params_1a8e02dbaa9102ef886b5f5e3b11eb3c0d"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SpanConstVolumeId</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="corecel.html#_CPPv4I0_NSt6size_tEEN9celeritas4SpanE" title="celeritas::Span"><span class="n"><span class="pre">Span</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">VolumeId</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N9celeritas12OrangeParams17SpanConstVolumeIdE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>References to constructed data </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas12OrangeParams12OrangeParamsERKNSt6stringE">
+<span id="_CPPv3N9celeritas12OrangeParams12OrangeParamsERKNSt6stringE"></span><span id="_CPPv2N9celeritas12OrangeParams12OrangeParamsERKNSt6stringE"></span><span id="celeritas::OrangeParams::OrangeParams__ssCR"></span><span class="target" id="d6/d3e/classceleritas_1_1_orange_params_1a947123758d38032fac8044aab1d58b7b"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OrangeParams</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">json_filename</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas12OrangeParams12OrangeParamsERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct from a JSON file (if JSON is enabled). </p>
+<p>The JSON format is defined by the SCALE ORANGE exporter (not currently distributed). </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas12OrangeParams12OrangeParamsE5Input">
+<span id="_CPPv3N9celeritas12OrangeParams12OrangeParamsE5Input"></span><span id="_CPPv2N9celeritas12OrangeParams12OrangeParamsE5Input"></span><span id="celeritas::OrangeParams::OrangeParams__Input"></span><span class="target" id="d6/d3e/classceleritas_1_1_orange_params_1a4c5efa92c0978b6b220b51a0eeada7fe"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OrangeParams</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9celeritas12OrangeParams5InputE" title="celeritas::OrangeParams::Input"><span class="n"><span class="pre">Input</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">input</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas12OrangeParams12OrangeParamsE5Input" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Advanced usage: construct from explicit host data. </p>
+<p>Volume and surface labels must be unique for the time being. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas12OrangeParams15supports_safetyEv">
+<span id="_CPPv3NK9celeritas12OrangeParams15supports_safetyEv"></span><span id="_CPPv2NK9celeritas12OrangeParams15supports_safetyEv"></span><span id="celeritas::OrangeParams::supports_safetyC"></span><span class="target" id="d6/d3e/classceleritas_1_1_orange_params_1a36832109ce2ce8515af547432fb2a401"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">supports_safety</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas12OrangeParams15supports_safetyEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Whether safety distance calculations are accurate and precise. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas12OrangeParams11num_volumesEv">
+<span id="_CPPv3NK9celeritas12OrangeParams11num_volumesEv"></span><span id="_CPPv2NK9celeritas12OrangeParams11num_volumesEv"></span><span id="celeritas::OrangeParams::num_volumesC"></span><span class="target" id="d6/d3e/classceleritas_1_1_orange_params_1a35ac81d2c2dd8b160fc225972acfc7a3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">VolumeId</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">num_volumes</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas12OrangeParams11num_volumesEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Number of volumes. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas12OrangeParams11id_to_labelE8VolumeId">
+<span id="_CPPv3NK9celeritas12OrangeParams11id_to_labelE8VolumeId"></span><span id="_CPPv2NK9celeritas12OrangeParams11id_to_labelE8VolumeId"></span><span id="celeritas::OrangeParams::id_to_label__VolumeIdC"></span><span class="target" id="d6/d3e/classceleritas_1_1_orange_params_1acdc3dd6cddb2ddc5b7c185d34331c7dd"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Label</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">id_to_label</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">VolumeId</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vol_id</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas12OrangeParams11id_to_labelE8VolumeId" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the label of a volume. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas12OrangeParams11find_volumeERKNSt6stringE">
+<span id="_CPPv3NK9celeritas12OrangeParams11find_volumeERKNSt6stringE"></span><span id="_CPPv2NK9celeritas12OrangeParams11find_volumeERKNSt6stringE"></span><span id="celeritas::OrangeParams::find_volume__ssCRC"></span><span class="target" id="d6/d3e/classceleritas_1_1_orange_params_1ae1e5446387506551272822aee934a80d"></span><span class="n"><span class="pre">VolumeId</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">find_volume</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas12OrangeParams11find_volumeERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Locate the volume ID corresponding to a label. </p>
+<p>If the label isn’t in the geometry, a null ID will be returned. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas12OrangeParams12find_volumesERKNSt6stringE">
+<span id="_CPPv3NK9celeritas12OrangeParams12find_volumesERKNSt6stringE"></span><span id="_CPPv2NK9celeritas12OrangeParams12find_volumesERKNSt6stringE"></span><span id="celeritas::OrangeParams::find_volumes__ssCRC"></span><span class="target" id="d6/d3e/classceleritas_1_1_orange_params_1aca63317f58dabba73fd667f0f2ebd147"></span><a class="reference internal" href="#_CPPv4N9celeritas12OrangeParams17SpanConstVolumeIdE" title="celeritas::OrangeParams::SpanConstVolumeId"><span class="n"><span class="pre">SpanConstVolumeId</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">find_volumes</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas12OrangeParams12find_volumesERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get zero or more volume IDs corresponding to a name. </p>
+<p>This is useful for volumes that are repeated in the geometry with different uniquifying ‘extensions’. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas12OrangeParams4bboxEv">
+<span id="_CPPv3NK9celeritas12OrangeParams4bboxEv"></span><span id="_CPPv2NK9celeritas12OrangeParams4bboxEv"></span><span id="celeritas::OrangeParams::bboxC"></span><span class="target" id="d6/d3e/classceleritas_1_1_orange_params_1a8fe1e19c724e93245181c889658dbb0c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">BoundingBox</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">bbox</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas12OrangeParams4bboxEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Outer bounding box of geometry. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas12OrangeParams11id_to_labelE9SurfaceId">
+<span id="_CPPv3NK9celeritas12OrangeParams11id_to_labelE9SurfaceId"></span><span id="_CPPv2NK9celeritas12OrangeParams11id_to_labelE9SurfaceId"></span><span id="celeritas::OrangeParams::id_to_label__SurfaceIdC"></span><span class="target" id="d6/d3e/classceleritas_1_1_orange_params_1ad8e0de3161fa54dcde36e773fb9faaa1"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Label</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">id_to_label</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">SurfaceId</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">surf_id</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas12OrangeParams11id_to_labelE9SurfaceId" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the label of a surface. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas12OrangeParams12find_surfaceERKNSt6stringE">
+<span id="_CPPv3NK9celeritas12OrangeParams12find_surfaceERKNSt6stringE"></span><span id="_CPPv2NK9celeritas12OrangeParams12find_surfaceERKNSt6stringE"></span><span id="celeritas::OrangeParams::find_surface__ssCRC"></span><span class="target" id="d6/d3e/classceleritas_1_1_orange_params_1a45944fe7416cba3174c68d806e9316d6"></span><span class="n"><span class="pre">SurfaceId</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">find_surface</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas12OrangeParams12find_surfaceERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Locate the surface ID corresponding to a label name. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas12OrangeParams12num_surfacesEv">
+<span id="_CPPv3NK9celeritas12OrangeParams12num_surfacesEv"></span><span id="_CPPv2NK9celeritas12OrangeParams12num_surfacesEv"></span><span id="celeritas::OrangeParams::num_surfacesC"></span><span class="target" id="d6/d3e/classceleritas_1_1_orange_params_1aede4a7eebc1272832b12e55e1ab9271d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">SurfaceId</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">num_surfaces</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas12OrangeParams12num_surfacesEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Number of distinct surfaces. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas12OrangeParams8host_refEv">
+<span id="_CPPv3NK9celeritas12OrangeParams8host_refEv"></span><span id="_CPPv2NK9celeritas12OrangeParams8host_refEv"></span><span id="celeritas::OrangeParams::host_refC"></span><span class="target" id="d6/d3e/classceleritas_1_1_orange_params_1a4c18de2d29c8f8f39b5ec9e37ed45750"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9celeritas12OrangeParams7HostRefE" title="celeritas::OrangeParams::HostRef"><span class="n"><span class="pre">HostRef</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">host_ref</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas12OrangeParams8host_refEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Reference to CPU geometry data. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas12OrangeParams10device_refEv">
+<span id="_CPPv3NK9celeritas12OrangeParams10device_refEv"></span><span id="_CPPv2NK9celeritas12OrangeParams10device_refEv"></span><span id="celeritas::OrangeParams::device_refC"></span><span class="target" id="d6/d3e/classceleritas_1_1_orange_params_1a9953b5694d6350d6cb800748695b3dd6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9celeritas12OrangeParams9DeviceRefE" title="celeritas::OrangeParams::DeviceRef"><span class="n"><span class="pre">DeviceRef</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">device_ref</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas12OrangeParams10device_refEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Reference to managed GPU geometry data. </p>
+</dd></dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas12OrangeParams5InputE">
+<span id="_CPPv3N9celeritas12OrangeParams5InputE"></span><span id="_CPPv2N9celeritas12OrangeParams5InputE"></span><span id="celeritas::OrangeParams::Input"></span><span class="target" id="dd/d25/structceleritas_1_1_orange_params_1_1_input"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Input</span></span></span><a class="headerlink" href="#_CPPv4N9celeritas12OrangeParams5InputE" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas12OrangeParams5Input8surfacesE">
+<span id="_CPPv3N9celeritas12OrangeParams5Input8surfacesE"></span><span id="_CPPv2N9celeritas12OrangeParams5Input8surfacesE"></span><span id="celeritas::OrangeParams::Input::surfaces__Surfaces"></span><span class="target" id="dd/d25/structceleritas_1_1_orange_params_1_1_input_1a0572222f6a3ba4de472111e55ce2f32a"></span><span class="n"><span class="pre">Surfaces</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">surfaces</span></span></span><a class="headerlink" href="#_CPPv4N9celeritas12OrangeParams5Input8surfacesE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Surface definitions. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas12OrangeParams5Input7volumesE">
+<span id="_CPPv3N9celeritas12OrangeParams5Input7volumesE"></span><span id="_CPPv2N9celeritas12OrangeParams5Input7volumesE"></span><span id="celeritas::OrangeParams::Input::volumes__Volumes"></span><span class="target" id="dd/d25/structceleritas_1_1_orange_params_1_1_input_1a93e2154d77ba2c62a85a7aa9fcffd9eb"></span><span class="n"><span class="pre">Volumes</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">volumes</span></span></span><a class="headerlink" href="#_CPPv4N9celeritas12OrangeParams5Input7volumesE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Volume definitions. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas12OrangeParams5Input14surface_labelsE">
+<span id="_CPPv3N9celeritas12OrangeParams5Input14surface_labelsE"></span><span id="_CPPv2N9celeritas12OrangeParams5Input14surface_labelsE"></span><span id="celeritas::OrangeParams::Input::surface_labels__VecLabel"></span><span class="target" id="dd/d25/structceleritas_1_1_orange_params_1_1_input_1a7f2aa4dbe9c8ee56ba066a812b7a3ded"></span><span class="n"><span class="pre">VecLabel</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">surface_labels</span></span></span><a class="headerlink" href="#_CPPv4N9celeritas12OrangeParams5Input14surface_labelsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Surface names (metadata) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas12OrangeParams5Input13volume_labelsE">
+<span id="_CPPv3N9celeritas12OrangeParams5Input13volume_labelsE"></span><span id="_CPPv2N9celeritas12OrangeParams5Input13volume_labelsE"></span><span id="celeritas::OrangeParams::Input::volume_labels__VecLabel"></span><span class="target" id="dd/d25/structceleritas_1_1_orange_params_1_1_input_1a6de99fcf2188fc7de8b385181efd859c"></span><span class="n"><span class="pre">VecLabel</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">volume_labels</span></span></span><a class="headerlink" href="#_CPPv4N9celeritas12OrangeParams5Input13volume_labelsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Volume names (metadata) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas12OrangeParams5Input4bboxE">
+<span id="_CPPv3N9celeritas12OrangeParams5Input4bboxE"></span><span id="_CPPv2N9celeritas12OrangeParams5Input4bboxE"></span><span id="celeritas::OrangeParams::Input::bbox__BoundingBox"></span><span class="target" id="dd/d25/structceleritas_1_1_orange_params_1_1_input_1a2ad31e67ded7494ca84412b7463f2f42"></span><span class="n"><span class="pre">BoundingBox</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bbox</span></span></span><a class="headerlink" href="#_CPPv4N9celeritas12OrangeParams5Input4bboxE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Outer bounding box (metadata) </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas15OrangeTrackViewE">
+<span id="_CPPv3N9celeritas15OrangeTrackViewE"></span><span id="_CPPv2N9celeritas15OrangeTrackViewE"></span><span id="celeritas::OrangeTrackView"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OrangeTrackView</span></span></span><a class="headerlink" href="#_CPPv4N9celeritas15OrangeTrackViewE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Navigate through an ORANGE geometry on a single thread. </p>
+<p>Ordering requirements:<ul class="simple">
+<li><p>initialize (through assignment) must come first</p></li>
+<li><p>access (pos, dir, volume/surface/is_outside/is_on_boundary) good at any time</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">find_safety</span></code> (fine at any time)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">find_next_step</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">move_internal</span></code> or <code class="docutils literal notranslate"><span class="pre">move_to_boundary</span></code> </p></li>
+<li><p>if on boundary, <code class="docutils literal notranslate"><span class="pre">cross_boundary</span></code> </p></li>
+<li><p>at any time, <code class="docutils literal notranslate"><span class="pre">set_dir</span></code> , but then must do <code class="docutils literal notranslate"><span class="pre">find_next_step</span></code> before any following action above</p></li>
+</ul>
+</p>
+<p>The main point is that <code class="docutils literal notranslate"><span class="pre">find_next_step</span></code> depends on the current straight-line direction, <code class="docutils literal notranslate"><span class="pre">move_to_boundary</span></code> and <code class="docutils literal notranslate"><span class="pre">move_internal</span></code> (with a step length) depends on that distance, and <code class="docutils literal notranslate"><span class="pre">cross_boundary</span></code> depends on being on the boundary with a knowledge of the post-boundary state.</p>
+<p><code class="docutils literal notranslate"><span class="pre">move_internal</span></code> with a position <em>should</em> depend on the safety distance but that’s not yet implemented. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-unnamed-group">Unnamed Group</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas15OrangeTrackView9ParamsRefE">
+<span id="_CPPv3N9celeritas15OrangeTrackView9ParamsRefE"></span><span id="_CPPv2N9celeritas15OrangeTrackView9ParamsRefE"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view_1ae7b638a00bb60dc52a8d791a85e82c49"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ParamsRef</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="corecel.html#_CPPv4II_9Ownership_8MemSpaceE0EN9celeritas10NativeCRefE" title="celeritas::NativeCRef"><span class="n"><span class="pre">NativeCRef</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">OrangeParamsData</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N9celeritas15OrangeTrackView9ParamsRefE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Type aliases </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas15OrangeTrackView8StateRefE">
+<span id="_CPPv3N9celeritas15OrangeTrackView8StateRefE"></span><span id="_CPPv2N9celeritas15OrangeTrackView8StateRefE"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view_1a4fd6b58fbe205373595cabdc396d5129"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StateRef</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="corecel.html#_CPPv4II_9Ownership_8MemSpaceE0EN9celeritas9NativeRefE" title="celeritas::NativeRef"><span class="n"><span class="pre">NativeRef</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">OrangeStateData</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N9celeritas15OrangeTrackView8StateRefE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Type aliases </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas15OrangeTrackView13Initializer_tE">
+<span id="_CPPv3N9celeritas15OrangeTrackView13Initializer_tE"></span><span id="_CPPv2N9celeritas15OrangeTrackView13Initializer_tE"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view_1a7300c1ea3bbb8fb079993af2a2f31dbc"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Initializer_t</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">GeoTrackInitializer</span></span><a class="headerlink" href="#_CPPv4N9celeritas15OrangeTrackView13Initializer_tE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Type aliases </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas15OrangeTrackView15OrangeTrackViewERK9ParamsRefRK8StateRef8ThreadId">
+<span id="_CPPv3N9celeritas15OrangeTrackView15OrangeTrackViewERK9ParamsRefRK8StateRef8ThreadId"></span><span id="_CPPv2N9celeritas15OrangeTrackView15OrangeTrackViewERK9ParamsRefRK8StateRef8ThreadId"></span><span id="celeritas::OrangeTrackView::OrangeTrackView__ParamsRefCR.StateRefCR.ThreadId"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view_1ae8e4ecba35a40731c2e126fdb915724e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OrangeTrackView</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9celeritas15OrangeTrackView9ParamsRefE" title="celeritas::OrangeTrackView::ParamsRef"><span class="n"><span class="pre">ParamsRef</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">params</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9celeritas15OrangeTrackView8StateRefE" title="celeritas::OrangeTrackView::StateRef"><span class="n"><span class="pre">StateRef</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">states</span></span>, <span class="n"><span class="pre">ThreadId</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tid</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas15OrangeTrackView15OrangeTrackViewERK9ParamsRefRK8StateRef8ThreadId" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct from persistent and state data. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas15OrangeTrackViewaSERK13Initializer_t">
+<span id="_CPPv3N9celeritas15OrangeTrackViewaSERK13Initializer_t"></span><span id="_CPPv2N9celeritas15OrangeTrackViewaSERK13Initializer_t"></span><span id="celeritas::OrangeTrackView::assign-operator__Initializer_tCR"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view_1a97f510141ddbc71feb205942857f9aeb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9celeritas15OrangeTrackViewE" title="celeritas::OrangeTrackView"><span class="n"><span class="pre">OrangeTrackView</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9celeritas15OrangeTrackView13Initializer_tE" title="celeritas::OrangeTrackView::Initializer_t"><span class="n"><span class="pre">Initializer_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">init</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas15OrangeTrackViewaSERK13Initializer_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct the state. </p>
+<p>Expensive. This function should only be called to initialize an event from a starting location and direction. Secondaries will initialize their states from a copy of the parent. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas15OrangeTrackViewaSERK19DetailedInitializer">
+<span id="_CPPv3N9celeritas15OrangeTrackViewaSERK19DetailedInitializer"></span><span id="_CPPv2N9celeritas15OrangeTrackViewaSERK19DetailedInitializer"></span><span id="celeritas::OrangeTrackView::assign-operator__DetailedInitializerCR"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view_1a9a28b3513b3aa8927ae2552e7eb47193"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9celeritas15OrangeTrackViewE" title="celeritas::OrangeTrackView"><span class="n"><span class="pre">OrangeTrackView</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9celeritas15OrangeTrackView19DetailedInitializerE" title="celeritas::OrangeTrackView::DetailedInitializer"><span class="n"><span class="pre">DetailedInitializer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">init</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas15OrangeTrackViewaSERK19DetailedInitializer" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct the state from a direction and a copy of the parent state. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas15OrangeTrackView3posEv">
+<span id="_CPPv3NK9celeritas15OrangeTrackView3posEv"></span><span id="_CPPv2NK9celeritas15OrangeTrackView3posEv"></span><span id="celeritas::OrangeTrackView::posC"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view_1aba92dedf808c115e311dd8313d02aace"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Real3</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">pos</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas15OrangeTrackView3posEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The current position. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas15OrangeTrackView3dirEv">
+<span id="_CPPv3NK9celeritas15OrangeTrackView3dirEv"></span><span id="_CPPv2NK9celeritas15OrangeTrackView3dirEv"></span><span id="celeritas::OrangeTrackView::dirC"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view_1a55c3476f8abb665b09127539443b6fcf"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Real3</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">dir</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas15OrangeTrackView3dirEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The current direction. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas15OrangeTrackView9volume_idEv">
+<span id="_CPPv3NK9celeritas15OrangeTrackView9volume_idEv"></span><span id="_CPPv2NK9celeritas15OrangeTrackView9volume_idEv"></span><span id="celeritas::OrangeTrackView::volume_idC"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view_1aea6c281573cefc3846adda6cfc723e8f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">VolumeId</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">volume_id</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas15OrangeTrackView9volume_idEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The current volume ID (null if outside) </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas15OrangeTrackView10surface_idEv">
+<span id="_CPPv3NK9celeritas15OrangeTrackView10surface_idEv"></span><span id="_CPPv2NK9celeritas15OrangeTrackView10surface_idEv"></span><span id="celeritas::OrangeTrackView::surface_idC"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view_1a96fbf91e88522acb5e47a41a70168133"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">SurfaceId</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">surface_id</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas15OrangeTrackView10surface_idEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The current surface ID. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas15OrangeTrackView15next_surface_idEv">
+<span id="_CPPv3NK9celeritas15OrangeTrackView15next_surface_idEv"></span><span id="_CPPv2NK9celeritas15OrangeTrackView15next_surface_idEv"></span><span id="celeritas::OrangeTrackView::next_surface_idC"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view_1a92dfc4ab39ef42f14096f9838d593f01"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">SurfaceId</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">next_surface_id</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas15OrangeTrackView15next_surface_idEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>After ‘find_next_step’, the next straight-line surface. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas15OrangeTrackView10is_outsideEv">
+<span id="_CPPv3NK9celeritas15OrangeTrackView10is_outsideEv"></span><span id="_CPPv2NK9celeritas15OrangeTrackView10is_outsideEv"></span><span id="celeritas::OrangeTrackView::is_outsideC"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view_1afc5f07d474599e8d7e4993d533f8cab2"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_outside</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas15OrangeTrackView10is_outsideEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Whether the track is outside the valid geometry region. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas15OrangeTrackView14is_on_boundaryEv">
+<span id="_CPPv3NK9celeritas15OrangeTrackView14is_on_boundaryEv"></span><span id="_CPPv2NK9celeritas15OrangeTrackView14is_on_boundaryEv"></span><span id="celeritas::OrangeTrackView::is_on_boundaryC"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view_1a705cdc7b8798a328ca73029be26fe4f1"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_on_boundary</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas15OrangeTrackView14is_on_boundaryEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Whether the track is exactly on a surface. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas15OrangeTrackView14find_next_stepEv">
+<span id="_CPPv3N9celeritas15OrangeTrackView14find_next_stepEv"></span><span id="_CPPv2N9celeritas15OrangeTrackView14find_next_stepEv"></span><span id="celeritas::OrangeTrackView::find_next_step"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view_1ac5117f2992e983757e9fa5b507b7845e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">Propagation</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">find_next_step</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas15OrangeTrackView14find_next_stepEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Find the distance to the next geometric boundary. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas15OrangeTrackView14find_next_stepE9real_type">
+<span id="_CPPv3N9celeritas15OrangeTrackView14find_next_stepE9real_type"></span><span id="_CPPv2N9celeritas15OrangeTrackView14find_next_stepE9real_type"></span><span id="celeritas::OrangeTrackView::find_next_step__real_type"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view_1a52ec43fda3466dfdcfb496913ae4c19f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">Propagation</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">find_next_step</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="corecel.html#_CPPv4N9celeritas9real_typeE" title="celeritas::real_type"><span class="n"><span class="pre">real_type</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">max_step</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas15OrangeTrackView14find_next_stepE9real_type" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Find a nearby distance to the next geometric boundary up to a distance. </p>
+<p>This may reduce the number of surfaces needed to check, sort, or write to temporary memory, thereby speeding up transport. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas15OrangeTrackView11find_safetyEv">
+<span id="_CPPv3N9celeritas15OrangeTrackView11find_safetyEv"></span><span id="_CPPv2N9celeritas15OrangeTrackView11find_safetyEv"></span><span id="celeritas::OrangeTrackView::find_safety"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view_1a79343c4a27b749fbc547addf5096a25d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="corecel.html#_CPPv4N9celeritas9real_typeE" title="celeritas::real_type"><span class="n"><span class="pre">real_type</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">find_safety</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas15OrangeTrackView11find_safetyEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Find the distance to the nearest boundary in any direction. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas15OrangeTrackView16move_to_boundaryEv">
+<span id="_CPPv3N9celeritas15OrangeTrackView16move_to_boundaryEv"></span><span id="_CPPv2N9celeritas15OrangeTrackView16move_to_boundaryEv"></span><span id="celeritas::OrangeTrackView::move_to_boundary"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view_1a51b269b0f6fe497d10c147bd552762de"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">move_to_boundary</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas15OrangeTrackView16move_to_boundaryEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Move to the next straight-line boundary but do not change volume. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas15OrangeTrackView13move_internalE9real_type">
+<span id="_CPPv3N9celeritas15OrangeTrackView13move_internalE9real_type"></span><span id="_CPPv2N9celeritas15OrangeTrackView13move_internalE9real_type"></span><span id="celeritas::OrangeTrackView::move_internal__real_type"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view_1a723e11bf2bcb490eef4d2346d1006958"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">move_internal</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="corecel.html#_CPPv4N9celeritas9real_typeE" title="celeritas::real_type"><span class="n"><span class="pre">real_type</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">step</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas15OrangeTrackView13move_internalE9real_type" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Move within the current volume. </p>
+<p>The straight-line distance <em>must</em> be less than the distance to the boundary. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas15OrangeTrackView13move_internalERK5Real3">
+<span id="_CPPv3N9celeritas15OrangeTrackView13move_internalERK5Real3"></span><span id="_CPPv2N9celeritas15OrangeTrackView13move_internalERK5Real3"></span><span id="celeritas::OrangeTrackView::move_internal__Real3CR"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view_1aaf8a541c0ce18c99ce8ad61bb2b38f37"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">move_internal</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Real3</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pos</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas15OrangeTrackView13move_internalERK5Real3" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Move within the current volume to a nearby point. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Todo:</span></em></dt>
+<dd><p>Currently it’s up to the caller to make sure that the position is “nearby”. We should actually test this with a safety distance. </p>
+</dd></dl>
+
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas15OrangeTrackView14cross_boundaryEv">
+<span id="_CPPv3N9celeritas15OrangeTrackView14cross_boundaryEv"></span><span id="_CPPv2N9celeritas15OrangeTrackView14cross_boundaryEv"></span><span id="celeritas::OrangeTrackView::cross_boundary"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view_1afc0383b91b06c84bbb26750f3a808504"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cross_boundary</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas15OrangeTrackView14cross_boundaryEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Cross from one side of the current surface to the other. </p>
+<p>The position <em>must</em> be on the boundary following a move-to-boundary. This should only be called once per boundary crossing. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas15OrangeTrackView7set_dirERK5Real3">
+<span id="_CPPv3N9celeritas15OrangeTrackView7set_dirERK5Real3"></span><span id="_CPPv2N9celeritas15OrangeTrackView7set_dirERK5Real3"></span><span id="celeritas::OrangeTrackView::set_dir__Real3CR"></span><span class="target" id="d4/d53/classceleritas_1_1_orange_track_view_1a4734dad5878859b24e585140d9d5b6c8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_dir</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Real3</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newdir</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas15OrangeTrackView7set_dirERK5Real3" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Change the track’s direction. </p>
+<p>This happens after a scattering event or movement inside a magnetic field. It resets the calculated distance-to-boundary. It is allowed to happen on the boundary, but changing direction so that it goes from pointing outward to inward (or vice versa) will mean that <code class="docutils literal notranslate"><span class="pre">cross_boundary</span></code> will be a null-op. </p>
+</dd></dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas15OrangeTrackView19DetailedInitializerE">
+<span id="_CPPv3N9celeritas15OrangeTrackView19DetailedInitializerE"></span><span id="_CPPv2N9celeritas15OrangeTrackView19DetailedInitializerE"></span><span id="celeritas::OrangeTrackView::DetailedInitializer"></span><span class="target" id="d6/d97/structceleritas_1_1_orange_track_view_1_1_detailed_initializer"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DetailedInitializer</span></span></span><a class="headerlink" href="#_CPPv4N9celeritas15OrangeTrackView19DetailedInitializerE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Helper struct for initializing from an existing geometry state. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas15OrangeTrackView19DetailedInitializer5otherE">
+<span id="_CPPv3N9celeritas15OrangeTrackView19DetailedInitializer5otherE"></span><span id="_CPPv2N9celeritas15OrangeTrackView19DetailedInitializer5otherE"></span><span id="celeritas::OrangeTrackView::DetailedInitializer::other__OrangeTrackViewR"></span><span class="target" id="d6/d97/structceleritas_1_1_orange_track_view_1_1_detailed_initializer_1a98f5c6399dc189e828c2e7e0f7a48298"></span><a class="reference internal" href="#_CPPv4N9celeritas15OrangeTrackViewE" title="celeritas::OrangeTrackView"><span class="n"><span class="pre">OrangeTrackView</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">other</span></span></span><a class="headerlink" href="#_CPPv4N9celeritas15OrangeTrackView19DetailedInitializer5otherE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Existing geometry. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas15OrangeTrackView19DetailedInitializer3dirE">
+<span id="_CPPv3N9celeritas15OrangeTrackView19DetailedInitializer3dirE"></span><span id="_CPPv2N9celeritas15OrangeTrackView19DetailedInitializer3dirE"></span><span id="celeritas::OrangeTrackView::DetailedInitializer::dir__Real3"></span><span class="target" id="d6/d97/structceleritas_1_1_orange_track_view_1_1_detailed_initializer_1a8aebe3ed70032a3098fdee1775dc004a"></span><span class="n"><span class="pre">Real3</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dir</span></span></span><a class="headerlink" href="#_CPPv4N9celeritas15OrangeTrackView19DetailedInitializer3dirE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>New direction. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="corecel.html" class="btn btn-neutral float-left" title="Core package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="celeritas.html" class="btn btn-neutral float-right" title="Celeritas" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UT–Battelle/ORNL and Celeritas team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

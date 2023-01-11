@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Development Guide &mdash; Celeritas v0.1.4 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="License" href="license.html" />
+    <link rel="prev" title="Release History" href="release-history.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Celeritas
+            <img src="../_static/celeritas-thumbnail.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.1.4
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../infrastructure.html">Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../acknowledgments.html">Acknowledgments</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="release-history.html">Release History</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Development Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#contributing-to-celeritas">Contributing to Celeritas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#copyright">Copyright</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#development-prerequisites">Development prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pull-request-process">Pull request process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ownership-and-authorship">Ownership and Authorship</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#code-development-guidelines">Code development guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#maximize-encapsulation">Maximize encapsulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#maximize-code-reuse">Maximize code reuse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#minimize-compile-time">Minimize compile time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prefer-single-state-classes">Prefer single-state classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#learn-from-the-pros">Learn from the pros</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-thoroughly">Test thoroughly</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#style-guidelines">Style guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#formatting">Formatting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#symbol-names">Symbol names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#file-names">File names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#device-compilation">Device compilation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#variable-names">Variable names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#function-arguments-and-return-values">Function arguments and return values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#odds-and-ends">Odds and ends</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#data-management">Data management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Celeritas</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Development Guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/appendices/development.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="development-guide">
+<span id="development"></span><h1>Development Guide<a class="headerlink" href="#development-guide" title="Permalink to this heading"></a></h1>
+<p>The agility, extensibility, and performance of Celeritas depend strongly on
+software infrastructure and best practices. This appendix describes how to
+modify and extend the codebase.</p>
+<section id="contributing-to-celeritas">
+<h2>Contributing to Celeritas<a class="headerlink" href="#contributing-to-celeritas" title="Permalink to this heading"></a></h2>
+<p>Thank you for your interest in the Celeritas project! Although Celeritas is
+developed primarily by a group of U.S. Department of Energy subcontractors, our
+goal is to increase community involvement and integration over time. We welcome
+your contributions!</p>
+<section id="copyright">
+<h3>Copyright<a class="headerlink" href="#copyright" title="Permalink to this heading"></a></h3>
+<p>All submissions to the Celeritas project are automatically licensed under the
+terms of [the project copyright](COPYRIGHT) as formalized by the [GitHub terms
+of service](<a class="reference external" href="https://docs.github.com/en/github/site-policy/github-terms-of-service#6-contributions-under-repository-license">https://docs.github.com/en/github/site-policy/github-terms-of-service#6-contributions-under-repository-license</a>).</p>
+</section>
+<section id="development-prerequisites">
+<h3>Development prerequisites<a class="headerlink" href="#development-prerequisites" title="Permalink to this heading"></a></h3>
+<p>To meet the <a class="reference internal" href="#formatting"><span class="std std-ref">Formatting</span></a> requirements described in the development guide,
+make sure that <a class="reference external" href="https://clang.llvm.org/docs/ClangFormat.html">clang-format</a> is installed on your development
+Run <code class="docutils literal notranslate"><span class="pre">scripts/dev/install-commit-hooks.sh</span></code> to to install a git post-commit hook
+that will amend each commit with clang-format updates if necessary.</p>
+<p>A mostly consistent set of decorations (separators, Doxygen comment structure,
+etc.) are used throughout the code, so try to make new files look like existing
+ones. Use the <code class="docutils literal notranslate"><span class="pre">celeritas-gen.py</span></code> script (in the <code class="docutils literal notranslate"><span class="pre">scripts/dev</span></code> directory) to
+generate skeletons for new files, and use existing source code as a guide to
+how to structure the decorations.</p>
+</section>
+<section id="pull-request-process">
+<h3>Pull request process<a class="headerlink" href="#pull-request-process" title="Permalink to this heading"></a></h3>
+<p>Celeritas uses the “squash and merge” process to ensure continuity of the code
+history and provide easy bisecting because all commits pass all tests.
+Squashing eliminates the potential of broken commits and relieves developers of
+the burden of worrying about clean commit messages within a branch.</p>
+<p>Each pull request must be reviewed by at least one person knowledgable about
+the section of code being modified. Physics code should be compared against
+reference papers and other codes such as Geant4. By the end of the code review,
+the reviewer should understand the code well enough to maintain it (by
+extension or modification) in the future. The review process must be based on
+<em>constructive feedback</em> (“here’s a suggestion to make this better” or “did you
+consider what would happen if X?”), not <em>destructive feedback</em> (“this code is
+ugly”).</p>
+<p>Reviews should not be started until the “draft” status has been removed (if it
+was set to begin with). Once a pull request is under review, <em>do not</em> rebase,
+squash, or otherwise alter the branch history. It causes GitHub to lose
+comments and causes notifications to redirect. Additionally it will lose
+information about whether the test passed and failed on previous commits.</p>
+<p>The code guidelines (see the developer section of the user manual) must be
+followed for all new code and code changes. This includes the use of the
+correct formatting as well as the addition of new unit tests for new code or
+bug fixes.</p>
+<p>All tests must pass on the CI runner before a PR can be merged. (Exceptions
+will be made if any failures are clearly unrelated to the changes and enough
+tests and/or configuration are passing to show that the new code is working.
+For example, some of the configurations currently fail due to disk space issues.)</p>
+<p>Since there are few enough merge requests these days, only Maintainers may
+commit a merge.</p>
+</section>
+<section id="ownership-and-authorship">
+<h3>Ownership and Authorship<a class="headerlink" href="#ownership-and-authorship" title="Permalink to this heading"></a></h3>
+<p>The person who writes a line of code is its author but not its owner.
+Celeritas is a collaborative project with collective ownership: as much as
+possible, there should be a shared responsibility for the code.
+If the code is reviewed according to the guidelines above, at least two people
+should always be comfortable modifying any piece of code.</p>
+</section>
+</section>
+<section id="code-development-guidelines">
+<h2>Code development guidelines<a class="headerlink" href="#code-development-guidelines" title="Permalink to this heading"></a></h2>
+<p>These are a list of recommendations when writing new code.</p>
+<section id="maximize-encapsulation">
+<h3>Maximize encapsulation<a class="headerlink" href="#maximize-encapsulation" title="Permalink to this heading"></a></h3>
+<p>Encapsulation is about making a piece of code into a black box. The fewer lines
+connecting these black boxes, the more maintainable the code. Black boxes can
+often be improved internally by making tiny black boxes inside the larger black
+box.</p>
+<p>Motivation:</p>
+<ul class="simple">
+<li><p>Developers don’t have to understand implementation details when looking at a
+class interface.</p></li>
+<li><p>Compilers can optimize better when dealing with more localized components.</p></li>
+<li><p>Good encapsulation allows components to be interchanged easily because they
+have well-defined interfaces.</p></li>
+<li><p>Pausing to think about how to minimize input and output from an algorithm can
+improve it <em>and</em> make it easier to write.</p></li>
+</ul>
+<p>Applications:</p>
+<ul class="simple">
+<li><p>Refactor large functions (&gt; 50-ish statements?) into small functors that take
+“invariant” values (the larger context) for constructors and use
+<code class="docutils literal notranslate"><span class="pre">operator()</span></code> to transform some input into the desired output</p></li>
+<li><p>Use only <code class="docutils literal notranslate"><span class="pre">const</span></code> data when sharing. Non-const shared data is almost like
+using global variables.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">OpaqueId</span></code> instead of integers and magic sentinel values for
+integer identifiers that aren’t supposed to be arithmetical.</p></li>
+</ul>
+<p>Examples:</p>
+<ul class="simple">
+<li><p>Random number sampling: write a unit sphere sampling functor instead of
+replicating a polar-to-Cartesian transform in a thousand places.</p></li>
+<li><p>Cell IDs: Opaque IDs add type safety so that you can’t accidentally convert a
+cell identifier into a double or switch a cell and material ID. It also makes
+code more readable of course.</p></li>
+</ul>
+</section>
+<section id="maximize-code-reuse">
+<h3>Maximize code reuse<a class="headerlink" href="#maximize-code-reuse" title="Permalink to this heading"></a></h3>
+<p>Duplicating code means potentially duplicating bugs, duplicating the amount of
+work needed when refactoring, and missing optimizations.</p>
+</section>
+<section id="minimize-compile-time">
+<h3>Minimize compile time<a class="headerlink" href="#minimize-compile-time" title="Permalink to this heading"></a></h3>
+<p>Code performance is important but so is developer time. When possible,
+minimize the amount of code touched by NVCC. (NVCC’s error output is also
+rudimentary compared to modern clang/GCC, so that’s another reason to prefer
+them compiling your code.)</p>
+</section>
+<section id="prefer-single-state-classes">
+<h3>Prefer single-state classes<a class="headerlink" href="#prefer-single-state-classes" title="Permalink to this heading"></a></h3>
+<p>As much as possible, make classes “complete” and valid after calling the
+constructor. Try to avoid “finalize” functions that have to be called in a
+specific order to put the class in a workable state. If a finalize function
+<em>is</em> used, implement assertions to detect and warn the developer if the
+required order is not respected.</p>
+<p>When a class has a single function (especially if you name that function
+<code class="docutils literal notranslate"><span class="pre">operator()</span></code>), its usage is obvious. The reader also doesn’t have to know
+whether a class uses <code class="docutils literal notranslate"><span class="pre">doIt</span></code> or <code class="docutils literal notranslate"><span class="pre">do_it</span></code> or <code class="docutils literal notranslate"><span class="pre">build</span></code>.</p>
+<p>When you have a class that needs a lot of data to start in a valid state, use a
+<code class="docutils literal notranslate"><span class="pre">struct</span></code> of intuitive objects to pass the data to the class’s constructor.
+The constructor can do any necessary validation on the input data.</p>
+</section>
+<section id="learn-from-the-pros">
+<h3>Learn from the pros<a class="headerlink" href="#learn-from-the-pros" title="Permalink to this heading"></a></h3>
+<p>Other entities devoted to sustainable programming have their own guidelines.
+The <a class="reference external" href="http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines">ISO C++ guidelines</a> are very long but offer a number of insightful
+suggestions about C++ programming. The <a class="reference external" href="https://google.github.io/styleguide/cppguide.html">Google style guide</a> is a little more
+targeted toward legacy code and large production environments, but it still
+offers good suggestions.</p>
+</section>
+<section id="test-thoroughly">
+<h3>Test thoroughly<a class="headerlink" href="#test-thoroughly" title="Permalink to this heading"></a></h3>
+<p>Functions should use programmatic assertions whenever assumptions are made:</p>
+<ul class="simple">
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">CELER_EXPECT(x)</span></code> assertion macro to test preconditions about
+incoming data or initial internal states.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">CELER_ASSERT(x)</span></code> to express an assumption internal to a function (e.g.,
+“this index is not out of range of the array”).</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">CELER_ENSURE(x)</span></code> to mark expectations about data being returned from a
+function and side effects resulting from the function.</p></li>
+</ul>
+<p>Additionally, user-provided data and potentially volatile runtime conditions
+(such as the presence of an environment variable) should be checked with
+the <code class="docutils literal notranslate"><span class="pre">CELER_VALIDATE(x,</span> <span class="pre">&lt;&lt;</span> <span class="pre">&quot;streamable</span> <span class="pre">message&quot;)</span></code> macro. See <a class="reference internal" href="../api/corecel.html#corecel"><span class="std std-ref">Fundamentals</span></a>
+for more details about these macros.</p>
+<p>Each class must be thoroughly tested with an independent unit test in the
+<cite>test</cite> directory.  For complete coverage, each function of the class must have
+at least as many tests as the number of possible code flow paths (cyclomatic
+complexity).</p>
+<p>Implementation detail classes (in the <code class="docutils literal notranslate"><span class="pre">celeritas::detail</span></code> namespace, in
+<code class="docutils literal notranslate"><span class="pre">detail/</span></code> subdirectories) are exempt from the testing requirement, but
+testing the detail classes is a good way to simplify edge case testing compared
+to testing the higher-level code.</p>
+</section>
+</section>
+<section id="style-guidelines">
+<h2>Style guidelines<a class="headerlink" href="#style-guidelines" title="Permalink to this heading"></a></h2>
+<p>Having a consistent code style makes it more readable and maintainable. (For
+example, you don’t have to guess whether a symbol is a function or class.)</p>
+<p>As a historical note, many of the style conventions in Celeritas derive from
+the <a class="reference external" href="https://github.com/lanl/Draco/wiki/Style-Guide">Draco project style</a> of which <a class="reference external" href="https://github.com/tmdelellis">Tom Evans</a> was primary author and which
+became the style standard for the GPU-enabled Monte Carlo code <a class="reference external" href="https://doi.org/10.1016/j.anucene.2019.01.012">Shift</a>.</p>
+<section id="formatting">
+<span id="id1"></span><h3>Formatting<a class="headerlink" href="#formatting" title="Permalink to this heading"></a></h3>
+<p>Formatting is determined by the clang-format file inside the top-level
+directory. One key restriction is the 80-column limit, which enables multiple
+code windows to be open side-by-side. Generally, statements longer than 80
+columns should be broken into sub-expressions for improved readability anyway
+– the <code class="docutils literal notranslate"><span class="pre">auto</span></code> keyword can help a lot with this.</p>
+<p>Run <code class="docutils literal notranslate"><span class="pre">scripts/dev/install-commit-hooks.sh</span></code> to to install a git post-commit hook
+that will amend each commit with clang-format updates if necessary.</p>
+<p>There’s a certain amount of decorations (separators, Doxygen comment structure,
+etc.) that is standard throughout the code. Use the <code class="docutils literal notranslate"><span class="pre">celeritas-gen.py</span></code> script
+(in the <code class="docutils literal notranslate"><span class="pre">scripts/dev</span></code> directory) to generate skeletons for new files, and use
+existing source code as a guide to how to structure the decorations.</p>
+</section>
+<section id="symbol-names">
+<h3>Symbol names<a class="headerlink" href="#symbol-names" title="Permalink to this heading"></a></h3>
+<p>Functions should be verbs; classes should be names. As in standard Python
+(PEP-8-compliant) code, classes should use <code class="docutils literal notranslate"><span class="pre">CapWordsStyle</span></code> and variables use
+<code class="docutils literal notranslate"><span class="pre">snake_case_style</span></code>. Private data should have trailing underscores, and public
+member data in structs should not have trailing underscores.</p>
+<p>Functors (classes whose instances act like a function) should be an <em>agent
+noun</em>: the noun form of an action verb. Instances of a functor should be a
+verb. For example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ModelEvaluator</span><span class="w"> </span><span class="nf">evaluate_something</span><span class="p">(</span><span class="n">parameters</span><span class="p">...);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">evaluate_something</span><span class="p">(</span><span class="n">arguments</span><span class="p">...);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>There are many opportunities to use <code class="docutils literal notranslate"><span class="pre">OpaqueId</span></code> in GPU code to indicate
+indexing into particular vectors. To maintain consistency, we let an
+index into a vector of <code class="docutils literal notranslate"><span class="pre">Foo</span></code> have a corresponding <code class="docutils literal notranslate"><span class="pre">OpaqueId</span></code>  type:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">FooId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OpaqueId</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>and ideally be defined either immediately after <code class="docutils literal notranslate"><span class="pre">Foo</span></code> or in a
+<code class="file docutils literal notranslate"><span class="pre">Types.hh</span></code> file.  Some <code class="docutils literal notranslate"><span class="pre">OpaqueId</span></code> types may have only a “symbolic”
+corresponding type, in which case
+a tag struct can be be defined inline:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">BarId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OpaqueId</span><span class="o">&lt;</span><span class="k">struct</span><span class="w"> </span><span class="nc">Bar</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="file-names">
+<h3>File names<a class="headerlink" href="#file-names" title="Permalink to this heading"></a></h3>
+<p>We choose the convention of <code class="docutils literal notranslate"><span class="pre">.cc</span></code> for C++ translation units and
+corresponding <code class="docutils literal notranslate"><span class="pre">.hh</span></code> files for C++ headers.</p>
+<p>Thus we have the following rules:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.hh</span></code> is for C++ header code compatible with host compilers. The code in
+this file can be compatible with device code if it uses the
+<code class="docutils literal notranslate"><span class="pre">CELER_FUNCTION</span></code> family of macros defined in <code class="docutils literal notranslate"><span class="pre">corecel/Macros.hh</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.cc</span></code> is for C++ code that will invariably be compiled by the host
+compiler.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.cu</span></code> is for <code class="docutils literal notranslate"><span class="pre">__global__</span></code> kernels and functions that launch them,
+including code that initializes device memory. Despite the filename, these
+files should generally also be HIP-compatible using Celeritas abstraction
+macros.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.cuda.hh</span></code> and <code class="docutils literal notranslate"><span class="pre">.cuda.cc</span></code> require CUDA to be enabled and use CUDA runtime
+libraries and headers, but they do not execute any device code and thus can
+be built by a host compiler. If the CUDA-related code is guarded by <code class="docutils literal notranslate"><span class="pre">#if</span>
+<span class="pre">CELERITAS_USE_CUDA</span></code> macros then the special extension is not necessary. A
+<code class="docutils literal notranslate"><span class="pre">.nocuda.cc</span></code> file can specify alternative code paths to <code class="docutils literal notranslate"><span class="pre">.cuda.cc</span></code> files
+(mainly for error checking code).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.mpi.cc</span></code> and <code class="docutils literal notranslate"><span class="pre">.nompi.cc</span></code> code requires MPI to be enabled or disabled,
+respectively.</p></li>
+</ul>
+<p>Some files have special extensions:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.t.hh</span></code> is for non-inlined <code class="docutils literal notranslate"><span class="pre">template</span></code> implementations that can be
+included and instantiated elsewhere. However, if the function
+declaration in the <code class="docutils literal notranslate"><span class="pre">.hh</span></code> file is declared <code class="docutils literal notranslate"><span class="pre">inline</span></code>, the definition
+should be provided there as well.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.test.cc</span></code> are unit test executables corresponding to the main <code class="docutils literal notranslate"><span class="pre">.cc</span></code>
+file. These should only be in the main <code class="docutils literal notranslate"><span class="pre">/test</span></code> directory.</p></li>
+</ul>
+</section>
+<section id="device-compilation">
+<h3>Device compilation<a class="headerlink" href="#device-compilation" title="Permalink to this heading"></a></h3>
+<p>All <code class="docutils literal notranslate"><span class="pre">__device__</span></code> and <code class="docutils literal notranslate"><span class="pre">__global__</span></code> code must be compiled with NVCC or
+HIPCC to generate device objects. However, code that merely uses CUDA API calls
+such as
+<code class="docutils literal notranslate"><span class="pre">cudaMalloc</span></code> does <em>not</em> have to be compiled with NVCC. Instead, it only has to
+be linked against the CUDA runtime library and include <code class="docutils literal notranslate"><span class="pre">cuda_runtime_api.h</span></code>.
+The platform-agnostic Celeritas include file to use is
+<code class="docutils literal notranslate"><span class="pre">corecel/device_runtime_api.h</span></code>.
+Note that VecGeom compiles differently when run
+through NVCC (macro magic puts much of the code in a different namespace) so
+its inclusion must be very carefully managed.</p>
+<p>Since NVCC is slower and other compilers’ warning/error output is more
+readable, it’s preferable to use NVCC for as little compilation as possible.
+Furthermore, not requiring NVCC lets us play nicer with downstream libraries
+and front-end apps. Host code will not be restricted to the maximum C++ standard version
+supported by NVCC.</p>
+<p>Of course, the standard compilers cannot include any CUDA code containing
+kernel launches, since those require special parsing by the compiler. So kernel
+launches and <code class="docutils literal notranslate"><span class="pre">__global__</span></code> code must be in a <code class="docutils literal notranslate"><span class="pre">.cu</span></code> file. However, the
+CUDA runtime does define the special <code class="docutils literal notranslate"><span class="pre">__host__</span></code> and <code class="docutils literal notranslate"><span class="pre">__device__</span></code> macros (among
+others). Therefore it is OK for a CUDA file to be included by host code as long
+as it <code class="docutils literal notranslate"><span class="pre">#include</span></code> s the CUDA API. (Note that if such a file is to be included by
+downstream code, it will also have to propagate the CUDA include directories.)</p>
+<p>Choosing to compile code with the host compiler rather than NVCC also provides
+a check against surprise kernel launches. For example, the declaration:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dv</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>actually launches a kernel to fill the vector’s initial state. The code will
+not compile in a <code class="docutils literal notranslate"><span class="pre">.cc</span></code> file run through the host compiler, but it will
+automatically (and silently) generate kernel code when run through NVCC.</p>
+</section>
+<section id="variable-names">
+<h3>Variable names<a class="headerlink" href="#variable-names" title="Permalink to this heading"></a></h3>
+<p>Generally speaking, variables should have short lifetimes and should be
+self-documenting. Avoid shorthand and “transliterated” mathematical
+expressions: prefer <code class="docutils literal notranslate"><span class="pre">constants::na_avogadro</span></code> to <code class="docutils literal notranslate"><span class="pre">N_A</span></code> (or express the
+constant functionally with <code class="docutils literal notranslate"><span class="pre">atoms_per_mole</span></code>) and use <code class="docutils literal notranslate"><span class="pre">atomic_number</span></code>
+instead of <code class="docutils literal notranslate"><span class="pre">Z</span></code>. Physical constants should try to have the symbol concatenated
+to the context or meaning (e.g. <cite>c_light</cite> or <cite>h_planck</cite>).</p>
+<p>Use scoped enumerations (<code class="docutils literal notranslate"><span class="pre">enum</span> <span class="pre">class</span></code>) where possible (named like classes) so
+their values can safely be named like member variables (lowercase with
+underscores).</p>
+</section>
+<section id="function-arguments-and-return-values">
+<h3>Function arguments and return values<a class="headerlink" href="#function-arguments-and-return-values" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Always pass value types for arguments when the data is small (<code class="docutils literal notranslate"><span class="pre">sizeof(arg)</span>
+<span class="pre">&lt;=</span> <span class="pre">sizeof(void*)</span></code>). Using values instead of pointers/references allows the
+compiler to optimize better. If the argument is nontrivial but you need to
+make a local copy anyway, it’s OK to make the function argument a value (and
+use <code class="docutils literal notranslate"><span class="pre">std::move</span></code> internally as needed, but this is a more complicated
+topic).</p></li>
+<li><p>In general, avoid <code class="docutils literal notranslate"><span class="pre">const</span></code> values (e.g. <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">int</span></code>), because the decision
+to modify a local variable or not is an implementation detail of the
+function, not part of its interface.</p></li>
+<li><p>Use const <em>references</em> for types that are nontrivial and that you only need
+to access or pass to other const-reference functions.</p></li>
+<li><p>Prefer return values or structs rather than mutable function arguments. This
+makes it clear that there are no preconditions on the input value’s state.</p></li>
+<li><p>In Celeritas we use the google style of passing mutable pointers instead of
+mutable references, so that it’s more obvious to the calling code that a
+value is going to be modified. Add <code class="docutils literal notranslate"><span class="pre">CELER_EXPECT(input);</span></code> to make it clear
+that the pointer needs to be valid, and add any other preconditions.</p></li>
+<li><p>Host-only (e.g., runtime setup) code should almost never return raw pointers;
+use shared pointers instead to make the ownership semantics clear. When
+interfacing with older libraries such as Geant4, try to use <code class="docutils literal notranslate"><span class="pre">unique_ptr</span></code>
+and its <code class="docutils literal notranslate"><span class="pre">release</span></code>/<code class="docutils literal notranslate"><span class="pre">get</span></code> semantics to indicate the transfer of pointer
+ownership.</p></li>
+<li><p>Since we don’t yet support C++17’s <code class="docutils literal notranslate"><span class="pre">string_view</span></code> it’s OK to use <code class="docutils literal notranslate"><span class="pre">const</span>
+<span class="pre">char*</span></code> to indicate a read-only string.</p></li>
+</ul>
+<p>Memory is always managed from host code, since on-device data management can be
+tricky, proprietary, and inefficient. There are no shared or unique pointers,
+but there is less of a need because memory management semantics are clearer.
+Device code has exceptions from the rules above:</p>
+<ul class="simple">
+<li><p>In low-level device-compatible code (such as a <code class="docutils literal notranslate"><span class="pre">TrackView</span></code>), it is OK to
+return a pointer from a function to indicate that the result may be undefined
+(i.e., the pointer is null) or a non-owning <strong>reference</strong> to valid memory.
+This is used in the <code class="docutils literal notranslate"><span class="pre">StackAllocator</span></code> to indicate a failure to allocate new
+memory, and in some accessors where the result is optional.</p></li>
+<li><p>The rule of passing references to complex data does not apply to CUDA
+<code class="docutils literal notranslate"><span class="pre">__global__</span></code> kernels, because device code cannot accept references to host
+memory. Instead, kernel parameters should copy by value or provide raw
+pointers to device memory. Indicate that the argument should not be used
+inside the kernel can prefix it with <code class="docutils literal notranslate"><span class="pre">const</span></code>, so the CUDA compiler places
+the argument in <code class="docutils literal notranslate"><span class="pre">__constant__</span></code> memory rather than taking up register space.</p></li>
+</ul>
+</section>
+<section id="odds-and-ends">
+<h3>Odds and ends<a class="headerlink" href="#odds-and-ends" title="Permalink to this heading"></a></h3>
+<p>Although <code class="docutils literal notranslate"><span class="pre">struct</span></code> and <code class="docutils literal notranslate"><span class="pre">class</span></code> are interchangeable for class definitions
+(modifying only the default visibility as public or private), use <code class="docutils literal notranslate"><span class="pre">struct</span></code>
+for data-oriented classes that don’t declare constructors and have only
+public data; and <code class="docutils literal notranslate"><span class="pre">class</span></code> for classes designed to encapsulate functionality
+and/or data.</p>
+<p>With template parameters, <code class="docutils literal notranslate"><span class="pre">typename</span> <span class="pre">T</span></code> and <code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">T</span></code> are also
+interchangeable, but use <code class="docutils literal notranslate"><span class="pre">template</span> <span class="pre">&lt;class</span> <span class="pre">T&gt;</span></code> to be consistent internally and
+with the standard library. (It’s also possible to have <code class="docutils literal notranslate"><span class="pre">template</span> <span class="pre">&lt;typename</span></code>
+where <code class="docutils literal notranslate"><span class="pre">typename</span></code> <em>doesn’t</em> mean a class: namely,
+<code class="docutils literal notranslate"><span class="pre">template</span> <span class="pre">&lt;typename</span> <span class="pre">U::value_type</span> <span class="pre">Value&gt;</span></code>.)</p>
+</section>
+</section>
+<section id="data-management">
+<h2>Data management<a class="headerlink" href="#data-management" title="Permalink to this heading"></a></h2>
+<p>Data management must be isolated from data use for any code that is to run on
+the device. This
+allows low-level physics classes to operate on references to data using the
+exact same device/host code. Furthermore, state data (one per track) and
+shared data (definitions, persistent data, model data) should be separately
+allocated and managed.</p>
+<dl class="simple">
+<dt>Params (model parameters)</dt><dd><p>Provide a CPU-based interface to manage and provide access to constant shared
+GPU data, usually model parameters or the like. The Params class itself can
+only be accessed via host code. A params class can contain metadata (string
+names, etc.) suitable for host-side debug output and for helping related
+classes convert from user-friendly input (e.g. particle name) to
+device-friendly IDs (e.g. particle def ID).</p>
+</dd>
+<dt>State (state variables)</dt><dd><p>Thread-local data specifying the state of a single particle track with
+respect to a corresponding model (<code class="docutils literal notranslate"><span class="pre">FooParams</span></code>).</p>
+</dd>
+<dt>TrackView</dt><dd><p>Device-instantiable class that provides read/write access to the data for a
+single track, in the spirit of <cite>std::string_view</cite> which adds functionality to
+data owned by someone else. It combines the state variables and model
+parameters into a single class. The constructor always takes const references
+to ParamsData and StatePointers as well as the track ID. It encapsulates
+the storage/layout of the state and parameters, as well as what (if any) data
+is cached in the state.</p>
+</dd>
+<dt>View</dt><dd><p>Device-instantiable class with read/write access for data shared across
+threads.  For example, allocation for Secondary particles is performed on
+device, but the data is not specific to a thread.</p>
+</dd>
+</dl>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Consider the following example.</p>
+<p>All SM physics particles share a common set of properties such as mass,
+charge; and each instance of particle has a particular set of
+associated variables such as kinetic energy. The shared data (SM parameters)
+reside in <code class="docutils literal notranslate"><span class="pre">ParticleParams</span></code>, and the particle track properties are managed
+by a <code class="docutils literal notranslate"><span class="pre">ParticleStateStore</span></code> class.</p>
+<p>A separate class, the <code class="docutils literal notranslate"><span class="pre">ParticleTrackView</span></code>, is instantiated with a
+specific thread ID so that it acts as an accessor to the
+stored data for a particular track. It can calculate properties that depend
+on both the state and parameters. For example, momentum depends on both the
+mass of a particle (constant, set by the model) and the speed (variable,
+depends on particle track state).</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="release-history.html" class="btn btn-neutral float-left" title="Release History" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="license.html" class="btn btn-neutral float-right" title="License" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UT–Battelle/ORNL and Celeritas team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
