@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -89,8 +89,6 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:adda7afe6f230e6a36253776d7b18bd66"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/da5/classceleritas_1_1_atomic_relaxation_reader.html#adda7afe6f230e6a36253776d7b18bd66">AtomicNumber</a> = int</td></tr>
-<tr class="separator:adda7afe6f230e6a36253776d7b18bd66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f63cbcc83911c7eba3f7b54a7a4d6a5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/da5/classceleritas_1_1_atomic_relaxation_reader.html#a2f63cbcc83911c7eba3f7b54a7a4d6a5">result_type</a> = <a class="el" href="../../d5/dcc/structceleritas_1_1_import_atomic_relaxation.html">ImportAtomicRelaxation</a></td></tr>
 <tr class="separator:a2f63cbcc83911c7eba3f7b54a7a4d6a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -100,33 +98,18 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AtomicRelaxationReader</b> ()</td></tr>
 <tr class="memdesc:a335616d9c411f60af037541a1261f2aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the reader using the G4LEDATA environment variable to get the path to the data. <br /></td></tr>
 <tr class="separator:a335616d9c411f60af037541a1261f2aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f4fce85d1fe2654bb2123fe51df8eb7"><td class="memItemLeft" align="right" valign="top"><a id="a4f4fce85d1fe2654bb2123fe51df8eb7" name="a4f4fce85d1fe2654bb2123fe51df8eb7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AtomicRelaxationReader</b> (const char *fluor_path, const char *auger_path)</td></tr>
-<tr class="memdesc:a4f4fce85d1fe2654bb2123fe51df8eb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the reader with the path to the directory containing the data. <br /></td></tr>
-<tr class="separator:a4f4fce85d1fe2654bb2123fe51df8eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6ed3d615014fb5e6fe0b966da7023db"><td class="memItemLeft" align="right" valign="top"><a id="aa6ed3d615014fb5e6fe0b966da7023db" name="aa6ed3d615014fb5e6fe0b966da7023db"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AtomicRelaxationReader</b> (char const *fluor_path, char const *auger_path)</td></tr>
+<tr class="memdesc:aa6ed3d615014fb5e6fe0b966da7023db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the reader with the path to the directory containing the data. <br /></td></tr>
+<tr class="separator:aa6ed3d615014fb5e6fe0b966da7023db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a267662aee8a62df1bc6c39b7b975a51a"><td class="memItemLeft" align="right" valign="top"><a id="a267662aee8a62df1bc6c39b7b975a51a" name="a267662aee8a62df1bc6c39b7b975a51a"></a>
-<a class="el" href="../../da/da5/classceleritas_1_1_atomic_relaxation_reader.html#a2f63cbcc83911c7eba3f7b54a7a4d6a5">result_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="../../da/da5/classceleritas_1_1_atomic_relaxation_reader.html#adda7afe6f230e6a36253776d7b18bd66">AtomicNumber</a> atomic_number) const</td></tr>
+<a class="el" href="../../da/da5/classceleritas_1_1_atomic_relaxation_reader.html#a2f63cbcc83911c7eba3f7b54a7a4d6a5">result_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="../../de/db3/classceleritas_1_1_atomic_number.html">AtomicNumber</a> atomic_number) const</td></tr>
 <tr class="memdesc:a267662aee8a62df1bc6c39b7b975a51a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the data for the given element. <br /></td></tr>
 <tr class="separator:a267662aee8a62df1bc6c39b7b975a51a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Load the EADL atomic relaxation data. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="adda7afe6f230e6a36253776d7b18bd66" name="adda7afe6f230e6a36253776d7b18bd66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adda7afe6f230e6a36253776d7b18bd66">&#9670;&#160;</a></span>AtomicNumber</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../da/da5/classceleritas_1_1_atomic_relaxation_reader.html#adda7afe6f230e6a36253776d7b18bd66">celeritas::AtomicRelaxationReader::AtomicNumber</a> =  int</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
 <a id="a2f63cbcc83911c7eba3f7b54a7a4d6a5" name="a2f63cbcc83911c7eba3f7b54a7a4d6a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2f63cbcc83911c7eba3f7b54a7a4d6a5">&#9670;&#160;</a></span>result_type</h2>
 

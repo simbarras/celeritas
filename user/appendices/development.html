@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Development Guide &mdash; Celeritas v0.1.4 documentation</title>
+  <title>Development Guide &mdash; Celeritas v0.2.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -20,7 +20,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="License" href="license.html" />
+    <link rel="next" title="Administration" href="administration.html" />
     <link rel="prev" title="Release History" href="release-history.html" /> 
 </head>
 
@@ -33,7 +33,7 @@
             <img src="../_static/celeritas-thumbnail.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.1.4
+                0.2.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -58,18 +58,18 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Development Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#contributing-to-celeritas">Contributing to Celeritas</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#copyright">Copyright</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#collaborating">Collaborating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#development-prerequisites">Development prerequisites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pull-request-process">Pull request process</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ownership-and-authorship">Ownership and Authorship</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#submitting-code-changes">Submitting code changes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#code-development-guidelines">Code development guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#document-implicitly-and-explicitly">Document implicitly and explicitly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-thoroughly">Test thoroughly</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#maximize-encapsulation">Maximize encapsulation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#maximize-code-reuse">Maximize code reuse</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#minimize-compile-time">Minimize compile time</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#prefer-single-state-classes">Prefer single-state classes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#learn-from-the-pros">Learn from the pros</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#test-thoroughly">Test thoroughly</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#style-guidelines">Style guidelines</a><ul>
@@ -82,9 +82,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#odds-and-ends">Odds and ends</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#data-management">Data management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-management-in-celeritas">Data management in Celeritas</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="administration.html">Administration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 </ul>
 
@@ -118,7 +119,7 @@
 software infrastructure and best practices. This appendix describes how to
 modify and extend the codebase.</p>
 <section id="contributing-to-celeritas">
-<h2>Contributing to Celeritas<a class="headerlink" href="#contributing-to-celeritas" title="Permalink to this heading"></a></h2>
+<span id="contributing"></span><h2>Contributing to Celeritas<a class="headerlink" href="#contributing-to-celeritas" title="Permalink to this heading"></a></h2>
 <p>Thank you for your interest in the Celeritas project! Although Celeritas is
 developed primarily by a group of U.S. Department of Energy subcontractors, our
 goal is to increase community involvement and integration over time. We welcome
@@ -126,63 +127,122 @@ your contributions!</p>
 <section id="copyright">
 <h3>Copyright<a class="headerlink" href="#copyright" title="Permalink to this heading"></a></h3>
 <p>All submissions to the Celeritas project are automatically licensed under the
-terms of [the project copyright](COPYRIGHT) as formalized by the [GitHub terms
-of service](<a class="reference external" href="https://docs.github.com/en/github/site-policy/github-terms-of-service#6-contributions-under-repository-license">https://docs.github.com/en/github/site-policy/github-terms-of-service#6-contributions-under-repository-license</a>).</p>
+terms of <a class="reference internal" href="license.html#code-copyright"><span class="std std-ref">the project copyright</span></a> as formalized by the
+<a class="reference external" href="https://docs.github.com/en/github/site-policy/github-terms-of-service#6-contributions-under-repository-license">GitHub terms of service</a>.
+The person who writes a line of code is its author and copyright holder, but
+the new code should be the shared responsibility of the project rather than the
+exclusive property of a single contributor.
+Celeritas is a collaborative project with <em>collective</em> ownership.</p>
+</section>
+<section id="collaborating">
+<h3>Collaborating<a class="headerlink" href="#collaborating" title="Permalink to this heading"></a></h3>
+<p>Working with other Celeritas team members is a critical part of the development
+process. Please join the <code class="docutils literal notranslate"><span class="pre">#code</span></code> channel on the <a class="reference external" href="https://celeritasproject.slack.com/">Celeritas Slack workspace</a>,
+open an issue with a bug report or feature request, or start a discussion on
+GitHub.</p>
 </section>
 <section id="development-prerequisites">
 <h3>Development prerequisites<a class="headerlink" href="#development-prerequisites" title="Permalink to this heading"></a></h3>
+<p>Create a <a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks">fork</a> of the Celeritas repository. You should clone this fork locally
+to your development machine as the “origin”, and it’s a good idea to add the
+main <code class="docutils literal notranslate"><span class="pre">celeritas-project</span></code> repository as an “upstream” so that you can apply
+changes from the main codebase as you work.</p>
 <p>To meet the <a class="reference internal" href="#formatting"><span class="std std-ref">Formatting</span></a> requirements described in the development guide,
-make sure that <a class="reference external" href="https://clang.llvm.org/docs/ClangFormat.html">clang-format</a> is installed on your development
-Run <code class="docutils literal notranslate"><span class="pre">scripts/dev/install-commit-hooks.sh</span></code> to to install a git post-commit hook
+make sure that <a class="reference external" href="https://clang.llvm.org/docs/ClangFormat.html">clang-format</a> is installed on your development machine.
+Run <code class="docutils literal notranslate"><span class="pre">scripts/dev/install-commit-hooks.sh</span></code> to install a git post-commit hook
 that will amend each commit with clang-format updates if necessary.</p>
 <p>A mostly consistent set of decorations (separators, Doxygen comment structure,
 etc.) are used throughout the code, so try to make new files look like existing
 ones. Use the <code class="docutils literal notranslate"><span class="pre">celeritas-gen.py</span></code> script (in the <code class="docutils literal notranslate"><span class="pre">scripts/dev</span></code> directory) to
-generate skeletons for new files, and use existing source code as a guide to
+generate skeletons for new files, and use existing source code as a guide for
 how to structure the decorations.</p>
 </section>
-<section id="pull-request-process">
-<h3>Pull request process<a class="headerlink" href="#pull-request-process" title="Permalink to this heading"></a></h3>
-<p>Celeritas uses the “squash and merge” process to ensure continuity of the code
-history and provide easy bisecting because all commits pass all tests.
-Squashing eliminates the potential of broken commits and relieves developers of
-the burden of worrying about clean commit messages within a branch.</p>
-<p>Each pull request must be reviewed by at least one person knowledgable about
-the section of code being modified. Physics code should be compared against
-reference papers and other codes such as Geant4. By the end of the code review,
-the reviewer should understand the code well enough to maintain it (by
-extension or modification) in the future. The review process must be based on
-<em>constructive feedback</em> (“here’s a suggestion to make this better” or “did you
-consider what would happen if X?”), not <em>destructive feedback</em> (“this code is
-ugly”).</p>
-<p>Reviews should not be started until the “draft” status has been removed (if it
-was set to begin with). Once a pull request is under review, <em>do not</em> rebase,
-squash, or otherwise alter the branch history. It causes GitHub to lose
-comments and causes notifications to redirect. Additionally it will lose
-information about whether the test passed and failed on previous commits.</p>
-<p>The code guidelines (see the developer section of the user manual) must be
-followed for all new code and code changes. This includes the use of the
-correct formatting as well as the addition of new unit tests for new code or
-bug fixes.</p>
+<section id="submitting-code-changes">
+<h3>Submitting code changes<a class="headerlink" href="#submitting-code-changes" title="Permalink to this heading"></a></h3>
+<p>When you believe that you’ve made a substantive <a class="footnote-reference brackets" href="#id2" id="id1">1</a> and self-contained
+improvement to the code, it’s time to create a <a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">pull request</a> (PR) to get
+feedback on your changes before they’re merged into the code base.</p>
+<p>Before opening the pull request, check that the <a class="reference internal" href="#code-guidelines"><span class="std std-ref">code</span></a>
+and <a class="reference internal" href="#style-guidelines"><span class="std std-ref">style</span></a> guidelines have been followed for all new
+code and code changes.  Ensure the use of the correct formatting as well as the
+addition of documentation and unit tests for new code and bug fixes.</p>
 <p>All tests must pass on the CI runner before a PR can be merged. (Exceptions
 will be made if any failures are clearly unrelated to the changes and enough
 tests and/or configuration are passing to show that the new code is working.
-For example, some of the configurations currently fail due to disk space issues.)</p>
-<p>Since there are few enough merge requests these days, only Maintainers may
-commit a merge.</p>
-</section>
-<section id="ownership-and-authorship">
-<h3>Ownership and Authorship<a class="headerlink" href="#ownership-and-authorship" title="Permalink to this heading"></a></h3>
-<p>The person who writes a line of code is its author but not its owner.
-Celeritas is a collaborative project with collective ownership: as much as
-possible, there should be a shared responsibility for the code.
-If the code is reviewed according to the guidelines above, at least two people
-should always be comfortable modifying any piece of code.</p>
+For example, some of the configurations have a tendency to fail due to disk
+space issues.) It’s best to test locally first before submitting your pull
+request, and keep in mind that the multiple configurations on the CI (different
+dependency versions, different features) may reveal failures that your local
+testing might have missed.</p>
+<p>Each pull request should be assigned one or two reviewers who will provide
+constructive feedback on your changes. Their responsibilities are outlined in
+<a class="reference internal" href="administration.html#code-review"><span class="std std-ref">Code review</span></a>.
+Reviews should not be started until the “draft” status has been removed (if you
+marked it as a draft initially). Once a pull request is under review, <em>do not</em>
+rebase, squash, or otherwise alter the branch history. Such changes can
+drastically increase the difficulty of reviewing, because it may blend in a
+single commit both changes in response to a review <em>and</em> changes from upstream
+code. (Furthermore, it breaks GitHub notifications and makes it more difficult
+to find older comments.)  You <em>can</em> merge the main upstream branch if
+your changes may interact with the upstream changes, and you <em>must</em> merge if
+they conflict.</p>
+<p>After the CI tests pass and the reviewers have approved your changes,
+your branch will be squashed and merged, and you will officially be a Celeritas
+<a class="reference internal" href="administration.html#roles"><span class="std std-ref">contributor</span></a>! Congratulations!</p>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>All changes to the codebase must go through the pull request, but due to
+the overhead of reviewing, testing, merging, and documenting a PR, we’d like
+to avoid small changes that have almost no effect in terms of operation or
+readability. For example, if you find a typo in the documentation, check the
+rest of the docs for any other typos or improvements you’d like to make, and
+submit a single PR with those changes.</p>
+</dd>
+</dl>
 </section>
 </section>
 <section id="code-development-guidelines">
-<h2>Code development guidelines<a class="headerlink" href="#code-development-guidelines" title="Permalink to this heading"></a></h2>
-<p>These are a list of recommendations when writing new code.</p>
+<span id="code-guidelines"></span><h2>Code development guidelines<a class="headerlink" href="#code-development-guidelines" title="Permalink to this heading"></a></h2>
+<p>Every new piece of code is a commitment for you and other developers to
+maintain it in the future (or delete it if obsolete). There are numerous
+considerations to making code easier to update or understand, including testing
+and documentation.</p>
+<section id="document-implicitly-and-explicitly">
+<h3>Document implicitly and explicitly<a class="headerlink" href="#document-implicitly-and-explicitly" title="Permalink to this heading"></a></h3>
+<p>Code should be self-documenting as far as possible (see details below for
+naming conventions). This means that variable names, function names, and
+function arguments should be as “obvious” as possible. Take particular care
+with constants that appear in physics implementations. They should
+be multiplied by units in the native Celeritas unit system if applicable, or
+defined as <code class="docutils literal notranslate"><span class="pre">Quantity</span></code> instances. The numerical value of the constant must
+also be documented with a paper citation or other comment.</p>
+</section>
+<section id="test-thoroughly">
+<h3>Test thoroughly<a class="headerlink" href="#test-thoroughly" title="Permalink to this heading"></a></h3>
+<p>Functions should use programmatic assertions whenever assumptions are made:</p>
+<ul class="simple">
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">CELER_EXPECT(x)</span></code> assertion macro to test preconditions about
+incoming data or initial internal states.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">CELER_ASSERT(x)</span></code> to express an assumption internal to a function (e.g.,
+“this index is not out of range of the array”).</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">CELER_ENSURE(x)</span></code> to mark expectations about data being returned from a
+function and side effects resulting from the function.</p></li>
+</ul>
+<p>These assertions are enabled only when the <code class="docutils literal notranslate"><span class="pre">CELERITAS_DEBUG</span></code> CMake option is
+set.</p>
+<p>Additionally, user-provided data and potentially volatile runtime conditions
+(such as the presence of an environment variable) should be checked with
+the always-on assertion <code class="docutils literal notranslate"><span class="pre">CELER_VALIDATE(x,</span> <span class="pre">&lt;&lt;</span> <span class="pre">&quot;streamable</span> <span class="pre">message&quot;)</span></code> macro. See
+<a class="reference internal" href="../api/corecel.html#corecel"><span class="std std-ref">Core package</span></a> for more details about these macros.</p>
+<p>Each class must be thoroughly tested with an independent unit test in the
+<cite>test</cite> directory.  For complete coverage, each function of the class must have
+at least as many tests as the number of possible code flow paths (cyclomatic
+complexity).</p>
+<p>Implementation detail classes (in the <code class="docutils literal notranslate"><span class="pre">celeritas::detail</span></code> namespace, in
+<code class="docutils literal notranslate"><span class="pre">detail/</span></code> subdirectories) are exempt from the testing requirement, but
+testing the detail classes is a good way to simplify edge case testing compared
+to testing the higher-level code.</p>
+</section>
 <section id="maximize-encapsulation">
 <h3>Maximize encapsulation<a class="headerlink" href="#maximize-encapsulation" title="Permalink to this heading"></a></h3>
 <p>Encapsulation is about making a piece of code into a black box. The fewer lines
@@ -217,11 +277,9 @@ replicating a polar-to-Cartesian transform in a thousand places.</p></li>
 cell identifier into a double or switch a cell and material ID. It also makes
 code more readable of course.</p></li>
 </ul>
-</section>
-<section id="maximize-code-reuse">
-<h3>Maximize code reuse<a class="headerlink" href="#maximize-code-reuse" title="Permalink to this heading"></a></h3>
-<p>Duplicating code means potentially duplicating bugs, duplicating the amount of
-work needed when refactoring, and missing optimizations.</p>
+<p>Encapsulation is also useful for code reuse. Always avoid copy-pasting code, as
+it means potentially duplicating bugs, duplicating the amount of work needed
+when refactoring, and missing optimizations.</p>
 </section>
 <section id="minimize-compile-time">
 <h3>Minimize compile time<a class="headerlink" href="#minimize-compile-time" title="Permalink to this heading"></a></h3>
@@ -250,53 +308,35 @@ The constructor can do any necessary validation on the input data.</p>
 The <a class="reference external" href="http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines">ISO C++ guidelines</a> are very long but offer a number of insightful
 suggestions about C++ programming. The <a class="reference external" href="https://google.github.io/styleguide/cppguide.html">Google style guide</a> is a little more
 targeted toward legacy code and large production environments, but it still
-offers good suggestions.</p>
-</section>
-<section id="test-thoroughly">
-<h3>Test thoroughly<a class="headerlink" href="#test-thoroughly" title="Permalink to this heading"></a></h3>
-<p>Functions should use programmatic assertions whenever assumptions are made:</p>
-<ul class="simple">
-<li><p>Use the <code class="docutils literal notranslate"><span class="pre">CELER_EXPECT(x)</span></code> assertion macro to test preconditions about
-incoming data or initial internal states.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">CELER_ASSERT(x)</span></code> to express an assumption internal to a function (e.g.,
-“this index is not out of range of the array”).</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">CELER_ENSURE(x)</span></code> to mark expectations about data being returned from a
-function and side effects resulting from the function.</p></li>
-</ul>
-<p>Additionally, user-provided data and potentially volatile runtime conditions
-(such as the presence of an environment variable) should be checked with
-the <code class="docutils literal notranslate"><span class="pre">CELER_VALIDATE(x,</span> <span class="pre">&lt;&lt;</span> <span class="pre">&quot;streamable</span> <span class="pre">message&quot;)</span></code> macro. See <a class="reference internal" href="../api/corecel.html#corecel"><span class="std std-ref">Fundamentals</span></a>
-for more details about these macros.</p>
-<p>Each class must be thoroughly tested with an independent unit test in the
-<cite>test</cite> directory.  For complete coverage, each function of the class must have
-at least as many tests as the number of possible code flow paths (cyclomatic
-complexity).</p>
-<p>Implementation detail classes (in the <code class="docutils literal notranslate"><span class="pre">celeritas::detail</span></code> namespace, in
-<code class="docutils literal notranslate"><span class="pre">detail/</span></code> subdirectories) are exempt from the testing requirement, but
-testing the detail classes is a good way to simplify edge case testing compared
-to testing the higher-level code.</p>
+offers good suggestions. For software engineering best practices, the
+book <a class="reference external" href="https://abseil.io/resources/swe-book">Software Engineering at Google</a> is an excellent reference.</p>
 </section>
 </section>
 <section id="style-guidelines">
-<h2>Style guidelines<a class="headerlink" href="#style-guidelines" title="Permalink to this heading"></a></h2>
+<span id="id3"></span><h2>Style guidelines<a class="headerlink" href="#style-guidelines" title="Permalink to this heading"></a></h2>
 <p>Having a consistent code style makes it more readable and maintainable. (For
 example, you don’t have to guess whether a symbol is a function or class.)</p>
 <p>As a historical note, many of the style conventions in Celeritas derive from
 the <a class="reference external" href="https://github.com/lanl/Draco/wiki/Style-Guide">Draco project style</a> of which <a class="reference external" href="https://github.com/tmdelellis">Tom Evans</a> was primary author and which
 became the style standard for the GPU-enabled Monte Carlo code <a class="reference external" href="https://doi.org/10.1016/j.anucene.2019.01.012">Shift</a>.</p>
 <section id="formatting">
-<span id="id1"></span><h3>Formatting<a class="headerlink" href="#formatting" title="Permalink to this heading"></a></h3>
+<span id="id4"></span><h3>Formatting<a class="headerlink" href="#formatting" title="Permalink to this heading"></a></h3>
 <p>Formatting is determined by the clang-format file inside the top-level
 directory. One key restriction is the 80-column limit, which enables multiple
 code windows to be open side-by-side. Generally, statements longer than 80
 columns should be broken into sub-expressions for improved readability anyway
-– the <code class="docutils literal notranslate"><span class="pre">auto</span></code> keyword can help a lot with this.</p>
-<p>Run <code class="docutils literal notranslate"><span class="pre">scripts/dev/install-commit-hooks.sh</span></code> to to install a git post-commit hook
-that will amend each commit with clang-format updates if necessary.</p>
-<p>There’s a certain amount of decorations (separators, Doxygen comment structure,
-etc.) that is standard throughout the code. Use the <code class="docutils literal notranslate"><span class="pre">celeritas-gen.py</span></code> script
-(in the <code class="docutils literal notranslate"><span class="pre">scripts/dev</span></code> directory) to generate skeletons for new files, and use
-existing source code as a guide to how to structure the decorations.</p>
+– the <code class="docutils literal notranslate"><span class="pre">auto</span></code> keyword can help a lot with this. The post-commit formatting
+hook in <code class="file docutils literal notranslate"><span class="pre">scripts/dev</span></code> (execute
+<code class="file docutils literal notranslate"><span class="pre">scripts/dev/install-commit-hooks.sh</span></code> to set up this script) can take
+care of clang formatting automatically. The clang-format script will also
+enforce the use of “<a class="reference external" href="https://hackingcpp.com/cpp/design/east_vs_west_const.html">East const</a>”, where the <code class="docutils literal notranslate"><span class="pre">const</span></code> keyword is always to
+the right of the type that it modifies.</p>
+<p>Certain decorations (separators, Doxygen comment structure,
+etc.) are standard throughout the code. Use the <code class="file docutils literal notranslate"><span class="pre">celeritas-gen.py</span></code> script
+(in the <code class="file docutils literal notranslate"><span class="pre">scripts/dev</span></code> directory) to generate skeletons for new files, and
+use existing source code as a guide to how to structure the decorations.
+Doxygen comments should be provided next to the <em>definition</em> of functions (both
+member and free) and classes.</p>
 </section>
 <section id="symbol-names">
 <h3>Symbol names<a class="headerlink" href="#symbol-names" title="Permalink to this heading"></a></h3>
@@ -324,6 +364,12 @@ a tag struct can be be defined inline:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">BarId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OpaqueId</span><span class="o">&lt;</span><span class="k">struct</span><span class="w"> </span><span class="nc">Bar</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Public functions in user-facing Geant4 classes (those in <code class="docutils literal notranslate"><span class="pre">accel</span></code>)
+should try to conform to Geant4-style naming conventions, especially because
+many will derive from Geant4 class interfaces.</p>
+</div>
 </section>
 <section id="file-names">
 <h3>File names<a class="headerlink" href="#file-names" title="Permalink to this heading"></a></h3>
@@ -340,14 +386,11 @@ compiler.</p></li>
 including code that initializes device memory. Despite the filename, these
 files should generally also be HIP-compatible using Celeritas abstraction
 macros.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.cuda.hh</span></code> and <code class="docutils literal notranslate"><span class="pre">.cuda.cc</span></code> require CUDA to be enabled and use CUDA runtime
-libraries and headers, but they do not execute any device code and thus can
-be built by a host compiler. If the CUDA-related code is guarded by <code class="docutils literal notranslate"><span class="pre">#if</span>
-<span class="pre">CELERITAS_USE_CUDA</span></code> macros then the special extension is not necessary. A
-<code class="docutils literal notranslate"><span class="pre">.nocuda.cc</span></code> file can specify alternative code paths to <code class="docutils literal notranslate"><span class="pre">.cuda.cc</span></code> files
-(mainly for error checking code).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.mpi.cc</span></code> and <code class="docutils literal notranslate"><span class="pre">.nompi.cc</span></code> code requires MPI to be enabled or disabled,
-respectively.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.device.hh</span></code> and <code class="docutils literal notranslate"><span class="pre">.device.cc</span></code> require CUDA/HIP to be enabled and use the
+library’s runtime libraries and headers, but they do not execute any device
+code and thus can be built by a host compiler. If the CUDA-related code is
+guarded by <code class="docutils literal notranslate"><span class="pre">#if</span> <span class="pre">CELER_USE_DEVICE</span></code> macros then the special extension is not
+necessary.</p></li>
 </ul>
 <p>Some files have special extensions:</p>
 <ul class="simple">
@@ -402,7 +445,9 @@ instead of <code class="docutils literal notranslate"><span class="pre">Z</span>
 to the context or meaning (e.g. <cite>c_light</cite> or <cite>h_planck</cite>).</p>
 <p>Use scoped enumerations (<code class="docutils literal notranslate"><span class="pre">enum</span> <span class="pre">class</span></code>) where possible (named like classes) so
 their values can safely be named like member variables (lowercase with
-underscores).</p>
+underscores). Prefer enumerations to boolean values in function interfaces
+(since <code class="docutils literal notranslate"><span class="pre">do_something(true)</span></code> requires looking up the function interface
+definition to understand).</p>
 </section>
 <section id="function-arguments-and-return-values">
 <h3>Function arguments and return values<a class="headerlink" href="#function-arguments-and-return-values" title="Permalink to this heading"></a></h3>
@@ -464,8 +509,8 @@ where <code class="docutils literal notranslate"><span class="pre">typename</spa
 <code class="docutils literal notranslate"><span class="pre">template</span> <span class="pre">&lt;typename</span> <span class="pre">U::value_type</span> <span class="pre">Value&gt;</span></code>.)</p>
 </section>
 </section>
-<section id="data-management">
-<h2>Data management<a class="headerlink" href="#data-management" title="Permalink to this heading"></a></h2>
+<section id="data-management-in-celeritas">
+<h2>Data management in Celeritas<a class="headerlink" href="#data-management-in-celeritas" title="Permalink to this heading"></a></h2>
 <p>Data management must be isolated from data use for any code that is to run on
 the device. This
 allows low-level physics classes to operate on references to data using the
@@ -473,25 +518,25 @@ exact same device/host code. Furthermore, state data (one per track) and
 shared data (definitions, persistent data, model data) should be separately
 allocated and managed.</p>
 <dl class="simple">
-<dt>Params (model parameters)</dt><dd><p>Provide a CPU-based interface to manage and provide access to constant shared
+<dt>Params</dt><dd><p>Provide a CPU-based interface to manage and provide access to constant shared
 GPU data, usually model parameters or the like. The Params class itself can
 only be accessed via host code. A params class can contain metadata (string
 names, etc.) suitable for host-side debug output and for helping related
 classes convert from user-friendly input (e.g. particle name) to
 device-friendly IDs (e.g. particle def ID).</p>
 </dd>
-<dt>State (state variables)</dt><dd><p>Thread-local data specifying the state of a single particle track with
+<dt>State</dt><dd><p>Thread-local data specifying the state of a single particle track with
 respect to a corresponding model (<code class="docutils literal notranslate"><span class="pre">FooParams</span></code>).</p>
 </dd>
-<dt>TrackView</dt><dd><p>Device-instantiable class that provides read/write access to the data for a
+<dt>TrackView</dt><dd><p>Device-friendly class that provides read/write access to the data for a
 single track, in the spirit of <cite>std::string_view</cite> which adds functionality to
 data owned by someone else. It combines the state variables and model
 parameters into a single class. The constructor always takes const references
-to ParamsData and StatePointers as well as the track ID. It encapsulates
+to ParamsData and StateData as well as the track ID. It encapsulates
 the storage/layout of the state and parameters, as well as what (if any) data
 is cached in the state.</p>
 </dd>
-<dt>View</dt><dd><p>Device-instantiable class with read/write access for data shared across
+<dt>View</dt><dd><p>Device-friendly class with read/write access for data shared across
 threads.  For example, allocation for Secondary particles is performed on
 device, but the data is not specific to a thread.</p>
 </dd>
@@ -499,8 +544,8 @@ device, but the data is not specific to a thread.</p>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p>Consider the following example.</p>
-<p>All SM physics particles share a common set of properties such as mass,
-charge; and each instance of particle has a particular set of
+<p>All SM physics particles share a common set of properties such as mass and
+charge, and each instance of particle has a particular set of
 associated variables such as kinetic energy. The shared data (SM parameters)
 reside in <code class="docutils literal notranslate"><span class="pre">ParticleParams</span></code>, and the particle track properties are managed
 by a <code class="docutils literal notranslate"><span class="pre">ParticleStateStore</span></code> class.</p>
@@ -519,7 +564,7 @@ depends on particle track state).</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="release-history.html" class="btn btn-neutral float-left" title="Release History" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="license.html" class="btn btn-neutral float-right" title="License" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="administration.html" class="btn btn-neutral float-right" title="Administration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

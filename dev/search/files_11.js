@@ -30,8 +30,14 @@ var searchData=
   ['rngparamsfwd_2ehh_27',['RngParamsFwd.hh',['../d1/de6/_rng_params_fwd_8hh.html',1,'']]],
   ['rootexporter_2ecc_28',['RootExporter.cc',['../dd/dfe/_root_exporter_8cc.html',1,'']]],
   ['rootexporter_2ehh_29',['RootExporter.hh',['../d9/d55/_root_exporter_8hh.html',1,'']]],
-  ['rootimporter_2ecc_30',['RootImporter.cc',['../df/d09/_root_importer_8cc.html',1,'']]],
-  ['rootimporter_2ehh_31',['RootImporter.hh',['../de/d96/_root_importer_8hh.html',1,'']]],
-  ['rootinterfacelinkdef_2eh_32',['RootInterfaceLinkDef.h',['../d7/d8e/_root_interface_link_def_8h.html',1,'']]],
-  ['rungekuttastepper_2ehh_33',['RungeKuttaStepper.hh',['../d3/d31/_runge_kutta_stepper_8hh.html',1,'']]]
+  ['rootfilemanager_2ecc_30',['RootFileManager.cc',['../d3/d9e/_root_file_manager_8cc.html',1,'']]],
+  ['rootfilemanager_2ehh_31',['RootFileManager.hh',['../d2/db8/_root_file_manager_8hh.html',1,'']]],
+  ['rootimporter_2ecc_32',['RootImporter.cc',['../df/d09/_root_importer_8cc.html',1,'']]],
+  ['rootimporter_2ehh_33',['RootImporter.hh',['../de/d96/_root_importer_8hh.html',1,'']]],
+  ['rootinterfacelinkdef_2eh_34',['RootInterfaceLinkDef.h',['../d7/d8e/_root_interface_link_def_8h.html',1,'']]],
+  ['rootstepwriter_2ecc_35',['RootStepWriter.cc',['../dd/df3/_root_step_writer_8cc.html',1,'']]],
+  ['rootstepwriter_2ehh_36',['RootStepWriter.hh',['../d2/d64/_root_step_writer_8hh.html',1,'']]],
+  ['rootuniqueptr_2ehh_37',['RootUniquePtr.hh',['../d6/d70/_root_unique_ptr_8hh.html',1,'']]],
+  ['rootuniqueptr_2eroot_2ecc_38',['RootUniquePtr.root.cc',['../d2/d08/_root_unique_ptr_8root_8cc.html',1,'']]],
+  ['rungekuttastepper_2ehh_39',['RungeKuttaStepper.hh',['../d3/d31/_runge_kutta_stepper_8hh.html',1,'']]]
 ];

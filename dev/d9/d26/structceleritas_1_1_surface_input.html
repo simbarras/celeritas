@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -75,21 +75,33 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="../../de/d59/structceleritas_1_1_surface_input-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">celeritas::SurfaceInput Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Compressed input for all surface definitions in a universe.  
+<p>Compressed input for all surface definitions in a unit.  
  <a href="../../d9/d26/structceleritas_1_1_surface_input.html#details">More...</a></p>
 
-<p><code>#include &lt;SurfaceInput.hh&gt;</code></p>
+<p><code>#include &lt;OrangeInput.hh&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ad8f814c86ec0bddb6254c0badf9f591d"><td class="memItemLeft" align="right" valign="top"><a id="ad8f814c86ec0bddb6254c0badf9f591d" name="ad8f814c86ec0bddb6254c0badf9f591d"></a>
+size_type&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const</td></tr>
+<tr class="memdesc:ad8f814c86ec0bddb6254c0badf9f591d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of surfaces. <br /></td></tr>
+<tr class="separator:ad8f814c86ec0bddb6254c0badf9f591d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb498cfec9253a6e6a96a468f23a2ac5"><td class="memItemLeft" align="right" valign="top"><a id="acb498cfec9253a6e6a96a468f23a2ac5" name="acb498cfec9253a6e6a96a468f23a2ac5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () const</td></tr>
+<tr class="memdesc:acb498cfec9253a6e6a96a468f23a2ac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the surface inputs are valid. <br /></td></tr>
+<tr class="separator:acb498cfec9253a6e6a96a468f23a2ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a9a0e4313f18f5df67d67b259c6a44970"><td class="memItemLeft" align="right" valign="top"><a id="a9a0e4313f18f5df67d67b259c6a44970" name="a9a0e4313f18f5df67d67b259c6a44970"></a>
-std::vector&lt; <a class="el" href="../../d7/d97/orange_2_types_8hh.html#a6e38ea21d9877ba8a45b3a6fee0c299c">SurfaceType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>types</b></td></tr>
+std::vector&lt; <a class="el" href="../../d7/d3b/_orange_types_8hh.html#a6e38ea21d9877ba8a45b3a6fee0c299c">SurfaceType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>types</b></td></tr>
 <tr class="memdesc:a9a0e4313f18f5df67d67b259c6a44970"><td class="mdescLeft">&#160;</td><td class="mdescRight">Surface type enums. <br /></td></tr>
 <tr class="separator:a9a0e4313f18f5df67d67b259c6a44970"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae350c35d8c382459913f77b0fd0e77a9"><td class="memItemLeft" align="right" valign="top"><a id="ae350c35d8c382459913f77b0fd0e77a9" name="ae350c35d8c382459913f77b0fd0e77a9"></a>
@@ -100,12 +112,16 @@ std::vector&lt; <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7
 std::vector&lt; size_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sizes</b></td></tr>
 <tr class="memdesc:af956a31815b7c0e77b964cc7f007e5a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of each surface's data. <br /></td></tr>
 <tr class="separator:af956a31815b7c0e77b964cc7f007e5a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae920095e6a7ff8aad135a4d677fc09d4"><td class="memItemLeft" align="right" valign="top"><a id="ae920095e6a7ff8aad135a4d677fc09d4" name="ae920095e6a7ff8aad135a4d677fc09d4"></a>
+std::vector&lt; <a class="el" href="../../da/d86/structceleritas_1_1_label.html">Label</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>labels</b></td></tr>
+<tr class="memdesc:ae920095e6a7ff8aad135a4d677fc09d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Surface labels. <br /></td></tr>
+<tr class="separator:ae920095e6a7ff8aad135a4d677fc09d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Compressed input for all surface definitions in a universe. </p>
+<div class="textblock"><p >Compressed input for all surface definitions in a unit. </p>
 <p >Including the sizes of each surface is redundant but safer. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="../../db/d8a/_surface_input_8hh.html">SurfaceInput.hh</a></li>
+<li><a class="el" href="../../d5/d57/_orange_input_8hh.html">OrangeInput.hh</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

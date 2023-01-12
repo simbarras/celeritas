@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -106,9 +106,9 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>str</b> ()</td
 <p >This is primarily for interfacing with poorly-behaved external libraries that write to cout/cerr by default.</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="../../db/dd6/classceleritas_1_1_scoped_stream_redirect.html">ScopedStreamRedirect</a> silenced(&amp;std::cout);</div>
 <div class="line">LoadVecGeom();</div>
-<div class="line"><a class="code hl_define" href="../../d1/d95/_logger_8hh.html#a6767c46cb976eac864c4b6db274c4fcf">CELER_LOG</a>(diagnostic) &lt;&lt; <span class="stringliteral">&quot;Vecgeom said: &quot;</span> &lt;&lt; silenced.str();</div>
-<div class="ttc" id="a_logger_8hh_html_a6767c46cb976eac864c4b6db274c4fcf"><div class="ttname"><a href="../../d1/d95/_logger_8hh.html#a6767c46cb976eac864c4b6db274c4fcf">CELER_LOG</a></div><div class="ttdeci">#define CELER_LOG(LEVEL)</div><div class="ttdoc">Return a LogMessage object for streaming into at the given level.</div><div class="ttdef"><b>Definition:</b> Logger.hh:35</div></div>
-<div class="ttc" id="aclassceleritas_1_1_scoped_stream_redirect_html"><div class="ttname"><a href="../../db/dd6/classceleritas_1_1_scoped_stream_redirect.html">celeritas::ScopedStreamRedirect</a></div><div class="ttdoc">Redirect the given stream to an internal stringstream.</div><div class="ttdef"><b>Definition:</b> ScopedStreamRedirect.hh:29</div></div>
+<div class="line"><a class="code hl_define" href="../../d2/d8a/corecel_2io_2_logger_8hh.html#a6767c46cb976eac864c4b6db274c4fcf">CELER_LOG</a>(diagnostic) &lt;&lt; <span class="stringliteral">&quot;Vecgeom said: &quot;</span> &lt;&lt; silenced.str();</div>
+<div class="ttc" id="aclassceleritas_1_1_scoped_stream_redirect_html"><div class="ttname"><a href="../../db/dd6/classceleritas_1_1_scoped_stream_redirect.html">celeritas::ScopedStreamRedirect</a></div><div class="ttdoc">Redirect the given stream to an internal stringstream.</div><div class="ttdef"><b>Definition:</b> ScopedStreamRedirect.hh:30</div></div>
+<div class="ttc" id="acorecel_2io_2_logger_8hh_html_a6767c46cb976eac864c4b6db274c4fcf"><div class="ttname"><a href="../../d2/d8a/corecel_2io_2_logger_8hh.html#a6767c46cb976eac864c4b6db274c4fcf">CELER_LOG</a></div><div class="ttdeci">#define CELER_LOG(LEVEL)</div><div class="ttdoc">Return a LogMessage object for streaming into at the given level.</div><div class="ttdef"><b>Definition:</b> corecel/io/Logger.hh:38</div></div>
 </div><!-- fragment --> </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../d0/d87/_scoped_stream_redirect_8hh.html">ScopedStreamRedirect.hh</a></li>
 <li><a class="el" href="../../dc/d33/_scoped_stream_redirect_8cc.html">ScopedStreamRedirect.cc</a></li>

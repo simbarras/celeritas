@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -80,6 +80,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../df/d5d/_core_params_8hh.html">CoreParams.hh</a>&quot;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d10/_assert_8hh.html">corecel/Assert.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d9/df9/_ref_8hh.html">corecel/data/Ref.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../df/dfb/_device_8hh.html">corecel/sys/Device.hh</a>&quot;</code><br />
@@ -91,8 +94,9 @@ $(function() {
 <code>#include &quot;<a class="el" href="../../d7/d90/_particle_params_8hh.html">celeritas/phys/ParticleParams.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d4/d3c/_physics_params_8hh.html">celeritas/phys/PhysicsParams.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d0/d00/_rng_params_8hh.html">celeritas/random/RngParams.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/dbf/_track_init_params_8hh.html">celeritas/track/TrackInitParams.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d7/d22/_action_interface_8hh.html">ActionInterface.hh</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d3/d49/_action_manager_8hh.html">ActionManager.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/d6a/_action_registry_8hh.html">ActionRegistry.hh</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -117,7 +121,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="../../d5/d10/_assert_8hh.html#a4de52d03e37eae77ac2a03ab5a1ea67c">CELER_VALIDATE</a>(input_.MEMBER, \</div>
 <div class="line">                   &lt;&lt; <span class="stringliteral">&quot;core input is missing &quot;</span> &lt;&lt; #MEMBER &lt;&lt; <span class="stringliteral">&quot; data&quot;</span>)</div>
-<div class="ttc" id="a_assert_8hh_html_a4de52d03e37eae77ac2a03ab5a1ea67c"><div class="ttname"><a href="../../d5/d10/_assert_8hh.html#a4de52d03e37eae77ac2a03ab5a1ea67c">CELER_VALIDATE</a></div><div class="ttdeci">#define CELER_VALIDATE(COND, MSG)</div><div class="ttdoc">Always-on runtime assertion macro.</div><div class="ttdef"><b>Definition:</b> Assert.hh:200</div></div>
+<div class="ttc" id="a_assert_8hh_html_a4de52d03e37eae77ac2a03ab5a1ea67c"><div class="ttname"><a href="../../d5/d10/_assert_8hh.html#a4de52d03e37eae77ac2a03ab5a1ea67c">CELER_VALIDATE</a></div><div class="ttdeci">#define CELER_VALIDATE(COND, MSG)</div><div class="ttdoc">Always-on runtime assertion macro.</div><div class="ttdef"><b>Definition:</b> Assert.hh:169</div></div>
 </div><!-- fragment -->
 </div>
 </div>

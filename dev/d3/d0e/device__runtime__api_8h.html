@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -75,7 +75,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">device_runtime_api.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -89,6 +90,12 @@ Macros</h2></td></tr>
 <tr class="memitem:ad349fc450fa3a028b7061f107cde13af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d0e/device__runtime__api_8h.html#ad349fc450fa3a028b7061f107cde13af">CELER_EU_PER_CU</a>&#160;&#160;&#160;0</td></tr>
 <tr class="memdesc:ad349fc450fa3a028b7061f107cde13af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execution units per compute unit.  <a href="../../d3/d0e/device__runtime__api_8h.html#ad349fc450fa3a028b7061f107cde13af">More...</a><br /></td></tr>
 <tr class="separator:ad349fc450fa3a028b7061f107cde13af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a647901748a0b1aab3d40f875c3928893"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d0e/device__runtime__api_8h.html#a647901748a0b1aab3d40f875c3928893">celeritas_device_runtime_api_h_</a></td></tr>
+<tr class="memdesc:a647901748a0b1aab3d40f875c3928893"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare a dummy variable to be referenced in disabled <code>CELER_BLAH</code> calls.  <a href="../../d3/d0e/device__runtime__api_8h.html#a647901748a0b1aab3d40f875c3928893">More...</a><br /></td></tr>
+<tr class="separator:a647901748a0b1aab3d40f875c3928893"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Include CUDA or HIP runtime APIs for compiling with host/cc compiler. </p>
@@ -107,6 +114,32 @@ Macros</h2></td></tr>
 
 <p>Execution units per compute unit. </p>
 <p >AMD multiprocessors each have 4 SIMD units per compute unit, but there is no device attribute or compiler definition that provides this information. For CUDA, each streaming multiprocessor (MP) is a single "execution unit" and a "compute unit". </p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a647901748a0b1aab3d40f875c3928893" name="a647901748a0b1aab3d40f875c3928893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a647901748a0b1aab3d40f875c3928893">&#9670;&#160;</a></span>celeritas_device_runtime_api_h_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int celeritas_device_runtime_api_h_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Declare a dummy variable to be referenced in disabled <code>CELER_BLAH</code> calls. </p>
+<p >With this declaration, the build will fail if this include is missing. (Unfortunately, since the use of this symbol is embedded in a macro, IWYU won't include this file automatically.) </p>
 
 </div>
 </div>

@@ -11,5 +11,6 @@ var searchData=
   ['quantity_3c_20logmev_20_3e_8',['Quantity&lt; LogMev &gt;',['../dc/dff/classceleritas_1_1_quantity.html',1,'celeritas']]],
   ['quantity_3c_20mev_20_3e_9',['Quantity&lt; Mev &gt;',['../dc/dff/classceleritas_1_1_quantity.html',1,'celeritas']]],
   ['quantity_3c_20unitdivide_3c_20mev_2c_20clightsq_20_3e_20_3e_10',['Quantity&lt; UnitDivide&lt; Mev, CLightSq &gt; &gt;',['../dc/dff/classceleritas_1_1_quantity.html',1,'celeritas']]],
-  ['queued_11',['queued',['../d1/dd0/structceleritas_1_1_stepper_result.html#adb71afdd81269dd706c0d69889514c36',1,'celeritas::StepperResult']]]
+  ['quantityio_2ejson_2ehh_11',['QuantityIO.json.hh',['../d6/d09/_quantity_i_o_8json_8hh.html',1,'']]],
+  ['queued_12',['queued',['../d1/dd0/structceleritas_1_1_stepper_result.html#adb71afdd81269dd706c0d69889514c36',1,'celeritas::StepperResult']]]
 ];

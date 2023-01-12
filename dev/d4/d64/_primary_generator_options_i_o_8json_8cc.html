@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -80,18 +80,38 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../da/dfd/_primary_generator_options_i_o_8json_8hh.html">PrimaryGeneratorOptionsIO.json.hh</a>&quot;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/d10/_assert_8hh.html">corecel/Assert.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../da/dc3/_array_8json_8hh.html">corecel/cont/Array.json.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/de4/_range_8hh.html">corecel/cont/Range.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/dd8/_string_enum_map_8hh.html">corecel/io/StringEnumMap.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/de0/_p_d_g_number_8hh.html">celeritas/phys/PDGNumber.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/df0/_primary_generator_options_8hh.html">celeritas/phys/PrimaryGeneratorOptions.hh</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a94fb6d20ff118858b24aef33fd94ab73"><td class="memItemLeft" align="right" valign="top"><a id="a94fb6d20ff118858b24aef33fd94ab73" name="a94fb6d20ff118858b24aef33fd94ab73"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::from_json</b> (const nlohmann::json &amp;j, PrimaryGeneratorOptions &amp;opts)</td></tr>
-<tr class="memdesc:a94fb6d20ff118858b24aef33fd94ab73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read options from JSON. <br /></td></tr>
-<tr class="separator:a94fb6d20ff118858b24aef33fd94ab73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7d4886a51426f9782aa98d8f7acbdfa"><td class="memItemLeft" align="right" valign="top"><a id="af7d4886a51426f9782aa98d8f7acbdfa" name="af7d4886a51426f9782aa98d8f7acbdfa"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to_json</b> (nlohmann::json &amp;j, const PrimaryGeneratorOptions &amp;opts)</td></tr>
-<tr class="memdesc:af7d4886a51426f9782aa98d8f7acbdfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write options to JSON. <br /></td></tr>
-<tr class="separator:af7d4886a51426f9782aa98d8f7acbdfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a586ae88bcdcde206fb3d3d66c313b820"><td class="memItemLeft" align="right" valign="top"><a id="a586ae88bcdcde206fb3d3d66c313b820" name="a586ae88bcdcde206fb3d3d66c313b820"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::from_json</b> (nlohmann::json const &amp;j, DistributionSelection &amp;value)</td></tr>
+<tr class="separator:a586ae88bcdcde206fb3d3d66c313b820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0987adfdd6be51e475ec595c64ef03b7"><td class="memItemLeft" align="right" valign="top"><a id="a0987adfdd6be51e475ec595c64ef03b7" name="a0987adfdd6be51e475ec595c64ef03b7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to_json</b> (nlohmann::json &amp;j, DistributionSelection const &amp;value)</td></tr>
+<tr class="separator:a0987adfdd6be51e475ec595c64ef03b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a288063b22340436495aee839fe72688b"><td class="memItemLeft" align="right" valign="top"><a id="a288063b22340436495aee839fe72688b" name="a288063b22340436495aee839fe72688b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::from_json</b> (nlohmann::json const &amp;j, DistributionOptions &amp;opts)</td></tr>
+<tr class="separator:a288063b22340436495aee839fe72688b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad244ffdf985b35262d0d4ebe9f1fb046"><td class="memItemLeft" align="right" valign="top"><a id="ad244ffdf985b35262d0d4ebe9f1fb046" name="ad244ffdf985b35262d0d4ebe9f1fb046"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to_json</b> (nlohmann::json &amp;j, DistributionOptions const &amp;opts)</td></tr>
+<tr class="separator:ad244ffdf985b35262d0d4ebe9f1fb046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f4df25753c0c3bf26769086a88f8c29"><td class="memItemLeft" align="right" valign="top"><a id="a3f4df25753c0c3bf26769086a88f8c29" name="a3f4df25753c0c3bf26769086a88f8c29"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::from_json</b> (nlohmann::json const &amp;j, PrimaryGeneratorOptions &amp;opts)</td></tr>
+<tr class="memdesc:a3f4df25753c0c3bf26769086a88f8c29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read options from JSON. <br /></td></tr>
+<tr class="separator:a3f4df25753c0c3bf26769086a88f8c29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab12bb73d9ca56cc2e49f876bacc12c90"><td class="memItemLeft" align="right" valign="top"><a id="ab12bb73d9ca56cc2e49f876bacc12c90" name="ab12bb73d9ca56cc2e49f876bacc12c90"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to_json</b> (nlohmann::json &amp;j, PrimaryGeneratorOptions const &amp;opts)</td></tr>
+<tr class="memdesc:ab12bb73d9ca56cc2e49f876bacc12c90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write options to JSON. <br /></td></tr>
+<tr class="separator:ab12bb73d9ca56cc2e49f876bacc12c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

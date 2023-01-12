@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -73,30 +73,44 @@ $(function() {
   <div class="headertitle"><div class="title">Celeritas </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md__Users_seth__local_src_celeritas_temp_README"></a> The Celeritas project implements HEP detector physics on GPU accelerator hardware with the ultimate goal of supporting the massive computational requirements of LHC-HL upgrade.</p>
-<h1><a class="anchor" id="autotoc_md2"></a>
-Installation</h1>
-<p >This project requires external dependencies such as CUDA to build with full functionality. However, any combination of these requirements can be omitted to enable limited development on personal machines with fewer available components. See <a href="doc/infrastructure.rst">the infrastructure documentation</a> for details on installing.</p>
-<h2><a class="anchor" id="autotoc_md3"></a>
-Installing with Spack</h2>
-<p ><a href="https://github.com/spack/spack">Spack</a> is an HPC-oriented package manager that includes numerous scientific packages, including those used in HEP. An included Spack "environment" (at <code>scripts/dev/env/celeritas-{platform}.yaml</code>) defines the required prerequisites for this project.</p>
-<ul>
-<li>Clone Spack following its [getting started instructions][1]</li>
-<li>To install with CUDA, run <code>spack external find cuda</code> and <code>spack install celeritas +cuda cuda_arch=&lt;ARCH&gt;</code>, where <code>&lt;ARCH&gt;</code> is the numeric portion of the [CUDA architecture flags][2]</li>
-</ul>
-<p ><a href="https://spack.readthedocs.io/en/latest/getting_started.html">1</a> <a href="https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards/">2</a></p>
-<h2><a class="anchor" id="autotoc_md4"></a>
-Configuring and building Celeritas manually</h2>
-<p >The spack environment at <a href="dev/scripts.yaml">dev/scripts.yaml</a> lists the full dependencies used by the CI for building, testing, and documenting. Install those dependencies via spack or independently, then configure Celeritas.</p>
-<p >To configure Celeritas, assuming the dependencies you want are located in the <code>CMAKE_PREFIX_PATH</code> search path, and other environment variables such as <code>CXX</code> are set, you should be able to just run CMake and build: </p><div class="fragment"><div class="line">$ mkdir build</div>
-<div class="line">$ cd build &amp;&amp; cmake ..</div>
-<div class="line">$ make</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
-Development</h1>
-<p >See the <a href="CONTRIBUTING.rst">contribution guide</a> for the contribution process, and <a href="doc/appendices/development.rst">the development guidelines</a> for further details on coding in Celeritas.</p>
-<h1><a class="anchor" id="autotoc_md6"></a>
+<div class="textblock"><p ><a class="anchor" id="md__Users_seth__local_src_celeritas_temp_README"></a> The Celeritas project implements HEP detector physics on GPU accelerator hardware with the ultimate goal of supporting the massive computational requirements of the <a href="https://home.cern/science/accelerators/high-luminosity-lhc">HL-LHC upgrade</a>.</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
 Documentation</h1>
-<p >The full code documentation (including API descriptions) is available by setting the <code>CELERITAS_BUILD_DOCS=ON</code> configuration option. A mostly complete version of the <a href="https://celeritas.readthedocs.io/en/latest/">Celeritas documentation</a> is hosted on <code>readthedocs.io</code>. </p>
+<p >Most of the Celeritas documentation is readable through the codebase through a combination of <a href="doc/index.rst">static RST documentation</a> and Doxygen-markup comments in the source code itself. The full <a href="https://celeritas-project.github.io/celeritas/user/index.html)">Celeritas user documentation</a> (including selected code documentation incorporated by Breathe) and the <a href="https://celeritas-project.github.io/celeritas/dev/index.html)">Celeritas code documentation</a> are mirrored on our GitHub pages site. You can generate these yourself by setting the <code>CELERITAS_BUILD_DOCS=ON</code> configuration option and running <code>ninja doc</code> (user) or <code>ninja doxygen</code> (developer). A continuously updated version of the <a href="https://celeritas.readthedocs.io/en/latest/">static Celeritas user documentation</a> (without API documentation) is hosted on <code>readthedocs.io</code>.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Installation for developers</h1>
+<p >Since Celeritas is still under heavy development and is not yet full-featured for downstream integration, you are likely installing it for development purposes. The <a href="doc/infrastructure.rst">infrastructure documentation</a> has a complete description of the code's dependencies and installation process for development.</p>
+<p >As an example, if you have the <a href="https://github.com/spack/spack">Spack</a> package manager installed and want to do development on a CUDA system with Volta-class graphics cards, execute the following steps: </p><div class="fragment"><div class="line"># Set up CUDA (optional)</div>
+<div class="line">$ spack external find cuda</div>
+<div class="line">$ spack config add packages:all:variants:&quot;+cuda cuda_arch=70&quot;</div>
+<div class="line"># Install celeritas dependencies</div>
+<div class="line">$ spack env create celeritas scripts/spack.yaml</div>
+<div class="line">$ spack env activate celeritas</div>
+<div class="line">$ spack install</div>
+<div class="line"># Configure, build, and test</div>
+<div class="line">$ ./build.sh base</div>
+</div><!-- fragment --><p >If you don't use Spack but have all the dependencies you want (Geant4, googletest, VecGeom, etc.) in your <code>CMAKE_PREFIX_PATH</code>, you can configure and build Celeritas as you would any other project: </p><div class="fragment"><div class="line">$ mkdir build &amp;&amp; cd build</div>
+<div class="line">$ cmake ..</div>
+<div class="line">$ make &amp;&amp; ctest</div>
+</div><!-- fragment --><p >Celeritas guarantees full compatibility and correctness only on the combinations of compilers and dependencies tested under continuous integration. Currently supported compilers are GCC 11.2 + NVCC 11.8, and HIP-Clang 15.0, but since we compile with extra warning flags and avoid non-portable code, most other compilers <em>should</em> work. Currently Geant4 11.0 and VecGeom 1.2 are the only versions that are guaranteed to work, but older versions might be OK. The full set of configurations is viewable on <a href="https://cloud.cees.ornl.gov/jenkins-ci/blue/organizations/jenkins/Celeritas/activity?branch=master">the CI web site</a>. Compatibility fixes that do not cause newer versions to fail are welcome.</p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Installation for applications</h1>
+<p >The easiest way to install Celeritas as a library/app is with Spack:</p><ul>
+<li>Follow the first two steps above to install <a href="https://spack.readthedocs.io/en/latest/getting_started.html">Spack</a> and set up its CUDA usage.</li>
+<li>Install Celeritas with <code>spack install celeritas</code></li>
+<li>Use <code>spack load celeritas</code> to add the installation to your <code>PATH</code>.</li>
+</ul>
+<p >Then see the "Downstream usage as a library" section of the <a href="doc/infrastructure.rst">infrastructure documentation</a> for how to use Celeritas in your application or framework.</p>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Development</h1>
+<p >See the <a href="CONTRIBUTING.rst">contribution guide</a> for the contribution process, <a href="doc/appendices/development.rst">the development guidelines</a> for further details on coding in Celeritas, and <a href="doc/appendices/administration.rst">the administration guidelines</a> for community standards and roles.</p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Citing Celeritas</h1>
+<p >If using Celeritas in your work, we ask that you cite the code using its <a href="https://www.osti.gov/doecode/biblio/94866">DOECode</a> registration:</p>
+<blockquote class="doxtable">
+<p >&zwj;Johnson, Seth R., Amanda Lund, Soon Yung Jun, Stefano Tognini, Guilherme Lima, Paul Romano, Philippe Canal, Ben Morgan, and Tom Evans. “Celeritas,” July 2022. <a href="https://doi.org/10.11578/dc.20221011.1">https://doi.org/10.11578/dc.20221011.1</a>. </p>
+</blockquote>
+<p>Additional references for code implementation details, benchmark problem results, etc., can be found in our continually evolving <a href="doc/_static/celeritas.bib">citation file</a>. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

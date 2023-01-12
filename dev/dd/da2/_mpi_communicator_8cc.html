@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -70,7 +70,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_54b4dc0a5a8b71d7ed2a0028b382827b.html">celeritas</a></li><li class="navelem"><a class="el" href="../../dir_82b52a59f244e1c68a9d2b9870c16eba.html">ext</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_e19e48231890b7299e0b239a0279643b.html">corecel</a></li><li class="navelem"><a class="el" href="../../dir_3f981dfca70b36a4f09c1274525bb786.html">sys</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -81,15 +81,15 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d5/d59/_mpi_communicator_8hh.html">MpiCommunicator.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d10/_assert_8hh.html">corecel/Assert.hh</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../df/dfb/_device_8hh.html">corecel/sys/Device.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/dfb/_device_8hh.html">Device.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d6/d11/_scoped_mpi_init_8hh.html">ScopedMpiInit.hh</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a497789777b5d2f2a09f6fedfbb143bb6"><td class="memItemLeft" align="right" valign="top"><a id="a497789777b5d2f2a09f6fedfbb143bb6" name="a497789777b5d2f2a09f6fedfbb143bb6"></a>
-Device&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::make_device</b> (const MpiCommunicator &amp;comm)</td></tr>
-<tr class="memdesc:a497789777b5d2f2a09f6fedfbb143bb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize device in a round-robin fashion from a communicator. <br /></td></tr>
-<tr class="separator:a497789777b5d2f2a09f6fedfbb143bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0c85036c1936121bfcd9fe17ca8836e"><td class="memItemLeft" align="right" valign="top"><a id="ab0c85036c1936121bfcd9fe17ca8836e" name="ab0c85036c1936121bfcd9fe17ca8836e"></a>
+Device&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::make_device</b> (MpiCommunicator const &amp;comm)</td></tr>
+<tr class="memdesc:ab0c85036c1936121bfcd9fe17ca8836e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize device in a round-robin fashion from a communicator. <br /></td></tr>
+<tr class="separator:ab0c85036c1936121bfcd9fe17ca8836e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

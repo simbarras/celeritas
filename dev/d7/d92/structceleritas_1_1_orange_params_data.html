@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -75,6 +75,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="../../dd/d72/structceleritas_1_1_orange_params_data-members.html">List of all members</a>  </div>
@@ -82,40 +83,92 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Data to persistent data used by ORANGE implementation.  
+<p>Persistent data used by ORANGE implementation.  
  <a href="../../d7/d92/structceleritas_1_1_orange_params_data.html#details">More...</a></p>
 
-<p><code>#include &lt;Data.hh&gt;</code></p>
+<p><code>#include &lt;OrangeData.hh&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a5b59faae908f0a93dd5e00fee8e74ba4"><td class="memTemplParams" colspan="2"><a id="a5b59faae908f0a93dd5e00fee8e74ba4" name="a5b59faae908f0a93dd5e00fee8e74ba4"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a5b59faae908f0a93dd5e00fee8e74ba4"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Items</b> = <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Collection</a>&lt; T, W, M &gt;</td></tr>
+<tr class="separator:a5b59faae908f0a93dd5e00fee8e74ba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ccf485b846dbda08807b4e75413c1c3"><td class="memTemplParams" colspan="2"><a id="a0ccf485b846dbda08807b4e75413c1c3" name="a0ccf485b846dbda08807b4e75413c1c3"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a0ccf485b846dbda08807b4e75413c1c3"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>UnivItems</b> = <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Collection</a>&lt; T, W, M, <a class="el" href="../../d7/d3b/_orange_types_8hh.html#a9a8aa9e9bf4ec70552060e7fe2757334">UniverseId</a> &gt;</td></tr>
+<tr class="separator:a0ccf485b846dbda08807b4e75413c1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d04f068440cfa4262ef36d77305b33e"><td class="memTemplParams" colspan="2"><a id="a0d04f068440cfa4262ef36d77305b33e" name="a0d04f068440cfa4262ef36d77305b33e"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a0d04f068440cfa4262ef36d77305b33e"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>VolumeItems</b> = <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Collection</a>&lt; T, W, M, <a class="el" href="../../d1/dd1/_vecgeom_data_8hh.html#a8c97752c08c841e3faf0173adb2e1525">VolumeId</a> &gt;</td></tr>
+<tr class="separator:a0d04f068440cfa4262ef36d77305b33e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa94c813bf55a1ea8b0788894fe9b91e8"><td class="memItemLeft" align="right" valign="top"><a id="aa94c813bf55a1ea8b0788894fe9b91e8" name="aa94c813bf55a1ea8b0788894fe9b91e8"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>RealId</b> = <a class="el" href="../../dd/dbb/classceleritas_1_1_opaque_id.html">OpaqueId</a>&lt; <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> &gt;</td></tr>
+<tr class="separator:aa94c813bf55a1ea8b0788894fe9b91e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abb420a4825e4337f0d3d5f861a736717"><td class="memItemLeft" align="right" valign="top"><a id="abb420a4825e4337f0d3d5f861a736717" name="abb420a4825e4337f0d3d5f861a736717"></a>
 <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () const</td></tr>
 <tr class="memdesc:abb420a4825e4337f0d3d5f861a736717"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if assigned. <br /></td></tr>
 <tr class="separator:abb420a4825e4337f0d3d5f861a736717"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06c87ae3990c095f41125bd09211b9de"><td class="memTemplParams" colspan="2"><a id="a06c87ae3990c095f41125bd09211b9de" name="a06c87ae3990c095f41125bd09211b9de"></a>
+<tr class="memitem:ace69268f87390df15dedbe6793abb742"><td class="memTemplParams" colspan="2"><a id="ace69268f87390df15dedbe6793abb742" name="ace69268f87390df15dedbe6793abb742"></a>
 template&lt;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148">Ownership</a> W2, <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#af21a33cd854346b7988591378fcfe138">MemSpace</a> M2&gt; </td></tr>
-<tr class="memitem:a06c87ae3990c095f41125bd09211b9de"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d7/d92/structceleritas_1_1_orange_params_data.html">OrangeParamsData</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="../../d7/d92/structceleritas_1_1_orange_params_data.html">OrangeParamsData</a>&lt; W2, M2 &gt; &amp;other)</td></tr>
-<tr class="memdesc:a06c87ae3990c095f41125bd09211b9de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another set of data. <br /></td></tr>
-<tr class="separator:a06c87ae3990c095f41125bd09211b9de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace69268f87390df15dedbe6793abb742"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d7/d92/structceleritas_1_1_orange_params_data.html">OrangeParamsData</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="../../d7/d92/structceleritas_1_1_orange_params_data.html">OrangeParamsData</a>&lt; W2, M2 &gt; const &amp;other)</td></tr>
+<tr class="memdesc:ace69268f87390df15dedbe6793abb742"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another set of data. <br /></td></tr>
+<tr class="separator:ace69268f87390df15dedbe6793abb742"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a88204ca55e60e4a19990b317be8c862c"><td class="memItemLeft" align="right" valign="top"><a id="a88204ca55e60e4a19990b317be8c862c" name="a88204ca55e60e4a19990b317be8c862c"></a>
-<a class="el" href="../../de/d4b/structceleritas_1_1_surface_data.html">SurfaceData</a>&lt; W, M &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>surfaces</b></td></tr>
-<tr class="separator:a88204ca55e60e4a19990b317be8c862c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0551c67ea398a139dc190929f2c5ff03"><td class="memItemLeft" align="right" valign="top"><a id="a0551c67ea398a139dc190929f2c5ff03" name="a0551c67ea398a139dc190929f2c5ff03"></a>
-<a class="el" href="../../d5/d5e/structceleritas_1_1_volume_data.html">VolumeData</a>&lt; W, M &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>volumes</b></td></tr>
-<tr class="separator:a0551c67ea398a139dc190929f2c5ff03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08ddb17b606eb98b29815c4ed37eed4c"><td class="memItemLeft" align="right" valign="top"><a id="a08ddb17b606eb98b29815c4ed37eed4c" name="a08ddb17b606eb98b29815c4ed37eed4c"></a>
 <a class="el" href="../../db/d7a/structceleritas_1_1_orange_params_scalars.html">OrangeParamsScalars</a>&#160;</td><td class="memItemRight" valign="bottom"><b>scalars</b></td></tr>
 <tr class="separator:a08ddb17b606eb98b29815c4ed37eed4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1d30a8f12a14aa281f72c2fff23165c"><td class="memItemLeft" align="right" valign="top"><a id="ac1d30a8f12a14aa281f72c2fff23165c" name="ac1d30a8f12a14aa281f72c2fff23165c"></a>
+<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">UnivItems</a>&lt; <a class="el" href="../../d7/d3b/_orange_types_8hh.html#afa3aaf9aafad1b3cb1bbd89ab62a911f">UniverseType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>universe_type</b></td></tr>
+<tr class="separator:ac1d30a8f12a14aa281f72c2fff23165c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a534e7069748d9a21e4a5a3f5ff26801c"><td class="memItemLeft" align="right" valign="top"><a id="a534e7069748d9a21e4a5a3f5ff26801c" name="a534e7069748d9a21e4a5a3f5ff26801c"></a>
+<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">UnivItems</a>&lt; size_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>universe_index</b></td></tr>
+<tr class="separator:a534e7069748d9a21e4a5a3f5ff26801c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00a03f71ee37dedd3d6ad34bab2f1022"><td class="memItemLeft" align="right" valign="top"><a id="a00a03f71ee37dedd3d6ad34bab2f1022" name="a00a03f71ee37dedd3d6ad34bab2f1022"></a>
+<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Items</a>&lt; <a class="el" href="../../df/d90/structceleritas_1_1_simple_unit_record.html">SimpleUnitRecord</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>simple_unit</b></td></tr>
+<tr class="separator:a00a03f71ee37dedd3d6ad34bab2f1022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5afb45e7ae4d9d6ad7b2bb6a427cc494"><td class="memItemLeft" align="right" valign="top"><a id="a5afb45e7ae4d9d6ad7b2bb6a427cc494" name="a5afb45e7ae4d9d6ad7b2bb6a427cc494"></a>
+<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Items</a>&lt; <a class="el" href="../../dd/dbb/classceleritas_1_1_opaque_id.html">SurfaceId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>surface_ids</b></td></tr>
+<tr class="separator:a5afb45e7ae4d9d6ad7b2bb6a427cc494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29a59335896d2eec15197ee961a4d873"><td class="memItemLeft" align="right" valign="top"><a id="a29a59335896d2eec15197ee961a4d873" name="a29a59335896d2eec15197ee961a4d873"></a>
+<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Items</a>&lt; <a class="el" href="../../d1/dd1/_vecgeom_data_8hh.html#a8c97752c08c841e3faf0173adb2e1525">VolumeId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>volume_ids</b></td></tr>
+<tr class="separator:a29a59335896d2eec15197ee961a4d873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0e6bf1f2ae84cbf111b551c61d4b073"><td class="memItemLeft" align="right" valign="top"><a id="ab0e6bf1f2ae84cbf111b551c61d4b073" name="ab0e6bf1f2ae84cbf111b551c61d4b073"></a>
+<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Items</a>&lt; <a class="el" href="../../dd/dbb/classceleritas_1_1_opaque_id.html">RealId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>real_ids</b></td></tr>
+<tr class="separator:ab0e6bf1f2ae84cbf111b551c61d4b073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a136d2f34b80924728739986b00442291"><td class="memItemLeft" align="right" valign="top"><a id="a136d2f34b80924728739986b00442291" name="a136d2f34b80924728739986b00442291"></a>
+<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Items</a>&lt; <a class="el" href="../../d7/d3b/_orange_types_8hh.html#adbbba02a0d046cbac4c60629cac9d31b">logic_int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>logic_ints</b></td></tr>
+<tr class="separator:a136d2f34b80924728739986b00442291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c2941e3fea1d0014e6fd8138af6c44c"><td class="memItemLeft" align="right" valign="top"><a id="a0c2941e3fea1d0014e6fd8138af6c44c" name="a0c2941e3fea1d0014e6fd8138af6c44c"></a>
+<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Items</a>&lt; <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>reals</b></td></tr>
+<tr class="separator:a0c2941e3fea1d0014e6fd8138af6c44c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26c153f4957a2458aa14c6bbdf9b7b56"><td class="memItemLeft" align="right" valign="top"><a id="a26c153f4957a2458aa14c6bbdf9b7b56" name="a26c153f4957a2458aa14c6bbdf9b7b56"></a>
+<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Items</a>&lt; <a class="el" href="../../d7/d3b/_orange_types_8hh.html#a6e38ea21d9877ba8a45b3a6fee0c299c">SurfaceType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>surface_types</b></td></tr>
+<tr class="separator:a26c153f4957a2458aa14c6bbdf9b7b56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca62ce7492ee3199751383c144366c35"><td class="memItemLeft" align="right" valign="top"><a id="aca62ce7492ee3199751383c144366c35" name="aca62ce7492ee3199751383c144366c35"></a>
+<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Items</a>&lt; <a class="el" href="../../d9/d25/structceleritas_1_1_connectivity.html">Connectivity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>connectivities</b></td></tr>
+<tr class="separator:aca62ce7492ee3199751383c144366c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab75f091030e670f4300afe8d9b2cf54a"><td class="memItemLeft" align="right" valign="top"><a id="ab75f091030e670f4300afe8d9b2cf54a" name="ab75f091030e670f4300afe8d9b2cf54a"></a>
+<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">VolumeItems</a>&lt; <a class="el" href="../../d2/de3/structceleritas_1_1_volume_record.html">VolumeRecord</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>volume_records</b></td></tr>
+<tr class="separator:ab75f091030e670f4300afe8d9b2cf54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa14fe5bd872195ea0febd45681bbec9b"><td class="memItemLeft" align="right" valign="top"><a id="aa14fe5bd872195ea0febd45681bbec9b" name="aa14fe5bd872195ea0febd45681bbec9b"></a>
+<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Items</a>&lt; <a class="el" href="../../d7/d3b/_orange_types_8hh.html#a0f53d6740b99dd9d05b697edf8411b81">Translation</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>translations</b></td></tr>
+<tr class="separator:aa14fe5bd872195ea0febd45681bbec9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b01bc54148a93e39bdd6769ee84806b"><td class="memItemLeft" align="right" valign="top"><a id="a3b01bc54148a93e39bdd6769ee84806b" name="a3b01bc54148a93e39bdd6769ee84806b"></a>
+<a class="el" href="../../df/dca/structceleritas_1_1_unit_indexer_data.html">UnitIndexerData</a>&lt; W, M &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>unit_indexer_data</b></td></tr>
+<tr class="separator:a3b01bc54148a93e39bdd6769ee84806b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148">Ownership</a> W, <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#af21a33cd854346b7988591378fcfe138">MemSpace</a> M&gt;<br />
-struct celeritas::OrangeParamsData&lt; W, M &gt;</div><p >Data to persistent data used by ORANGE implementation. </p>
+struct celeritas::OrangeParamsData&lt; W, M &gt;</div><p >Persistent data used by ORANGE implementation. </p>
+<p >Most data will be accessed through the invidual units, which reference data in the "storage" below. The type and index for a universe ID will determine the class type and data of the Tracker to instantiate. If <em>only</em> simple units are present, then the <code>simple_unit</code> data structure will just be equal to a range (with the total number of universes present). Use <code>universe_type</code> to switch on the type of universe; then <code>universe_index</code> to index into <code>simple_unit</code> or <code>rect_array</code> or ... </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="../../db/d1e/_data_8hh.html">Data.hh</a></li>
+<li><a class="el" href="../../d4/de3/_orange_data_8hh.html">OrangeData.hh</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

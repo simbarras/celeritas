@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -91,16 +91,16 @@ Functions</h2></td></tr>
 <tr class="memitem:aae24f584a61bea48c5d0ce8207a00878"><td class="memTemplItemLeft" align="right" valign="top">S&lt; Ownership::reference, M &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df9/_ref_8hh.html#aae24f584a61bea48c5d0ce8207a00878">celeritas::make_ref</a> (S&lt; Ownership::value, M &gt; &amp;states)</td></tr>
 <tr class="memdesc:aae24f584a61bea48c5d0ce8207a00878"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a reference object pointing to state data.  <a href="../../d9/df9/_ref_8hh.html#aae24f584a61bea48c5d0ce8207a00878">More...</a><br /></td></tr>
 <tr class="separator:aae24f584a61bea48c5d0ce8207a00878"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc7572d81d534a83a06adbca9fa2c133"><td class="memTemplParams" colspan="2"><a id="abc7572d81d534a83a06adbca9fa2c133" name="abc7572d81d534a83a06adbca9fa2c133"></a>
+<tr class="memitem:aed85379ce73293be242ac8710a9b6cd7"><td class="memTemplParams" colspan="2"><a id="aed85379ce73293be242ac8710a9b6cd7" name="aed85379ce73293be242ac8710a9b6cd7"></a>
 template&lt;template&lt; Ownership, MemSpace &gt; class P, MemSpace M&gt; </td></tr>
-<tr class="memitem:abc7572d81d534a83a06adbca9fa2c133"><td class="memTemplItemLeft" align="right" valign="top">P&lt; Ownership::const_reference, M &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::make_ref</b> (const P&lt; Ownership::value, M &gt; &amp;params)</td></tr>
-<tr class="memdesc:abc7572d81d534a83a06adbca9fa2c133"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a reference object pointing to params data. <br /></td></tr>
-<tr class="separator:abc7572d81d534a83a06adbca9fa2c133"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a651c47831d993241e62271b80512a0a4"><td class="memTemplParams" colspan="2"><a id="a651c47831d993241e62271b80512a0a4" name="a651c47831d993241e62271b80512a0a4"></a>
+<tr class="memitem:aed85379ce73293be242ac8710a9b6cd7"><td class="memTemplItemLeft" align="right" valign="top">P&lt; Ownership::const_reference, M &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::make_ref</b> (P&lt; Ownership::value, M &gt; const &amp;params)</td></tr>
+<tr class="memdesc:aed85379ce73293be242ac8710a9b6cd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a reference object pointing to params data. <br /></td></tr>
+<tr class="separator:aed85379ce73293be242ac8710a9b6cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac662aed0475575a251a4cf3464637e1f"><td class="memTemplParams" colspan="2"><a id="ac662aed0475575a251a4cf3464637e1f" name="ac662aed0475575a251a4cf3464637e1f"></a>
 template&lt;template&lt; Ownership, MemSpace &gt; class P, MemSpace M&gt; </td></tr>
-<tr class="memitem:a651c47831d993241e62271b80512a0a4"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::make_const_ref</b> (const P&lt; Ownership::value, M &gt; &amp;params)</td></tr>
-<tr class="memdesc:a651c47831d993241e62271b80512a0a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a const reference object pointing to params data. <br /></td></tr>
-<tr class="separator:a651c47831d993241e62271b80512a0a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac662aed0475575a251a4cf3464637e1f"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::make_const_ref</b> (P&lt; Ownership::value, M &gt; const &amp;params)</td></tr>
+<tr class="memdesc:ac662aed0475575a251a4cf3464637e1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a const reference object pointing to params data. <br /></td></tr>
+<tr class="separator:ac662aed0475575a251a4cf3464637e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcae895d3bf6321d1fb7a5e8dab70ecb"><td class="memTemplParams" colspan="2">template&lt;MemSpace M, class T &gt; </td></tr>
 <tr class="memitem:adcae895d3bf6321d1fb7a5e8dab70ecb"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df9/_ref_8hh.html#adcae895d3bf6321d1fb7a5e8dab70ecb">celeritas::get_ref</a> (T &amp;&amp;obj)</td></tr>
 <tr class="memdesc:adcae895d3bf6321d1fb7a5e8dab70ecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to memory-spaced data owned by a params/state object.  <a href="../../d9/df9/_ref_8hh.html#adcae895d3bf6321d1fb7a5e8dab70ecb">More...</a><br /></td></tr>

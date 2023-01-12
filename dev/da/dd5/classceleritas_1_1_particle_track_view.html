@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -96,7 +96,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>ParticleParamsRef</b
 using&#160;</td><td class="memItemRight" valign="bottom"><b>ParticleStateRef</b> = <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#a611908e2307d8e68abc7f152c856cbf6">celeritas::NativeRef</a>&lt; <a class="el" href="../../d7/db9/structceleritas_1_1_particle_state_data.html">ParticleStateData</a> &gt;</td></tr>
 <tr class="separator:af28ce7c4b9e417a03b225066a0da2b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fa784f75b224e179e83f7bb8a6b363d"><td class="memItemLeft" align="right" valign="top"><a id="a8fa784f75b224e179e83f7bb8a6b363d" name="a8fa784f75b224e179e83f7bb8a6b363d"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Energy</b> = <a class="el" href="../../de/d40/_quantities_8hh.html#ab016d8ce94d9a1e2a77552395078cce0">units::MevEnergy</a></td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Energy</b> = <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::MevEnergy</a></td></tr>
 <tr class="separator:a8fa784f75b224e179e83f7bb8a6b363d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5de1decf4d7e0bde0dae743f9ed57715"><td class="memItemLeft" align="right" valign="top"><a id="a5de1decf4d7e0bde0dae743f9ed57715" name="a5de1decf4d7e0bde0dae743f9ed57715"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>Initializer_t</b> = <a class="el" href="../../d0/d64/structceleritas_1_1_particle_track_initializer.html">ParticleTrackInitializer</a></td></tr>
@@ -104,14 +104,14 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>Initializer_t</b> = 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8cc53e6707b30a3474daa3ed487671e5"><td class="memItemLeft" align="right" valign="top"><a id="a8cc53e6707b30a3474daa3ed487671e5" name="a8cc53e6707b30a3474daa3ed487671e5"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ParticleTrackView</b> (const ParticleParamsRef &amp;params, const ParticleStateRef &amp;states, <a class="el" href="../../d3/d83/_thread_id_8hh.html#acdbd2b3f5402d42bb1349684a00365a4">ThreadId</a> id)</td></tr>
-<tr class="memdesc:a8cc53e6707b30a3474daa3ed487671e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from dynamic and static particle properties. <br /></td></tr>
-<tr class="separator:a8cc53e6707b30a3474daa3ed487671e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d251230dbb94a7bec91852e272e4814"><td class="memItemLeft" align="right" valign="top"><a id="a9d251230dbb94a7bec91852e272e4814" name="a9d251230dbb94a7bec91852e272e4814"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../da/dd5/classceleritas_1_1_particle_track_view.html">ParticleTrackView</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="../../d0/d64/structceleritas_1_1_particle_track_initializer.html">Initializer_t</a> &amp;other)</td></tr>
-<tr class="memdesc:a9d251230dbb94a7bec91852e272e4814"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the particle. <br /></td></tr>
-<tr class="separator:a9d251230dbb94a7bec91852e272e4814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae37fb4ced1b7f38ec268b3539b98d305"><td class="memItemLeft" align="right" valign="top"><a id="ae37fb4ced1b7f38ec268b3539b98d305" name="ae37fb4ced1b7f38ec268b3539b98d305"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ParticleTrackView</b> (ParticleParamsRef const &amp;params, ParticleStateRef const &amp;states, <a class="el" href="../../d3/d83/_thread_id_8hh.html#acdbd2b3f5402d42bb1349684a00365a4">ThreadId</a> id)</td></tr>
+<tr class="memdesc:ae37fb4ced1b7f38ec268b3539b98d305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from dynamic and static particle properties. <br /></td></tr>
+<tr class="separator:ae37fb4ced1b7f38ec268b3539b98d305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1c931d626d40fa32e918aae94688b20"><td class="memItemLeft" align="right" valign="top"><a id="ad1c931d626d40fa32e918aae94688b20" name="ad1c931d626d40fa32e918aae94688b20"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../da/dd5/classceleritas_1_1_particle_track_view.html">ParticleTrackView</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="../../d0/d64/structceleritas_1_1_particle_track_initializer.html">Initializer_t</a> const &amp;other)</td></tr>
+<tr class="memdesc:ad1c931d626d40fa32e918aae94688b20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the particle. <br /></td></tr>
+<tr class="separator:ad1c931d626d40fa32e918aae94688b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21d5bd3775494c3b490642dc12efd04e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd5/classceleritas_1_1_particle_track_view.html#a21d5bd3775494c3b490642dc12efd04e">energy</a> (<a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a>)</td></tr>
 <tr class="memdesc:a21d5bd3775494c3b490642dc12efd04e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the particle's kinetic energy.  <a href="../../da/dd5/classceleritas_1_1_particle_track_view.html#a21d5bd3775494c3b490642dc12efd04e">More...</a><br /></td></tr>
 <tr class="separator:a21d5bd3775494c3b490642dc12efd04e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,11 +136,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7b8f902b6493cb071d8f856ac79df584"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get static particle properties for the current state. <br /></td></tr>
 <tr class="separator:a7b8f902b6493cb071d8f856ac79df584"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3887585dac3af9b41e5183a5e245c337"><td class="memItemLeft" align="right" valign="top"><a id="a3887585dac3af9b41e5183a5e245c337" name="a3887585dac3af9b41e5183a5e245c337"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../de/d40/_quantities_8hh.html#ac64185c796a559efc632031deadd4b83">units::MevMass</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mass</b> () const</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::MevMass</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mass</b> () const</td></tr>
 <tr class="memdesc:a3887585dac3af9b41e5183a5e245c337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rest mass [MeV / c^2]. <br /></td></tr>
 <tr class="separator:a3887585dac3af9b41e5183a5e245c337"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ea358f747f2c2bccfb9407f3760128d"><td class="memItemLeft" align="right" valign="top"><a id="a8ea358f747f2c2bccfb9407f3760128d" name="a8ea358f747f2c2bccfb9407f3760128d"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../de/d40/_quantities_8hh.html#aed3693f034cf055fd47e1de6f9f1c4e8">units::ElementaryCharge</a>&#160;</td><td class="memItemRight" valign="bottom"><b>charge</b> () const</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::ElementaryCharge</a>&#160;</td><td class="memItemRight" valign="bottom"><b>charge</b> () const</td></tr>
 <tr class="memdesc:a8ea358f747f2c2bccfb9407f3760128d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elementary charge. <br /></td></tr>
 <tr class="separator:a8ea358f747f2c2bccfb9407f3760128d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0592dc4c7040dd225212cfd3ce40df5a"><td class="memItemLeft" align="right" valign="top"><a id="a0592dc4c7040dd225212cfd3ce40df5a" name="a0592dc4c7040dd225212cfd3ce40df5a"></a>
@@ -150,16 +150,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aaa9f0df7f99c00eefdb96b064a478490"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd5/classceleritas_1_1_particle_track_view.html#aaa9f0df7f99c00eefdb96b064a478490">beta_sq</a> () const</td></tr>
 <tr class="memdesc:aaa9f0df7f99c00eefdb96b064a478490"><td class="mdescLeft">&#160;</td><td class="mdescRight">Square of <picture><source srcset="../../form_98_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \beta $" src="../../form_98.png" width="9" height="13"/></picture>, which is the fraction of lightspeed [unitless].  <a href="../../da/dd5/classceleritas_1_1_particle_track_view.html#aaa9f0df7f99c00eefdb96b064a478490">More...</a><br /></td></tr>
 <tr class="separator:aaa9f0df7f99c00eefdb96b064a478490"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a120380b0fd974e0f38bb83482c59cdf6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../de/d40/_quantities_8hh.html#a5bcaba097675f190d7c96829513fa33d">units::LightSpeed</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd5/classceleritas_1_1_particle_track_view.html#a120380b0fd974e0f38bb83482c59cdf6">speed</a> () const</td></tr>
+<tr class="memitem:a120380b0fd974e0f38bb83482c59cdf6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::LightSpeed</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd5/classceleritas_1_1_particle_track_view.html#a120380b0fd974e0f38bb83482c59cdf6">speed</a> () const</td></tr>
 <tr class="memdesc:a120380b0fd974e0f38bb83482c59cdf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Speed [1/c].  <a href="../../da/dd5/classceleritas_1_1_particle_track_view.html#a120380b0fd974e0f38bb83482c59cdf6">More...</a><br /></td></tr>
 <tr class="separator:a120380b0fd974e0f38bb83482c59cdf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47b28435ac42147ac74f9ceeb4aaeb3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd5/classceleritas_1_1_particle_track_view.html#a47b28435ac42147ac74f9ceeb4aaeb3c">lorentz_factor</a> () const</td></tr>
 <tr class="memdesc:a47b28435ac42147ac74f9ceeb4aaeb3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lorentz factor [unitless].  <a href="../../da/dd5/classceleritas_1_1_particle_track_view.html#a47b28435ac42147ac74f9ceeb4aaeb3c">More...</a><br /></td></tr>
 <tr class="separator:a47b28435ac42147ac74f9ceeb4aaeb3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae356a814653c2470dc8ea8b6a88c7bdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../de/d40/_quantities_8hh.html#a8035b9710e14c7b447dcdccd82667a0d">units::MevMomentum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd5/classceleritas_1_1_particle_track_view.html#ae356a814653c2470dc8ea8b6a88c7bdc">momentum</a> () const</td></tr>
+<tr class="memitem:ae356a814653c2470dc8ea8b6a88c7bdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::MevMomentum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd5/classceleritas_1_1_particle_track_view.html#ae356a814653c2470dc8ea8b6a88c7bdc">momentum</a> () const</td></tr>
 <tr class="memdesc:ae356a814653c2470dc8ea8b6a88c7bdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Relativistic momentum [MeV / c].  <a href="../../da/dd5/classceleritas_1_1_particle_track_view.html#ae356a814653c2470dc8ea8b6a88c7bdc">More...</a><br /></td></tr>
 <tr class="separator:ae356a814653c2470dc8ea8b6a88c7bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99de8c634e139429aaed455db7000c9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../de/d40/_quantities_8hh.html#a1a52a4ddb60aadac08539a1af65f1239">units::MevMomentumSq</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd5/classceleritas_1_1_particle_track_view.html#a99de8c634e139429aaed455db7000c9f">momentum_sq</a> () const</td></tr>
+<tr class="memitem:a99de8c634e139429aaed455db7000c9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::MevMomentumSq</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd5/classceleritas_1_1_particle_track_view.html#a99de8c634e139429aaed455db7000c9f">momentum_sq</a> () const</td></tr>
 <tr class="memdesc:a99de8c634e139429aaed455db7000c9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Square of relativistic momentum [MeV^2 / c^2].  <a href="../../da/dd5/classceleritas_1_1_particle_track_view.html#a99de8c634e139429aaed455db7000c9f">More...</a><br /></td></tr>
 <tr class="separator:a99de8c634e139429aaed455db7000c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -214,7 +214,7 @@ E = K + mc^2
 </p>
 <p >where <picture><source srcset="../../form_153_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \gamma $" src="../../form_153.png" width="9" height="9"/></picture> is the Lorentz factor (see below).</p>
 <p >By choosing not to divide out the mass, this expression will work for massless particles.</p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000011">Todo:</a></b></dt><dd>For nonrelativistic particles (low kinetic energy) this expression may be inaccurate due to rounding error. It is however guaranteed to be in the exact range [0, 1]. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000010">Todo:</a></b></dt><dd>For nonrelativistic particles (low kinetic energy) this expression may be inaccurate due to rounding error. It is however guaranteed to be in the exact range [0, 1]. </dd></dl>
 
 </div>
 </div>
@@ -300,7 +300,7 @@ E = \gamma mc^2 = K + mc^2
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../de/d40/_quantities_8hh.html#a8035b9710e14c7b447dcdccd82667a0d">units::MevMomentum</a> celeritas::ParticleTrackView::momentum </td>
+          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::MevMomentum</a> celeritas::ParticleTrackView::momentum </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -328,7 +328,7 @@ E = \gamma mc^2 = K + mc^2
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../de/d40/_quantities_8hh.html#a1a52a4ddb60aadac08539a1af65f1239">units::MevMomentumSq</a> celeritas::ParticleTrackView::momentum_sq </td>
+          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::MevMomentumSq</a> celeritas::ParticleTrackView::momentum_sq </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -375,7 +375,7 @@ p^2 = \frac{K^2}{c^2} + 2 * m * K
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../de/d40/_quantities_8hh.html#a5bcaba097675f190d7c96829513fa33d">units::LightSpeed</a> celeritas::ParticleTrackView::speed </td>
+          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::LightSpeed</a> celeritas::ParticleTrackView::speed </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

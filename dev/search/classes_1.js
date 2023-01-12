@@ -11,5 +11,6 @@ var searchData=
   ['bremfinalstatehelper_8',['BremFinalStateHelper',['../d0/df2/classceleritas_1_1_brem_final_state_helper.html',1,'celeritas']]],
   ['bremsstrahlungprocess_9',['BremsstrahlungProcess',['../d1/d76/classceleritas_1_1_bremsstrahlung_process.html',1,'celeritas']]],
   ['buildoutput_10',['BuildOutput',['../db/d04/classceleritas_1_1_build_output.html',1,'celeritas']]],
-  ['bvhnavigator_11',['BVHNavigator',['../d2/da0/classceleritas_1_1detail_1_1_b_v_h_navigator.html',1,'celeritas::detail']]]
+  ['bumpcalculator_11',['BumpCalculator',['../d3/da6/classceleritas_1_1detail_1_1_bump_calculator.html',1,'celeritas::detail']]],
+  ['bvhnavigator_12',['BVHNavigator',['../d2/da0/classceleritas_1_1detail_1_1_b_v_h_navigator.html',1,'celeritas::detail']]]
 ];

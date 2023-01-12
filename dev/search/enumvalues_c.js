@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['none_0',['none',['../d4/da1/_energy_loss_helper_8hh.html#a3e0eea3c2b4cd5f1746cf24607e32016a334c4a4c42fdb79d7ebc3e73b517e6f8',1,'none()celeritas'],['../de/d02/_geant_setup_8hh.html#a66654a03a9c0c32e0b0b7821e896162da334c4a4c42fdb79d7ebc3e73b517e6f8',1,'none()celeritas'],['../d4/db9/_import_physics_table_8hh.html#a784fe5e889a18317c1c1d195ab9d37d3a334c4a4c42fdb79d7ebc3e73b517e6f8',1,'none()celeritas']]]
+  ['outside_0',['outside',['../d7/d3b/_orange_types_8hh.html#a71ab8678dcf1b07beab18d3cc954e297ac30163615770c8b2b8873288e828de41',1,'celeritas']]]
 ];

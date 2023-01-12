@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -118,7 +118,7 @@ class celeritas::Selector&lt; F, T &gt;</div><p >On-the-fly selection of a weigh
 <div class="line">ElementId el = select_el(rng);</div>
 <div class="ttc" id="a_selector_8hh_html_a14e73b418a71954c335eb18985857521"><div class="ttname"><a href="../../d5/da9/_selector_8hh.html#a14e73b418a71954c335eb18985857521">celeritas::make_selector</a></div><div class="ttdeci">CELER_FUNCTION Selector&lt; F, T &gt; make_selector(F &amp;&amp;func, T size, decltype(func(size)) total=1)</div><div class="ttdoc">Create a selector object from a function and total accumulated value.</div><div class="ttdef"><b>Definition:</b> Selector.hh:87</div></div>
 <div class="ttc" id="aclassceleritas_1_1_opaque_id_html"><div class="ttname"><a href="../../dd/dbb/classceleritas_1_1_opaque_id.html">celeritas::OpaqueId&lt; struct ElementRecord &gt;</a></div></div>
-<div class="ttc" id="aclassceleritas_1_1_opaque_id_html_a7f254e60ab9d65b336d782f834fc5fd1"><div class="ttname"><a href="../../dd/dbb/classceleritas_1_1_opaque_id.html#a7f254e60ab9d65b336d782f834fc5fd1">celeritas::OpaqueId::get</a></div><div class="ttdeci">size_type get() const</div><div class="ttdoc">Get the ID's value.</div><div class="ttdef"><b>Definition:</b> OpaqueId.hh:57</div></div>
+<div class="ttc" id="aclassceleritas_1_1_opaque_id_html_a7f254e60ab9d65b336d782f834fc5fd1"><div class="ttname"><a href="../../dd/dbb/classceleritas_1_1_opaque_id.html#a7f254e60ab9d65b336d782f834fc5fd1">celeritas::OpaqueId::get</a></div><div class="ttdeci">size_type get() const</div><div class="ttdoc">Get the ID's value.</div><div class="ttdef"><b>Definition:</b> OpaqueId.hh:58</div></div>
 </div><!-- fragment --><p> or </p><div class="fragment"><div class="line"><span class="keyword">auto</span> select_val = <a class="code hl_function" href="../../d5/da9/_selector_8hh.html#a14e73b418a71954c335eb18985857521">make_selector</a>([](size_type i) { <span class="keywordflow">return</span> pdf[i]; },</div>
 <div class="line">                                pdf.size());</div>
 <div class="line">size_type idx = select_val(rng);</div>

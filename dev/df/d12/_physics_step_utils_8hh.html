@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -104,23 +104,23 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a71ce7e9dcbc00c4700d83e08acb87678"><td class="memItemLeft" align="right" valign="top"><a id="a71ce7e9dcbc00c4700d83e08acb87678" name="a71ce7e9dcbc00c4700d83e08acb87678"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> StepLimit&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::calc_physics_step_limit</b> (const MaterialTrackView &amp;material, const ParticleTrackView &amp;particle, PhysicsTrackView &amp;physics, PhysicsStepView &amp;pstep)</td></tr>
-<tr class="memdesc:a71ce7e9dcbc00c4700d83e08acb87678"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate physics step limits based on cross sections and range limiters. <br /></td></tr>
-<tr class="separator:a71ce7e9dcbc00c4700d83e08acb87678"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02f76e76cc58033c44927c275a26551c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> ParticleTrackView::Energy&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d12/_physics_step_utils_8hh.html#a02f76e76cc58033c44927c275a26551c">celeritas::calc_mean_energy_loss</a> (const ParticleTrackView &amp;particle, const PhysicsTrackView &amp;physics, real_type step)</td></tr>
-<tr class="memdesc:a02f76e76cc58033c44927c275a26551c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate mean energy loss over the given "true" step length.  <a href="../../df/d12/_physics_step_utils_8hh.html#a02f76e76cc58033c44927c275a26551c">More...</a><br /></td></tr>
-<tr class="separator:a02f76e76cc58033c44927c275a26551c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09b6ea73c5c2227a6b63ebfc68394e99"><td class="memTemplParams" colspan="2">template&lt;class Engine &gt; </td></tr>
-<tr class="memitem:a09b6ea73c5c2227a6b63ebfc68394e99"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> ActionId&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/d12/_physics_step_utils_8hh.html#a09b6ea73c5c2227a6b63ebfc68394e99">celeritas::select_discrete_interaction</a> (const MaterialView &amp;material, const ParticleTrackView &amp;particle, const PhysicsTrackView &amp;physics, PhysicsStepView &amp;pstep, Engine &amp;rng)</td></tr>
-<tr class="memdesc:a09b6ea73c5c2227a6b63ebfc68394e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choose the physics model for a track's pending interaction.  <a href="../../df/d12/_physics_step_utils_8hh.html#a09b6ea73c5c2227a6b63ebfc68394e99">More...</a><br /></td></tr>
-<tr class="separator:a09b6ea73c5c2227a6b63ebfc68394e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af08c6d69e51e1d7f7a4a0a96a272d5b0"><td class="memItemLeft" align="right" valign="top"><a id="af08c6d69e51e1d7f7a4a0a96a272d5b0" name="af08c6d69e51e1d7f7a4a0a96a272d5b0"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> StepLimit&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::calc_physics_step_limit</b> (MaterialTrackView const &amp;material, ParticleTrackView const &amp;particle, PhysicsTrackView &amp;physics, PhysicsStepView &amp;pstep)</td></tr>
+<tr class="memdesc:af08c6d69e51e1d7f7a4a0a96a272d5b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate physics step limits based on cross sections and range limiters. <br /></td></tr>
+<tr class="separator:af08c6d69e51e1d7f7a4a0a96a272d5b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a055ca1339377867bd45f753893660598"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> ParticleTrackView::Energy&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d12/_physics_step_utils_8hh.html#a055ca1339377867bd45f753893660598">celeritas::calc_mean_energy_loss</a> (ParticleTrackView const &amp;particle, PhysicsTrackView const &amp;physics, real_type step)</td></tr>
+<tr class="memdesc:a055ca1339377867bd45f753893660598"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate mean energy loss over the given "true" step length.  <a href="../../df/d12/_physics_step_utils_8hh.html#a055ca1339377867bd45f753893660598">More...</a><br /></td></tr>
+<tr class="separator:a055ca1339377867bd45f753893660598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c19e4a4cd9d7276ad902730ec8949a0"><td class="memTemplParams" colspan="2">template&lt;class Engine &gt; </td></tr>
+<tr class="memitem:a0c19e4a4cd9d7276ad902730ec8949a0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> ActionId&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/d12/_physics_step_utils_8hh.html#a0c19e4a4cd9d7276ad902730ec8949a0">celeritas::select_discrete_interaction</a> (MaterialView const &amp;material, ParticleTrackView const &amp;particle, PhysicsTrackView const &amp;physics, PhysicsStepView &amp;pstep, Engine &amp;rng)</td></tr>
+<tr class="memdesc:a0c19e4a4cd9d7276ad902730ec8949a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choose the physics model for a track's pending interaction.  <a href="../../df/d12/_physics_step_utils_8hh.html#a0c19e4a4cd9d7276ad902730ec8949a0">More...</a><br /></td></tr>
+<tr class="separator:a0c19e4a4cd9d7276ad902730ec8949a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Helper functions for physics step processing. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a02f76e76cc58033c44927c275a26551c" name="a02f76e76cc58033c44927c275a26551c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02f76e76cc58033c44927c275a26551c">&#9670;&#160;</a></span>calc_mean_energy_loss()</h2>
+<a id="a055ca1339377867bd45f753893660598" name="a055ca1339377867bd45f753893660598"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a055ca1339377867bd45f753893660598">&#9670;&#160;</a></span>calc_mean_energy_loss()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -131,13 +131,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> ParticleTrackView::Energy celeritas::calc_mean_energy_loss </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../da/dd5/classceleritas_1_1_particle_track_view.html">ParticleTrackView</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../da/dd5/classceleritas_1_1_particle_track_view.html">ParticleTrackView</a> const &amp;&#160;</td>
           <td class="paramname"><em>particle</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d4/dd9/classceleritas_1_1_physics_track_view.html">PhysicsTrackView</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d4/dd9/classceleritas_1_1_physics_track_view.html">PhysicsTrackView</a> const &amp;&#160;</td>
           <td class="paramname"><em>physics</em>, </td>
         </tr>
         <tr>
@@ -174,7 +174,7 @@ Functions</h2></td></tr>
 <p >Both Celeritas and Geant4 approximate the range limit as the minimum range over all processes, rather than the range as a result from integrating all energy loss processes over the allowed energy range. This is usually not a problem in practice because the range will get automatically decreased by <code>range_to_step</code> , and the above range calculation neglects energy loss by discrete processes.</p>
 <p >Both Geant4 and Celeritas integrate the energy loss terms across processes to get a single energy loss vector per particle type. The range table is an integral of the mean stopping power: the total distance for the particle's energy to reach zero.</p>
 <dl class="section note"><dt>Note</dt><dd>The inverse range correction assumes range is always the integral of the stopping power/energy loss.</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000012">Todo:</a></b></dt><dd>The geant3 manual makes the point that linear interpolation of energy loss rate results in a piecewise constant energy deposition curve, which is why they use spline interpolation. Investigate higher-order reconstruction of energy loss curve, e.g. through spline-based interpolation or log-log interpolation.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000011">Todo:</a></b></dt><dd>The geant3 manual makes the point that linear interpolation of energy loss rate results in a piecewise constant energy deposition curve, which is why they use spline interpolation. Investigate higher-order reconstruction of energy loss curve, e.g. through spline-based interpolation or log-log interpolation.</dd></dl>
 <p >Zero energy loss can occur in the following cases:</p><ul>
 <li>The energy loss value at the given energy is zero (e.g. high energy particles)</li>
 <li>The urban model is selected and samples zero collisions (possible in thin materials and/or small steps) </li>
@@ -182,8 +182,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a09b6ea73c5c2227a6b63ebfc68394e99" name="a09b6ea73c5c2227a6b63ebfc68394e99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09b6ea73c5c2227a6b63ebfc68394e99">&#9670;&#160;</a></span>select_discrete_interaction()</h2>
+<a id="a0c19e4a4cd9d7276ad902730ec8949a0" name="a0c19e4a4cd9d7276ad902730ec8949a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c19e4a4cd9d7276ad902730ec8949a0">&#9670;&#160;</a></span>select_discrete_interaction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -193,19 +193,19 @@ template&lt;class Engine &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> ActionId celeritas::select_discrete_interaction </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d4/de4/classceleritas_1_1_material_view.html">MaterialView</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d4/de4/classceleritas_1_1_material_view.html">MaterialView</a> const &amp;&#160;</td>
           <td class="paramname"><em>material</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../da/dd5/classceleritas_1_1_particle_track_view.html">ParticleTrackView</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../da/dd5/classceleritas_1_1_particle_track_view.html">ParticleTrackView</a> const &amp;&#160;</td>
           <td class="paramname"><em>particle</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d4/dd9/classceleritas_1_1_physics_track_view.html">PhysicsTrackView</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d4/dd9/classceleritas_1_1_physics_track_view.html">PhysicsTrackView</a> const &amp;&#160;</td>
           <td class="paramname"><em>physics</em>, </td>
         </tr>
         <tr>

@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -80,9 +80,10 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../dd/d90/_repr_impl_8hh.html">ReprImpl.hh</a>&quot;</code><br />
+<code>#include &lt;cctype&gt;</code><br />
 <code>#include &lt;cstdio&gt;</code><br />
-<code>#include &lt;cstring&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d10/_assert_8hh.html">corecel/Assert.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/d48/_repr_8hh.html">corecel/io/Repr.hh</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -93,10 +94,10 @@ Functions</h2></td></tr>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::char_to_hex_string</b> (unsigned char value)</td></tr>
 <tr class="memdesc:a3535d60e03bbd4c6fbd4324d1fdc2459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a character as a two-digit hexadecimal like '0a'. <br /></td></tr>
 <tr class="separator:a3535d60e03bbd4c6fbd4324d1fdc2459"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a657cb8ba7471268faf4643e4503e18f7"><td class="memItemLeft" align="right" valign="top"><a id="a657cb8ba7471268faf4643e4503e18f7" name="a657cb8ba7471268faf4643e4503e18f7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::print_simple_type</b> (std::ostream &amp;os, const char *type, const char *name)</td></tr>
-<tr class="memdesc:a657cb8ba7471268faf4643e4503e18f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a type string to the stream. <br /></td></tr>
-<tr class="separator:a657cb8ba7471268faf4643e4503e18f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a762f87f15b9ddd0de5b27ffa5d2fb8b0"><td class="memItemLeft" align="right" valign="top"><a id="a762f87f15b9ddd0de5b27ffa5d2fb8b0" name="a762f87f15b9ddd0de5b27ffa5d2fb8b0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::print_simple_type</b> (std::ostream &amp;os, char const *type, char const *name)</td></tr>
+<tr class="memdesc:a762f87f15b9ddd0de5b27ffa5d2fb8b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a type string to the stream. <br /></td></tr>
+<tr class="separator:a762f87f15b9ddd0de5b27ffa5d2fb8b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a83a58860ec65141556108cc7e120fbd3" name="a83a58860ec65141556108cc7e120fbd3"></a>

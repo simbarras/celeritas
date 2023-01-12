@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -85,13 +85,14 @@ $(function() {
 <p>Data for a single volume definition.  
  <a href="../../d2/de3/structceleritas_1_1_volume_record.html#details">More...</a></p>
 
-<p><code>#include &lt;Data.hh&gt;</code></p>
+<p><code>#include &lt;OrangeData.hh&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a60cc760bb363c9d5076bdb964598ce69"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/de3/structceleritas_1_1_volume_record.html#a60cc760bb363c9d5076bdb964598ce69">Flags</a> : logic_int { <a class="el" href="../../d2/de3/structceleritas_1_1_volume_record.html#a60cc760bb363c9d5076bdb964598ce69a97e41e39d87e5071fdfcfed2b228093b">internal_surfaces</a> = 0x1
-, <a class="el" href="../../d2/de3/structceleritas_1_1_volume_record.html#a60cc760bb363c9d5076bdb964598ce69a8ccb31d58b54706f82075c0183632309">implicit_cell</a> = 0x2
+, <a class="el" href="../../d2/de3/structceleritas_1_1_volume_record.html#a60cc760bb363c9d5076bdb964598ce69a95dc2beaef38abc8c5984e1af7ba3a73">implicit_vol</a> = 0x2
 , <a class="el" href="../../d2/de3/structceleritas_1_1_volume_record.html#a60cc760bb363c9d5076bdb964598ce69a155d31f54a45e6f3cdaa55e5c30f0dd1">simple_safety</a> = 0x4
+, <a class="el" href="../../d2/de3/structceleritas_1_1_volume_record.html#a60cc760bb363c9d5076bdb964598ce69a9a9b75984f755906b835d38086d5f184">embedded_universe</a> = 0x8
  }</td></tr>
 <tr class="memdesc:a60cc760bb363c9d5076bdb964598ce69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag values (bit field)  <a href="../../d2/de3/structceleritas_1_1_volume_record.html#a60cc760bb363c9d5076bdb964598ce69">More...</a><br /></td></tr>
 <tr class="separator:a60cc760bb363c9d5076bdb964598ce69"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -99,20 +100,27 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a70f78d5a92a3220e980c597d90cf9218"><td class="memItemLeft" align="right" valign="top"><a id="a70f78d5a92a3220e980c597d90cf9218" name="a70f78d5a92a3220e980c597d90cf9218"></a>
-<a class="el" href="../../db/d8b/_collection_8hh.html#a89741da60e12f348c4d1fd59e39c5dda">ItemRange</a>&lt; <a class="el" href="../../d7/d97/orange_2_types_8hh.html#ae443850a3d9a3384da72b13186d85964">SurfaceId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>faces</b></td></tr>
+<a class="el" href="../../db/d8b/_collection_8hh.html#a89741da60e12f348c4d1fd59e39c5dda">ItemRange</a>&lt; <a class="el" href="../../dd/dbb/classceleritas_1_1_opaque_id.html">SurfaceId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>faces</b></td></tr>
 <tr class="separator:a70f78d5a92a3220e980c597d90cf9218"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0106ac200f85c0fc2a915eeb90c8acc"><td class="memItemLeft" align="right" valign="top"><a id="ae0106ac200f85c0fc2a915eeb90c8acc" name="ae0106ac200f85c0fc2a915eeb90c8acc"></a>
-<a class="el" href="../../db/d8b/_collection_8hh.html#a89741da60e12f348c4d1fd59e39c5dda">ItemRange</a>&lt; <a class="el" href="../../d7/d97/orange_2_types_8hh.html#adbbba02a0d046cbac4c60629cac9d31b">logic_int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>logic</b></td></tr>
+<a class="el" href="../../db/d8b/_collection_8hh.html#a89741da60e12f348c4d1fd59e39c5dda">ItemRange</a>&lt; <a class="el" href="../../d7/d3b/_orange_types_8hh.html#adbbba02a0d046cbac4c60629cac9d31b">logic_int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>logic</b></td></tr>
 <tr class="separator:ae0106ac200f85c0fc2a915eeb90c8acc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62f48455d857abc8716cf1d0fd506e5d"><td class="memItemLeft" align="right" valign="top"><a id="a62f48455d857abc8716cf1d0fd506e5d" name="a62f48455d857abc8716cf1d0fd506e5d"></a>
-<a class="el" href="../../d7/d97/orange_2_types_8hh.html#adbbba02a0d046cbac4c60629cac9d31b">logic_int</a>&#160;</td><td class="memItemRight" valign="bottom"><b>max_intersections</b> {0}</td></tr>
+<a class="el" href="../../d7/d3b/_orange_types_8hh.html#adbbba02a0d046cbac4c60629cac9d31b">logic_int</a>&#160;</td><td class="memItemRight" valign="bottom"><b>max_intersections</b> {0}</td></tr>
 <tr class="separator:a62f48455d857abc8716cf1d0fd506e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03f626915414e11f236fde8f8d2655a3"><td class="memItemLeft" align="right" valign="top"><a id="a03f626915414e11f236fde8f8d2655a3" name="a03f626915414e11f236fde8f8d2655a3"></a>
-<a class="el" href="../../d7/d97/orange_2_types_8hh.html#adbbba02a0d046cbac4c60629cac9d31b">logic_int</a>&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b> {0}</td></tr>
+<a class="el" href="../../d7/d3b/_orange_types_8hh.html#adbbba02a0d046cbac4c60629cac9d31b">logic_int</a>&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b> {0}</td></tr>
 <tr class="separator:a03f626915414e11f236fde8f8d2655a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c25cb8ae54432b85fd09dbc9651d107"><td class="memItemLeft" align="right" valign="top"><a id="a8c25cb8ae54432b85fd09dbc9651d107" name="a8c25cb8ae54432b85fd09dbc9651d107"></a>
+<a class="el" href="../../d7/d3b/_orange_types_8hh.html#a9a8aa9e9bf4ec70552060e7fe2757334">UniverseId</a>&#160;</td><td class="memItemRight" valign="bottom"><b>daughter</b></td></tr>
+<tr class="separator:a8c25cb8ae54432b85fd09dbc9651d107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93e58825af1a19070a352a3b1ff36119"><td class="memItemLeft" align="right" valign="top"><a id="a93e58825af1a19070a352a3b1ff36119" name="a93e58825af1a19070a352a3b1ff36119"></a>
+<a class="el" href="../../d7/d3b/_orange_types_8hh.html#abcf3a4d59285e844e8c8a0782732bab3">TranslationId</a>&#160;</td><td class="memItemRight" valign="bottom"><b>daughter_translation</b></td></tr>
+<tr class="separator:a93e58825af1a19070a352a3b1ff36119"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Data for a single volume definition. </p>
+<p >Surface IDs are local to the unit.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d0/d95/classceleritas_1_1_volume_view.html" title="Access data about a single volume.">VolumeView</a> </dd></dl>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a60cc760bb363c9d5076bdb964598ce69" name="a60cc760bb363c9d5076bdb964598ce69"></a>
@@ -122,7 +130,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="../../d2/de3/structceleritas_1_1_volume_record.html#a60cc760bb363c9d5076bdb964598ce69">celeritas::VolumeRecord::Flags</a> : <a class="el" href="../../d7/d97/orange_2_types_8hh.html#adbbba02a0d046cbac4c60629cac9d31b">logic_int</a></td>
+          <td class="memname">enum <a class="el" href="../../d2/de3/structceleritas_1_1_volume_record.html#a60cc760bb363c9d5076bdb964598ce69">celeritas::VolumeRecord::Flags</a> : <a class="el" href="../../d7/d3b/_orange_types_8hh.html#adbbba02a0d046cbac4c60629cac9d31b">logic_int</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -131,16 +139,18 @@ Public Attributes</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a60cc760bb363c9d5076bdb964598ce69a97e41e39d87e5071fdfcfed2b228093b" name="a60cc760bb363c9d5076bdb964598ce69a97e41e39d87e5071fdfcfed2b228093b"></a>internal_surfaces&#160;</td><td class="fielddoc"><p >"Complex" distance-to-boundary </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a60cc760bb363c9d5076bdb964598ce69a8ccb31d58b54706f82075c0183632309" name="a60cc760bb363c9d5076bdb964598ce69a8ccb31d58b54706f82075c0183632309"></a>implicit_cell&#160;</td><td class="fielddoc"><p >Background/exterior cell. </p>
+<tr><td class="fieldname"><a id="a60cc760bb363c9d5076bdb964598ce69a95dc2beaef38abc8c5984e1af7ba3a73" name="a60cc760bb363c9d5076bdb964598ce69a95dc2beaef38abc8c5984e1af7ba3a73"></a>implicit_vol&#160;</td><td class="fielddoc"><p >Background/exterior volume. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a60cc760bb363c9d5076bdb964598ce69a155d31f54a45e6f3cdaa55e5c30f0dd1" name="a60cc760bb363c9d5076bdb964598ce69a155d31f54a45e6f3cdaa55e5c30f0dd1"></a>simple_safety&#160;</td><td class="fielddoc"><p >Fast safety calculation. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a60cc760bb363c9d5076bdb964598ce69a9a9b75984f755906b835d38086d5f184" name="a60cc760bb363c9d5076bdb964598ce69a9a9b75984f755906b835d38086d5f184"></a>embedded_universe&#160;</td><td class="fielddoc"><p >Volume contains embeddded universe. </p>
 </td></tr>
 </table>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="../../db/d1e/_data_8hh.html">Data.hh</a></li>
+<li><a class="el" href="../../d4/de3/_orange_data_8hh.html">OrangeData.hh</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

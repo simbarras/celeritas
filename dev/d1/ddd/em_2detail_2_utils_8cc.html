@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -80,20 +80,23 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../dc/d0b/celeritas_2em_2detail_2_utils_8hh.html">Utils.hh</a>&quot;</code><br />
-<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html">corecel/Types.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d3/de4/_range_8hh.html">corecel/cont/Range.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d1/dee/_algorithms_8hh.html">corecel/math/Algorithms.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d83/_atomic_relaxation_data_8hh.html">celeritas/em/data/AtomicRelaxationData.hh</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a27d54de5f9967cb926b2aee1c087c92f"><td class="memItemLeft" align="right" valign="top"><a id="a27d54de5f9967cb926b2aee1c087c92f" name="a27d54de5f9967cb926b2aee1c087c92f"></a>
-size_type&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::calc_max_secondaries</b> (const MaxSecondariesCalculator::Values &amp;data, const ItemRange&lt; AtomicRelaxSubshell &gt; &amp;shells, units::MevEnergy electron_cut, units::MevEnergy gamma_cut)</td></tr>
-<tr class="memdesc:a27d54de5f9967cb926b2aee1c087c92f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the maximum possible number of secondaries produced in atomic relaxation. <br /></td></tr>
-<tr class="separator:a27d54de5f9967cb926b2aee1c087c92f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a377c9ead5da0a968e04211c7a05d174a"><td class="memItemLeft" align="right" valign="top"><a id="a377c9ead5da0a968e04211c7a05d174a" name="a377c9ead5da0a968e04211c7a05d174a"></a>
-size_type&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::calc_max_stack_size</b> (const MaxSecondariesCalculator::Values &amp;data, const ItemRange&lt; AtomicRelaxSubshell &gt; &amp;shells)</td></tr>
-<tr class="memdesc:a377c9ead5da0a968e04211c7a05d174a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the maximum size the stack of subshell vacancies can grow to in atomic relaxation. <br /></td></tr>
-<tr class="separator:a377c9ead5da0a968e04211c7a05d174a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5760a27bfe10fce5fbc4bde32d6809f"><td class="memItemLeft" align="right" valign="top"><a id="ae5760a27bfe10fce5fbc4bde32d6809f" name="ae5760a27bfe10fce5fbc4bde32d6809f"></a>
+size_type&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::calc_max_secondaries</b> (MaxSecondariesCalculator::Values const &amp;data, ItemRange&lt; AtomicRelaxSubshell &gt; const &amp;shells, units::MevEnergy electron_cut, units::MevEnergy gamma_cut)</td></tr>
+<tr class="memdesc:ae5760a27bfe10fce5fbc4bde32d6809f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the maximum possible number of secondaries produced in atomic relaxation. <br /></td></tr>
+<tr class="separator:ae5760a27bfe10fce5fbc4bde32d6809f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa81868b7f4b05bde536ccbbfb2e8a2b1"><td class="memItemLeft" align="right" valign="top"><a id="aa81868b7f4b05bde536ccbbfb2e8a2b1" name="aa81868b7f4b05bde536ccbbfb2e8a2b1"></a>
+size_type&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::calc_max_stack_size</b> (MaxSecondariesCalculator::Values const &amp;data, ItemRange&lt; AtomicRelaxSubshell &gt; const &amp;shells)</td></tr>
+<tr class="memdesc:aa81868b7f4b05bde536ccbbfb2e8a2b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the maximum size the stack of subshell vacancies can grow to in atomic relaxation. <br /></td></tr>
+<tr class="separator:aa81868b7f4b05bde536ccbbfb2e8a2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

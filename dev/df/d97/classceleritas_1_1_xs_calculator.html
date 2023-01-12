@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -96,10 +96,10 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adf0b8eae812c0a0ca6b67686f1e4cc41"><td class="memItemLeft" align="right" valign="top"><a id="adf0b8eae812c0a0ca6b67686f1e4cc41" name="adf0b8eae812c0a0ca6b67686f1e4cc41"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>XsCalculator</b> (const <a class="el" href="../../d5/d2f/structceleritas_1_1_xs_grid_data.html">XsGridData</a> &amp;grid, const <a class="el" href="../../df/d97/classceleritas_1_1_xs_calculator.html#a3f872d2ef943837a2f563f9b74a3ba89">Values</a> &amp;values)</td></tr>
-<tr class="memdesc:adf0b8eae812c0a0ca6b67686f1e4cc41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from cross section data. <br /></td></tr>
-<tr class="separator:adf0b8eae812c0a0ca6b67686f1e4cc41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94b4be99722aa03f7e7de12e9e3edcac"><td class="memItemLeft" align="right" valign="top"><a id="a94b4be99722aa03f7e7de12e9e3edcac" name="a94b4be99722aa03f7e7de12e9e3edcac"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>XsCalculator</b> (<a class="el" href="../../d5/d2f/structceleritas_1_1_xs_grid_data.html">XsGridData</a> const &amp;grid, <a class="el" href="../../df/d97/classceleritas_1_1_xs_calculator.html#a3f872d2ef943837a2f563f9b74a3ba89">Values</a> const &amp;values)</td></tr>
+<tr class="memdesc:a94b4be99722aa03f7e7de12e9e3edcac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from cross section data. <br /></td></tr>
+<tr class="separator:a94b4be99722aa03f7e7de12e9e3edcac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3c3bf4644d99697fc4f6d83496caced"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d97/classceleritas_1_1_xs_calculator.html#ae3c3bf4644d99697fc4f6d83496caced">operator()</a> (<a class="el" href="../../df/d97/classceleritas_1_1_xs_calculator.html#ad4917900ed0372de5b8f287f0629014c">Energy</a> energy) const</td></tr>
 <tr class="memdesc:ae3c3bf4644d99697fc4f6d83496caced"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the cross section.  <a href="../../df/d97/classceleritas_1_1_xs_calculator.html#ae3c3bf4644d99697fc4f6d83496caced">More...</a><br /></td></tr>
 <tr class="separator:ae3c3bf4644d99697fc4f6d83496caced"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,7 +110,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Find and interpolate cross sections on a uniform log grid. </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000007">Todo:</a></b></dt><dd>Currently this is hard-coded to use "cross section grid data" which have energy coordinates uniform in log space. This should be expanded to handle multiple parameterizations of the energy grid (e.g., arbitrary spacing needed for the Livermore sampling) and of the value interpolation (e.g. log interpolation). It might also make sense to get rid of the "prime energy" and just use log-log interpolation instead, or do a piecewise change in the interpolation instead of storing the cross section scaled by the energy.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000006">Todo:</a></b></dt><dd>Currently this is hard-coded to use "cross section grid data" which have energy coordinates uniform in log space. This should be expanded to handle multiple parameterizations of the energy grid (e.g., arbitrary spacing needed for the Livermore sampling) and of the value interpolation (e.g. log interpolation). It might also make sense to get rid of the "prime energy" and just use log-log interpolation instead, or do a piecewise change in the interpolation instead of storing the cross section scaled by the energy.</dd></dl>
 <div class="fragment"><div class="line"><a class="code hl_class" href="../../df/d97/classceleritas_1_1_xs_calculator.html">XsCalculator</a> calc_xs(xs_grid, xs_params.reals);</div>
 <div class="line"><a class="code hl_typedef" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> xs = calc_xs(particle);</div>
 <div class="ttc" id="aclassceleritas_1_1_xs_calculator_html"><div class="ttname"><a href="../../df/d97/classceleritas_1_1_xs_calculator.html">celeritas::XsCalculator</a></div><div class="ttdoc">Find and interpolate cross sections on a uniform log grid.</div><div class="ttdef"><b>Definition:</b> XsCalculator.hh:39</div></div>

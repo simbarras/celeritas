@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -75,10 +75,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="../../d4/dcb/classceleritas_1_1detail_1_1_geant_bremsstrahlung_process-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">celeritas::detail::GeantBremsstrahlungProcess Class Reference</div></div>
 </div><!--header-->
@@ -97,47 +95,50 @@ Inheritance diagram for celeritas::detail::GeantBremsstrahlungProcess:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ab8b7ee1a2a00f36906944dcd0ba0ad31"><td class="memItemLeft" align="right" valign="top"><a id="ab8b7ee1a2a00f36906944dcd0ba0ad31" name="ab8b7ee1a2a00f36906944dcd0ba0ad31"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>ModelSelection</b> { <b>seltzer_berger</b>
-, <b>relativistic</b>
-, <b>all</b>
- }</td></tr>
-<tr class="separator:ab8b7ee1a2a00f36906944dcd0ba0ad31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a1796deffbe1a6984a883080e6da715de"><td class="memItemLeft" align="right" valign="top"><a id="a1796deffbe1a6984a883080e6da715de" name="a1796deffbe1a6984a883080e6da715de"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ModelSelection</b> = <a class="el" href="../../d7/d98/_geant_physics_options_8hh.html#a52dd41185099c946893d59a78dd72393">BremsModelSelection</a></td></tr>
+<tr class="separator:a1796deffbe1a6984a883080e6da715de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a30b014c6bb227a7b98fe6f25c6650d9b"><td class="memItemLeft" align="right" valign="top"><a id="a30b014c6bb227a7b98fe6f25c6650d9b" name="a30b014c6bb227a7b98fe6f25c6650d9b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>GeantBremsstrahlungProcess</b> (ModelSelection selection)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>GeantBremsstrahlungProcess</b> (<a class="el" href="../../d7/d98/_geant_physics_options_8hh.html#a52dd41185099c946893d59a78dd72393">ModelSelection</a> selection)</td></tr>
 <tr class="memdesc:a30b014c6bb227a7b98fe6f25c6650d9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with model selection. <br /></td></tr>
 <tr class="separator:a30b014c6bb227a7b98fe6f25c6650d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeae66737b74132ae96f338649b7044f2"><td class="memItemLeft" align="right" valign="top"><a id="aeae66737b74132ae96f338649b7044f2" name="aeae66737b74132ae96f338649b7044f2"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~GeantBremsstrahlungProcess</b> ()</td></tr>
 <tr class="memdesc:aeae66737b74132ae96f338649b7044f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty destructor. <br /></td></tr>
 <tr class="separator:aeae66737b74132ae96f338649b7044f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af86c23bbf403fb7e7add7b3bc2a6bf2c"><td class="memItemLeft" align="right" valign="top"><a id="af86c23bbf403fb7e7add7b3bc2a6bf2c" name="af86c23bbf403fb7e7add7b3bc2a6bf2c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsApplicable</b> (const G4ParticleDefinition &amp;particle) final</td></tr>
-<tr class="memdesc:af86c23bbf403fb7e7add7b3bc2a6bf2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define applicability based on particle definition. <br /></td></tr>
-<tr class="separator:af86c23bbf403fb7e7add7b3bc2a6bf2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dd8daa9e310959e642ddf3960ef3fb5"><td class="memItemLeft" align="right" valign="top"><a id="a2dd8daa9e310959e642ddf3960ef3fb5" name="a2dd8daa9e310959e642ddf3960ef3fb5"></a>
+<a class="el" href="../../d0/d35/classceleritas_1_1detail_1_1_geant_bremsstrahlung_process.html">GeantBremsstrahlungProcess</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="../../d0/d35/classceleritas_1_1detail_1_1_geant_bremsstrahlung_process.html">GeantBremsstrahlungProcess</a> const &amp;right)=delete</td></tr>
+<tr class="separator:a2dd8daa9e310959e642ddf3960ef3fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aa50eb825d78521cf7e70a93654e22b"><td class="memItemLeft" align="right" valign="top"><a id="a5aa50eb825d78521cf7e70a93654e22b" name="a5aa50eb825d78521cf7e70a93654e22b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>GeantBremsstrahlungProcess</b> (<a class="el" href="../../d0/d35/classceleritas_1_1detail_1_1_geant_bremsstrahlung_process.html">GeantBremsstrahlungProcess</a> const &amp;)=delete</td></tr>
+<tr class="separator:a5aa50eb825d78521cf7e70a93654e22b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87240d277b85b4eb1c9489a2c254e131"><td class="memItemLeft" align="right" valign="top"><a id="a87240d277b85b4eb1c9489a2c254e131" name="a87240d277b85b4eb1c9489a2c254e131"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsApplicable</b> (G4ParticleDefinition const &amp;particle) final</td></tr>
+<tr class="memdesc:a87240d277b85b4eb1c9489a2c254e131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define applicability based on particle definition. <br /></td></tr>
+<tr class="separator:a87240d277b85b4eb1c9489a2c254e131"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ccac5c5278c652383b6700556cf374b"><td class="memItemLeft" align="right" valign="top"><a id="a2ccac5c5278c652383b6700556cf374b" name="a2ccac5c5278c652383b6700556cf374b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessDescription</b> (std::ostream &amp;) const override</td></tr>
 <tr class="memdesc:a2ccac5c5278c652383b6700556cf374b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print documentation in html format. <br /></td></tr>
 <tr class="separator:a2ccac5c5278c652383b6700556cf374b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf6a7395e3b57368c2449a0158f33241"><td class="memItemLeft" align="right" valign="top"><a id="aaf6a7395e3b57368c2449a0158f33241" name="aaf6a7395e3b57368c2449a0158f33241"></a>
+<a class="el" href="../../d7/d98/_geant_physics_options_8hh.html#a52dd41185099c946893d59a78dd72393">ModelSelection</a>&#160;</td><td class="memItemRight" valign="bottom"><b>model_selection</b> () const</td></tr>
+<tr class="memdesc:aaf6a7395e3b57368c2449a0158f33241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Which models are used. <br /></td></tr>
+<tr class="separator:aaf6a7395e3b57368c2449a0158f33241"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ad9bee9ebca2fa6211c090bbcd01226db"><td class="memItemLeft" align="right" valign="top"><a id="ad9bee9ebca2fa6211c090bbcd01226db" name="ad9bee9ebca2fa6211c090bbcd01226db"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>InitialiseEnergyLossProcess</b> (const G4ParticleDefinition *, const G4ParticleDefinition *) override</td></tr>
-<tr class="memdesc:ad9bee9ebca2fa6211c090bbcd01226db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise process by constructing models based on <code>ModelSelection</code> . <br /></td></tr>
-<tr class="separator:ad9bee9ebca2fa6211c090bbcd01226db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5827b2ce36e5af5ea1a1cef73ef89be5"><td class="memItemLeft" align="right" valign="top"><a id="a5827b2ce36e5af5ea1a1cef73ef89be5" name="a5827b2ce36e5af5ea1a1cef73ef89be5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>InitialiseEnergyLossProcess</b> (G4ParticleDefinition const *, G4ParticleDefinition const *) override</td></tr>
+<tr class="memdesc:a5827b2ce36e5af5ea1a1cef73ef89be5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise process by constructing models based on <code>ModelSelection</code> . <br /></td></tr>
+<tr class="separator:a5827b2ce36e5af5ea1a1cef73ef89be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bea6b0470955a5c8b8f0af93c40074a"><td class="memItemLeft" align="right" valign="top"><a id="a3bea6b0470955a5c8b8f0af93c40074a" name="a3bea6b0470955a5c8b8f0af93c40074a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>StreamProcessInfo</b> (std::ostream &amp;output) const override</td></tr>
 <tr class="memdesc:a3bea6b0470955a5c8b8f0af93c40074a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print class parameters. <br /></td></tr>
 <tr class="separator:a3bea6b0470955a5c8b8f0af93c40074a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a59278b2c76ebd603620ccd9695182b70"><td class="memItemLeft" align="right" valign="top"><a id="a59278b2c76ebd603620ccd9695182b70" name="a59278b2c76ebd603620ccd9695182b70"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_initialized_</b></td></tr>
-<tr class="separator:a59278b2c76ebd603620ccd9695182b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Electron/positron Bremsstrahlung process class derived from <code>G4eBremsstrahlung</code> . </p>

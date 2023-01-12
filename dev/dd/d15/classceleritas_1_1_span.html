@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -98,15 +98,15 @@ Public Types</h2></td></tr>
 <tr class="separator:aa0d7e3341f9a8af0d446418e7993f0b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af881a46eb6b509c47953ef1eb83546bb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d15/classceleritas_1_1_span.html#af881a46eb6b509c47953ef1eb83546bb">pointer</a> = T *</td></tr>
 <tr class="separator:af881a46eb6b509c47953ef1eb83546bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47847a1790d2857641dae82e5c02f9c8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d15/classceleritas_1_1_span.html#a47847a1790d2857641dae82e5c02f9c8">const_pointer</a> = const T *</td></tr>
-<tr class="separator:a47847a1790d2857641dae82e5c02f9c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac105177025a342100ba348c5bda76235"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d15/classceleritas_1_1_span.html#ac105177025a342100ba348c5bda76235">const_pointer</a> = T const  *</td></tr>
+<tr class="separator:ac105177025a342100ba348c5bda76235"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94070aee0ea32ed9804937913ecdd3e1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d15/classceleritas_1_1_span.html#a94070aee0ea32ed9804937913ecdd3e1">reference</a> = T &amp;</td></tr>
 <tr class="separator:a94070aee0ea32ed9804937913ecdd3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa6f6b3044883daf35ad70d15d02a940"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d15/classceleritas_1_1_span.html#aaa6f6b3044883daf35ad70d15d02a940">const_reference</a> = const T &amp;</td></tr>
-<tr class="separator:aaa6f6b3044883daf35ad70d15d02a940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adec5609f8dce26736fec7be2c0d7a77e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d15/classceleritas_1_1_span.html#adec5609f8dce26736fec7be2c0d7a77e">const_reference</a> = T const  &amp;</td></tr>
+<tr class="separator:adec5609f8dce26736fec7be2c0d7a77e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b952fd1c821677a2c3136ef76a91bcd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d15/classceleritas_1_1_span.html#a8b952fd1c821677a2c3136ef76a91bcd">iterator</a> = <a class="el" href="../../dd/d15/classceleritas_1_1_span.html#af881a46eb6b509c47953ef1eb83546bb">pointer</a></td></tr>
 <tr class="separator:a8b952fd1c821677a2c3136ef76a91bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5585bb551073ff2eaebdaa7aae112f6f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d15/classceleritas_1_1_span.html#a5585bb551073ff2eaebdaa7aae112f6f">const_iterator</a> = <a class="el" href="../../dd/d15/classceleritas_1_1_span.html#a47847a1790d2857641dae82e5c02f9c8">const_pointer</a></td></tr>
+<tr class="memitem:a5585bb551073ff2eaebdaa7aae112f6f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d15/classceleritas_1_1_span.html#a5585bb551073ff2eaebdaa7aae112f6f">const_iterator</a> = <a class="el" href="../../dd/d15/classceleritas_1_1_span.html#ac105177025a342100ba348c5bda76235">const_pointer</a></td></tr>
 <tr class="separator:a5585bb551073ff2eaebdaa7aae112f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -116,7 +116,7 @@ constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>Span</b> ()=defa
 <tr class="memdesc:a092cb57bb5c8a70f75417e94b6f621c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with default null pointer and size zero. <br /></td></tr>
 <tr class="separator:a092cb57bb5c8a70f75417e94b6f621c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab24a2d3349a7427d6b0371969d53b1f1"><td class="memItemLeft" align="right" valign="top"><a id="ab24a2d3349a7427d6b0371969d53b1f1" name="ab24a2d3349a7427d6b0371969d53b1f1"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Span</b> (<a class="el" href="../../dd/d15/classceleritas_1_1_span.html#af881a46eb6b509c47953ef1eb83546bb">pointer</a> d, <a class="el" href="../../dd/d15/classceleritas_1_1_span.html#aa0d7e3341f9a8af0d446418e7993f0b6">size_type</a> <a class="el" href="../../d7/d97/orange_2_types_8hh.html#a6e38ea21d9877ba8a45b3a6fee0c299ca03c7c0ace395d80182db07ae2c30f034">s</a>)</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Span</b> (<a class="el" href="../../dd/d15/classceleritas_1_1_span.html#af881a46eb6b509c47953ef1eb83546bb">pointer</a> d, <a class="el" href="../../dd/d15/classceleritas_1_1_span.html#aa0d7e3341f9a8af0d446418e7993f0b6">size_type</a> <a class="el" href="../../d7/d3b/_orange_types_8hh.html#a6e38ea21d9877ba8a45b3a6fee0c299ca03c7c0ace395d80182db07ae2c30f034">s</a>)</td></tr>
 <tr class="memdesc:ab24a2d3349a7427d6b0371969d53b1f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from data and size. <br /></td></tr>
 <tr class="separator:ab24a2d3349a7427d6b0371969d53b1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15eeb3698472dfba226e82d0ee74d905"><td class="memTemplParams" colspan="2"><a id="a15eeb3698472dfba226e82d0ee74d905" name="a15eeb3698472dfba226e82d0ee74d905"></a>
@@ -129,19 +129,19 @@ template&lt;std::size_t N&gt; </td></tr>
 <tr class="memitem:a0294858b409dd953786f55e45f35e787"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Span</b> (T(&amp;arr)[N])</td></tr>
 <tr class="memdesc:a0294858b409dd953786f55e45f35e787"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a C array. <br /></td></tr>
 <tr class="separator:a0294858b409dd953786f55e45f35e787"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ae1794f02a58b89f06525788e9c4c86"><td class="memTemplParams" colspan="2"><a id="a4ae1794f02a58b89f06525788e9c4c86" name="a4ae1794f02a58b89f06525788e9c4c86"></a>
+<tr class="memitem:af9910a9b3f91d7705375918f371abba2"><td class="memTemplParams" colspan="2"><a id="af9910a9b3f91d7705375918f371abba2" name="af9910a9b3f91d7705375918f371abba2"></a>
 template&lt;class U , std::size_t N&gt; </td></tr>
-<tr class="memitem:a4ae1794f02a58b89f06525788e9c4c86"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Span</b> (const <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a>&lt; U, N &gt; &amp;other)</td></tr>
-<tr class="memdesc:a4ae1794f02a58b89f06525788e9c4c86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from another span. <br /></td></tr>
-<tr class="separator:a4ae1794f02a58b89f06525788e9c4c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22d60c14532e6326e31dad4b59eab9d9"><td class="memItemLeft" align="right" valign="top"><a id="a22d60c14532e6326e31dad4b59eab9d9" name="a22d60c14532e6326e31dad4b59eab9d9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Span</b> (const <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a> &amp;) noexcept=default</td></tr>
-<tr class="memdesc:a22d60c14532e6326e31dad4b59eab9d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor (same template parameters) <br /></td></tr>
-<tr class="separator:a22d60c14532e6326e31dad4b59eab9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04530bd95ffd208b6e9e09e951d7072c"><td class="memItemLeft" align="right" valign="top"><a id="a04530bd95ffd208b6e9e09e951d7072c" name="a04530bd95ffd208b6e9e09e951d7072c"></a>
-<a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a> &amp;) noexcept=default</td></tr>
-<tr class="memdesc:a04530bd95ffd208b6e9e09e951d7072c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment (same template parameters) <br /></td></tr>
-<tr class="separator:a04530bd95ffd208b6e9e09e951d7072c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9910a9b3f91d7705375918f371abba2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Span</b> (<a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a>&lt; U, N &gt; const &amp;other)</td></tr>
+<tr class="memdesc:af9910a9b3f91d7705375918f371abba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from another span. <br /></td></tr>
+<tr class="separator:af9910a9b3f91d7705375918f371abba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97b89a21fdfcea73326f0c9cb988b905"><td class="memItemLeft" align="right" valign="top"><a id="a97b89a21fdfcea73326f0c9cb988b905" name="a97b89a21fdfcea73326f0c9cb988b905"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Span</b> (<a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a> const &amp;) noexcept=default</td></tr>
+<tr class="memdesc:a97b89a21fdfcea73326f0c9cb988b905"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor (same template parameters) <br /></td></tr>
+<tr class="separator:a97b89a21fdfcea73326f0c9cb988b905"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b31f9c994f083be89d007401089398a"><td class="memItemLeft" align="right" valign="top"><a id="a3b31f9c994f083be89d007401089398a" name="a3b31f9c994f083be89d007401089398a"></a>
+<a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a> const &amp;) noexcept=default</td></tr>
+<tr class="memdesc:a3b31f9c994f083be89d007401089398a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment (same template parameters) <br /></td></tr>
+<tr class="separator:a3b31f9c994f083be89d007401089398a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:af623b130345fb657e38cd6194a5d41b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a> <a class="el" href="../../dd/d15/classceleritas_1_1_span.html#a8b952fd1c821677a2c3136ef76a91bcd">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d15/classceleritas_1_1_span.html#af623b130345fb657e38cd6194a5d41b2">begin</a> () const</td></tr>
 <tr class="separator:af623b130345fb657e38cd6194a5d41b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,7 +209,7 @@ class celeritas::Span&lt; T, Extent &gt;</div><p >Modified backport of C++20 spa
 template&lt;class T , std::size_t Extent = dynamic_extent&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">celeritas::Span</a>&lt; T, Extent &gt;::const_iterator =  <a class="el" href="../../dd/d15/classceleritas_1_1_span.html#a47847a1790d2857641dae82e5c02f9c8">const_pointer</a></td>
+          <td class="memname">using <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">celeritas::Span</a>&lt; T, Extent &gt;::const_iterator =  <a class="el" href="../../dd/d15/classceleritas_1_1_span.html#ac105177025a342100ba348c5bda76235">const_pointer</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -217,8 +217,8 @@ template&lt;class T , std::size_t Extent = dynamic_extent&gt; </div>
 
 </div>
 </div>
-<a id="a47847a1790d2857641dae82e5c02f9c8" name="a47847a1790d2857641dae82e5c02f9c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47847a1790d2857641dae82e5c02f9c8">&#9670;&#160;</a></span>const_pointer</h2>
+<a id="ac105177025a342100ba348c5bda76235" name="ac105177025a342100ba348c5bda76235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac105177025a342100ba348c5bda76235">&#9670;&#160;</a></span>const_pointer</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -226,7 +226,7 @@ template&lt;class T , std::size_t Extent = dynamic_extent&gt; </div>
 template&lt;class T , std::size_t Extent = dynamic_extent&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">celeritas::Span</a>&lt; T, Extent &gt;::const_pointer =  const T*</td>
+          <td class="memname">using <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">celeritas::Span</a>&lt; T, Extent &gt;::const_pointer =  T const*</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -234,8 +234,8 @@ template&lt;class T , std::size_t Extent = dynamic_extent&gt; </div>
 
 </div>
 </div>
-<a id="aaa6f6b3044883daf35ad70d15d02a940" name="aaa6f6b3044883daf35ad70d15d02a940"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa6f6b3044883daf35ad70d15d02a940">&#9670;&#160;</a></span>const_reference</h2>
+<a id="adec5609f8dce26736fec7be2c0d7a77e" name="adec5609f8dce26736fec7be2c0d7a77e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adec5609f8dce26736fec7be2c0d7a77e">&#9670;&#160;</a></span>const_reference</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,7 +243,7 @@ template&lt;class T , std::size_t Extent = dynamic_extent&gt; </div>
 template&lt;class T , std::size_t Extent = dynamic_extent&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">celeritas::Span</a>&lt; T, Extent &gt;::const_reference =  const T&amp;</td>
+          <td class="memname">using <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">celeritas::Span</a>&lt; T, Extent &gt;::const_reference =  T const&amp;</td>
         </tr>
       </table>
 </div><div class="memdoc">

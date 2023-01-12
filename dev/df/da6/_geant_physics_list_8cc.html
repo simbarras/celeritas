@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -78,15 +78,20 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../dd/d98/_geant_physics_list_8hh.html">GeantPhysicsList.hh</a>&quot;</code><br />
+<code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;G4ComptonScattering.hh&gt;</code><br />
 <code>#include &lt;G4CoulombScattering.hh&gt;</code><br />
+<code>#include &lt;G4Electron.hh&gt;</code><br />
+<code>#include &lt;G4EmParameters.hh&gt;</code><br />
+<code>#include &lt;G4Gamma.hh&gt;</code><br />
 <code>#include &lt;G4GammaConversion.hh&gt;</code><br />
 <code>#include &lt;G4LivermorePhotoElectricModel.hh&gt;</code><br />
-<code>#include &lt;G4LivermoreRayleighModel.hh&gt;</code><br />
 <code>#include &lt;G4MollerBhabhaModel.hh&gt;</code><br />
 <code>#include &lt;G4PairProductionRelModel.hh&gt;</code><br />
 <code>#include &lt;G4PhotoElectricEffect.hh&gt;</code><br />
 <code>#include &lt;G4PhysicsListHelper.hh&gt;</code><br />
+<code>#include &lt;G4Positron.hh&gt;</code><br />
+<code>#include &lt;G4ProcessType.hh&gt;</code><br />
 <code>#include &lt;G4Proton.hh&gt;</code><br />
 <code>#include &lt;G4RayleighScattering.hh&gt;</code><br />
 <code>#include &lt;G4SystemOfUnits.hh&gt;</code><br />
@@ -95,10 +100,11 @@ $(function() {
 <code>#include &lt;G4eCoulombScatteringModel.hh&gt;</code><br />
 <code>#include &lt;G4eIonisation.hh&gt;</code><br />
 <code>#include &lt;G4eMultipleScattering.hh&gt;</code><br />
-<code>#include &lt;G4eeToTwoGammaModel.hh&gt;</code><br />
 <code>#include &lt;G4eplusAnnihilation.hh&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d10/_assert_8hh.html">corecel/Assert.hh</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d1/d95/_logger_8hh.html">corecel/io/Logger.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d8a/corecel_2io_2_logger_8hh.html">corecel/io/Logger.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/d40/_quantities_8hh.html">celeritas/Quantities.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d98/_geant_physics_options_8hh.html">celeritas/ext/GeantPhysicsOptions.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d2/de3/_geant_bremsstrahlung_process_8hh.html">GeantBremsstrahlungProcess.hh</a>&quot;</code><br />
 </div></div><!-- contents -->
 <!-- start footer part -->

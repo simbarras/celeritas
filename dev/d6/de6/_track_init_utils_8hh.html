@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -96,65 +96,25 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:acacf2c00501cd2ebee900331f5e7cc5e"><td class="memTemplParams" colspan="2">template&lt;MemSpace M&gt; </td></tr>
-<tr class="memitem:acacf2c00501cd2ebee900331f5e7cc5e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/de6/_track_init_utils_8hh.html#acacf2c00501cd2ebee900331f5e7cc5e">celeritas::extend_from_primaries</a> (const TrackInitParamsHostRef &amp;params, TrackInitStateData&lt; Ownership::value, M &gt; *data)</td></tr>
-<tr class="memdesc:acacf2c00501cd2ebee900331f5e7cc5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create track initializers from primary particles.  <a href="../../d6/de6/_track_init_utils_8hh.html#acacf2c00501cd2ebee900331f5e7cc5e">More...</a><br /></td></tr>
-<tr class="separator:acacf2c00501cd2ebee900331f5e7cc5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1363f332351487dba28eaf555ca6a7cf"><td class="memTemplParams" colspan="2">template&lt;MemSpace M&gt; </td></tr>
-<tr class="memitem:a1363f332351487dba28eaf555ca6a7cf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/de6/_track_init_utils_8hh.html#a1363f332351487dba28eaf555ca6a7cf">celeritas::initialize_tracks</a> (const CoreRef&lt; M &gt; &amp;core_data, TrackInitStateData&lt; Ownership::value, M &gt; *data)</td></tr>
-<tr class="memdesc:a1363f332351487dba28eaf555ca6a7cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize track states.  <a href="../../d6/de6/_track_init_utils_8hh.html#a1363f332351487dba28eaf555ca6a7cf">More...</a><br /></td></tr>
-<tr class="separator:a1363f332351487dba28eaf555ca6a7cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f1a7fd8e413a296610ad39217416b21"><td class="memTemplParams" colspan="2">template&lt;MemSpace M&gt; </td></tr>
-<tr class="memitem:a0f1a7fd8e413a296610ad39217416b21"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/de6/_track_init_utils_8hh.html#a0f1a7fd8e413a296610ad39217416b21">celeritas::extend_from_secondaries</a> (const CoreRef&lt; M &gt; &amp;core_data, TrackInitStateData&lt; Ownership::value, M &gt; *data)</td></tr>
-<tr class="memdesc:a0f1a7fd8e413a296610ad39217416b21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create track initializers on device from secondary particles.  <a href="../../d6/de6/_track_init_utils_8hh.html#a0f1a7fd8e413a296610ad39217416b21">More...</a><br /></td></tr>
-<tr class="separator:a0f1a7fd8e413a296610ad39217416b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af813889625239079129be418c78607a2"><td class="memTemplParams" colspan="2"><a id="af813889625239079129be418c78607a2" name="af813889625239079129be418c78607a2"></a>
+template&lt;MemSpace M&gt; </td></tr>
+<tr class="memitem:af813889625239079129be418c78607a2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::extend_from_primaries</b> (CoreRef&lt; M &gt; &amp;core_data, Span&lt; Primary const &gt; host_primaries)</td></tr>
+<tr class="memdesc:af813889625239079129be418c78607a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create track initializers from a vector of host primary particles. <br /></td></tr>
+<tr class="separator:af813889625239079129be418c78607a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe01b20d78f4e14862e6a9194d3fd250"><td class="memTemplParams" colspan="2">template&lt;MemSpace M&gt; </td></tr>
+<tr class="memitem:abe01b20d78f4e14862e6a9194d3fd250"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/de6/_track_init_utils_8hh.html#abe01b20d78f4e14862e6a9194d3fd250">celeritas::initialize_tracks</a> (CoreRef&lt; M &gt; &amp;core_data)</td></tr>
+<tr class="memdesc:abe01b20d78f4e14862e6a9194d3fd250"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize track states.  <a href="../../d6/de6/_track_init_utils_8hh.html#abe01b20d78f4e14862e6a9194d3fd250">More...</a><br /></td></tr>
+<tr class="separator:abe01b20d78f4e14862e6a9194d3fd250"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac017e89516d4b9231eba04a1b38a3e1a"><td class="memTemplParams" colspan="2">template&lt;MemSpace M&gt; </td></tr>
+<tr class="memitem:ac017e89516d4b9231eba04a1b38a3e1a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/de6/_track_init_utils_8hh.html#ac017e89516d4b9231eba04a1b38a3e1a">celeritas::extend_from_secondaries</a> (CoreRef&lt; M &gt; &amp;core_data)</td></tr>
+<tr class="memdesc:ac017e89516d4b9231eba04a1b38a3e1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create track initializers on device from secondary particles.  <a href="../../d6/de6/_track_init_utils_8hh.html#ac017e89516d4b9231eba04a1b38a3e1a">More...</a><br /></td></tr>
+<tr class="separator:ac017e89516d4b9231eba04a1b38a3e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Helper functions for initializing tracks. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="acacf2c00501cd2ebee900331f5e7cc5e" name="acacf2c00501cd2ebee900331f5e7cc5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acacf2c00501cd2ebee900331f5e7cc5e">&#9670;&#160;</a></span>extend_from_primaries()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;MemSpace M&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void celeritas::extend_from_primaries </td>
-          <td>(</td>
-          <td class="paramtype">const TrackInitParamsHostRef &amp;&#160;</td>
-          <td class="paramname"><em>params</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../df/dae/structceleritas_1_1_track_init_state_data.html">TrackInitStateData</a>&lt; <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148a2063c1608d6e0baf80249c42e2be5804">Ownership::value</a>, M &gt; *&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Create track initializers from primary particles. </p>
-<p >This creates the maximum possible number of track initializers on the templated memory space from host primaries (either the number of host primaries that have not yet been initialized or the size of the available storage in the track initializer vector, whichever is smaller). </p>
-
-</div>
-</div>
-<a id="a0f1a7fd8e413a296610ad39217416b21" name="a0f1a7fd8e413a296610ad39217416b21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f1a7fd8e413a296610ad39217416b21">&#9670;&#160;</a></span>extend_from_secondaries()</h2>
+<a id="ac017e89516d4b9231eba04a1b38a3e1a" name="ac017e89516d4b9231eba04a1b38a3e1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac017e89516d4b9231eba04a1b38a3e1a">&#9670;&#160;</a></span>extend_from_secondaries()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,19 +127,9 @@ template&lt;MemSpace M&gt; </div>
         <tr>
           <td class="memname">void celeritas::extend_from_secondaries </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreRef</a>&lt; M &gt; &amp;&#160;</td>
-          <td class="paramname"><em>core_data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreRef</a>&lt; M &gt; &amp;&#160;</td>
+          <td class="paramname"><em>core_data</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../df/dae/structceleritas_1_1_track_init_state_data.html">TrackInitStateData</a>&lt; <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148a2063c1608d6e0baf80249c42e2be5804">Ownership::value</a>, M &gt; *&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -200,8 +150,8 @@ template&lt;MemSpace M&gt; </div>
  vacancies          | 1  4</pre> 
 </div>
 </div>
-<a id="a1363f332351487dba28eaf555ca6a7cf" name="a1363f332351487dba28eaf555ca6a7cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1363f332351487dba28eaf555ca6a7cf">&#9670;&#160;</a></span>initialize_tracks()</h2>
+<a id="abe01b20d78f4e14862e6a9194d3fd250" name="abe01b20d78f4e14862e6a9194d3fd250"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe01b20d78f4e14862e6a9194d3fd250">&#9670;&#160;</a></span>initialize_tracks()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -214,19 +164,9 @@ template&lt;MemSpace M&gt; </div>
         <tr>
           <td class="memname">void celeritas::initialize_tracks </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreRef</a>&lt; M &gt; &amp;&#160;</td>
-          <td class="paramname"><em>core_data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreRef</a>&lt; M &gt; &amp;&#160;</td>
+          <td class="paramname"><em>core_data</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../df/dae/structceleritas_1_1_track_init_state_data.html">TrackInitStateData</a>&lt; <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148a2063c1608d6e0baf80249c42e2be5804">Ownership::value</a>, M &gt; *&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>

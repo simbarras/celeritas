@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -81,26 +81,27 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../db/d47/_xorwow_rng_data_8hh.html">XorwowRngData.hh</a>&quot;</code><br />
 <code>#include &lt;random&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d10/_assert_8hh.html">corecel/Assert.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../db/d8b/_collection_8hh.html">corecel/data/Collection.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d9/dfc/_collection_builder_8hh.html">corecel/data/CollectionBuilder.hh</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a08b8c7bb1d9c5b8432660fca7bc89f01"><td class="memTemplParams" colspan="2">template&lt;MemSpace M&gt; </td></tr>
-<tr class="memitem:a08b8c7bb1d9c5b8432660fca7bc89f01"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d4c/_xorwow_rng_data_8cc.html#a08b8c7bb1d9c5b8432660fca7bc89f01">celeritas::resize</a> (XorwowRngStateData&lt; Ownership::value, M &gt; *state, const HostCRef&lt; XorwowRngParamsData &gt; &amp;params, size_type size)</td></tr>
-<tr class="memdesc:a08b8c7bb1d9c5b8432660fca7bc89f01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize and initialize with the seed stored in params.  <a href="../../d0/d4c/_xorwow_rng_data_8cc.html#a08b8c7bb1d9c5b8432660fca7bc89f01">More...</a><br /></td></tr>
-<tr class="separator:a08b8c7bb1d9c5b8432660fca7bc89f01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab395ccb87c4fd581f8c14ef2d058e508"><td class="memItemLeft" align="right" valign="top"><a id="ab395ccb87c4fd581f8c14ef2d058e508" name="ab395ccb87c4fd581f8c14ef2d058e508"></a>
-template void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::resize</b> (HostVal&lt; XorwowRngStateData &gt; *, const HostCRef&lt; XorwowRngParamsData &gt; &amp;, size_type)</td></tr>
-<tr class="separator:ab395ccb87c4fd581f8c14ef2d058e508"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d30c90e95238153d778ce1e7f373b0c"><td class="memItemLeft" align="right" valign="top"><a id="a6d30c90e95238153d778ce1e7f373b0c" name="a6d30c90e95238153d778ce1e7f373b0c"></a>
-template void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::resize</b> (XorwowRngStateData&lt; Ownership::value, MemSpace::device &gt; *, const HostCRef&lt; XorwowRngParamsData &gt; &amp;, size_type)</td></tr>
-<tr class="separator:a6d30c90e95238153d778ce1e7f373b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b921906cf392c26c7181168ea92ce94"><td class="memTemplParams" colspan="2">template&lt;MemSpace M&gt; </td></tr>
+<tr class="memitem:a6b921906cf392c26c7181168ea92ce94"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d4c/_xorwow_rng_data_8cc.html#a6b921906cf392c26c7181168ea92ce94">celeritas::resize</a> (XorwowRngStateData&lt; Ownership::value, M &gt; *state, HostCRef&lt; XorwowRngParamsData &gt; const &amp;params, size_type size)</td></tr>
+<tr class="memdesc:a6b921906cf392c26c7181168ea92ce94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize and initialize with the seed stored in params.  <a href="../../d0/d4c/_xorwow_rng_data_8cc.html#a6b921906cf392c26c7181168ea92ce94">More...</a><br /></td></tr>
+<tr class="separator:a6b921906cf392c26c7181168ea92ce94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab588a3010a571436dae18a12ae34aca7"><td class="memItemLeft" align="right" valign="top"><a id="ab588a3010a571436dae18a12ae34aca7" name="ab588a3010a571436dae18a12ae34aca7"></a>
+template void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::resize</b> (HostVal&lt; XorwowRngStateData &gt; *, HostCRef&lt; XorwowRngParamsData &gt; const &amp;, size_type)</td></tr>
+<tr class="separator:ab588a3010a571436dae18a12ae34aca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa80172d90c7f15bf2d1f0118e84c9157"><td class="memItemLeft" align="right" valign="top"><a id="aa80172d90c7f15bf2d1f0118e84c9157" name="aa80172d90c7f15bf2d1f0118e84c9157"></a>
+template void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::resize</b> (XorwowRngStateData&lt; Ownership::value, MemSpace::device &gt; *, HostCRef&lt; XorwowRngParamsData &gt; const &amp;, size_type)</td></tr>
+<tr class="separator:aa80172d90c7f15bf2d1f0118e84c9157"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a08b8c7bb1d9c5b8432660fca7bc89f01" name="a08b8c7bb1d9c5b8432660fca7bc89f01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08b8c7bb1d9c5b8432660fca7bc89f01">&#9670;&#160;</a></span>resize()</h2>
+<a id="a6b921906cf392c26c7181168ea92ce94" name="a6b921906cf392c26c7181168ea92ce94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b921906cf392c26c7181168ea92ce94">&#9670;&#160;</a></span>resize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -116,7 +117,7 @@ template&lt;MemSpace M&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#a68689dbf9eb486a67222e2fe2b496e71">HostCRef</a>&lt; <a class="el" href="../../d4/d17/structceleritas_1_1_xorwow_rng_params_data.html">XorwowRngParamsData</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d0/df5/corecel_2_types_8hh.html#a68689dbf9eb486a67222e2fe2b496e71">HostCRef</a>&lt; <a class="el" href="../../d4/d17/structceleritas_1_1_xorwow_rng_params_data.html">XorwowRngParamsData</a> &gt; const &amp;&#160;</td>
           <td class="paramname"><em>params</em>, </td>
         </tr>
         <tr>

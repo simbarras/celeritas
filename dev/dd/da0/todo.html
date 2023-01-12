@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -74,57 +74,56 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt>Member <a class="el" href="../../df/d12/_physics_step_utils_8hh.html#a02f76e76cc58033c44927c275a26551c">celeritas::calc_mean_energy_loss</a>  (const <a class="el" href="../../da/dd5/classceleritas_1_1_particle_track_view.html" title="Read/write view to the physical properties of a single particle track.">ParticleTrackView</a> &amp;particle, const <a class="el" href="../../d4/dd9/classceleritas_1_1_physics_track_view.html" title="Physics data for a track.">PhysicsTrackView</a> &amp;physics, real_type step)</dt>
-<dd><a class="anchor" id="_todo000012"></a>The geant3 manual makes the point that linear interpolation of energy loss rate results in a piecewise constant energy deposition curve, which is why they use spline interpolation. Investigate higher-order reconstruction of energy loss curve, e.g. through spline-based interpolation or log-log interpolation. </dd>
+<dt>Member <a class="el" href="../../df/d12/_physics_step_utils_8hh.html#a055ca1339377867bd45f753893660598">celeritas::calc_mean_energy_loss</a>  (<a class="el" href="../../da/dd5/classceleritas_1_1_particle_track_view.html" title="Read/write view to the physical properties of a single particle track.">ParticleTrackView</a> const &amp;particle, <a class="el" href="../../d4/dd9/classceleritas_1_1_physics_track_view.html" title="Physics data for a track.">PhysicsTrackView</a> const &amp;physics, real_type step)</dt>
+<dd><a class="anchor" id="_todo000011"></a>The geant3 manual makes the point that linear interpolation of energy loss rate results in a piecewise constant energy deposition curve, which is why they use spline interpolation. Investigate higher-order reconstruction of energy loss curve, e.g. through spline-based interpolation or log-log interpolation. </dd>
 <dt>Class <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">celeritas::Collection&lt; T, W, M, I &gt;</a>  </dt>
-<dd><a class="anchor" id="_todo000016"></a>It would be easy to specialize the traits for the const_reference ownership so that for device primitive data types (int, double) we access via __ldg &ndash; speeding up everywhere in the code without any invasive changes. This is another good argument for using <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html" title="Manage generic array-like data ownership and transfer from host to device.">Collection</a> instead of <a class="el" href="../../dd/d15/classceleritas_1_1_span.html" title="Modified backport of C++20 span.">Span</a> for device-compatible helper classes (e.g. grid calculator).  </dd>
+<dd><a class="anchor" id="_todo000015"></a>It would be easy to specialize the traits for the const_reference ownership so that for device primitive data types (int, double) we access via __ldg &ndash; speeding up everywhere in the code without any invasive changes. This is another good argument for using <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html" title="Manage generic array-like data ownership and transfer from host to device.">Collection</a> instead of <a class="el" href="../../dd/d15/classceleritas_1_1_span.html" title="Modified backport of C++20 span.">Span</a> for device-compatible helper classes (e.g. grid calculator).  </dd>
 <dt>Class <a class="el" href="../../df/dc3/classceleritas_1_1_combined_brem_interactor.html">celeritas::CombinedBremInteractor</a>  </dt>
 <dd><a class="anchor" id="_todo000002"></a>: see if there's any occupancy/performance difference by defining the samplers <em>inside</em> the conditional on "is_relativistic".  </dd>
 <dt>Class <a class="el" href="../../d6/def/classceleritas_1_1_device.html">celeritas::Device</a>  </dt>
-<dd><a class="anchor" id="_todo000020"></a>The active CUDA device is a global property&mdash;so this should probably be a singleton, or we could use lower-level API calls.  </dd>
+<dd><a class="anchor" id="_todo000020"></a>The active CUDA device is a global property&mdash;so this should probably be a singleton, or we could use lower-level API calls. </dd>
 <dt>Class <a class="el" href="../../d3/d08/classceleritas_1_1_element_selector.html">celeritas::ElementSelector</a>  </dt>
-<dd><a class="anchor" id="_todo000008"></a>Refactor to use <a class="el" href="../../df/d6c/classceleritas_1_1_selector.html" title="On-the-fly selection of a weighted discrete distribution.">Selector</a>.  </dd>
+<dd><a class="anchor" id="_todo000007"></a>Refactor to use <a class="el" href="../../df/d6c/classceleritas_1_1_selector.html" title="On-the-fly selection of a weighted discrete distribution.">Selector</a>.  </dd>
 <dt>Member <a class="el" href="../../d8/d9d/classceleritas_1_1_grid_id_finder.html#a4b1b7ead78b6e5bcaf735df0fb2e519b">celeritas::GridIdFinder&lt; KeyQuantity, ValueId &gt;::GridIdFinder</a>  (SpanConstGrid, SpanConstValue)</dt>
-<dd><a class="anchor" id="_todo000005"></a>Construct from reference to collections and ranges so we can benefit from __ldg as needed  </dd>
+<dd><a class="anchor" id="_todo000004"></a>Construct from reference to collections and ranges so we can benefit from __ldg as needed  </dd>
 <dt>Member <a class="el" href="../../db/d8b/_collection_8hh.html#a89741da60e12f348c4d1fd59e39c5dda">celeritas::ItemRange</a>  </dt>
-<dd><a class="anchor" id="_todo000015"></a>It might also be good to have a <code>CollectionMap</code> &ndash; mapping one <a class="el" href="../../dd/dbb/classceleritas_1_1_opaque_id.html" title="Type-safe index for accessing an array.">OpaqueId</a> to another <a class="el" href="../../dd/dbb/classceleritas_1_1_opaque_id.html" title="Type-safe index for accessing an array.">OpaqueId</a> type (with just an offset value). This would be used for example in physics, where <code>ItemRange</code> objects themselves are supposed to be indexed into with a particular ID type. </dd>
-<dt>Member <a class="el" href="../../d8/d8e/classceleritas_1_1_kernel_param_calculator.html#ae5091cc67c38ed3326d285210b07df70">celeritas::KernelParamCalculator::operator()</a>  (size_type min_num_threads) const</dt>
-<dd><a class="anchor" id="_todo000021"></a>Once we start worrying about multiple devices on a single machine, we could add a check for the device ID being the same one used to initialize the param calculator.  </dd>
+<dd><a class="anchor" id="_todo000014"></a>It might also be good to have a <code>CollectionMap</code> &ndash; mapping one <a class="el" href="../../dd/dbb/classceleritas_1_1_opaque_id.html" title="Type-safe index for accessing an array.">OpaqueId</a> to another <a class="el" href="../../dd/dbb/classceleritas_1_1_opaque_id.html" title="Type-safe index for accessing an array.">OpaqueId</a> type (with just an offset value). This would be used for example in physics, where <code>ItemRange</code> objects themselves are supposed to be indexed into with a particular ID type. </dd>
 <dt>Class <a class="el" href="../../da/da0/structceleritas_1_1_msc_step.html">celeritas::MscStep</a>  </dt>
-<dd><a class="anchor" id="_todo000010"></a>Document and/or refactor into a class that hides details:<ul>
+<dd><a class="anchor" id="_todo000009"></a>Document and/or refactor into a class that hides details:<ul>
 <li>alpha &lt; 0 ? "true path is very small" (true path scaling changes)</li>
 <li>is_displaced == false ? limit_min is unchanged and alpha &lt; 0</li>
 <li>true_step &gt;= geom_path  </li>
 </ul>
 </dd>
-<dt>Member <a class="el" href="../../d7/d97/orange_2_types_8hh.html#a73580d4130bc100abd9b88da5f2fa469">celeritas::no_intersection</a>  ()</dt>
+<dt>Member <a class="el" href="../../d7/d3b/_orange_types_8hh.html#a73580d4130bc100abd9b88da5f2fa469">celeritas::no_intersection</a>  ()</dt>
 <dd><p class="startdd"><a class="anchor" id="_todo000023"></a>There is probably a better place to put this since it's not a "type". </p>
 <p class="interdd"></p>
 <p class="enddd">A value of zero might also work since zero-length steps are prohibited. But we'll need custom <code>min</code> and <code>min_element</code> in that case.  </p>
 </dd>
-<dt>Member <a class="el" href="../../d1/d2c/_label_8cc.html#a08fb41c8d6c1840928a717cab300d614">celeritas::operator&lt;&lt;</a>  (std::ostream &amp;os, const <a class="el" href="../../da/d86/structceleritas_1_1_label.html" title="Small class for volume and material labels.">Label</a> &amp;lab)</dt>
-<dd><a class="anchor" id="_todo000014"></a>account for <code>os.width</code> .  </dd>
-<dt>Member <a class="el" href="../../d4/d53/classceleritas_1_1_orange_track_view.html#a0e42d4b7e5ade67f829bc6a25669ec17">celeritas::OrangeTrackView::move_internal</a>  (const Real3 &amp;pos)</dt>
-<dd><a class="anchor" id="_todo000022"></a>Currently it's up to the caller to make sure that the position is "nearby". We should actually test this with a safety distance.  </dd>
+<dt>Member <a class="el" href="../../d1/d2c/_label_8cc.html#af8a09fc48d0d293f357d400043016024">celeritas::operator&lt;&lt;</a>  (std::ostream &amp;os, <a class="el" href="../../da/d86/structceleritas_1_1_label.html" title="Helper class for managing volume and material labels.">Label</a> const &amp;lab)</dt>
+<dd><a class="anchor" id="_todo000013"></a>account for <code>os.width</code> .  </dd>
+<dt>Member <a class="el" href="../../d4/d53/classceleritas_1_1_orange_track_view.html#a15b97194ef263b281008138895be5eca">celeritas::OrangeTrackView::move_internal</a>  (Real3 const &amp;pos)</dt>
+<dd><a class="anchor" id="_todo000021"></a>Currently it's up to the caller to make sure that the position is "nearby". We should actually test this with a safety distance.  </dd>
 <dt>Class <a class="el" href="../../d1/d7c/classceleritas_1_1_output_interface.html">celeritas::OutputInterface</a>  </dt>
-<dd><a class="anchor" id="_todo000018"></a>Perhaps another output method for saving a schema?  </dd>
+<dd><a class="anchor" id="_todo000017"></a>Perhaps another output method for saving a schema?  </dd>
 <dt>Member <a class="el" href="../../da/dd5/classceleritas_1_1_particle_track_view.html#aaa9f0df7f99c00eefdb96b064a478490">celeritas::ParticleTrackView::beta_sq</a>  () const</dt>
-<dd><a class="anchor" id="_todo000011"></a>For nonrelativistic particles (low kinetic energy) this expression may be inaccurate due to rounding error. It is however guaranteed to be in the exact range [0, 1].  </dd>
+<dd><a class="anchor" id="_todo000010"></a>For nonrelativistic particles (low kinetic energy) this expression may be inaccurate due to rounding error. It is however guaranteed to be in the exact range [0, 1].  </dd>
 <dt>Class <a class="el" href="../../d8/d16/structceleritas_1_1_s_b_element_table_data.html">celeritas::SBElementTableData</a>  </dt>
 <dd><a class="anchor" id="_todo000001"></a>We could use way smaller integers for argmax, even i/j here, because these tables are so small.  </dd>
-<dt>Member <a class="el" href="../../d6/db8/classceleritas_1_1_simple_unit_tracker.html#aee32f507ae17b89111abfe19e44b7377">celeritas::SimpleUnitTracker::SimpleUnitTracker</a>  (const ParamsRef &amp;params)</dt>
+<dt>Member <a class="el" href="../../d6/db8/classceleritas_1_1_simple_unit_tracker.html#ab0c58930a3fa1fc1db7f1e9f79ac3479">celeritas::SimpleUnitTracker::SimpleUnitTracker</a>  (ParamsRef const &amp;params, SimpleUnitId id)</dt>
 <dd><a class="anchor" id="_todo000024"></a>When adding multiple universes, this will calculate range of VolumeIds that belong to this unit. For now we assume all volumes and surfaces belong to us.  </dd>
 <dt>Class <a class="el" href="../../d6/ddd/classceleritas_1_1_stack_allocator.html">celeritas::StackAllocator&lt; T &gt;</a>  </dt>
-<dd><a class="anchor" id="_todo000017"></a>Instead of returning a pointer, return IdRange&lt;T&gt;. Rename <a class="el" href="../../d7/d9d/structceleritas_1_1_stack_allocator_data.html" title="Storage for a stack and its dynamic size.">StackAllocatorData</a> to StackAllocation and have it look like a collection so that <em>it</em> will provide access to the data. Better yet, have a StackAllocation that can be a <code>const_reference</code> to the <a class="el" href="../../d7/d9d/structceleritas_1_1_stack_allocator_data.html" title="Storage for a stack and its dynamic size.">StackAllocatorData</a>. Then the rule will be "you can't create a StackAllocator in the same kernel
+<dd><a class="anchor" id="_todo000016"></a>Instead of returning a pointer, return IdRange&lt;T&gt;. Rename <a class="el" href="../../d7/d9d/structceleritas_1_1_stack_allocator_data.html" title="Storage for a stack and its dynamic size.">StackAllocatorData</a> to StackAllocation and have it look like a collection so that <em>it</em> will provide access to the data. Better yet, have a StackAllocation that can be a <code>const_reference</code> to the <a class="el" href="../../d7/d9d/structceleritas_1_1_stack_allocator_data.html" title="Storage for a stack and its dynamic size.">StackAllocatorData</a>. Then the rule will be "you can't create a StackAllocator in the same kernel
   that you directly access a StackAllocation".  </dd>
-<dt>Member <a class="el" href="../../d4/db3/classceleritas_1_1_stepper.html#a0019e0538542b26d86f33f34b203c6ba">celeritas::Stepper&lt; M &gt;::operator()</a>  (VecPrimary primaries) final</dt>
-<dd><a class="anchor" id="_todo000004"></a>Currently the track initializers and primary initialization are tied together, so we can only call this once. Once we refactor <a class="el" href="../../d8/d9a/classceleritas_1_1_track_init_params.html" title="Manage persistent track initializer data.">TrackInitParams</a> we should be able to control the injection of new primaries into the event loop.  </dd>
-<dt>Class <a class="el" href="../../d8/d9a/classceleritas_1_1_track_init_params.html">celeritas::TrackInitParams</a>  </dt>
-<dd><a class="anchor" id="_todo000013"></a>This class will probably go away. The interface as-is requires a copy when none is needed, and the capacity of the secondaries doesn't need to be set every time new primaries are added to the state.  </dd>
-<dt>Member <a class="el" href="../../d7/d03/classceleritas_1_1_twod_grid_calculator.html#ac0c0acc84b5f84e028eb4ad9a537a7ea">celeritas::TwodGridCalculator::operator()</a>  (const Point &amp;xy) const</dt>
-<dd><a class="anchor" id="_todo000006"></a>We may need to add logic inside the axis loop to account for points outside the grid.  </dd>
+<dt>Class <a class="el" href="../../d6/d0f/classceleritas_1_1_step_collector.html">celeritas::StepCollector</a>  </dt>
+<dd><a class="anchor" id="_todo000012"></a>The step collector serves two purposes: supporting "sensitive
+detectors" (mapping volume IDs to detector IDs and ignoring unmapped volumes) and supporting unfiltered output for "MC truth" . Right now only one or the other can be used, not both.  </dd>
+<dt>Class <a class="el" href="../../dc/d3a/classceleritas_1_1_string_enum_map.html">celeritas::StringEnumMap&lt; T &gt;</a>  </dt>
+<dd><a class="anchor" id="_todo000018"></a>If the size of the strings is short and there aren't a lot of them, it will be faster to use a fixed-size array and search over them. </dd>
+<dt>Member <a class="el" href="../../d7/d03/classceleritas_1_1_twod_grid_calculator.html#a8749cd45e0e332c0a42343c0d7870b1c">celeritas::TwodGridCalculator::operator()</a>  (Point const &amp;xy) const</dt>
+<dd><a class="anchor" id="_todo000005"></a>We may need to add logic inside the axis loop to account for points outside the grid.  </dd>
 <dt>Class <a class="el" href="../../df/d97/classceleritas_1_1_xs_calculator.html">celeritas::XsCalculator</a>  </dt>
-<dd><a class="anchor" id="_todo000007"></a>Currently this is hard-coded to use "cross section grid data" which have energy coordinates uniform in log space. This should be expanded to handle multiple parameterizations of the energy grid (e.g., arbitrary spacing needed for the Livermore sampling) and of the value interpolation (e.g. log interpolation). It might also make sense to get rid of the "prime energy" and just use log-log interpolation instead, or do a piecewise change in the interpolation instead of storing the cross section scaled by the energy.</dd>
+<dd><a class="anchor" id="_todo000006"></a>Currently this is hard-coded to use "cross section grid data" which have energy coordinates uniform in log space. This should be expanded to handle multiple parameterizations of the energy grid (e.g., arbitrary spacing needed for the Livermore sampling) and of the value interpolation (e.g. log interpolation). It might also make sense to get rid of the "prime energy" and just use log-log interpolation instead, or do a piecewise change in the interpolation instead of storing the cross section scaled by the energy.</dd>
 </dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

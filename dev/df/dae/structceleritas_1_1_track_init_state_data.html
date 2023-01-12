@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -132,19 +132,15 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a417c846caf00f73aee8b574baeec3364"><td class="memItemLeft" align="right" valign="top"><a id="a417c846caf00f73aee8b574baeec3364" name="a417c846caf00f73aee8b574baeec3364"></a>
 <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">EventItems</a>&lt; TrackId::size_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>track_counters</b></td></tr>
 <tr class="separator:a417c846caf00f73aee8b574baeec3364"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a608f427dace64b09ca49b701cd2f38"><td class="memItemLeft" align="right" valign="top"><a id="a1a608f427dace64b09ca49b701cd2f38" name="a1a608f427dace64b09ca49b701cd2f38"></a>
-size_type&#160;</td><td class="memItemRight" valign="bottom"><b>num_primaries</b> {}</td></tr>
-<tr class="memdesc:a1a608f427dace64b09ca49b701cd2f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of uninitialized primaries. <br /></td></tr>
-<tr class="separator:a1a608f427dace64b09ca49b701cd2f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94ece47ab13eb45e2bf6f1f7b92c6602"><td class="memItemLeft" align="right" valign="top"><a id="a94ece47ab13eb45e2bf6f1f7b92c6602" name="a94ece47ab13eb45e2bf6f1f7b92c6602"></a>
 size_type&#160;</td><td class="memItemRight" valign="bottom"><b>num_secondaries</b> {}</td></tr>
-<tr class="memdesc:a94ece47ab13eb45e2bf6f1f7b92c6602"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of secondaries produced in step. <br /></td></tr>
+<tr class="memdesc:a94ece47ab13eb45e2bf6f1f7b92c6602"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of secondaries produced in a step. <br /></td></tr>
 <tr class="separator:a94ece47ab13eb45e2bf6f1f7b92c6602"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148">Ownership</a> W, <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#af21a33cd854346b7988591378fcfe138">MemSpace</a> M&gt;<br />
 struct celeritas::TrackInitStateData&lt; W, M &gt;</div><p >Storage for dynamic data used to initialize new tracks. </p>
-<p >Not all of this is technically "state" data, though it is all mutable and in most cases accessed by <code>ThreadId</code>. Specifically, <code>initializers</code> and <code>vacancies</code> are resizable, and <code>track_counters</code> has size <code>num_events</code>.</p><ul>
+<p >Not all of this is technically "state" data, though it is all mutable and in most cases accessed by <code>ThreadId</code>. Specifically, <code>initializers</code> and <code>vacancies</code> are resizable, and <code>track_counters</code> has size <code>max_events</code>.</p><ul>
 <li><code>initializers</code> stores the data for primaries and secondaries waiting to be turned into new tracks and can be any size up to <code>capacity</code>.</li>
 <li><code>parents</code> is the <code>ThreadId</code> of the parent tracks of the initializers.</li>
 <li><code>vacancies</code> stores the indices of the threads of tracks that have been killed; the size will be &lt;= the number of tracks.</li>

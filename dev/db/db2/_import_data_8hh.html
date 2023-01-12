@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -75,90 +75,29 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle"><div class="title">ImportData.hh File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/d88/_import_atomic_relaxation_8hh.html">ImportAtomicRelaxation.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../de/d99/_import_element_8hh.html">ImportElement.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d9/d32/_import_livermore_p_e_8hh.html">ImportLivermorePE.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d6/d70/_import_material_8hh.html">ImportMaterial.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../da/d22/_import_particle_8hh.html">ImportParticle.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../de/de8/_import_process_8hh.html">ImportProcess.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/d12/_import_s_b_table_8hh.html">ImportSBTable.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../da/da3/_import_volume_8hh.html">ImportVolume.hh</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d18/structceleritas_1_1_import_em_parameters.html">celeritas::ImportEmParameters</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common electromagnetic physics parameters (see G4EmParameters.hh).  <a href="../../db/d18/structceleritas_1_1_import_em_parameters.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dd6/structceleritas_1_1_import_data.html">celeritas::ImportData</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Import all the needed data from external sources (currently Geant4).  <a href="../../d2/dd6/structceleritas_1_1_import_data.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:af63b3c35f0d6b8294885dbbc270b5cee"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/db2/_import_data_8hh.html#af63b3c35f0d6b8294885dbbc270b5cee">celeritas::ImportEmParameter</a> { <br />
-&#160;&#160;<a class="el" href="../../db/db2/_import_data_8hh.html#af63b3c35f0d6b8294885dbbc270b5ceea89a99f860050cf978f01ffca6104ae73">energy_loss_fluct</a>
-, <a class="el" href="../../db/db2/_import_data_8hh.html#af63b3c35f0d6b8294885dbbc270b5ceeacd0c321f9890a2ca4e4fadeacde8726d">lpm</a>
-, <a class="el" href="../../db/db2/_import_data_8hh.html#af63b3c35f0d6b8294885dbbc270b5ceea5a49067b7ff6868e5f0f8764ddca3d68">integral_approach</a>
-, <a class="el" href="../../db/db2/_import_data_8hh.html#af63b3c35f0d6b8294885dbbc270b5ceeaf07716ad332d3ff5ae0847e7c5883c31">linear_loss_limit</a>
-, <br />
-&#160;&#160;<a class="el" href="../../db/db2/_import_data_8hh.html#af63b3c35f0d6b8294885dbbc270b5ceeacf36d1df4467694c95943556f776b213">bins_per_decade</a>
-, <a class="el" href="../../db/db2/_import_data_8hh.html#af63b3c35f0d6b8294885dbbc270b5ceead4625103969aa3f3aa3cb23201555c77">min_table_energy</a>
-, <a class="el" href="../../db/db2/_import_data_8hh.html#af63b3c35f0d6b8294885dbbc270b5ceea199ebbde1281b12e9e3a417789e88da9">max_table_energy</a>
-<br />
- }</td></tr>
-<tr class="memdesc:af63b3c35f0d6b8294885dbbc270b5cee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerator for EM parameters (see G4EmParameters.hh).  <a href="../../db/db2/_import_data_8hh.html#af63b3c35f0d6b8294885dbbc270b5cee">More...</a><br /></td></tr>
-<tr class="separator:af63b3c35f0d6b8294885dbbc270b5cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a7fbfddfa051096ab711089a8254c7244"><td class="memItemLeft" align="right" valign="top"><a id="a7fbfddfa051096ab711089a8254c7244" name="a7fbfddfa051096ab711089a8254c7244"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to_cstring</b> (ImportEmParameter value)</td></tr>
-<tr class="memdesc:a7fbfddfa051096ab711089a8254c7244"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the string value for a table type. <br /></td></tr>
-<tr class="separator:a7fbfddfa051096ab711089a8254c7244"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="af63b3c35f0d6b8294885dbbc270b5cee" name="af63b3c35f0d6b8294885dbbc270b5cee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af63b3c35f0d6b8294885dbbc270b5cee">&#9670;&#160;</a></span>ImportEmParameter</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum class <a class="el" href="../../db/db2/_import_data_8hh.html#af63b3c35f0d6b8294885dbbc270b5cee">celeritas::ImportEmParameter</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Enumerator for EM parameters (see G4EmParameters.hh). </p>
-<dl class="section note"><dt>Note</dt><dd>Geant4 v11 removed the Spline() option from G4EmParameters.hh. </dd></dl>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af63b3c35f0d6b8294885dbbc270b5ceea89a99f860050cf978f01ffca6104ae73" name="af63b3c35f0d6b8294885dbbc270b5ceea89a99f860050cf978f01ffca6104ae73"></a>energy_loss_fluct&#160;</td><td class="fielddoc"><p >Energy loss fluctuation flag. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="af63b3c35f0d6b8294885dbbc270b5ceeacd0c321f9890a2ca4e4fadeacde8726d" name="af63b3c35f0d6b8294885dbbc270b5ceeacd0c321f9890a2ca4e4fadeacde8726d"></a>lpm&#160;</td><td class="fielddoc"><p >LPM effect flag (bremsstrahlung, pair production) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="af63b3c35f0d6b8294885dbbc270b5ceea5a49067b7ff6868e5f0f8764ddca3d68" name="af63b3c35f0d6b8294885dbbc270b5ceea5a49067b7ff6868e5f0f8764ddca3d68"></a>integral_approach&#160;</td><td class="fielddoc"><p >Integral approach flag. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="af63b3c35f0d6b8294885dbbc270b5ceeaf07716ad332d3ff5ae0847e7c5883c31" name="af63b3c35f0d6b8294885dbbc270b5ceeaf07716ad332d3ff5ae0847e7c5883c31"></a>linear_loss_limit&#160;</td><td class="fielddoc"><p >Linear loss limit. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="af63b3c35f0d6b8294885dbbc270b5ceeacf36d1df4467694c95943556f776b213" name="af63b3c35f0d6b8294885dbbc270b5ceeacf36d1df4467694c95943556f776b213"></a>bins_per_decade&#160;</td><td class="fielddoc"><p >Cross-section table binning. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="af63b3c35f0d6b8294885dbbc270b5ceead4625103969aa3f3aa3cb23201555c77" name="af63b3c35f0d6b8294885dbbc270b5ceead4625103969aa3f3aa3cb23201555c77"></a>min_table_energy&#160;</td><td class="fielddoc"><p >Cross-section table minimum kinetic energy [MeV]. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="af63b3c35f0d6b8294885dbbc270b5ceea199ebbde1281b12e9e3a417789e88da9" name="af63b3c35f0d6b8294885dbbc270b5ceea199ebbde1281b12e9e3a417789e88da9"></a>max_table_energy&#160;</td><td class="fielddoc"><p >Cross-section table maximum kinetic energy [MeV]. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

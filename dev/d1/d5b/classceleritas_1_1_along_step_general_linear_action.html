@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -101,19 +101,20 @@ Inheritance diagram for celeritas::AlongStepGeneralLinearAction:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
-<tr class="memitem:a236d2443d0fbe956423b1b38293100bd"><td class="memItemLeft" align="right" valign="top"><a id="a236d2443d0fbe956423b1b38293100bd" name="a236d2443d0fbe956423b1b38293100bd"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstFluctuations</b> = std::shared_ptr&lt; const <a class="el" href="../../d2/dae/classceleritas_1_1_fluctuation_params.html">FluctuationParams</a> &gt;</td></tr>
-<tr class="separator:a236d2443d0fbe956423b1b38293100bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13083c344edf9e76cd9a89a84b2e003c"><td class="memItemLeft" align="right" valign="top"><a id="a13083c344edf9e76cd9a89a84b2e003c" name="a13083c344edf9e76cd9a89a84b2e003c"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstMsc</b> = std::shared_ptr&lt; const <a class="el" href="../../df/d67/classceleritas_1_1_urban_msc_model.html">UrbanMscModel</a> &gt;</td></tr>
-<tr class="separator:a13083c344edf9e76cd9a89a84b2e003c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f3ae5f4983f8014f0373385efa3df72"><td class="memItemLeft" align="right" valign="top"><a id="a7f3ae5f4983f8014f0373385efa3df72" name="a7f3ae5f4983f8014f0373385efa3df72"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstFluctuations</b> = std::shared_ptr&lt; <a class="el" href="../../d2/dae/classceleritas_1_1_fluctuation_params.html">FluctuationParams</a> const  &gt;</td></tr>
+<tr class="separator:a7f3ae5f4983f8014f0373385efa3df72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9694ee82c6bb816617deccde9fab1f5"><td class="memItemLeft" align="right" valign="top"><a id="ad9694ee82c6bb816617deccde9fab1f5" name="ad9694ee82c6bb816617deccde9fab1f5"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstMsc</b> = std::shared_ptr&lt; <a class="el" href="../../df/d67/classceleritas_1_1_urban_msc_model.html">UrbanMscModel</a> const  &gt;</td></tr>
+<tr class="separator:ad9694ee82c6bb816617deccde9fab1f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classceleritas_1_1_explicit_action_interface"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classceleritas_1_1_explicit_action_interface')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html">celeritas::ExplicitActionInterface</a></td></tr>
 <tr class="memitem:a17841c8c8ad66279eefbdc22604c1cc3 inherit pub_types_classceleritas_1_1_explicit_action_interface"><td class="memItemLeft" align="right" valign="top"><a id="a17841c8c8ad66279eefbdc22604c1cc3" name="a17841c8c8ad66279eefbdc22604c1cc3"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>CoreHostRef</b> = <a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreRef</a>&lt; MemSpace::host &gt;</td></tr>
-<tr class="memdesc:a17841c8c8ad66279eefbdc22604c1cc3 inherit pub_types_classceleritas_1_1_explicit_action_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type aliases. <br /></td></tr>
+<tr class="memdesc:a17841c8c8ad66279eefbdc22604c1cc3 inherit pub_types_classceleritas_1_1_explicit_action_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the action with host data. <br /></td></tr>
 <tr class="separator:a17841c8c8ad66279eefbdc22604c1cc3 inherit pub_types_classceleritas_1_1_explicit_action_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1be1bc7379dc3d9770d329c5f2a3eb9 inherit pub_types_classceleritas_1_1_explicit_action_interface"><td class="memItemLeft" align="right" valign="top"><a id="ae1be1bc7379dc3d9770d329c5f2a3eb9" name="ae1be1bc7379dc3d9770d329c5f2a3eb9"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>CoreDeviceRef</b> = <a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreRef</a>&lt; MemSpace::device &gt;</td></tr>
+<tr class="memdesc:ae1be1bc7379dc3d9770d329c5f2a3eb9 inherit pub_types_classceleritas_1_1_explicit_action_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the action with host data. <br /></td></tr>
 <tr class="separator:ae1be1bc7379dc3d9770d329c5f2a3eb9 inherit pub_types_classceleritas_1_1_explicit_action_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -129,18 +130,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3b82925a8904d6cd83c70cbb581d7350"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d5b/classceleritas_1_1_along_step_general_linear_action.html#a3b82925a8904d6cd83c70cbb581d7350">execute</a> (<a class="el" href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html#a17841c8c8ad66279eefbdc22604c1cc3">CoreHostRef</a> const &amp;) const final</td></tr>
 <tr class="memdesc:a3b82925a8904d6cd83c70cbb581d7350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launch the along-step action on host.  <a href="../../d1/d5b/classceleritas_1_1_along_step_general_linear_action.html#a3b82925a8904d6cd83c70cbb581d7350">More...</a><br /></td></tr>
 <tr class="separator:a3b82925a8904d6cd83c70cbb581d7350"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98d6b149571e3a85afb5cafc927659c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d5b/classceleritas_1_1_along_step_general_linear_action.html#a98d6b149571e3a85afb5cafc927659c7">execute</a> (<a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreDeviceRef</a> const &amp;) const final</td></tr>
+<tr class="memitem:a98d6b149571e3a85afb5cafc927659c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d5b/classceleritas_1_1_along_step_general_linear_action.html#a98d6b149571e3a85afb5cafc927659c7">execute</a> (<a class="el" href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html#ae1be1bc7379dc3d9770d329c5f2a3eb9">CoreDeviceRef</a> const &amp;) const final</td></tr>
 <tr class="memdesc:a98d6b149571e3a85afb5cafc927659c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the action with host data.  <a href="../../d1/d5b/classceleritas_1_1_along_step_general_linear_action.html#a98d6b149571e3a85afb5cafc927659c7">More...</a><br /></td></tr>
 <tr class="separator:a98d6b149571e3a85afb5cafc927659c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30e5f1d58237e42a1b03f3cbd7fe9a1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a98b21e11852c06d3845c53dd5df84797">ActionId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d5b/classceleritas_1_1_along_step_general_linear_action.html#a30e5f1d58237e42a1b03f3cbd7fe9a1c">action_id</a> () const final</td></tr>
 <tr class="memdesc:a30e5f1d58237e42a1b03f3cbd7fe9a1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the model.  <a href="../../d1/d5b/classceleritas_1_1_along_step_general_linear_action.html#a30e5f1d58237e42a1b03f3cbd7fe9a1c">More...</a><br /></td></tr>
 <tr class="separator:a30e5f1d58237e42a1b03f3cbd7fe9a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf2c2d9f74087005b6d7e10df4c4e36b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d5b/classceleritas_1_1_along_step_general_linear_action.html#acf2c2d9f74087005b6d7e10df4c4e36b">label</a> () const final</td></tr>
-<tr class="memdesc:acf2c2d9f74087005b6d7e10df4c4e36b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Short name for the interaction kernel.  <a href="../../d1/d5b/classceleritas_1_1_along_step_general_linear_action.html#acf2c2d9f74087005b6d7e10df4c4e36b">More...</a><br /></td></tr>
+<tr class="memdesc:acf2c2d9f74087005b6d7e10df4c4e36b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Short name for the along-step kernel.  <a href="../../d1/d5b/classceleritas_1_1_along_step_general_linear_action.html#acf2c2d9f74087005b6d7e10df4c4e36b">More...</a><br /></td></tr>
 <tr class="separator:acf2c2d9f74087005b6d7e10df4c4e36b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04e8e26b35854b6083096268a56d7974"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d5b/classceleritas_1_1_along_step_general_linear_action.html#a04e8e26b35854b6083096268a56d7974">description</a> () const final</td></tr>
 <tr class="memdesc:a04e8e26b35854b6083096268a56d7974"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the model, for user interaction.  <a href="../../d1/d5b/classceleritas_1_1_along_step_general_linear_action.html#a04e8e26b35854b6083096268a56d7974">More...</a><br /></td></tr>
 <tr class="separator:a04e8e26b35854b6083096268a56d7974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad803251b97385c6b7e2554035073450"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a8cf02fdde066d68cf56bdc61f55215c1">ActionOrder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d5b/classceleritas_1_1_along_step_general_linear_action.html#aad803251b97385c6b7e2554035073450">order</a> () const final</td></tr>
+<tr class="memdesc:aad803251b97385c6b7e2554035073450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dependency ordering of the action.  <a href="../../d1/d5b/classceleritas_1_1_along_step_general_linear_action.html#aad803251b97385c6b7e2554035073450">More...</a><br /></td></tr>
+<tr class="separator:aad803251b97385c6b7e2554035073450"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83e6d7d1438f883d9a004ac956f079bd"><td class="memItemLeft" align="right" valign="top"><a id="a83e6d7d1438f883d9a004ac956f079bd" name="a83e6d7d1438f883d9a004ac956f079bd"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_fluct</b> () const</td></tr>
 <tr class="memdesc:a83e6d7d1438f883d9a004ac956f079bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether energy flucutation is in use. <br /></td></tr>
@@ -149,12 +153,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_fluct</b> () cons
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_msc</b> () const</td></tr>
 <tr class="memdesc:a3e0935736627f422b9250aa956b03987"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether MSC is in use. <br /></td></tr>
 <tr class="separator:a3e0935736627f422b9250aa956b03987"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43d005c6ec0d31b956a57657a8eaba88"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html#a43d005c6ec0d31b956a57657a8eaba88">execute</a> (<a class="el" href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html#a17841c8c8ad66279eefbdc22604c1cc3">CoreHostRef</a> const &amp;) const =0</td></tr>
-<tr class="memdesc:a43d005c6ec0d31b956a57657a8eaba88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the action with host data.  <a href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html#a43d005c6ec0d31b956a57657a8eaba88">More...</a><br /></td></tr>
-<tr class="separator:a43d005c6ec0d31b956a57657a8eaba88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0c60e8f976df9957bf4d1dc3683bc0e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html#ac0c60e8f976df9957bf4d1dc3683bc0e">execute</a> (<a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreDeviceRef</a> const &amp;) const =0</td></tr>
-<tr class="memdesc:ac0c60e8f976df9957bf4d1dc3683bc0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the action with device data.  <a href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html#ac0c60e8f976df9957bf4d1dc3683bc0e">More...</a><br /></td></tr>
-<tr class="separator:ac0c60e8f976df9957bf4d1dc3683bc0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classceleritas_1_1_explicit_action_interface"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classceleritas_1_1_explicit_action_interface')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html">celeritas::ExplicitActionInterface</a></td></tr>
 <tr class="memitem:ae25fcd5fdf654ac5bbaaa70526e1576b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a98b21e11852c06d3845c53dd5df84797">ActionId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d6f/classceleritas_1_1_action_interface.html#ae25fcd5fdf654ac5bbaaa70526e1576b">action_id</a> () const =0</td></tr>
 <tr class="memdesc:ae25fcd5fdf654ac5bbaaa70526e1576b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of this action for verification.  <a href="../../d7/d6f/classceleritas_1_1_action_interface.html#ae25fcd5fdf654ac5bbaaa70526e1576b">More...</a><br /></td></tr>
 <tr class="separator:ae25fcd5fdf654ac5bbaaa70526e1576b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,10 +166,18 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_msc</b> () const<
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a852d2d72ec0cf796b2c7497fd899058f"><td class="memItemLeft" align="right" valign="top"><a id="a852d2d72ec0cf796b2c7497fd899058f" name="a852d2d72ec0cf796b2c7497fd899058f"></a>
-static std::shared_ptr&lt; <a class="el" href="../../d1/d5b/classceleritas_1_1_along_step_general_linear_action.html">AlongStepGeneralLinearAction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>from_params</b> (const <a class="el" href="../../df/d18/classceleritas_1_1_material_params.html">MaterialParams</a> &amp;materials, const <a class="el" href="../../d8/d0b/classceleritas_1_1_particle_params.html">ParticleParams</a> &amp;particles, const <a class="el" href="../../db/da1/classceleritas_1_1_physics_params.html">PhysicsParams</a> &amp;physics, bool eloss_fluctuation, <a class="el" href="../../d3/d57/classceleritas_1_1_action_manager.html">ActionManager</a> *actions)</td></tr>
-<tr class="memdesc:a852d2d72ec0cf796b2c7497fd899058f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the along-step action from input parameters. <br /></td></tr>
-<tr class="separator:a852d2d72ec0cf796b2c7497fd899058f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64c83cb3d2180983e8309c9ec7b15d24"><td class="memItemLeft" align="right" valign="top"><a id="a64c83cb3d2180983e8309c9ec7b15d24" name="a64c83cb3d2180983e8309c9ec7b15d24"></a>
+static std::shared_ptr&lt; <a class="el" href="../../d1/d5b/classceleritas_1_1_along_step_general_linear_action.html">AlongStepGeneralLinearAction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>from_params</b> (<a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a98b21e11852c06d3845c53dd5df84797">ActionId</a> id, <a class="el" href="../../df/d18/classceleritas_1_1_material_params.html">MaterialParams</a> const &amp;materials, <a class="el" href="../../d8/d0b/classceleritas_1_1_particle_params.html">ParticleParams</a> const &amp;particles, <a class="el" href="../../db/da1/classceleritas_1_1_physics_params.html">PhysicsParams</a> const &amp;physics, bool eloss_fluctuation)</td></tr>
+<tr class="memdesc:a64c83cb3d2180983e8309c9ec7b15d24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the along-step action from input parameters. <br /></td></tr>
+<tr class="separator:a64c83cb3d2180983e8309c9ec7b15d24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classceleritas_1_1_explicit_action_interface"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classceleritas_1_1_explicit_action_interface')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html">celeritas::ExplicitActionInterface</a></td></tr>
+<tr class="memitem:a8e571b0ab05283851e3c168b1a310622 inherit pro_methods_classceleritas_1_1_explicit_action_interface"><td class="memItemLeft" align="right" valign="top"><a id="a8e571b0ab05283851e3c168b1a310622" name="a8e571b0ab05283851e3c168b1a310622"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~ExplicitActionInterface</b> ()=default</td></tr>
+<tr class="memdesc:a8e571b0ab05283851e3c168b1a310622 inherit pro_methods_classceleritas_1_1_explicit_action_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the action with host data. <br /></td></tr>
+<tr class="separator:a8e571b0ab05283851e3c168b1a310622 inherit pro_methods_classceleritas_1_1_explicit_action_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Along-step kernel for particles without fields. </p>
@@ -246,7 +253,7 @@ static std::shared_ptr&lt; <a class="el" href="../../d1/d5b/classceleritas_1_1_a
         <tr>
           <td class="memname">void celeritas::AlongStepGeneralLinearAction::execute </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreDeviceRef</a> const &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html#ae1be1bc7379dc3d9770d329c5f2a3eb9">CoreDeviceRef</a> const &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
@@ -318,9 +325,38 @@ static std::shared_ptr&lt; <a class="el" href="../../d1/d5b/classceleritas_1_1_a
 </table>
 </div><div class="memdoc">
 
-<p>Short name for the interaction kernel. </p>
+<p>Short name for the along-step kernel. </p>
 
 <p>Implements <a class="el" href="../../d7/d6f/classceleritas_1_1_action_interface.html#a90e2b9e6e54eb3e59c5a3a7279bfbd96">celeritas::ActionInterface</a>.</p>
+
+</div>
+</div>
+<a id="aad803251b97385c6b7e2554035073450" name="aad803251b97385c6b7e2554035073450"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad803251b97385c6b7e2554035073450">&#9670;&#160;</a></span>order()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a8cf02fdde066d68cf56bdc61f55215c1">ActionOrder</a> celeritas::AlongStepGeneralLinearAction::order </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dependency ordering of the action. </p>
+
+<p>Implements <a class="el" href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html#a02c4fb1a25a57970b0a99e9a9116a22b">celeritas::ExplicitActionInterface</a>.</p>
 
 </div>
 </div>

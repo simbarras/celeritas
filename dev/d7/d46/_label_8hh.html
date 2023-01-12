@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -80,42 +80,44 @@ $(function() {
   <div class="headertitle"><div class="title">Label.hh File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;functional&gt;</code><br />
+<div class="textblock"><code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
 <code>#include &lt;iosfwd&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../de/d4c/_hash_utils_8hh.html">corecel/math/HashUtils.hh</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d86/structceleritas_1_1_label.html">celeritas::Label</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Small class for volume and material labels.  <a href="../../da/d86/structceleritas_1_1_label.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class for managing volume and material labels.  <a href="../../da/d86/structceleritas_1_1_label.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac2249e33d1b309bd1d7688258ce99087"><td class="memItemLeft" align="right" valign="top"><a id="ac2249e33d1b309bd1d7688258ce99087" name="ac2249e33d1b309bd1d7688258ce99087"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::operator==</b> (const Label &amp;lhs, const Label &amp;rhs)</td></tr>
-<tr class="memdesc:ac2249e33d1b309bd1d7688258ce99087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test equality. <br /></td></tr>
-<tr class="separator:ac2249e33d1b309bd1d7688258ce99087"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a7fc69538eb4ba668a967722b2a5ac2"><td class="memItemLeft" align="right" valign="top"><a id="a3a7fc69538eb4ba668a967722b2a5ac2" name="a3a7fc69538eb4ba668a967722b2a5ac2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::operator!=</b> (const Label &amp;lhs, const Label &amp;rhs)</td></tr>
-<tr class="memdesc:a3a7fc69538eb4ba668a967722b2a5ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test inequality. <br /></td></tr>
-<tr class="separator:a3a7fc69538eb4ba668a967722b2a5ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d1f5c45b229517201a71369db8cce10"><td class="memItemLeft" align="right" valign="top"><a id="a9d1f5c45b229517201a71369db8cce10" name="a9d1f5c45b229517201a71369db8cce10"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::operator&lt;</b> (const Label &amp;lhs, const Label &amp;rhs)</td></tr>
-<tr class="memdesc:a9d1f5c45b229517201a71369db8cce10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Less-than comparison for sorting. <br /></td></tr>
-<tr class="separator:a9d1f5c45b229517201a71369db8cce10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08fb41c8d6c1840928a717cab300d614"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d2c/_label_8cc.html#a08fb41c8d6c1840928a717cab300d614">celeritas::operator&lt;&lt;</a> (std::ostream &amp;os, const Label &amp;lab)</td></tr>
-<tr class="memdesc:a08fb41c8d6c1840928a717cab300d614"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a label to a stream.  <a href="../../d1/d2c/_label_8cc.html#a08fb41c8d6c1840928a717cab300d614">More...</a><br /></td></tr>
-<tr class="separator:a08fb41c8d6c1840928a717cab300d614"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95ebafea1538fa5b7703d607f76f3d0d"><td class="memItemLeft" align="right" valign="top"><a id="a95ebafea1538fa5b7703d607f76f3d0d" name="a95ebafea1538fa5b7703d607f76f3d0d"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to_string</b> (const Label &amp;lab)</td></tr>
-<tr class="memdesc:a95ebafea1538fa5b7703d607f76f3d0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the label as a string. <br /></td></tr>
-<tr class="separator:a95ebafea1538fa5b7703d607f76f3d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89118a556529e21f4c7977046e40c0af"><td class="memItemLeft" align="right" valign="top"><a id="a89118a556529e21f4c7977046e40c0af" name="a89118a556529e21f4c7977046e40c0af"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::operator==</b> (Label const &amp;lhs, Label const &amp;rhs)</td></tr>
+<tr class="memdesc:a89118a556529e21f4c7977046e40c0af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test equality. <br /></td></tr>
+<tr class="separator:a89118a556529e21f4c7977046e40c0af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acebed5dfe5313353186fdd8fec7209d5"><td class="memItemLeft" align="right" valign="top"><a id="acebed5dfe5313353186fdd8fec7209d5" name="acebed5dfe5313353186fdd8fec7209d5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::operator!=</b> (Label const &amp;lhs, Label const &amp;rhs)</td></tr>
+<tr class="memdesc:acebed5dfe5313353186fdd8fec7209d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test inequality. <br /></td></tr>
+<tr class="separator:acebed5dfe5313353186fdd8fec7209d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bee38b71714565eb28ef9bbcb530c52"><td class="memItemLeft" align="right" valign="top"><a id="a6bee38b71714565eb28ef9bbcb530c52" name="a6bee38b71714565eb28ef9bbcb530c52"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::operator&lt;</b> (Label const &amp;lhs, Label const &amp;rhs)</td></tr>
+<tr class="memdesc:a6bee38b71714565eb28ef9bbcb530c52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Less-than comparison for sorting. <br /></td></tr>
+<tr class="separator:a6bee38b71714565eb28ef9bbcb530c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8a09fc48d0d293f357d400043016024"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d2c/_label_8cc.html#af8a09fc48d0d293f357d400043016024">celeritas::operator&lt;&lt;</a> (std::ostream &amp;os, Label const &amp;lab)</td></tr>
+<tr class="memdesc:af8a09fc48d0d293f357d400043016024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a label to a stream.  <a href="../../d1/d2c/_label_8cc.html#af8a09fc48d0d293f357d400043016024">More...</a><br /></td></tr>
+<tr class="separator:af8a09fc48d0d293f357d400043016024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a9b509191ff252cb8ba59109695554a"><td class="memItemLeft" align="right" valign="top"><a id="a8a9b509191ff252cb8ba59109695554a" name="a8a9b509191ff252cb8ba59109695554a"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to_string</b> (Label const &amp;lab)</td></tr>
+<tr class="memdesc:a8a9b509191ff252cb8ba59109695554a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the label as a string. <br /></td></tr>
+<tr class="separator:a8a9b509191ff252cb8ba59109695554a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a08fb41c8d6c1840928a717cab300d614" name="a08fb41c8d6c1840928a717cab300d614"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08fb41c8d6c1840928a717cab300d614">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
+<a id="af8a09fc48d0d293f357d400043016024" name="af8a09fc48d0d293f357d400043016024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8a09fc48d0d293f357d400043016024">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -129,7 +131,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to_
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../da/d86/structceleritas_1_1_label.html">Label</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../da/d86/structceleritas_1_1_label.html">Label</a> const &amp;&#160;</td>
           <td class="paramname"><em>lab</em>&#160;</td>
         </tr>
         <tr>
@@ -141,7 +143,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to_
 </div><div class="memdoc">
 
 <p>Write a label to a stream. </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000014">Todo:</a></b></dt><dd>account for <code>os.width</code> . </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000013">Todo:</a></b></dt><dd>account for <code>os.width</code> . </dd></dl>
 
 </div>
 </div>

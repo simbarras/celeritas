@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -96,14 +96,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a cl
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ad2b3cb2a0fe3f202628eeb44a475c513"><td class="memItemLeft" align="right" valign="top"><a id="ad2b3cb2a0fe3f202628eeb44a475c513" name="ad2b3cb2a0fe3f202628eeb44a475c513"></a>
-<a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a>&lt; const T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>src</b></td></tr>
-<tr class="separator:ad2b3cb2a0fe3f202628eeb44a475c513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9809a9d86636b7295553d4965d6afa28"><td class="memItemLeft" align="right" valign="top"><a id="a9809a9d86636b7295553d4965d6afa28" name="a9809a9d86636b7295553d4965d6afa28"></a>
+<a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a>&lt; T const  &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>src</b></td></tr>
+<tr class="separator:a9809a9d86636b7295553d4965d6afa28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class T, <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#af21a33cd854346b7988591378fcfe138">MemSpace</a> M&gt;<br />
 struct celeritas::Copier&lt; T, M &gt;</div><p >Copy spans of data. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<p >Example of copying data from host to device: </p><div class="fragment"><div class="line"><a class="code hl_struct" href="../../d2/df9/structceleritas_1_1_copier.html">Copier&lt;int, MemSpace::host&gt;</a> copy_from_host_to{host_ints};</div>
+<div class="line">copy_from_host_to(MemSpace::device, device_ints);</div>
+<div class="ttc" id="astructceleritas_1_1_copier_html"><div class="ttname"><a href="../../d2/df9/structceleritas_1_1_copier.html">celeritas::Copier</a></div><div class="ttdoc">Copy spans of data.</div><div class="ttdef"><b>Definition:</b> Copier.hh:31</div></div>
+</div><!-- fragment --> </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d7/d40/_copier_8hh.html">Copier.hh</a></li>
 </ul>
 </div><!-- contents -->

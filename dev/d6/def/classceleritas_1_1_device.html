@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -115,6 +115,14 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> () co
 std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>total_global_mem</b> () const</td></tr>
 <tr class="memdesc:af5d65b696dd1176e4c7c44a6f2271d6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total memory capacity (bytes) <br /></td></tr>
 <tr class="separator:af5d65b696dd1176e4c7c44a6f2271d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4c65253de4a1be70235aac8e66569c2"><td class="memItemLeft" align="right" valign="top"><a id="ae4c65253de4a1be70235aac8e66569c2" name="ae4c65253de4a1be70235aac8e66569c2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>max_threads_per_block</b> () const</td></tr>
+<tr class="memdesc:ae4c65253de4a1be70235aac8e66569c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of threads per block (for launch limits) <br /></td></tr>
+<tr class="separator:ae4c65253de4a1be70235aac8e66569c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9a754fe32890d545503d329edaa49d6"><td class="memItemLeft" align="right" valign="top"><a id="ac9a754fe32890d545503d329edaa49d6" name="ac9a754fe32890d545503d329edaa49d6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>max_blocks_per_grid</b> () const</td></tr>
+<tr class="memdesc:ac9a754fe32890d545503d329edaa49d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of threads per block (for launch limits) <br /></td></tr>
+<tr class="separator:ac9a754fe32890d545503d329edaa49d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeae89f27ab4ea06ffd76f16a4f4d6744"><td class="memItemLeft" align="right" valign="top"><a id="aeae89f27ab4ea06ffd76f16a4f4d6744" name="aeae89f27ab4ea06ffd76f16a4f4d6744"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>max_threads_per_cu</b> () const</td></tr>
 <tr class="memdesc:aeae89f27ab4ea06ffd76f16a4f4d6744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of concurrent threads per compute unit (for occupancy) <br /></td></tr>
@@ -131,16 +139,19 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>eu_per_cu</b>
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>default_block_size</b> () const</td></tr>
 <tr class="memdesc:ab7dc31b7078fd494c345932207909d17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default number of threads per block. <br /></td></tr>
 <tr class="separator:ab7dc31b7078fd494c345932207909d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c977bb97e763056ca3306f2efda47cd"><td class="memItemLeft" align="right" valign="top"><a id="a2c977bb97e763056ca3306f2efda47cd" name="a2c977bb97e763056ca3306f2efda47cd"></a>
-const <a class="el" href="../../d6/def/classceleritas_1_1_device.html#a5f98665ebf50d43fcda42a816f626ede">MapStrInt</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>extra</b> () const</td></tr>
-<tr class="memdesc:a2c977bb97e763056ca3306f2efda47cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additional potentially interesting diagnostics. <br /></td></tr>
-<tr class="separator:a2c977bb97e763056ca3306f2efda47cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70a1b0433c70515aad096b20f085d77d"><td class="memItemLeft" align="right" valign="top"><a id="a70a1b0433c70515aad096b20f085d77d" name="a70a1b0433c70515aad096b20f085d77d"></a>
+<a class="el" href="../../d6/def/classceleritas_1_1_device.html#a5f98665ebf50d43fcda42a816f626ede">MapStrInt</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>extra</b> () const</td></tr>
+<tr class="memdesc:a70a1b0433c70515aad096b20f085d77d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additional potentially interesting diagnostics. <br /></td></tr>
+<tr class="separator:a70a1b0433c70515aad096b20f085d77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ac793183082adcf21f67e0aaab1f02c72"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/def/classceleritas_1_1_device.html#ac793183082adcf21f67e0aaab1f02c72">num_devices</a> ()</td></tr>
 <tr class="memdesc:ac793183082adcf21f67e0aaab1f02c72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of available devices.  <a href="../../d6/def/classceleritas_1_1_device.html#ac793183082adcf21f67e0aaab1f02c72">More...</a><br /></td></tr>
 <tr class="separator:ac793183082adcf21f67e0aaab1f02c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adde69237dfdac2bbae37a41b370e8c96"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/def/classceleritas_1_1_device.html#adde69237dfdac2bbae37a41b370e8c96">debug</a> ()</td></tr>
+<tr class="memdesc:adde69237dfdac2bbae37a41b370e8c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether verbose messages and error checking are enabled.  <a href="../../d6/def/classceleritas_1_1_device.html#adde69237dfdac2bbae37a41b370e8c96">More...</a><br /></td></tr>
+<tr class="separator:adde69237dfdac2bbae37a41b370e8c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Manage attributes of the GPU. </p>
@@ -160,7 +171,8 @@ Static Public Member Functions</h2></td></tr>
 <td class="markdownTableBodyNone">multiprocessor   </td><td class="markdownTableBodyNone">execution unit   </td><td class="markdownTableBodyNone">hardware executing one or more warps   </td></tr>
 </table>
 <p >Each block/workgroup operates on the same hardware (compute unit) until completion. Similarly, a warp/wavefront is tied to a single execution unit. Each compute unit can execute one or more blocks: the higher the number of blocks resident, the more latency can be hidden.</p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000020">Todo:</a></b></dt><dd>The active CUDA device is a global property&mdash;so this should probably be a singleton, or we could use lower-level API calls. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000020">Todo:</a></b></dt><dd>The active CUDA device is a global property&mdash;so this should probably be a singleton, or we could use lower-level API calls.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The current multithreading/multiprocess model is intended to have one GPU serving multiple CPU threads simultaneously, and one MPI process per GPU. If we need to add multiple GPUs per process, then <code>global_device</code> will go away in favor of a thread-independent model. </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a5f98665ebf50d43fcda42a816f626ede" name="a5f98665ebf50d43fcda42a816f626ede"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5f98665ebf50d43fcda42a816f626ede">&#9670;&#160;</a></span>MapStrInt</h2>
@@ -178,6 +190,34 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="adde69237dfdac2bbae37a41b370e8c96" name="adde69237dfdac2bbae37a41b370e8c96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adde69237dfdac2bbae37a41b370e8c96">&#9670;&#160;</a></span>debug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool celeritas::Device::debug </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether verbose messages and error checking are enabled. </p>
+<p >This is true if <code>CELERITAS_DEBUG</code> is set <em>or</em> if the <code>CELER_DEBUG_DEVICE</code> environment variable exists and is not empty. </p>
+
+</div>
+</div>
 <a id="ac793183082adcf21f67e0aaab1f02c72" name="ac793183082adcf21f67e0aaab1f02c72"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac793183082adcf21f67e0aaab1f02c72">&#9670;&#160;</a></span>num_devices()</h2>
 

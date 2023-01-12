@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['loglevel_0',['LogLevel',['../da/d0a/_logger_types_8hh.html#aef62286134070f3d148ad01bda25a8be',1,'celeritas']]]
+  ['matterstate_0',['MatterState',['../db/da7/celeritas_2_types_8hh.html#afe5a95994e3e711bded652307a2d8ad1',1,'celeritas']]],
+  ['memspace_1',['MemSpace',['../d0/df5/corecel_2_types_8hh.html#af21a33cd854346b7988591378fcfe138',1,'celeritas']]],
+  ['mscmodelselection_2',['MscModelSelection',['../d7/d98/_geant_physics_options_8hh.html#a4f683a34fef933febc46736cd3f4edbf',1,'celeritas']]]
 ];

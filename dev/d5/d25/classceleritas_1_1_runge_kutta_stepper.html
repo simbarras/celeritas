@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -81,7 +81,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Adaptive step size control with the 4th order classical Runge-Kutta method.  
+<p>Integrate the field ODEs using the 4th order classical Runge-Kutta method.  
  <a href="../../d5/d25/classceleritas_1_1_runge_kutta_stepper.html#details">More...</a></p>
 
 <p><code>#include &lt;RungeKuttaStepper.hh&gt;</code></p>
@@ -98,13 +98,13 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RungeKuttaStepper</b> (EquationT &amp;&amp;eq)</td></tr>
 <tr class="memdesc:a0f753d92020eaa6427f641ff26fa4d31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with the equation of motion. <br /></td></tr>
 <tr class="separator:a0f753d92020eaa6427f641ff26fa4d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1083011fbbb6585bb9f2490b67826c89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d5/d25/classceleritas_1_1_runge_kutta_stepper.html#a40e09dc9a788d00c89e92dd8127781e3">result_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d25/classceleritas_1_1_runge_kutta_stepper.html#a1083011fbbb6585bb9f2490b67826c89">operator()</a> (<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> step, const <a class="el" href="../../d6/d7e/structceleritas_1_1_ode_state.html">OdeState</a> &amp;beg_state) const</td></tr>
-<tr class="memdesc:a1083011fbbb6585bb9f2490b67826c89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adaptive step size control.  <a href="../../d5/d25/classceleritas_1_1_runge_kutta_stepper.html#a1083011fbbb6585bb9f2490b67826c89">More...</a><br /></td></tr>
-<tr class="separator:a1083011fbbb6585bb9f2490b67826c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee93d773b4714fdb062e138b01eb5dd2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d5/d25/classceleritas_1_1_runge_kutta_stepper.html#a40e09dc9a788d00c89e92dd8127781e3">result_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d25/classceleritas_1_1_runge_kutta_stepper.html#aee93d773b4714fdb062e138b01eb5dd2">operator()</a> (<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> step, <a class="el" href="../../d6/d7e/structceleritas_1_1_ode_state.html">OdeState</a> const &amp;beg_state) const</td></tr>
+<tr class="memdesc:aee93d773b4714fdb062e138b01eb5dd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adaptive step size control.  <a href="../../d5/d25/classceleritas_1_1_runge_kutta_stepper.html#aee93d773b4714fdb062e138b01eb5dd2">More...</a><br /></td></tr>
+<tr class="separator:aee93d773b4714fdb062e138b01eb5dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class EquationT&gt;<br />
-class celeritas::RungeKuttaStepper&lt; EquationT &gt;</div><p >Adaptive step size control with the 4th order classical Runge-Kutta method. </p>
+class celeritas::RungeKuttaStepper&lt; EquationT &gt;</div><p >Integrate the field ODEs using the 4th order classical Runge-Kutta method. </p>
 <p >This method estimates the updated state from an initial state and evaluates the truncation error, with fourth-order accuracy based on description in Numerical Recipes in C, The Art of Scientific Computing, Sec. 16.2, Adaptive Stepsize Control for Runge-Kutta. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a40e09dc9a788d00c89e92dd8127781e3" name="a40e09dc9a788d00c89e92dd8127781e3"></a>
@@ -125,8 +125,8 @@ template&lt;class EquationT &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1083011fbbb6585bb9f2490b67826c89" name="a1083011fbbb6585bb9f2490b67826c89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1083011fbbb6585bb9f2490b67826c89">&#9670;&#160;</a></span>operator()()</h2>
+<a id="aee93d773b4714fdb062e138b01eb5dd2" name="aee93d773b4714fdb062e138b01eb5dd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee93d773b4714fdb062e138b01eb5dd2">&#9670;&#160;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -142,7 +142,7 @@ template&lt;class E &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d6/d7e/structceleritas_1_1_ode_state.html">OdeState</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d6/d7e/structceleritas_1_1_ode_state.html">OdeState</a> const &amp;&#160;</td>
           <td class="paramname"><em>beg_state</em>&#160;</td>
         </tr>
         <tr>

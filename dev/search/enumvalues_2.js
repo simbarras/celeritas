@@ -1,12 +1,11 @@
 var searchData=
 [
-  ['cm_0',['cm',['../d4/db9/_import_physics_table_8hh.html#a784fe5e889a18317c1c1d195ab9d37d3a820eb5b696ea2a657c0db1e258dc7d81',1,'celeritas']]],
-  ['cm_5finv_1',['cm_inv',['../d4/db9/_import_physics_table_8hh.html#a784fe5e889a18317c1c1d195ab9d37d3aed4bbaf29595aa2e254bc9ab6fb0977b',1,'celeritas']]],
-  ['cm_5fmev_5finv_2',['cm_mev_inv',['../d4/db9/_import_physics_table_8hh.html#a784fe5e889a18317c1c1d195ab9d37d3aec8d059cf2e2e49867ec66d71c378859',1,'celeritas']]],
-  ['const_5freference_3',['const_reference',['../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148ad94c6b535266ab339640e84b2f13f3c1',1,'celeritas']]],
-  ['critical_4',['critical',['../da/d0a/_logger_types_8hh.html#aef62286134070f3d148ad01bda25a8bea7e85bcb66fb9a809d5ab4f62a8b8bea8',1,'celeritas']]],
-  ['csda_5frange_5',['csda_range',['../d4/db9/_import_physics_table_8hh.html#ade92a0a20d624cf5bb80797e1fe627f3aa10e0d42e6e94c38d449cbfede72b626',1,'celeritas']]],
-  ['cxc_6',['cxc',['../d7/d97/orange_2_types_8hh.html#a6e38ea21d9877ba8a45b3a6fee0c299ca960a94ea9a16df253da3bb4f5545eef8',1,'celeritas']]],
-  ['cyc_7',['cyc',['../d7/d97/orange_2_types_8hh.html#a6e38ea21d9877ba8a45b3a6fee0c299cafcb03e26c61229f7a3fc0883b4832072',1,'celeritas']]],
-  ['czc_8',['czc',['../d7/d97/orange_2_types_8hh.html#a6e38ea21d9877ba8a45b3a6fee0c299cae2549172457ea725492eca0d353a18fd',1,'celeritas']]]
+  ['debug_0',['debug',['../da/d0a/_logger_types_8hh.html#aef62286134070f3d148ad01bda25a8beaad42f6697b035b7580e4fef93be20b4d',1,'celeritas']]],
+  ['dedx_1',['dedx',['../d4/db9/_import_physics_table_8hh.html#ade92a0a20d624cf5bb80797e1fe627f3a21a4b1370e997ac64c3a3ab73b0259c7',1,'celeritas']]],
+  ['dedx_5fprocess_2',['dedx_process',['../d4/db9/_import_physics_table_8hh.html#ade92a0a20d624cf5bb80797e1fe627f3a595bd8578eab7401252f185378c82fee',1,'celeritas']]],
+  ['device_3',['device',['../d5/d10/_assert_8hh.html#a0605e3c922b91d617295e66c03dc1c7aa913f9c49dcb544e2087cee284f4a00b7',1,'celeritas']]],
+  ['diagnostic_4',['diagnostic',['../da/d0a/_logger_types_8hh.html#aef62286134070f3d148ad01bda25a8bea1b2415052ea497897c757a8069a97686',1,'celeritas']]],
+  ['disabled_5',['disabled',['../dc/dec/classceleritas_1_1_scoped_mpi_init.html#a3463695cf6d93a9e9e2181efd374f751a075ae3d2fc31640504f814f60e5ef713',1,'celeritas::ScopedMpiInit']]],
+  ['displaced_6',['displaced',['../d6/d34/structceleritas_1_1_msc_interaction.html#a2cf9900906136004353df323c1972b66a80a237e34fd2de4119d9d640b29506b6',1,'celeritas::MscInteraction']]],
+  ['dummy_7',['dummy',['../d3/d27/structceleritas_1_1_geant_importer_1_1_data_selection.html#ae0400f24ab952e7d074dbbf74ef654b6a3ca59ab1bb67a0cc122cb64ee7eb9e95',1,'celeritas::GeantImporter::DataSelection']]]
 ];

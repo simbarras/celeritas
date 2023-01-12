@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Celeritas: Build scripts</title>
+<title>Celeritas: Build.sh, cmake-presents, and env</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -70,10 +70,10 @@ $(function() {
 
 </div><!-- top -->
 <div><div class="header">
-  <div class="headertitle"><div class="title">Build scripts </div></div>
+  <div class="headertitle"><div class="title">Build.sh, cmake-presents, and env </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a href="https://cmake.org/cmake/help/latest/manual/cmake-presets.7.html">CMake presets</a> have replaced the combination of shell scripts and CMake cache setters. Use the <code>build.sh</code> script in this directory to automatically link the <code>cmake-presets/${HOSTNAME}.json</code> file to <code>${SOURCE}/CMakeUserPresets.json</code>, then invoke CMake to configure, build, and test.</p>
+<div class="textblock"><p ><a href="https://cmake.org/cmake/help/latest/manual/cmake-presets.7.html">CMake presets</a> have replaced the combination of shell scripts and CMake cache setters. Use the <code>build.sh</code> script in this directory to automatically link the <code>cmake-presets/${HOSTNAME}.json</code> file to <code>${SOURCE}/CMakeUserPresets.json</code>, then invoke CMake to configure, build, and test. The build script also sources any script at <code>env/${HOSTNAME}</code> for HPC systems that require environment modules to be loaded.</p>
 <div class="fragment"><div class="line">$ ./build.sh base</div>
 <div class="line">+ cmake --preset=base</div>
 <div class="line">Preset CMake variables:</div>
@@ -85,6 +85,9 @@ $(function() {
 </div><!-- fragment --><p >The main <code>CMakePresets.json</code> provides not only a handful of user-accessible presets (default, full, minimal) but also a set of hidden presets (<code>.ndebug</code>, <code>.cuda-volta</code>, <code>.spack-base</code>) useful for inheriting in user presets. Make sure to put the overrides <em>before</em> the base definition in the <code>inherits</code> list.</p>
 <p >CMake's JSON parser is quite primitive at the moment, and the error messages it provides are frankly terrible. Use Python's <code>json</code> module (or other tools) to check the syntax of the JSON file, and you can use JSON validators such as <a href="https://www.jsonschemavalidator.net">this one</a> to check the schema. Even with a valid syntax and schema, you might still get an error such as "Invalid
 preset" if the value for <code>configurePreset</code> is missing or incorrect.</p>
+<h1><a class="anchor" id="autotoc_md7"></a>
+CI scripts</h1>
+<p >These scripts are executed as part of the Continuous Integration testing. It also includes an example use case for building an application using Celeritas.</p>
 <h1><a class="anchor" id="autotoc_md8"></a>
 Development scripts</h1>
 <p >These scripts are used by developers and by the Celeritas CMake code itself to generate files, set up development machines, and analyze the codebase.</p>
@@ -93,10 +96,6 @@ Docker scripts</h1>
 <p >The <code>docker</code> subdirectory contains scripts for setting up and maintaining reproducible environments for building Celeritas and running it under CI.</p>
 <h1><a class="anchor" id="autotoc_md10"></a>
 Spack environment</h1>
-<p >See <a href="https://spack.readthedocs.io/en/latest/">the Spack documentation</a> for getting started with Spack. Once it's installed, if you have CUDA and optionally a CUDA-compatible card on your system, create a YAML configuration file at <code>$SPACK_ROOT/etc/spack/packages.yaml</code> to inform Spack to build all supported packages with CUDA and C++17: </p><div class="fragment"><div class="line">packages:</div>
-<div class="line">  all:</div>
-<div class="line">    variants: +cuda cuda_arch=70 cxxstd=17</div>
-</div><!-- fragment --><p> Note that the value of <code>cuda_arch</code> is the CUDA GPU architecture and may differ based on your card's capabilities.</p>
 <p >Once Spack is installed, run <code>spack env create celeritas spack.yaml</code> and <code>spack -e celeritas install</code> to install a complete environment needed to build Celeritas with all supported options. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

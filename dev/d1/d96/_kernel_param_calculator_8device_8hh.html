@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -86,8 +86,9 @@ $(function() {
 <code>#include &quot;<a class="el" href="../../db/dc5/_macros_8hh.html">corecel/Macros.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d0/d5c/_opaque_id_8hh.html">corecel/OpaqueId.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html">corecel/Types.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/dee/_algorithms_8hh.html">corecel/math/Algorithms.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../df/dfb/_device_8hh.html">Device.hh</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d6/d90/_kernel_diagnostics_8hh.html">KernelDiagnostics.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d11/_kernel_attributes_8hh.html">KernelAttributes.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d3/d83/_thread_id_8hh.html">ThreadId.hh</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
@@ -148,7 +149,7 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span>                                                                       \</div>
 <div class="line">    {                                                                        \</div>
 <div class="line">        <span class="keyword">static</span> const ::celeritas::KernelParamCalculator calc_launch_params_( \</div>
-<div class="line">            NAME##_kernel, #NAME, BLOCK_SIZE);                               \</div>
+<div class="line">            #NAME, NAME##_kernel, BLOCK_SIZE);                               \</div>
 <div class="line">        <span class="keyword">auto</span> grid_ = calc_launch_params_(THREADS);                           \</div>
 <div class="line">                                                                             \</div>
 <div class="line">        CELER_LAUNCH_KERNEL_IMPL(NAME##_kernel,                              \</div>
@@ -217,7 +218,7 @@ Macros</h2></td></tr>
 <div class="line">        (void)<span class="keyword">sizeof</span>(GRID);                                                    \</div>
 <div class="line">        (void)<span class="keyword">sizeof</span>(KERNEL);                                                  \</div>
 <div class="line">        (void)<span class="keyword">sizeof</span>(__VA_ARGS__);</div>
-<div class="ttc" id="a_assert_8hh_html_a52e9a3b68665d86ccaecad2279cc1cf1"><div class="ttname"><a href="../../d5/d10/_assert_8hh.html#a52e9a3b68665d86ccaecad2279cc1cf1">CELER_NOT_CONFIGURED</a></div><div class="ttdeci">#define CELER_NOT_CONFIGURED(WHAT)</div><div class="ttdoc">Assert if the code point is reached because an optional feature is disabled.</div><div class="ttdef"><b>Definition:</b> Assert.hh:201</div></div>
+<div class="ttc" id="a_assert_8hh_html_a52e9a3b68665d86ccaecad2279cc1cf1"><div class="ttname"><a href="../../d5/d10/_assert_8hh.html#a52e9a3b68665d86ccaecad2279cc1cf1">CELER_NOT_CONFIGURED</a></div><div class="ttdeci">#define CELER_NOT_CONFIGURED(WHAT)</div><div class="ttdoc">Assert if the code point is reached because an optional feature is disabled.</div><div class="ttdef"><b>Definition:</b> Assert.hh:186</div></div>
 </div><!-- fragment -->
 </div>
 </div>

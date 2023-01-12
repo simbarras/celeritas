@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -97,9 +97,10 @@ Inheritance diagram for celeritas::ExceptionOutput:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a78c7ea335f91786d00ccab0fae3c9e0e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/classceleritas_1_1_exception_output.html#a78c7ea335f91786d00ccab0fae3c9e0e">ExceptionOutput</a> (const std::exception &amp;e)</td></tr>
-<tr class="memdesc:a78c7ea335f91786d00ccab0fae3c9e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with an exception object.  <a href="../../da/db4/classceleritas_1_1_exception_output.html#a78c7ea335f91786d00ccab0fae3c9e0e">More...</a><br /></td></tr>
-<tr class="separator:a78c7ea335f91786d00ccab0fae3c9e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fbd2fb0a4a74f0bb3a8f9b3405ce98b"><td class="memItemLeft" align="right" valign="top"><a id="a6fbd2fb0a4a74f0bb3a8f9b3405ce98b" name="a6fbd2fb0a4a74f0bb3a8f9b3405ce98b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ExceptionOutput</b> (std::exception_ptr e)</td></tr>
+<tr class="memdesc:a6fbd2fb0a4a74f0bb3a8f9b3405ce98b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with an exception pointer. <br /></td></tr>
+<tr class="separator:a6fbd2fb0a4a74f0bb3a8f9b3405ce98b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad80aa0e06122b483d6fd14856e05497d"><td class="memItemLeft" align="right" valign="top"><a id="ad80aa0e06122b483d6fd14856e05497d" name="ad80aa0e06122b483d6fd14856e05497d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~ExceptionOutput</b> ()</td></tr>
 <tr class="memdesc:ad80aa0e06122b483d6fd14856e05497d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor. <br /></td></tr>
@@ -143,41 +144,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="line">{</div>
 <div class="line">    ...</div>
 <div class="line">}</div>
-<div class="line"><span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e)</div>
+<div class="line"><span class="keywordflow">catch</span> (...)</div>
 <div class="line">{</div>
-<div class="line">    output_mgr.insert(std::make_shared&lt;ExceptionOutput&gt;(e));</div>
+<div class="line">    output_mgr.insert(std::make_shared&lt;ExceptionOutput&gt;(</div>
+<div class="line">        std::current_exception()));</div>
 <div class="line">}</div>
-</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a78c7ea335f91786d00ccab0fae3c9e0e" name="a78c7ea335f91786d00ccab0fae3c9e0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78c7ea335f91786d00ccab0fae3c9e0e">&#9670;&#160;</a></span>ExceptionOutput()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">celeritas::ExceptionOutput::ExceptionOutput </td>
-          <td>(</td>
-          <td class="paramtype">const std::exception &amp;&#160;</td>
-          <td class="paramname"><em>e</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Construct with an exception object. </p>
-<p >This saves the type information and message for later output. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a50c12161dbca350e1ff6dde23de971d7" name="a50c12161dbca350e1ff6dde23de971d7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a50c12161dbca350e1ff6dde23de971d7">&#9670;&#160;</a></span>category()</h2>
 

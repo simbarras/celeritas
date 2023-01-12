@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -83,6 +83,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../db/dc5/_macros_8hh.html">corecel/Macros.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html">corecel/Types.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/de4/_range_8hh.html">corecel/cont/Range.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../db/d8b/_collection_8hh.html">corecel/data/Collection.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d9/dfc/_collection_builder_8hh.html">corecel/data/CollectionBuilder.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../de/d40/_quantities_8hh.html">celeritas/Quantities.hh</a>&quot;</code><br />
@@ -119,11 +120,11 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::AtomicRel
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:abf508c92711593a0ac08d5d7d71f876a"><td class="memTemplParams" colspan="2"><a id="abf508c92711593a0ac08d5d7d71f876a" name="abf508c92711593a0ac08d5d7d71f876a"></a>
+<tr class="memitem:a17d0ab9f8ec378161097c3bab3138ca2"><td class="memTemplParams" colspan="2"><a id="a17d0ab9f8ec378161097c3bab3138ca2" name="a17d0ab9f8ec378161097c3bab3138ca2"></a>
 template&lt;MemSpace M&gt; </td></tr>
-<tr class="memitem:abf508c92711593a0ac08d5d7d71f876a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::resize</b> (AtomicRelaxStateData&lt; Ownership::value, M &gt; *state, const HostCRef&lt; AtomicRelaxParamsData &gt; &amp;params, size_type size)</td></tr>
-<tr class="memdesc:abf508c92711593a0ac08d5d7d71f876a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize state data in host code. <br /></td></tr>
-<tr class="separator:abf508c92711593a0ac08d5d7d71f876a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17d0ab9f8ec378161097c3bab3138ca2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::resize</b> (AtomicRelaxStateData&lt; Ownership::value, M &gt; *state, HostCRef&lt; AtomicRelaxParamsData &gt; const &amp;params, size_type size)</td></tr>
+<tr class="memdesc:a17d0ab9f8ec378161097c3bab3138ca2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize state data in host code. <br /></td></tr>
+<tr class="separator:a17d0ab9f8ec378161097c3bab3138ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

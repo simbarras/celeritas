@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -101,9 +101,12 @@ Public Types</h2></td></tr>
 <tr class="memitem:ad92c86131e241ffe82f63a992c1cb846"><td class="memItemLeft" align="right" valign="top"><a id="ad92c86131e241ffe82f63a992c1cb846" name="ad92c86131e241ffe82f63a992c1cb846"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>Input</b> = <a class="el" href="../../d7/d08/structceleritas_1_1_stepper_input.html">StepperInput</a></td></tr>
 <tr class="separator:ad92c86131e241ffe82f63a992c1cb846"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3a5d6e6b3eb88d4ff1c1d31163e4784"><td class="memItemLeft" align="right" valign="top"><a id="ad3a5d6e6b3eb88d4ff1c1d31163e4784" name="ad3a5d6e6b3eb88d4ff1c1d31163e4784"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>VecPrimary</b> = std::vector&lt; <a class="el" href="../../d1/dcf/structceleritas_1_1_primary.html">Primary</a> &gt;</td></tr>
-<tr class="separator:ad3a5d6e6b3eb88d4ff1c1d31163e4784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a776938cc158f939fdce804f00bf2601a"><td class="memItemLeft" align="right" valign="top"><a id="a776938cc158f939fdce804f00bf2601a" name="a776938cc158f939fdce804f00bf2601a"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ActionSequence</b> = <a class="el" href="../../d3/d40/classceleritas_1_1detail_1_1_action_sequence.html">detail::ActionSequence</a></td></tr>
+<tr class="separator:a776938cc158f939fdce804f00bf2601a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae12cd899a2553e53f46e0656ea9ef6c4"><td class="memItemLeft" align="right" valign="top"><a id="ae12cd899a2553e53f46e0656ea9ef6c4" name="ae12cd899a2553e53f46e0656ea9ef6c4"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SpanConstPrimary</b> = <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a>&lt; <a class="el" href="../../d1/dcf/structceleritas_1_1_primary.html">Primary</a> const  &gt;</td></tr>
+<tr class="separator:ae12cd899a2553e53f46e0656ea9ef6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b32082d3a55a1648627c5a8c2290a91"><td class="memItemLeft" align="right" valign="top"><a id="a8b32082d3a55a1648627c5a8c2290a91" name="a8b32082d3a55a1648627c5a8c2290a91"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>result_type</b> = <a class="el" href="../../d1/dd0/structceleritas_1_1_stepper_result.html">StepperResult</a></td></tr>
 <tr class="separator:a8b32082d3a55a1648627c5a8c2290a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,15 +115,47 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>result_type</b> = <a
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad4e75b925b3adffa80b0bcc68cbce4d1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d1/dd0/structceleritas_1_1_stepper_result.html">StepperResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd1/classceleritas_1_1_stepper_interface.html#ad4e75b925b3adffa80b0bcc68cbce4d1">operator()</a> ()=0</td></tr>
 <tr class="separator:ad4e75b925b3adffa80b0bcc68cbce4d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadb611d36e95f6140d69368b6a62c14d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d1/dd0/structceleritas_1_1_stepper_result.html">StepperResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd1/classceleritas_1_1_stepper_interface.html#aadb611d36e95f6140d69368b6a62c14d">operator()</a> (VecPrimary primaries)=0</td></tr>
-<tr class="separator:aadb611d36e95f6140d69368b6a62c14d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e0e83eb31ef2206a7e7706f0eb9db7b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d1/dd0/structceleritas_1_1_stepper_result.html">StepperResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd1/classceleritas_1_1_stepper_interface.html#a2e0e83eb31ef2206a7e7706f0eb9db7b">operator()</a> (<a class="el" href="../../dd/d15/classceleritas_1_1_span.html">SpanConstPrimary</a> primaries)=0</td></tr>
+<tr class="separator:a2e0e83eb31ef2206a7e7706f0eb9db7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dba1d5da1b98ff25756f478308b433e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd1/classceleritas_1_1_stepper_interface.html#a9dba1d5da1b98ff25756f478308b433e">operator bool</a> () const =0</td></tr>
 <tr class="memdesc:a9dba1d5da1b98ff25756f478308b433e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the stepper is assigned/valid.  <a href="../../db/dd1/classceleritas_1_1_stepper_interface.html#a9dba1d5da1b98ff25756f478308b433e">More...</a><br /></td></tr>
 <tr class="separator:a9dba1d5da1b98ff25756f478308b433e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3d17171dd1039cc7a8fd40236b24ff1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d3/d40/classceleritas_1_1detail_1_1_action_sequence.html">ActionSequence</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd1/classceleritas_1_1_stepper_interface.html#ab3d17171dd1039cc7a8fd40236b24ff1">actions</a> () const =0</td></tr>
+<tr class="memdesc:ab3d17171dd1039cc7a8fd40236b24ff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get action sequence for timing diagnostics.  <a href="../../db/dd1/classceleritas_1_1_stepper_interface.html#ab3d17171dd1039cc7a8fd40236b24ff1">More...</a><br /></td></tr>
+<tr class="separator:ab3d17171dd1039cc7a8fd40236b24ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Interface class for stepper classes. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab3d17171dd1039cc7a8fd40236b24ff1" name="ab3d17171dd1039cc7a8fd40236b24ff1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3d17171dd1039cc7a8fd40236b24ff1">&#9670;&#160;</a></span>actions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d3/d40/classceleritas_1_1detail_1_1_action_sequence.html">ActionSequence</a> const  &amp; celeritas::StepperInterface::actions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get action sequence for timing diagnostics. </p>
+
+<p>Implemented in <a class="el" href="../../d4/db3/classceleritas_1_1_stepper.html#aef8743acd80a257bffb56355b0c3d613">celeritas::Stepper&lt; M &gt;</a>.</p>
+
+</div>
+</div>
 <a id="a9dba1d5da1b98ff25756f478308b433e" name="a9dba1d5da1b98ff25756f478308b433e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9dba1d5da1b98ff25756f478308b433e">&#9670;&#160;</a></span>operator bool()</h2>
 
@@ -177,8 +212,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aadb611d36e95f6140d69368b6a62c14d" name="aadb611d36e95f6140d69368b6a62c14d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aadb611d36e95f6140d69368b6a62c14d">&#9670;&#160;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+<a id="a2e0e83eb31ef2206a7e7706f0eb9db7b" name="a2e0e83eb31ef2206a7e7706f0eb9db7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e0e83eb31ef2206a7e7706f0eb9db7b">&#9670;&#160;</a></span>operator()() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,7 +224,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual <a class="el" href="../../d1/dd0/structceleritas_1_1_stepper_result.html">StepperResult</a> celeritas::StepperInterface::operator() </td>
           <td>(</td>
-          <td class="paramtype">VecPrimary&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dd/d15/classceleritas_1_1_span.html">SpanConstPrimary</a>&#160;</td>
           <td class="paramname"><em>primaries</em></td><td>)</td>
           <td></td>
         </tr>
@@ -201,7 +236,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../d4/db3/classceleritas_1_1_stepper.html#a0019e0538542b26d86f33f34b203c6ba">celeritas::Stepper&lt; M &gt;</a>.</p>
+<p>Implemented in <a class="el" href="../../d4/db3/classceleritas_1_1_stepper.html#ae68f003aa3e98389e46f58d8c5f0ed7c">celeritas::Stepper&lt; M &gt;</a>.</p>
 
 </div>
 </div>

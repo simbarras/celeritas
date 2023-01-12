@@ -301,10 +301,10 @@ p^2 = \frac{K^2}{c^2} + 2 * m * K
 \_form#168=8x13:$ \xi $
 \_form#169=53x13:$ \xi = 1 -
 \alpha $
-\_form#170=25x9:$ \sigma_{\max}
-$
-\_form#171=150x14:$ \sigma_{\max} = \max(
-\sigma(E_0), \sigma(\xi E_0) ) $
+\_form#170=25x9:$
+\sigma_{\max} $
+\_form#171=150x14:$
+\sigma_{\max} = \max( \sigma(E_0), \sigma(\xi E_0) ) $
 \_form#172=25x9:$ \sigma_{\max} $
 \_form#173=136x24:\[
   s = \alpha r + \rho (1 - \alpha) (2 - \frac{\rho}{r})
@@ -356,21 +356,21 @@ x = a \left( \frac{b}{a} \right)^{\xi}
          + \sin\theta\sin\phi\mathbf{j}
          + \cos\theta\mathbf{k} \,.
 \]
-\_form#201=94x15:\[
- y^2 + z^2 - R^2 = 0
-\]
-\_form#202=89x14:\[
-a x^2 + b^2 + c = 0
-\]
-\_form#203=136x16:\[
-x = -b/2 \pm \sqrt{(b/2)^2 - c}.
-\]
-\_form#204=318x15:\[
- ax^2 + by^2 + cz^2 + dxy + eyz + fzx + gx + hy + iz + j = 0
-\]
-\_form#205=56x11:\[
+\_form#201=56x11:\[
 \vec x \cdot \vec n >= 0
 \]
-\_form#206=46x11:\[
+\_form#202=46x11:\[
 \vec x \cdot \vec n > 0
+\]
+\_form#203=94x15:\[
+ y^2 + z^2 - R^2 = 0
+\]
+\_form#204=89x14:\[
+a x^2 + b^2 + c = 0
+\]
+\_form#205=136x16:\[
+x = -b/2 \pm \sqrt{(b/2)^2 - c}.
+\]
+\_form#206=318x15:\[
+ ax^2 + by^2 + cz^2 + dxy + eyz + fzx + gx + hy + iz + j = 0
 \]

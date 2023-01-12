@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administration &mdash; Celeritas v0.2.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="License" href="license.html" />
+    <link rel="prev" title="Development Guide" href="development.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Celeritas
+            <img src="../_static/celeritas-thumbnail.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.2.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../infrastructure.html">Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../acknowledgments.html">Acknowledgments</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="release-history.html">Release History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Development Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Administration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#community-standards">Community standards</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#resolution-process">Resolution process</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#roles">Roles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#role-change-process">Role change process</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#code-review">Code review</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#review-process">Review process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#merge-process">Merge process</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#release-process">Release process</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Celeritas</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Administration</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/appendices/administration.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="administration">
+<span id="id1"></span><h1>Administration<a class="headerlink" href="#administration" title="Permalink to this heading"></a></h1>
+<p>This appendix includes administrative details describing the roles and
+responsibilities of participants. It is meant to be a living document, more
+descriptive than prescriptive. It should be a basis for future decision making,
+using past decisions as a prior. Changes to this appendix can be made by pull
+request with the leadership team as reviewers.</p>
+<section id="community-standards">
+<h2>Community standards<a class="headerlink" href="#community-standards" title="Permalink to this heading"></a></h2>
+<p>Be respectful. Communicate openly. Resolve disagreements peacefully.</p>
+<section id="resolution-process">
+<h3>Resolution process<a class="headerlink" href="#resolution-process" title="Permalink to this heading"></a></h3>
+<p>If a disagreement about Celeritas can’t be immediately resolved, it’s OK to
+postpone resolution (maybe you need more data, more time to think, or it’s not
+important enough at the end of the day). In the case that a resolution is
+needed quickly (e.g., if it’s a blocking issue), it should be discussed among
+the <a class="reference internal" href="#roles"><span class="std std-ref">core team</span></a> until an agreement is reached. If the issue is
+still contentious, the leadership team should make an executive decision,
+giving weight to the appropriate capability area lead if possible.</p>
+</section>
+</section>
+<section id="roles">
+<span id="id2"></span><h2>Roles<a class="headerlink" href="#roles" title="Permalink to this heading"></a></h2>
+<p>The roles of the Celeritas code base are related to the roles
+set out in the SciDAC project management plan (PMP). These roles should be
+reflected in the different teams and/or access restrictions in GitHub.</p>
+<dl class="simple">
+<dt>Leadership team member</dt><dd><p>The “leadership team” comprises the PIs and capability leads in the PMP, or
+their designated proxies who work directly on the Celeritas code. They are
+responsible for the long-term and big-picture project goals, and they ensure
+that project milestones are met.</p>
+</dd>
+<dt>Code lead</dt><dd><p>The code lead is the “core capability lead” described in the PMP and
+is responsible for steering the technical implementation of the codebase to
+meet the long-term project goals. One key responsibility of the code lead is
+to set up milestones for releases and execute the release process described
+below.</p>
+</dd>
+<dt>Maintainer</dt><dd><p>Maintainers should be familiar with most or all parts of the codebase and
+are responsible for merging pull requests and closing issues.</p>
+</dd>
+<dt>Core team member</dt><dd><p>The “core team” are those currently funded to work on Celeritas. Core team
+members are responsible for reviewing pull requests in accordance with the
+<a class="reference internal" href="development.html#contributing"><span class="std std-ref">contributing guidelines</span></a>. They should regularly
+contribute new code, perform code reviews, publish new results using
+Celeritas, and/or participate in Celeritas stand-up meetings and hackathons.</p>
+</dd>
+<dt>Contributor</dt><dd><p>Anyone can submit a pull request that conforms to the contribution
+guidelines! Contributors are recognized by including their handle and pull
+requests in release notes but do not otherwise have a formal role.</p>
+</dd>
+</dl>
+<section id="role-change-process">
+<h3>Role change process<a class="headerlink" href="#role-change-process" title="Permalink to this heading"></a></h3>
+<p>Adding or removing a member of the “core team” must be done by consensus of the
+leadership team (or if the core team member wants to remove themself). Adding
+maintainers can be done at the whim of the code lead. The <a class="reference external" href="https://github.com/orgs/celeritas-project/teams">team list</a> on
+GitHub is the official record of roles.</p>
+</section>
+</section>
+<section id="code-review">
+<span id="id3"></span><h2>Code review<a class="headerlink" href="#code-review" title="Permalink to this heading"></a></h2>
+<p>Reviewing incoming code maintains (and should improve) the quality of the
+codebase in the interests of correctness and long-term maintainability.
+If the code is reviewed according to the guidelines below, at least two people
+(the author and the reviewer) will be able to modify any given piece of code,
+increasing the <a class="reference external" href="https://en.wikipedia.org/wiki/Bus_factor">bus factor</a>.</p>
+<section id="review-process">
+<h3>Review process<a class="headerlink" href="#review-process" title="Permalink to this heading"></a></h3>
+<p>Each pull request must be reviewed by at least one
+member of the <a class="reference internal" href="#roles"><span class="std std-ref">core team</span></a> who is knowledgeable about
+the section of code being modified.</p>
+<p>The review process must be based on
+<em>constructive feedback</em> (“here’s a suggestion to make this better” or “did you
+consider what would happen if X?”), not <em>destructive feedback</em> (“this code is
+ugly”). When reviewing, you should focus almost exclusively on the new
+changeset, as opposed to larger systemic issues, or smaller problems with
+nearby sections of code that you happen to notice. If you do find such issues
+and they can reasonably be bundled into the submitted change set, you can work
+with the author to incorporate the changes, create a follow-on pull request
+yourself, or open an issue for later.</p>
+<p>Try to fully review the entirety of the changeset on your first review, <em>but</em>
+if major changes are needed it’s a good idea to pause, submit your comments so
+far, and work with the PR author to address the major issues before continuing
+to the next review iteration.</p>
+<p>The correctness of the new code must be ensured by comparing against
+references, verifying the new code is sufficiently tested, and/or running
+regression problems on the incoming branch.
+Physics code should be compared against reference papers and other codes such
+as Geant4.</p>
+<p>Ensure readability and maintainability by checking that the <a class="reference internal" href="development.html#code-guidelines"><span class="std std-ref">code</span></a> and <a class="reference internal" href="development.html#style-guidelines"><span class="std std-ref">style</span></a> guidelines have been
+followed in the new code. Balance the desire for readability with the need to
+avoid <a class="reference external" href="https://thedecisionlab.com/biases/bikeshedding">bikeshedding</a> by asking yourself whether your requests are
+substantive enough to merit a new pull request. Perfect is the enemy of good.</p>
+<p>By the time you’ve finished the code review, you should understand the code
+well enough to maintain it (by extension or modification) in the future.</p>
+</section>
+<section id="merge-process">
+<h3>Merge process<a class="headerlink" href="#merge-process" title="Permalink to this heading"></a></h3>
+<p>Celeritas uses the “squash and merge” process to ensure continuity of the code
+history and provide easy bisecting because all commits pass all tests.
+Squashing eliminates the potential of broken commits and relieves developers of
+the burden of worrying about clean commit messages within a branch.</p>
+<p>Since there are few enough merge requests these days, only <a class="reference internal" href="#roles"><span class="std std-ref">maintainers</span></a> may commit a merge.</p>
+</section>
+</section>
+<section id="release-process">
+<h2>Release process<a class="headerlink" href="#release-process" title="Permalink to this heading"></a></h2>
+<p>Celeritas uses <a class="reference external" href="https://semver.org">Semantic Versioning</a> to enumerate releases. During its initial
+development phase, <code class="docutils literal notranslate"><span class="pre">0.x.0</span></code> is a major release and <code class="docutils literal notranslate"><span class="pre">0.x.z</span></code> is a patch
+release. When Celeritas is declared stable, <code class="docutils literal notranslate"><span class="pre">x.0.0</span></code> is a major release,
+<code class="docutils literal notranslate"><span class="pre">x.y.0</span></code> is a minor release, and <code class="docutils literal notranslate"><span class="pre">x.y.z</span></code> is a patch release.</p>
+<p>Major and minor releases (including 0.x.0 development releases) must have a
+milestone in the git issue tracker with a list of issues that can be assigned.
+Only major releases can deprecate or remove features and change
+<a class="reference internal" href="../api.html#api"><span class="std std-ref">public-facing APIs</span></a>. Both major and minor releases should include
+notable improvements to the code.</p>
+<p>Patch releases can be created at any time but should typically include at least
+one critical bug fix or several substantial fixes. Patch releases should focus
+almost exclusively on fixes and should generally not include new features or
+other major code changes.</p>
+<p>Releases can be created from the main branch (major, minor, patch) or a
+“backport” branch (minor, patch). The following process must be followed (and
+may need iteration to converge) for each release.</p>
+<ul class="simple">
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">release-vX.Y.Z</span></code> branch.</p></li>
+<li><p>Ensure all CI jobs passed for the release in question. This is automatic for
+releases from the main branch (since every pull request must pass) but should
+be checked manually for backports.</p></li>
+<li><p>Run regression tests on Summit (for performance testing), Crusher (for HIP
+testing), and an additional machine with debug assertions enabled (e.g.
+Wildstyle). Postpone the release
+temporarily if major new bugs or performance regressions are detected. If
+minor updates are needed to fix the build or tests on a particular machine,
+include those as part of the “pre-release” pull request that includes new
+documentation.</p></li>
+<li><p>[TODO: define high-level validation tests like <a class="reference external" href="https://geant-val.cern.ch">geant-val</a> and a test matrix
+correlating capability areas (code files/directories changed) to test names.]
+Rerun and perform a cursory check on all validation tests that might be
+affected by changes since the previous release. More complete validation
+(since a change in results might not be an error) can be done separately.</p></li>
+<li><p>Update documentation with release notes from all pull requests newly included
+in the release. Follow the format for previous releases: add a summary of
+highlights, and enumerate the pull requests (with PR numbers and
+authorship attribution) separated by features and bug requests. Use the
+<a class="reference external" href="https://github.com/celeritas-project/celeritas-docs/blob/master/nb/admin/github-stats.ipynb">helper notebook</a> in the Celeritas documents repository to automate this.</p></li>
+<li><p>Ensure the code documentation builds, preferably without warnings, on a
+configuration that has Sphinx, Doxygen, and Breathe active. [TODO: automate
+this with CI for doc publishing]</p></li>
+<li><p>Submit a pull request with the newly added documentation and any
+release-related tweaks, and wait until it’s reviewed and merged.</p></li>
+<li><p>If releasing a backported version branch, cherry-pick this documentation
+commit into the backport branch.</p></li>
+<li><p>Use the GitHub interface to create a new release with the documentation
+update that was just added.</p></li>
+</ul>
+<p>After committing the release tag:</p>
+<ul class="simple">
+<li><p>Save the <code class="docutils literal notranslate"><span class="pre">tar.gz</span></code> and attach to the release, because the hash changes if the
+git “describe” function returns a different result for the release tag’s hash
+(e.g., if a collaborative branch on the main repository points to that commit).</p></li>
+<li><p>Pull locally (make sure to use the <code class="docutils literal notranslate"><span class="pre">--tags</span></code> option) and build PDF user
+documentation for the release. Ensure breathe is activated (so the API is
+listed) and that the version is embedded correctly.  [TODO: We should add a
+documentation pipeline that builds and uploads to GitHub pages.]</p></li>
+<li><p>Update the Spack recipe for Celeritas with the new version and sha256 value
+(either manually or using <code class="docutils literal notranslate"><span class="pre">spack</span> <span class="pre">checksum</span></code>) and submit a pull request to
+the Spack project.</p></li>
+</ul>
+<p>The first commit that deviates from the most recent major or minor branch
+should be tagged (but not released!) with the next version number with a
+<code class="docutils literal notranslate"><span class="pre">-dev</span></code> suffix. For example, after releasing version 1.0.0, the next
+commit on the main branch that is <em>not</em> intended for version 1.0.1 (i.e., the
+first new feature) should be tagged with <code class="docutils literal notranslate"><span class="pre">v1.1.0-dev</span></code>, so that
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">describe</span> <span class="pre">--tags</span> <span class="pre">--match</span> <span class="pre">'v*'</span></code> shows the new features as being part of the
+<code class="docutils literal notranslate"><span class="pre">v1.1.0</span></code> series.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="development.html" class="btn btn-neutral float-left" title="Development Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="license.html" class="btn btn-neutral float-right" title="License" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UT–Battelle/ORNL and Celeritas team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

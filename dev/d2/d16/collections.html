@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -86,16 +86,16 @@ $(function() {
 <p >Additionally, a <code>StateData</code> collection group must define</p><ul>
 <li>A member function <code>size()</code> returning the number of entries (i.e. number of threads)</li>
 <li>A free function <code>resize</code> with one of two signatures: <div class="fragment"><div class="line"><span class="keywordtype">void</span> resize(</div>
-<div class="line">    StateData&lt;Ownership::value, M&gt;*                               data,</div>
-<div class="line">    <span class="keyword">const</span> HostCRef&lt;ParamsData&gt;&amp; params,</div>
-<div class="line">    size_type                                                     size);</div>
+<div class="line">    StateData&lt;Ownership::value, M&gt;* data,</div>
+<div class="line">    <span class="keyword">const</span> HostCRef&lt;ParamsData&gt;&amp;     params,</div>
+<div class="line">    size_type                       size);</div>
 <div class="line"><span class="comment">// or...</span></div>
 <div class="line"><span class="keywordtype">void</span> resize(</div>
 <div class="line">    StateData&lt;Ownership::value, M&gt;* data,</div>
 <div class="line">    size_type                       size);</div>
 </div><!-- fragment --></li>
 </ul>
-<p >By convention, related groups of collections are stored in a header file named <code><a class="el" href="../../db/d1e/_data_8hh.html">Data.hh</a></code> .</p>
+<p >By convention, related groups of collections are stored in a header file named <code>Data.hh</code> .</p>
 <p >See <a class="el" href="../../d9/d5a/structceleritas_1_1_particle_params_data.html" title="Access particle definitions on the device.">ParticleParamsData</a> and <a class="el" href="../../d7/db9/structceleritas_1_1_particle_state_data.html" title="Data storage/access for particle properties.">ParticleStateData</a> for minimal examples of using collections. The <a class="el" href="../../de/d29/structceleritas_1_1_material_params_data.html" title="Access material properties on the device.">MaterialParamsData</a> demonstrates additional complexity by having a multi-level data hierarchy, and <a class="el" href="../../d6/d79/structceleritas_1_1_material_state_data.html" title="Store dynamic states of multiple physical particles.">MaterialStateData</a> has a resize function that uses params data. <a class="el" href="../../db/dfa/structceleritas_1_1_physics_params_data.html" title="Persistent shared physics data.">PhysicsParamsData</a> is a very complex example, and GeoParamsData demonstates how to use template specialization to adapt Collections to another codebase with a different convention for host-device portability. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

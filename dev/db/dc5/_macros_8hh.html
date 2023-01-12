@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -89,7 +89,10 @@ Macros</h2></td></tr>
 <tr class="memitem:ac631c1bc86fa5c49ade05cca94ae1794"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a></td></tr>
 <tr class="memdesc:ac631c1bc86fa5c49ade05cca94ae1794"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decorate a function that works on both host and device, with and without NVCC.  <a href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">More...</a><br /></td></tr>
 <tr class="separator:ac631c1bc86fa5c49ade05cca94ae1794"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6432ab370302dc0ea4c1534472544182"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a>&#160;&#160;&#160;inline</td></tr>
+<tr class="memitem:aaebd33cfbf0b9f43156539abb72e622c"><td class="memItemLeft" align="right" valign="top"><a id="aaebd33cfbf0b9f43156539abb72e622c" name="aaebd33cfbf0b9f43156539abb72e622c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CELER_FORCEINLINE</b>&#160;&#160;&#160;inline</td></tr>
+<tr class="separator:aaebd33cfbf0b9f43156539abb72e622c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6432ab370302dc0ea4c1534472544182"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a>&#160;&#160;&#160;<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> CELER_FORCEINLINE</td></tr>
 <tr class="memdesc:a6432ab370302dc0ea4c1534472544182"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like CELER_FUNCTION but forces inlining.  <a href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">More...</a><br /></td></tr>
 <tr class="separator:a6432ab370302dc0ea4c1534472544182"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6277d86d031ef7cf2b160eeb8bbdb4e"><td class="memItemLeft" align="right" valign="top"><a id="ae6277d86d031ef7cf2b160eeb8bbdb4e" name="ae6277d86d031ef7cf2b160eeb8bbdb4e"></a>
@@ -119,6 +122,9 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>CELER_DEVICE_PREFIX</b>(TOK)&#160;&#160;&#160;DEVICE_UNAVAILABLE</td></tr>
 <tr class="memdesc:a5bdc7a100fae7cbec36d95d271d8839a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a prefix "hip" or "cuda" to a code token. <br /></td></tr>
 <tr class="separator:a5bdc7a100fae7cbec36d95d271d8839a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a572ccbb99d1225e67ed87d234b41f436"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc5/_macros_8hh.html#a572ccbb99d1225e67ed87d234b41f436">CELER_TRY_HANDLE</a>(STATEMENT,  HANDLE_EXCEPTION)</td></tr>
+<tr class="memdesc:a572ccbb99d1225e67ed87d234b41f436"><td class="mdescLeft">&#160;</td><td class="mdescRight">"Try" to execute the statement, and "handle" <em>all</em> thrown errors by calling the given function-like error handler with a <code>std::exception_ptr</code> object.  <a href="../../db/dc5/_macros_8hh.html#a572ccbb99d1225e67ed87d234b41f436">More...</a><br /></td></tr>
+<tr class="separator:a572ccbb99d1225e67ed87d234b41f436"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Language and compiler abstraction macro definitions. </p>
@@ -165,7 +171,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define CELER_FORCEINLINE_FUNCTION&#160;&#160;&#160;inline</td>
+          <td class="memname">#define CELER_FORCEINLINE_FUNCTION&#160;&#160;&#160;<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> CELER_FORCEINLINE</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -216,6 +222,48 @@ Macros</h2></td></tr>
 </div><!-- fragment --> 
 </div>
 </div>
+<a id="a572ccbb99d1225e67ed87d234b41f436" name="a572ccbb99d1225e67ed87d234b41f436"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a572ccbb99d1225e67ed87d234b41f436">&#9670;&#160;</a></span>CELER_TRY_HANDLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CELER_TRY_HANDLE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">STATEMENT, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">HANDLE_EXCEPTION&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span>                                                  \</div>
+<div class="line">    {                                                   \</div>
+<div class="line">        <span class="keywordflow">try</span>                                             \</div>
+<div class="line">        {                                               \</div>
+<div class="line">            STATEMENT;                                  \</div>
+<div class="line">        }                                               \</div>
+<div class="line">        catch (...)                                     \</div>
+<div class="line">        {                                               \</div>
+<div class="line">            HANDLE_EXCEPTION(std::current_exception()); \</div>
+<div class="line">        }                                               \</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
+<p>"Try" to execute the statement, and "handle" <em>all</em> thrown errors by calling the given function-like error handler with a <code>std::exception_ptr</code> object. </p>
+<dl class="section note"><dt>Note</dt><dd>A file that uses this macro must include the <code>&lt;exception&gt;</code> header (but since the <code>HANDLE_EXCEPTION</code> needs to take an exception pointer, it's got to be included anyway). </dd></dl>
+
+</div>
+</div>
 <a id="ac043dd2f7956e148168c54220798555c" name="ac043dd2f7956e148168c54220798555c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac043dd2f7956e148168c54220798555c">&#9670;&#160;</a></span>CELER_UNLIKELY</h2>
 
@@ -250,7 +298,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Mark a point in code as being impossible to reach in normal execution. </p>
-<p >See <a href="https://clang.llvm.org/docs/LanguageExtensions.html#builtin-unreachable">https://clang.llvm.org/docs/LanguageExtensions.html#builtin-unreachable</a> or <a href="https://msdn.microsoft.com/en-us/library/1b3fsfxw.aspx=">https://msdn.microsoft.com/en-us/library/1b3fsfxw.aspx=</a> or <a href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#__builtin_unreachable">https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#__builtin_unreachable</a></p>
+<p >See <a href="https://clang.llvm.org/docs/LanguageExtensions.html#builtin-unreachable">https://clang.llvm.org/docs/LanguageExtensions.html#builtin-unreachable</a> or <a href="https://msdn.microsoft.com/en-us/library/1b3fsfxw.aspx">https://msdn.microsoft.com/en-us/library/1b3fsfxw.aspx</a> or <a href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#__builtin_unreachable">https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#__builtin_unreachable</a></p>
 <p >(The "unreachable" and "assume" compiler optimizations for CUDA are only available in API version 11.3 or higher, which is encoded as </p><div class="fragment"><div class="line">major*1000 + minor*10 </div>
 </div><!-- fragment --><p>).</p>
 <dl class="section note"><dt>Note</dt><dd>This macro should not generally be used; instead, the macro <code><a class="el" href="../../d5/d10/_assert_8hh.html#a6dda60f37c367c8d4d9520b6f69cf2f0" title="Throw an assertion if the code point is reached.">CELER_ASSERT_UNREACHABLE()</a></code> defined in base/Assert.hh should be used instead (to provide a more detailed error message in case the point <em>is</em> reached). </dd></dl>

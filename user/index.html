@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Celeritas &mdash; Celeritas v0.1.4 documentation</title>
+  <title>Celeritas &mdash; Celeritas v0.2.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -32,7 +32,7 @@
             <img src="_static/celeritas-thumbnail.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.1.4
+                0.2.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -55,6 +55,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="appendices/release-history.html">Release History</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appendices/development.html">Development Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendices/administration.html">Administration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appendices/license.html">License</a></li>
 </ul>
 
@@ -89,10 +90,10 @@ hardware with the ultimate goal of supporting the massive computational
 requirements of LHC-HL upgrade.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Release</dt>
-<dd class="field-odd"><p>0.1.4</p>
+<dd class="field-odd"><p>v0.2.0</p>
 </dd>
 <dt class="field-even">Date</dt>
-<dd class="field-even"><p>Jan 11, 2023</p>
+<dd class="field-even"><p>Jan 12, 2023</p>
 </dd>
 </dl>
 <div class="toctree-wrapper compound">
@@ -100,18 +101,24 @@ requirements of LHC-HL upgrade.</p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="infrastructure.html">Infrastructure</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="infrastructure.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="infrastructure.html#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="infrastructure.html#toolchain-installation">Toolchain installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="infrastructure.html#building-celeritas">Building Celeritas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="infrastructure.html#cmake-presets">CMake Presets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="infrastructure.html#downstream-usage-as-a-library">Downstream usage as a library</a></li>
-<li class="toctree-l2"><a class="reference internal" href="infrastructure.html#developing">Developing</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API documentation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/corecel.html">Core package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/orange.html">ORANGE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/celeritas.html">Celeritas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/accel.html">Acceleritas</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#geant4-integration">Geant4 integration</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
 </ul>
@@ -120,6 +127,7 @@ requirements of LHC-HL upgrade.</p>
 <p class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="appendices/release-history.html">Release History</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="appendices/release-history.html#version-0-2-0">Version 0.2.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appendices/release-history.html#version-0-1-4">Version 0.1.4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appendices/release-history.html#version-0-1-3">Version 0.1.3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appendices/release-history.html#version-0-1-2">Version 0.1.2</a></li>
@@ -131,7 +139,14 @@ requirements of LHC-HL upgrade.</p>
 <li class="toctree-l2"><a class="reference internal" href="appendices/development.html#contributing-to-celeritas">Contributing to Celeritas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appendices/development.html#code-development-guidelines">Code development guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appendices/development.html#style-guidelines">Style guidelines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="appendices/development.html#data-management">Data management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendices/development.html#data-management-in-celeritas">Data management in Celeritas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="appendices/administration.html">Administration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="appendices/administration.html#community-standards">Community standards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendices/administration.html#roles">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendices/administration.html#code-review">Code review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendices/administration.html#release-process">Release process</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="appendices/license.html">License</a><ul>

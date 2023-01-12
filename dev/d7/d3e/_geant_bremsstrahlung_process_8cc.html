@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -78,14 +78,22 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d2/de3/_geant_bremsstrahlung_process_8hh.html">GeantBremsstrahlungProcess.hh</a>&quot;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;G4Electron.hh&gt;</code><br />
 <code>#include &lt;G4EmParameters.hh&gt;</code><br />
+<code>#include &lt;G4EmProcessSubType.hh&gt;</code><br />
 <code>#include &lt;G4Gamma.hh&gt;</code><br />
 <code>#include &lt;G4ParticleDefinition.hh&gt;</code><br />
 <code>#include &lt;G4Positron.hh&gt;</code><br />
 <code>#include &lt;G4SeltzerBergerModel.hh&gt;</code><br />
 <code>#include &lt;G4SystemOfUnits.hh&gt;</code><br />
+<code>#include &lt;G4VEmFluctuationModel.hh&gt;</code><br />
+<code>#include &lt;G4VEmModel.hh&gt;</code><br />
 <code>#include &lt;G4eBremsstrahlungRelModel.hh&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d98/_geant_physics_options_8hh.html">celeritas/ext/GeantPhysicsOptions.hh</a>&quot;</code><br />
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

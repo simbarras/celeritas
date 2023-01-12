@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -74,16 +74,46 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="../../d4/d8c/structceleritas_1_1_track_init_params_data-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">celeritas::TrackInitParamsData&lt; W, M &gt; Struct Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Static track initializer data.  
+<p>Persistent data for track initialization.  
  <a href="../../d1/d29/structceleritas_1_1_track_init_params_data.html#details">More...</a></p>
+
+<p><code>#include &lt;TrackInitData.hh&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a4055166486b91db03d113dca1153a295"><td class="memItemLeft" align="right" valign="top"><a id="a4055166486b91db03d113dca1153a295" name="a4055166486b91db03d113dca1153a295"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () const</td></tr>
+<tr class="memdesc:a4055166486b91db03d113dca1153a295"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the data are assigned. <br /></td></tr>
+<tr class="separator:a4055166486b91db03d113dca1153a295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af05e6e131deb8d19569d52e87dbafbe4"><td class="memTemplParams" colspan="2"><a id="af05e6e131deb8d19569d52e87dbafbe4" name="af05e6e131deb8d19569d52e87dbafbe4"></a>
+template&lt;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148">Ownership</a> W2, <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#af21a33cd854346b7988591378fcfe138">MemSpace</a> M2&gt; </td></tr>
+<tr class="memitem:af05e6e131deb8d19569d52e87dbafbe4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d1/d29/structceleritas_1_1_track_init_params_data.html">TrackInitParamsData</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="../../d1/d29/structceleritas_1_1_track_init_params_data.html">TrackInitParamsData</a>&lt; W2, M2 &gt; const &amp;other)</td></tr>
+<tr class="memdesc:af05e6e131deb8d19569d52e87dbafbe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another set of data. <br /></td></tr>
+<tr class="separator:af05e6e131deb8d19569d52e87dbafbe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a96f8994a77e6c6ff61fb771ef601fa4b"><td class="memItemLeft" align="right" valign="top"><a id="a96f8994a77e6c6ff61fb771ef601fa4b" name="a96f8994a77e6c6ff61fb771ef601fa4b"></a>
+size_type&#160;</td><td class="memItemRight" valign="bottom"><b>capacity</b> {0}</td></tr>
+<tr class="memdesc:a96f8994a77e6c6ff61fb771ef601fa4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Track initializer storage size. <br /></td></tr>
+<tr class="separator:a96f8994a77e6c6ff61fb771ef601fa4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab79150e896bf3afce2f5fb734024bae0"><td class="memItemLeft" align="right" valign="top"><a id="ab79150e896bf3afce2f5fb734024bae0" name="ab79150e896bf3afce2f5fb734024bae0"></a>
+size_type&#160;</td><td class="memItemRight" valign="bottom"><b>max_events</b> {0}</td></tr>
+<tr class="memdesc:ab79150e896bf3afce2f5fb734024bae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of events that can be run. <br /></td></tr>
+<tr class="separator:ab79150e896bf3afce2f5fb734024bae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148">Ownership</a> W, <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#af21a33cd854346b7988591378fcfe138">MemSpace</a> M&gt;<br />
-struct celeritas::TrackInitParamsData&lt; W, M &gt;</div><p >Static track initializer data. </p>
-<p >There is no persistent data needed on device. Primaries are copied to device only when they are needed to initialize new tracks and are not stored on device. <code>capacity</code> is only used at construction to allocate memory for track initializers and parent track IDs. </p>
+struct celeritas::TrackInitParamsData&lt; W, M &gt;</div><p >Persistent data for track initialization. </p>
+<p >TODO: change <code>max_events</code> to be the maximum number of events in flight at once rather than the maximum number of events that can be run over the entire simulation </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../de/d7e/_track_init_data_8hh.html">TrackInitData.hh</a></li>
 </ul>

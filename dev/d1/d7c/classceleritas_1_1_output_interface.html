@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -92,7 +92,7 @@ Inheritance diagram for celeritas::OutputInterface:</div>
  <div class="center">
   <img src="../../d1/d7c/classceleritas_1_1_output_interface.png" usemap="#celeritas::OutputInterface_map" alt=""/>
   <map id="celeritas::OutputInterface_map" name="celeritas::OutputInterface_map">
-<area href="../../dd/d16/classceleritas_1_1_action_manager_output.html" title="Save action manager data." alt="celeritas::ActionManagerOutput" shape="rect" coords="0,56,229,80"/>
+<area href="../../d2/d7b/classceleritas_1_1_action_registry_output.html" title="Save action manager data." alt="celeritas::ActionRegistryOutput" shape="rect" coords="0,56,229,80"/>
 <area href="../../db/d04/classceleritas_1_1_build_output.html" title="Save build configuration information to JSON." alt="celeritas::BuildOutput" shape="rect" coords="239,56,468,80"/>
 <area href="../../da/db4/classceleritas_1_1_exception_output.html" title="Save an exception to the &#39;result&#39; for diagnostic output." alt="celeritas::ExceptionOutput" shape="rect" coords="478,56,707,80"/>
 <area href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html" title="Adapter class for writing a JSON-serializable data to output." alt="celeritas::OutputInterfaceAdapter&lt; T &gt;" shape="rect" coords="717,56,946,80"/>
@@ -128,7 +128,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Pure abstract interface for writing metadata output to JSON. </p>
 <p >At the end of the program/run, the <a class="el" href="../../db/d97/classceleritas_1_1_output_manager.html" title="Store classes that can output data at the end of the run.">OutputManager</a> will call the "output" method on all interfaces.</p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000018">Todo:</a></b></dt><dd>Perhaps another output method for saving a schema? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000017">Todo:</a></b></dt><dd>Perhaps another output method for saving a schema? </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0da0a946bb2ce5782b88cf6478dbf8b9" name="a0da0a946bb2ce5782b88cf6478dbf8b9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0da0a946bb2ce5782b88cf6478dbf8b9">&#9670;&#160;</a></span>category()</h2>
@@ -155,7 +155,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Category of data to write. </p>
 
-<p>Implemented in <a class="el" href="../../dd/d16/classceleritas_1_1_action_manager_output.html#a3eefcd29665f5fa2ed54e3662e5b14ff">celeritas::ActionManagerOutput</a>, <a class="el" href="../../d5/d28/classceleritas_1_1_physics_params_output.html#a90671c3bfa4efc5a4c7c3aa0d66c9c23">celeritas::PhysicsParamsOutput</a>, <a class="el" href="../../db/d04/classceleritas_1_1_build_output.html#a23fbe2613e639a5524dc894489d0e29d">celeritas::BuildOutput</a>, <a class="el" href="../../da/db4/classceleritas_1_1_exception_output.html#a50c12161dbca350e1ff6dde23de971d7">celeritas::ExceptionOutput</a>, and <a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html#aef4f1523c846051eea90f142f9bb165e">celeritas::OutputInterfaceAdapter&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="../../d2/d7b/classceleritas_1_1_action_registry_output.html#aa2fcef8e389120d58c68bd2d5b47ec51">celeritas::ActionRegistryOutput</a>, <a class="el" href="../../d5/d28/classceleritas_1_1_physics_params_output.html#a90671c3bfa4efc5a4c7c3aa0d66c9c23">celeritas::PhysicsParamsOutput</a>, <a class="el" href="../../db/d04/classceleritas_1_1_build_output.html#a23fbe2613e639a5524dc894489d0e29d">celeritas::BuildOutput</a>, <a class="el" href="../../da/db4/classceleritas_1_1_exception_output.html#a50c12161dbca350e1ff6dde23de971d7">celeritas::ExceptionOutput</a>, and <a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html#aef4f1523c846051eea90f142f9bb165e">celeritas::OutputInterfaceAdapter&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -184,7 +184,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Key for the entry inside the category. </p>
 
-<p>Implemented in <a class="el" href="../../dd/d16/classceleritas_1_1_action_manager_output.html#a9dfe407c4abe3ecf3790f7050cea206b">celeritas::ActionManagerOutput</a>, <a class="el" href="../../d5/d28/classceleritas_1_1_physics_params_output.html#a141b5114d6d8ebaa9efbe3cfca48380d">celeritas::PhysicsParamsOutput</a>, <a class="el" href="../../db/d04/classceleritas_1_1_build_output.html#a56849ba49f15ba4a267c43e9131a1372">celeritas::BuildOutput</a>, <a class="el" href="../../da/db4/classceleritas_1_1_exception_output.html#a4d1d331f9c2c6cf7e1abb03629f20536">celeritas::ExceptionOutput</a>, and <a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html#a59d1e68e1400bd4fd626f8007f6b0842">celeritas::OutputInterfaceAdapter&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="../../d2/d7b/classceleritas_1_1_action_registry_output.html#a6599a0488a7b186f463b5500efb45201">celeritas::ActionRegistryOutput</a>, <a class="el" href="../../d5/d28/classceleritas_1_1_physics_params_output.html#a141b5114d6d8ebaa9efbe3cfca48380d">celeritas::PhysicsParamsOutput</a>, <a class="el" href="../../db/d04/classceleritas_1_1_build_output.html#a56849ba49f15ba4a267c43e9131a1372">celeritas::BuildOutput</a>, <a class="el" href="../../da/db4/classceleritas_1_1_exception_output.html#a4d1d331f9c2c6cf7e1abb03629f20536">celeritas::ExceptionOutput</a>, and <a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html#a59d1e68e1400bd4fd626f8007f6b0842">celeritas::OutputInterfaceAdapter&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -212,7 +212,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../dd/d16/classceleritas_1_1_action_manager_output.html#ab071d7173ced7c80d2b11e1af293829a">celeritas::ActionManagerOutput</a>, <a class="el" href="../../d5/d28/classceleritas_1_1_physics_params_output.html#a9ab0cf6a1e51e173d6d06a93a1b5145b">celeritas::PhysicsParamsOutput</a>, <a class="el" href="../../db/d04/classceleritas_1_1_build_output.html#af0a6826d9c409a780ecbebb10e52a451">celeritas::BuildOutput</a>, <a class="el" href="../../da/db4/classceleritas_1_1_exception_output.html#a946594f63f3853216f03537c1bddf528">celeritas::ExceptionOutput</a>, and <a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html#a6639a9d59133e179362b92c3ed2ea95c">celeritas::OutputInterfaceAdapter&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="../../d2/d7b/classceleritas_1_1_action_registry_output.html#a786718c3376dc0b3a4ea32e8a9e1fbca">celeritas::ActionRegistryOutput</a>, <a class="el" href="../../d5/d28/classceleritas_1_1_physics_params_output.html#a9ab0cf6a1e51e173d6d06a93a1b5145b">celeritas::PhysicsParamsOutput</a>, <a class="el" href="../../db/d04/classceleritas_1_1_build_output.html#af0a6826d9c409a780ecbebb10e52a451">celeritas::BuildOutput</a>, <a class="el" href="../../da/db4/classceleritas_1_1_exception_output.html#a946594f63f3853216f03537c1bddf528">celeritas::ExceptionOutput</a>, and <a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html#a6639a9d59133e179362b92c3ed2ea95c">celeritas::OutputInterfaceAdapter&lt; T &gt;</a>.</p>
 
 </div>
 </div>

@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -99,24 +99,22 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:afc5ed7149dc5c400485550f502d0c170"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8e/classceleritas_1_1_kernel_param_calculator.html#afc5ed7149dc5c400485550f502d0c170">dim_type</a> = unsigned int</td></tr>
 <tr class="separator:afc5ed7149dc5c400485550f502d0c170"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c19a2273562566b9f55fd589b649a71"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8e/classceleritas_1_1_kernel_param_calculator.html#a8c19a2273562566b9f55fd589b649a71">KernelId</a> = <a class="el" href="../../dd/dbb/classceleritas_1_1_opaque_id.html">OpaqueId</a>&lt; struct Kernel &gt;</td></tr>
-<tr class="separator:a8c19a2273562566b9f55fd589b649a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a824109ff83d5c56d68557850af9f6add"><td class="memTemplParams" colspan="2"><a id="a824109ff83d5c56d68557850af9f6add" name="a824109ff83d5c56d68557850af9f6add"></a>
+<tr class="memitem:adf05eb57661d85b66af36c43cbea5368"><td class="memTemplParams" colspan="2"><a id="adf05eb57661d85b66af36c43cbea5368" name="adf05eb57661d85b66af36c43cbea5368"></a>
 template&lt;class F &gt; </td></tr>
-<tr class="memitem:a824109ff83d5c56d68557850af9f6add"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>KernelParamCalculator</b> (F *kernel_func_ptr, const char *name)</td></tr>
-<tr class="memdesc:a824109ff83d5c56d68557850af9f6add"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct for the given global kernel F. <br /></td></tr>
-<tr class="separator:a824109ff83d5c56d68557850af9f6add"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a979ba8c1819de9443e85fbc7b74a333e"><td class="memTemplParams" colspan="2"><a id="a979ba8c1819de9443e85fbc7b74a333e" name="a979ba8c1819de9443e85fbc7b74a333e"></a>
-template&lt;class F &gt; </td></tr>
-<tr class="memitem:a979ba8c1819de9443e85fbc7b74a333e"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>KernelParamCalculator</b> (F *kernel_func_ptr, const char *name, <a class="el" href="../../d8/d8e/classceleritas_1_1_kernel_param_calculator.html#afc5ed7149dc5c400485550f502d0c170">dim_type</a> threads_per_block)</td></tr>
-<tr class="memdesc:a979ba8c1819de9443e85fbc7b74a333e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct for the given global kernel F. <br /></td></tr>
-<tr class="separator:a979ba8c1819de9443e85fbc7b74a333e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5091cc67c38ed3326d285210b07df70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d2f/structceleritas_1_1_kernel_param_calculator_1_1_launch_params.html">LaunchParams</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8e/classceleritas_1_1_kernel_param_calculator.html#ae5091cc67c38ed3326d285210b07df70">operator()</a> (size_type min_num_threads) const</td></tr>
-<tr class="memdesc:ae5091cc67c38ed3326d285210b07df70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate launch params given the number of threads.  <a href="../../d8/d8e/classceleritas_1_1_kernel_param_calculator.html#ae5091cc67c38ed3326d285210b07df70">More...</a><br /></td></tr>
-<tr class="separator:ae5091cc67c38ed3326d285210b07df70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf05eb57661d85b66af36c43cbea5368"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>KernelParamCalculator</b> (char const *name, F *kernel_func_ptr)</td></tr>
+<tr class="memdesc:adf05eb57661d85b66af36c43cbea5368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct for the given global kernel F. <br /></td></tr>
+<tr class="separator:adf05eb57661d85b66af36c43cbea5368"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a560b2932c2ece5832f237d23cbf36493"><td class="memTemplParams" colspan="2">template&lt;class F &gt; </td></tr>
+<tr class="memitem:a560b2932c2ece5832f237d23cbf36493"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d8e/classceleritas_1_1_kernel_param_calculator.html#a560b2932c2ece5832f237d23cbf36493">KernelParamCalculator</a> (char const *name, F *kernel_func_ptr, <a class="el" href="../../d8/d8e/classceleritas_1_1_kernel_param_calculator.html#afc5ed7149dc5c400485550f502d0c170">dim_type</a> threads_per_block)</td></tr>
+<tr class="memdesc:a560b2932c2ece5832f237d23cbf36493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct for the given global kernel F.  <a href="../../d8/d8e/classceleritas_1_1_kernel_param_calculator.html#a560b2932c2ece5832f237d23cbf36493">More...</a><br /></td></tr>
+<tr class="separator:a560b2932c2ece5832f237d23cbf36493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad83aab40e534448fc3ec4938efc4cbff"><td class="memItemLeft" align="right" valign="top"><a id="ad83aab40e534448fc3ec4938efc4cbff" name="ad83aab40e534448fc3ec4938efc4cbff"></a>
+<a class="el" href="../../dd/d2f/structceleritas_1_1_kernel_param_calculator_1_1_launch_params.html">LaunchParams</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (size_type min_num_threads) const</td></tr>
+<tr class="memdesc:ad83aab40e534448fc3ec4938efc4cbff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate launch params given the number of threads. <br /></td></tr>
+<tr class="separator:ad83aab40e534448fc3ec4938efc4cbff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -128,12 +126,12 @@ static <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05c
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Kernel management helper functions. </p>
 <p >We assume that all our kernel launches use 1-D thread indexing to make things easy. The <code>dim_type</code> alias should be the same size as the type of a single <code>dim3</code> member (x/y/z).</p>
-<p >Constructing the param calculator registers kernel diagnostics.</p>
+<p >Constructing the param calculator registers kernel attributes with <code>kernel_registry</code> as an implementation detail in the .cc file that hides inclusion of that interface from CUDA code. If kernel diagnostic profiling is enabled, the registry will return a pointer that this class uses to increment thread launch counters over the lifetime of the program.</p>
 <div class="fragment"><div class="line">   <span class="keyword">static</span> <a class="code hl_class" href="../../d8/d8e/classceleritas_1_1_kernel_param_calculator.html">KernelParamCalculator</a> calc_params(my_kernel, <span class="stringliteral">&quot;my&quot;</span>);</div>
 <div class="line">   <span class="keyword">auto</span> params = calc_params(states.size());</div>
 <div class="line">   my_kernel&lt;&lt;&lt;params.blocks_per_grid,</div>
-<div class="line">params.threads_per_block&gt;&gt;&gt;(kernel_args...); </div>
-<div class="ttc" id="aclassceleritas_1_1_kernel_param_calculator_html"><div class="ttname"><a href="../../d8/d8e/classceleritas_1_1_kernel_param_calculator.html">celeritas::KernelParamCalculator</a></div><div class="ttdoc">Kernel management helper functions.</div><div class="ttdef"><b>Definition:</b> KernelParamCalculator.device.hh:78</div></div>
+<div class="line">params.threads_per_block&gt;&gt;&gt;(kernel_args...);</div>
+<div class="ttc" id="aclassceleritas_1_1_kernel_param_calculator_html"><div class="ttname"><a href="../../d8/d8e/classceleritas_1_1_kernel_param_calculator.html">celeritas::KernelParamCalculator</a></div><div class="ttdoc">Kernel management helper functions.</div><div class="ttdef"><b>Definition:</b> KernelParamCalculator.device.hh:87</div></div>
 </div><!-- fragment --> </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="afc5ed7149dc5c400485550f502d0c170" name="afc5ed7149dc5c400485550f502d0c170"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afc5ed7149dc5c400485550f502d0c170">&#9670;&#160;</a></span>dim_type</h2>
@@ -150,40 +148,51 @@ static <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05c
 
 </div>
 </div>
-<a id="a8c19a2273562566b9f55fd589b649a71" name="a8c19a2273562566b9f55fd589b649a71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c19a2273562566b9f55fd589b649a71">&#9670;&#160;</a></span>KernelId</h2>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a560b2932c2ece5832f237d23cbf36493" name="a560b2932c2ece5832f237d23cbf36493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a560b2932c2ece5832f237d23cbf36493">&#9670;&#160;</a></span>KernelParamCalculator()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d8/d8e/classceleritas_1_1_kernel_param_calculator.html#a8c19a2273562566b9f55fd589b649a71">celeritas::KernelParamCalculator::KernelId</a> =  <a class="el" href="../../dd/dbb/classceleritas_1_1_opaque_id.html">OpaqueId</a>&lt;struct Kernel&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae5091cc67c38ed3326d285210b07df70" name="ae5091cc67c38ed3326d285210b07df70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5091cc67c38ed3326d285210b07df70">&#9670;&#160;</a></span>operator()()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dd/d2f/structceleritas_1_1_kernel_param_calculator_1_1_launch_params.html">KernelParamCalculator::LaunchParams</a> celeritas::KernelParamCalculator::operator() </td>
+          <td class="memname">celeritas::KernelParamCalculator::KernelParamCalculator </td>
           <td>(</td>
-          <td class="paramtype">size_type&#160;</td>
-          <td class="paramname"><em>min_num_threads</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">char const *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">F *&#160;</td>
+          <td class="paramname"><em>kernel_func_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d8/d8e/classceleritas_1_1_kernel_param_calculator.html#afc5ed7149dc5c400485550f502d0c170">dim_type</a>&#160;</td>
+          <td class="paramname"><em>threads_per_block</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Calculate launch params given the number of threads. </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000021">Todo:</a></b></dt><dd>Once we start worrying about multiple devices on a single machine, we could add a check for the device ID being the same one used to initialize the param calculator. </dd></dl>
+<p>Construct for the given global kernel F. </p>
+<p >This registers the kernel with <code><a class="el" href="../../dd/d7f/_kernel_registry_8cc.html#a73c4066fffac2028b54b364cca03e88a" title="Globally shared kernel registry.">celeritas::kernel_registry()</a></code> and saves a pointer to the profiling data if profiling is to be used. </p>
 
 </div>
 </div>

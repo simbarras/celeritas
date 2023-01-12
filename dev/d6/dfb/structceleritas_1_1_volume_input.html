@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -86,7 +86,7 @@ $(function() {
 <p>Input definition for a single volume.  
  <a href="../../d6/dfb/structceleritas_1_1_volume_input.html#details">More...</a></p>
 
-<p><code>#include &lt;VolumeInput.hh&gt;</code></p>
+<p><code>#include &lt;OrangeInput.hh&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -103,27 +103,35 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a76379fe3c298a3397948f4d6674ab18c"><td class="memItemLeft" align="right" valign="top"><a id="a76379fe3c298a3397948f4d6674ab18c" name="a76379fe3c298a3397948f4d6674ab18c"></a>
+<a class="el" href="../../da/d86/structceleritas_1_1_label.html">Label</a>&#160;</td><td class="memItemRight" valign="bottom"><b>label</b> {}</td></tr>
+<tr class="memdesc:a76379fe3c298a3397948f4d6674ab18c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Volume label. <br /></td></tr>
+<tr class="separator:a76379fe3c298a3397948f4d6674ab18c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8249dbc83da188a52c5ea0bd05ecf5f4"><td class="memItemLeft" align="right" valign="top"><a id="a8249dbc83da188a52c5ea0bd05ecf5f4" name="a8249dbc83da188a52c5ea0bd05ecf5f4"></a>
-std::vector&lt; <a class="el" href="../../d7/d97/orange_2_types_8hh.html#ae443850a3d9a3384da72b13186d85964">SurfaceId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>faces</b> {}</td></tr>
-<tr class="memdesc:a8249dbc83da188a52c5ea0bd05ecf5f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorted list of surface IDs in this cell. <br /></td></tr>
+std::vector&lt; <a class="el" href="../../dd/dbb/classceleritas_1_1_opaque_id.html">SurfaceId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>faces</b> {}</td></tr>
+<tr class="memdesc:a8249dbc83da188a52c5ea0bd05ecf5f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorted list of surface IDs in this volume. <br /></td></tr>
 <tr class="separator:a8249dbc83da188a52c5ea0bd05ecf5f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43e7ab11313ca4d3a3e463516f4e98df"><td class="memItemLeft" align="right" valign="top"><a id="a43e7ab11313ca4d3a3e463516f4e98df" name="a43e7ab11313ca4d3a3e463516f4e98df"></a>
-std::vector&lt; <a class="el" href="../../d7/d97/orange_2_types_8hh.html#adbbba02a0d046cbac4c60629cac9d31b">logic_int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>logic</b> {}</td></tr>
-<tr class="memdesc:a43e7ab11313ca4d3a3e463516f4e98df"><td class="mdescLeft">&#160;</td><td class="mdescRight">RPN region definition for this cell, using local surface index. <br /></td></tr>
+std::vector&lt; <a class="el" href="../../d7/d3b/_orange_types_8hh.html#adbbba02a0d046cbac4c60629cac9d31b">logic_int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>logic</b> {}</td></tr>
+<tr class="memdesc:a43e7ab11313ca4d3a3e463516f4e98df"><td class="mdescLeft">&#160;</td><td class="mdescRight">RPN region definition for this volume, using local surface index. <br /></td></tr>
 <tr class="separator:a43e7ab11313ca4d3a3e463516f4e98df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad71f3e092ea5ced4ececd8c3048071f7"><td class="memItemLeft" align="right" valign="top"><a id="ad71f3e092ea5ced4ececd8c3048071f7" name="ad71f3e092ea5ced4ececd8c3048071f7"></a>
-<a class="el" href="../../d7/d97/orange_2_types_8hh.html#adbbba02a0d046cbac4c60629cac9d31b">logic_int</a>&#160;</td><td class="memItemRight" valign="bottom"><b>max_intersections</b> {0}</td></tr>
-<tr class="memdesc:ad71f3e092ea5ced4ececd8c3048071f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum possible number of surface intersections in this volume. <br /></td></tr>
-<tr class="separator:ad71f3e092ea5ced4ececd8c3048071f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fb1fdb8a20aa7d4b82b6f2915cc8fff"><td class="memItemLeft" align="right" valign="top"><a id="a7fb1fdb8a20aa7d4b82b6f2915cc8fff" name="a7fb1fdb8a20aa7d4b82b6f2915cc8fff"></a>
+<a class="el" href="../../d0/d60/classceleritas_1_1_bounding_box.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bbox</b> {}</td></tr>
+<tr class="memdesc:a7fb1fdb8a20aa7d4b82b6f2915cc8fff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Axis-aligned bounding box (TODO: currently unused) <br /></td></tr>
+<tr class="separator:a7fb1fdb8a20aa7d4b82b6f2915cc8fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1934430707383e3caec4d2e2471512f4"><td class="memItemLeft" align="right" valign="top"><a id="a1934430707383e3caec4d2e2471512f4" name="a1934430707383e3caec4d2e2471512f4"></a>
-<a class="el" href="../../d7/d97/orange_2_types_8hh.html#adbbba02a0d046cbac4c60629cac9d31b">logic_int</a>&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b> {0}</td></tr>
+<a class="el" href="../../d7/d3b/_orange_types_8hh.html#adbbba02a0d046cbac4c60629cac9d31b">logic_int</a>&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b> {0}</td></tr>
 <tr class="memdesc:a1934430707383e3caec4d2e2471512f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Special flags. <br /></td></tr>
 <tr class="separator:a1934430707383e3caec4d2e2471512f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c6ef2ac00fe962fb6b9b9271fb16e8e"><td class="memItemLeft" align="right" valign="top"><a id="a6c6ef2ac00fe962fb6b9b9271fb16e8e" name="a6c6ef2ac00fe962fb6b9b9271fb16e8e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>zorder</b> {}</td></tr>
+<tr class="memdesc:a6c6ef2ac00fe962fb6b9b9271fb16e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Masking priority (2 for regular, 1 for background) <br /></td></tr>
+<tr class="separator:a6c6ef2ac00fe962fb6b9b9271fb16e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Input definition for a single volume. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="../../d0/deb/_volume_input_8hh.html">VolumeInput.hh</a></li>
+<li><a class="el" href="../../d5/d57/_orange_input_8hh.html">OrangeInput.hh</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -86,6 +86,16 @@ $(function() {
 
 <p><code>#include &lt;ImportMaterial.hh&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a0b6a0e83b200d5f929af91091a41610b"><td class="memItemLeft" align="right" valign="top"><a id="a0b6a0e83b200d5f929af91091a41610b" name="a0b6a0e83b200d5f929af91091a41610b"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>MapIntCutoff</b> = std::map&lt; int, <a class="el" href="../../d5/d51/structceleritas_1_1_import_production_cut.html">ImportProductionCut</a> &gt;</td></tr>
+<tr class="separator:a0b6a0e83b200d5f929af91091a41610b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9402ffd36e6d2e5517d0fe4091155faf"><td class="memItemLeft" align="right" valign="top"><a id="a9402ffd36e6d2e5517d0fe4091155faf" name="a9402ffd36e6d2e5517d0fe4091155faf"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>VecComponent</b> = std::vector&lt; <a class="el" href="../../da/dc6/structceleritas_1_1_import_mat_elem_component.html">ImportMatElemComponent</a> &gt;</td></tr>
+<tr class="separator:a9402ffd36e6d2e5517d0fe4091155faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a95d86646b7dad4776c7ac5dc30e923ef"><td class="memItemLeft" align="right" valign="top"><a id="a95d86646b7dad4776c7ac5dc30e923ef" name="a95d86646b7dad4776c7ac5dc30e923ef"></a>
@@ -118,13 +128,13 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>radiation_length</b
 double&#160;</td><td class="memItemRight" valign="bottom"><b>nuclear_int_length</b></td></tr>
 <tr class="memdesc:a99e06e7b7d553ae127edb2f48b8142a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">[cm] <br /></td></tr>
 <tr class="separator:a99e06e7b7d553ae127edb2f48b8142a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a771e04c1005beb8094309642822e710a"><td class="memItemLeft" align="right" valign="top"><a id="a771e04c1005beb8094309642822e710a" name="a771e04c1005beb8094309642822e710a"></a>
-std::map&lt; int, <a class="el" href="../../d5/d51/structceleritas_1_1_import_production_cut.html">ImportProductionCut</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pdg_cutoffs</b></td></tr>
-<tr class="memdesc:a771e04c1005beb8094309642822e710a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cutoff per PDG. <br /></td></tr>
-<tr class="separator:a771e04c1005beb8094309642822e710a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33fc87628d6cb7310a24542fd753f079"><td class="memItemLeft" align="right" valign="top"><a id="a33fc87628d6cb7310a24542fd753f079" name="a33fc87628d6cb7310a24542fd753f079"></a>
-std::vector&lt; <a class="el" href="../../da/dc6/structceleritas_1_1_import_mat_elem_component.html">ImportMatElemComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>elements</b></td></tr>
-<tr class="separator:a33fc87628d6cb7310a24542fd753f079"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeec36cadeeeb6aacf00dbc256cad5b07"><td class="memItemLeft" align="right" valign="top"><a id="aeec36cadeeeb6aacf00dbc256cad5b07" name="aeec36cadeeeb6aacf00dbc256cad5b07"></a>
+MapIntCutoff&#160;</td><td class="memItemRight" valign="bottom"><b>pdg_cutoffs</b></td></tr>
+<tr class="memdesc:aeec36cadeeeb6aacf00dbc256cad5b07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cutoff per PDG. <br /></td></tr>
+<tr class="separator:aeec36cadeeeb6aacf00dbc256cad5b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac477b0e30ac27fd7df8fe10efffdd87b"><td class="memItemLeft" align="right" valign="top"><a id="ac477b0e30ac27fd7df8fe10efffdd87b" name="ac477b0e30ac27fd7df8fe10efffdd87b"></a>
+VecComponent&#160;</td><td class="memItemRight" valign="bottom"><b>elements</b></td></tr>
+<tr class="separator:ac477b0e30ac27fd7df8fe10efffdd87b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Store material data. </p>

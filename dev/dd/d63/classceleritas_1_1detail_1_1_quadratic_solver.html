@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -112,20 +112,20 @@ Static Public Member Functions</h2></td></tr>
 static <a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a> <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>min_a</b> ()</td></tr>
 <tr class="memdesc:a77380b0cd2f0ef899ff48298ac769e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fuzziness for "along surface". <br /></td></tr>
 <tr class="separator:a77380b0cd2f0ef899ff48298ac769e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec321747b8d50682e1ce7c29bf9b52d4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../dd/d63/classceleritas_1_1detail_1_1_quadratic_solver.html#a712f6d109ab4462fb597980f49583a95">Intersections</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d63/classceleritas_1_1detail_1_1_quadratic_solver.html#aec321747b8d50682e1ce7c29bf9b52d4">solve_general</a> (<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> a, <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> half_b, <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> c, <a class="el" href="../../d7/d97/orange_2_types_8hh.html#a6cd5c390799a8c88a475845f7f4a738b">SurfaceState</a> on_surface)</td></tr>
+<tr class="memitem:aec321747b8d50682e1ce7c29bf9b52d4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../dd/d63/classceleritas_1_1detail_1_1_quadratic_solver.html#a712f6d109ab4462fb597980f49583a95">Intersections</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d63/classceleritas_1_1detail_1_1_quadratic_solver.html#aec321747b8d50682e1ce7c29bf9b52d4">solve_general</a> (<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> a, <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> half_b, <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> c, <a class="el" href="../../d7/d3b/_orange_types_8hh.html#a6cd5c390799a8c88a475845f7f4a738b">SurfaceState</a> on_surface)</td></tr>
 <tr class="memdesc:aec321747b8d50682e1ce7c29bf9b52d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find all positive roots for general quadric surfaces.  <a href="../../dd/d63/classceleritas_1_1detail_1_1_quadratic_solver.html#aec321747b8d50682e1ce7c29bf9b52d4">More...</a><br /></td></tr>
 <tr class="separator:aec321747b8d50682e1ce7c29bf9b52d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Find positive, real, nonzero roots for quadratic functions. </p>
 <p >These are for quadratic functions </p><p class="formulaDsp">
-<picture><source srcset="../../form_202_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_204_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 a x^2 + b^2 + c = 0
-\]" src="../../form_202.png" width="89" height="14"/></picture>
+\]" src="../../form_204.png" width="89" height="14"/></picture>
 </p>
 <p> where a is nonzero (and not close to zero).</p>
 <p >This is used for all quadrics with potentially two roots (anything but planes).</p>
-<p >Each item in the Intersections result will be a positive valid intersection or the sentinel result <code><a class="el" href="../../d7/d97/orange_2_types_8hh.html#a73580d4130bc100abd9b88da5f2fa469" title="Sentinel value indicating &quot;no intersection&quot;.">no_intersection()</a></code> . </p>
+<p >Each item in the Intersections result will be a positive valid intersection or the sentinel result <code><a class="el" href="../../d7/d3b/_orange_types_8hh.html#a73580d4130bc100abd9b88da5f2fa469" title="Sentinel value indicating &quot;no intersection&quot;.">no_intersection()</a></code> . </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a712f6d109ab4462fb597980f49583a95" name="a712f6d109ab4462fb597980f49583a95"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a712f6d109ab4462fb597980f49583a95">&#9670;&#160;</a></span>Intersections</h2>
@@ -197,9 +197,9 @@ a x^2 + b^2 + c = 0
 
 <p>Find all positive roots of x^2 + (b/a)*x + (c/a) = 0. </p>
 <p >In this case, the quadratic formula can be written as: </p><p class="formulaDsp">
-<picture><source srcset="../../form_203_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_205_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 x = -b/2 \pm \sqrt{(b/2)^2 - c}.
-\]" src="../../form_203.png" width="136" height="16"/></picture>
+\]" src="../../form_205.png" width="136" height="16"/></picture>
 </p>
 <p >Callers:</p><ul>
 <li>General quadratic solve: not on nor along surface</li>
@@ -239,7 +239,7 @@ x = -b/2 \pm \sqrt{(b/2)^2 - c}.
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d97/orange_2_types_8hh.html#a6cd5c390799a8c88a475845f7f4a738b">SurfaceState</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/_orange_types_8hh.html#a6cd5c390799a8c88a475845f7f4a738b">SurfaceState</a>&#160;</td>
           <td class="paramname"><em>on_surface</em>&#160;</td>
         </tr>
         <tr>

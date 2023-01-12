@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -126,9 +126,9 @@ class celeritas::Quantity&lt; UnitT, ValueT &gt;</div><p >A numerical value tagg
   </dd>
 </dl>
 <p>A quantity is a value expressed in terms of the given unit. Storing values in a different unit system can help with some calculations (e.g. operating in natural unit systems) by avoiding numerical multiplications and divisions by large constants. It can also make debugging easier (numeric values are obvious).</p>
-<p >Example usage by physics class, where charge is in units of q_e+, and mass and momentum are expressed in atomic natural units (where m_e = 1 and c = 1). </p><div class="fragment"><div class="line"><span class="keyword">using </span>MevEnergy        = <a class="code hl_class" href="../../dc/dff/classceleritas_1_1_quantity.html">Quantity&lt;Mev&gt;</a>;</div>
-<div class="line"><span class="keyword">using </span>MevMass          = <a class="code hl_class" href="../../dc/dff/classceleritas_1_1_quantity.html">Quantity&lt;UnitDivide&lt;Mev, CLightSq&gt;</a>&gt;;</div>
-<div class="line"><span class="keyword">using </span>MevMomentum      = <a class="code hl_class" href="../../dc/dff/classceleritas_1_1_quantity.html">Quantity&lt;UnitDivide&lt;Mev, CLight&gt;</a>&gt;;</div>
+<p >Example usage by physics class, where charge is in units of q_e+, and mass and momentum are expressed in atomic natural units (where m_e = 1 and c = 1). </p><div class="fragment"><div class="line"><span class="keyword">using </span>MevEnergy   = <a class="code hl_class" href="../../dc/dff/classceleritas_1_1_quantity.html">Quantity&lt;Mev&gt;</a>;</div>
+<div class="line"><span class="keyword">using </span>MevMass     = <a class="code hl_class" href="../../dc/dff/classceleritas_1_1_quantity.html">Quantity&lt;UnitDivide&lt;Mev, CLightSq&gt;</a>&gt;;</div>
+<div class="line"><span class="keyword">using </span>MevMomentum = <a class="code hl_class" href="../../dc/dff/classceleritas_1_1_quantity.html">Quantity&lt;UnitDivide&lt;Mev, CLight&gt;</a>&gt;;</div>
 <div class="ttc" id="aclassceleritas_1_1_quantity_html"><div class="ttname"><a href="../../dc/dff/classceleritas_1_1_quantity.html">celeritas::Quantity</a></div><div class="ttdoc">A numerical value tagged with a unit.</div><div class="ttdef"><b>Definition:</b> Quantity.hh:82</div></div>
 </div><!-- fragment --><p >A relativistic equation that operates on these quantities can do so without unnecessary floating point operations involving the speed of light: </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> eval = value_as&lt;MevEnergy&gt;(energy); <span class="comment">// Natural units</span></div>
 <div class="line">MevMomentum momentum{std::sqrt(eval * eval</div>

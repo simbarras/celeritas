@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Infrastructure &mdash; Celeritas v0.1.4 documentation</title>
+  <title>Infrastructure &mdash; Celeritas v0.2.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -33,7 +33,7 @@
             <img src="_static/celeritas-thumbnail.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.1.4
+                0.2.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -47,12 +47,11 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Infrastructure</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#toolchain-installation">Toolchain installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-celeritas">Building Celeritas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cmake-presets">CMake Presets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#downstream-usage-as-a-library">Downstream usage as a library</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#developing">Developing</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#cmake-presets">CMake presets</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API documentation</a></li>
@@ -64,6 +63,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="appendices/release-history.html">Release History</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appendices/development.html">Development Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendices/administration.html">Administration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appendices/license.html">License</a></li>
 </ul>
 
@@ -96,9 +96,9 @@
 <p>Celeritas is built using modern <a class="reference external" href="https://cmake.org">CMake</a>. It has multiple dependencies to operate
 as a full-featured code, but each dependency can be individually disabled as
 needed.</p>
-<section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
-<p>This project requires external dependencies to build with full functionality.
+<section id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading"></a></h2>
+<p>The code requires external dependencies to build with full functionality.
 However, any combination of these requirements can be omitted to enable
 limited development on experimental HPC systems or personal machines with
 fewer available components.</p>
@@ -189,6 +189,80 @@ fewer available components.</p>
 </tr>
 </tbody>
 </table>
+<p>Ideally you will build Celeritas with all dependencies to gain the full
+functionality of the code, but there are circumstances in which you may not
+have (or want) all the dependencies or features available. By default, the CMake code in
+Celeritas queries available packages and sets several <cite>CELERITAS_USE_{package}</cite>
+options based on what it finds, so you have a good chance of successfully
+configuring Celeritas on the first go. Some optional features
+will error out in the configure if their required
+dependencies are missing, but they will update the CMake cache variable so that
+the next configure will succeed (with that component disabled).</p>
+</section>
+<section id="toolchain-installation">
+<h2>Toolchain installation<a class="headerlink" href="#toolchain-installation" title="Permalink to this heading"></a></h2>
+<p>The recommended way to install dependencies is with <cite>Spack</cite>,
+an HPC-oriented package manager that includes numerous scientific packages,
+including those used in HEP. Celeritas includes a Spack environment at
+<code class="file docutils literal notranslate"><span class="pre">scripts/spack.yaml</span></code> that describes the code’s full suite
+of dependencies (including testing and documentation). To install these
+dependencies:</p>
+<ul class="simple">
+<li><p>Clone and load Spack following its <cite>getting started instructions
+&lt;spack-start&gt;</cite>.</p></li>
+<li><p>If using CUDA: run <code class="docutils literal notranslate"><span class="pre">spack</span> <span class="pre">external</span> <span class="pre">find</span> <span class="pre">cuda</span></code> to inform Spack of the existing
+installation, and tell Spack to default to building with CUDA support with
+the command <code class="docutils literal notranslate"><span class="pre">spack</span> <span class="pre">config</span> <span class="pre">add</span> <span class="pre">packages:all:variants:&quot;+cuda</span>
+<span class="pre">cuda_arch=&lt;ARCH&gt;&quot;</span></code>, where <code class="docutils literal notranslate"><span class="pre">&lt;ARCH&gt;</span></code> is the numeric portion of the <cite>CUDA
+architecture flags &lt;cuda-arch&gt;</cite>.</p></li>
+<li><p>Create the Celeritas development environment with <code class="docutils literal notranslate"><span class="pre">spack</span> <span class="pre">env</span> <span class="pre">create</span>
+<span class="pre">celeritas</span> <span class="pre">scripts/spack.yaml</span></code>.</p></li>
+<li><p>Install all the dependencies with <code class="docutils literal notranslate"><span class="pre">spack</span> <span class="pre">-e</span> <span class="pre">celeritas</span> <span class="pre">install</span></code>.</p></li>
+</ul>
+</section>
+<section id="building-celeritas">
+<h2>Building Celeritas<a class="headerlink" href="#building-celeritas" title="Permalink to this heading"></a></h2>
+<p>Once the Celeritas Spack environment has been installed, set your shell’s environment
+variables (<code class="docutils literal notranslate"><span class="pre">PATH</span></code>, <code class="docutils literal notranslate"><span class="pre">CMAKE_PREFIX_PATH</span></code>, …) by activating it. Then, you
+can configure, build, and test using the provided helper script:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>spack env activate celeritas
+<span class="gp">$ </span>./scripts/build.sh base
+</pre></div>
+</div>
+<p>or manually with:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>spack env activate celeritas
+<span class="gp">$ </span>mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<span class="gp">$ </span>cmake ..
+<span class="gp">$ </span>make <span class="o">&amp;&amp;</span> ctest
+</pre></div>
+</div>
+</section>
+<section id="cmake-presets">
+<h2>CMake Presets<a class="headerlink" href="#cmake-presets" title="Permalink to this heading"></a></h2>
+<p>To manage multiple builds with different
+configure options (debug or release, VecGeom or ORANGE), you can use the
+CMake presets provided by Celeritas via the <cite>CMakePresets.json</cite> file for CMake
+3.21 and higher:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cmake --preset<span class="o">=</span>default
+</pre></div>
+</div>
+<p>The three main options are “minimal”, “default”, and “full”, which all set
+different expectations for available dependencies.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If your CMake version is too old, you may get an unhelpful message:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">CMake Error: Could not read presets from celeritas: Unrecognized &quot;version&quot;</span>
+<span class="go">field</span>
+</pre></div>
+</div>
+<p>which is just a poor way of saying the version in the <code class="docutils literal notranslate"><span class="pre">CMakePresets.json</span></code> file
+is newer than that version knows how to handle.</p>
+</div>
+<p>If you want to add your own set of custom options and flags, create a
+<code class="docutils literal notranslate"><span class="pre">CMakeUserPresets.json</span></code> file or, if you wish to contribute on a regular
+basis, create a preset at <code class="docutils literal notranslate"><span class="pre">scripts/cmake-presets/${HOSTNAME%%.*}.json</span></code> and
+call <code class="docutils literal notranslate"><span class="pre">scripts/build.sh</span> <span class="pre">{preset}</span></code> to create the symlink, configure the preset,
+build, and test. See <code class="file docutils literal notranslate"><span class="pre">scripts/README.md</span></code> for more details.</p>
 </section>
 <section id="downstream-usage-as-a-library">
 <h2>Downstream usage as a library<a class="headerlink" href="#downstream-usage-as-a-library" title="Permalink to this heading"></a></h2>
@@ -198,52 +272,18 @@ CMake. It should require a single line to initialize:</p>
 </pre></div>
 </div>
 <p>and if VecGeom or CUDA are disabled a single line to link:</p>
-<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">mycode</span><span class="w"> </span><span class="s">PUBLIC</span><span class="w"> </span><span class="s">Celeritas::Core</span><span class="p">)</span>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">mycode</span><span class="w"> </span><span class="s">PUBLIC</span><span class="w"> </span><span class="s">Celeritas::celeritas</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Because of complexities involving CUDA Relocatable Device Code, linking when
 using both CUDA and VecGeom requires an additional include and the replacement
 of <code class="docutils literal notranslate"><span class="pre">target_link_libraries</span></code> with a customized version:</p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">include</span><span class="p">(</span><span class="s">CeleritasLibrary</span><span class="p">)</span>
-<span class="nb">celeritas_target_link_libraries</span><span class="p">(</span><span class="s">mycode</span><span class="w"> </span><span class="s">PUBLIC</span><span class="w"> </span><span class="s">Celeritas::Core</span><span class="p">)</span>
+<span class="nb">celeritas_target_link_libraries</span><span class="p">(</span><span class="s">mycode</span><span class="w"> </span><span class="s">PUBLIC</span><span class="w"> </span><span class="s">Celeritas::celeritas</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="developing">
-<h2>Developing<a class="headerlink" href="#developing" title="Permalink to this heading"></a></h2>
-<p>Ideally you will build Celeritas with all dependencies to gain the full
-functionality of the code, but there are circumstances in which you may not
-have all the dependencies or features available. By default, the CMake code in
-Celeritas queries available packages and sets several <cite>CELERITAS_USE_{package}</cite>
-options based on what it finds, so you have a good chance of successfully
-configuring Celeritas on the first go. Two optional components,
-<cite>CELERITAS_BUILD_&lt;DEMOS|TESTS&gt;</cite>, will error in the configure if their required
-components are missing, but they will update the CMake cache variable so that
-the next configure will succeed (but with that component disabled).</p>
-<section id="cmake-presets">
-<h3>CMake presets<a class="headerlink" href="#cmake-presets" title="Permalink to this heading"></a></h3>
-<p>For a slightly more advanced but potentially simpler setup, you can use the
-CMake presets provided by Celeritas via the <cite>CMakePresets.json</cite> file for CMake
-3.21 and higher:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cmake --preset<span class="o">=</span>default
-</pre></div>
-</div>
-<p>The three main options are “minimal”, “default”, and “full”, which all set
-different expectations for available dependencies.</p>
-<p>If you want to add your own set of custom options and flags, create a
-<code class="docutils literal notranslate"><span class="pre">CMakeUserPresets.json</span></code> file or, if you are a developer, create a preset at
-<code class="docutils literal notranslate"><span class="pre">scripts/cmake-presets/${HOSTNAME%%.*}.json</span></code> and call <code class="docutils literal notranslate"><span class="pre">scripts/build.sh</span>
-<span class="pre">{preset}</span></code> to create the symlink, configure the preset, build, and test. See
-[the scripts readme](scripts/README.md) for more details.</p>
-<p>If your CMake version is too old, you may get an unhelpful message:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">CMake Error: Could not read presets from celeritas: Unrecognized &quot;version&quot;</span>
-<span class="go">field</span>
-</pre></div>
-</div>
-<p>which is just a poor way of saying the version in the <code class="docutils literal notranslate"><span class="pre">CMakePresets.json</span></code> file
-is newer than that version knows how to handle.</p>
-<p>See the <a class="reference internal" href="appendices/development.html#development"><span class="std std-ref">Development Guide</span></a> section for additional development guidelines.</p>
-</section>
+<p>The test project at <code class="file docutils literal notranslate"><span class="pre">scripts/ci/test-installation</span></code> demonstrates how to
+use Celeritas as a library with a short standalone CMake project.</p>
 </section>
 </section>
 

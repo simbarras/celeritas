@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -122,10 +122,10 @@ template&lt;class InputIterator &gt; </td></tr>
 <a class="el" href="../../d3/df7/classceleritas_1_1_collection_builder.html#a83d8753e6734e0b98b7ff198fe44c435">ItemRangeT</a>&#160;</td><td class="memItemRight" valign="bottom"><b>insert_back</b> (std::initializer_list&lt; <a class="el" href="../../d3/df7/classceleritas_1_1_collection_builder.html#a7d9443d591a4d3277f083dcd1483102a">value_type</a> &gt; init)</td></tr>
 <tr class="memdesc:a01db3a7e8e004607575d43f9da964cb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert the given list of elements at the end of the allocation. <br /></td></tr>
 <tr class="separator:a01db3a7e8e004607575d43f9da964cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa47114cb46f26102f1863f687b3a0e58"><td class="memItemLeft" align="right" valign="top"><a id="aa47114cb46f26102f1863f687b3a0e58" name="aa47114cb46f26102f1863f687b3a0e58"></a>
-<a class="el" href="../../d3/df7/classceleritas_1_1_collection_builder.html#a758103c4dd1a834a71d9980f47ed11c4">ItemIdT</a>&#160;</td><td class="memItemRight" valign="bottom"><b>push_back</b> (const <a class="el" href="../../d3/df7/classceleritas_1_1_collection_builder.html#a7d9443d591a4d3277f083dcd1483102a">value_type</a> &amp;element)</td></tr>
-<tr class="memdesc:aa47114cb46f26102f1863f687b3a0e58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new element to the end of the allocation. <br /></td></tr>
-<tr class="separator:aa47114cb46f26102f1863f687b3a0e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aacb551628a0fcf50e21c49b1b3e946"><td class="memItemLeft" align="right" valign="top"><a id="a1aacb551628a0fcf50e21c49b1b3e946" name="a1aacb551628a0fcf50e21c49b1b3e946"></a>
+<a class="el" href="../../d3/df7/classceleritas_1_1_collection_builder.html#a758103c4dd1a834a71d9980f47ed11c4">ItemIdT</a>&#160;</td><td class="memItemRight" valign="bottom"><b>push_back</b> (<a class="el" href="../../d3/df7/classceleritas_1_1_collection_builder.html#a7d9443d591a4d3277f083dcd1483102a">value_type</a> const &amp;element)</td></tr>
+<tr class="memdesc:a1aacb551628a0fcf50e21c49b1b3e946"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new element to the end of the allocation. <br /></td></tr>
+<tr class="separator:a1aacb551628a0fcf50e21c49b1b3e946"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74e59be47cb8274313c256252868fc39"><td class="memItemLeft" align="right" valign="top"><a id="a74e59be47cb8274313c256252868fc39" name="a74e59be47cb8274313c256252868fc39"></a>
 <a class="el" href="../../d3/df7/classceleritas_1_1_collection_builder.html#a758103c4dd1a834a71d9980f47ed11c4">ItemIdT</a>&#160;</td><td class="memItemRight" valign="bottom"><b>push_back</b> (<a class="el" href="../../d3/df7/classceleritas_1_1_collection_builder.html#a7d9443d591a4d3277f083dcd1483102a">value_type</a> &amp;&amp;element)</td></tr>
 <tr class="separator:a74e59be47cb8274313c256252868fc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,7 +148,7 @@ class celeritas::CollectionBuilder&lt; T, M, I &gt;</div><p >Helper class for co
 <div class="line"><a class="code hl_class" href="../../d3/d95/classceleritas_1_1_range.html">ItemRange&lt;int&gt;</a> insertion</div>
 <div class="line">    = cb.insert_back(local_ints.begin(), local_ints.end());</div>
 <div class="line">cb.push_back(123);</div>
-<div class="ttc" id="a_collection_builder_8hh_html_a7c14c19949b62420fc60162ad4863bb9"><div class="ttname"><a href="../../d9/dfc/_collection_builder_8hh.html#a7c14c19949b62420fc60162ad4863bb9">celeritas::make_builder</a></div><div class="ttdeci">CollectionBuilder&lt; T, M, I &gt; make_builder(Collection&lt; T, Ownership::value, M, I &gt; *collection)</div><div class="ttdoc">Helper function for constructing collection builders.</div><div class="ttdef"><b>Definition:</b> CollectionBuilder.hh:190</div></div>
+<div class="ttc" id="a_collection_builder_8hh_html_a7c14c19949b62420fc60162ad4863bb9"><div class="ttname"><a href="../../d9/dfc/_collection_builder_8hh.html#a7c14c19949b62420fc60162ad4863bb9">celeritas::make_builder</a></div><div class="ttdeci">CollectionBuilder&lt; T, M, I &gt; make_builder(Collection&lt; T, Ownership::value, M, I &gt; *collection)</div><div class="ttdoc">Helper function for constructing collection builders.</div><div class="ttdef"><b>Definition:</b> CollectionBuilder.hh:189</div></div>
 <div class="ttc" id="aclassceleritas_1_1_range_html"><div class="ttname"><a href="../../d3/d95/classceleritas_1_1_range.html">celeritas::Range</a></div><div class="ttdoc">Proxy container for iterating over a range of integral values.</div><div class="ttdef"><b>Definition:</b> Range.hh:59</div></div>
 </div><!-- fragment --><p >The <a class="el" href="../../d3/df7/classceleritas_1_1_collection_builder.html" title="Helper class for constructing Collection objects.">CollectionBuilder</a> can also be used to resize device-value collections without having to allocate a host version and copy to device. (This is useful for state allocations.) When resizing values with debugging assertions enabled on host memory, it will assign garbage values to aid in reproducible debugging.) </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>

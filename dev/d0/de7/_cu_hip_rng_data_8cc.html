@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -83,21 +83,22 @@ $(function() {
 <code>#include &lt;random&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d9/dfc/_collection_builder_8hh.html">corecel/data/CollectionBuilder.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d9/df9/_ref_8hh.html">corecel/data/Ref.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/dfb/_device_8hh.html">corecel/sys/Device.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../de/db0/_cu_hip_rng_state_init_8hh.html">detail/CuHipRngStateInit.hh</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae7488668a081435fec6d0354cccf5081"><td class="memTemplParams" colspan="2"><a id="ae7488668a081435fec6d0354cccf5081" name="ae7488668a081435fec6d0354cccf5081"></a>
+<tr class="memitem:a912a6687289da7e9d24bc876e25280de"><td class="memTemplParams" colspan="2"><a id="a912a6687289da7e9d24bc876e25280de" name="a912a6687289da7e9d24bc876e25280de"></a>
 template&lt;MemSpace M&gt; </td></tr>
-<tr class="memitem:ae7488668a081435fec6d0354cccf5081"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::resize</b> (CuHipRngStateData&lt; Ownership::value, M &gt; *state, const HostCRef&lt; CuHipRngParamsData &gt; &amp;params, size_type size)</td></tr>
-<tr class="memdesc:ae7488668a081435fec6d0354cccf5081"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize and initialize with the seed stored in params. <br /></td></tr>
-<tr class="separator:ae7488668a081435fec6d0354cccf5081"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a6ae05a852180999fa8f556bcfe2cfd"><td class="memItemLeft" align="right" valign="top"><a id="a1a6ae05a852180999fa8f556bcfe2cfd" name="a1a6ae05a852180999fa8f556bcfe2cfd"></a>
-template void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::resize</b> (HostVal&lt; CuHipRngStateData &gt; *, const HostCRef&lt; CuHipRngParamsData &gt; &amp;, size_type)</td></tr>
-<tr class="separator:a1a6ae05a852180999fa8f556bcfe2cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b01fa3ee6ed880550a63fee7906f536"><td class="memItemLeft" align="right" valign="top"><a id="a9b01fa3ee6ed880550a63fee7906f536" name="a9b01fa3ee6ed880550a63fee7906f536"></a>
-template void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::resize</b> (CuHipRngStateData&lt; Ownership::value, MemSpace::device &gt; *, const HostCRef&lt; CuHipRngParamsData &gt; &amp;, size_type)</td></tr>
-<tr class="separator:a9b01fa3ee6ed880550a63fee7906f536"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a912a6687289da7e9d24bc876e25280de"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::resize</b> (CuHipRngStateData&lt; Ownership::value, M &gt; *state, HostCRef&lt; CuHipRngParamsData &gt; const &amp;params, size_type size)</td></tr>
+<tr class="memdesc:a912a6687289da7e9d24bc876e25280de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize and initialize with the seed stored in params. <br /></td></tr>
+<tr class="separator:a912a6687289da7e9d24bc876e25280de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32bce1dd6617445d7ac4152237bce8c4"><td class="memItemLeft" align="right" valign="top"><a id="a32bce1dd6617445d7ac4152237bce8c4" name="a32bce1dd6617445d7ac4152237bce8c4"></a>
+template void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::resize</b> (HostVal&lt; CuHipRngStateData &gt; *, HostCRef&lt; CuHipRngParamsData &gt; const &amp;, size_type)</td></tr>
+<tr class="separator:a32bce1dd6617445d7ac4152237bce8c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9974ca882a5dc1d21500b2487589b1f4"><td class="memItemLeft" align="right" valign="top"><a id="a9974ca882a5dc1d21500b2487589b1f4" name="a9974ca882a5dc1d21500b2487589b1f4"></a>
+template void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::resize</b> (CuHipRngStateData&lt; Ownership::value, MemSpace::device &gt; *, HostCRef&lt; CuHipRngParamsData &gt; const &amp;, size_type)</td></tr>
+<tr class="separator:a9974ca882a5dc1d21500b2487589b1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

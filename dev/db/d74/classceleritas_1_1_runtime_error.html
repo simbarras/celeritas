@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -99,34 +99,37 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>RuntimeError</b> (<a class="el" href="../../df/de4/structceleritas_1_1_runtime_error_details.html">RuntimeErrorDetails</a>)</td></tr>
 <tr class="memdesc:a3c65971e916489a103e5a1b201a57c45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a runtime error from detailed descriptions. <br /></td></tr>
 <tr class="separator:a3c65971e916489a103e5a1b201a57c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab769faa34b022d14054e577d2d44b58c"><td class="memItemLeft" align="right" valign="top"><a id="ab769faa34b022d14054e577d2d44b58c" name="ab769faa34b022d14054e577d2d44b58c"></a>
-const <a class="el" href="../../df/de4/structceleritas_1_1_runtime_error_details.html">RuntimeErrorDetails</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>details</b> () const</td></tr>
-<tr class="memdesc:ab769faa34b022d14054e577d2d44b58c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access detailed information. <br /></td></tr>
-<tr class="separator:ab769faa34b022d14054e577d2d44b58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe84c83672f731b80bbdc5823040eb72"><td class="memItemLeft" align="right" valign="top"><a id="abe84c83672f731b80bbdc5823040eb72" name="abe84c83672f731b80bbdc5823040eb72"></a>
+<a class="el" href="../../df/de4/structceleritas_1_1_runtime_error_details.html">RuntimeErrorDetails</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>details</b> () const</td></tr>
+<tr class="memdesc:abe84c83672f731b80bbdc5823040eb72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access detailed information. <br /></td></tr>
+<tr class="separator:abe84c83672f731b80bbdc5823040eb72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a04166c143322c322f93d77dc0c2fd09b"><td class="memItemLeft" align="right" valign="top"><a id="a04166c143322c322f93d77dc0c2fd09b" name="a04166c143322c322f93d77dc0c2fd09b"></a>
-static <a class="el" href="../../db/d74/classceleritas_1_1_runtime_error.html">RuntimeError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>from_validate</b> (std::string msg, const char *code, const char *file, int line)</td></tr>
-<tr class="memdesc:a04166c143322c322f93d77dc0c2fd09b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a runtime exception from a validation failure. <br /></td></tr>
-<tr class="separator:a04166c143322c322f93d77dc0c2fd09b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf032cf17cf97fd1cb6c3dfd85fd3c8c"><td class="memItemLeft" align="right" valign="top"><a id="abf032cf17cf97fd1cb6c3dfd85fd3c8c" name="abf032cf17cf97fd1cb6c3dfd85fd3c8c"></a>
-static <a class="el" href="../../db/d74/classceleritas_1_1_runtime_error.html">RuntimeError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>from_device_call</b> (const char *error_string, const char *code, const char *file, int line)</td></tr>
-<tr class="memdesc:abf032cf17cf97fd1cb6c3dfd85fd3c8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a runtime exception from a CUDA/HIP runtime failure. <br /></td></tr>
-<tr class="separator:abf032cf17cf97fd1cb6c3dfd85fd3c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add0283253c2a943c47fb1eca2bd02758"><td class="memItemLeft" align="right" valign="top"><a id="add0283253c2a943c47fb1eca2bd02758" name="add0283253c2a943c47fb1eca2bd02758"></a>
-static <a class="el" href="../../db/d74/classceleritas_1_1_runtime_error.html">RuntimeError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>from_mpi_call</b> (int errorcode, const char *code, const char *file, int line)</td></tr>
-<tr class="memdesc:add0283253c2a943c47fb1eca2bd02758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a message and throw an error from a runtime MPI failure. <br /></td></tr>
-<tr class="separator:add0283253c2a943c47fb1eca2bd02758"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acee944f7f8cbbe992d9fc7d9d2eaad55"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d74/classceleritas_1_1_runtime_error.html">RuntimeError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classceleritas_1_1_runtime_error.html#acee944f7f8cbbe992d9fc7d9d2eaad55">from_geant_exception</a> (const char *origin, const char *code, const char *desc)</td></tr>
-<tr class="memdesc:acee944f7f8cbbe992d9fc7d9d2eaad55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an error message from a Geant4 exception.  <a href="../../db/d74/classceleritas_1_1_runtime_error.html#acee944f7f8cbbe992d9fc7d9d2eaad55">More...</a><br /></td></tr>
-<tr class="separator:acee944f7f8cbbe992d9fc7d9d2eaad55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accc69e58dc5ac6e37cf10c43ea2630a8"><td class="memItemLeft" align="right" valign="top"><a id="accc69e58dc5ac6e37cf10c43ea2630a8" name="accc69e58dc5ac6e37cf10c43ea2630a8"></a>
+static <a class="el" href="../../db/d74/classceleritas_1_1_runtime_error.html">RuntimeError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>from_validate</b> (std::string msg, char const *code, char const *file, int line)</td></tr>
+<tr class="memdesc:accc69e58dc5ac6e37cf10c43ea2630a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a runtime exception from a validation failure. <br /></td></tr>
+<tr class="separator:accc69e58dc5ac6e37cf10c43ea2630a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c9aae764c31909d94229e7e26814f8f"><td class="memItemLeft" align="right" valign="top"><a id="a1c9aae764c31909d94229e7e26814f8f" name="a1c9aae764c31909d94229e7e26814f8f"></a>
+static <a class="el" href="../../db/d74/classceleritas_1_1_runtime_error.html">RuntimeError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>from_device_call</b> (char const *error_string, char const *code, char const *file, int line)</td></tr>
+<tr class="memdesc:a1c9aae764c31909d94229e7e26814f8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a runtime exception from a CUDA/HIP runtime failure. <br /></td></tr>
+<tr class="separator:a1c9aae764c31909d94229e7e26814f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b003edcda192c02ff0ce428075bd1d9"><td class="memItemLeft" align="right" valign="top"><a id="a6b003edcda192c02ff0ce428075bd1d9" name="a6b003edcda192c02ff0ce428075bd1d9"></a>
+static <a class="el" href="../../db/d74/classceleritas_1_1_runtime_error.html">RuntimeError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>from_mpi_call</b> (int errorcode, char const *code, char const *file, int line)</td></tr>
+<tr class="memdesc:a6b003edcda192c02ff0ce428075bd1d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a message and throw an error from a runtime MPI failure. <br /></td></tr>
+<tr class="separator:a6b003edcda192c02ff0ce428075bd1d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81817bdcad97a838d999da02900b2a5e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d74/classceleritas_1_1_runtime_error.html">RuntimeError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classceleritas_1_1_runtime_error.html#a81817bdcad97a838d999da02900b2a5e">from_geant_exception</a> (char const *origin, char const *code, char const *desc)</td></tr>
+<tr class="memdesc:a81817bdcad97a838d999da02900b2a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an error message from a Geant4 exception.  <a href="../../db/d74/classceleritas_1_1_runtime_error.html#a81817bdcad97a838d999da02900b2a5e">More...</a><br /></td></tr>
+<tr class="separator:a81817bdcad97a838d999da02900b2a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4af61bb47f7293007755238291c594f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d74/classceleritas_1_1_runtime_error.html">RuntimeError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classceleritas_1_1_runtime_error.html#ab4af61bb47f7293007755238291c594f">from_root_error</a> (char const *origin, char const *msg)</td></tr>
+<tr class="memdesc:ab4af61bb47f7293007755238291c594f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an error message from a Geant4 exception.  <a href="../../db/d74/classceleritas_1_1_runtime_error.html#ab4af61bb47f7293007755238291c594f">More...</a><br /></td></tr>
+<tr class="separator:ab4af61bb47f7293007755238291c594f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Error thrown by working code from unexpected runtime conditions. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="acee944f7f8cbbe992d9fc7d9d2eaad55" name="acee944f7f8cbbe992d9fc7d9d2eaad55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acee944f7f8cbbe992d9fc7d9d2eaad55">&#9670;&#160;</a></span>from_geant_exception()</h2>
+<a id="a81817bdcad97a838d999da02900b2a5e" name="a81817bdcad97a838d999da02900b2a5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81817bdcad97a838d999da02900b2a5e">&#9670;&#160;</a></span>from_geant_exception()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -137,19 +140,19 @@ static <a class="el" href="../../db/d74/classceleritas_1_1_runtime_error.html">R
         <tr>
           <td class="memname"><a class="el" href="../../db/d74/classceleritas_1_1_runtime_error.html">RuntimeError</a> celeritas::RuntimeError::from_geant_exception </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">char const *&#160;</td>
           <td class="paramname"><em>origin</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">char const *&#160;</td>
           <td class="paramname"><em>code</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">char const *&#160;</td>
           <td class="paramname"><em>desc</em>&#160;</td>
         </tr>
         <tr>
@@ -171,6 +174,51 @@ static <a class="el" href="../../db/d74/classceleritas_1_1_runtime_error.html">R
     <tr><td class="paramname">origin</td><td>Usually the function that throws </td></tr>
     <tr><td class="paramname">code</td><td>A computery error code </td></tr>
     <tr><td class="paramname">desc</td><td>Description of the failure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab4af61bb47f7293007755238291c594f" name="ab4af61bb47f7293007755238291c594f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4af61bb47f7293007755238291c594f">&#9670;&#160;</a></span>from_root_error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d74/classceleritas_1_1_runtime_error.html">RuntimeError</a> celeritas::RuntimeError::from_root_error </td>
+          <td>(</td>
+          <td class="paramtype">char const *&#160;</td>
+          <td class="paramname"><em>origin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char const *&#160;</td>
+          <td class="paramname"><em>msg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct an error message from a Geant4 exception. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">origin</td><td>Usually the function that throws </td></tr>
+    <tr><td class="paramname">msg</td><td>Description of the failure </td></tr>
   </table>
   </dd>
 </dl>

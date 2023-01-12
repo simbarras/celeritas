@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -82,6 +82,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d9/d4a/_surface_i_o_8hh.html">SurfaceIO.hh</a>&quot;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;ostream&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../df/dbd/_span_8hh.html">corecel/cont/Span.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d0/d9c/_span_i_o_8hh.html">corecel/cont/SpanIO.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d2/d7f/_cyl_centered_8hh.html">CylCentered.hh</a>&quot;</code><br />
@@ -116,18 +117,18 @@ template std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><
 template std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::operator&lt;&lt;</b> (std::ostream &amp;, const PlaneAligned&lt; Axis::z &gt; &amp;)</td></tr>
 <tr class="separator:a5f34783658be3867253f8c0639983fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a0b097f6907dbfd15dfde02003ec877fc"><td class="memTemplParams" colspan="2">template&lt;Axis T&gt; </td></tr>
-<tr class="memitem:a0b097f6907dbfd15dfde02003ec877fc"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d49/_surface_i_o_8cc.html#a0b097f6907dbfd15dfde02003ec877fc">celeritas::operator&lt;&lt;</a> (std::ostream &amp;os, const CylCentered&lt; T &gt; &amp;s)</td></tr>
-<tr class="separator:a0b097f6907dbfd15dfde02003ec877fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21022486fa80901080707c508f39ec7c"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/_surface_i_o_8cc.html#a21022486fa80901080707c508f39ec7c">celeritas::operator&lt;&lt;</a> (std::ostream &amp;os, const GeneralQuadric &amp;s)</td></tr>
-<tr class="separator:a21022486fa80901080707c508f39ec7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a969efa6e34b9d21f07efa03d69b7c727"><td class="memTemplParams" colspan="2">template&lt;Axis T&gt; </td></tr>
-<tr class="memitem:a969efa6e34b9d21f07efa03d69b7c727"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d49/_surface_i_o_8cc.html#a969efa6e34b9d21f07efa03d69b7c727">celeritas::operator&lt;&lt;</a> (std::ostream &amp;os, const PlaneAligned&lt; T &gt; &amp;s)</td></tr>
-<tr class="separator:a969efa6e34b9d21f07efa03d69b7c727"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae70ae38865dbe5b242fbc33ae9ee72d4"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/_surface_i_o_8cc.html#ae70ae38865dbe5b242fbc33ae9ee72d4">celeritas::operator&lt;&lt;</a> (std::ostream &amp;os, const Sphere &amp;s)</td></tr>
-<tr class="separator:ae70ae38865dbe5b242fbc33ae9ee72d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc54cf8984231e4df07c0947bbec3ea0"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/_surface_i_o_8cc.html#abc54cf8984231e4df07c0947bbec3ea0">celeritas::operator&lt;&lt;</a> (std::ostream &amp;os, const SphereCentered &amp;s)</td></tr>
-<tr class="separator:abc54cf8984231e4df07c0947bbec3ea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae48bf8e8e6650afc6d5d2bef0091b782"><td class="memTemplParams" colspan="2">template&lt;Axis T&gt; </td></tr>
+<tr class="memitem:ae48bf8e8e6650afc6d5d2bef0091b782"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d49/_surface_i_o_8cc.html#ae48bf8e8e6650afc6d5d2bef0091b782">celeritas::operator&lt;&lt;</a> (std::ostream &amp;os, CylCentered&lt; T &gt; const &amp;s)</td></tr>
+<tr class="separator:ae48bf8e8e6650afc6d5d2bef0091b782"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab625707782d2573baf63980890f69827"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/_surface_i_o_8cc.html#ab625707782d2573baf63980890f69827">celeritas::operator&lt;&lt;</a> (std::ostream &amp;os, GeneralQuadric const &amp;s)</td></tr>
+<tr class="separator:ab625707782d2573baf63980890f69827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ada0172512ef101b31b74fa975d7562"><td class="memTemplParams" colspan="2">template&lt;Axis T&gt; </td></tr>
+<tr class="memitem:a5ada0172512ef101b31b74fa975d7562"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d49/_surface_i_o_8cc.html#a5ada0172512ef101b31b74fa975d7562">celeritas::operator&lt;&lt;</a> (std::ostream &amp;os, PlaneAligned&lt; T &gt; const &amp;s)</td></tr>
+<tr class="separator:a5ada0172512ef101b31b74fa975d7562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2dba11c94fa51baf785f35b17221669"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/_surface_i_o_8cc.html#aa2dba11c94fa51baf785f35b17221669">celeritas::operator&lt;&lt;</a> (std::ostream &amp;os, Sphere const &amp;s)</td></tr>
+<tr class="separator:aa2dba11c94fa51baf785f35b17221669"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a735f35bd687b8699a70b82277027fc63"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/_surface_i_o_8cc.html#a735f35bd687b8699a70b82277027fc63">celeritas::operator&lt;&lt;</a> (std::ostream &amp;os, SphereCentered const &amp;s)</td></tr>
+<tr class="separator:a735f35bd687b8699a70b82277027fc63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a5633bd4f81c2db81cfecc7530caa2c82" name="a5633bd4f81c2db81cfecc7530caa2c82"></a>
@@ -152,8 +153,8 @@ template std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a0b097f6907dbfd15dfde02003ec877fc" name="a0b097f6907dbfd15dfde02003ec877fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b097f6907dbfd15dfde02003ec877fc">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/5]</span></h2>
+<a id="ae48bf8e8e6650afc6d5d2bef0091b782" name="ae48bf8e8e6650afc6d5d2bef0091b782"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae48bf8e8e6650afc6d5d2bef0091b782">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,7 +170,7 @@ template&lt;Axis T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d4/dec/classceleritas_1_1_cyl_centered.html">CylCentered</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d4/dec/classceleritas_1_1_cyl_centered.html">CylCentered</a>&lt; T &gt; const &amp;&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -183,8 +184,8 @@ template&lt;Axis T&gt; </div>
 
 </div>
 </div>
-<a id="a21022486fa80901080707c508f39ec7c" name="a21022486fa80901080707c508f39ec7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21022486fa80901080707c508f39ec7c">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[2/5]</span></h2>
+<a id="ab625707782d2573baf63980890f69827" name="ab625707782d2573baf63980890f69827"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab625707782d2573baf63980890f69827">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -198,7 +199,7 @@ template&lt;Axis T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d0/d23/classceleritas_1_1_general_quadric.html">GeneralQuadric</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d0/d23/classceleritas_1_1_general_quadric.html">GeneralQuadric</a> const &amp;&#160;</td>
           <td class="paramname"><em>s</em>&#160;</td>
         </tr>
         <tr>
@@ -212,8 +213,8 @@ template&lt;Axis T&gt; </div>
 
 </div>
 </div>
-<a id="a969efa6e34b9d21f07efa03d69b7c727" name="a969efa6e34b9d21f07efa03d69b7c727"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a969efa6e34b9d21f07efa03d69b7c727">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[3/5]</span></h2>
+<a id="a5ada0172512ef101b31b74fa975d7562" name="a5ada0172512ef101b31b74fa975d7562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ada0172512ef101b31b74fa975d7562">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -229,7 +230,7 @@ template&lt;Axis T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d4/d05/classceleritas_1_1_plane_aligned.html">PlaneAligned</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d4/d05/classceleritas_1_1_plane_aligned.html">PlaneAligned</a>&lt; T &gt; const &amp;&#160;</td>
           <td class="paramname"><em>s</em>&#160;</td>
         </tr>
         <tr>
@@ -243,8 +244,8 @@ template&lt;Axis T&gt; </div>
 
 </div>
 </div>
-<a id="ae70ae38865dbe5b242fbc33ae9ee72d4" name="ae70ae38865dbe5b242fbc33ae9ee72d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae70ae38865dbe5b242fbc33ae9ee72d4">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[4/5]</span></h2>
+<a id="aa2dba11c94fa51baf785f35b17221669" name="aa2dba11c94fa51baf785f35b17221669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2dba11c94fa51baf785f35b17221669">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -258,7 +259,7 @@ template&lt;Axis T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dc/d4f/classceleritas_1_1_sphere.html">Sphere</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dc/d4f/classceleritas_1_1_sphere.html">Sphere</a> const &amp;&#160;</td>
           <td class="paramname"><em>s</em>&#160;</td>
         </tr>
         <tr>
@@ -272,8 +273,8 @@ template&lt;Axis T&gt; </div>
 
 </div>
 </div>
-<a id="abc54cf8984231e4df07c0947bbec3ea0" name="abc54cf8984231e4df07c0947bbec3ea0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc54cf8984231e4df07c0947bbec3ea0">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[5/5]</span></h2>
+<a id="a735f35bd687b8699a70b82277027fc63" name="a735f35bd687b8699a70b82277027fc63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a735f35bd687b8699a70b82277027fc63">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -287,7 +288,7 @@ template&lt;Axis T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dd/d92/classceleritas_1_1_sphere_centered.html">SphereCentered</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dd/d92/classceleritas_1_1_sphere_centered.html">SphereCentered</a> const &amp;&#160;</td>
           <td class="paramname"><em>s</em>&#160;</td>
         </tr>
         <tr>

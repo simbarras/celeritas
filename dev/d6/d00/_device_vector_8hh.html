@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -98,10 +98,10 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:a36a0a9f935b40d099fe01d183092e7c4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::swap</b> (DeviceVector&lt; T &gt; &amp;a, DeviceVector&lt; T &gt; &amp;b) noexcept</td></tr>
 <tr class="memdesc:a36a0a9f935b40d099fe01d183092e7c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap two vectors. <br /></td></tr>
 <tr class="separator:a36a0a9f935b40d099fe01d183092e7c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17d731edebbbccfee2476c1cf318e186"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:a17d731edebbbccfee2476c1cf318e186"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> Span&lt; const T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d00/_device_vector_8hh.html#a17d731edebbbccfee2476c1cf318e186">celeritas::make_span</a> (const DeviceVector&lt; T &gt; &amp;dv)</td></tr>
-<tr class="memdesc:a17d731edebbbccfee2476c1cf318e186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent accidental construction of <a class="el" href="../../dd/d15/classceleritas_1_1_span.html" title="Modified backport of C++20 span.">Span</a> from a device vector.  <a href="../../d6/d00/_device_vector_8hh.html#a17d731edebbbccfee2476c1cf318e186">More...</a><br /></td></tr>
-<tr class="separator:a17d731edebbbccfee2476c1cf318e186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aae7eefd3176883e8136c33bb342c0d"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a8aae7eefd3176883e8136c33bb342c0d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> Span&lt; T const &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d00/_device_vector_8hh.html#a8aae7eefd3176883e8136c33bb342c0d">celeritas::make_span</a> (DeviceVector&lt; T &gt; const &amp;dv)</td></tr>
+<tr class="memdesc:a8aae7eefd3176883e8136c33bb342c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent accidental construction of <a class="el" href="../../dd/d15/classceleritas_1_1_span.html" title="Modified backport of C++20 span.">Span</a> from a device vector.  <a href="../../d6/d00/_device_vector_8hh.html#a8aae7eefd3176883e8136c33bb342c0d">More...</a><br /></td></tr>
+<tr class="separator:a8aae7eefd3176883e8136c33bb342c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa9f03380736b39d232aab620278a878"><td class="memTemplParams" colspan="2"><a id="afa9f03380736b39d232aab620278a878" name="afa9f03380736b39d232aab620278a878"></a>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:afa9f03380736b39d232aab620278a878"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> Span&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::make_span</b> (DeviceVector&lt; T &gt; &amp;dv)</td></tr>
@@ -109,8 +109,8 @@ template&lt;class T &gt; </td></tr>
 <tr class="separator:afa9f03380736b39d232aab620278a878"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a17d731edebbbccfee2476c1cf318e186" name="a17d731edebbbccfee2476c1cf318e186"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17d731edebbbccfee2476c1cf318e186">&#9670;&#160;</a></span>make_span()</h2>
+<a id="a8aae7eefd3176883e8136c33bb342c0d" name="a8aae7eefd3176883e8136c33bb342c0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8aae7eefd3176883e8136c33bb342c0d">&#9670;&#160;</a></span>make_span()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -118,9 +118,9 @@ template&lt;class T &gt; </td></tr>
 template&lt;class T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> Span&lt; const T &gt; celeritas::make_span </td>
+          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> Span&lt; T const  &gt; celeritas::make_span </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d9/d37/classceleritas_1_1_device_vector.html">DeviceVector</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d9/d37/classceleritas_1_1_device_vector.html">DeviceVector</a>&lt; T &gt; const &amp;&#160;</td>
           <td class="paramname"><em>dv</em></td><td>)</td>
           <td></td>
         </tr>

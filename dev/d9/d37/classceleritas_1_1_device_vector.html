@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -93,8 +93,8 @@ Public Types</h2></td></tr>
 <tr class="separator:aa7312c71abc476b1294d5af4ad5cc734"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4726d1ab7e70a7ed5c30369dfe99fe7a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d37/classceleritas_1_1_device_vector.html#a4726d1ab7e70a7ed5c30369dfe99fe7a">SpanT</a> = <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a>&lt; T &gt;</td></tr>
 <tr class="separator:a4726d1ab7e70a7ed5c30369dfe99fe7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2ea181bf995992d20a16207746ba036"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d37/classceleritas_1_1_device_vector.html#ae2ea181bf995992d20a16207746ba036">SpanConstT</a> = <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a>&lt; const T &gt;</td></tr>
-<tr class="separator:ae2ea181bf995992d20a16207746ba036"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a300ff6caf1ef25c9932a7e2e53fb1ce5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d37/classceleritas_1_1_device_vector.html#a300ff6caf1ef25c9932a7e2e53fb1ce5">SpanConstT</a> = <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a>&lt; T const  &gt;</td></tr>
+<tr class="separator:a300ff6caf1ef25c9932a7e2e53fb1ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -115,7 +115,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>empty</b> () const</t
 <tr class="memdesc:abc4079bcdc974feb57004a9e41e99aa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether any elements are stored. <br /></td></tr>
 <tr class="separator:abc4079bcdc974feb57004a9e41e99aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11c64b5a36ea4cd78467d2b4ad6bf1ca"><td class="memItemLeft" align="right" valign="top"><a id="a11c64b5a36ea4cd78467d2b4ad6bf1ca" name="a11c64b5a36ea4cd78467d2b4ad6bf1ca"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>copy_to_device</b> (<a class="el" href="../../d9/d37/classceleritas_1_1_device_vector.html#ae2ea181bf995992d20a16207746ba036">SpanConstT</a> host_data)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>copy_to_device</b> (<a class="el" href="../../d9/d37/classceleritas_1_1_device_vector.html#a300ff6caf1ef25c9932a7e2e53fb1ce5">SpanConstT</a> host_data)</td></tr>
 <tr class="memdesc:a11c64b5a36ea4cd78467d2b4ad6bf1ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy data to device. <br /></td></tr>
 <tr class="separator:a11c64b5a36ea4cd78467d2b4ad6bf1ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a374c11b2348b1a5c6ddb3ed0338add4a"><td class="memItemLeft" align="right" valign="top"><a id="a374c11b2348b1a5c6ddb3ed0338add4a" name="a374c11b2348b1a5c6ddb3ed0338add4a"></a>
@@ -126,16 +126,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>copy_to_host</b> (<a 
 <a class="el" href="../../d9/d37/classceleritas_1_1_device_vector.html#a4726d1ab7e70a7ed5c30369dfe99fe7a">SpanT</a>&#160;</td><td class="memItemRight" valign="bottom"><b>device_ref</b> ()</td></tr>
 <tr class="separator:aac3e37d1ef71a867c140d0ddeb061085"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dc7006a2a5f7d9865164818898dc3f3"><td class="memItemLeft" align="right" valign="top"><a id="a3dc7006a2a5f7d9865164818898dc3f3" name="a3dc7006a2a5f7d9865164818898dc3f3"></a>
-<a class="el" href="../../d9/d37/classceleritas_1_1_device_vector.html#ae2ea181bf995992d20a16207746ba036">SpanConstT</a>&#160;</td><td class="memItemRight" valign="bottom"><b>device_ref</b> () const</td></tr>
+<a class="el" href="../../d9/d37/classceleritas_1_1_device_vector.html#a300ff6caf1ef25c9932a7e2e53fb1ce5">SpanConstT</a>&#160;</td><td class="memItemRight" valign="bottom"><b>device_ref</b> () const</td></tr>
 <tr class="separator:a3dc7006a2a5f7d9865164818898dc3f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fcbb3142d859ad5ba7d28fe662bcd14"><td class="memItemLeft" align="right" valign="top"><a id="a7fcbb3142d859ad5ba7d28fe662bcd14" name="a7fcbb3142d859ad5ba7d28fe662bcd14"></a>
 T *&#160;</td><td class="memItemRight" valign="bottom"><b>data</b> ()</td></tr>
 <tr class="memdesc:a7fcbb3142d859ad5ba7d28fe662bcd14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a device data pointer. <br /></td></tr>
 <tr class="separator:a7fcbb3142d859ad5ba7d28fe662bcd14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79fa27f0bd576e4591e1e9ac20258e80"><td class="memItemLeft" align="right" valign="top"><a id="a79fa27f0bd576e4591e1e9ac20258e80" name="a79fa27f0bd576e4591e1e9ac20258e80"></a>
-const T *&#160;</td><td class="memItemRight" valign="bottom"><b>data</b> () const</td></tr>
-<tr class="memdesc:a79fa27f0bd576e4591e1e9ac20258e80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a device data pointer. <br /></td></tr>
-<tr class="separator:a79fa27f0bd576e4591e1e9ac20258e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae827bd6c822bd5eb3d50d3a0145e5c71"><td class="memItemLeft" align="right" valign="top"><a id="ae827bd6c822bd5eb3d50d3a0145e5c71" name="ae827bd6c822bd5eb3d50d3a0145e5c71"></a>
+T const *&#160;</td><td class="memItemRight" valign="bottom"><b>data</b> () const</td></tr>
+<tr class="memdesc:ae827bd6c822bd5eb3d50d3a0145e5c71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a device data pointer. <br /></td></tr>
+<tr class="separator:ae827bd6c822bd5eb3d50d3a0145e5c71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
@@ -147,8 +147,8 @@ class celeritas::DeviceVector&lt; T &gt;</div><p >Host-compiler-friendly vector 
 <div class="ttc" id="a_span_8hh_html_aa3914a552c14b3098d4efe9b4ce0dda4"><div class="ttname"><a href="../../df/dbd/_span_8hh.html#aa3914a552c14b3098d4efe9b4ce0dda4">celeritas::make_span</a></div><div class="ttdeci">CELER_CONSTEXPR_FUNCTION Span&lt; T, N &gt; make_span(Array&lt; T, N &gt; &amp;x)</div><div class="ttdoc">Get a mutable fixed-size view to an array.</div><div class="ttdef"><b>Definition:</b> Span.hh:184</div></div>
 <div class="ttc" id="aclassceleritas_1_1_device_vector_html"><div class="ttname"><a href="../../d9/d37/classceleritas_1_1_device_vector.html">celeritas::DeviceVector</a></div><div class="ttdoc">Host-compiler-friendly vector for uninitialized device-storage data.</div><div class="ttdef"><b>Definition:</b> DeviceVector.hh:36</div></div>
 </div><!-- fragment --> </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ae2ea181bf995992d20a16207746ba036" name="ae2ea181bf995992d20a16207746ba036"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2ea181bf995992d20a16207746ba036">&#9670;&#160;</a></span>SpanConstT</h2>
+<a id="a300ff6caf1ef25c9932a7e2e53fb1ce5" name="a300ff6caf1ef25c9932a7e2e53fb1ce5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a300ff6caf1ef25c9932a7e2e53fb1ce5">&#9670;&#160;</a></span>SpanConstT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -156,7 +156,7 @@ class celeritas::DeviceVector&lt; T &gt;</div><p >Host-compiler-friendly vector 
 template&lt;class T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d9/d37/classceleritas_1_1_device_vector.html">celeritas::DeviceVector</a>&lt; T &gt;::SpanConstT =  <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a>&lt;const T&gt;</td>
+          <td class="memname">using <a class="el" href="../../d9/d37/classceleritas_1_1_device_vector.html">celeritas::DeviceVector</a>&lt; T &gt;::SpanConstT =  <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a>&lt;T const&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

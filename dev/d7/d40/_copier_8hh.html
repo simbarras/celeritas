@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -81,6 +81,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d10/_assert_8hh.html">corecel/Assert.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html">corecel/Types.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../df/dbd/_span_8hh.html">corecel/cont/Span.hh</a>&quot;</code><br />
@@ -93,10 +94,10 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a76c57edcef56541c7c9d43c3a287d628"><td class="memItemLeft" align="right" valign="top"><a id="a76c57edcef56541c7c9d43c3a287d628" name="a76c57edcef56541c7c9d43c3a287d628"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::copy_bytes</b> (MemSpace dstmem, void *dst, MemSpace srcmem, const void *src, std::size_t count)</td></tr>
-<tr class="memdesc:a76c57edcef56541c7c9d43c3a287d628"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a memcpy on the data. <br /></td></tr>
-<tr class="separator:a76c57edcef56541c7c9d43c3a287d628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab073ca79f3bee0927e571891530f43e8"><td class="memItemLeft" align="right" valign="top"><a id="ab073ca79f3bee0927e571891530f43e8" name="ab073ca79f3bee0927e571891530f43e8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::copy_bytes</b> (MemSpace dstmem, void *dst, MemSpace srcmem, void const *src, std::size_t count)</td></tr>
+<tr class="memdesc:ab073ca79f3bee0927e571891530f43e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a memcpy on the data. <br /></td></tr>
+<tr class="separator:ab073ca79f3bee0927e571891530f43e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

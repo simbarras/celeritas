@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -83,6 +83,7 @@ $(function() {
 <div class="textblock"><code>#include &lt;cmath&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d10/_assert_8hh.html">corecel/Assert.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../db/dc5/_macros_8hh.html">corecel/Macros.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/dee/_algorithms_8hh.html">corecel/math/Algorithms.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d2/d78/_numeric_limits_8hh.html">corecel/math/NumericLimits.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d6/d22/_volume_view_8hh.html">../VolumeView.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../de/d31/orange_2univ_2detail_2_types_8hh.html">Types.hh</a>&quot;</code><br />
@@ -95,17 +96,20 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6d/classceleritas_1_1detail_1_1_is_not_further_than.html">celeritas::detail::IsNotFurtherThan</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predicate for selecting distances closer to or equal to a maximum.  <a href="../../d0/d6d/classceleritas_1_1detail_1_1_is_not_further_than.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da6/classceleritas_1_1detail_1_1_bump_calculator.html">celeritas::detail::BumpCalculator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the bump distance for a position.  <a href="../../d3/da6/classceleritas_1_1detail_1_1_bump_calculator.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4ee0a4b4b32d2e8e2c446c27cf539157"><td class="memItemLeft" align="right" valign="top"><a id="a4ee0a4b4b32d2e8e2c446c27cf539157" name="a4ee0a4b4b32d2e8e2c446c27cf539157"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> OnFace&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::find_face</b> (const VolumeView &amp;vol, OnSurface surf)</td></tr>
-<tr class="memdesc:a4ee0a4b4b32d2e8e2c446c27cf539157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an OnSurface (may be null) to an OnFace using a volume view. <br /></td></tr>
-<tr class="separator:a4ee0a4b4b32d2e8e2c446c27cf539157"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9651f6da75072df7b6599f8b28760ac2"><td class="memItemLeft" align="right" valign="top"><a id="a9651f6da75072df7b6599f8b28760ac2" name="a9651f6da75072df7b6599f8b28760ac2"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> OnSurface&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::get_surface</b> (const VolumeView &amp;vol, OnFace face)</td></tr>
-<tr class="memdesc:a9651f6da75072df7b6599f8b28760ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an OnFace (may be null) to an OnSurface using a volume view. <br /></td></tr>
-<tr class="separator:a9651f6da75072df7b6599f8b28760ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13f56ac7df045f3ceb2d3137a17b4f71"><td class="memItemLeft" align="right" valign="top"><a id="a13f56ac7df045f3ceb2d3137a17b4f71" name="a13f56ac7df045f3ceb2d3137a17b4f71"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> OnFace&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::find_face</b> (VolumeView const &amp;vol, OnSurface surf)</td></tr>
+<tr class="memdesc:a13f56ac7df045f3ceb2d3137a17b4f71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an OnSurface (may be null) to an OnFace using a volume view. <br /></td></tr>
+<tr class="separator:a13f56ac7df045f3ceb2d3137a17b4f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a393fbd85fe27c19b5bd4cd5b95ffb5c8"><td class="memItemLeft" align="right" valign="top"><a id="a393fbd85fe27c19b5bd4cd5b95ffb5c8" name="a393fbd85fe27c19b5bd4cd5b95ffb5c8"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> OnSurface&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::get_surface</b> (VolumeView const &amp;vol, OnFace face)</td></tr>
+<tr class="memdesc:a393fbd85fe27c19b5bd4cd5b95ffb5c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an OnFace (may be null) to an OnSurface using a volume view. <br /></td></tr>
+<tr class="separator:a393fbd85fe27c19b5bd4cd5b95ffb5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

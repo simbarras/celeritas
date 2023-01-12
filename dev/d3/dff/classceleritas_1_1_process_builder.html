@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -91,39 +91,131 @@ $(function() {
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d68/structceleritas_1_1_process_builder_1_1_options.html">Options</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/da0/structceleritas_1_1_process_builder_1_1_user_build_input.html">UserBuildInput</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input argument for user-provided process construction.  <a href="../../d0/da0/structceleritas_1_1_process_builder_1_1_user_build_input.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a7de29e525f36c0439f28c87dbe2827cb"><td class="memItemLeft" align="right" valign="top"><a id="a7de29e525f36c0439f28c87dbe2827cb" name="a7de29e525f36c0439f28c87dbe2827cb"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>IPC</b> = <a class="el" href="../../de/de8/_import_process_8hh.html#aee9f70862dd95ace9074262973ad3904">ImportProcessClass</a></td></tr>
+<tr class="separator:a7de29e525f36c0439f28c87dbe2827cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ef2d594a76cb7aa356fb3e1b12dca26"><td class="memItemLeft" align="right" valign="top"><a id="a5ef2d594a76cb7aa356fb3e1b12dca26" name="a5ef2d594a76cb7aa356fb3e1b12dca26"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>SPProcess</b> = std::shared_ptr&lt; <a class="el" href="../../de/db8/classceleritas_1_1_process.html">Process</a> &gt;</td></tr>
 <tr class="separator:a5ef2d594a76cb7aa356fb3e1b12dca26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99f4d0ab27c4eba5fa55129f38c53bbf"><td class="memItemLeft" align="right" valign="top"><a id="a99f4d0ab27c4eba5fa55129f38c53bbf" name="a99f4d0ab27c4eba5fa55129f38c53bbf"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstParticle</b> = std::shared_ptr&lt; const <a class="el" href="../../d8/d0b/classceleritas_1_1_particle_params.html">ParticleParams</a> &gt;</td></tr>
-<tr class="separator:a99f4d0ab27c4eba5fa55129f38c53bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0d60cd153eee1498cd91c814fa9b804"><td class="memItemLeft" align="right" valign="top"><a id="ab0d60cd153eee1498cd91c814fa9b804" name="ab0d60cd153eee1498cd91c814fa9b804"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstMaterial</b> = std::shared_ptr&lt; const <a class="el" href="../../df/d18/classceleritas_1_1_material_params.html">MaterialParams</a> &gt;</td></tr>
-<tr class="separator:ab0d60cd153eee1498cd91c814fa9b804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b8bc347f5fc3550aabf451234fa34f8"><td class="memItemLeft" align="right" valign="top"><a id="a2b8bc347f5fc3550aabf451234fa34f8" name="a2b8bc347f5fc3550aabf451234fa34f8"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstParticle</b> = std::shared_ptr&lt; <a class="el" href="../../d8/d0b/classceleritas_1_1_particle_params.html">ParticleParams</a> const  &gt;</td></tr>
+<tr class="separator:a2b8bc347f5fc3550aabf451234fa34f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8b3fbe671108648332e3fc1413241b2"><td class="memItemLeft" align="right" valign="top"><a id="ae8b3fbe671108648332e3fc1413241b2" name="ae8b3fbe671108648332e3fc1413241b2"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstMaterial</b> = std::shared_ptr&lt; <a class="el" href="../../df/d18/classceleritas_1_1_material_params.html">MaterialParams</a> const  &gt;</td></tr>
+<tr class="separator:ae8b3fbe671108648332e3fc1413241b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a350c1e003f9ab1acccffb8b0f2cdba8b"><td class="memItemLeft" align="right" valign="top"><a id="a350c1e003f9ab1acccffb8b0f2cdba8b" name="a350c1e003f9ab1acccffb8b0f2cdba8b"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstImported</b> = std::shared_ptr&lt; <a class="el" href="../../d6/d48/classceleritas_1_1_imported_processes.html">ImportedProcesses</a> const  &gt;</td></tr>
+<tr class="separator:a350c1e003f9ab1acccffb8b0f2cdba8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">User builder type aliases</div></td></tr>
+<tr class="memitem:a3953df64bf86d38d9be91eed4b05c05b"><td class="memItemLeft" align="right" valign="top"><a id="a3953df64bf86d38d9be91eed4b05c05b" name="a3953df64bf86d38d9be91eed4b05c05b"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>UserBuildFunction</b> = std::function&lt; SPProcess(<a class="el" href="../../d0/da0/structceleritas_1_1_process_builder_1_1_user_build_input.html">UserBuildInput</a> const  &amp;)&gt;</td></tr>
+<tr class="separator:a3953df64bf86d38d9be91eed4b05c05b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8095c66f058804c3a8ecb10e2b7647af"><td class="memItemLeft" align="right" valign="top"><a id="a8095c66f058804c3a8ecb10e2b7647af" name="a8095c66f058804c3a8ecb10e2b7647af"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>UserBuildMap</b> = std::unordered_map&lt; <a class="el" href="../../de/de8/_import_process_8hh.html#aee9f70862dd95ace9074262973ad3904">IPC</a>, UserBuildFunction &gt;</td></tr>
+<tr class="separator:a8095c66f058804c3a8ecb10e2b7647af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aeb53573d118ce679e55405b7ee0023b7"><td class="memItemLeft" align="right" valign="top"><a id="aeb53573d118ce679e55405b7ee0023b7" name="aeb53573d118ce679e55405b7ee0023b7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessBuilder</b> (const <a class="el" href="../../d2/dd6/structceleritas_1_1_import_data.html">ImportData</a> &amp;data, <a class="el" href="../../df/d68/structceleritas_1_1_process_builder_1_1_options.html">Options</a> options, SPConstParticle particle, SPConstMaterial material)</td></tr>
-<tr class="memdesc:aeb53573d118ce679e55405b7ee0023b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct imported process data. <br /></td></tr>
-<tr class="separator:aeb53573d118ce679e55405b7ee0023b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e3a8d2329d86b5fc6e58f6154924a6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dff/classceleritas_1_1_process_builder.html#a0e3a8d2329d86b5fc6e58f6154924a6d">ProcessBuilder</a> (<a class="el" href="../../d2/dd6/structceleritas_1_1_import_data.html">ImportData</a> const &amp;data, SPConstParticle particle, SPConstMaterial material, UserBuildMap user_build, <a class="el" href="../../df/d68/structceleritas_1_1_process_builder_1_1_options.html">Options</a> options)</td></tr>
+<tr class="memdesc:a0e3a8d2329d86b5fc6e58f6154924a6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct imported process data.  <a href="../../d3/dff/classceleritas_1_1_process_builder.html#a0e3a8d2329d86b5fc6e58f6154924a6d">More...</a><br /></td></tr>
+<tr class="separator:a0e3a8d2329d86b5fc6e58f6154924a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0be056f07747af34b110172a5f3f7587"><td class="memItemLeft" align="right" valign="top"><a id="a0be056f07747af34b110172a5f3f7587" name="a0be056f07747af34b110172a5f3f7587"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessBuilder</b> (<a class="el" href="../../d2/dd6/structceleritas_1_1_import_data.html">ImportData</a> const &amp;data, SPConstParticle particle, SPConstMaterial material, <a class="el" href="../../df/d68/structceleritas_1_1_process_builder_1_1_options.html">Options</a> options)</td></tr>
+<tr class="memdesc:a0be056f07747af34b110172a5f3f7587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct without custom user builders. <br /></td></tr>
+<tr class="separator:a0be056f07747af34b110172a5f3f7587"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1acba9c5a3ccef67c5aa86c984a7b350"><td class="memItemLeft" align="right" valign="top"><a id="a1acba9c5a3ccef67c5aa86c984a7b350" name="a1acba9c5a3ccef67c5aa86c984a7b350"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~ProcessBuilder</b> ()</td></tr>
 <tr class="memdesc:a1acba9c5a3ccef67c5aa86c984a7b350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor. <br /></td></tr>
 <tr class="separator:a1acba9c5a3ccef67c5aa86c984a7b350"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6408acc4bcbddcfc8bd8bf6dbd36cd13"><td class="memItemLeft" align="right" valign="top"><a id="a6408acc4bcbddcfc8bd8bf6dbd36cd13" name="a6408acc4bcbddcfc8bd8bf6dbd36cd13"></a>
-SPProcess&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="../../de/de8/_import_process_8hh.html#aee9f70862dd95ace9074262973ad3904">ImportProcessClass</a> ipc)</td></tr>
-<tr class="memdesc:a6408acc4bcbddcfc8bd8bf6dbd36cd13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <code><a class="el" href="../../de/db8/classceleritas_1_1_process.html" title="An interface/factory method for creating models.">Process</a></code> from a given processs class. <br /></td></tr>
-<tr class="separator:a6408acc4bcbddcfc8bd8bf6dbd36cd13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57f96faab4261c81640da82d51aedf44"><td class="memItemLeft" align="right" valign="top">SPProcess&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dff/classceleritas_1_1_process_builder.html#a57f96faab4261c81640da82d51aedf44">operator()</a> (<a class="el" href="../../de/de8/_import_process_8hh.html#aee9f70862dd95ace9074262973ad3904">IPC</a> ipc)</td></tr>
+<tr class="memdesc:a57f96faab4261c81640da82d51aedf44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <code><a class="el" href="../../de/db8/classceleritas_1_1_process.html" title="An interface/factory method for creating models.">Process</a></code> from a given processs class.  <a href="../../d3/dff/classceleritas_1_1_process_builder.html#a57f96faab4261c81640da82d51aedf44">More...</a><br /></td></tr>
+<tr class="separator:a57f96faab4261c81640da82d51aedf44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Construct Celeritas EM processes from imported data. </p>
-<p >Note that imported data may have multiple duplicate "process" entries, one per particle type. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<p >This factory class has a hardcoded map that takes a <code>ImportProcessClass</code> and constructs a built-in EM process (which will then build corresponding models). This map can be overridden or extended by the <code>user_build</code> constructor argument, which is a mapping of process class to user-supplied factory functions.</p>
+<p >The function can return a null process pointer (in which case the caller <em>must</em> ignore it) to indicate that a process should be deliberately omitted from Celeritas. This can be used to (for example) skip very-high-energy processes if Celeritas offloads only tracks below some energy cutoff. See <code><a class="el" href="../../da/d7a/structceleritas_1_1_warn_and_ignore_process.html" title="Warn about a missing process and deliberately skip it.">WarnAndIgnoreProcess</a></code> below for a helper function for this purpose.</p>
+<dl class="section note"><dt>Note</dt><dd>Imported data may have multiple duplicate "process" entries, one per particle type, because that's how Geant4 manages processes. </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a0e3a8d2329d86b5fc6e58f6154924a6d" name="a0e3a8d2329d86b5fc6e58f6154924a6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e3a8d2329d86b5fc6e58f6154924a6d">&#9670;&#160;</a></span>ProcessBuilder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">celeritas::ProcessBuilder::ProcessBuilder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/dd6/structceleritas_1_1_import_data.html">ImportData</a> const &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SPConstParticle&#160;</td>
+          <td class="paramname"><em>particle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SPConstMaterial&#160;</td>
+          <td class="paramname"><em>material</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UserBuildMap&#160;</td>
+          <td class="paramname"><em>user_build</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/d68/structceleritas_1_1_process_builder_1_1_options.html">Options</a>&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct imported process data. </p>
+<dl class="section warning"><dt>Warning</dt><dd>If Livermore and SB data is present in the import data, their lifetime must extend beyond the <code><a class="el" href="../../d3/dff/classceleritas_1_1_process_builder.html" title="Construct Celeritas EM processes from imported data.">ProcessBuilder</a></code> instance. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a57f96faab4261c81640da82d51aedf44" name="a57f96faab4261c81640da82d51aedf44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57f96faab4261c81640da82d51aedf44">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto celeritas::ProcessBuilder::operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/de8/_import_process_8hh.html#aee9f70862dd95ace9074262973ad3904">IPC</a>&#160;</td>
+          <td class="paramname"><em>ipc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a <code><a class="el" href="../../de/db8/classceleritas_1_1_process.html" title="An interface/factory method for creating models.">Process</a></code> from a given processs class. </p>
+<p >This may return a null process (with a warning) if the user specifically </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../d2/d73/_process_builder_8hh.html">ProcessBuilder.hh</a></li>
 <li><a class="el" href="../../db/d2f/_process_builder_8cc.html">ProcessBuilder.cc</a></li>
 </ul>

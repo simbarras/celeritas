@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -82,6 +82,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;iomanip&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 <code>#include &lt;type_traits&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d10/_assert_8hh.html">corecel/Assert.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d3/dc8/_scoped_stream_format_8hh.html">corecel/io/ScopedStreamFormat.hh</a>&quot;</code><br />
@@ -94,11 +95,11 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a859ddc43aad6411f854aee4a892f3578"><td class="memTemplParams" colspan="2"><a id="a859ddc43aad6411f854aee4a892f3578" name="a859ddc43aad6411f854aee4a892f3578"></a>
+<tr class="memitem:a4005811185912dbca46070c551981987"><td class="memTemplParams" colspan="2"><a id="a4005811185912dbca46070c551981987" name="a4005811185912dbca46070c551981987"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:a859ddc43aad6411f854aee4a892f3578"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::detail::operator&lt;&lt;</b> (std::ostream &amp;os, const Repr&lt; T &gt; &amp;s)</td></tr>
-<tr class="memdesc:a859ddc43aad6411f854aee4a892f3578"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a streamable object to a stream. <br /></td></tr>
-<tr class="separator:a859ddc43aad6411f854aee4a892f3578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4005811185912dbca46070c551981987"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::detail::operator&lt;&lt;</b> (std::ostream &amp;os, Repr&lt; T &gt; const &amp;s)</td></tr>
+<tr class="memdesc:a4005811185912dbca46070c551981987"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a streamable object to a stream. <br /></td></tr>
+<tr class="separator:a4005811185912dbca46070c551981987"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83a58860ec65141556108cc7e120fbd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d71/_repr_impl_8cc.html#a83a58860ec65141556108cc7e120fbd3">celeritas::detail::repr_char</a> (std::ostream &amp;os, char value)</td></tr>
 <tr class="memdesc:a83a58860ec65141556108cc7e120fbd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a character as a hex representation.  <a href="../../db/d71/_repr_impl_8cc.html#a83a58860ec65141556108cc7e120fbd3">More...</a><br /></td></tr>
 <tr class="separator:a83a58860ec65141556108cc7e120fbd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -106,14 +107,14 @@ template&lt;class T &gt; </td></tr>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::char_to_hex_string</b> (unsigned char value)</td></tr>
 <tr class="memdesc:a3535d60e03bbd4c6fbd4324d1fdc2459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a character as a two-digit hexadecimal like '0a'. <br /></td></tr>
 <tr class="separator:a3535d60e03bbd4c6fbd4324d1fdc2459"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a657cb8ba7471268faf4643e4503e18f7"><td class="memItemLeft" align="right" valign="top"><a id="a657cb8ba7471268faf4643e4503e18f7" name="a657cb8ba7471268faf4643e4503e18f7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::print_simple_type</b> (std::ostream &amp;os, const char *type, const char *name)</td></tr>
-<tr class="memdesc:a657cb8ba7471268faf4643e4503e18f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a type string to the stream. <br /></td></tr>
-<tr class="separator:a657cb8ba7471268faf4643e4503e18f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add3f5d2593bbd288a0c7aed3b60f44c9"><td class="memTemplParams" colspan="2"><a id="add3f5d2593bbd288a0c7aed3b60f44c9" name="add3f5d2593bbd288a0c7aed3b60f44c9"></a>
+<tr class="memitem:a762f87f15b9ddd0de5b27ffa5d2fb8b0"><td class="memItemLeft" align="right" valign="top"><a id="a762f87f15b9ddd0de5b27ffa5d2fb8b0" name="a762f87f15b9ddd0de5b27ffa5d2fb8b0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::print_simple_type</b> (std::ostream &amp;os, char const *type, char const *name)</td></tr>
+<tr class="memdesc:a762f87f15b9ddd0de5b27ffa5d2fb8b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a type string to the stream. <br /></td></tr>
+<tr class="separator:a762f87f15b9ddd0de5b27ffa5d2fb8b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a344a5dc25f965adb6627be707e4c8078"><td class="memTemplParams" colspan="2"><a id="a344a5dc25f965adb6627be707e4c8078" name="a344a5dc25f965adb6627be707e4c8078"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:add3f5d2593bbd288a0c7aed3b60f44c9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::detail::print_container_type</b> (std::ostream &amp;os, const char *type, const char *name)</td></tr>
-<tr class="separator:add3f5d2593bbd288a0c7aed3b60f44c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a344a5dc25f965adb6627be707e4c8078"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::detail::print_container_type</b> (std::ostream &amp;os, char const *type, char const *name)</td></tr>
+<tr class="separator:a344a5dc25f965adb6627be707e4c8078"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a83a58860ec65141556108cc7e120fbd3" name="a83a58860ec65141556108cc7e120fbd3"></a>

@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -73,12 +73,16 @@ $(function() {
   <div class="headertitle"><div class="title">/Users/seth/.local/src/celeritas-temp/src/celeritas/field/MakeMagFieldPropagator.hh</div></div>
 </div><!--header-->
 <div class="contents">
-<p >Create a stepper for a charge in a magnetic field.</p>
-<p >Create a stepper for a charge in a magnetic field.</p><div class="fragment"><div class="line"><span class="keyword">auto</span> step = make_stepper&lt;DormandPrinceStepper&gt;(</div>
+<p >Create a magnetic field propagator.</p>
+<p >Create a magnetic field propagator.</p><div class="fragment"><div class="line">FieldDriverOptions driver_options,</div>
+<div class="line"><span class="keyword">auto</span> propagate = make_mag_field_propagator&lt;DormandPrinceStepper&gt;(</div>
 <div class="line">   UniformField{{1, 2, 3}},</div>
-<div class="line">   particle.charge());</div>
+<div class="line">   driver_options,</div>
+<div class="line">   particle,</div>
+<div class="line">   &amp;geo);</div>
+<div class="line">propagate(0.123);</div>
 </div><!-- fragment --><div class="fragment"><div class="line"><span class="comment">//----------------------------------*-C++-*----------------------------------//</span></div>
-<div class="line"><span class="comment">// Copyright 2022 UT-Battelle, LLC, and other Celeritas developers.</span></div>
+<div class="line"><span class="comment">// Copyright 2022-2023 UT-Battelle, LLC, and other Celeritas developers.</span></div>
 <div class="line"><span class="comment">// See the top-level COPYRIGHT file for details.</span></div>
 <div class="line"><span class="comment">// SPDX-License-Identifier: (Apache-2.0 OR MIT)</span></div>
 <div class="line"><span class="comment">//---------------------------------------------------------------------------//</span></div>
@@ -99,7 +103,7 @@ $(function() {
 <div class="line"><span class="comment">//---------------------------------------------------------------------------//</span></div>
 <div class="line"><span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">template</span>&lt;<span class="keyword">class</span> EquationT&gt; <span class="keyword">class </span>StepperT, <span class="keyword">class </span>FieldT&gt;</div>
 <div class="line"><a id="a0" name="a0"></a><a class="code hl_define" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <span class="keyword">decltype</span>(<span class="keyword">auto</span>)</div>
-<div class="line">make_mag_field_stepper(FieldT&amp;&amp; field, <a id="a1" name="a1"></a>units::ElementaryCharge charge)</div>
+<div class="line"><a id="a1" name="a1"></a>make_mag_field_stepper(FieldT&amp;&amp; field, units::ElementaryCharge charge)</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">using </span>Equation_t = MagFieldEquation&lt;FieldT&gt;;</div>
 <div class="line">    <span class="keywordflow">return</span> StepperT&lt;Equation_t&gt;{</div>
@@ -109,12 +113,12 @@ $(function() {
 <div class="line"><span class="comment">//---------------------------------------------------------------------------//</span></div>
 <div class="line"><span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">class</span> StepperT&gt;</div>
 <div class="line"><a class="code hl_define" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <span class="keyword">decltype</span>(<span class="keyword">auto</span>)</div>
-<div class="line">make_field_propagator(StepperT&amp;&amp;                stepper,</div>
-<div class="line">                      <span class="keyword">const</span> FieldDriverOptions&amp; options,</div>
-<div class="line">                      <span class="keyword">const</span> ParticleTrackView&amp;  particle,</div>
-<div class="line">                      GeoTrackView*             geometry)</div>
+<div class="line"><a id="a2" name="a2"></a>make_field_propagator(StepperT&amp;&amp; stepper,</div>
+<div class="line">                      FieldDriverOptions <span class="keyword">const</span>&amp; options,</div>
+<div class="line">                      ParticleTrackView <span class="keyword">const</span>&amp; particle,</div>
+<div class="line">                      GeoTrackView* geometry)</div>
 <div class="line">{</div>
-<div class="line">    <a id="a2" name="a2"></a><a class="code hl_define" href="../../d5/d10/_assert_8hh.html#a663caefcbb80dac28726e6d711f5bb09">CELER_ASSERT</a>(geometry);</div>
+<div class="line">    <a id="a3" name="a3"></a><a class="code hl_define" href="../../d5/d10/_assert_8hh.html#a663caefcbb80dac28726e6d711f5bb09">CELER_ASSERT</a>(geometry);</div>
 <div class="line">    <span class="keyword">using </span>Driver_t = FieldDriver&lt;StepperT&gt;;</div>
 <div class="line">    <span class="keywordflow">return</span> FieldPropagator&lt;Driver_t&gt;{</div>
 <div class="line">        Driver_t{options, ::celeritas::forward&lt;StepperT&gt;(stepper)},</div>
@@ -125,10 +129,10 @@ $(function() {
 <div class="line"><span class="comment">//---------------------------------------------------------------------------//</span></div>
 <div class="line"><span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">template</span>&lt;<span class="keyword">class</span> EquationT&gt; <span class="keyword">class </span>StepperT, <span class="keyword">class </span>FieldT&gt;</div>
 <div class="line"><a class="code hl_define" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <span class="keyword">decltype</span>(<span class="keyword">auto</span>)</div>
-<div class="line">make_mag_field_propagator(FieldT&amp;&amp;                  field,</div>
-<div class="line">                          <span class="keyword">const</span> FieldDriverOptions&amp; options,</div>
-<div class="line">                          <span class="keyword">const</span> ParticleTrackView&amp;  particle,</div>
-<div class="line">                          GeoTrackView*             geometry)</div>
+<div class="line">make_mag_field_propagator(FieldT&amp;&amp; field,</div>
+<div class="line">                          FieldDriverOptions <span class="keyword">const</span>&amp; options,</div>
+<div class="line">                          ParticleTrackView <span class="keyword">const</span>&amp; particle,</div>
+<div class="line">                          GeoTrackView* geometry)</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">return</span> make_field_propagator(</div>
 <div class="line">        make_mag_field_stepper&lt;StepperT&gt;(::celeritas::forward&lt;FieldT&gt;(field),</div>
@@ -139,14 +143,14 @@ $(function() {
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">//---------------------------------------------------------------------------//</span></div>
-<div class="line">} <span class="comment">// namespace celeritas</span></div>
+<div class="line">}  <span class="comment">// namespace celeritas</span></div>
 <div class="ttc" id="a_algorithms_8hh_html"><div class="ttname"><a href="../../d1/dee/_algorithms_8hh.html">Algorithms.hh</a></div></div>
-<div class="ttc" id="a_assert_8hh_html_a663caefcbb80dac28726e6d711f5bb09"><div class="ttname"><a href="../../d5/d10/_assert_8hh.html#a663caefcbb80dac28726e6d711f5bb09">CELER_ASSERT</a></div><div class="ttdeci">#define CELER_ASSERT(COND)</div><div class="ttdoc">Internal debug assertion macro.</div><div class="ttdef"><b>Definition:</b> Assert.hh:194</div></div>
+<div class="ttc" id="a_assert_8hh_html_a663caefcbb80dac28726e6d711f5bb09"><div class="ttname"><a href="../../d5/d10/_assert_8hh.html#a663caefcbb80dac28726e6d711f5bb09">CELER_ASSERT</a></div><div class="ttdeci">#define CELER_ASSERT(COND)</div><div class="ttdoc">Internal debug assertion macro.</div><div class="ttdef"><b>Definition:</b> Assert.hh:163</div></div>
 <div class="ttc" id="a_field_driver_8hh_html"><div class="ttname"><a href="../../dc/d32/_field_driver_8hh.html">FieldDriver.hh</a></div></div>
 <div class="ttc" id="a_field_propagator_8hh_html"><div class="ttname"><a href="../../d9/dd2/_field_propagator_8hh.html">FieldPropagator.hh</a></div></div>
 <div class="ttc" id="a_geo_track_view_8hh_html"><div class="ttname"><a href="../../da/d15/_geo_track_view_8hh.html">GeoTrackView.hh</a></div><div class="ttdoc">Select geometry implementation at configure time.</div></div>
 <div class="ttc" id="a_macros_8hh_html"><div class="ttname"><a href="../../db/dc5/_macros_8hh.html">Macros.hh</a></div><div class="ttdoc">Language and compiler abstraction macro definitions.</div></div>
-<div class="ttc" id="a_macros_8hh_html_ac631c1bc86fa5c49ade05cca94ae1794"><div class="ttname"><a href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a></div><div class="ttdeci">#define CELER_FUNCTION</div><div class="ttdoc">Decorate a function that works on both host and device, with and without NVCC.</div><div class="ttdef"><b>Definition:</b> Macros.hh:41</div></div>
+<div class="ttc" id="a_macros_8hh_html_ac631c1bc86fa5c49ade05cca94ae1794"><div class="ttname"><a href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a></div><div class="ttdeci">#define CELER_FUNCTION</div><div class="ttdoc">Decorate a function that works on both host and device, with and without NVCC.</div><div class="ttdef"><b>Definition:</b> Macros.hh:28</div></div>
 <div class="ttc" id="a_mag_field_equation_8hh_html"><div class="ttname"><a href="../../d2/d9e/_mag_field_equation_8hh.html">MagFieldEquation.hh</a></div></div>
 <div class="ttc" id="a_particle_track_view_8hh_html"><div class="ttname"><a href="../../d0/d1d/_particle_track_view_8hh.html">ParticleTrackView.hh</a></div></div>
 </div><!-- fragment --> </div><!-- contents -->

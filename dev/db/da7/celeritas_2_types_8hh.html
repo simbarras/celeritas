@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -77,18 +77,22 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">celeritas/Types.hh File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Type definitions for simulation management.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="../../d0/d5c/_opaque_id_8hh.html">corecel/OpaqueId.hh</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/d10/_assert_8hh.html">corecel/Assert.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/dc5/_macros_8hh.html">corecel/Macros.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d5c/_opaque_id_8hh.html">corecel/OpaqueId.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html">corecel/Types.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../dc/de9/_array_8hh.html">corecel/cont/Array.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d3/d83/_thread_id_8hh.html">corecel/sys/ThreadId.hh</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d7/d97/orange_2_types_8hh.html">orange/Types.hh</a>&quot;</code><br />
+<code>#include &quot;orange/Types.hh&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -149,6 +153,10 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::ParticleM
 using&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::SubshellId</b> = OpaqueId&lt; struct Subshell &gt;</td></tr>
 <tr class="memdesc:ae4e83ddb97d2719cf9caada8e8244998"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opaque index of electron subshell. <br /></td></tr>
 <tr class="separator:ae4e83ddb97d2719cf9caada8e8244998"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2659ed100e11ccffa767695ca6b8a81"><td class="memItemLeft" align="right" valign="top"><a id="ac2659ed100e11ccffa767695ca6b8a81" name="ac2659ed100e11ccffa767695ca6b8a81"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::DetectorId</b> = OpaqueId&lt; struct Detector &gt;</td></tr>
+<tr class="memdesc:ac2659ed100e11ccffa767695ca6b8a81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opaque index for mapping volume-specific "sensitive detector" objects. <br /></td></tr>
+<tr class="separator:ac2659ed100e11ccffa767695ca6b8a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -164,18 +172,45 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:afe5a95994e3e711bded652307a2d8ad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Physical state of matter. <br /></td></tr>
 <tr class="separator:afe5a95994e3e711bded652307a2d8ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a061a015bf65052f9b93fdaf1830dd1e2"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a061a015bf65052f9b93fdaf1830dd1e2">celeritas::TrackStatus</a> : signed char { <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a061a015bf65052f9b93fdaf1830dd1e2a3e4b66d88f5511608fbd75a7b682c7e8">killed</a> = -1
-, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a061a015bf65052f9b93fdaf1830dd1e2a19d3894f53ce79c3f836f26cf8a3be3b">inactive</a> = 0
-, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a061a015bf65052f9b93fdaf1830dd1e2a7bd3d5f5b3cdb13aed632121206e729c">alive</a> = 1
+<tr class="memitem:a598dde2863bcfe90a35289a2418218fd"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a598dde2863bcfe90a35289a2418218fd">celeritas::TrackStatus</a> : std::int_least8_t { <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a598dde2863bcfe90a35289a2418218fda3e4b66d88f5511608fbd75a7b682c7e8">killed</a> = -1
+, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a598dde2863bcfe90a35289a2418218fda19d3894f53ce79c3f836f26cf8a3be3b">inactive</a> = 0
+, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a598dde2863bcfe90a35289a2418218fda7bd3d5f5b3cdb13aed632121206e729c">alive</a> = 1
  }</td></tr>
-<tr class="memdesc:a061a015bf65052f9b93fdaf1830dd1e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether a track slot is alive, inactive, or dying.  <a href="../../db/da7/celeritas_2_types_8hh.html#a061a015bf65052f9b93fdaf1830dd1e2">More...</a><br /></td></tr>
-<tr class="separator:a061a015bf65052f9b93fdaf1830dd1e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a598dde2863bcfe90a35289a2418218fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether a track slot is alive, inactive, or dying.  <a href="../../db/da7/celeritas_2_types_8hh.html#a598dde2863bcfe90a35289a2418218fd">More...</a><br /></td></tr>
+<tr class="separator:a598dde2863bcfe90a35289a2418218fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cf02fdde066d68cf56bdc61f55215c1"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a8cf02fdde066d68cf56bdc61f55215c1">celeritas::ActionOrder</a> { <br />
+&#160;&#160;<a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a8cf02fdde066d68cf56bdc61f55215c1aea2b2676c28c0db26d39331a336c6b92">start</a>
+, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a8cf02fdde066d68cf56bdc61f55215c1a6bf9e70a1f928aba143ef1eebe2720b5">pre</a>
+, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a8cf02fdde066d68cf56bdc61f55215c1a66c2500371dfb92fd5c8503511ad3b28">along</a>
+, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a8cf02fdde066d68cf56bdc61f55215c1ac051881e5985fc37169e0bff74a39e69">pre_post</a>
+, <br />
+&#160;&#160;<a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a8cf02fdde066d68cf56bdc61f55215c1a42b90196b487c54069097a68fe98ab6f">post</a>
+, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a8cf02fdde066d68cf56bdc61f55215c1a42f6312cdda13f7f3ca6a6497c7b8d79">post_post</a>
+, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a8cf02fdde066d68cf56bdc61f55215c1a7f021a1415b86f2d013b2618fb31ae53">end</a>
+, <b>size_</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:a8cf02fdde066d68cf56bdc61f55215c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Within-step ordering of explicit actions.  <a href="../../db/da7/celeritas_2_types_8hh.html#a8cf02fdde066d68cf56bdc61f55215c1">More...</a><br /></td></tr>
+<tr class="separator:a8cf02fdde066d68cf56bdc61f55215c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69703bb2c384c279e4be7a6c711c427f"><td class="memItemLeft" align="right" valign="top"><a id="a69703bb2c384c279e4be7a6c711c427f" name="a69703bb2c384c279e4be7a6c711c427f"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a69703bb2c384c279e4be7a6c711c427f">celeritas::StepPoint</a> { <b>pre</b>
+, <b>post</b>
+, <b>size_</b>
+ }</td></tr>
+<tr class="memdesc:a69703bb2c384c279e4be7a6c711c427f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Differentiate between result data at the beginning and end of a step. <br /></td></tr>
+<tr class="separator:a69703bb2c384c279e4be7a6c711c427f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:af020036e01c66ec8f16617d049bf146b"><td class="memItemLeft" align="right" valign="top"><a id="af020036e01c66ec8f16617d049bf146b" name="af020036e01c66ec8f16617d049bf146b"></a>
+char const *&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to_cstring</b> (ActionOrder value)</td></tr>
+<tr class="memdesc:af020036e01c66ec8f16617d049bf146b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a string corresponding to an action order. <br /></td></tr>
+<tr class="separator:af020036e01c66ec8f16617d049bf146b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Type definitions for simulation management. </p>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a061a015bf65052f9b93fdaf1830dd1e2" name="a061a015bf65052f9b93fdaf1830dd1e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a061a015bf65052f9b93fdaf1830dd1e2">&#9670;&#160;</a></span>TrackStatus</h2>
+<a id="a8cf02fdde066d68cf56bdc61f55215c1" name="a8cf02fdde066d68cf56bdc61f55215c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cf02fdde066d68cf56bdc61f55215c1">&#9670;&#160;</a></span>ActionOrder</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -184,7 +219,47 @@ Enumerations</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum class <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a061a015bf65052f9b93fdaf1830dd1e2">celeritas::TrackStatus</a> : signed char</td>
+          <td class="memname">enum class <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a8cf02fdde066d68cf56bdc61f55215c1">celeritas::ActionOrder</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Within-step ordering of explicit actions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a8cf02fdde066d68cf56bdc61f55215c1aea2b2676c28c0db26d39331a336c6b92" name="a8cf02fdde066d68cf56bdc61f55215c1aea2b2676c28c0db26d39331a336c6b92"></a>start&#160;</td><td class="fielddoc"><p >Initialize tracks. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8cf02fdde066d68cf56bdc61f55215c1a6bf9e70a1f928aba143ef1eebe2720b5" name="a8cf02fdde066d68cf56bdc61f55215c1a6bf9e70a1f928aba143ef1eebe2720b5"></a>pre&#160;</td><td class="fielddoc"><p >Pre-step physics and setup. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8cf02fdde066d68cf56bdc61f55215c1a66c2500371dfb92fd5c8503511ad3b28" name="a8cf02fdde066d68cf56bdc61f55215c1a66c2500371dfb92fd5c8503511ad3b28"></a>along&#160;</td><td class="fielddoc"><p >Along-step. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8cf02fdde066d68cf56bdc61f55215c1ac051881e5985fc37169e0bff74a39e69" name="a8cf02fdde066d68cf56bdc61f55215c1ac051881e5985fc37169e0bff74a39e69"></a>pre_post&#160;</td><td class="fielddoc"><p >Discrete selection kernel. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8cf02fdde066d68cf56bdc61f55215c1a42b90196b487c54069097a68fe98ab6f" name="a8cf02fdde066d68cf56bdc61f55215c1a42b90196b487c54069097a68fe98ab6f"></a>post&#160;</td><td class="fielddoc"><p >After step. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8cf02fdde066d68cf56bdc61f55215c1a42f6312cdda13f7f3ca6a6497c7b8d79" name="a8cf02fdde066d68cf56bdc61f55215c1a42f6312cdda13f7f3ca6a6497c7b8d79"></a>post_post&#160;</td><td class="fielddoc"><p >User actions after boundary crossing, collision. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8cf02fdde066d68cf56bdc61f55215c1a7f021a1415b86f2d013b2618fb31ae53" name="a8cf02fdde066d68cf56bdc61f55215c1a7f021a1415b86f2d013b2618fb31ae53"></a>end&#160;</td><td class="fielddoc"><p >Processing secondaries, including replacing primaries. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a598dde2863bcfe90a35289a2418218fd" name="a598dde2863bcfe90a35289a2418218fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a598dde2863bcfe90a35289a2418218fd">&#9670;&#160;</a></span>TrackStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a598dde2863bcfe90a35289a2418218fd">celeritas::TrackStatus</a> : std::int_least8_t</td>
         </tr>
       </table>
   </td>
@@ -196,11 +271,11 @@ Enumerations</h2></td></tr>
 
 <p>Whether a track slot is alive, inactive, or dying. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a061a015bf65052f9b93fdaf1830dd1e2a3e4b66d88f5511608fbd75a7b682c7e8" name="a061a015bf65052f9b93fdaf1830dd1e2a3e4b66d88f5511608fbd75a7b682c7e8"></a>killed&#160;</td><td class="fielddoc"><p >Killed inside the step, awaiting replacement. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a598dde2863bcfe90a35289a2418218fda3e4b66d88f5511608fbd75a7b682c7e8" name="a598dde2863bcfe90a35289a2418218fda3e4b66d88f5511608fbd75a7b682c7e8"></a>killed&#160;</td><td class="fielddoc"><p >Killed inside the step, awaiting replacement. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a061a015bf65052f9b93fdaf1830dd1e2a19d3894f53ce79c3f836f26cf8a3be3b" name="a061a015bf65052f9b93fdaf1830dd1e2a19d3894f53ce79c3f836f26cf8a3be3b"></a>inactive&#160;</td><td class="fielddoc"><p >No tracking in this thread slot. </p>
+<tr><td class="fieldname"><a id="a598dde2863bcfe90a35289a2418218fda19d3894f53ce79c3f836f26cf8a3be3b" name="a598dde2863bcfe90a35289a2418218fda19d3894f53ce79c3f836f26cf8a3be3b"></a>inactive&#160;</td><td class="fielddoc"><p >No tracking in this thread slot. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a061a015bf65052f9b93fdaf1830dd1e2a7bd3d5f5b3cdb13aed632121206e729c" name="a061a015bf65052f9b93fdaf1830dd1e2a7bd3d5f5b3cdb13aed632121206e729c"></a>alive&#160;</td><td class="fielddoc"><p >Track is active and alive. </p>
+<tr><td class="fieldname"><a id="a598dde2863bcfe90a35289a2418218fda7bd3d5f5b3cdb13aed632121206e729c" name="a598dde2863bcfe90a35289a2418218fda7bd3d5f5b3cdb13aed632121206e729c"></a>alive&#160;</td><td class="fielddoc"><p >Track is active and alive. </p>
 </td></tr>
 </table>
 

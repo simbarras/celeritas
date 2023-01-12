@@ -1,12 +1,24 @@
 var searchData=
 [
-  ['r_5felectron_0',['r_electron',['../dc/d42/_constants_8hh.html#af5b9801d9e3747ff238abd14868f0a29',1,'celeritas::constants']]],
-  ['rad_5flength_1',['rad_length',['../d1/df9/structceleritas_1_1_material_record.html#af66869f758ac9bccae2015f45a2984d6',1,'celeritas::MaterialRecord']]],
-  ['radiation_5flength_2',['radiation_length',['../d4/d4c/structceleritas_1_1_import_material.html#abdfa96d0944c94750e56ff7642467879',1,'celeritas::ImportMaterial']]],
-  ['radiation_5flength_5ftsai_3',['radiation_length_tsai',['../d9/d46/structceleritas_1_1_import_element.html#acc10f22d1000356a871bcd6d1b9e4685',1,'celeritas::ImportElement']]],
-  ['range_4',['range',['../d5/d51/structceleritas_1_1_import_production_cut.html#a0f63176fd7bf8eca04b01db215215298',1,'celeritas::ImportProductionCut::range()'],['../dc/d0a/structceleritas_1_1_particle_cutoff.html#aa1b0ed7cf4cef1d40e3475ef306e795f',1,'celeritas::ParticleCutoff::range()']]],
-  ['range_5ffact_5',['range_fact',['../dc/dbd/structceleritas_1_1_urban_msc_parameters.html#a16ea9e790283a531f29025ad539c2a5c',1,'celeritas::UrbanMscParameters::range_fact()'],['../db/df0/structceleritas_1_1_msc_range.html#ae5106fffb52db08091b615047f3cc8f2',1,'celeritas::MscRange::range_fact()']]],
-  ['range_5finit_6',['range_init',['../db/df0/structceleritas_1_1_msc_range.html#aa2c980183c8401558816a94618b22ecd',1,'celeritas::MscRange']]],
-  ['relaxation_7',['relaxation',['../d1/dfb/structceleritas_1_1_physics_state_data.html#aa2f51ae89ab9952c9671e5bd3940a16f',1,'celeritas::PhysicsStateData::relaxation()'],['../dc/dd8/structceleritas_1_1_physics_params_1_1_input.html#aa16afa2a53028c0f54d154290894cdea',1,'celeritas::PhysicsParams::Input::relaxation()']]],
-  ['rinf_5frydberg_8',['rinf_rydberg',['../dc/d42/_constants_8hh.html#a96ff924562ae359945a358551e997102',1,'celeritas::constants']]]
+  ['safety_0',['safety',['../d4/dc7/structceleritas_1_1_field_driver_options.html#acc121bab1b2b354ee7482e9f59205cc2',1,'celeritas::FieldDriverOptions']]],
+  ['safety_5ffact_1',['safety_fact',['../dc/dbd/structceleritas_1_1_urban_msc_parameters.html#a857afbf026f495019958b7b2382cf7b2',1,'celeritas::UrbanMscParameters']]],
+  ['safety_5ftol_2',['safety_tol',['../dc/dbd/structceleritas_1_1_urban_msc_parameters.html#a6b14a334b5c6bcacd96595c196177e78',1,'celeritas::UrbanMscParameters']]],
+  ['scaled_5fzeff_3',['scaled_zeff',['../d3/ddf/structceleritas_1_1_urban_msc_material_data.html#a18ceedfcd1a1710ac3b00bb7c1060cf6',1,'celeritas::UrbanMscMaterialData']]],
+  ['scratch_4',['scratch',['../d3/d81/structceleritas_1_1_atomic_relax_state_data.html#acdda93e620c89ca82bd27d93899b61b0',1,'celeritas::AtomicRelaxStateData']]],
+  ['second_5',['second',['../db/df7/_units_8hh.html#a6c5db0b24b85e449def1b229165f945f',1,'celeritas::units']]],
+  ['secondaries_6',['secondaries',['../d3/df8/structceleritas_1_1_interaction.html#a4f2e859cb6bd2e9022844b17fbe9a9ee',1,'celeritas::Interaction::secondaries()'],['../df/d90/structceleritas_1_1_physics_track_state.html#a9c60cbe5924fb1e469354ce88f7c57bb',1,'celeritas::PhysicsTrackState::secondaries()'],['../d1/dfb/structceleritas_1_1_physics_state_data.html#ae32670e0374b8dee83e0d11a2667e07a',1,'celeritas::PhysicsStateData::secondaries()']]],
+  ['secondary_5fstack_5ffactor_7',['secondary_stack_factor',['../d9/df4/structceleritas_1_1_setup_options.html#a7411ec293757df2b2239e7e4d0429d60',1,'celeritas::SetupOptions::secondary_stack_factor()'],['../d2/d44/structceleritas_1_1_physics_params_scalars.html#a787d3edcedc19a90151e324dfd1e620c',1,'celeritas::PhysicsParamsScalars::secondary_stack_factor()']]],
+  ['selection_8',['selection',['../d0/d0f/structceleritas_1_1_step_params_data.html#a87f8b87520466821a3333e41cd8589c8',1,'celeritas::StepParamsData']]],
+  ['senses_9',['senses',['../d4/d22/structceleritas_1_1detail_1_1_sense_calculator_1_1result__type.html#a82e477e20acbac5947106cfb7f5ec28c',1,'celeritas::detail::SenseCalculator::result_type']]],
+  ['size_10',['size',['../d6/d49/structceleritas_1_1_uniform_grid_data.html#a1080bf7169708091fdf4f2a50b491ab8',1,'celeritas::UniformGridData::size()'],['../d7/d9d/structceleritas_1_1_stack_allocator_data.html#a17f3e222c660071d19d2d104c980ff8d',1,'celeritas::StackAllocatorData::size()'],['../df/d83/structceleritas_1_1detail_1_1_temp_next_face.html#a32441172b57d50bc308e4bbad281b432',1,'celeritas::detail::TempNextFace::size()']]],
+  ['sizes_11',['sizes',['../d9/d26/structceleritas_1_1_surface_input.html#af956a31815b7c0e77b964cc7f007e5a9',1,'celeritas::SurfaceInput']]],
+  ['spin_12',['spin',['../db/ddc/structceleritas_1_1_import_particle.html#a977f5de5e3473fb37e9dde46f0175621',1,'celeritas::ImportParticle']]],
+  ['state_13',['state',['../d1/d89/structceleritas_1_1_driver_result.html#a6bc7037bb9ca1412e3e9523acbf94c85',1,'celeritas::DriverResult::state()'],['../d1/dfb/structceleritas_1_1_physics_state_data.html#a2c152722904efb9d0c03dc536aaf3e4a',1,'celeritas::PhysicsStateData::state()'],['../de/d01/structceleritas_1_1_xorwow_rng_state_data.html#aae36f5571981c39778dd7b2771b942ea',1,'celeritas::XorwowRngStateData::state()']]],
+  ['step_14',['step',['../d1/d89/structceleritas_1_1_driver_result.html#a3529eb63a6829b395267aca4b38ae8c4',1,'celeritas::DriverResult']]],
+  ['step_5flength_15',['step_length',['../d6/d34/structceleritas_1_1_msc_interaction.html#ae45e65eeea7ff5038e8c9e07c9d44296',1,'celeritas::MscInteraction']]],
+  ['step_5flimit_16',['step_limit',['../d0/d58/structceleritas_1_1_along_step_local_state.html#a193ffc64aa1abc364cc9e483eb9ae958',1,'celeritas::AlongStepLocalState']]],
+  ['stepmin_5fa_17',['stepmin_a',['../d3/ddf/structceleritas_1_1_urban_msc_material_data.html#ae27ea8d930f1d3d6688ca079bc5d9882',1,'celeritas::UrbanMscMaterialData']]],
+  ['stepmin_5fb_18',['stepmin_b',['../d3/ddf/structceleritas_1_1_urban_msc_material_data.html#af2f38fde4464adee65eafdc1c12f3899',1,'celeritas::UrbanMscMaterialData']]],
+  ['storage_19',['storage',['../d7/d9d/structceleritas_1_1_stack_allocator_data.html#a1ae89746b554bd6b9c747eb28dc81c92',1,'celeritas::StackAllocatorData']]],
+  ['sync_20',['sync',['../d9/df4/structceleritas_1_1_setup_options.html#a8762949e2e942a9526dfb4fe7976c27c',1,'celeritas::SetupOptions::sync()'],['../db/d01/structceleritas_1_1detail_1_1_action_sequence_1_1_options.html#ab91d3b1b3bebc7756a0a3b0da9c5b2a6',1,'celeritas::detail::ActionSequence::Options::sync()']]]
 ];

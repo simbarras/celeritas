@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -80,28 +80,30 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d5/d10/_assert_8hh.html">Assert.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/dc5/_macros_8hh.html">corecel/Macros.hh</a>&quot;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../de/d2f/_color_utils_8hh.html">io/ColorUtils.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/db5/_environment_8hh.html">sys/Environment.hh</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a949768f25b555273926429239c5a4e35"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d0e/_assert_8cc.html#a949768f25b555273926429239c5a4e35">celeritas::to_cstring</a> (DebugErrorType which)</td></tr>
-<tr class="memdesc:a949768f25b555273926429239c5a4e35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a human-readable string describing a debug error.  <a href="../../d0/d0e/_assert_8cc.html#a949768f25b555273926429239c5a4e35">More...</a><br /></td></tr>
-<tr class="separator:a949768f25b555273926429239c5a4e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d4505c75a7d7418742233f8a48ca942"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d0e/_assert_8cc.html#a5d4505c75a7d7418742233f8a48ca942">celeritas::to_cstring</a> (RuntimeErrorType which)</td></tr>
-<tr class="memdesc:a5d4505c75a7d7418742233f8a48ca942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a human-readable string describing a runtime error.  <a href="../../d0/d0e/_assert_8cc.html#a5d4505c75a7d7418742233f8a48ca942">More...</a><br /></td></tr>
-<tr class="separator:a5d4505c75a7d7418742233f8a48ca942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a385241039363fa22099a7340d9627013"><td class="memItemLeft" align="right" valign="top">char const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d0e/_assert_8cc.html#a385241039363fa22099a7340d9627013">celeritas::to_cstring</a> (DebugErrorType which)</td></tr>
+<tr class="memdesc:a385241039363fa22099a7340d9627013"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a human-readable string describing a debug error.  <a href="../../d0/d0e/_assert_8cc.html#a385241039363fa22099a7340d9627013">More...</a><br /></td></tr>
+<tr class="separator:a385241039363fa22099a7340d9627013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a252044fb2fe37029bdaf896754f9fc66"><td class="memItemLeft" align="right" valign="top">char const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d0e/_assert_8cc.html#a252044fb2fe37029bdaf896754f9fc66">celeritas::to_cstring</a> (RuntimeErrorType which)</td></tr>
+<tr class="memdesc:a252044fb2fe37029bdaf896754f9fc66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a human-readable string describing a runtime error.  <a href="../../d0/d0e/_assert_8cc.html#a252044fb2fe37029bdaf896754f9fc66">More...</a><br /></td></tr>
+<tr class="separator:a252044fb2fe37029bdaf896754f9fc66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a949768f25b555273926429239c5a4e35" name="a949768f25b555273926429239c5a4e35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a949768f25b555273926429239c5a4e35">&#9670;&#160;</a></span>to_cstring() <span class="overload">[1/2]</span></h2>
+<a id="a385241039363fa22099a7340d9627013" name="a385241039363fa22099a7340d9627013"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a385241039363fa22099a7340d9627013">&#9670;&#160;</a></span>to_cstring() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char * celeritas::to_cstring </td>
+          <td class="memname">char const  * celeritas::to_cstring </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d5/d10/_assert_8hh.html#aadae531fea5593be95fcd209f49e7176">DebugErrorType</a>&#160;</td>
           <td class="paramname"><em>which</em></td><td>)</td>
@@ -115,14 +117,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a5d4505c75a7d7418742233f8a48ca942" name="a5d4505c75a7d7418742233f8a48ca942"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d4505c75a7d7418742233f8a48ca942">&#9670;&#160;</a></span>to_cstring() <span class="overload">[2/2]</span></h2>
+<a id="a252044fb2fe37029bdaf896754f9fc66" name="a252044fb2fe37029bdaf896754f9fc66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a252044fb2fe37029bdaf896754f9fc66">&#9670;&#160;</a></span>to_cstring() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char * celeritas::to_cstring </td>
+          <td class="memname">char const  * celeritas::to_cstring </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d5/d10/_assert_8hh.html#a0605e3c922b91d617295e66c03dc1c7a">RuntimeErrorType</a>&#160;</td>
           <td class="paramname"><em>which</em></td><td>)</td>

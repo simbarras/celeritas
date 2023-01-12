@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -90,40 +90,106 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a0a84fa6dd6ba2edc91114cd31369031c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d0d/classceleritas_1_1_geant_setup.html#a0a84fa6dd6ba2edc91114cd31369031c">Options</a> = <a class="el" href="../../d5/d57/structceleritas_1_1_geant_setup_options.html">GeantSetupOptions</a></td></tr>
-<tr class="separator:a0a84fa6dd6ba2edc91114cd31369031c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e278a71b582345a670c5f15fc499f73"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d0d/classceleritas_1_1_geant_setup.html#a2e278a71b582345a670c5f15fc499f73">Options</a> = <a class="el" href="../../da/da1/structceleritas_1_1_geant_physics_options.html">GeantPhysicsOptions</a></td></tr>
+<tr class="separator:a2e278a71b582345a670c5f15fc499f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a19e46124ee343d39224e4e4042e4a14a"><td class="memItemLeft" align="right" valign="top"><a id="a19e46124ee343d39224e4e4042e4a14a" name="a19e46124ee343d39224e4e4042e4a14a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>GeantSetup</b> (const std::string &amp;gdml_filename, <a class="el" href="../../de/d0d/classceleritas_1_1_geant_setup.html#a0a84fa6dd6ba2edc91114cd31369031c">Options</a> options)</td></tr>
-<tr class="memdesc:a19e46124ee343d39224e4e4042e4a14a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a GDML file and physics options. <br /></td></tr>
-<tr class="separator:a19e46124ee343d39224e4e4042e4a14a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18161a2ff296c7fc2369ecb298795f08"><td class="memItemLeft" align="right" valign="top"><a id="a18161a2ff296c7fc2369ecb298795f08" name="a18161a2ff296c7fc2369ecb298795f08"></a>
-const G4VPhysicalVolume *&#160;</td><td class="memItemRight" valign="bottom"><b>world</b> () const</td></tr>
-<tr class="memdesc:a18161a2ff296c7fc2369ecb298795f08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the world detector volume. <br /></td></tr>
-<tr class="separator:a18161a2ff296c7fc2369ecb298795f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeda2ec9e763f66d02ac8cf2dad914f2b"><td class="memItemLeft" align="right" valign="top"><a id="aeda2ec9e763f66d02ac8cf2dad914f2b" name="aeda2ec9e763f66d02ac8cf2dad914f2b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>GeantSetup</b> (std::string const &amp;gdml_filename, <a class="el" href="../../de/d0d/classceleritas_1_1_geant_setup.html#a2e278a71b582345a670c5f15fc499f73">Options</a> options)</td></tr>
+<tr class="memdesc:aeda2ec9e763f66d02ac8cf2dad914f2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a GDML file and physics options. <br /></td></tr>
+<tr class="separator:aeda2ec9e763f66d02ac8cf2dad914f2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a457d143b563fd22f40abaa38b5c5cb52"><td class="memItemLeft" align="right" valign="top"><a id="a457d143b563fd22f40abaa38b5c5cb52" name="a457d143b563fd22f40abaa38b5c5cb52"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~GeantSetup</b> ()</td></tr>
+<tr class="memdesc:a457d143b563fd22f40abaa38b5c5cb52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminate the run manager on destruction. <br /></td></tr>
+<tr class="separator:a457d143b563fd22f40abaa38b5c5cb52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac84633feafbd035fc8f8e0940ec02a44"><td class="memItemLeft" align="right" valign="top"><a id="ac84633feafbd035fc8f8e0940ec02a44" name="ac84633feafbd035fc8f8e0940ec02a44"></a>
+G4VPhysicalVolume const *&#160;</td><td class="memItemRight" valign="bottom"><b>world</b> () const</td></tr>
+<tr class="memdesc:ac84633feafbd035fc8f8e0940ec02a44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the world detector volume. <br /></td></tr>
+<tr class="separator:ac84633feafbd035fc8f8e0940ec02a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e15b3898f18c552fa481828c98143b9"><td class="memItemLeft" align="right" valign="top"><a id="a5e15b3898f18c552fa481828c98143b9" name="a5e15b3898f18c552fa481828c98143b9"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () const</td></tr>
 <tr class="memdesc:a5e15b3898f18c552fa481828c98143b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if we own a run manager. <br /></td></tr>
 <tr class="separator:a5e15b3898f18c552fa481828c98143b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:ac3ef9278f21e8047d18127ed57e1c854"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d0d/classceleritas_1_1_geant_setup.html#ac3ef9278f21e8047d18127ed57e1c854">GeantSetup</a> (<a class="el" href="../../de/d0d/classceleritas_1_1_geant_setup.html">GeantSetup</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:ac3ef9278f21e8047d18127ed57e1c854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac28f415f3fce82b779b4cf801c01d4d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d0d/classceleritas_1_1_geant_setup.html">GeantSetup</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d0d/classceleritas_1_1_geant_setup.html#ac28f415f3fce82b779b4cf801c01d4d6">operator=</a> (<a class="el" href="../../de/d0d/classceleritas_1_1_geant_setup.html">GeantSetup</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:ac28f415f3fce82b779b4cf801c01d4d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Construct a Geant 4 run manager and populate internal Geant4 physics. </p>
-<p >This is usually passed directly into <code><a class="el" href="../../d5/d9d/classceleritas_1_1_geant_importer.html" title="Load problem data directly from Geant4.">GeantImporter</a></code> . It hides geant includes from the rest of the code. </p>
+<p >This is usually passed directly into <code><a class="el" href="../../d5/d9d/classceleritas_1_1_geant_importer.html" title="Load problem data directly from Geant4.">GeantImporter</a></code> . It hides Geant4 implementation details (including header files) from the rest of the code. It is safe to include even when Geant4 is unavailable!</p>
+<p >The setup is targeted specifically for physics that Celeritas supports. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a0a84fa6dd6ba2edc91114cd31369031c" name="a0a84fa6dd6ba2edc91114cd31369031c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a84fa6dd6ba2edc91114cd31369031c">&#9670;&#160;</a></span>Options</h2>
+<a id="a2e278a71b582345a670c5f15fc499f73" name="a2e278a71b582345a670c5f15fc499f73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e278a71b582345a670c5f15fc499f73">&#9670;&#160;</a></span>Options</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../de/d0d/classceleritas_1_1_geant_setup.html#a0a84fa6dd6ba2edc91114cd31369031c">celeritas::GeantSetup::Options</a> =  <a class="el" href="../../d5/d57/structceleritas_1_1_geant_setup_options.html">GeantSetupOptions</a></td>
+          <td class="memname">using <a class="el" href="../../de/d0d/classceleritas_1_1_geant_setup.html#a2e278a71b582345a670c5f15fc499f73">celeritas::GeantSetup::Options</a> =  <a class="el" href="../../da/da1/structceleritas_1_1_geant_physics_options.html">GeantPhysicsOptions</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p >Type aliases </p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac3ef9278f21e8047d18127ed57e1c854" name="ac3ef9278f21e8047d18127ed57e1c854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3ef9278f21e8047d18127ed57e1c854">&#9670;&#160;</a></span>GeantSetup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">celeritas::GeantSetup::GeantSetup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d0d/classceleritas_1_1_geant_setup.html">GeantSetup</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Default move assignment/construction </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac28f415f3fce82b779b4cf801c01d4d6" name="ac28f415f3fce82b779b4cf801c01d4d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac28f415f3fce82b779b4cf801c01d4d6">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/d0d/classceleritas_1_1_geant_setup.html">GeantSetup</a> &amp; celeritas::GeantSetup::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d0d/classceleritas_1_1_geant_setup.html">GeantSetup</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Default move assignment/construction </p>
 
 </div>
 </div>

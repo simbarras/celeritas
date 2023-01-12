@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -100,14 +100,11 @@ Inheritance diagram for celeritas::LivermorePEModel:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:aa1d1a8be5e28df56c0324386d238e000"><td class="memItemLeft" align="right" valign="top"><a id="aa1d1a8be5e28df56c0324386d238e000" name="aa1d1a8be5e28df56c0324386d238e000"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>AtomicNumber</b> = int</td></tr>
-<tr class="separator:aa1d1a8be5e28df56c0324386d238e000"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf7172f7ca66ee15dfee9bc6f078ae63"><td class="memItemLeft" align="right" valign="top"><a id="aaf7172f7ca66ee15dfee9bc6f078ae63" name="aaf7172f7ca66ee15dfee9bc6f078ae63"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>MevEnergy</b> = <a class="el" href="../../de/d40/_quantities_8hh.html#ab016d8ce94d9a1e2a77552395078cce0">units::MevEnergy</a></td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>MevEnergy</b> = <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::MevEnergy</a></td></tr>
 <tr class="separator:aaf7172f7ca66ee15dfee9bc6f078ae63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae029bf768f0f3ae194bfb43488f7e629"><td class="memItemLeft" align="right" valign="top"><a id="ae029bf768f0f3ae194bfb43488f7e629" name="ae029bf768f0f3ae194bfb43488f7e629"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>ReadData</b> = std::function&lt; <a class="el" href="../../d4/da2/structceleritas_1_1_import_livermore_p_e.html">ImportLivermorePE</a>(AtomicNumber)&gt;</td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ReadData</b> = std::function&lt; <a class="el" href="../../d4/da2/structceleritas_1_1_import_livermore_p_e.html">ImportLivermorePE</a>(<a class="el" href="../../de/db3/classceleritas_1_1_atomic_number.html">AtomicNumber</a>)&gt;</td></tr>
 <tr class="separator:ae029bf768f0f3ae194bfb43488f7e629"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9881ea7f6fe3ee437f11e774043b0c0"><td class="memItemLeft" align="right" valign="top"><a id="ae9881ea7f6fe3ee437f11e774043b0c0" name="ae9881ea7f6fe3ee437f11e774043b0c0"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>HostRef</b> = LivermorePEHostRef</td></tr>
@@ -116,38 +113,39 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>HostRef</b> = Liverm
 using&#160;</td><td class="memItemRight" valign="bottom"><b>DeviceRef</b> = LivermorePEDeviceRef</td></tr>
 <tr class="separator:a4472bda6ea032a3c4bb848187c9f282e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classceleritas_1_1_model"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classceleritas_1_1_model')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../dc/d52/classceleritas_1_1_model.html">celeritas::Model</a></td></tr>
-<tr class="memitem:af3380c4093e2bef76283a875bac29385 inherit pub_types_classceleritas_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="af3380c4093e2bef76283a875bac29385" name="af3380c4093e2bef76283a875bac29385"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>UPConstGridBuilder</b> = std::unique_ptr&lt; const <a class="el" href="../../db/d95/classceleritas_1_1_value_grid_builder.html">ValueGridBuilder</a> &gt;</td></tr>
-<tr class="memdesc:af3380c4093e2bef76283a875bac29385 inherit pub_types_classceleritas_1_1_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type aliases. <br /></td></tr>
-<tr class="separator:af3380c4093e2bef76283a875bac29385 inherit pub_types_classceleritas_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac857746a171373894d2bb0884e96d711 inherit pub_types_classceleritas_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="ac857746a171373894d2bb0884e96d711" name="ac857746a171373894d2bb0884e96d711"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>MicroXsBuilders</b> = std::unordered_map&lt; <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#ab9ec76ea37164a7e42b557b38e4aacbb">ElementId</a>, <a class="el" href="../../dc/d52/classceleritas_1_1_model.html#af3380c4093e2bef76283a875bac29385">UPConstGridBuilder</a> &gt;</td></tr>
-<tr class="separator:ac857746a171373894d2bb0884e96d711 inherit pub_types_classceleritas_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67885e83c5523f670dedbbd36f891edb inherit pub_types_classceleritas_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a67885e83c5523f670dedbbd36f891edb" name="a67885e83c5523f670dedbbd36f891edb"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>UPConstGridBuilder</b> = std::unique_ptr&lt; <a class="el" href="../../db/d95/classceleritas_1_1_value_grid_builder.html">ValueGridBuilder</a> const  &gt;</td></tr>
+<tr class="memdesc:a67885e83c5523f670dedbbd36f891edb inherit pub_types_classceleritas_1_1_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type aliases. <br /></td></tr>
+<tr class="separator:a67885e83c5523f670dedbbd36f891edb inherit pub_types_classceleritas_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d1f821210daaad5d0d486fa80c24362 inherit pub_types_classceleritas_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a9d1f821210daaad5d0d486fa80c24362" name="a9d1f821210daaad5d0d486fa80c24362"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>MicroXsBuilders</b> = std::vector&lt; <a class="el" href="../../dc/d52/classceleritas_1_1_model.html#a67885e83c5523f670dedbbd36f891edb">UPConstGridBuilder</a> &gt;</td></tr>
+<tr class="separator:a9d1f821210daaad5d0d486fa80c24362 inherit pub_types_classceleritas_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8edf5ce98eb85c0315a5a489f775973 inherit pub_types_classceleritas_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="ac8edf5ce98eb85c0315a5a489f775973" name="ac8edf5ce98eb85c0315a5a489f775973"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>SetApplicability</b> = std::set&lt; <a class="el" href="../../df/d20/structceleritas_1_1_applicability.html">Applicability</a> &gt;</td></tr>
 <tr class="separator:ac8edf5ce98eb85c0315a5a489f775973 inherit pub_types_classceleritas_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classceleritas_1_1_explicit_action_interface"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classceleritas_1_1_explicit_action_interface')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html">celeritas::ExplicitActionInterface</a></td></tr>
 <tr class="memitem:a17841c8c8ad66279eefbdc22604c1cc3 inherit pub_types_classceleritas_1_1_explicit_action_interface"><td class="memItemLeft" align="right" valign="top"><a id="a17841c8c8ad66279eefbdc22604c1cc3" name="a17841c8c8ad66279eefbdc22604c1cc3"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>CoreHostRef</b> = <a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreRef</a>&lt; MemSpace::host &gt;</td></tr>
-<tr class="memdesc:a17841c8c8ad66279eefbdc22604c1cc3 inherit pub_types_classceleritas_1_1_explicit_action_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type aliases. <br /></td></tr>
+<tr class="memdesc:a17841c8c8ad66279eefbdc22604c1cc3 inherit pub_types_classceleritas_1_1_explicit_action_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the action with host data. <br /></td></tr>
 <tr class="separator:a17841c8c8ad66279eefbdc22604c1cc3 inherit pub_types_classceleritas_1_1_explicit_action_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1be1bc7379dc3d9770d329c5f2a3eb9 inherit pub_types_classceleritas_1_1_explicit_action_interface"><td class="memItemLeft" align="right" valign="top"><a id="ae1be1bc7379dc3d9770d329c5f2a3eb9" name="ae1be1bc7379dc3d9770d329c5f2a3eb9"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>CoreDeviceRef</b> = <a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreRef</a>&lt; MemSpace::device &gt;</td></tr>
+<tr class="memdesc:ae1be1bc7379dc3d9770d329c5f2a3eb9 inherit pub_types_classceleritas_1_1_explicit_action_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the action with host data. <br /></td></tr>
 <tr class="separator:ae1be1bc7379dc3d9770d329c5f2a3eb9 inherit pub_types_classceleritas_1_1_explicit_action_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a20035c7a006e695f069f79d96e0381c2"><td class="memItemLeft" align="right" valign="top"><a id="a20035c7a006e695f069f79d96e0381c2" name="a20035c7a006e695f069f79d96e0381c2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>LivermorePEModel</b> (<a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a98b21e11852c06d3845c53dd5df84797">ActionId</a> id, const <a class="el" href="../../d8/d0b/classceleritas_1_1_particle_params.html">ParticleParams</a> &amp;particles, const <a class="el" href="../../df/d18/classceleritas_1_1_material_params.html">MaterialParams</a> &amp;materials, ReadData load_data)</td></tr>
-<tr class="memdesc:a20035c7a006e695f069f79d96e0381c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from model ID and other necessary data. <br /></td></tr>
-<tr class="separator:a20035c7a006e695f069f79d96e0381c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada7013968ea428c9ef20fab84751c087"><td class="memItemLeft" align="right" valign="top"><a id="ada7013968ea428c9ef20fab84751c087" name="ada7013968ea428c9ef20fab84751c087"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>LivermorePEModel</b> (<a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a98b21e11852c06d3845c53dd5df84797">ActionId</a> id, <a class="el" href="../../d8/d0b/classceleritas_1_1_particle_params.html">ParticleParams</a> const &amp;particles, <a class="el" href="../../df/d18/classceleritas_1_1_material_params.html">MaterialParams</a> const &amp;materials, ReadData load_data)</td></tr>
+<tr class="memdesc:ada7013968ea428c9ef20fab84751c087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from model ID and other necessary data. <br /></td></tr>
+<tr class="separator:ada7013968ea428c9ef20fab84751c087"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88a6e94de02e65203b88112b98143811"><td class="memItemLeft" align="right" valign="top">SetApplicability&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dc2/classceleritas_1_1_livermore_p_e_model.html#a88a6e94de02e65203b88112b98143811">applicability</a> () const final</td></tr>
 <tr class="memdesc:a88a6e94de02e65203b88112b98143811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Particle types and energy ranges that this model applies to.  <a href="../../dc/dc2/classceleritas_1_1_livermore_p_e_model.html#a88a6e94de02e65203b88112b98143811">More...</a><br /></td></tr>
 <tr class="separator:a88a6e94de02e65203b88112b98143811"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4414022f5bc363ad32a149c72d782fb9"><td class="memItemLeft" align="right" valign="top">MicroXsBuilders&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dc2/classceleritas_1_1_livermore_p_e_model.html#a4414022f5bc363ad32a149c72d782fb9">micro_xs</a> (<a class="el" href="../../df/d20/structceleritas_1_1_applicability.html">Applicability</a>) const final</td></tr>
 <tr class="memdesc:a4414022f5bc363ad32a149c72d782fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the microscopic cross sections for the given particle and material.  <a href="../../dc/dc2/classceleritas_1_1_livermore_p_e_model.html#a4414022f5bc363ad32a149c72d782fb9">More...</a><br /></td></tr>
 <tr class="separator:a4414022f5bc363ad32a149c72d782fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf289405b3c2f58904a07fe03e2854f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dc2/classceleritas_1_1_livermore_p_e_model.html#adf289405b3c2f58904a07fe03e2854f5">execute</a> (<a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreDeviceRef</a> const &amp;) const final</td></tr>
+<tr class="memitem:adf289405b3c2f58904a07fe03e2854f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dc2/classceleritas_1_1_livermore_p_e_model.html#adf289405b3c2f58904a07fe03e2854f5">execute</a> (<a class="el" href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html#ae1be1bc7379dc3d9770d329c5f2a3eb9">CoreDeviceRef</a> const &amp;) const final</td></tr>
 <tr class="memdesc:adf289405b3c2f58904a07fe03e2854f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the action with host data.  <a href="../../dc/dc2/classceleritas_1_1_livermore_p_e_model.html#adf289405b3c2f58904a07fe03e2854f5">More...</a><br /></td></tr>
 <tr class="separator:adf289405b3c2f58904a07fe03e2854f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71d40de030300845e026780e4e8b0ee8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a98b21e11852c06d3845c53dd5df84797">ActionId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dc2/classceleritas_1_1_livermore_p_e_model.html#a71d40de030300845e026780e4e8b0ee8">action_id</a> () const final</td></tr>
@@ -159,30 +157,29 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad6585fbd1f4663d5cf777bfcc25587bd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dc2/classceleritas_1_1_livermore_p_e_model.html#ad6585fbd1f4663d5cf777bfcc25587bd">description</a> () const final</td></tr>
 <tr class="memdesc:ad6585fbd1f4663d5cf777bfcc25587bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the model, for user interaction.  <a href="../../dc/dc2/classceleritas_1_1_livermore_p_e_model.html#ad6585fbd1f4663d5cf777bfcc25587bd">More...</a><br /></td></tr>
 <tr class="separator:ad6585fbd1f4663d5cf777bfcc25587bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a7e6b56c3bbf0d62108b099bd1beed7"><td class="memItemLeft" align="right" valign="top"><a id="a8a7e6b56c3bbf0d62108b099bd1beed7" name="a8a7e6b56c3bbf0d62108b099bd1beed7"></a>
-const HostRef &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>host_ref</b> () const</td></tr>
-<tr class="memdesc:a8a7e6b56c3bbf0d62108b099bd1beed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access data on the host. <br /></td></tr>
-<tr class="separator:a8a7e6b56c3bbf0d62108b099bd1beed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cbf7f2de71a1d486bdc99b34658780d"><td class="memItemLeft" align="right" valign="top"><a id="a2cbf7f2de71a1d486bdc99b34658780d" name="a2cbf7f2de71a1d486bdc99b34658780d"></a>
-const DeviceRef &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>device_ref</b> () const</td></tr>
-<tr class="memdesc:a2cbf7f2de71a1d486bdc99b34658780d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access data on the device. <br /></td></tr>
-<tr class="separator:a2cbf7f2de71a1d486bdc99b34658780d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ab0365e37405acbf0f9ba0b92d732d4"><td class="memItemLeft" align="right" valign="top"><a id="a1ab0365e37405acbf0f9ba0b92d732d4" name="a1ab0365e37405acbf0f9ba0b92d732d4"></a>
+HostRef const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>host_ref</b> () const</td></tr>
+<tr class="memdesc:a1ab0365e37405acbf0f9ba0b92d732d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access data on the host. <br /></td></tr>
+<tr class="separator:a1ab0365e37405acbf0f9ba0b92d732d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67355490cc4ccfcb500b01733bff4b76"><td class="memItemLeft" align="right" valign="top"><a id="a67355490cc4ccfcb500b01733bff4b76" name="a67355490cc4ccfcb500b01733bff4b76"></a>
+DeviceRef const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>device_ref</b> () const</td></tr>
+<tr class="memdesc:a67355490cc4ccfcb500b01733bff4b76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access data on the device. <br /></td></tr>
+<tr class="separator:a67355490cc4ccfcb500b01733bff4b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:af4ff68d19830cdda57ab961b60826cc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dc2/classceleritas_1_1_livermore_p_e_model.html#af4ff68d19830cdda57ab961b60826cc6">execute</a> (<a class="el" href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html#a17841c8c8ad66279eefbdc22604c1cc3">CoreHostRef</a> const &amp;) const final</td></tr>
 <tr class="memdesc:af4ff68d19830cdda57ab961b60826cc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the interaction kernel.  <a href="../../dc/dc2/classceleritas_1_1_livermore_p_e_model.html#af4ff68d19830cdda57ab961b60826cc6">More...</a><br /></td></tr>
 <tr class="separator:af4ff68d19830cdda57ab961b60826cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac175975a9f5bba9f39c7235d4130a1db"><td class="memItemLeft" align="right" valign="top">virtual SetApplicability&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d52/classceleritas_1_1_model.html#ac175975a9f5bba9f39c7235d4130a1db">applicability</a> () const =0</td></tr>
-<tr class="memdesc:ac175975a9f5bba9f39c7235d4130a1db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the applicable particle type and energy ranges of the model.  <a href="../../dc/d52/classceleritas_1_1_model.html#ac175975a9f5bba9f39c7235d4130a1db">More...</a><br /></td></tr>
-<tr class="separator:ac175975a9f5bba9f39c7235d4130a1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5567c8e061008f512aad94298ccb36ce"><td class="memItemLeft" align="right" valign="top">virtual MicroXsBuilders&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d52/classceleritas_1_1_model.html#a5567c8e061008f512aad94298ccb36ce">micro_xs</a> (<a class="el" href="../../df/d20/structceleritas_1_1_applicability.html">Applicability</a> <a class="el" href="../../d3/de4/_range_8hh.html#a04a70102137dd5928a6ceb28144476ef">range</a>) const =0</td></tr>
-<tr class="memdesc:a5567c8e061008f512aad94298ccb36ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the microscopic cross sections for the given particle and material.  <a href="../../dc/d52/classceleritas_1_1_model.html#a5567c8e061008f512aad94298ccb36ce">More...</a><br /></td></tr>
-<tr class="separator:a5567c8e061008f512aad94298ccb36ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43d005c6ec0d31b956a57657a8eaba88"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html#a43d005c6ec0d31b956a57657a8eaba88">execute</a> (<a class="el" href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html#a17841c8c8ad66279eefbdc22604c1cc3">CoreHostRef</a> const &amp;) const =0</td></tr>
-<tr class="memdesc:a43d005c6ec0d31b956a57657a8eaba88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the action with host data.  <a href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html#a43d005c6ec0d31b956a57657a8eaba88">More...</a><br /></td></tr>
-<tr class="separator:a43d005c6ec0d31b956a57657a8eaba88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0c60e8f976df9957bf4d1dc3683bc0e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html#ac0c60e8f976df9957bf4d1dc3683bc0e">execute</a> (<a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreDeviceRef</a> const &amp;) const =0</td></tr>
-<tr class="memdesc:ac0c60e8f976df9957bf4d1dc3683bc0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the action with device data.  <a href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html#ac0c60e8f976df9957bf4d1dc3683bc0e">More...</a><br /></td></tr>
-<tr class="separator:ac0c60e8f976df9957bf4d1dc3683bc0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classceleritas_1_1_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classceleritas_1_1_model')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dc/d52/classceleritas_1_1_model.html">celeritas::Model</a></td></tr>
+<tr class="memitem:ac175975a9f5bba9f39c7235d4130a1db inherit pub_methods_classceleritas_1_1_model"><td class="memItemLeft" align="right" valign="top">virtual SetApplicability&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d52/classceleritas_1_1_model.html#ac175975a9f5bba9f39c7235d4130a1db">applicability</a> () const =0</td></tr>
+<tr class="memdesc:ac175975a9f5bba9f39c7235d4130a1db inherit pub_methods_classceleritas_1_1_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the applicable particle type and energy ranges of the model.  <a href="../../dc/d52/classceleritas_1_1_model.html#ac175975a9f5bba9f39c7235d4130a1db">More...</a><br /></td></tr>
+<tr class="separator:ac175975a9f5bba9f39c7235d4130a1db inherit pub_methods_classceleritas_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5567c8e061008f512aad94298ccb36ce inherit pub_methods_classceleritas_1_1_model"><td class="memItemLeft" align="right" valign="top">virtual MicroXsBuilders&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d52/classceleritas_1_1_model.html#a5567c8e061008f512aad94298ccb36ce">micro_xs</a> (<a class="el" href="../../df/d20/structceleritas_1_1_applicability.html">Applicability</a> <a class="el" href="../../d3/de4/_range_8hh.html#a04a70102137dd5928a6ceb28144476ef">range</a>) const =0</td></tr>
+<tr class="memdesc:a5567c8e061008f512aad94298ccb36ce inherit pub_methods_classceleritas_1_1_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the microscopic cross sections for the given particle and material.  <a href="../../dc/d52/classceleritas_1_1_model.html#a5567c8e061008f512aad94298ccb36ce">More...</a><br /></td></tr>
+<tr class="separator:a5567c8e061008f512aad94298ccb36ce inherit pub_methods_classceleritas_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeef68443d8f630aca474a62607829af1 inherit pub_methods_classceleritas_1_1_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a8cf02fdde066d68cf56bdc61f55215c1">ActionOrder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d52/classceleritas_1_1_model.html#aeef68443d8f630aca474a62607829af1">order</a> () const final</td></tr>
+<tr class="memdesc:aeef68443d8f630aca474a62607829af1 inherit pub_methods_classceleritas_1_1_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dependency ordering of the action.  <a href="../../dc/d52/classceleritas_1_1_model.html#aeef68443d8f630aca474a62607829af1">More...</a><br /></td></tr>
+<tr class="separator:aeef68443d8f630aca474a62607829af1 inherit pub_methods_classceleritas_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classceleritas_1_1_explicit_action_interface"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classceleritas_1_1_explicit_action_interface')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html">celeritas::ExplicitActionInterface</a></td></tr>
 <tr class="memitem:ae25fcd5fdf654ac5bbaaa70526e1576b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a98b21e11852c06d3845c53dd5df84797">ActionId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d6f/classceleritas_1_1_action_interface.html#ae25fcd5fdf654ac5bbaaa70526e1576b">action_id</a> () const =0</td></tr>
 <tr class="memdesc:ae25fcd5fdf654ac5bbaaa70526e1576b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of this action for verification.  <a href="../../d7/d6f/classceleritas_1_1_action_interface.html#ae25fcd5fdf654ac5bbaaa70526e1576b">More...</a><br /></td></tr>
 <tr class="separator:ae25fcd5fdf654ac5bbaaa70526e1576b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,6 +189,14 @@ const DeviceRef &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>devi
 <tr class="memitem:aea148a67aa1064b91806108b6fb83a72"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d6f/classceleritas_1_1_action_interface.html#aea148a67aa1064b91806108b6fb83a72">description</a> () const =0</td></tr>
 <tr class="memdesc:aea148a67aa1064b91806108b6fb83a72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Description of the action.  <a href="../../d7/d6f/classceleritas_1_1_action_interface.html#aea148a67aa1064b91806108b6fb83a72">More...</a><br /></td></tr>
 <tr class="separator:aea148a67aa1064b91806108b6fb83a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classceleritas_1_1_explicit_action_interface"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classceleritas_1_1_explicit_action_interface')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html">celeritas::ExplicitActionInterface</a></td></tr>
+<tr class="memitem:a8e571b0ab05283851e3c168b1a310622 inherit pro_methods_classceleritas_1_1_explicit_action_interface"><td class="memItemLeft" align="right" valign="top"><a id="a8e571b0ab05283851e3c168b1a310622" name="a8e571b0ab05283851e3c168b1a310622"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~ExplicitActionInterface</b> ()=default</td></tr>
+<tr class="memdesc:a8e571b0ab05283851e3c168b1a310622 inherit pro_methods_classceleritas_1_1_explicit_action_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the action with host data. <br /></td></tr>
+<tr class="separator:a8e571b0ab05283851e3c168b1a310622 inherit pro_methods_classceleritas_1_1_explicit_action_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Set up and launch the Livermore photoelectric model interaction. </p>
@@ -295,7 +300,7 @@ const DeviceRef &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>devi
         <tr>
           <td class="memname">void celeritas::LivermorePEModel::execute </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreDeviceRef</a> const &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html#ae1be1bc7379dc3d9770d329c5f2a3eb9">CoreDeviceRef</a> const &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>

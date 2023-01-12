@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -75,35 +75,80 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">ImportProcess.cc File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../de/de8/_import_process_8hh.html">ImportProcess.hh</a>&quot;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;initializer_list&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d10/_assert_8hh.html">corecel/Assert.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d7b/_enum_array_8hh.html">corecel/cont/EnumArray.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/de4/_range_8hh.html">corecel/cont/Range.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/dd8/_string_enum_map_8hh.html">corecel/io/StringEnumMap.hh</a>&quot;</code><br />
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:adb769d4a17d8f7761f97ccfa8578712f"><td class="memTemplParams" colspan="2"><a id="adb769d4a17d8f7761f97ccfa8578712f" name="adb769d4a17d8f7761f97ccfa8578712f"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:adb769d4a17d8f7761f97ccfa8578712f"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::ModelArray</b> = EnumArray&lt; ImportModelClass, T &gt;</td></tr>
+<tr class="separator:adb769d4a17d8f7761f97ccfa8578712f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:add945bcd40c5403fd41a44876db34343"><td class="memItemLeft" align="right" valign="top"><a id="add945bcd40c5403fd41a44876db34343" name="add945bcd40c5403fd41a44876db34343"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to_cstring</b> (ImportProcessType value)</td></tr>
-<tr class="memdesc:add945bcd40c5403fd41a44876db34343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the string value for a table type. <br /></td></tr>
-<tr class="separator:add945bcd40c5403fd41a44876db34343"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87fca7665a2d7231f512dbc595e16421"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d07/_import_process_8cc.html#a87fca7665a2d7231f512dbc595e16421">celeritas::to_cstring</a> (ImportProcessClass value)</td></tr>
-<tr class="memdesc:a87fca7665a2d7231f512dbc595e16421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerator for the available physics processes.  <a href="../../d3/d07/_import_process_8cc.html#a87fca7665a2d7231f512dbc595e16421">More...</a><br /></td></tr>
-<tr class="separator:a87fca7665a2d7231f512dbc595e16421"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d9323f018038e112dc60be9f61d9376"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d07/_import_process_8cc.html#a7d9323f018038e112dc60be9f61d9376">celeritas::to_cstring</a> (ImportModelClass value)</td></tr>
-<tr class="memdesc:a7d9323f018038e112dc60be9f61d9376"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerator for the available physics models.  <a href="../../d3/d07/_import_process_8cc.html#a7d9323f018038e112dc60be9f61d9376">More...</a><br /></td></tr>
-<tr class="separator:a7d9323f018038e112dc60be9f61d9376"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75efe7ccc1f3e6cb3ff4a2997bbd4ed4"><td class="memItemLeft" align="right" valign="top"><a id="a75efe7ccc1f3e6cb3ff4a2997bbd4ed4" name="a75efe7ccc1f3e6cb3ff4a2997bbd4ed4"></a>
+char const *&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to_cstring</b> (ImportProcessType value)</td></tr>
+<tr class="memdesc:a75efe7ccc1f3e6cb3ff4a2997bbd4ed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the string value for a table type. <br /></td></tr>
+<tr class="separator:a75efe7ccc1f3e6cb3ff4a2997bbd4ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f2c3b0fc7d60f771cfc14707532610d"><td class="memItemLeft" align="right" valign="top">char const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d07/_import_process_8cc.html#a1f2c3b0fc7d60f771cfc14707532610d">celeritas::to_cstring</a> (ImportProcessClass value)</td></tr>
+<tr class="memdesc:a1f2c3b0fc7d60f771cfc14707532610d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerator for the available physics processes.  <a href="../../d3/d07/_import_process_8cc.html#a1f2c3b0fc7d60f771cfc14707532610d">More...</a><br /></td></tr>
+<tr class="separator:a1f2c3b0fc7d60f771cfc14707532610d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a644d9d8b121079d150c5b43ea8af04a6"><td class="memItemLeft" align="right" valign="top">char const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d07/_import_process_8cc.html#a644d9d8b121079d150c5b43ea8af04a6">celeritas::to_cstring</a> (ImportModelClass value)</td></tr>
+<tr class="memdesc:a644d9d8b121079d150c5b43ea8af04a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerator for the available physics models.  <a href="../../d3/d07/_import_process_8cc.html#a644d9d8b121079d150c5b43ea8af04a6">More...</a><br /></td></tr>
+<tr class="separator:a644d9d8b121079d150c5b43ea8af04a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13bdd38e36c006c12091787e1877e4dd"><td class="memItemLeft" align="right" valign="top"><a id="a13bdd38e36c006c12091787e1877e4dd" name="a13bdd38e36c006c12091787e1877e4dd"></a>
+char const *&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to_geant_name</b> (ImportProcessClass value)</td></tr>
+<tr class="memdesc:a13bdd38e36c006c12091787e1877e4dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the default Geant4 process name for an ImportProcessClass. <br /></td></tr>
+<tr class="separator:a13bdd38e36c006c12091787e1877e4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9f6d81ad0fe2092f7223bbb789e1cae"><td class="memItemLeft" align="right" valign="top">ImportProcessClass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d07/_import_process_8cc.html#ab9f6d81ad0fe2092f7223bbb789e1cae">celeritas::geant_name_to_import_process_class</a> (std::string const &amp;s)</td></tr>
+<tr class="memdesc:ab9f6d81ad0fe2092f7223bbb789e1cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a Geant4 process name to an IPC.  <a href="../../d3/d07/_import_process_8cc.html#ab9f6d81ad0fe2092f7223bbb789e1cae">More...</a><br /></td></tr>
+<tr class="separator:ab9f6d81ad0fe2092f7223bbb789e1cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2c4f99a5920079db8573b180f131934"><td class="memItemLeft" align="right" valign="top"><a id="aa2c4f99a5920079db8573b180f131934" name="aa2c4f99a5920079db8573b180f131934"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::needs_micro_xs</b> (ImportModelClass value)</td></tr>
+<tr class="memdesc:aa2c4f99a5920079db8573b180f131934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the model requires microscopic xs data for sampling. <br /></td></tr>
+<tr class="separator:aa2c4f99a5920079db8573b180f131934"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a7d9323f018038e112dc60be9f61d9376" name="a7d9323f018038e112dc60be9f61d9376"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d9323f018038e112dc60be9f61d9376">&#9670;&#160;</a></span>to_cstring() <span class="overload">[1/2]</span></h2>
+<a id="ab9f6d81ad0fe2092f7223bbb789e1cae" name="ab9f6d81ad0fe2092f7223bbb789e1cae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9f6d81ad0fe2092f7223bbb789e1cae">&#9670;&#160;</a></span>geant_name_to_import_process_class()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char * celeritas::to_cstring </td>
+          <td class="memname">ImportProcessClass celeritas::geant_name_to_import_process_class </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert a Geant4 process name to an IPC. </p>
+<p >This will throw a <code><a class="el" href="../../db/d74/classceleritas_1_1_runtime_error.html" title="Error thrown by working code from unexpected runtime conditions.">celeritas::RuntimeError</a></code> if the string is not known to us. </p>
+
+</div>
+</div>
+<a id="a644d9d8b121079d150c5b43ea8af04a6" name="a644d9d8b121079d150c5b43ea8af04a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a644d9d8b121079d150c5b43ea8af04a6">&#9670;&#160;</a></span>to_cstring() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char const  * celeritas::to_cstring </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../de/de8/_import_process_8hh.html#a1b287483adb07ba06a198644b6cb0114">ImportModelClass</a>&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
@@ -117,14 +162,14 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to
 
 </div>
 </div>
-<a id="a87fca7665a2d7231f512dbc595e16421" name="a87fca7665a2d7231f512dbc595e16421"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87fca7665a2d7231f512dbc595e16421">&#9670;&#160;</a></span>to_cstring() <span class="overload">[2/2]</span></h2>
+<a id="a1f2c3b0fc7d60f771cfc14707532610d" name="a1f2c3b0fc7d60f771cfc14707532610d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f2c3b0fc7d60f771cfc14707532610d">&#9670;&#160;</a></span>to_cstring() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char * celeritas::to_cstring </td>
+          <td class="memname">char const  * celeritas::to_cstring </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../de/de8/_import_process_8hh.html#aee9f70862dd95ace9074262973ad3904">ImportProcessClass</a>&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>

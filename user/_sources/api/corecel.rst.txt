@@ -1,16 +1,16 @@
-.. Copyright 2022 UT-Battelle, LLC, and other Celeritas developers.
+.. Copyright 2022-2023 UT-Battelle, LLC, and other Celeritas developers.
 .. See the doc/COPYRIGHT file for details.
 .. SPDX-License-Identifier: CC-BY-4.0
 
 .. doxygenfile:: celeritas_version.h
+
+.. _corecel:
 
 Core package
 ============
 
 The ``corecel`` directory contains functionality shared by Celeritas and ORANGE
 primarily pertaining to GPU abstractions.
-
-.. _corecel:
 
 Fundamentals
 ------------

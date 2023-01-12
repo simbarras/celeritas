@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -102,42 +102,39 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>HostRef</b> = <a cla
 <tr class="memitem:af63649235e028e62dbc81159f9e51efc"><td class="memItemLeft" align="right" valign="top"><a id="af63649235e028e62dbc81159f9e51efc" name="af63649235e028e62dbc81159f9e51efc"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>DeviceRef</b> = <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac406c12413f5d3ee1538ef452c821ec2">DeviceCRef</a>&lt; <a class="el" href="../../db/d9c/structceleritas_1_1_atomic_relax_params_data.html">AtomicRelaxParamsData</a> &gt;</td></tr>
 <tr class="separator:af63649235e028e62dbc81159f9e51efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad542921deb4493c12bec33a2df20905"><td class="memItemLeft" align="right" valign="top"><a id="aad542921deb4493c12bec33a2df20905" name="aad542921deb4493c12bec33a2df20905"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>AtomicNumber</b> = int</td></tr>
-<tr class="separator:aad542921deb4493c12bec33a2df20905"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0e93e9cf50f896576819f6023b32a57"><td class="memItemLeft" align="right" valign="top"><a id="ad0e93e9cf50f896576819f6023b32a57" name="ad0e93e9cf50f896576819f6023b32a57"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>MevEnergy</b> = <a class="el" href="../../de/d40/_quantities_8hh.html#ab016d8ce94d9a1e2a77552395078cce0">units::MevEnergy</a></td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>MevEnergy</b> = <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::MevEnergy</a></td></tr>
 <tr class="separator:ad0e93e9cf50f896576819f6023b32a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5031bda30b0500b5cb36483c9dc6f65d"><td class="memItemLeft" align="right" valign="top"><a id="a5031bda30b0500b5cb36483c9dc6f65d" name="a5031bda30b0500b5cb36483c9dc6f65d"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>ReadData</b> = std::function&lt; <a class="el" href="../../d5/dcc/structceleritas_1_1_import_atomic_relaxation.html">ImportAtomicRelaxation</a>(AtomicNumber)&gt;</td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ReadData</b> = std::function&lt; <a class="el" href="../../d5/dcc/structceleritas_1_1_import_atomic_relaxation.html">ImportAtomicRelaxation</a>(<a class="el" href="../../de/db3/classceleritas_1_1_atomic_number.html">AtomicNumber</a>)&gt;</td></tr>
 <tr class="separator:a5031bda30b0500b5cb36483c9dc6f65d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f20d6d80e39d646aeee956f3b06569f"><td class="memItemLeft" align="right" valign="top"><a id="a3f20d6d80e39d646aeee956f3b06569f" name="a3f20d6d80e39d646aeee956f3b06569f"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstCutoffs</b> = std::shared_ptr&lt; const <a class="el" href="../../df/d54/classceleritas_1_1_cutoff_params.html">CutoffParams</a> &gt;</td></tr>
-<tr class="separator:a3f20d6d80e39d646aeee956f3b06569f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d049b1b14e517b992e8d12f1671ad42"><td class="memItemLeft" align="right" valign="top"><a id="a0d049b1b14e517b992e8d12f1671ad42" name="a0d049b1b14e517b992e8d12f1671ad42"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstMaterials</b> = std::shared_ptr&lt; const <a class="el" href="../../df/d18/classceleritas_1_1_material_params.html">MaterialParams</a> &gt;</td></tr>
-<tr class="separator:a0d049b1b14e517b992e8d12f1671ad42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6637ba8cddb9a6389225f9a8c0180741"><td class="memItemLeft" align="right" valign="top"><a id="a6637ba8cddb9a6389225f9a8c0180741" name="a6637ba8cddb9a6389225f9a8c0180741"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstParticles</b> = std::shared_ptr&lt; const <a class="el" href="../../d8/d0b/classceleritas_1_1_particle_params.html">ParticleParams</a> &gt;</td></tr>
-<tr class="separator:a6637ba8cddb9a6389225f9a8c0180741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39f1f6d87bbe7b5a2a913e7e334452ca"><td class="memItemLeft" align="right" valign="top"><a id="a39f1f6d87bbe7b5a2a913e7e334452ca" name="a39f1f6d87bbe7b5a2a913e7e334452ca"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstCutoffs</b> = std::shared_ptr&lt; <a class="el" href="../../df/d54/classceleritas_1_1_cutoff_params.html">CutoffParams</a> const  &gt;</td></tr>
+<tr class="separator:a39f1f6d87bbe7b5a2a913e7e334452ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1e80a91181f6fe7e1661411266f698f"><td class="memItemLeft" align="right" valign="top"><a id="ab1e80a91181f6fe7e1661411266f698f" name="ab1e80a91181f6fe7e1661411266f698f"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstMaterials</b> = std::shared_ptr&lt; <a class="el" href="../../df/d18/classceleritas_1_1_material_params.html">MaterialParams</a> const  &gt;</td></tr>
+<tr class="separator:ab1e80a91181f6fe7e1661411266f698f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d708b696910b83011ed2d1d6f69b1da"><td class="memItemLeft" align="right" valign="top"><a id="a7d708b696910b83011ed2d1d6f69b1da" name="a7d708b696910b83011ed2d1d6f69b1da"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstParticles</b> = std::shared_ptr&lt; <a class="el" href="../../d8/d0b/classceleritas_1_1_particle_params.html">ParticleParams</a> const  &gt;</td></tr>
+<tr class="separator:a7d708b696910b83011ed2d1d6f69b1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0e0dffd09ad34b3d1b55cede46b1b81b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classceleritas_1_1_atomic_relaxation_params.html#a0e0dffd09ad34b3d1b55cede46b1b81b">AtomicRelaxationParams</a> (const <a class="el" href="../../db/dc7/structceleritas_1_1_atomic_relaxation_params_1_1_input.html">Input</a> &amp;inp)</td></tr>
-<tr class="memdesc:a0e0dffd09ad34b3d1b55cede46b1b81b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a vector of element identifiers.  <a href="../../d1/da7/classceleritas_1_1_atomic_relaxation_params.html#a0e0dffd09ad34b3d1b55cede46b1b81b">More...</a><br /></td></tr>
-<tr class="separator:a0e0dffd09ad34b3d1b55cede46b1b81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74b9c11f1e48b07826ba05916566b3b8"><td class="memItemLeft" align="right" valign="top"><a id="a74b9c11f1e48b07826ba05916566b3b8" name="a74b9c11f1e48b07826ba05916566b3b8"></a>
-const <a class="el" href="../../d1/da7/classceleritas_1_1_atomic_relaxation_params.html#a7abe6ecce2cf2444bf08948a29de2f7c">HostRef</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>host_ref</b> () const</td></tr>
-<tr class="separator:a74b9c11f1e48b07826ba05916566b3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e13914995c9805ce1a44e220eceddd0"><td class="memItemLeft" align="right" valign="top"><a id="a7e13914995c9805ce1a44e220eceddd0" name="a7e13914995c9805ce1a44e220eceddd0"></a>
-const DeviceRef &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>device_ref</b> () const</td></tr>
-<tr class="separator:a7e13914995c9805ce1a44e220eceddd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a5b5fe55a18fdfab4a7a446fdcde588"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classceleritas_1_1_atomic_relaxation_params.html#a6a5b5fe55a18fdfab4a7a446fdcde588">AtomicRelaxationParams</a> (<a class="el" href="../../db/dc7/structceleritas_1_1_atomic_relaxation_params_1_1_input.html">Input</a> const &amp;inp)</td></tr>
+<tr class="memdesc:a6a5b5fe55a18fdfab4a7a446fdcde588"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a vector of element identifiers.  <a href="../../d1/da7/classceleritas_1_1_atomic_relaxation_params.html#a6a5b5fe55a18fdfab4a7a446fdcde588">More...</a><br /></td></tr>
+<tr class="separator:a6a5b5fe55a18fdfab4a7a446fdcde588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bebe6ad39491bfaabc9c7ec80c22fc1"><td class="memItemLeft" align="right" valign="top"><a id="a1bebe6ad39491bfaabc9c7ec80c22fc1" name="a1bebe6ad39491bfaabc9c7ec80c22fc1"></a>
+<a class="el" href="../../d1/da7/classceleritas_1_1_atomic_relaxation_params.html#a7abe6ecce2cf2444bf08948a29de2f7c">HostRef</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>host_ref</b> () const</td></tr>
+<tr class="separator:a1bebe6ad39491bfaabc9c7ec80c22fc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb55e079da25c21b2dc51b5705ce65cb"><td class="memItemLeft" align="right" valign="top"><a id="acb55e079da25c21b2dc51b5705ce65cb" name="acb55e079da25c21b2dc51b5705ce65cb"></a>
+DeviceRef const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>device_ref</b> () const</td></tr>
+<tr class="separator:acb55e079da25c21b2dc51b5705ce65cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Data management for the EADL transition data for atomic relaxation. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0e0dffd09ad34b3d1b55cede46b1b81b" name="a0e0dffd09ad34b3d1b55cede46b1b81b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e0dffd09ad34b3d1b55cede46b1b81b">&#9670;&#160;</a></span>AtomicRelaxationParams()</h2>
+<a id="a6a5b5fe55a18fdfab4a7a446fdcde588" name="a6a5b5fe55a18fdfab4a7a446fdcde588"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a5b5fe55a18fdfab4a7a446fdcde588">&#9670;&#160;</a></span>AtomicRelaxationParams()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -148,7 +145,7 @@ const DeviceRef &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>devi
         <tr>
           <td class="memname">celeritas::AtomicRelaxationParams::AtomicRelaxationParams </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../db/dc7/structceleritas_1_1_atomic_relaxation_params_1_1_input.html">Input</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../db/dc7/structceleritas_1_1_atomic_relaxation_params_1_1_input.html">Input</a> const &amp;&#160;</td>
           <td class="paramname"><em>inp</em></td><td>)</td>
           <td></td>
         </tr>

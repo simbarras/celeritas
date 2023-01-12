@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -83,7 +83,6 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;cstddef&gt;</code><br />
 <code>#include &lt;functional&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d10/_assert_8hh.html">corecel/Assert.hh</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
@@ -112,7 +111,7 @@ constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::
 constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::operator&lt;</b> (PDGNumber lhs, PDGNumber rhs)</td></tr>
 <tr class="memdesc:a2dd1acc064a69a7e556dfdb1e3c1684c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow less-than comparison for sorting. <br /></td></tr>
 <tr class="separator:a2dd1acc064a69a7e556dfdb1e3c1684c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8240b5a35a9569ba2623a57de165ecd9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de0/_p_d_g_number_8hh.html#a8240b5a35a9569ba2623a57de165ecd9">CELER_DEFINE_PDGNUMBER</a>(NAME,  VALUE)&#160;&#160;&#160;    inline constexpr PDGNumber NAME() { return PDGNumber{VALUE}; }</td></tr>
+<tr class="memitem:a8240b5a35a9569ba2623a57de165ecd9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de0/_p_d_g_number_8hh.html#a8240b5a35a9569ba2623a57de165ecd9">CELER_DEFINE_PDGNUMBER</a>(NAME,  VALUE)</td></tr>
 <tr class="separator:a8240b5a35a9569ba2623a57de165ecd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e25f8b3d15652be799c6bd51045a372"><td class="memItemLeft" align="right" valign="top">constexpr PDGNumber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de0/_p_d_g_number_8hh.html#a6e25f8b3d15652be799c6bd51045a372">celeritas::pdg::electron</a> ()</td></tr>
 <tr class="separator:a6e25f8b3d15652be799c6bd51045a372"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,11 +174,15 @@ constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;    inline constexpr PDGNumber NAME() { return PDGNumber{VALUE}; }</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Particle Data Group Monte Carlo number codes. </p>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">inline</span> <span class="keyword">constexpr</span> PDGNumber NAME()       \</div>
+<div class="line">    {                                       \</div>
+<div class="line">        <span class="keywordflow">return</span> PDGNumber{VALUE};            \</div>
+<div class="line">    }</div>
+</div><!-- fragment --><p >Particle Data Group Monte Carlo number codes. </p>
 
 </div>
 </div>

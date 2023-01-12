@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -95,19 +95,19 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa6c2222238ca18c5fce4358042f3917d"><td class="memItemLeft" align="right" valign="top"><a id="aa6c2222238ca18c5fce4358042f3917d" name="aa6c2222238ca18c5fce4358042f3917d"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>MagFieldEquation</b> (FieldT &amp;&amp;field, <a class="el" href="../../de/d40/_quantities_8hh.html#aed3693f034cf055fd47e1de6f9f1c4e8">units::ElementaryCharge</a> q)</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>MagFieldEquation</b> (FieldT &amp;&amp;field, <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::ElementaryCharge</a> q)</td></tr>
 <tr class="memdesc:aa6c2222238ca18c5fce4358042f3917d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with a magnetic field equation. <br /></td></tr>
 <tr class="separator:aa6c2222238ca18c5fce4358042f3917d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2a300fc5daee336c99be6622551537f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d6/d7e/structceleritas_1_1_ode_state.html">OdeState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d82/classceleritas_1_1_mag_field_equation.html#aa2a300fc5daee336c99be6622551537f">operator()</a> (const <a class="el" href="../../d6/d7e/structceleritas_1_1_ode_state.html">OdeState</a> &amp;<a class="el" href="../../d7/d97/orange_2_types_8hh.html#a1fc5102eb33d89f16a67be30c02182aca415290769594460e2e485922904f345d">y</a>) const</td></tr>
-<tr class="memdesc:aa2a300fc5daee336c99be6622551537f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the right hand side of the Lorentz equation.  <a href="../../d0/d82/classceleritas_1_1_mag_field_equation.html#aa2a300fc5daee336c99be6622551537f">More...</a><br /></td></tr>
-<tr class="separator:aa2a300fc5daee336c99be6622551537f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83d9780bf3093e1a4e141102385dc2e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d6/d7e/structceleritas_1_1_ode_state.html">OdeState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d82/classceleritas_1_1_mag_field_equation.html#a83d9780bf3093e1a4e141102385dc2e6">operator()</a> (<a class="el" href="../../d6/d7e/structceleritas_1_1_ode_state.html">OdeState</a> const &amp;y) const</td></tr>
+<tr class="memdesc:a83d9780bf3093e1a4e141102385dc2e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the right hand side of the Lorentz equation.  <a href="../../d0/d82/classceleritas_1_1_mag_field_equation.html#a83d9780bf3093e1a4e141102385dc2e6">More...</a><br /></td></tr>
+<tr class="separator:a83d9780bf3093e1a4e141102385dc2e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class FieldT&gt;<br />
 class celeritas::MagFieldEquation&lt; FieldT &gt;</div><p >Evaluate the force applied by a magnetic field. </p>
 <p >The templated <code>FieldT</code> must be a function-like object with the signature </p><div class="fragment"><div class="line"><a class="code hl_class" href="../../dd/dd6/structceleritas_1_1_array.html">Real3</a> (*)(<span class="keyword">const</span> <a class="code hl_class" href="../../dd/dd6/structceleritas_1_1_array.html">Real3</a>&amp;)</div>
 <div class="ttc" id="astructceleritas_1_1_array_html"><div class="ttname"><a href="../../dd/dd6/structceleritas_1_1_array.html">celeritas::Array&lt; real_type, 3 &gt;</a></div></div>
-</div><!-- fragment --><p> which returns a magnetic field vector at a given position. The field strength is in Celeritas native units, so multiply by <code><a class="el" href="../../db/df7/_units_8hh.html#a81f3fb58b64dca6a1de5a6b1d5a501b1">units::tesla</a></code> if necessary. </p>
+</div><!-- fragment --><p> which returns a magnetic field vector at a given position. The field strength is in Celeritas native units, so multiply by <code>units::tesla</code> if necessary. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a37f0189930afcb91ddfa3492648bc942" name="a37f0189930afcb91ddfa3492648bc942"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a37f0189930afcb91ddfa3492648bc942">&#9670;&#160;</a></span>Field_t</h2>
@@ -127,8 +127,8 @@ template&lt;class FieldT &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa2a300fc5daee336c99be6622551537f" name="aa2a300fc5daee336c99be6622551537f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2a300fc5daee336c99be6622551537f">&#9670;&#160;</a></span>operator()()</h2>
+<a id="a83d9780bf3093e1a4e141102385dc2e6" name="a83d9780bf3093e1a4e141102385dc2e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83d9780bf3093e1a4e141102385dc2e6">&#9670;&#160;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,7 +141,7 @@ template&lt;class FieldT &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> auto <a class="el" href="../../d0/d82/classceleritas_1_1_mag_field_equation.html">celeritas::MagFieldEquation</a>&lt; FieldT &gt;::operator() </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d6/d7e/structceleritas_1_1_ode_state.html">OdeState</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d6/d7e/structceleritas_1_1_ode_state.html">OdeState</a> const &amp;&#160;</td>
           <td class="paramname"><em>y</em></td><td>)</td>
           <td> const</td>
         </tr>

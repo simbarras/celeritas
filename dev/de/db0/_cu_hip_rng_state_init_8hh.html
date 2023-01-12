@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -81,6 +81,8 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d5/d10/_assert_8hh.html">corecel/Assert.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/dc5/_macros_8hh.html">corecel/Macros.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html">corecel/Types.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../db/d8b/_collection_8hh.html">corecel/data/Collection.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d6/d54/_cu_hip_rng_data_8hh.html">../CuHipRngData.hh</a>&quot;</code><br />
 </div><table class="memberdecls">
@@ -91,14 +93,14 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab7a43a603fae03a9cfc4c327bc3f362e"><td class="memItemLeft" align="right" valign="top"><a id="ab7a43a603fae03a9cfc4c327bc3f362e" name="ab7a43a603fae03a9cfc4c327bc3f362e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::rng_state_init</b> (const DeviceRef&lt; CuHipRngStateData &gt; &amp;rng, const DeviceCRef&lt; CuHipRngInitData &gt; &amp;seeds)</td></tr>
-<tr class="memdesc:ab7a43a603fae03a9cfc4c327bc3f362e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the RNG states on device from seeds randomly generated on host. <br /></td></tr>
-<tr class="separator:ab7a43a603fae03a9cfc4c327bc3f362e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44fcd58f8047a3ab2ef55efc6d624487"><td class="memItemLeft" align="right" valign="top"><a id="a44fcd58f8047a3ab2ef55efc6d624487" name="a44fcd58f8047a3ab2ef55efc6d624487"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::rng_state_init</b> (const HostRef&lt; CuHipRngStateData &gt; &amp;rng, const HostCRef&lt; CuHipRngInitData &gt; &amp;seeds)</td></tr>
-<tr class="memdesc:a44fcd58f8047a3ab2ef55efc6d624487"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the RNG states from seeds randomly generated on host. <br /></td></tr>
-<tr class="separator:a44fcd58f8047a3ab2ef55efc6d624487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23e498a2408cca3dd551d8eea8e328be"><td class="memItemLeft" align="right" valign="top"><a id="a23e498a2408cca3dd551d8eea8e328be" name="a23e498a2408cca3dd551d8eea8e328be"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::rng_state_init</b> (DeviceRef&lt; CuHipRngStateData &gt; const &amp;rng, DeviceCRef&lt; CuHipRngInitData &gt; const &amp;seeds)</td></tr>
+<tr class="memdesc:a23e498a2408cca3dd551d8eea8e328be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the RNG states on device from seeds randomly generated on host. <br /></td></tr>
+<tr class="separator:a23e498a2408cca3dd551d8eea8e328be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91d62ff821b2b57ade3e66188bc6771d"><td class="memItemLeft" align="right" valign="top"><a id="a91d62ff821b2b57ade3e66188bc6771d" name="a91d62ff821b2b57ade3e66188bc6771d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::rng_state_init</b> (HostRef&lt; CuHipRngStateData &gt; const &amp;rng, HostCRef&lt; CuHipRngInitData &gt; const &amp;seeds)</td></tr>
+<tr class="memdesc:a91d62ff821b2b57ade3e66188bc6771d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the RNG states from seeds randomly generated on host. <br /></td></tr>
+<tr class="separator:a91d62ff821b2b57ade3e66188bc6771d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

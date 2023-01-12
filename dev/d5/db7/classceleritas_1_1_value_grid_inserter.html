@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -93,9 +93,9 @@ Public Types</h2></td></tr>
 <tr class="separator:a7714ca3a4a846ea2e021aa01583bd939"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac683b0e3b2b77edd598fc045cfbdaa12"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#ac683b0e3b2b77edd598fc045cfbdaa12">XsGridCollection</a> = <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Collection</a>&lt; <a class="el" href="../../d5/d2f/structceleritas_1_1_xs_grid_data.html">XsGridData</a>, <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148a2063c1608d6e0baf80249c42e2be5804">Ownership::value</a>, MemSpace::host &gt;</td></tr>
 <tr class="separator:ac683b0e3b2b77edd598fc045cfbdaa12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30e8ab9e454d63e2ab494a9131c8f00e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#a30e8ab9e454d63e2ab494a9131c8f00e">SpanConstReal</a> = <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a>&lt; const <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> &gt;</td></tr>
-<tr class="separator:a30e8ab9e454d63e2ab494a9131c8f00e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fcaad52490840e33b4162564c763b38"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#a3fcaad52490840e33b4162564c763b38">InterpolatedGrid</a> = std::pair&lt; <a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#a30e8ab9e454d63e2ab494a9131c8f00e">SpanConstReal</a>, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a800890e6861f463657c8cd8d797518d9">Interp</a> &gt;</td></tr>
+<tr class="memitem:a96aa59105f14af0f44d0688ac6b54041"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#a96aa59105f14af0f44d0688ac6b54041">SpanConstReal</a> = <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a>&lt; <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> const  &gt;</td></tr>
+<tr class="separator:a96aa59105f14af0f44d0688ac6b54041"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fcaad52490840e33b4162564c763b38"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#a3fcaad52490840e33b4162564c763b38">InterpolatedGrid</a> = std::pair&lt; <a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#a96aa59105f14af0f44d0688ac6b54041">SpanConstReal</a>, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a800890e6861f463657c8cd8d797518d9">Interp</a> &gt;</td></tr>
 <tr class="separator:a3fcaad52490840e33b4162564c763b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab838ad29f6d56802cf93bbe9facdf4ec"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#ab838ad29f6d56802cf93bbe9facdf4ec">XsIndex</a> = <a class="el" href="../../db/d8b/_collection_8hh.html#a6f8d0c7bc5dfadc09ac2b566b3a55c24">ItemId</a>&lt; <a class="el" href="../../d5/d2f/structceleritas_1_1_xs_grid_data.html">XsGridData</a> &gt;</td></tr>
 <tr class="separator:ab838ad29f6d56802cf93bbe9facdf4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -108,14 +108,14 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ValueGridInserter</b> (<a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#a7714ca3a4a846ea2e021aa01583bd939">RealCollection</a> *real_data, <a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#ac683b0e3b2b77edd598fc045cfbdaa12">XsGridCollection</a> *xs_grid)</td></tr>
 <tr class="memdesc:ab365edd9b2b3036a8f98c721c3eb6a8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with a reference to mutable host data. <br /></td></tr>
 <tr class="separator:ab365edd9b2b3036a8f98c721c3eb6a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af55adde882529a9338ff9fbac8ac2475"><td class="memItemLeft" align="right" valign="top"><a id="af55adde882529a9338ff9fbac8ac2475" name="af55adde882529a9338ff9fbac8ac2475"></a>
-<a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#ab838ad29f6d56802cf93bbe9facdf4ec">XsIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (const <a class="el" href="../../d6/d49/structceleritas_1_1_uniform_grid_data.html">UniformGridData</a> &amp;log_grid, size_type prime_index, <a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#a30e8ab9e454d63e2ab494a9131c8f00e">SpanConstReal</a> values)</td></tr>
-<tr class="memdesc:af55adde882529a9338ff9fbac8ac2475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a grid of physics xs data. <br /></td></tr>
-<tr class="separator:af55adde882529a9338ff9fbac8ac2475"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a618af75bd2077adb8a2065d6b8994f58"><td class="memItemLeft" align="right" valign="top"><a id="a618af75bd2077adb8a2065d6b8994f58" name="a618af75bd2077adb8a2065d6b8994f58"></a>
-<a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#ab838ad29f6d56802cf93bbe9facdf4ec">XsIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (const <a class="el" href="../../d6/d49/structceleritas_1_1_uniform_grid_data.html">UniformGridData</a> &amp;log_grid, <a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#a30e8ab9e454d63e2ab494a9131c8f00e">SpanConstReal</a> values)</td></tr>
-<tr class="memdesc:a618af75bd2077adb8a2065d6b8994f58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a grid of log-spaced data without 1/E scaling. <br /></td></tr>
-<tr class="separator:a618af75bd2077adb8a2065d6b8994f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e8d9e414cb6897a8b29f070fcdcae8f"><td class="memItemLeft" align="right" valign="top"><a id="a9e8d9e414cb6897a8b29f070fcdcae8f" name="a9e8d9e414cb6897a8b29f070fcdcae8f"></a>
+<a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#ab838ad29f6d56802cf93bbe9facdf4ec">XsIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="../../d6/d49/structceleritas_1_1_uniform_grid_data.html">UniformGridData</a> const &amp;log_grid, size_type prime_index, <a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#a96aa59105f14af0f44d0688ac6b54041">SpanConstReal</a> values)</td></tr>
+<tr class="memdesc:a9e8d9e414cb6897a8b29f070fcdcae8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a grid of physics xs data. <br /></td></tr>
+<tr class="separator:a9e8d9e414cb6897a8b29f070fcdcae8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e67d994ababe489bdd6367e99bd58d8"><td class="memItemLeft" align="right" valign="top"><a id="a8e67d994ababe489bdd6367e99bd58d8" name="a8e67d994ababe489bdd6367e99bd58d8"></a>
+<a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#ab838ad29f6d56802cf93bbe9facdf4ec">XsIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="../../d6/d49/structceleritas_1_1_uniform_grid_data.html">UniformGridData</a> const &amp;log_grid, <a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#a96aa59105f14af0f44d0688ac6b54041">SpanConstReal</a> values)</td></tr>
+<tr class="memdesc:a8e67d994ababe489bdd6367e99bd58d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a grid of log-spaced data without 1/E scaling. <br /></td></tr>
+<tr class="separator:a8e67d994ababe489bdd6367e99bd58d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e5465e38c7d16a6045bdac16b0adb91"><td class="memItemLeft" align="right" valign="top"><a id="a8e5465e38c7d16a6045bdac16b0adb91" name="a8e5465e38c7d16a6045bdac16b0adb91"></a>
 <a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#adcdb2e8335feac29477b1bc2ab0609fe">GenericIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#a3fcaad52490840e33b4162564c763b38">InterpolatedGrid</a> grid, <a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#a3fcaad52490840e33b4162564c763b38">InterpolatedGrid</a> values)</td></tr>
 <tr class="memdesc:a8e5465e38c7d16a6045bdac16b0adb91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a grid of host pointer data. <br /></td></tr>
@@ -128,7 +128,7 @@ Public Member Functions</h2></td></tr>
 <div class="line">insert(uniform_grid, values);</div>
 <div class="line">store.push_back(host_ptrs);</div>
 <div class="line">store.copy_to_device();</div>
-<div class="ttc" id="aclassceleritas_1_1_value_grid_inserter_html"><div class="ttname"><a href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html">celeritas::ValueGridInserter</a></div><div class="ttdoc">Manage data and help construction of physics value grids.</div><div class="ttdef"><b>Definition:</b> ValueGridInserter.hh:38</div></div>
+<div class="ttc" id="aclassceleritas_1_1_value_grid_inserter_html"><div class="ttname"><a href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html">celeritas::ValueGridInserter</a></div><div class="ttdoc">Manage data and help construction of physics value grids.</div><div class="ttdef"><b>Definition:</b> ValueGridInserter.hh:41</div></div>
 </div><!-- fragment --> </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="adcdb2e8335feac29477b1bc2ab0609fe" name="adcdb2e8335feac29477b1bc2ab0609fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adcdb2e8335feac29477b1bc2ab0609fe">&#9670;&#160;</a></span>GenericIndex</h2>
@@ -152,7 +152,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#a3fcaad52490840e33b4162564c763b38">celeritas::ValueGridInserter::InterpolatedGrid</a> =  std::pair&lt;<a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#a30e8ab9e454d63e2ab494a9131c8f00e">SpanConstReal</a>, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a800890e6861f463657c8cd8d797518d9">Interp</a>&gt;</td>
+          <td class="memname">using <a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#a3fcaad52490840e33b4162564c763b38">celeritas::ValueGridInserter::InterpolatedGrid</a> =  std::pair&lt;<a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#a96aa59105f14af0f44d0688ac6b54041">SpanConstReal</a>, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a800890e6861f463657c8cd8d797518d9">Interp</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -175,14 +175,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a30e8ab9e454d63e2ab494a9131c8f00e" name="a30e8ab9e454d63e2ab494a9131c8f00e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30e8ab9e454d63e2ab494a9131c8f00e">&#9670;&#160;</a></span>SpanConstReal</h2>
+<a id="a96aa59105f14af0f44d0688ac6b54041" name="a96aa59105f14af0f44d0688ac6b54041"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96aa59105f14af0f44d0688ac6b54041">&#9670;&#160;</a></span>SpanConstReal</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#a30e8ab9e454d63e2ab494a9131c8f00e">celeritas::ValueGridInserter::SpanConstReal</a> =  <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a>&lt;const <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>&gt;</td>
+          <td class="memname">using <a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html#a96aa59105f14af0f44d0688ac6b54041">celeritas::ValueGridInserter::SpanConstReal</a> =  <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a>&lt;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> const&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

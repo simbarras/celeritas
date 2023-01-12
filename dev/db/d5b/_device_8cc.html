@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -80,31 +80,36 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../df/dfb/_device_8hh.html">Device.hh</a>&quot;</code><br />
-<code>#include &lt;cstdlib&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;mutex&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d8/d28/celeritas__config_8h.html">celeritas_config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/dc5/_macros_8hh.html">corecel/Macros.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d3/d0e/device__runtime__api_8h.html">corecel/device_runtime_api.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d10/_assert_8hh.html">corecel/Assert.hh</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d1/d95/_logger_8hh.html">corecel/io/Logger.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d8a/corecel_2io_2_logger_8hh.html">corecel/io/Logger.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/d47/_scoped_time_log_8hh.html">corecel/io/ScopedTimeLog.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/db5/_environment_8hh.html">Environment.hh</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../db/d87/_stopwatch_8hh.html">Stopwatch.hh</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab9ca6b04166cafe1e1965f3fc78db3aa"><td class="memItemLeft" align="right" valign="top"><a id="ab9ca6b04166cafe1e1965f3fc78db3aa" name="ab9ca6b04166cafe1e1965f3fc78db3aa"></a>
-const Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::device</b> ()</td></tr>
-<tr class="memdesc:ab9ca6b04166cafe1e1965f3fc78db3aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the shared default device. <br /></td></tr>
-<tr class="separator:ab9ca6b04166cafe1e1965f3fc78db3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a114f908ab2be5d806cf3143c387d8c1f"><td class="memItemLeft" align="right" valign="top"><a id="a114f908ab2be5d806cf3143c387d8c1f" name="a114f908ab2be5d806cf3143c387d8c1f"></a>
+Device const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::device</b> ()</td></tr>
+<tr class="memdesc:a114f908ab2be5d806cf3143c387d8c1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the shared default device. <br /></td></tr>
+<tr class="separator:a114f908ab2be5d806cf3143c387d8c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab8260dc907e27165e613f105cfc5a0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5b/_device_8cc.html#aab8260dc907e27165e613f105cfc5a0d">celeritas::activate_device</a> (Device &amp;&amp;device)</td></tr>
 <tr class="memdesc:aab8260dc907e27165e613f105cfc5a0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate the given device.  <a href="../../db/d5b/_device_8cc.html#aab8260dc907e27165e613f105cfc5a0d">More...</a><br /></td></tr>
 <tr class="separator:aab8260dc907e27165e613f105cfc5a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07b3b30d13212a5530dde0489da594bd"><td class="memItemLeft" align="right" valign="top"><a id="a07b3b30d13212a5530dde0489da594bd" name="a07b3b30d13212a5530dde0489da594bd"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::operator&lt;&lt;</b> (std::ostream &amp;os, const Device &amp;d)</td></tr>
-<tr class="memdesc:a07b3b30d13212a5530dde0489da594bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print device info. <br /></td></tr>
-<tr class="separator:a07b3b30d13212a5530dde0489da594bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4985e7ac7359538715add0437b200bfa"><td class="memItemLeft" align="right" valign="top"><a id="a4985e7ac7359538715add0437b200bfa" name="a4985e7ac7359538715add0437b200bfa"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::operator&lt;&lt;</b> (std::ostream &amp;os, Device const &amp;d)</td></tr>
+<tr class="memdesc:a4985e7ac7359538715add0437b200bfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print device info. <br /></td></tr>
+<tr class="separator:a4985e7ac7359538715add0437b200bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44788f53009f8a6bcd01c5e3255b6753"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5b/_device_8cc.html#a44788f53009f8a6bcd01c5e3255b6753">celeritas::set_cuda_stack_size</a> (int limit)</td></tr>
 <tr class="memdesc:a44788f53009f8a6bcd01c5e3255b6753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase CUDA stack size to enable complex geometries with VecGeom.  <a href="../../db/d5b/_device_8cc.html#a44788f53009f8a6bcd01c5e3255b6753">More...</a><br /></td></tr>
 <tr class="separator:a44788f53009f8a6bcd01c5e3255b6753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a347e10861d2c0ef601bfbd2486edb075"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5b/_device_8cc.html#a347e10861d2c0ef601bfbd2486edb075">celeritas::set_cuda_heap_size</a> (int limit)</td></tr>
+<tr class="memdesc:a347e10861d2c0ef601bfbd2486edb075"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase CUDA heap size to enable complex geometries with VecGeom.  <a href="../../db/d5b/_device_8cc.html#a347e10861d2c0ef601bfbd2486edb075">More...</a><br /></td></tr>
+<tr class="separator:a347e10861d2c0ef601bfbd2486edb075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="aab8260dc907e27165e613f105cfc5a0d" name="aab8260dc907e27165e613f105cfc5a0d"></a>
@@ -124,7 +129,29 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>celerit
 </div><div class="memdoc">
 
 <p>Activate the given device. </p>
-<p >The given device must be set (true result) unless no device has yet been enabled &ndash; this allows Device::from_round_robin to create "null" devices when CUDA is disabled. </p>
+<p >The given device must be set (true result) unless no device has yet been enabled &ndash; this allows Device::from_round_robin to create "null" devices when CUDA is disabled.</p>
+<dl class="section note"><dt>Note</dt><dd>This function is thread safe, and even though the global device is shared across threads, it should be called from each thread to correctly initialize CUDA. </dd></dl>
+
+</div>
+</div>
+<a id="a347e10861d2c0ef601bfbd2486edb075" name="a347e10861d2c0ef601bfbd2486edb075"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a347e10861d2c0ef601bfbd2486edb075">&#9670;&#160;</a></span>set_cuda_heap_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void celeritas::set_cuda_heap_size </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>limit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Increase CUDA heap size to enable complex geometries with VecGeom. </p>
+<p >For the cms-hllhc.gdml detector geometry, the 8MB default heap size is too small, and a new size as high as 33554432 (=32MB) has run successfully. This should be increased as necessary, but avoid setting it too high. </p>
 
 </div>
 </div>

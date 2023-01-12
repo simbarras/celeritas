@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.1.4</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
    </div>
   </td>
  </tr>
@@ -118,12 +118,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> () con
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () const</td></tr>
 <tr class="memdesc:a61d131830aa32081bf34bd8e5b581636"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if handling a signal. <br /></td></tr>
 <tr class="separator:a61d131830aa32081bf34bd8e5b581636"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e0aa7ec4d81b9d132d76b8e5f73dfbf"><td class="memItemLeft" align="right" valign="top"><a id="a7e0aa7ec4d81b9d132d76b8e5f73dfbf" name="a7e0aa7ec4d81b9d132d76b8e5f73dfbf"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ScopedSignalHandler</b> (const <a class="el" href="../../d8/d66/classceleritas_1_1_scoped_signal_handler.html">ScopedSignalHandler</a> &amp;)=delete</td></tr>
-<tr class="separator:a7e0aa7ec4d81b9d132d76b8e5f73dfbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a881de10cf904eb8339a39ff654a9c7bf"><td class="memItemLeft" align="right" valign="top"><a id="a881de10cf904eb8339a39ff654a9c7bf" name="a881de10cf904eb8339a39ff654a9c7bf"></a>
-<a class="el" href="../../d8/d66/classceleritas_1_1_scoped_signal_handler.html">ScopedSignalHandler</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="../../d8/d66/classceleritas_1_1_scoped_signal_handler.html">ScopedSignalHandler</a> &amp;)=delete</td></tr>
-<tr class="separator:a881de10cf904eb8339a39ff654a9c7bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c34ca37a7deabc24ac8d2c24925a305"><td class="memItemLeft" align="right" valign="top"><a id="a4c34ca37a7deabc24ac8d2c24925a305" name="a4c34ca37a7deabc24ac8d2c24925a305"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ScopedSignalHandler</b> (<a class="el" href="../../d8/d66/classceleritas_1_1_scoped_signal_handler.html">ScopedSignalHandler</a> const &amp;)=delete</td></tr>
+<tr class="separator:a4c34ca37a7deabc24ac8d2c24925a305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba3d0a2da6109c65e61dc1fcc8daa409"><td class="memItemLeft" align="right" valign="top"><a id="aba3d0a2da6109c65e61dc1fcc8daa409" name="aba3d0a2da6109c65e61dc1fcc8daa409"></a>
+<a class="el" href="../../d8/d66/classceleritas_1_1_scoped_signal_handler.html">ScopedSignalHandler</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="../../d8/d66/classceleritas_1_1_scoped_signal_handler.html">ScopedSignalHandler</a> const &amp;)=delete</td></tr>
+<tr class="separator:aba3d0a2da6109c65e61dc1fcc8daa409"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3061bc6ab57fcd4e1369fd6fa60d0cb"><td class="memItemLeft" align="right" valign="top"><a id="ab3061bc6ab57fcd4e1369fd6fa60d0cb" name="ab3061bc6ab57fcd4e1369fd6fa60d0cb"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ScopedSignalHandler</b> (<a class="el" href="../../d8/d66/classceleritas_1_1_scoped_signal_handler.html">ScopedSignalHandler</a> &amp;&amp;) noexcept</td></tr>
 <tr class="memdesc:ab3061bc6ab57fcd4e1369fd6fa60d0cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move construct. <br /></td></tr>
@@ -162,7 +162,7 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>allow_signals<
 <div class="line">   {</div>
 <div class="line">       <span class="keywordflow">if</span> (interrupted())</div>
 <div class="line">       {</div>
-<div class="line">           <a class="code hl_define" href="../../d1/d95/_logger_8hh.html#a6767c46cb976eac864c4b6db274c4fcf">CELER_LOG</a>(error) &lt;&lt; <span class="stringliteral">&quot;Interrupted&quot;</span>;</div>
+<div class="line">           <a class="code hl_define" href="../../d2/d8a/corecel_2io_2_logger_8hh.html#a6767c46cb976eac864c4b6db274c4fcf">CELER_LOG</a>(error) &lt;&lt; <span class="stringliteral">&quot;Interrupted&quot;</span>;</div>
 <div class="line">           <span class="keywordflow">break</span>;</div>
 <div class="line">       }</div>
 <div class="line"> </div>
@@ -174,8 +174,8 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>allow_signals<
 <div class="line">   }</div>
 <div class="line">   <span class="keywordflow">return</span> interrupted() ? 1 : 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="a_logger_8hh_html_a6767c46cb976eac864c4b6db274c4fcf"><div class="ttname"><a href="../../d1/d95/_logger_8hh.html#a6767c46cb976eac864c4b6db274c4fcf">CELER_LOG</a></div><div class="ttdeci">#define CELER_LOG(LEVEL)</div><div class="ttdoc">Return a LogMessage object for streaming into at the given level.</div><div class="ttdef"><b>Definition:</b> Logger.hh:35</div></div>
 <div class="ttc" id="aclassceleritas_1_1_scoped_signal_handler_html"><div class="ttname"><a href="../../d8/d66/classceleritas_1_1_scoped_signal_handler.html">celeritas::ScopedSignalHandler</a></div><div class="ttdoc">Catch the given signal type within the scope of the handler.</div><div class="ttdef"><b>Definition:</b> ScopedSignalHandler.hh:58</div></div>
+<div class="ttc" id="acorecel_2io_2_logger_8hh_html_a6767c46cb976eac864c4b6db274c4fcf"><div class="ttname"><a href="../../d2/d8a/corecel_2io_2_logger_8hh.html#a6767c46cb976eac864c4b6db274c4fcf">CELER_LOG</a></div><div class="ttdeci">#define CELER_LOG(LEVEL)</div><div class="ttdoc">Return a LogMessage object for streaming into at the given level.</div><div class="ttdef"><b>Definition:</b> corecel/io/Logger.hh:38</div></div>
 </div><!-- fragment --> </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a8d99851076c49f72d890f9dd237f39f5" name="a8d99851076c49f72d890f9dd237f39f5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8d99851076c49f72d890f9dd237f39f5">&#9670;&#160;</a></span>signal_type</h2>

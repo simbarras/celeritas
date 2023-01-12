@@ -49,5 +49,6 @@ var searchData=
   ['mubremsstrahlungids_46',['MuBremsstrahlungIds',['../dd/df5/structceleritas_1_1_mu_bremsstrahlung_ids.html',1,'celeritas']]],
   ['mubremsstrahlunginteractor_47',['MuBremsstrahlungInteractor',['../d6/dbe/classceleritas_1_1_mu_bremsstrahlung_interactor.html',1,'celeritas']]],
   ['mubremsstrahlungmodel_48',['MuBremsstrahlungModel',['../db/d88/classceleritas_1_1_mu_bremsstrahlung_model.html',1,'celeritas']]],
-  ['multiplescatteringprocess_49',['MultipleScatteringProcess',['../d4/dca/classceleritas_1_1_multiple_scattering_process.html',1,'celeritas']]]
+  ['multiexceptionhandler_49',['MultiExceptionHandler',['../d7/d92/classceleritas_1_1_multi_exception_handler.html',1,'celeritas']]],
+  ['multiplescatteringprocess_50',['MultipleScatteringProcess',['../d4/dca/classceleritas_1_1_multiple_scattering_process.html',1,'celeritas']]]
 ];

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Release History &mdash; Celeritas v0.1.4 documentation</title>
+  <title>Release History &mdash; Celeritas v0.2.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -33,7 +33,7 @@
             <img src="../_static/celeritas-thumbnail.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.1.4
+                0.2.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -55,27 +55,34 @@
 <p class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Release History</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#version-0-1-4">Version 0.1.4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-2-0">Version 0.2.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#new-features">New features</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#bug-fixes">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#documentation-improvements">Documentation improvements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#minor-internal-changes">Minor internal changes</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#version-0-1-3">Version 0.1.3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-1-4">Version 0.1.4</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id2">Bug fixes</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#version-0-1-2">Version 0.1.2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#new-features">New features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-1-3">Version 0.1.3</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id3">Bug fixes</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#version-0-1-1">Version 0.1.1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-1-2">Version 0.1.2</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id4">New features</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id5">Bug fixes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-1-1">Version 0.1.1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">New features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Bug fixes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#internal-changes">Internal changes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#version-0-1-0">Version 0.1.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id6">New features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">New features</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#known-bugs">Known bugs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#contributors">Contributors</a></li>
 </ul>
@@ -83,6 +90,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Development Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="administration.html">Administration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 </ul>
 
@@ -112,12 +120,112 @@
              
   <section id="release-history">
 <span id="id1"></span><h1>Release History<a class="headerlink" href="#release-history" title="Permalink to this heading"></a></h1>
+<section id="version-0-2-0">
+<h2>Version 0.2.0<a class="headerlink" href="#version-0-2-0" title="Permalink to this heading"></a></h2>
+<p>Version 0.2.0 enables new coupled integration between Celeritas and Geant4
+using the Acceleritas interface library. It features new ROOT output capabilities
+including MC truth output, a set of high-level API classes for integrating
+into existing Geant4 toolkit-based apps, and better support for multithreaded use.</p>
+<section id="new-features">
+<h3>New features<a class="headerlink" href="#new-features" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Export SB, Livermore PE, and atomic relaxation data to ROOT file <em>(&#64;stognini, #481)</em></p></li>
+<li><p>Refactor ORANGE input to be more extensible <em>(&#64;sethrj, #510)</em></p></li>
+<li><p>Make primary generator more general <em>(&#64;amandalund, #514)</em></p></li>
+<li><p>Support arbitrary user/internal kernels as part of stepping loop <em>(&#64;sethrj, #525)</em></p></li>
+<li><p>Improve CMake version/host metadata <em>(&#64;sethrj, #529)</em></p></li>
+<li><p>Baby steps toward Geant4 integration <em>(&#64;sethrj, #531)</em></p></li>
+<li><p>Add “background” volume support to ORANGE <em>(&#64;sethrj, #530)</em></p></li>
+<li><p>Build Livermore/SB data from ImportedData <em>(&#64;sethrj, #535)</em></p></li>
+<li><p>Load and build multiple universes in ORANGE <em>(&#64;elliottbiondo, #534)</em></p></li>
+<li><p>Support adding primaries at any step in the transport loop <em>(&#64;amandalund, #542)</em></p></li>
+<li><p>Add basic step collector <em>(&#64;sethrj, #544)</em></p></li>
+<li><p>Add finer granularity to step collector <em>(&#64;sethrj, #549)</em></p></li>
+<li><p>Add a Celeritas handler for ROOT Error (messages) <em>(&#64;pcanal, #552)</em></p></li>
+<li><p>Enable resizing of CUDA malloc heap to fix VecGeom failures <em>(&#64;mrguilima, #554)</em></p></li>
+<li><p>Add detector mapping and filtering to hit collector <em>(&#64;sethrj, #555)</em></p></li>
+<li><p>Add helper class for extracting detector hits to CPU <em>(&#64;sethrj, #559)</em></p></li>
+<li><p>Add initialization of particles in multi-universe ORANGE geometries <em>(&#64;elliottbiondo, #546)</em></p></li>
+<li><p>Add upper_bound functions to corecel/math <em>(&#64;elliottbiondo, #565)</em></p></li>
+<li><p>Add ROOT MC truth output <em>(&#64;stognini, #564)</em></p></li>
+<li><p>Handle exceptions from inside OpenMP parallel pragmas <em>(&#64;sethrj, #563)</em></p></li>
+<li><p>Add skeleton classes for Celeritas/Geant4 integration <em>(&#64;sethrj, #567)</em></p></li>
+<li><p>Add thread-local transporter and Celeritas shared params setup to Acceleritas <em>(&#64;amandalund, #575)</em></p></li>
+<li><p>Set initial values of SetupOptions parameters from GlobalSetup <em>(&#64;mrguilima, #576)</em></p></li>
+<li><p>Add Geant4 Exception converter <em>(&#64;sethrj, #580)</em></p></li>
+<li><p>Convert Thrust exceptions to Geant4 <em>(&#64;sethrj, #582)</em></p></li>
+<li><p>Add diagnostic output to geant demo <em>(&#64;sethrj, #583)</em></p></li>
+<li><p>Auto-export GDML from Geant4 geometry <em>(&#64;sethrj, #585)</em></p></li>
+<li><p>Support user-defined along-step kernels in accel+demo <em>(&#64;sethrj, #586)</em></p></li>
+<li><p>Add hit processor to convert Celeritas detector hits to Geant4 <em>(&#64;sethrj, #581)</em></p></li>
+<li><p>Add HepMC3 reader to <cite>demo-geant-integration</cite> <em>(&#64;stognini, #578)</em></p></li>
+<li><p>Add track parent id information to step data <em>(&#64;stognini, #590)</em></p></li>
+<li><p>Enable all physics in geant demo for true offloading <em>(&#64;sethrj, #591)</em></p></li>
+<li><p>Add action labels to the ROOT MC truth output file <em>(&#64;stognini, #601)</em></p></li>
+</ul>
+<p>Reviewers: &#64;sethrj <em>(13)</em>, &#64;amandalund <em>(10)</em>, &#64;stognini <em>(2)</em>, &#64;paulromano <em>(2)</em>, &#64;whokion <em>(2)</em>, &#64;tmdelellis <em>(1)</em>, &#64;pcanal <em>(1)</em>, &#64;elliottbiondo <em>(1)</em>, &#64;mrguilima <em>(1)</em></p>
+</section>
+<section id="bug-fixes">
+<h3>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Fix infrastructure and build issues for summit <em>(&#64;sethrj, #509)</em></p></li>
+<li><p>Fix indexing of imported micro xs <em>(&#64;amandalund, #512)</em></p></li>
+<li><p>Don’t slow particles to zero when hitting boundary <em>(&#64;sethrj, #524)</em></p></li>
+<li><p>Fix JSON build issues <em>(&#64;sethrj, #536)</em></p></li>
+<li><p>Fix library location and configure issues from #526 <em>(&#64;sethrj, #537)</em></p></li>
+<li><p>Fix thread safety issues in Celeritas <em>(&#64;sethrj, #532)</em></p></li>
+<li><p>Do not include ROOT’s CMake “use” file to avoid potential nlohmann_json conflicts <em>(&#64;drbenmorgan, #556)</em></p></li>
+<li><p>Remove calls to host code from host-device Collection <em>(&#64;sethrj, #547)</em></p></li>
+<li><p>Fix celeritas-gen when run from root directory <em>(&#64;sethrj, #562)</em></p></li>
+<li><p>Fix and work around some issues on HIP/Crusher <em>(&#64;sethrj, #558)</em></p></li>
+<li><p>Fix build documentation and issues with newer toolchains <em>(&#64;sethrj, #571)</em></p></li>
+<li><p>Minor fixes for older Geant4/VecGeom releases <em>(&#64;sethrj, #587)</em></p></li>
+<li><p>Use Geant4 environment variables to choose run manager and threads <em>(&#64;sethrj, #589)</em></p></li>
+<li><p>Add backward compatibility for primary generators <em>(&#64;sethrj, #599)</em></p></li>
+</ul>
+<p>Reviewers: &#64;amandalund <em>(6)</em>, &#64;pcanal <em>(4)</em>, &#64;sethrj <em>(2)</em>, &#64;whokion <em>(2)</em>, &#64;elliottbiondo <em>(1)</em>, &#64;tmdelellis <em>(1)</em>, &#64;paulromano <em>(1)</em></p>
+</section>
+<section id="documentation-improvements">
+<h3>Documentation improvements<a class="headerlink" href="#documentation-improvements" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Add release procedure, roles, and 0.1.x release notes <em>(&#64;sethrj, #519)</em></p></li>
+<li><p>Add DOE DOI and improve PR process documentation <em>(&#64;sethrj, #533)</em></p></li>
+<li><p>Add include-what-you-use script and pragmas <em>(&#64;sethrj, #540)</em></p></li>
+<li><p>Add a simple SensitiveHit for demo-geant4-integration <em>(&#64;whokion, #579)</em></p></li>
+<li><p>Add Acceleritas documentation <em>(&#64;sethrj, #595)</em></p></li>
+<li><p>Update copyrights for 2023 <em>(&#64;sethrj, #598)</em></p></li>
+</ul>
+<p>Reviewers: &#64;paulromano <em>(2)</em>, &#64;amandalund <em>(2)</em>, &#64;tmdelellis <em>(1)</em>, &#64;pcanal <em>(1)</em>, &#64;sethrj <em>(1)</em>, &#64;whokion <em>(1)</em></p>
+</section>
+<section id="minor-internal-changes">
+<h3>Minor internal changes<a class="headerlink" href="#minor-internal-changes" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Add granularity to Geant setup <em>(&#64;sethrj, #485)</em></p></li>
+<li><p>Format code base (clang-format version 14.0.6) <em>(&#64;sethrj, #506)</em></p></li>
+<li><p>Use <cite>test</cite> sub-namespace instead of <cite>celeritas_test</cite> <em>(&#64;sethrj, #503)</em></p></li>
+<li><p>Refactor ORANGE data and simple tracker to support nested universes <em>(&#64;sethrj, #520)</em></p></li>
+<li><p>Define gauss as internal field strength and use tesla for input <em>(&#64;sethrj, #522)</em></p></li>
+<li><p>Break library into multiple parts and mirror install tree <em>(&#64;sethrj, #526)</em></p></li>
+<li><p>Split orange/Types and add Orange prefix to Data <em>(&#64;sethrj, #541)</em></p></li>
+<li><p>Update CUDA RDC CMake code <em>(&#64;pcanal, #545)</em></p></li>
+<li><p>Fix git-clang-format hook and code documentation <em>(&#64;sethrj, #568)</em></p></li>
+<li><p>Change Transport/Stepper interfaces to take span of <cite>Primary</cite> instead of vector <em>(&#64;paulromano, #572)</em></p></li>
+<li><p>Refactor geant demo app and <cite>accel</cite> code <em>(&#64;sethrj, #577)</em></p></li>
+<li><p>Move HepMC3 reader to accel and make a little more reusable <em>(&#64;sethrj, #593)</em></p></li>
+<li><p>Rename <cite>CELER_TRY_ELSE</cite> to <cite>CELER_TRY_HANDLE</cite> <em>(&#64;sethrj, #594)</em></p></li>
+<li><p>Update IWYU and apply to codebase <em>(&#64;sethrj, #596)</em></p></li>
+<li><p>Update clang-format to avoid alignment and use “east const” <em>(&#64;sethrj, #574)</em></p></li>
+<li><p>Enable debug assertions for HIP <em>(&#64;sethrj, #597)</em></p></li>
+</ul>
+<p>Reviewers: &#64;amandalund <em>(8)</em>, &#64;stognini <em>(2)</em>, &#64;sethrj <em>(2)</em>, &#64;elliottbiondo <em>(1)</em>, &#64;paulromano <em>(1)</em></p>
+</section>
+</section>
 <section id="version-0-1-4">
 <h2>Version 0.1.4<a class="headerlink" href="#version-0-1-4" title="Permalink to this heading"></a></h2>
 <p>This version fixes significant errors in along-step tracking when multiple
 scattering and/or magnetic fields are in use.</p>
-<section id="bug-fixes">
-<h3>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this heading"></a></h3>
+<section id="id2">
+<h3>Bug fixes<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fix additional failures resulting from direction change on a boundary after crossing <em>(&#64;amandalund, #517)</em></p></li>
 <li><p>Fix the true path length limit of UrbanMsc <em>(&#64;whokion, #521)</em></p></li>
@@ -131,8 +239,8 @@ scattering and/or magnetic fields are in use.</p>
 <section id="version-0-1-3">
 <h2>Version 0.1.3<a class="headerlink" href="#version-0-1-3" title="Permalink to this heading"></a></h2>
 <p>This patch fixes additional issues with tracking in a magnetic field.</p>
-<section id="id2">
-<h3>Bug fixes<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<section id="id3">
+<h3>Bug fixes<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fix near-infinite loop in field propagation <em>(&#64;sethrj, #511)</em></p></li>
 <li><p>Allow tracks taking small steps to propagate in field <em>(&#64;amandalund, #513)</em></p></li>
@@ -146,14 +254,14 @@ scattering and/or magnetic fields are in use.</p>
 <h2>Version 0.1.2<a class="headerlink" href="#version-0-1-2" title="Permalink to this heading"></a></h2>
 <p>This is a bug-fixing patch that addresses a few outstanding build issues,
 targeted at making it easier to run and debug the regression problem suite.</p>
-<section id="new-features">
-<h3>New features<a class="headerlink" href="#new-features" title="Permalink to this heading"></a></h3>
+<section id="id4">
+<h3>New features<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Save JSON exception output if demo loop fails by <em>(&#64;sethrj, #507)</em></p></li>
 </ul>
 </section>
-<section id="id3">
-<h3>Bug fixes<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<section id="id5">
+<h3>Bug fixes<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fix class name conflict, remove default initializers, and tweak field driver <em>(&#64;sethrj, #504)</em></p></li>
 <li><p>Fix no-ROOT demo loop for 0.1.x and other summit changes by <em>(&#64;sethrj, #508)</em></p></li>
@@ -164,15 +272,15 @@ targeted at making it easier to run and debug the regression problem suite.</p>
 <h2>Version 0.1.1<a class="headerlink" href="#version-0-1-1" title="Permalink to this heading"></a></h2>
 <p>This is a bug-fixing patch that addresses numerous outstanding issues with the
 transport loop.</p>
-<section id="id4">
-<h3>New features<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<section id="id6">
+<h3>New features<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Filter imported data from Geant4 based on user options by <em>(&#64;sethrj, #482)</em></p></li>
 <li><p>Add contributing guide and development docs by <em>(&#64;sethrj, #502)</em></p></li>
 </ul>
 </section>
-<section id="id5">
-<h3>Bug fixes<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<section id="id7">
+<h3>Bug fixes<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fix uninitialized data access in primary generator by <em>(&#64;sethrj, #472)</em></p></li>
 <li><p>Build processes based on exported data by <em>(&#64;sethrj, #483)</em></p></li>
@@ -212,8 +320,8 @@ testing and stabilizing the API for exploratory use by downstream applications
 and frameworks. Some initial code verification problems (looking at energy and
 step distributions for simple problems such as TestEM3) are promising, but the
 code is far from validated.</p>
-<section id="id6">
-<h3>New features<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<section id="id8">
+<h3>New features<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Standard EM physics including multiple scattering and energy loss
 fluctuations</p></li>

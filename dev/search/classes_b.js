@@ -20,12 +20,15 @@ var searchData=
   ['livermorepexsdata_17',['LivermorePEXsData',['../d9/d09/structceleritas_1_1_livermore_p_e_xs_data.html',1,'celeritas']]],
   ['livermoresubshell_18',['LivermoreSubshell',['../de/d4c/structceleritas_1_1_livermore_subshell.html',1,'celeritas']]],
   ['localstate_19',['LocalState',['../d2/d5e/structceleritas_1_1detail_1_1_local_state.html',1,'celeritas::detail']]],
-  ['locatealivelauncher_20',['LocateAliveLauncher',['../d4/daf/classceleritas_1_1detail_1_1_locate_alive_launcher.html',1,'celeritas::detail']]],
-  ['logger_21',['Logger',['../d4/da5/classceleritas_1_1_logger.html',1,'celeritas']]],
-  ['loggermessage_22',['LoggerMessage',['../da/d07/classceleritas_1_1detail_1_1_logger_message.html',1,'celeritas::detail']]],
-  ['logicevaluator_23',['LogicEvaluator',['../d5/dca/classceleritas_1_1detail_1_1_logic_evaluator.html',1,'celeritas::detail']]],
-  ['logicstack_24',['LogicStack',['../d6/d43/classceleritas_1_1detail_1_1_logic_stack.html',1,'celeritas::detail']]],
-  ['logmev_25',['LogMev',['../d8/d9a/structceleritas_1_1units_1_1_log_mev.html',1,'celeritas::units']]],
-  ['lpmcalculator_26',['LPMCalculator',['../d0/dc1/classceleritas_1_1_l_p_m_calculator.html',1,'celeritas']]],
-  ['lpmfunctions_27',['LPMFunctions',['../d2/dc7/structceleritas_1_1_l_p_m_calculator_1_1_l_p_m_functions.html',1,'celeritas::LPMCalculator']]]
+  ['localsurface_20',['LocalSurface',['../d1/dda/structceleritas_1_1detail_1_1_unit_indexer_1_1_local_surface.html',1,'celeritas::detail::UnitIndexer']]],
+  ['localtransporter_21',['LocalTransporter',['../d2/d13/classceleritas_1_1_local_transporter.html',1,'celeritas']]],
+  ['localvolume_22',['LocalVolume',['../d0/d57/structceleritas_1_1detail_1_1_unit_indexer_1_1_local_volume.html',1,'celeritas::detail::UnitIndexer']]],
+  ['locatealivelauncher_23',['LocateAliveLauncher',['../d4/daf/classceleritas_1_1detail_1_1_locate_alive_launcher.html',1,'celeritas::detail']]],
+  ['logger_24',['Logger',['../d4/da5/classceleritas_1_1_logger.html',1,'celeritas']]],
+  ['loggermessage_25',['LoggerMessage',['../da/d07/classceleritas_1_1detail_1_1_logger_message.html',1,'celeritas::detail']]],
+  ['logicevaluator_26',['LogicEvaluator',['../d5/dca/classceleritas_1_1detail_1_1_logic_evaluator.html',1,'celeritas::detail']]],
+  ['logicstack_27',['LogicStack',['../d6/d43/classceleritas_1_1detail_1_1_logic_stack.html',1,'celeritas::detail']]],
+  ['logmev_28',['LogMev',['../d8/d9a/structceleritas_1_1units_1_1_log_mev.html',1,'celeritas::units']]],
+  ['lpmcalculator_29',['LPMCalculator',['../d0/dc1/classceleritas_1_1_l_p_m_calculator.html',1,'celeritas']]],
+  ['lpmfunctions_30',['LPMFunctions',['../d2/dc7/structceleritas_1_1_l_p_m_calculator_1_1_l_p_m_functions.html',1,'celeritas::LPMCalculator']]]
 ];
