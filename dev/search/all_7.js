@@ -16,7 +16,7 @@ var searchData=
   ['hepmc3primarygenerator_13',['HepMC3PrimaryGenerator',['../d7/db6/classceleritas_1_1_hep_m_c3_primary_generator.html',1,'celeritas::HepMC3PrimaryGenerator'],['../d7/db6/classceleritas_1_1_hep_m_c3_primary_generator.html#a14c47f49101db0aa673082a9799fb41d',1,'celeritas::HepMC3PrimaryGenerator::HepMC3PrimaryGenerator()']]],
   ['hepmc3primarygenerator_2ecc_14',['HepMC3PrimaryGenerator.cc',['../db/d20/_hep_m_c3_primary_generator_8cc.html',1,'']]],
   ['hepmc3primarygenerator_2ehh_15',['HepMC3PrimaryGenerator.hh',['../d9/d65/_hep_m_c3_primary_generator_8hh.html',1,'']]],
-  ['high_5fenergy_5flimit_16',['high_energy_limit',['../dc/dbd/structceleritas_1_1_urban_msc_parameters.html#a1dadf46e24d3e3d1f07036414f233d58',1,'celeritas::UrbanMscParameters::high_energy_limit()'],['../d6/dee/_physics_constants_8hh.html#a2e1906001f645c7f4a3203343179c1e5',1,'celeritas::high_energy_limit()']]],
+  ['high_5fenergy_5flimit_16',['high_energy_limit',['../dc/dbd/structceleritas_1_1_urban_msc_parameters.html#a1dadf46e24d3e3d1f07036414f233d58',1,'celeritas::UrbanMscParameters::high_energy_limit()'],['../d6/dee/_physics_constants_8hh.html#a0d28c34ddc56b375278747544c048d3f',1,'celeritas::detail::high_energy_limit()']]],
   ['hitmanager_17',['HitManager',['../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html',1,'celeritas::detail::HitManager'],['../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html#a1cccfc69bb8a85e1ce38b014d195e8a0',1,'celeritas::detail::HitManager::HitManager()']]],
   ['hitmanager_2ecc_18',['HitManager.cc',['../dd/d94/_hit_manager_8cc.html',1,'']]],
   ['hitmanager_2ehh_19',['HitManager.hh',['../dc/d19/_hit_manager_8hh.html',1,'']]],

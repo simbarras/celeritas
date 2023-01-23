@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Celeritas &mdash; Celeritas v0.2.0 documentation</title>
+  <title>Celeritas &mdash; Celeritas v0.2.0-22+59d3b167 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -20,7 +20,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Overview" href="overview.html" /> 
+    <link rel="next" title="Introduction" href="introduction.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -32,7 +32,7 @@
             <img src="_static/celeritas-thumbnail.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.2.0
+                0.2.1-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -44,8 +44,9 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="infrastructure.html">Infrastructure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
@@ -85,27 +86,38 @@
              
   <section id="celeritas">
 <h1>Celeritas<a class="headerlink" href="#celeritas" title="Permalink to this heading"></a></h1>
-<p>The Celeritas project implements HEP detector physics on GPU accelerator
-hardware with the ultimate goal of supporting the massive computational
-requirements of LHC-HL upgrade.</p>
+<p>Celeritas is a Monte Carlo particle transport code for simulating High Energy
+Physics detectors on general purpose GPUs. Motivated by the massive
+computational requirements of the High Luminosity upgrade to the Large Hadron
+Collider, the code’s initial goal is to accelerate electromagnetic physics
+simulations of the CMS and ATLAS detectors.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Release</dt>
-<dd class="field-odd"><p>v0.2.0</p>
+<dd class="field-odd"><p>v0.2.0-22+59d3b167</p>
 </dd>
 <dt class="field-even">Date</dt>
-<dd class="field-even"><p>Jan 12, 2023</p>
+<dd class="field-even"><p>Jan 23, 2023</p>
 </dd>
 </dl>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="infrastructure.html">Infrastructure</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="infrastructure.html#dependencies">Dependencies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="infrastructure.html#toolchain-installation">Toolchain installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="infrastructure.html#building-celeritas">Building Celeritas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="infrastructure.html#cmake-presets">CMake Presets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="infrastructure.html#downstream-usage-as-a-library">Downstream usage as a library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#toolchain-installation">Toolchain installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#building-celeritas">Building Celeritas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#cmake-presets">CMake Presets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#downstream-usage-as-a-library">Downstream usage as a library</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#units">Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#distributions">Distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#physics">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#geometry">Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#stepping-loop">Stepping loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#gpu-usage">GPU usage</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API documentation</a><ul>
@@ -116,7 +128,9 @@ requirements of LHC-HL upgrade.</p>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#geant4-integration">Geant4 integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/minimal.html">Minimal Celeritas usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/geant4-minimal.html">Minimal Geant4 integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/geant4-full.html">Geant4 integration</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
@@ -163,7 +177,7 @@ requirements of LHC-HL upgrade.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="overview.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="introduction.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

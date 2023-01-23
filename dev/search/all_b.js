@@ -99,7 +99,7 @@ var searchData=
   ['lower_5fbound_96',['lower_bound',['../d1/dee/_algorithms_8hh.html#a73ed2276b50c2848c93d70fec244f847',1,'celeritas::lower_bound(ForwardIt first, ForwardIt last, T const &amp;value, Compare comp)'],['../d1/dee/_algorithms_8hh.html#acfe88c355d3f1e2a649a668e8f6e1169',1,'celeritas::lower_bound(ForwardIt first, ForwardIt last, T const &amp;value)']]],
   ['lower_5fbound_5fimpl_97',['lower_bound_impl',['../dd/dd2/_algorithms_impl_8hh.html#add35f148ab9fe5c50da0465a11cff2ae',1,'celeritas::detail']]],
   ['lpm_98',['lpm',['../db/d18/structceleritas_1_1_import_em_parameters.html#a27577d9507fb7f7ca09e665cad48f44a',1,'celeritas::ImportEmParameters']]],
-  ['lpm_5fconstant_99',['lpm_constant',['../d6/dee/_physics_constants_8hh.html#a9de579ce81836916ed6c4b5502457f0e',1,'celeritas']]],
+  ['lpm_5fconstant_99',['lpm_constant',['../d6/dee/_physics_constants_8hh.html#a0ec06466c3fb99a9fb37ce93ac76cd33',1,'celeritas::detail']]],
   ['lpmcalculator_100',['LPMCalculator',['../d0/dc1/classceleritas_1_1_l_p_m_calculator.html',1,'celeritas::LPMCalculator'],['../d0/dc1/classceleritas_1_1_l_p_m_calculator.html#a667e0264e2216ef88fad4a83e5d48859',1,'celeritas::LPMCalculator::LPMCalculator()']]],
   ['lpmcalculator_2ehh_101',['LPMCalculator.hh',['../dc/d1f/_l_p_m_calculator_8hh.html',1,'']]],
   ['lpmfunctions_102',['LPMFunctions',['../d2/dc7/structceleritas_1_1_l_p_m_calculator_1_1_l_p_m_functions.html',1,'celeritas::LPMCalculator']]],

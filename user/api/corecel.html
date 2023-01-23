@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Core package &mdash; Celeritas v0.2.0 documentation</title>
+  <title>Core package &mdash; Celeritas v0.2.0-22+59d3b167 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -34,7 +34,7 @@
             <img src="../_static/celeritas-thumbnail.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.2.0
+                0.2.1-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -46,8 +46,9 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../infrastructure.html">Infrastructure</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../api.html">API documentation</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Core package</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#fundamentals">Fundamentals</a></li>
@@ -100,10 +101,20 @@
            <div itemprop="articleBody">
              
   <div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CELERITAS_VERSION">
+<span class="target" id="d9/d7f/celeritas__version_8h_1aa60875ab547df0164e3716b12058af69"></span><span class="sig-name descname"><span class="n"><span class="pre">CELERITAS_VERSION</span></span></span><a class="headerlink" href="#c.CELERITAS_VERSION" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Celeritas version. </p>
+<p>Encoded as a big-endian hexidecimal with one byte per component: (major * 256 + minor) * 256 + patch. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-variables">Variables</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv417celeritas_version">
-<span id="_CPPv317celeritas_version"></span><span id="_CPPv217celeritas_version"></span><span id="celeritas_version__cCA"></span><span class="target" id="d9/d7f/celeritas__version_8h_1a05e78deb9041e95dddeb6d8f27c8fd0f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">celeritas_version</span></span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;v0.2.0&quot;</span></span><a class="headerlink" href="#_CPPv417celeritas_version" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv317celeritas_version"></span><span id="_CPPv217celeritas_version"></span><span id="celeritas_version__cCA"></span><span class="target" id="d9/d7f/celeritas__version_8h_1a05e78deb9041e95dddeb6d8f27c8fd0f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">celeritas_version</span></span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;v0.2.0-22+59d3b167&quot;</span></span><a class="headerlink" href="#_CPPv417celeritas_version" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -123,7 +134,7 @@
 
 </div>
 <section id="core-package">
-<span id="corecel"></span><h1>Core package<a class="headerlink" href="#core-package" title="Permalink to this heading"></a></h1>
+<span id="api-corecel"></span><h1>Core package<a class="headerlink" href="#core-package" title="Permalink to this heading"></a></h1>
 <p>The <code class="docutils literal notranslate"><span class="pre">corecel</span></code> directory contains functionality shared by Celeritas and ORANGE
 primarily pertaining to GPU abstractions.</p>
 <section id="fundamentals">
@@ -191,6 +202,13 @@ primarily pertaining to GPU abstractions.</p>
 <p class="admonition-title">Note</p>
 <p>This macro should not generally be used; instead, the macro <code class="docutils literal notranslate"><a class="reference internal" href="#d5/d10/_assert_8hh_1a6dda60f37c367c8d4d9520b6f69cf2f0"><span class="std std-ref"><span class="pre">CELER_ASSERT_UNREACHABLE()</span></span></a></code> defined in base/Assert.hh should be used instead (to provide a more detailed error message in case the point <em>is</em> reached). </p>
 </div>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CELER_ASSUME">
+<span class="target" id="db/dc5/_macros_8hh_1ac8bcba5300eddf9c74090a3d889dfc23"></span><span class="sig-name descname"><span class="n"><span class="pre">CELER_ASSUME</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">COND</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.CELER_ASSUME" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Add an always-on compiler assumption about the input data. </p>
+<p>This should be used very rarely, and perhaps in addition to a CELER_EXPECT macro that makes a similar assertion. Sometimes informing the compiler of an assumption (such as the maximum range of an integer variable) can reduce code bloat and silence odd warnings. </p>
 </dd></dl>
 
 <dl class="cpp macro">
@@ -267,19 +285,23 @@ primarily pertaining to GPU abstractions.</p>
 <span class="target" id="d5/d10/_assert_8hh_1a4de52d03e37eae77ac2a03ab5a1ea67c"></span><span class="sig-name descname"><span class="n"><span class="pre">CELER_VALIDATE</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">COND</span></span>, <span class="n"><span class="pre">MSG</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.CELER_VALIDATE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Always-on runtime assertion macro. </p>
 <p>This can check user input and input data consistency, and will raise RuntimeError on failure with a descriptive error message that is streamed as the second argument. This macro cannot be used in <code class="docutils literal notranslate"><span class="pre">__device__</span></code> -annotated code.</p>
-<p>The error message should read: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span> &lt;PROBLEM&gt; (&lt;WHY IT&#39;S A PROBLEM&gt;) &lt;SUGGESTION&gt;?
+<p>The error message should read: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="s">&quot;&lt;PROBLEM&gt; (&lt;WHY IT&#39;S A PROBLEM&gt;) &lt;SUGGESTION&gt;?&quot;</span><span class="w"></span>
 </pre></div>
 </div>
 </p>
 <p>Examples with correct casing and punctuation:<ul class="simple">
-<li><p>failed to open ‘{filename}’ (should contain relaxation data)</p></li>
-<li><p>unexpected end of file ‘{filename}’ (data is inconsistent with boundaries)</p></li>
-<li><p><p>MPI was not initialized (needed to construct a communicator). Maybe set the environment variable CELER_DISABLE_PARALLEL=1 to disable externally?”</p>
-<p>- min_range={opts.min_range} (must be positive)”</p>
+<li><p>”failed to open ‘{filename}’ (should contain relaxation data)”</p></li>
+<li><p><p>”unexpected end of file ‘{filename}’ (data is inconsistent with</p>
+<p>boundaries)”</p>
 </p></li>
+<li><p><p>”MPI was not initialized (needed to construct a communicator). Maybe set</p>
+<p>the environment variable CELER_DISABLE_PARALLEL=1 to disable</p>
+<p>externally?”</p>
+</p></li>
+<li><p>”invalid min_range={opts.min_range} (must be positive)”</p></li>
 </ul>
 </p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CELER_VALIDATE</span><span class="p">(</span><span class="n">file_stream</span><span class="p">,</span><span class="w"></span>
+<p>This looks in pracice like: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CELER_VALIDATE</span><span class="p">(</span><span class="n">file_stream</span><span class="p">,</span><span class="w"></span>
 <span class="w">               </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;failed to open &#39;&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">filename</span><span class="w"></span>
 <span class="w">               </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;&#39; (should contain relaxation data)&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
@@ -1758,7 +1780,7 @@ Like the <a class="reference internal" href="#dd/dd6/structceleritas_1_1_array">
 </div>
 </dd></dl>
 
-<dl class="cpp type">
+<span class="target" id="api-quantity"></span><dl class="cpp type">
 <dt class="sig sig-object cpp">
 <span class="target" id="d2/dd1/namespaceceleritas"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">celeritas</span></span></span><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">

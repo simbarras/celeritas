@@ -2,7 +2,7 @@ var searchData=
 [
   ['sbdata_0',['SBData',['../da/d30/classceleritas_1_1_s_b_energy_distribution.html#aa381721575dd3425c43e43c50b1441bb',1,'celeritas::SBEnergyDistribution']]],
   ['sbdxsec_1',['SBDXsec',['../d5/d34/classceleritas_1_1_s_b_energy_dist_helper.html#a1b49797f336a47f00faa6bec27521189',1,'celeritas::SBEnergyDistHelper']]],
-  ['sbtable_2',['SBTable',['../db/d7d/classceleritas_1_1_s_b_energy_sampler.html#a8ac1e724aef0f07f690935ed2a83cd48',1,'celeritas::SBEnergySampler']]],
+  ['sbtable_2',['SBTable',['../d0/db5/classceleritas_1_1detail_1_1_s_b_energy_sampler.html#a4b1c73a3c833ca6685a8bfe0d8841355',1,'celeritas::detail::SBEnergySampler']]],
   ['secondaryallocator_3',['SecondaryAllocator',['../d4/dcd/classceleritas_1_1_physics_step_view.html#aa651d6a936793120b782ced28e5b45b7',1,'celeritas::PhysicsStepView']]],
   ['signal_5ftype_4',['signal_type',['../d8/d66/classceleritas_1_1_scoped_signal_handler.html#a8d99851076c49f72d890f9dd237f39f5',1,'celeritas::ScopedSignalHandler']]],
   ['simpleunitid_5',['SimpleUnitId',['../d7/d3b/_orange_types_8hh.html#a20575a64c44727763a967e883fcf086e',1,'celeritas']]],

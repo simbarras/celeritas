@@ -108,6 +108,9 @@ Macros</h2></td></tr>
 <tr class="memitem:a6443ce9eb70e643c4b3b097bb01d757e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc5/_macros_8hh.html#a6443ce9eb70e643c4b3b097bb01d757e">CELER_UNREACHABLE</a></td></tr>
 <tr class="memdesc:a6443ce9eb70e643c4b3b097bb01d757e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark a point in code as being impossible to reach in normal execution.  <a href="../../db/dc5/_macros_8hh.html#a6443ce9eb70e643c4b3b097bb01d757e">More...</a><br /></td></tr>
 <tr class="separator:a6443ce9eb70e643c4b3b097bb01d757e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8bcba5300eddf9c74090a3d889dfc23"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc5/_macros_8hh.html#ac8bcba5300eddf9c74090a3d889dfc23">CELER_ASSUME</a>(COND)&#160;&#160;&#160;(void)sizeof(COND)</td></tr>
+<tr class="memdesc:ac8bcba5300eddf9c74090a3d889dfc23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an always-on compiler assumption about the input data.  <a href="../../db/dc5/_macros_8hh.html#ac8bcba5300eddf9c74090a3d889dfc23">More...</a><br /></td></tr>
+<tr class="separator:ac8bcba5300eddf9c74090a3d889dfc23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a753db4b2b414ba5b0574627b466d279f"><td class="memItemLeft" align="right" valign="top"><a id="a753db4b2b414ba5b0574627b466d279f" name="a753db4b2b414ba5b0574627b466d279f"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>CELER_USE_DEVICE</b>&#160;&#160;&#160;0</td></tr>
 <tr class="memdesc:a753db4b2b414ba5b0574627b466d279f"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if HIP or CUDA are enabled, false otherwise. <br /></td></tr>
@@ -130,6 +133,27 @@ Macros</h2></td></tr>
 <div class="textblock"><p >Language and compiler abstraction macro definitions. </p>
 <p >The Macros file defines cross-platform (CUDA, C++, HIP) macros that expand to attributes depending on the compiler and build configuration. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ac8bcba5300eddf9c74090a3d889dfc23" name="ac8bcba5300eddf9c74090a3d889dfc23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8bcba5300eddf9c74090a3d889dfc23">&#9670;&#160;</a></span>CELER_ASSUME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CELER_ASSUME</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">COND</td><td>)</td>
+          <td>&#160;&#160;&#160;(void)sizeof(COND)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add an always-on compiler assumption about the input data. </p>
+<p >This should be used very rarely, and perhaps in addition to a CELER_EXPECT macro that makes a similar assertion. Sometimes informing the compiler of an assumption (such as the maximum range of an integer variable) can reduce code bloat and silence odd warnings. </p>
+
+</div>
+</div>
 <a id="a15d12257815f6113158d2449d3bc5b9f" name="a15d12257815f6113158d2449d3bc5b9f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a15d12257815f6113158d2449d3bc5b9f">&#9670;&#160;</a></span>CELER_DEVICE_COMPILE</h2>
 

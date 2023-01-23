@@ -10,7 +10,7 @@ var searchData=
   ['he3_7',['he3',['../d1/de0/_p_d_g_number_8hh.html#af7730dffe3a0e43e59fe7eb415d8a2b7',1,'celeritas::pdg']]],
   ['heapsort_5fimpl_8',['heapsort_impl',['../dd/dd2/_algorithms_impl_8hh.html#afe7f94f0789d6ebe0bcfe7b1fadc0862',1,'celeritas::detail']]],
   ['hepmc3primarygenerator_9',['HepMC3PrimaryGenerator',['../d7/db6/classceleritas_1_1_hep_m_c3_primary_generator.html#a14c47f49101db0aa673082a9799fb41d',1,'celeritas::HepMC3PrimaryGenerator']]],
-  ['high_5fenergy_5flimit_10',['high_energy_limit',['../d6/dee/_physics_constants_8hh.html#a2e1906001f645c7f4a3203343179c1e5',1,'celeritas']]],
+  ['high_5fenergy_5flimit_10',['high_energy_limit',['../d6/dee/_physics_constants_8hh.html#a0d28c34ddc56b375278747544c048d3f',1,'celeritas::detail']]],
   ['hitmanager_11',['HitManager',['../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html#a1cccfc69bb8a85e1ce38b014d195e8a0',1,'celeritas::detail::HitManager']]],
   ['hitprocessor_12',['HitProcessor',['../db/d49/classceleritas_1_1detail_1_1_hit_processor.html#aac9e71521ec7192d2199d0c5fa41d595',1,'celeritas::detail::HitProcessor']]],
   ['host_13',['host',['../d9/d90/classceleritas_1_1_collection_mirror.html#a943f3245f68acb347e1e2b174527e18d',1,'celeritas::CollectionMirror']]],

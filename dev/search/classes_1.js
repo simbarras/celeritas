@@ -8,7 +8,7 @@ var searchData=
   ['betheheitlermodel_5',['BetheHeitlerModel',['../d5/d66/classceleritas_1_1_bethe_heitler_model.html',1,'celeritas']]],
   ['bhabhaenergydistribution_6',['BhabhaEnergyDistribution',['../dc/d43/classceleritas_1_1_bhabha_energy_distribution.html',1,'celeritas']]],
   ['boundingbox_7',['BoundingBox',['../d0/d60/classceleritas_1_1_bounding_box.html',1,'celeritas']]],
-  ['bremfinalstatehelper_8',['BremFinalStateHelper',['../d0/df2/classceleritas_1_1_brem_final_state_helper.html',1,'celeritas']]],
+  ['bremfinalstatehelper_8',['BremFinalStateHelper',['../de/d90/classceleritas_1_1detail_1_1_brem_final_state_helper.html',1,'celeritas::detail']]],
   ['bremsstrahlungprocess_9',['BremsstrahlungProcess',['../d1/d76/classceleritas_1_1_bremsstrahlung_process.html',1,'celeritas']]],
   ['buildoutput_10',['BuildOutput',['../db/d04/classceleritas_1_1_build_output.html',1,'celeritas']]],
   ['bumpcalculator_11',['BumpCalculator',['../d3/da6/classceleritas_1_1detail_1_1_bump_calculator.html',1,'celeritas::detail']]],

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index &mdash; Celeritas v0.2.0 documentation</title>
+  <title>Index &mdash; Celeritas v0.2.0-22+59d3b167 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -30,7 +30,7 @@
             <img src="_static/celeritas-thumbnail.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.2.0
+                0.2.1-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -42,8 +42,9 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="infrastructure.html">Infrastructure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
@@ -94,6 +95,8 @@
       <li><a href="api/corecel.html#c.CELER_ASSERT">CELER_ASSERT (C macro)</a>
 </li>
       <li><a href="api/corecel.html#c.CELER_ASSERT_UNREACHABLE">CELER_ASSERT_UNREACHABLE (C macro)</a>
+</li>
+      <li><a href="api/corecel.html#c.CELER_ASSUME">CELER_ASSUME (C macro)</a>
 </li>
       <li><a href="api/corecel.html#c.CELER_CONSTEXPR_FUNCTION">CELER_CONSTEXPR_FUNCTION (C macro)</a>
 </li>
@@ -197,6 +200,8 @@
 </li>
       <li><a href="api/corecel.html#_CPPv4I0_9size_typeEN9celeritas4axpyEv1TRK5ArrayI1T1NEP5ArrayI1T1NE">celeritas::axpy (C++ function)</a>
 </li>
+      <li><a href="api/celeritas.html#_CPPv4N9celeritas21BernoulliDistributionE">celeritas::BernoulliDistribution (C++ class)</a>
+</li>
       <li><a href="api/corecel.html#_CPPv4N9celeritas4ByteE">celeritas::Byte (C++ enum)</a>
 </li>
       <li><a href="api/corecel.html#_CPPv4I0EN9celeritas8ceil_divE1T1T1T">celeritas::ceil_div (C++ function)</a>
@@ -283,6 +288,8 @@
 </li>
       <li><a href="api/corecel.html#_CPPv4N9celeritas14DebugErrorType11unreachableE">celeritas::DebugErrorType::unreachable (C++ enumerator)</a>
 </li>
+      <li><a href="api/celeritas.html#_CPPv4I0EN9celeritas17DeltaDistributionE">celeritas::DeltaDistribution (C++ class)</a>
+</li>
       <li><a href="api/corecel.html#_CPPv4N9celeritas6detailE">celeritas::detail (C++ type)</a>
 </li>
       <li><a href="api/corecel.html#_CPPv4I0EN9celeritas6detail16UnitlessQuantityE">celeritas::detail::UnitlessQuantity (C++ struct)</a>
@@ -355,11 +362,15 @@
 </li>
       <li><a href="api/accel.html#_CPPv4NK9celeritas18ExceptionConverterclENSt13exception_ptrE">celeritas::ExceptionConverter::operator() (C++ function)</a>
 </li>
+      <li><a href="api/celeritas.html#_CPPv4I0EN9celeritas23ExponentialDistributionE">celeritas::ExponentialDistribution (C++ class)</a>
+</li>
       <li><a href="api/corecel.html#_CPPv4I00EN9celeritas7fastpowE1T1T1T">celeritas::fastpow (C++ function)</a>
 </li>
       <li><a href="api/corecel.html#_CPPv4I0EN9celeritas7forwardERR1TRNSt16remove_referenceI1TE4typeE">celeritas::forward (C++ function)</a>
 </li>
       <li><a href="api/corecel.html#_CPPv4I0EN9celeritas14from_sphericalE5ArrayI1TXL3EEE1T1T">celeritas::from_spherical (C++ function)</a>
+</li>
+      <li><a href="api/celeritas.html#_CPPv4I0EN9celeritas17GammaDistributionE">celeritas::GammaDistribution (C++ class)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4N9celeritas13GeantImporterE">celeritas::GeantImporter (C++ class)</a>
 </li>
@@ -396,6 +407,8 @@
       <li><a href="api/corecel.html#_CPPv4I_j0EN9celeritas4ipowE1T1T">celeritas::ipow (C++ function)</a>
 </li>
       <li><a href="api/corecel.html#_CPPv4I0_9size_typeEN9celeritas19is_soft_unit_vectorEbRK5ArrayI1T1NE">celeritas::is_soft_unit_vector (C++ function)</a>
+</li>
+      <li><a href="api/celeritas.html#_CPPv4I0EN9celeritas21IsotropicDistributionE">celeritas::IsotropicDistribution (C++ class)</a>
 </li>
       <li><a href="api/corecel.html#_CPPv4I0EN9celeritas4LessE">celeritas::Less (C++ struct)</a>
 </li>
@@ -546,6 +559,8 @@
       <li><a href="api/corecel.html#_CPPv4N9celeritas16neg_max_quantityEv">celeritas::neg_max_quantity (C++ function)</a>
 </li>
       <li><a href="api/corecel.html#_CPPv4I0_9size_typeEN9celeritas4normE1TRK5ArrayI1T1NE">celeritas::norm (C++ function)</a>
+</li>
+      <li><a href="api/celeritas.html#_CPPv4I0EN9celeritas18NormalDistributionE">celeritas::NormalDistribution (C++ class)</a>
 </li>
       <li><a href="api/corecel.html#_CPPv4I0EN9celeritas19normalize_directionEvP5ArrayI1TXL3EEE">celeritas::normalize_direction (C++ function)</a>
 </li>
@@ -835,6 +850,8 @@
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas16PhysicsTrackView11value_tableE15ParticleModelId">celeritas::PhysicsTrackView::value_table (C++ function)</a>
 </li>
+      <li><a href="api/celeritas.html#_CPPv4I0EN9celeritas19PoissonDistributionE">celeritas::PoissonDistribution (C++ class)</a>
+</li>
       <li><a href="api/corecel.html#_CPPv4I00EN9celeritas8QuantityE">celeritas::Quantity (C++ class)</a>
 </li>
       <li><a href="api/corecel.html#_CPPv4N9celeritas8Quantity8QuantityE10value_type">celeritas::Quantity::Quantity (C++ function)</a>, <a href="api/corecel.html#_CPPv4N9celeritas8Quantity8QuantityE8Unitless">[1]</a>, <a href="api/corecel.html#_CPPv4N9celeritas8Quantity8QuantityEv">[2]</a>
@@ -849,7 +866,11 @@
 </li>
       <li><a href="api/corecel.html#_CPPv4N9celeritas8Quantity10value_typeE">celeritas::Quantity::value_type (C++ type)</a>
 </li>
+      <li><a href="api/celeritas.html#_CPPv4I0EN9celeritas18RadialDistributionE">celeritas::RadialDistribution (C++ class)</a>
+</li>
       <li><a href="api/corecel.html#_CPPv4N9celeritas9real_typeE">celeritas::real_type (C++ type)</a>
+</li>
+      <li><a href="api/celeritas.html#_CPPv4I0EN9celeritas22ReciprocalDistributionE">celeritas::ReciprocalDistribution (C++ class)</a>
 </li>
       <li><a href="api/corecel.html#_CPPv4I0EN9celeritas6rotateE5ArrayI1TXL3EEERK5ArrayI1TXL3EEERK5ArrayI1TXL3EEE">celeritas::rotate (C++ function)</a>
 </li>
@@ -1067,6 +1088,10 @@
 </li>
       <li><a href="api/corecel.html#_CPPv4N9celeritas7ull_intE">celeritas::ull_int (C++ type)</a>
 </li>
+      <li><a href="api/celeritas.html#_CPPv4I0EN9celeritas22UniformBoxDistributionE">celeritas::UniformBoxDistribution (C++ class)</a>
+</li>
+      <li><a href="api/celeritas.html#_CPPv4I0EN9celeritas23UniformRealDistributionE">celeritas::UniformRealDistribution (C++ class)</a>
+</li>
       <li><a href="api/corecel.html#_CPPv4I00EN9celeritas10UnitDivideE">celeritas::UnitDivide (C++ struct)</a>
 </li>
       <li><a href="api/corecel.html#_CPPv4N9celeritas10UnitDivide5valueEv">celeritas::UnitDivide::value (C++ function)</a>
@@ -1164,6 +1189,8 @@
       <li><a href="api/celeritas.html#_CPPv4N9celeritas13VecgeomParamsD0Ev">celeritas::VecgeomParams::~VecgeomParams (C++ function)</a>
 </li>
       <li><a href="api/corecel.html#_CPPv4N9celeritas13zero_quantityEv">celeritas::zero_quantity (C++ function)</a>
+</li>
+      <li><a href="api/corecel.html#c.CELERITAS_VERSION">CELERITAS_VERSION (C macro)</a>
 </li>
       <li><a href="api/corecel.html#_CPPv417celeritas_version">celeritas_version (C++ member)</a>
 </li>

@@ -4,7 +4,7 @@ var searchData=
   ['sbelementtabledata_1',['SBElementTableData',['../d8/d16/structceleritas_1_1_s_b_element_table_data.html',1,'celeritas']]],
   ['sbenergydisthelper_2',['SBEnergyDistHelper',['../d5/d34/classceleritas_1_1_s_b_energy_dist_helper.html',1,'celeritas']]],
   ['sbenergydistribution_3',['SBEnergyDistribution',['../da/d30/classceleritas_1_1_s_b_energy_distribution.html',1,'celeritas']]],
-  ['sbenergysampler_4',['SBEnergySampler',['../db/d7d/classceleritas_1_1_s_b_energy_sampler.html',1,'celeritas']]],
+  ['sbenergysampler_4',['SBEnergySampler',['../d0/db5/classceleritas_1_1detail_1_1_s_b_energy_sampler.html',1,'celeritas::detail']]],
   ['sbpositronxscorrector_5',['SBPositronXsCorrector',['../d2/d95/classceleritas_1_1_s_b_positron_xs_corrector.html',1,'celeritas']]],
   ['scopedmpiinit_6',['ScopedMpiInit',['../dc/dec/classceleritas_1_1_scoped_mpi_init.html',1,'celeritas']]],
   ['scopedrooterrorhandler_7',['ScopedRootErrorHandler',['../df/d4e/classceleritas_1_1_scoped_root_error_handler.html',1,'celeritas']]],

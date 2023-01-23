@@ -43,7 +43,7 @@ var searchData=
   ['rayleighparameters_40',['RayleighParameters',['../d7/d67/structceleritas_1_1_rayleigh_parameters.html',1,'celeritas']]],
   ['rayleighprocess_41',['RayleighProcess',['../d8/d95/classceleritas_1_1_rayleigh_process.html',1,'celeritas']]],
   ['rbdiffxscalculator_42',['RBDiffXsCalculator',['../d0/d59/classceleritas_1_1_r_b_diff_xs_calculator.html',1,'celeritas']]],
-  ['rbenergysampler_43',['RBEnergySampler',['../d8/d3b/classceleritas_1_1_r_b_energy_sampler.html',1,'celeritas']]],
+  ['rbenergysampler_43',['RBEnergySampler',['../d0/dd6/classceleritas_1_1detail_1_1_r_b_energy_sampler.html',1,'celeritas::detail']]],
   ['realvectraits_44',['RealVecTraits',['../d0/d14/structceleritas_1_1detail_1_1_real_vec_traits.html',1,'celeritas::detail']]],
   ['realvectraits_3c_20double_20_3e_45',['RealVecTraits&lt; double &gt;',['../db/d3c/structceleritas_1_1detail_1_1_real_vec_traits_3_01double_01_4.html',1,'celeritas::detail']]],
   ['realvectraits_3c_20float_20_3e_46',['RealVecTraits&lt; float &gt;',['../d3/d3b/structceleritas_1_1detail_1_1_real_vec_traits_3_01float_01_4.html',1,'celeritas::detail']]],

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Infrastructure &mdash; Celeritas v0.2.0 documentation</title>
+  <title>Installation &mdash; Celeritas v0.2.0-22+59d3b167 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -20,8 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="API documentation" href="api.html" />
-    <link rel="prev" title="Overview" href="overview.html" /> 
+    <link rel="next" title="Overview" href="overview.html" />
+    <link rel="prev" title="Introduction" href="introduction.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -33,7 +33,7 @@
             <img src="_static/celeritas-thumbnail.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.2.0
+                0.2.1-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -45,8 +45,8 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Infrastructure</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#toolchain-installation">Toolchain installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#building-celeritas">Building Celeritas</a></li>
@@ -54,6 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#downstream-usage-as-a-library">Downstream usage as a library</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
@@ -81,9 +82,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Infrastructure</li>
+      <li>Installation</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/infrastructure.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -91,13 +92,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="infrastructure">
-<span id="id1"></span><h1>Infrastructure<a class="headerlink" href="#infrastructure" title="Permalink to this heading"></a></h1>
+  <section id="installation">
+<span id="infrastructure"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
+<section id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading"></a></h2>
 <p>Celeritas is built using modern <a class="reference external" href="https://cmake.org">CMake</a>. It has multiple dependencies to operate
 as a full-featured code, but each dependency can be individually disabled as
 needed.</p>
-<section id="dependencies">
-<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading"></a></h2>
 <p>The code requires external dependencies to build with full functionality.
 However, any combination of these requirements can be omitted to enable
 limited development on experimental HPC systems or personal machines with
@@ -192,7 +193,8 @@ fewer available components.</p>
 <p>Ideally you will build Celeritas with all dependencies to gain the full
 functionality of the code, but there are circumstances in which you may not
 have (or want) all the dependencies or features available. By default, the CMake code in
-Celeritas queries available packages and sets several <cite>CELERITAS_USE_{package}</cite>
+Celeritas queries available packages and sets several
+<code class="docutils literal notranslate"><span class="pre">CELERITAS_USE_{package}</span></code>
 options based on what it finds, so you have a good chance of successfully
 configuring Celeritas on the first go. Some optional features
 will error out in the configure if their required
@@ -201,7 +203,7 @@ the next configure will succeed (with that component disabled).</p>
 </section>
 <section id="toolchain-installation">
 <h2>Toolchain installation<a class="headerlink" href="#toolchain-installation" title="Permalink to this heading"></a></h2>
-<p>The recommended way to install dependencies is with <cite>Spack</cite>,
+<p>The recommended way to install dependencies is with <code class="docutils literal notranslate"><span class="pre">Spack</span></code>,
 an HPC-oriented package manager that includes numerous scientific packages,
 including those used in HEP. Celeritas includes a Spack environment at
 <code class="file docutils literal notranslate"><span class="pre">scripts/spack.yaml</span></code> that describes the code’s full suite
@@ -241,7 +243,7 @@ can configure, build, and test using the provided helper script:</p>
 <h2>CMake Presets<a class="headerlink" href="#cmake-presets" title="Permalink to this heading"></a></h2>
 <p>To manage multiple builds with different
 configure options (debug or release, VecGeom or ORANGE), you can use the
-CMake presets provided by Celeritas via the <cite>CMakePresets.json</cite> file for CMake
+CMake presets provided by Celeritas via the <code class="docutils literal notranslate"><span class="pre">CMakePresets.json</span></code> file for CMake
 3.21 and higher:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cmake --preset<span class="o">=</span>default
 </pre></div>
@@ -255,14 +257,15 @@ different expectations for available dependencies.</p>
 <span class="go">field</span>
 </pre></div>
 </div>
-<p>which is just a poor way of saying the version in the <code class="docutils literal notranslate"><span class="pre">CMakePresets.json</span></code> file
-is newer than that version knows how to handle.</p>
+<p>which is just a poor way of saying the version in the <code class="docutils literal notranslate"><span class="pre">CMakePresets.json</span></code>
+file is newer than that version knows how to handle.</p>
 </div>
 <p>If you want to add your own set of custom options and flags, create a
 <code class="docutils literal notranslate"><span class="pre">CMakeUserPresets.json</span></code> file or, if you wish to contribute on a regular
-basis, create a preset at <code class="docutils literal notranslate"><span class="pre">scripts/cmake-presets/${HOSTNAME%%.*}.json</span></code> and
+basis, create a preset at <code class="file docutils literal notranslate"><span class="pre">scripts/cmake-presets/</span><em><span class="pre">HOSTNAME</span></em><span class="pre">.json</span></code> and
 call <code class="docutils literal notranslate"><span class="pre">scripts/build.sh</span> <span class="pre">{preset}</span></code> to create the symlink, configure the preset,
-build, and test. See <code class="file docutils literal notranslate"><span class="pre">scripts/README.md</span></code> for more details.</p>
+build, and test. See <code class="file docutils literal notranslate"><span class="pre">scripts/README.md</span></code> in the code repository for more
+details.</p>
 </section>
 <section id="downstream-usage-as-a-library">
 <h2>Downstream usage as a library<a class="headerlink" href="#downstream-usage-as-a-library" title="Permalink to this heading"></a></h2>
@@ -282,8 +285,8 @@ of <code class="docutils literal notranslate"><span class="pre">target_link_libr
 <span class="nb">celeritas_target_link_libraries</span><span class="p">(</span><span class="s">mycode</span><span class="w"> </span><span class="s">PUBLIC</span><span class="w"> </span><span class="s">Celeritas::celeritas</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The test project at <code class="file docutils literal notranslate"><span class="pre">scripts/ci/test-installation</span></code> demonstrates how to
-use Celeritas as a library with a short standalone CMake project.</p>
+<p>The <a class="reference internal" href="examples/minimal.html#example-minimal"><span class="std std-ref">Minimal Celeritas usage</span></a> example demonstrates how to use Celeritas as a
+library with a short standalone CMake project.</p>
 </section>
 </section>
 
@@ -291,8 +294,8 @@ use Celeritas as a library with a short standalone CMake project.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="overview.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="api.html" class="btn btn-neutral float-right" title="API documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="introduction.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="overview.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -81,7 +81,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Angular distribution for pair-production and bremsstrahlung processes.  
+<p>Polar angular distribution for pair-production and bremsstrahlung processes.  
  <a href="../../dd/da0/classceleritas_1_1_tsai_urban_distribution.html#details">More...</a></p>
 
 <p><code>#include &lt;TsaiUrbanDistribution.hh&gt;</code></p>
@@ -106,14 +106,13 @@ Public Member Functions</h2></td></tr>
 template&lt;class Engine &gt; </td></tr>
 <tr class="memitem:ad72b309e06e1408fec769fe249388bfd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../dd/da0/classceleritas_1_1_tsai_urban_distribution.html#a1b353ad68fc70ee9ac1d395dba8bf5ce">result_type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (Engine &amp;rng)</td></tr>
 <tr class="separator:ad72b309e06e1408fec769fe249388bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05abac4e7d56a05285977ba155f9dfb8"><td class="memTemplParams" colspan="2"><a id="a05abac4e7d56a05285977ba155f9dfb8" name="a05abac4e7d56a05285977ba155f9dfb8"></a>
-template&lt;class Engine &gt; </td></tr>
-<tr class="memitem:a05abac4e7d56a05285977ba155f9dfb8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (Engine &amp;rng)</td></tr>
-<tr class="memdesc:a05abac4e7d56a05285977ba155f9dfb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample gamma angle (z-axis along the parent particle). <br /></td></tr>
+<tr class="memitem:a05abac4e7d56a05285977ba155f9dfb8"><td class="memTemplParams" colspan="2">template&lt;class Engine &gt; </td></tr>
+<tr class="memitem:a05abac4e7d56a05285977ba155f9dfb8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/da0/classceleritas_1_1_tsai_urban_distribution.html#a05abac4e7d56a05285977ba155f9dfb8">operator()</a> (Engine &amp;rng)</td></tr>
+<tr class="memdesc:a05abac4e7d56a05285977ba155f9dfb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample the cosine of the polar angle of the exiting gamma.  <a href="../../dd/da0/classceleritas_1_1_tsai_urban_distribution.html#a05abac4e7d56a05285977ba155f9dfb8">More...</a><br /></td></tr>
 <tr class="separator:a05abac4e7d56a05285977ba155f9dfb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Angular distribution for pair-production and bremsstrahlung processes. </p>
+<div class="textblock"><p >Polar angular distribution for pair-production and bremsstrahlung processes. </p>
 <p >For pair-production, the polar angle of the electron (or positron) is defined with respect to the direction of the parent photon. The energy- angle distribution given by Tsai is quite complicated to sample and can be approximated by a density function suggested by Urban.</p>
 <p >The angular distribution of the emitted photons is obtained from a simplified formula based on the Tsai cross-section, which is expected to become isotropic in the low energy limit.</p>
 <dl class="section note"><dt>Note</dt><dd>This performs the same sampling routine as in Geant4's ModifiedTsai class, based on derivation from Tsai (Rev Mod Phys 49,421(1977) and documented in section 6.5.2 (pair-production), and 10.2.1 and 10.2.4 (bremsstrahlung) of the Geant4 Physics Reference (release 10.6). </dd></dl>
@@ -160,6 +159,30 @@ template&lt;class Engine &gt; </td></tr>
       </table>
 </div><div class="memdoc">
 <p >Type aliases </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a05abac4e7d56a05285977ba155f9dfb8" name="a05abac4e7d56a05285977ba155f9dfb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05abac4e7d56a05285977ba155f9dfb8">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Engine &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> celeritas::TsaiUrbanDistribution::operator() </td>
+          <td>(</td>
+          <td class="paramtype">Engine &amp;&#160;</td>
+          <td class="paramname"><em>rng</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sample the cosine of the polar angle of the exiting gamma. </p>
+<p >The z-axis is with respect to the direction of the parent particle. </p>
 
 </div>
 </div>

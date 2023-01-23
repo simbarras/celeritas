@@ -374,3 +374,6 @@ x = -b/2 \pm \sqrt{(b/2)^2 - c}.
 \_form#206=318x15:\[
  ax^2 + by^2 + cz^2 + dxy + eyz + fzx + gx + hy + iz + j = 0
 \]
+\_form#207=89x19:$ E_\textrm{LPM} = \frac{\alpha m^2 X_0}{2 h c} $
+\_form#208=16x13:$ X_0 $
+\_form#209=36x15:$ E_\textrm{LPM} $
