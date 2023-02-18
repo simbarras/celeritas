@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index &mdash; Celeritas v0.2.0-22+59d3b167 documentation</title>
+  <title>Index &mdash; Celeritas v0.3.0-dev-24+65ba1f71 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -30,7 +30,7 @@
             <img src="_static/celeritas-thumbnail.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.2.1-dev
+                0.3.1-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -128,8 +128,6 @@
 </li>
       <li><a href="api/corecel.html#c.CELER_LOG_LOCAL">CELER_LOG_LOCAL (C macro)</a>
 </li>
-      <li><a href="api/corecel.html#c.CELER_MAYBE_UNUSED">CELER_MAYBE_UNUSED (C macro)</a>
-</li>
       <li><a href="api/corecel.html#c.CELER_MPI_CALL">CELER_MPI_CALL (C macro)</a>
 </li>
       <li><a href="api/corecel.html#c.CELER_NOT_CONFIGURED">CELER_NOT_CONFIGURED (C macro)</a>
@@ -137,6 +135,8 @@
       <li><a href="api/corecel.html#c.CELER_NOT_IMPLEMENTED">CELER_NOT_IMPLEMENTED (C macro)</a>
 </li>
       <li><a href="api/corecel.html#c.CELER_TRY_HANDLE">CELER_TRY_HANDLE (C macro)</a>
+</li>
+      <li><a href="api/corecel.html#c.CELER_TRY_HANDLE_CONTEXT">CELER_TRY_HANDLE_CONTEXT (C macro)</a>
 </li>
       <li><a href="api/corecel.html#c.CELER_UNLIKELY">CELER_UNLIKELY (C macro)</a>
 </li>
@@ -198,9 +198,13 @@
 </li>
       <li><a href="api/corecel.html#_CPPv4I0EN9celeritas10atomic_minE1TP1T1T">celeritas::atomic_min (C++ function)</a>
 </li>
+      <li><a href="api/celeritas.html#_CPPv4N9celeritas16AtomicRelaxationE">celeritas::AtomicRelaxation (C++ class)</a>
+</li>
       <li><a href="api/corecel.html#_CPPv4I0_9size_typeEN9celeritas4axpyEv1TRK5ArrayI1T1NEP5ArrayI1T1NE">celeritas::axpy (C++ function)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4N9celeritas21BernoulliDistributionE">celeritas::BernoulliDistribution (C++ class)</a>
+</li>
+      <li><a href="api/celeritas.html#_CPPv4N9celeritas22BetheHeitlerInteractorE">celeritas::BetheHeitlerInteractor (C++ class)</a>
 </li>
       <li><a href="api/corecel.html#_CPPv4N9celeritas4ByteE">celeritas::Byte (C++ enum)</a>
 </li>
@@ -356,6 +360,10 @@
 </li>
       <li><a href="api/corecel.html#_CPPv4I0_9size_typeEN9celeritas11dot_productE1TRK5ArrayI1T1NERK5ArrayI1T1NE">celeritas::dot_product (C++ function)</a>
 </li>
+      <li><a href="api/celeritas.html#_CPPv4N9celeritas16EnergyLossHelperE">celeritas::EnergyLossHelper (C++ class)</a>
+</li>
+      <li><a href="api/celeritas.html#_CPPv4N9celeritas17EPlusGGInteractorE">celeritas::EPlusGGInteractor (C++ class)</a>
+</li>
       <li><a href="api/accel.html#_CPPv4N9celeritas18ExceptionConverterE">celeritas::ExceptionConverter (C++ class)</a>
 </li>
       <li><a href="api/accel.html#_CPPv4N9celeritas18ExceptionConverter18ExceptionConverterEPKc">celeritas::ExceptionConverter::ExceptionConverter (C++ function)</a>
@@ -410,6 +418,8 @@
 </li>
       <li><a href="api/celeritas.html#_CPPv4I0EN9celeritas21IsotropicDistributionE">celeritas::IsotropicDistribution (C++ class)</a>
 </li>
+      <li><a href="api/celeritas.html#_CPPv4N9celeritas22KleinNishinaInteractorE">celeritas::KleinNishinaInteractor (C++ class)</a>
+</li>
       <li><a href="api/corecel.html#_CPPv4I0EN9celeritas4LessE">celeritas::Less (C++ struct)</a>
 </li>
       <li><a href="api/corecel.html#_CPPv4NK9celeritas4LessclERK1TRK1T">celeritas::Less::operator() (C++ function)</a>
@@ -417,6 +427,8 @@
       <li><a href="api/corecel.html#_CPPv4IEN9celeritas4LessIvEE">celeritas::Less&lt;void&gt; (C++ struct)</a>
 </li>
       <li><a href="api/corecel.html#_CPPv4I00ENK9celeritas4LessIvEclEDcRR1TRR1U">celeritas::Less&lt;void&gt;::operator() (C++ function)</a>
+</li>
+      <li><a href="api/celeritas.html#_CPPv4N9celeritas21LivermorePEInteractorE">celeritas::LivermorePEInteractor (C++ class)</a>
 </li>
       <li><a href="api/accel.html#_CPPv4N9celeritas16LocalTransporterE">celeritas::LocalTransporter (C++ class)</a>
 </li>
@@ -444,6 +456,8 @@
 </li>
       <li><a href="api/corecel.html#_CPPv4N9celeritas6Logger6LoggerERK15MpiCommunicator10LogHandlerPKc">celeritas::Logger::Logger (C++ function)</a>
 </li>
+      <li><a href="api/corecel.html#_CPPv4N9celeritas6Logger7MessageE">celeritas::Logger::Message (C++ type)</a>
+</li>
       <li><a href="api/corecel.html#_CPPv4N9celeritas6Logger10min_level_E">celeritas::Logger::min_level_ (C++ member)</a>
 </li>
       <li><a href="api/corecel.html#_CPPv4N9celeritas6LoggerclE10Provenance8LogLevel">celeritas::Logger::operator() (C++ function)</a>
@@ -455,8 +469,6 @@
       <li><a href="api/celeritas.html#_CPPv4N9celeritas14MaterialParamsE">celeritas::MaterialParams (C++ class)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas14MaterialParams10device_refEv">celeritas::MaterialParams::device_ref (C++ function)</a>
-</li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas14MaterialParams9DeviceRefE">celeritas::MaterialParams::DeviceRef (C++ type)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4N9celeritas14MaterialParams12ElementInputE">celeritas::MaterialParams::ElementInput (C++ struct)</a>
 </li>
@@ -479,8 +491,6 @@
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas14MaterialParams3getE10MaterialId">celeritas::MaterialParams::get (C++ function)</a>, <a href="api/celeritas.html#_CPPv4NK9celeritas14MaterialParams3getE9ElementId">[1]</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas14MaterialParams8host_refEv">celeritas::MaterialParams::host_ref (C++ function)</a>
-</li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas14MaterialParams7HostRefE">celeritas::MaterialParams::HostRef (C++ type)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas14MaterialParams11id_to_labelE10MaterialId">celeritas::MaterialParams::id_to_label (C++ function)</a>, <a href="api/celeritas.html#_CPPv4NK9celeritas14MaterialParams11id_to_labelE9ElementId">[1]</a>
 </li>
@@ -508,23 +518,13 @@
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas14MaterialParams4sizeEv">celeritas::MaterialParams::size (C++ function)</a>
 </li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas14MaterialParams18SpanConstElementIdE">celeritas::MaterialParams::SpanConstElementId (C++ type)</a>
-</li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas14MaterialParams19SpanConstMaterialIdE">celeritas::MaterialParams::SpanConstMaterialId (C++ type)</a>
-</li>
       <li><a href="api/celeritas.html#_CPPv4N9celeritas17MaterialTrackViewE">celeritas::MaterialTrackView (C++ class)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4N9celeritas17MaterialTrackView15element_scratchEv">celeritas::MaterialTrackView::element_scratch (C++ function)</a>
 </li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas17MaterialTrackView13Initializer_tE">celeritas::MaterialTrackView::Initializer_t (C++ type)</a>
-</li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas17MaterialTrackView18make_material_viewEv">celeritas::MaterialTrackView::make_material_view (C++ function)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas17MaterialTrackView11material_idEv">celeritas::MaterialTrackView::material_id (C++ function)</a>
-</li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas17MaterialTrackView17MaterialParamsRefE">celeritas::MaterialTrackView::MaterialParamsRef (C++ type)</a>
-</li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas17MaterialTrackView16MaterialStateRefE">celeritas::MaterialTrackView::MaterialStateRef (C++ type)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4N9celeritas17MaterialTrackView17MaterialTrackViewERK17MaterialParamsRefRK16MaterialStateRef8ThreadId">celeritas::MaterialTrackView::MaterialTrackView (C++ function)</a>
 </li>
@@ -545,6 +545,8 @@
       <li><a href="api/corecel.html#_CPPv4I0EN9celeritas3minERK1TRK1TRK1T">celeritas::min (C++ function)</a>
 </li>
       <li><a href="api/corecel.html#_CPPv4I00EN9celeritas11min_elementE9ForwardIt9ForwardIt9ForwardIt7Compare">celeritas::min_element (C++ function)</a>, <a href="api/corecel.html#_CPPv4I0EN9celeritas11min_elementE9ForwardIt9ForwardIt9ForwardIt">[1]</a>
+</li>
+      <li><a href="api/celeritas.html#_CPPv4N9celeritas22MollerBhabhaInteractorE">celeritas::MollerBhabhaInteractor (C++ class)</a>
 </li>
       <li><a href="api/corecel.html#_CPPv4I0EN9celeritas4moveERRNSt16remove_referenceI1TE4typeERR1T">celeritas::move (C++ function)</a>
 </li>
@@ -582,8 +584,6 @@
 </li>
       <li><a href="api/orange.html#_CPPv4NK9celeritas12OrangeParams10device_refEv">celeritas::OrangeParams::device_ref (C++ function)</a>
 </li>
-      <li><a href="api/orange.html#_CPPv4N9celeritas12OrangeParams9DeviceRefE">celeritas::OrangeParams::DeviceRef (C++ type)</a>
-</li>
       <li><a href="api/orange.html#_CPPv4NK9celeritas12OrangeParams12find_surfaceERKNSt6stringE">celeritas::OrangeParams::find_surface (C++ function)</a>
 </li>
       <li><a href="api/orange.html#_CPPv4NK9celeritas12OrangeParams11find_volumeEPKc">celeritas::OrangeParams::find_volume (C++ function)</a>, <a href="api/orange.html#_CPPv4NK9celeritas12OrangeParams11find_volumeERK5Label">[1]</a>, <a href="api/orange.html#_CPPv4NK9celeritas12OrangeParams11find_volumeERKNSt6stringE">[2]</a>
@@ -591,8 +591,6 @@
       <li><a href="api/orange.html#_CPPv4NK9celeritas12OrangeParams12find_volumesERKNSt6stringE">celeritas::OrangeParams::find_volumes (C++ function)</a>
 </li>
       <li><a href="api/orange.html#_CPPv4NK9celeritas12OrangeParams8host_refEv">celeritas::OrangeParams::host_ref (C++ function)</a>
-</li>
-      <li><a href="api/orange.html#_CPPv4N9celeritas12OrangeParams7HostRefE">celeritas::OrangeParams::HostRef (C++ type)</a>
 </li>
       <li><a href="api/orange.html#_CPPv4NK9celeritas12OrangeParams11id_to_labelE8VolumeId">celeritas::OrangeParams::id_to_label (C++ function)</a>, <a href="api/orange.html#_CPPv4NK9celeritas12OrangeParams11id_to_labelE9SurfaceId">[1]</a>
 </li>
@@ -602,8 +600,6 @@
 </li>
       <li><a href="api/orange.html#_CPPv4N9celeritas12OrangeParams12OrangeParamsE11OrangeInput">celeritas::OrangeParams::OrangeParams (C++ function)</a>, <a href="api/orange.html#_CPPv4N9celeritas12OrangeParams12OrangeParamsEPK17G4VPhysicalVolume">[1]</a>, <a href="api/orange.html#_CPPv4N9celeritas12OrangeParams12OrangeParamsERKNSt6stringE">[2]</a>
 </li>
-      <li><a href="api/orange.html#_CPPv4N9celeritas12OrangeParams17SpanConstVolumeIdE">celeritas::OrangeParams::SpanConstVolumeId (C++ type)</a>
-</li>
       <li><a href="api/orange.html#_CPPv4NK9celeritas12OrangeParams15supports_safetyEv">celeritas::OrangeParams::supports_safety (C++ function)</a>
 </li>
       <li><a href="api/orange.html#_CPPv4N9celeritas15OrangeTrackViewE">celeritas::OrangeTrackView (C++ class)</a>
@@ -612,6 +608,8 @@
 </li>
       <li><a href="api/orange.html#_CPPv4N9celeritas15OrangeTrackView19DetailedInitializerE">celeritas::OrangeTrackView::DetailedInitializer (C++ struct)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/orange.html#_CPPv4N9celeritas15OrangeTrackView19DetailedInitializer3dirE">celeritas::OrangeTrackView::DetailedInitializer::dir (C++ member)</a>
 </li>
       <li><a href="api/orange.html#_CPPv4N9celeritas15OrangeTrackView19DetailedInitializer5otherE">celeritas::OrangeTrackView::DetailedInitializer::other (C++ member)</a>
@@ -621,8 +619,6 @@
       <li><a href="api/orange.html#_CPPv4N9celeritas15OrangeTrackView14find_next_stepE9real_type">celeritas::OrangeTrackView::find_next_step (C++ function)</a>, <a href="api/orange.html#_CPPv4N9celeritas15OrangeTrackView14find_next_stepEv">[1]</a>
 </li>
       <li><a href="api/orange.html#_CPPv4N9celeritas15OrangeTrackView11find_safetyEv">celeritas::OrangeTrackView::find_safety (C++ function)</a>
-</li>
-      <li><a href="api/orange.html#_CPPv4N9celeritas15OrangeTrackView13Initializer_tE">celeritas::OrangeTrackView::Initializer_t (C++ type)</a>
 </li>
       <li><a href="api/orange.html#_CPPv4NK9celeritas15OrangeTrackView14is_on_boundaryEv">celeritas::OrangeTrackView::is_on_boundary (C++ function)</a>
 </li>
@@ -638,16 +634,10 @@
 </li>
       <li><a href="api/orange.html#_CPPv4N9celeritas15OrangeTrackView15OrangeTrackViewERK9ParamsRefRK8StateRef8ThreadId">celeritas::OrangeTrackView::OrangeTrackView (C++ function)</a>
 </li>
-      <li><a href="api/orange.html#_CPPv4N9celeritas15OrangeTrackView9ParamsRefE">celeritas::OrangeTrackView::ParamsRef (C++ type)</a>
-</li>
       <li><a href="api/orange.html#_CPPv4NK9celeritas15OrangeTrackView3posEv">celeritas::OrangeTrackView::pos (C++ function)</a>
 </li>
       <li><a href="api/orange.html#_CPPv4N9celeritas15OrangeTrackView7set_dirERK5Real3">celeritas::OrangeTrackView::set_dir (C++ function)</a>
 </li>
-      <li><a href="api/orange.html#_CPPv4N9celeritas15OrangeTrackView8StateRefE">celeritas::OrangeTrackView::StateRef (C++ type)</a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/orange.html#_CPPv4NK9celeritas15OrangeTrackView10surface_idEv">celeritas::OrangeTrackView::surface_id (C++ function)</a>
 </li>
       <li><a href="api/orange.html#_CPPv4NK9celeritas15OrangeTrackView9volume_idEv">celeritas::OrangeTrackView::volume_id (C++ function)</a>
@@ -664,8 +654,6 @@
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas14ParticleParams10device_refEv">celeritas::ParticleParams::device_ref (C++ function)</a>
 </li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas14ParticleParams9DeviceRefE">celeritas::ParticleParams::DeviceRef (C++ type)</a>
-</li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas14ParticleParams4findE9PDGNumber">celeritas::ParticleParams::find (C++ function)</a>, <a href="api/celeritas.html#_CPPv4NK9celeritas14ParticleParams4findERKNSt6stringE">[1]</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4N9celeritas14ParticleParams11from_importERK10ImportData">celeritas::ParticleParams::from_import (C++ function)</a>
@@ -673,8 +661,6 @@
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas14ParticleParams3getE10ParticleId">celeritas::ParticleParams::get (C++ function)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas14ParticleParams8host_refEv">celeritas::ParticleParams::host_ref (C++ function)</a>
-</li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas14ParticleParams7HostRefE">celeritas::ParticleParams::HostRef (C++ type)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas14ParticleParams11id_to_labelE10ParticleId">celeritas::ParticleParams::id_to_label (C++ function)</a>
 </li>
@@ -734,15 +720,9 @@
 </li>
       <li><a href="api/celeritas.html#_CPPv4N9celeritas13PhysicsParamsE">celeritas::PhysicsParams (C++ class)</a>
 </li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas13PhysicsParams13ActionIdRangeE">celeritas::PhysicsParams::ActionIdRange (C++ type)</a>
-</li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas13PhysicsParams10device_refEv">celeritas::PhysicsParams::device_ref (C++ function)</a>
 </li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas13PhysicsParams9DeviceRefE">celeritas::PhysicsParams::DeviceRef (C++ type)</a>
-</li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas13PhysicsParams8host_refEv">celeritas::PhysicsParams::host_ref (C++ function)</a>
-</li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas13PhysicsParams7HostRefE">celeritas::PhysicsParams::HostRef (C++ type)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4N9celeritas13PhysicsParams5InputE">celeritas::PhysicsParams::Input (C++ struct)</a>
 </li>
@@ -760,8 +740,6 @@
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas13PhysicsParams13num_processesEv">celeritas::PhysicsParams::num_processes (C++ function)</a>
 </li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas13PhysicsParams7OptionsE">celeritas::PhysicsParams::Options (C++ type)</a>
-</li>
       <li><a href="api/celeritas.html#_CPPv4N9celeritas13PhysicsParams13PhysicsParamsE5Input">celeritas::PhysicsParams::PhysicsParams (C++ function)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas13PhysicsParams7processE9ProcessId">celeritas::PhysicsParams::process (C++ function)</a>
@@ -769,20 +747,6 @@
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas13PhysicsParams10process_idE7ModelId">celeritas::PhysicsParams::process_id (C++ function)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas13PhysicsParams9processesE10ParticleId">celeritas::PhysicsParams::processes (C++ function)</a>
-</li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas13PhysicsParams18SpanConstProcessIdE">celeritas::PhysicsParams::SpanConstProcessId (C++ type)</a>
-</li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas13PhysicsParams16SPConstMaterialsE">celeritas::PhysicsParams::SPConstMaterials (C++ type)</a>
-</li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas13PhysicsParams12SPConstModelE">celeritas::PhysicsParams::SPConstModel (C++ type)</a>
-</li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas13PhysicsParams16SPConstParticlesE">celeritas::PhysicsParams::SPConstParticles (C++ type)</a>
-</li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas13PhysicsParams14SPConstProcessE">celeritas::PhysicsParams::SPConstProcess (C++ type)</a>
-</li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas13PhysicsParams17SPConstRelaxationE">celeritas::PhysicsParams::SPConstRelaxation (C++ type)</a>
-</li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas13PhysicsParams10VecProcessE">celeritas::PhysicsParams::VecProcess (C++ type)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4N9celeritas16PhysicsTrackViewE">celeritas::PhysicsTrackView (C++ class)</a>
 </li>
@@ -796,15 +760,11 @@
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas16PhysicsTrackView10eloss_ppidEv">celeritas::PhysicsTrackView::eloss_ppid (C++ function)</a>
 </li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas16PhysicsTrackView6EnergyE">celeritas::PhysicsTrackView::Energy (C++ type)</a>
-</li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas16PhysicsTrackView15hardwired_modelE17ParticleProcessId6Energy">celeritas::PhysicsTrackView::hardwired_model (C++ function)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas16PhysicsTrackView11has_at_restEv">celeritas::PhysicsTrackView::has_at_rest (C++ function)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas16PhysicsTrackView19has_interaction_mfpEv">celeritas::PhysicsTrackView::has_interaction_mfp (C++ function)</a>
-</li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas16PhysicsTrackView13Initializer_tE">celeritas::PhysicsTrackView::Initializer_t (C++ type)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas16PhysicsTrackView19integral_xs_processE17ParticleProcessId">celeritas::PhysicsTrackView::integral_xs_process (C++ function)</a>
 </li>
@@ -816,13 +776,11 @@
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas16PhysicsTrackView17make_model_finderE17ParticleProcessId">celeritas::PhysicsTrackView::make_model_finder (C++ function)</a>
 </li>
+      <li><a href="api/celeritas.html#_CPPv4NK9celeritas16PhysicsTrackView11material_idEv">celeritas::PhysicsTrackView::material_id (C++ function)</a>
+</li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas16PhysicsTrackView8model_idE15ParticleModelId">celeritas::PhysicsTrackView::model_id (C++ function)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas16PhysicsTrackView15model_to_actionE7ModelId">celeritas::PhysicsTrackView::model_to_action (C++ function)</a>
-</li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas16PhysicsTrackView11ModelFinderE">celeritas::PhysicsTrackView::ModelFinder (C++ type)</a>
-</li>
-      <li><a href="api/celeritas.html#_CPPv4NK9celeritas16PhysicsTrackView8msc_ppidEv">celeritas::PhysicsTrackView::msc_ppid (C++ function)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4N9celeritas16PhysicsTrackView9msc_rangeERK8MscRange">celeritas::PhysicsTrackView::msc_range (C++ function)</a>, <a href="api/celeritas.html#_CPPv4NK9celeritas16PhysicsTrackView9msc_rangeEv">[1]</a>
 </li>
@@ -831,10 +789,6 @@
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas16PhysicsTrackView13num_particlesEv">celeritas::PhysicsTrackView::num_particles (C++ function)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4N9celeritas16PhysicsTrackViewaSERK13Initializer_t">celeritas::PhysicsTrackView::operator= (C++ function)</a>
-</li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas16PhysicsTrackView16PhysicsParamsRefE">celeritas::PhysicsTrackView::PhysicsParamsRef (C++ type)</a>
-</li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas16PhysicsTrackView15PhysicsStateRefE">celeritas::PhysicsTrackView::PhysicsStateRef (C++ type)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4N9celeritas16PhysicsTrackView16PhysicsTrackViewERK16PhysicsParamsRefRK15PhysicsStateRef10ParticleId10MaterialId8ThreadId">celeritas::PhysicsTrackView::PhysicsTrackView (C++ function)</a>
 </li>
@@ -868,9 +822,19 @@
 </li>
       <li><a href="api/celeritas.html#_CPPv4I0EN9celeritas18RadialDistributionE">celeritas::RadialDistribution (C++ class)</a>
 </li>
+      <li><a href="api/celeritas.html#_CPPv4N9celeritas18RayleighInteractorE">celeritas::RayleighInteractor (C++ class)</a>
+</li>
       <li><a href="api/corecel.html#_CPPv4N9celeritas9real_typeE">celeritas::real_type (C++ type)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4I0EN9celeritas22ReciprocalDistributionE">celeritas::ReciprocalDistribution (C++ class)</a>
+</li>
+      <li><a href="api/celeritas.html#_CPPv4N9celeritas26RelativisticBremInteractorE">celeritas::RelativisticBremInteractor (C++ class)</a>
+</li>
+      <li><a href="api/corecel.html#_CPPv4N9celeritas20RichContextExceptionE">celeritas::RichContextException (C++ class)</a>
+</li>
+      <li><a href="api/corecel.html#_CPPv4NK9celeritas20RichContextException6outputEP9JsonPimpl">celeritas::RichContextException::output (C++ function)</a>
+</li>
+      <li><a href="api/corecel.html#_CPPv4NK9celeritas20RichContextException4typeEv">celeritas::RichContextException::type (C++ function)</a>
 </li>
       <li><a href="api/corecel.html#_CPPv4I0EN9celeritas6rotateE5ArrayI1TXL3EEERK5ArrayI1TXL3EEERK5ArrayI1TXL3EEE">celeritas::rotate (C++ function)</a>
 </li>
@@ -935,6 +899,8 @@
       <li><a href="api/accel.html#_CPPv4N9celeritas14SDSetupOptions3preE">celeritas::SDSetupOptions::pre (C++ member)</a>
 </li>
       <li><a href="api/accel.html#_CPPv4N9celeritas14SDSetupOptions9StepPointE">celeritas::SDSetupOptions::StepPoint (C++ struct)</a>
+</li>
+      <li><a href="api/celeritas.html#_CPPv4N9celeritas23SeltzerBergerInteractorE">celeritas::SeltzerBergerInteractor (C++ class)</a>
 </li>
       <li><a href="api/accel.html#_CPPv4N9celeritas12SetupOptionsE">celeritas::SetupOptions (C++ struct)</a>
 </li>
@@ -1020,57 +986,17 @@
 </li>
       <li><a href="api/corecel.html#_CPPv4I0_NSt6size_tEEN9celeritas4SpanE">celeritas::Span (C++ class)</a>
 </li>
-      <li><a href="api/corecel.html#_CPPv4NK9celeritas4Span4backEv">celeritas::Span::back (C++ function)</a>
-</li>
-      <li><a href="api/corecel.html#_CPPv4NK9celeritas4Span5beginEv">celeritas::Span::begin (C++ function)</a>
-</li>
-      <li><a href="api/corecel.html#_CPPv4N9celeritas4Span14const_iteratorE">celeritas::Span::const_iterator (C++ type)</a>
-</li>
-      <li><a href="api/corecel.html#_CPPv4N9celeritas4Span13const_pointerE">celeritas::Span::const_pointer (C++ type)</a>
-</li>
-      <li><a href="api/corecel.html#_CPPv4N9celeritas4Span15const_referenceE">celeritas::Span::const_reference (C++ type)</a>
-</li>
-      <li><a href="api/corecel.html#_CPPv4NK9celeritas4Span4dataEv">celeritas::Span::data (C++ function)</a>
-</li>
-      <li><a href="api/corecel.html#_CPPv4N9celeritas4Span12element_typeE">celeritas::Span::element_type (C++ type)</a>
-</li>
-      <li><a href="api/corecel.html#_CPPv4NK9celeritas4Span5emptyEv">celeritas::Span::empty (C++ function)</a>
-</li>
-      <li><a href="api/corecel.html#_CPPv4NK9celeritas4Span3endEv">celeritas::Span::end (C++ function)</a>
-</li>
       <li><a href="api/corecel.html#_CPPv4N9celeritas4Span6extentE">celeritas::Span::extent (C++ member)</a>
-</li>
-      <li><a href="api/corecel.html#_CPPv4I_NSt6size_tEENK9celeritas4Span5firstE4SpanI1T5CountEv">celeritas::Span::first (C++ function)</a>, <a href="api/corecel.html#_CPPv4NK9celeritas4Span5firstENSt6size_tE">[1]</a>
-</li>
-      <li><a href="api/corecel.html#_CPPv4NK9celeritas4Span5frontEv">celeritas::Span::front (C++ function)</a>
-</li>
-      <li><a href="api/corecel.html#_CPPv4N9celeritas4Span8iteratorE">celeritas::Span::iterator (C++ type)</a>
-</li>
-      <li><a href="api/corecel.html#_CPPv4I_NSt6size_tEENK9celeritas4Span4lastE4SpanI1T5CountEv">celeritas::Span::last (C++ function)</a>, <a href="api/corecel.html#_CPPv4NK9celeritas4Span4lastENSt6size_tE">[1]</a>
 </li>
       <li><a href="api/corecel.html#_CPPv4N9celeritas4SpanaSERK4Span">celeritas::Span::operator= (C++ function)</a>
 </li>
-      <li><a href="api/corecel.html#_CPPv4NK9celeritas4SpanixE9size_type">celeritas::Span::operator[] (C++ function)</a>
-</li>
-      <li><a href="api/corecel.html#_CPPv4N9celeritas4Span7pointerE">celeritas::Span::pointer (C++ type)</a>
-</li>
-      <li><a href="api/corecel.html#_CPPv4N9celeritas4Span9referenceE">celeritas::Span::reference (C++ type)</a>
-</li>
-      <li><a href="api/corecel.html#_CPPv4NK9celeritas4Span4sizeEv">celeritas::Span::size (C++ function)</a>
-</li>
-      <li><a href="api/corecel.html#_CPPv4NK9celeritas4Span10size_bytesEv">celeritas::Span::size_bytes (C++ function)</a>
-</li>
-      <li><a href="api/corecel.html#_CPPv4N9celeritas4Span9size_typeE">celeritas::Span::size_type (C++ type)</a>
-</li>
       <li><a href="api/corecel.html#_CPPv4I0EN9celeritas4Span4SpanE4Iter4Iter">celeritas::Span::Span (C++ function)</a>, <a href="api/corecel.html#_CPPv4I0_NSt6size_tEEN9celeritas4Span4SpanERK4SpanI1U1NE">[1]</a>, <a href="api/corecel.html#_CPPv4I_NSt6size_tEEN9celeritas4Span4SpanERA1N_1T">[2]</a>, <a href="api/corecel.html#_CPPv4N9celeritas4Span4SpanE7pointer9size_type">[3]</a>, <a href="api/corecel.html#_CPPv4N9celeritas4Span4SpanERK4Span">[4]</a>, <a href="api/corecel.html#_CPPv4N9celeritas4Span4SpanEv">[5]</a>
-</li>
-      <li><a href="api/corecel.html#_CPPv4I_NSt6size_tE_NSt6size_tEENK9celeritas4Span7subspanE4SpanI1TFN6detail14subspan_extentE6Extent6Offset5CountEEv">celeritas::Span::subspan (C++ function)</a>, <a href="api/corecel.html#_CPPv4NK9celeritas4Span7subspanENSt6size_tENSt6size_tE">[1]</a>
-</li>
-      <li><a href="api/corecel.html#_CPPv4N9celeritas4Span10value_typeE">celeritas::Span::value_type (C++ type)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4I_8MemSpaceEN9celeritas7StepperE">celeritas::Stepper (C++ class)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas7Stepper7actionsEv">celeritas::Stepper::actions (C++ function)</a>
+</li>
+      <li><a href="api/celeritas.html#_CPPv4NK9celeritas7Stepper9core_dataEv">celeritas::Stepper::core_data (C++ function)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas7SteppercvbEv">celeritas::Stepper::operator bool (C++ function)</a>
 </li>
@@ -1154,13 +1080,15 @@
 </li>
       <li><a href="api/corecel.html#_CPPv4I000EN9celeritas11upper_boundE9ForwardIt9ForwardIt9ForwardItRK1T7Compare">celeritas::upper_bound (C++ function)</a>, <a href="api/corecel.html#_CPPv4I00EN9celeritas11upper_boundE9ForwardIt9ForwardIt9ForwardItRK1T">[1]</a>
 </li>
+      <li><a href="api/celeritas.html#_CPPv4N9celeritas15UrbanMscScatterE">celeritas::UrbanMscScatter (C++ class)</a>
+</li>
+      <li><a href="api/celeritas.html#_CPPv4N9celeritas17UrbanMscStepLimitE">celeritas::UrbanMscStepLimit (C++ class)</a>
+</li>
       <li><a href="api/corecel.html#_CPPv4I000EN9celeritas8value_asE6ValueT8QuantityI8SrcUnitT6ValueTE">celeritas::value_as (C++ function)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4N9celeritas13VecgeomParamsE">celeritas::VecgeomParams (C++ class)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas13VecgeomParams10device_refEv">celeritas::VecgeomParams::device_ref (C++ function)</a>
-</li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas13VecgeomParams9DeviceRefE">celeritas::VecgeomParams::DeviceRef (C++ type)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas13VecgeomParams12find_surfaceERKNSt6stringE">celeritas::VecgeomParams::find_surface (C++ function)</a>
 </li>
@@ -1170,8 +1098,6 @@
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas13VecgeomParams8host_refEv">celeritas::VecgeomParams::host_ref (C++ function)</a>
 </li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas13VecgeomParams7HostRefE">celeritas::VecgeomParams::HostRef (C++ type)</a>
-</li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas13VecgeomParams11id_to_labelE8VolumeId">celeritas::VecgeomParams::id_to_label (C++ function)</a>, <a href="api/celeritas.html#_CPPv4NK9celeritas13VecgeomParams11id_to_labelE9SurfaceId">[1]</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas13VecgeomParams9max_depthEv">celeritas::VecgeomParams::max_depth (C++ function)</a>
@@ -1179,8 +1105,6 @@
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas13VecgeomParams12num_surfacesEv">celeritas::VecgeomParams::num_surfaces (C++ function)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas13VecgeomParams11num_volumesEv">celeritas::VecgeomParams::num_volumes (C++ function)</a>
-</li>
-      <li><a href="api/celeritas.html#_CPPv4N9celeritas13VecgeomParams17SpanConstVolumeIdE">celeritas::VecgeomParams::SpanConstVolumeId (C++ type)</a>
 </li>
       <li><a href="api/celeritas.html#_CPPv4NK9celeritas13VecgeomParams15supports_safetyEv">celeritas::VecgeomParams::supports_safety (C++ function)</a>
 </li>

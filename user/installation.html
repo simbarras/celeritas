@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation &mdash; Celeritas v0.2.0-22+59d3b167 documentation</title>
+  <title>Installation &mdash; Celeritas v0.3.0-dev-24+65ba1f71 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -33,7 +33,7 @@
             <img src="_static/celeritas-thumbnail.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.2.1-dev
+                0.3.1-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -221,6 +221,44 @@ architecture flags &lt;cuda-arch&gt;</cite>.</p></li>
 <span class="pre">celeritas</span> <span class="pre">scripts/spack.yaml</span></code>.</p></li>
 <li><p>Install all the dependencies with <code class="docutils literal notranslate"><span class="pre">spack</span> <span class="pre">-e</span> <span class="pre">celeritas</span> <span class="pre">install</span></code>.</p></li>
 </ul>
+<p>The current Spack environment for full-featured development is:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">spack</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">specs</span><span class="p">:</span><span class="w"> </span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cmake</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doxygen</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;geant4@11</span><span class="nv"> </span><span class="s">cxxstd=17&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">git</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">git-lfs</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;googletest@1.10:&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hepmc3</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ninja</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nlohmann-json</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mpi</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">py-breathe</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">py-sphinx</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">py-sphinx-rtd-theme</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">py-sphinxcontrib-bibtex</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root cxxstd=17</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;swig@4.1:&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;vecgeom@1.2:</span><span class="nv"> </span><span class="s">+gdml</span><span class="nv"> </span><span class="s">cxxstd=17&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">view</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">  </span><span class="nt">concretizer</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">unify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">  </span><span class="nt">packages</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">root</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="c1"># Note: ~gsl and ~math are removed because dd4hep requires them</span><span class="w"></span>
+<span class="w">      </span><span class="nt">variants</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">~aqua ~davix ~examples ~opengl ~x ~tbb</span><span class="w"></span>
+<span class="w">    </span><span class="nt">all</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">providers</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">blas</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">openblas</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">        </span><span class="nt">lapack</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">openblas</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">        </span><span class="nt">mpi</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">openmpi</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">      </span><span class="nt">variants</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cxxstd=17</span><span class="w"></span>
+<span class="w">      </span><span class="c1"># NOTE: add `+cuda cuda_arch=70` (or similar) to your site packages.py</span><span class="w"></span>
+<span class="w">      </span><span class="c1"># spack config add --scope=site packages:all:variants:&quot;+cuda cuda_arch=70&quot;</span><span class="w"></span>
+</pre></div>
+</div>
 </section>
 <section id="building-celeritas">
 <h2>Building Celeritas<a class="headerlink" href="#building-celeritas" title="Permalink to this heading"></a></h2>

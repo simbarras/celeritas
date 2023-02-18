@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Minimal Geant4 integration &mdash; Celeritas v0.2.0-22+59d3b167 documentation</title>
+  <title>Minimal Geant4 integration &mdash; Celeritas v0.3.0-dev-24+65ba1f71 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -33,7 +33,7 @@
             <img src="../_static/celeritas-thumbnail.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.2.1-dev
+                0.3.1-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -104,7 +104,7 @@
 <span class="nb">cmake_policy</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.12...3.22</span><span class="p">)</span>
 
 <span class="nb">list</span><span class="p">(</span><span class="s">APPEND</span><span class="w"> </span><span class="s">CMAKE_MODULE_PATH</span><span class="w"> </span><span class="s2">&quot;${CMAKE_CURRENT_LIST_DIR}/..&quot;</span><span class="p">)</span>
-<span class="nb">find_package</span><span class="p">(</span><span class="s">Celeritas</span><span class="w"> </span><span class="s">0.2</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
+<span class="nb">find_package</span><span class="p">(</span><span class="s">Celeritas</span><span class="w"> </span><span class="s">0.3</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
 
 <span class="nb">if</span><span class="p">(</span><span class="s">NOT</span><span class="w"> </span><span class="s">CELERITAS_USE_VecGeom</span><span class="w"> </span><span class="s">OR</span><span class="w"> </span><span class="s">NOT</span><span class="w"> </span><span class="s">CELERITAS_USE_Geant4</span><span class="p">)</span>
 <span class="w">  </span><span class="nb">message</span><span class="p">(</span><span class="s">SEND_ERROR</span><span class="w"> </span><span class="s2">&quot;This example requires VecGeom and Geant4 support &quot;</span>
@@ -162,6 +162,7 @@ with experiment frameworks or other apps that use a task-based runner.</p>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;accel/Logger.hh&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;accel/SetupOptions.hh&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;accel/SharedParams.hh&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;celeritas/em/UrbanMscParams.hh&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;celeritas/global/alongstep/AlongStepGeneralLinearAction.hh&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;celeritas/io/ImportData.hh&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;corecel/Macros.hh&gt;</span><span class="cp"></span>
@@ -187,7 +188,8 @@ with experiment frameworks or other apps that use a task-based runner.</p>
 <span class="w">        </span><span class="n">input</span><span class="p">.</span><span class="n">action_id</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="o">*</span><span class="n">input</span><span class="p">.</span><span class="n">material</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="o">*</span><span class="n">input</span><span class="p">.</span><span class="n">particle</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="o">*</span><span class="n">input</span><span class="p">.</span><span class="n">physics</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">celeritas</span><span class="o">::</span><span class="n">UrbanMscParams</span><span class="o">::</span><span class="n">from_import</span><span class="p">(</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">input</span><span class="p">.</span><span class="n">particle</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">input</span><span class="p">.</span><span class="n">material</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">input</span><span class="p">.</span><span class="n">imported</span><span class="p">),</span><span class="w"></span>
 <span class="w">        </span><span class="n">input</span><span class="p">.</span><span class="n">imported</span><span class="o">-&gt;</span><span class="n">em_params</span><span class="p">.</span><span class="n">energy_loss_fluct</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 

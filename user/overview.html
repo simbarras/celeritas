@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Overview &mdash; Celeritas v0.2.0-22+59d3b167 documentation</title>
+  <title>Overview &mdash; Celeritas v0.3.0-dev-24+65ba1f71 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -34,7 +34,7 @@
             <img src="_static/celeritas-thumbnail.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.2.1-dev
+                0.3.1-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -153,6 +153,100 @@ produced.</p>
 </section>
 <section id="physics">
 <h2>Physics<a class="headerlink" href="#physics" title="Permalink to this heading"></a></h2>
+<p>Celeritas implements physics processes and models for transporting electron, positron,
+and gamma particles as shown in the accompanying table. Implementation details of these models
+and their corresponding Geant4 classes are documented in <a class="reference internal" href="api/celeritas.html#celeritas-physics"><span class="std std-ref">Physics implementations</span></a>.</p>
+<blockquote>
+<div><table class="docutils align-default" id="id6">
+<caption><span class="caption-text">Electromagnetic physics processes and models available in Celeritas.</span><a class="headerlink" href="#id6" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 15%" />
+<col style="width: 19%" />
+<col style="width: 37%" />
+<col style="width: 18%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Particle</strong></p></td>
+<td><p><strong>Processes</strong></p></td>
+<td><p><strong>Models</strong></p></td>
+<td><p><strong>Celeritas Implementation</strong></p></td>
+<td><p><strong>Applicability</strong></p></td>
+</tr>
+<tr class="row-even"><td rowspan="4"><p><span class="math notranslate nohighlight">\(e^-\)</span></p></td>
+<td><p>Ionisation</p></td>
+<td><p>Møller</p></td>
+<td><p><a class="reference internal" href="api/celeritas.html#_CPPv4N9celeritas22MollerBhabhaInteractorE" title="celeritas::MollerBhabhaInteractor"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">celeritas::MollerBhabhaInteractor</span></code></a></p></td>
+<td><p>0–100 TeV</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>Bremsstrahlung</p></td>
+<td><p>Seltzer–Berger</p></td>
+<td><p><a class="reference internal" href="api/celeritas.html#_CPPv4N9celeritas23SeltzerBergerInteractorE" title="celeritas::SeltzerBergerInteractor"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">celeritas::SeltzerBergerInteractor</span></code></a></p></td>
+<td><p>0–1 GeV</p></td>
+</tr>
+<tr class="row-even"><td><p>Relativistic</p></td>
+<td><p><a class="reference internal" href="api/celeritas.html#_CPPv4N9celeritas26RelativisticBremInteractorE" title="celeritas::RelativisticBremInteractor"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">celeritas::RelativisticBremInteractor</span></code></a></p></td>
+<td><p>1 GeV – 100 TeV</p></td>
+</tr>
+<tr class="row-odd"><td><p>Coulomb scattering</p></td>
+<td><p>Urban</p></td>
+<td><p><a class="reference internal" href="api/celeritas.html#_CPPv4N9celeritas15UrbanMscScatterE" title="celeritas::UrbanMscScatter"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">celeritas::UrbanMscScatter</span></code></a> <a class="footnote-reference brackets" href="#id5" id="id3">1</a></p></td>
+<td><p>10 eV – 100 MeV</p></td>
+</tr>
+<tr class="row-even"><td rowspan="5"><p><span class="math notranslate nohighlight">\(e^+\)</span></p></td>
+<td><p>Ionisation</p></td>
+<td><p>Bhabha</p></td>
+<td><p><a class="reference internal" href="api/celeritas.html#_CPPv4N9celeritas22MollerBhabhaInteractorE" title="celeritas::MollerBhabhaInteractor"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">celeritas::MollerBhabhaInteractor</span></code></a></p></td>
+<td><p>0–100 TeV</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>Bremsstrahlung</p></td>
+<td><p>Seltzer-Berger</p></td>
+<td><p><a class="reference internal" href="api/celeritas.html#_CPPv4N9celeritas23SeltzerBergerInteractorE" title="celeritas::SeltzerBergerInteractor"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">celeritas::SeltzerBergerInteractor</span></code></a></p></td>
+<td><p>0–1 GeV</p></td>
+</tr>
+<tr class="row-even"><td><p>Relativistic</p></td>
+<td><p><a class="reference internal" href="api/celeritas.html#_CPPv4N9celeritas26RelativisticBremInteractorE" title="celeritas::RelativisticBremInteractor"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">celeritas::RelativisticBremInteractor</span></code></a></p></td>
+<td><p>1 GeV – 100 TeV</p></td>
+</tr>
+<tr class="row-odd"><td><p>Coulomb scattering</p></td>
+<td><p>Urban</p></td>
+<td><p><a class="reference internal" href="api/celeritas.html#_CPPv4N9celeritas15UrbanMscScatterE" title="celeritas::UrbanMscScatter"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">celeritas::UrbanMscScatter</span></code></a> <a class="footnote-reference brackets" href="#id5" id="id4">1</a></p></td>
+<td><p>10 eV – 100 MeV</p></td>
+</tr>
+<tr class="row-even"><td><p>Annihilation</p></td>
+<td><p><span class="math notranslate nohighlight">\(e^+-e^- \to 2\gamma\)</span></p></td>
+<td><p><a class="reference internal" href="api/celeritas.html#_CPPv4N9celeritas17EPlusGGInteractorE" title="celeritas::EPlusGGInteractor"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">celeritas::EPlusGGInteractor</span></code></a></p></td>
+<td><p>0–100 TeV</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="4"><p><span class="math notranslate nohighlight">\(\gamma\)</span></p></td>
+<td><p>Photoelectric</p></td>
+<td><p>Livermore</p></td>
+<td><p><a class="reference internal" href="api/celeritas.html#_CPPv4N9celeritas21LivermorePEInteractorE" title="celeritas::LivermorePEInteractor"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">celeritas::LivermorePEInteractor</span></code></a></p></td>
+<td><p>0–100 TeV</p></td>
+</tr>
+<tr class="row-even"><td><p>Compton scattering</p></td>
+<td><p>Klein–Nishina</p></td>
+<td><p><a class="reference internal" href="api/celeritas.html#_CPPv4N9celeritas22KleinNishinaInteractorE" title="celeritas::KleinNishinaInteractor"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">celeritas::KleinNishinaInteractor</span></code></a></p></td>
+<td><p>0–100 TeV</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pair production</p></td>
+<td><p>Bethe–Heitler</p></td>
+<td><p><a class="reference internal" href="api/celeritas.html#_CPPv4N9celeritas22BetheHeitlerInteractorE" title="celeritas::BetheHeitlerInteractor"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">celeritas::BetheHeitlerInteractor</span></code></a></p></td>
+<td><p>0–100 TeV</p></td>
+</tr>
+<tr class="row-even"><td><p>Rayleigh scattering</p></td>
+<td><p>Livermore</p></td>
+<td><p><a class="reference internal" href="api/celeritas.html#_CPPv4N9celeritas18RayleighInteractorE" title="celeritas::RayleighInteractor"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">celeritas::RayleighInteractor</span></code></a></p></td>
+<td><p>0–100 TeV</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<dl class="footnote brackets">
+<dt class="label" id="id5"><span class="brackets">1</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id4">2</a>)</span></dt>
+<dd><p>Multiple Scattering using the Urban Model is only applied up to 100MeV in Celeritas, with no model used above this energy.</p>
+</dd>
+</dl>
 </section>
 <section id="geometry">
 <h2>Geometry<a class="headerlink" href="#geometry" title="Permalink to this heading"></a></h2>
