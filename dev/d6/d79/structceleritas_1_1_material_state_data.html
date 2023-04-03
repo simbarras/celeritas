@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -92,7 +93,7 @@ $(function() {
 Public Types</h2></td></tr>
 <tr class="memitem:ab0c43b14004a09c560b195e5b43e7224"><td class="memTemplParams" colspan="2"><a id="ab0c43b14004a09c560b195e5b43e7224" name="ab0c43b14004a09c560b195e5b43e7224"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:ab0c43b14004a09c560b195e5b43e7224"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Items</b> = <a class="el" href="../../db/d8b/_collection_8hh.html#a11d129f3d1fd3777e09f1c5c1f103049">celeritas::StateCollection</a>&lt; T, W, M &gt;</td></tr>
+<tr class="memitem:ab0c43b14004a09c560b195e5b43e7224"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Items</b> = <a class="el" href="../../db/d8b/_collection_8hh.html#a3b2cddd69a67a4cca1eb022f8a24bb5b">celeritas::StateCollection</a>&lt; T, W, M &gt;</td></tr>
 <tr class="separator:ab0c43b14004a09c560b195e5b43e7224"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -123,8 +124,7 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148">Ownership</a> W, <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#af21a33cd854346b7988591378fcfe138">MemSpace</a> M&gt;<br />
 struct celeritas::MaterialStateData&lt; W, M &gt;</div><p >Store dynamic states of multiple physical particles. </p>
-<p >The size of the view will be the size of the vector of tracks. Each particle track state corresponds to the thread ID (<code>ThreadId</code>).</p>
-<p >The "element scratch space" is a 2D array of reals, indexed with [track_id][el_component_id], where the fast-moving dimension has the greatest number of element components of any material in the problem. This can be used for the physics to calculate microscopic cross sections.</p>
+<p >The "element scratch space" is a 2D array of reals, indexed with [trackslot_id][el_component_id], where the fast-moving dimension has the greatest number of element components of any material in the problem. This can be used for the physics to calculate microscopic cross sections.</p>
 <dl class="section see"><dt>See also</dt><dd>MaterialStateStore (owns the pointed-to data) </dd>
 <dd>
 <a class="el" href="../../db/dbf/classceleritas_1_1_material_track_view.html" title="Read/write view to the material properties of a single particle track.">MaterialTrackView</a> (uses the pointed-to data in a kernel) </dd></dl>

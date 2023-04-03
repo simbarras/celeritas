@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Administration &mdash; Celeritas v0.3.0-dev-24+65ba1f71 documentation</title>
+  <title>Administration &mdash; Celeritas v0.3.0-dev.62+f351e714 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -30,10 +30,10 @@
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
             <a href="../index.html" class="icon icon-home"> Celeritas
-            <img src="../_static/celeritas-thumbnail.png" class="logo" alt="Logo"/>
+            <img src="../_static/celeritas-square.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.3.1-dev
+                0.3.0-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -222,13 +222,15 @@ notable improvements to the code.</p>
 one critical bug fix or several substantial fixes. Patch releases should focus
 almost exclusively on fixes and should generally not include new features or
 other major code changes.</p>
-<p>Releases can be created from the main branch (major, minor, patch) or a
-“backport” branch (minor, patch). The following process must be followed (and
-may need iteration to converge) for each release.</p>
+<p>Releases can be created from the primary “develop” branch (major, minor, patch)
+or a “backport” branch (minor, patch).
+The following process must be followed (and may need iteration to converge) for
+each release.</p>
 <ul class="simple">
 <li><p>Create a <code class="docutils literal notranslate"><span class="pre">release-vX.Y.Z</span></code> branch.</p></li>
 <li><p>Ensure all CI jobs passed for the release in question. This is automatic for
-releases from the main branch (since every pull request must pass) but should
+releases from the <code class="docutils literal notranslate"><span class="pre">develop</span></code> branch (since every pull request must pass) but
+should
 be checked manually for backports.</p></li>
 <li><p>Run regression tests on Summit (for performance testing), Crusher (for HIP
 testing), and an additional machine with debug assertions enabled (e.g.
@@ -273,7 +275,8 @@ the Spack project.</p></li>
 <p>The first commit that deviates from the most recent major or minor branch
 should be tagged (but not released!) with the next version number with a
 <code class="docutils literal notranslate"><span class="pre">-dev</span></code> suffix. For example, after releasing version 1.0.0, the next
-commit on the main branch that is <em>not</em> intended for version 1.0.1 (i.e., the
+commit on the <code class="docutils literal notranslate"><span class="pre">develop</span></code> branch that is <em>not</em> intended for version 1.0.1
+(i.e., the
 first new feature) should be tagged with <code class="docutils literal notranslate"><span class="pre">v1.1.0-dev</span></code>, so that
 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">describe</span> <span class="pre">--tags</span> <span class="pre">--match</span> <span class="pre">'v*'</span></code> shows the new features as being part of the
 <code class="docutils literal notranslate"><span class="pre">v1.1.0</span></code> series.</p>

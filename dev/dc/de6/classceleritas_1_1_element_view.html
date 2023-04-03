@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -88,23 +89,25 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a1be2aaa7ee42607574ab26fec08d6ac4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de6/classceleritas_1_1_element_view.html#a1be2aaa7ee42607574ab26fec08d6ac4">MaterialParamsRef</a> = <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#a35e5b1955aa5d7269b34c6f5044b3b69">NativeCRef</a>&lt; <a class="el" href="../../de/d29/structceleritas_1_1_material_params_data.html">MaterialParamsData</a> &gt;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a1be2aaa7ee42607574ab26fec08d6ac4"><td class="memItemLeft" align="right" valign="top"><a id="a1be2aaa7ee42607574ab26fec08d6ac4" name="a1be2aaa7ee42607574ab26fec08d6ac4"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>MaterialParamsRef</b> = <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#a35e5b1955aa5d7269b34c6f5044b3b69">NativeCRef</a>&lt; <a class="el" href="../../de/d29/structceleritas_1_1_material_params_data.html">MaterialParamsData</a> &gt;</td></tr>
 <tr class="separator:a1be2aaa7ee42607574ab26fec08d6ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1da2d5150d9de1caee20566acbf18c74"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de6/classceleritas_1_1_element_view.html#a1da2d5150d9de1caee20566acbf18c74">AmuMass</a> = <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::AmuMass</a></td></tr>
+<tr class="memitem:a1da2d5150d9de1caee20566acbf18c74"><td class="memItemLeft" align="right" valign="top"><a id="a1da2d5150d9de1caee20566acbf18c74" name="a1da2d5150d9de1caee20566acbf18c74"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>AmuMass</b> = <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::AmuMass</a></td></tr>
 <tr class="separator:a1da2d5150d9de1caee20566acbf18c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af70b896fefa1f028773a67725b04cebf"><td class="memItemLeft" align="right" valign="top"><a id="af70b896fefa1f028773a67725b04cebf" name="af70b896fefa1f028773a67725b04cebf"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ElementView</b> (<a class="el" href="../../dc/de6/classceleritas_1_1_element_view.html#a1be2aaa7ee42607574ab26fec08d6ac4">MaterialParamsRef</a> const &amp;params, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#ab9ec76ea37164a7e42b557b38e4aacbb">ElementId</a> el_id)</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ElementView</b> (MaterialParamsRef const &amp;params, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#ab9ec76ea37164a7e42b557b38e4aacbb">ElementId</a> el_id)</td></tr>
 <tr class="memdesc:af70b896fefa1f028773a67725b04cebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from shared material data and global element ID. <br /></td></tr>
 <tr class="separator:af70b896fefa1f028773a67725b04cebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc926f02d1e0e70b4301970d0e2b61da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../de/db3/classceleritas_1_1_atomic_number.html">AtomicNumber</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de6/classceleritas_1_1_element_view.html#acc926f02d1e0e70b4301970d0e2b61da">atomic_number</a> () const</td></tr>
 <tr class="memdesc:acc926f02d1e0e70b4301970d0e2b61da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomic number Z.  <a href="../../dc/de6/classceleritas_1_1_element_view.html#acc926f02d1e0e70b4301970d0e2b61da">More...</a><br /></td></tr>
 <tr class="separator:acc926f02d1e0e70b4301970d0e2b61da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3addffb25b9d1fbe802497ef535cf831"><td class="memItemLeft" align="right" valign="top"><a id="a3addffb25b9d1fbe802497ef535cf831" name="a3addffb25b9d1fbe802497ef535cf831"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../dc/de6/classceleritas_1_1_element_view.html#a1da2d5150d9de1caee20566acbf18c74">AmuMass</a>&#160;</td><td class="memItemRight" valign="bottom"><b>atomic_mass</b> () const</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">AmuMass</a>&#160;</td><td class="memItemRight" valign="bottom"><b>atomic_mass</b> () const</td></tr>
 <tr class="memdesc:a3addffb25b9d1fbe802497ef535cf831"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abundance-weighted atomic mass M [amu]. <br /></td></tr>
 <tr class="separator:a3addffb25b9d1fbe802497ef535cf831"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa538823dbcc873f43e25bb3b6b0eb087"><td class="memItemLeft" align="right" valign="top"><a id="aa538823dbcc873f43e25bb3b6b0eb087" name="aa538823dbcc873f43e25bb3b6b0eb087"></a>
@@ -131,38 +134,7 @@ Public Member Functions</h2></td></tr>
 <p >This encapsulates general data specific to an element instance. (We may allow multiple element instances for an element eventually since they may have various enriched abundances of component isotopes.) It also provides access to ionization-related data, which in Geant4 is in a separate class.</p>
 <p >One use case of this class is after sampling an element in an EM model.</p>
 <p >The "derived quantities" may be calculated on-the-fly or stored in global memory. As with the particle track view, assume that accessing them is expensive and store them locally. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a1da2d5150d9de1caee20566acbf18c74" name="a1da2d5150d9de1caee20566acbf18c74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1da2d5150d9de1caee20566acbf18c74">&#9670;&#160;</a></span>AmuMass</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../dc/de6/classceleritas_1_1_element_view.html#a1da2d5150d9de1caee20566acbf18c74">celeritas::ElementView::AmuMass</a> =  <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::AmuMass</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="a1be2aaa7ee42607574ab26fec08d6ac4" name="a1be2aaa7ee42607574ab26fec08d6ac4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1be2aaa7ee42607574ab26fec08d6ac4">&#9670;&#160;</a></span>MaterialParamsRef</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../dc/de6/classceleritas_1_1_element_view.html#a1be2aaa7ee42607574ab26fec08d6ac4">celeritas::ElementView::MaterialParamsRef</a> =  <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#a35e5b1955aa5d7269b34c6f5044b3b69">NativeCRef</a>&lt;<a class="el" href="../../de/d29/structceleritas_1_1_material_params_data.html">MaterialParamsData</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="acc926f02d1e0e70b4301970d0e2b61da" name="acc926f02d1e0e70b4301970d0e2b61da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acc926f02d1e0e70b4301970d0e2b61da">&#9670;&#160;</a></span>atomic_number()</h2>
 

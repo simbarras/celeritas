@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -88,12 +89,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a563fabf364adfba17f8fb3d96374994a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html#a563fabf364adfba17f8fb3d96374994a">value_type</a> = ValueT</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a563fabf364adfba17f8fb3d96374994a"><td class="memItemLeft" align="right" valign="top"><a id="a563fabf364adfba17f8fb3d96374994a" name="a563fabf364adfba17f8fb3d96374994a"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b> = ValueT</td></tr>
 <tr class="separator:a563fabf364adfba17f8fb3d96374994a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e3b7a131723f1c85e63912da6cbfcd4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html#a3e3b7a131723f1c85e63912da6cbfcd4">unit_type</a> = UnitT</td></tr>
+<tr class="memitem:a3e3b7a131723f1c85e63912da6cbfcd4"><td class="memItemLeft" align="right" valign="top"><a id="a3e3b7a131723f1c85e63912da6cbfcd4" name="a3e3b7a131723f1c85e63912da6cbfcd4"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>unit_type</b> = UnitT</td></tr>
 <tr class="separator:a3e3b7a131723f1c85e63912da6cbfcd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f631128d2d41badb1f3795f600c8a0b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html#a2f631128d2d41badb1f3795f600c8a0b">Unitless</a> = <a class="el" href="../../db/dc4/structceleritas_1_1detail_1_1_unitless_quantity.html">detail::UnitlessQuantity</a>&lt; ValueT &gt;</td></tr>
+<tr class="memitem:a2f631128d2d41badb1f3795f600c8a0b"><td class="memItemLeft" align="right" valign="top"><a id="a2f631128d2d41badb1f3795f600c8a0b" name="a2f631128d2d41badb1f3795f600c8a0b"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Unitless</b> = <a class="el" href="../../db/dc4/structceleritas_1_1detail_1_1_unitless_quantity.html">detail::UnitlessQuantity</a>&lt; ValueT &gt;</td></tr>
 <tr class="separator:a2f631128d2d41badb1f3795f600c8a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -103,15 +107,15 @@ constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>Quantity</b> ()=
 <tr class="memdesc:a68d22fca09594cabc46478d77b062158"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with default (zero) <br /></td></tr>
 <tr class="separator:a68d22fca09594cabc46478d77b062158"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b1100e0a2ce3ca8a343d18692e43a78"><td class="memItemLeft" align="right" valign="top"><a id="a2b1100e0a2ce3ca8a343d18692e43a78" name="a2b1100e0a2ce3ca8a343d18692e43a78"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Quantity</b> (<a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html#a563fabf364adfba17f8fb3d96374994a">value_type</a> <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html#a65ae23a1febd478b35d03032a66e785a">value</a>)</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Quantity</b> (value_type <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html#a65ae23a1febd478b35d03032a66e785a">value</a>)</td></tr>
 <tr class="memdesc:a2b1100e0a2ce3ca8a343d18692e43a78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with value in celeritas native units. <br /></td></tr>
 <tr class="separator:a2b1100e0a2ce3ca8a343d18692e43a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0fb52840640aa64a6987fac4b980b47"><td class="memItemLeft" align="right" valign="top"><a id="ac0fb52840640aa64a6987fac4b980b47" name="ac0fb52840640aa64a6987fac4b980b47"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Quantity</b> (<a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html#a2f631128d2d41badb1f3795f600c8a0b">Unitless</a> uq)</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Quantity</b> (<a class="el" href="../../db/dc4/structceleritas_1_1detail_1_1_unitless_quantity.html">Unitless</a> uq)</td></tr>
 <tr class="memdesc:ac0fb52840640aa64a6987fac4b980b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct implicitly from a unitless quantity. <br /></td></tr>
 <tr class="separator:ac0fb52840640aa64a6987fac4b980b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65ae23a1febd478b35d03032a66e785a"><td class="memItemLeft" align="right" valign="top"><a id="a65ae23a1febd478b35d03032a66e785a" name="a65ae23a1febd478b35d03032a66e785a"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a> <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html#a563fabf364adfba17f8fb3d96374994a">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> () const</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a> value_type&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> () const</td></tr>
 <tr class="memdesc:a65ae23a1febd478b35d03032a66e785a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get numeric value, discarding units. <br /></td></tr>
 <tr class="separator:a65ae23a1febd478b35d03032a66e785a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -129,68 +133,23 @@ class celeritas::Quantity&lt; UnitT, ValueT &gt;</div><p >A numerical value tagg
 <p >Example usage by physics class, where charge is in units of q_e+, and mass and momentum are expressed in atomic natural units (where m_e = 1 and c = 1). </p><div class="fragment"><div class="line"><span class="keyword">using </span>MevEnergy   = <a class="code hl_class" href="../../dc/dff/classceleritas_1_1_quantity.html">Quantity&lt;Mev&gt;</a>;</div>
 <div class="line"><span class="keyword">using </span>MevMass     = <a class="code hl_class" href="../../dc/dff/classceleritas_1_1_quantity.html">Quantity&lt;UnitDivide&lt;Mev, CLightSq&gt;</a>&gt;;</div>
 <div class="line"><span class="keyword">using </span>MevMomentum = <a class="code hl_class" href="../../dc/dff/classceleritas_1_1_quantity.html">Quantity&lt;UnitDivide&lt;Mev, CLight&gt;</a>&gt;;</div>
-<div class="ttc" id="aclassceleritas_1_1_quantity_html"><div class="ttname"><a href="../../dc/dff/classceleritas_1_1_quantity.html">celeritas::Quantity</a></div><div class="ttdoc">A numerical value tagged with a unit.</div><div class="ttdef"><b>Definition:</b> Quantity.hh:82</div></div>
+<div class="ttc" id="aclassceleritas_1_1_quantity_html"><div class="ttname"><a href="../../dc/dff/classceleritas_1_1_quantity.html">celeritas::Quantity</a></div><div class="ttdoc">A numerical value tagged with a unit.</div><div class="ttdef"><b>Definition:</b> Quantity.hh:93</div></div>
 </div><!-- fragment --><p >A relativistic equation that operates on these quantities can do so without unnecessary floating point operations involving the speed of light: </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> eval = value_as&lt;MevEnergy&gt;(energy); <span class="comment">// Natural units</span></div>
 <div class="line">MevMomentum momentum{std::sqrt(eval * eval</div>
 <div class="line">                               + 2 * value_as&lt;MevMass&gt;(mass) * eval)};</div>
 <div class="ttc" id="acorecel_2_types_8hh_html_ac97c7d9259eb113cfcc54c671fd2173d"><div class="ttname"><a href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">celeritas::real_type</a></div><div class="ttdeci">double real_type</div><div class="ttdoc">Numerical type for real numbers.</div><div class="ttdef"><b>Definition:</b> corecel/Types.hh:26</div></div>
 </div><!-- fragment --><p> The resulting quantity can be converted to the native Celeritas unit system with <code>native_value_from</code>, which multiplies in the constant value of ElMomentumUnit: </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> mom = <a class="code hl_function" href="../../d8/dcb/_quantity_8hh.html#a55f706d4949ba3e4ab22f6b0d0959d2d">native_value_from</a>(momentum);</div>
-<div class="ttc" id="a_quantity_8hh_html_a55f706d4949ba3e4ab22f6b0d0959d2d"><div class="ttname"><a href="../../d8/dcb/_quantity_8hh.html#a55f706d4949ba3e4ab22f6b0d0959d2d">celeritas::native_value_from</a></div><div class="ttdeci">CELER_CONSTEXPR_FUNCTION auto native_value_from(Quantity&lt; UnitT, ValueT &gt; quant) -&gt; decltype(auto)</div><div class="ttdoc">Convert the given quantity into the native Celeritas unit system.</div><div class="ttdef"><b>Definition:</b> Quantity.hh:230</div></div>
+<div class="ttc" id="a_quantity_8hh_html_a55f706d4949ba3e4ab22f6b0d0959d2d"><div class="ttname"><a href="../../d8/dcb/_quantity_8hh.html#a55f706d4949ba3e4ab22f6b0d0959d2d">celeritas::native_value_from</a></div><div class="ttdeci">CELER_CONSTEXPR_FUNCTION auto native_value_from(Quantity&lt; UnitT, ValueT &gt; quant) -&gt; decltype(auto)</div><div class="ttdoc">Convert the given quantity into the native Celeritas unit system.</div><div class="ttdef"><b>Definition:</b> Quantity.hh:285</div></div>
 </div><!-- fragment --><p >When using a <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html" title="A numerical value tagged with a unit.">Quantity</a> from another part of the code, e.g. an imported unit system, use the <code>quantity</code> free function rather than <code></code>.<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148a2063c1608d6e0baf80249c42e2be5804" title="Ownership of the data, only on host.">value()</a> in order to guarantee consistency of units between source and destination.</p>
+<p >An example unit class would be: </p><div class="fragment"><div class="line"><span class="keyword">struct </span>DozenUnit</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_enumvalue" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148a2063c1608d6e0baf80249c42e2be5804">value</a>() { <span class="keywordflow">return</span> 12; }</div>
+<div class="line">    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">char</span> <span class="keyword">const</span>* label() { <span class="keywordflow">return</span> <span class="stringliteral">&quot;dozen&quot;</span>; }</div>
+<div class="line">};</div>
+<div class="ttc" id="acorecel_2_types_8hh_html_aeb6446bfcf4853c1dd9248791d829148a2063c1608d6e0baf80249c42e2be5804"><div class="ttname"><a href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148a2063c1608d6e0baf80249c42e2be5804">celeritas::Ownership::value</a></div><div class="ttdeci">@ value</div><div class="ttdoc">Ownership of the data, only on host.</div></div>
+</div><!-- fragment --><p >The label is used solely for outputting to JSON.</p>
 <dl class="section note"><dt>Note</dt><dd>The <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html" title="A numerical value tagged with a unit.">Quantity</a> is designed to be a simple "strong type" class, not a complex mathematical class. To operate on quantities, you must use <code>value_as</code> (to operate within the <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html" title="A numerical value tagged with a unit.">Quantity</a>'s unit system) or <code>native_value_from</code> (to operate in the Celeritas native unit system), use the resulting numeric values in your mathematical expressions, then return a new <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html" title="A numerical value tagged with a unit.">Quantity</a> class with the resulting value and correct type. </dd></dl>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a3e3b7a131723f1c85e63912da6cbfcd4" name="a3e3b7a131723f1c85e63912da6cbfcd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e3b7a131723f1c85e63912da6cbfcd4">&#9670;&#160;</a></span>unit_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class UnitT , class ValueT  = real_type&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">celeritas::Quantity</a>&lt; UnitT, ValueT &gt;::unit_type =  UnitT</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="a2f631128d2d41badb1f3795f600c8a0b" name="a2f631128d2d41badb1f3795f600c8a0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f631128d2d41badb1f3795f600c8a0b">&#9670;&#160;</a></span>Unitless</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class UnitT , class ValueT  = real_type&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">celeritas::Quantity</a>&lt; UnitT, ValueT &gt;::Unitless =  <a class="el" href="../../db/dc4/structceleritas_1_1detail_1_1_unitless_quantity.html">detail::UnitlessQuantity</a>&lt;ValueT&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="a563fabf364adfba17f8fb3d96374994a" name="a563fabf364adfba17f8fb3d96374994a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a563fabf364adfba17f8fb3d96374994a">&#9670;&#160;</a></span>value_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class UnitT , class ValueT  = real_type&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">celeritas::Quantity</a>&lt; UnitT, ValueT &gt;::value_type =  ValueT</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="../../d8/dcb/_quantity_8hh.html">Quantity.hh</a></li>
 </ul>
 </div><!-- contents -->

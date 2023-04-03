@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -105,6 +106,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a58e9e91c0a4221d6867dd4326a001e45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#a2c189f880a78083320532263a6af0124">DeviceRef</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#a58e9e91c0a4221d6867dd4326a001e45">device_ref</a> () const</td></tr>
 <tr class="memdesc:a58e9e91c0a4221d6867dd4326a001e45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access properties on the device.  <a href="../../de/d76/classceleritas_1_1_core_params.html#a58e9e91c0a4221d6867dd4326a001e45">More...</a><br /></td></tr>
 <tr class="separator:a58e9e91c0a4221d6867dd4326a001e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4caa0750d47e2e5ca8181cf294054fc"><td class="memItemLeft" align="right" valign="top"><a id="ae4caa0750d47e2e5ca8181cf294054fc" name="ae4caa0750d47e2e5ca8181cf294054fc"></a>
+size_type&#160;</td><td class="memItemRight" valign="bottom"><b>max_streams</b> () const</td></tr>
+<tr class="memdesc:ae4caa0750d47e2e5ca8181cf294054fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of streams. <br /></td></tr>
+<tr class="separator:ae4caa0750d47e2e5ca8181cf294054fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Type aliases</h2></td></tr>
 <tr class="memitem:abee784ef96921bbc639eef03242c6f85"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#abee784ef96921bbc639eef03242c6f85">SPConstGeo</a> = std::shared_ptr&lt; <a class="el" href="../../d6/d3e/classceleritas_1_1_orange_params.html">GeoParams</a> const  &gt;</td></tr>
@@ -121,6 +126,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3b2d49a40609856c25c9296d1beba073"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abea0195e7339602e12e951b2862940c5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#abea0195e7339602e12e951b2862940c5">SPConstRng</a> = std::shared_ptr&lt; <a class="el" href="../../d7/d71/classceleritas_1_1_cu_hip_rng_params.html">RngParams</a> const  &gt;</td></tr>
 <tr class="separator:abea0195e7339602e12e951b2862940c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb71d9477af22737d37dd4113eabdcb4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#aeb71d9477af22737d37dd4113eabdcb4">SPConstSim</a> = std::shared_ptr&lt; <a class="el" href="../../db/dda/classceleritas_1_1_sim_params.html">SimParams</a> const  &gt;</td></tr>
+<tr class="separator:aeb71d9477af22737d37dd4113eabdcb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a156c53f43da00235bad757a57df4a47d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#a156c53f43da00235bad757a57df4a47d">SPConstTrackInit</a> = std::shared_ptr&lt; <a class="el" href="../../d8/d9a/classceleritas_1_1_track_init_params.html">TrackInitParams</a> const  &gt;</td></tr>
 <tr class="separator:a156c53f43da00235bad757a57df4a47d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad415691e8db05506fd8d3f64c25764d9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#ad415691e8db05506fd8d3f64c25764d9">SPActionRegistry</a> = std::shared_ptr&lt; <a class="el" href="../../d4/de4/classceleritas_1_1_action_registry.html">ActionRegistry</a> &gt;</td></tr>
@@ -143,6 +150,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afecb32a26449e423ce058c702732f9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f7391f6b43613f7ae27c0a827ce7579"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#abea0195e7339602e12e951b2862940c5">SPConstRng</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#a2f7391f6b43613f7ae27c0a827ce7579">rng</a> () const</td></tr>
 <tr class="separator:a2f7391f6b43613f7ae27c0a827ce7579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba35a7c48d5973934dd65da944b00ed9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#aeb71d9477af22737d37dd4113eabdcb4">SPConstSim</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#aba35a7c48d5973934dd65da944b00ed9">sim</a> () const</td></tr>
+<tr class="separator:aba35a7c48d5973934dd65da944b00ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cdd5c8e5d6f8173aac4e8d4976ae914"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#a156c53f43da00235bad757a57df4a47d">SPConstTrackInit</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#a2cdd5c8e5d6f8173aac4e8d4976ae914">init</a> () const</td></tr>
 <tr class="separator:a2cdd5c8e5d6f8173aac4e8d4976ae914"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8cb140e2a4939135da6617e9c56d646"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#ad415691e8db05506fd8d3f64c25764d9">SPActionRegistry</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#ad8cb140e2a4939135da6617e9c56d646">action_reg</a> () const</td></tr>
@@ -294,6 +303,21 @@ Public Member Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#abea0195e7339602e12e951b2862940c5">celeritas::CoreParams::SPConstRng</a> =  std::shared_ptr&lt;<a class="el" href="../../d7/d71/classceleritas_1_1_cu_hip_rng_params.html">RngParams</a> const&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Access shared problem parameter data. </p>
+
+</div>
+</div>
+<a id="aeb71d9477af22737d37dd4113eabdcb4" name="aeb71d9477af22737d37dd4113eabdcb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb71d9477af22737d37dd4113eabdcb4">&#9670;&#160;</a></span>SPConstSim</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#aeb71d9477af22737d37dd4113eabdcb4">celeritas::CoreParams::SPConstSim</a> =  std::shared_ptr&lt;<a class="el" href="../../db/dda/classceleritas_1_1_sim_params.html">SimParams</a> const&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -564,6 +588,32 @@ Public Member Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#abea0195e7339602e12e951b2862940c5">SPConstRng</a> const  &amp; celeritas::CoreParams::rng </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Access shared problem parameter data. </p>
+
+</div>
+</div>
+<a id="aba35a7c48d5973934dd65da944b00ed9" name="aba35a7c48d5973934dd65da944b00ed9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba35a7c48d5973934dd65da944b00ed9">&#9670;&#160;</a></span>sim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#aeb71d9477af22737d37dd4113eabdcb4">SPConstSim</a> const  &amp; celeritas::CoreParams::sim </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

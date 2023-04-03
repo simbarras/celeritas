@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Core package &mdash; Celeritas v0.3.0-dev-24+65ba1f71 documentation</title>
+  <title>Core package &mdash; Celeritas v0.3.0-dev.62+f351e714 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -31,10 +31,10 @@
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
             <a href="../index.html" class="icon icon-home"> Celeritas
-            <img src="../_static/celeritas-thumbnail.png" class="logo" alt="Logo"/>
+            <img src="../_static/celeritas-square.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.3.1-dev
+                0.3.0-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -127,7 +127,7 @@ a preprocessor definition, a set of integers, and a descriptive string.</p>
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-variables">Variables</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv417celeritas_version">
-<span id="_CPPv317celeritas_version"></span><span id="_CPPv217celeritas_version"></span><span id="celeritas_version__cCA"></span><span class="target" id="d9/d7f/celeritas__version_8h_1a05e78deb9041e95dddeb6d8f27c8fd0f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">celeritas_version</span></span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;v0.3.0-dev-24+65ba1f71&quot;</span></span><a class="headerlink" href="#_CPPv417celeritas_version" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv317celeritas_version"></span><span id="_CPPv217celeritas_version"></span><span id="celeritas_version__cCA"></span><span class="target" id="d9/d7f/celeritas__version_8h_1a05e78deb9041e95dddeb6d8f27c8fd0f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">celeritas_version</span></span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;v0.3.0-dev.62+f351e714&quot;</span></span><a class="headerlink" href="#_CPPv417celeritas_version" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -870,6 +870,18 @@ This allows type-safe, read-only indexing/access for a class. The value is ‘tr
 <dt class="sig sig-object cpp" id="_CPPv4NK9celeritas8OpaqueIdcvbEv">
 <span id="_CPPv3NK9celeritas8OpaqueIdcvbEv"></span><span id="_CPPv2NK9celeritas8OpaqueIdcvbEv"></span><span id="celeritas::OpaqueId::castto-b-operatorC"></span><span class="target" id="dd/dbb/classceleritas_1_1_opaque_id_1a3f46935879d122c5a629b311759f764a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas8OpaqueIdcvbEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Whether this ID is in a valid (assigned) state. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas8OpaqueIdppEv">
+<span id="_CPPv3N9celeritas8OpaqueIdppEv"></span><span id="_CPPv2N9celeritas8OpaqueIdppEv"></span><span id="celeritas::OpaqueId::inc-operator"></span><span class="target" id="dd/dbb/classceleritas_1_1_opaque_id_1a56419b5cd896fb5cbda9fa863cce261d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN9celeritas8OpaqueIdE" title="celeritas::OpaqueId"><span class="n"><span class="pre">OpaqueId</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">++</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas8OpaqueIdppEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Pre-increment of the ID. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas8OpaqueIdppEi">
+<span id="_CPPv3N9celeritas8OpaqueIdppEi"></span><span id="_CPPv2N9celeritas8OpaqueIdppEi"></span><span id="celeritas::OpaqueId::inc-operator__i"></span><span class="target" id="dd/dbb/classceleritas_1_1_opaque_id_1a7d366b8063182140a943a6ab377491ad"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN9celeritas8OpaqueIdE" title="celeritas::OpaqueId"><span class="n"><span class="pre">OpaqueId</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">++</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas8OpaqueIdppEi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Post-increment of the ID. </p>
 </dd></dl>
 
 <dl class="cpp function">
@@ -1740,6 +1752,15 @@ A quantity is a value expressed in terms of the given unit. Storing values in a 
 </div>
 </p>
 <p>When using a <a class="reference internal" href="#dc/dff/classceleritas_1_1_quantity"><span class="std std-ref">Quantity</span></a> from another part of the code, e.g. an imported unit system, use the <code class="docutils literal notranslate"><span class="pre">quantity</span></code> free function rather than <code class="docutils literal notranslate"></code>.<a class="reference internal" href="#d0/df5/corecel_2_types_8hh_1aeb6446bfcf4853c1dd9248791d829148a2063c1608d6e0baf80249c42e2be5804"><span class="std std-ref">value()</span></a> in order to guarantee consistency of units between source and destination.</p>
+<p>An example unit class would be: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">DozenUnit</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">value</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="k">const</span><span class="o">*</span><span class="w"> </span><span class="n">label</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;dozen&quot;</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</pre></div>
+</div>
+</p>
+<p>The label is used solely for outputting to JSON.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <a class="reference internal" href="#dc/dff/classceleritas_1_1_quantity"><span class="std std-ref">Quantity</span></a> is designed to be a simple “strong type” class, not a complex mathematical class. To operate on quantities, you must use <code class="docutils literal notranslate"><span class="pre">value_as</span></code> (to operate within the <a class="reference internal" href="#dc/dff/classceleritas_1_1_quantity"><span class="std std-ref">Quantity</span></a>’s unit system) or <code class="docutils literal notranslate"><span class="pre">native_value_from</span></code> (to operate in the Celeritas native unit system), use the resulting numeric values in your mathematical expressions, then return a new <a class="reference internal" href="#dc/dff/classceleritas_1_1_quantity"><span class="std std-ref">Quantity</span></a> class with the resulting value and correct type. </p>
@@ -2073,6 +2094,12 @@ A quantity is a value expressed in terms of the given unit. Storing values in a 
 <h2>I/O<a class="headerlink" href="#i-o" title="Permalink to this heading"></a></h2>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CELER_CODE_PROVENANCE">
+<span class="target" id="d2/d8a/corecel_2io_2_logger_8hh_1af5f3e726e737df19d8c06e5f38a96f3b"></span><span class="sig-name descname"><span class="n"><span class="pre">CELER_CODE_PROVENANCE</span></span></span><a class="headerlink" href="#c.CELER_CODE_PROVENANCE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Inject the source code provenance (current file and line) </p>
+</dd></dl>
+
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.CELER_LOG">
 <span class="target" id="d2/d8a/corecel_2io_2_logger_8hh_1a6767c46cb976eac864c4b6db274c4fcf"></span><span class="sig-name descname"><span class="n"><span class="pre">CELER_LOG</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">LEVEL</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.CELER_LOG" title="Permalink to this definition"></a><br /></dt>

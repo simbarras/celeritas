@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -88,14 +89,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a01a41ca0f343d58ccebd9a2c86224c2b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d97/classceleritas_1_1_output_manager.html#a01a41ca0f343d58ccebd9a2c86224c2b">SPConstInterface</a> = std::shared_ptr&lt; <a class="el" href="../../d1/d7c/classceleritas_1_1_output_interface.html">OutputInterface</a> const  &gt;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a01a41ca0f343d58ccebd9a2c86224c2b"><td class="memItemLeft" align="right" valign="top"><a id="a01a41ca0f343d58ccebd9a2c86224c2b" name="a01a41ca0f343d58ccebd9a2c86224c2b"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstInterface</b> = std::shared_ptr&lt; <a class="el" href="../../d1/d7c/classceleritas_1_1_output_interface.html">OutputInterface</a> const  &gt;</td></tr>
 <tr class="separator:a01a41ca0f343d58ccebd9a2c86224c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a29fc8bf75c29b6e23b2a2d0143129178"><td class="memItemLeft" align="right" valign="top"><a id="a29fc8bf75c29b6e23b2a2d0143129178" name="a29fc8bf75c29b6e23b2a2d0143129178"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>insert</b> (<a class="el" href="../../db/d97/classceleritas_1_1_output_manager.html#a01a41ca0f343d58ccebd9a2c86224c2b">SPConstInterface</a>)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>insert</b> (SPConstInterface)</td></tr>
 <tr class="memdesc:a29fc8bf75c29b6e23b2a2d0143129178"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an interface for writing. <br /></td></tr>
 <tr class="separator:a29fc8bf75c29b6e23b2a2d0143129178"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8206cdda8d1e0a29dba07558591953c"><td class="memItemLeft" align="right" valign="top"><a id="ad8206cdda8d1e0a29dba07558591953c" name="ad8206cdda8d1e0a29dba07558591953c"></a>
@@ -110,23 +112,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>output</b> (std::ostr
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Store classes that can output data at the end of the run. </p>
 <p >Each output interface defines a category (e.g. input, result, system) and a name. The output manager then writes the JSON output from that entry into a nested database: </p><pre class="fragment">  {"category": {"label": "data"}}
-* </pre> </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a01a41ca0f343d58ccebd9a2c86224c2b" name="a01a41ca0f343d58ccebd9a2c86224c2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01a41ca0f343d58ccebd9a2c86224c2b">&#9670;&#160;</a></span>SPConstInterface</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../db/d97/classceleritas_1_1_output_manager.html#a01a41ca0f343d58ccebd9a2c86224c2b">celeritas::OutputManager::SPConstInterface</a> =  std::shared_ptr&lt;<a class="el" href="../../d1/d7c/classceleritas_1_1_output_interface.html">OutputInterface</a> const&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+* </pre> </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../d3/d03/_output_manager_8hh.html">OutputManager.hh</a></li>
 <li><a class="el" href="../../dd/d42/_output_manager_8cc.html">OutputManager.cc</a></li>
 </ul>

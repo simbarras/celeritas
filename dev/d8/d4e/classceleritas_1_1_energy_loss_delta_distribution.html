@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -88,8 +89,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a2dc4f0598ff43805b050c88fe753c9eb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d4e/classceleritas_1_1_energy_loss_delta_distribution.html#a2dc4f0598ff43805b050c88fe753c9eb">Energy</a> = <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::MevEnergy</a></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a2dc4f0598ff43805b050c88fe753c9eb"><td class="memItemLeft" align="right" valign="top"><a id="a2dc4f0598ff43805b050c88fe753c9eb" name="a2dc4f0598ff43805b050c88fe753c9eb"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Energy</b> = <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::MevEnergy</a></td></tr>
 <tr class="separator:a2dc4f0598ff43805b050c88fe753c9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -100,30 +102,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9a0e6049dd436a02e254fab61dcacda6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af61dc6eecf73612b8bc301a761ea8dea"><td class="memTemplParams" colspan="2"><a id="af61dc6eecf73612b8bc301a761ea8dea" name="af61dc6eecf73612b8bc301a761ea8dea"></a>
 template&lt;class Generator &gt; </td></tr>
-<tr class="memitem:af61dc6eecf73612b8bc301a761ea8dea"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d8/d4e/classceleritas_1_1_energy_loss_delta_distribution.html#a2dc4f0598ff43805b050c88fe753c9eb">Energy</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (Generator &amp;) const</td></tr>
+<tr class="memitem:af61dc6eecf73612b8bc301a761ea8dea"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (Generator &amp;) const</td></tr>
 <tr class="memdesc:af61dc6eecf73612b8bc301a761ea8dea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result is always the mean energy. <br /></td></tr>
 <tr class="separator:af61dc6eecf73612b8bc301a761ea8dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Passthrough model for "no distribution" energy loss. </p>
 <p >The distribution is a Delta function so that the "sampled" value is always the mean energy. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a2dc4f0598ff43805b050c88fe753c9eb" name="a2dc4f0598ff43805b050c88fe753c9eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2dc4f0598ff43805b050c88fe753c9eb">&#9670;&#160;</a></span>Energy</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d8/d4e/classceleritas_1_1_energy_loss_delta_distribution.html#a2dc4f0598ff43805b050c88fe753c9eb">celeritas::EnergyLossDeltaDistribution::Energy</a> =  <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::MevEnergy</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="../../d1/db1/_energy_loss_delta_distribution_8hh.html">EnergyLossDeltaDistribution.hh</a></li>
 </ul>
 </div><!-- contents -->

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Acceleritas &mdash; Celeritas v0.3.0-dev-24+65ba1f71 documentation</title>
+  <title>Acceleritas &mdash; Celeritas v0.3.0-dev.62+f351e714 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -30,10 +30,10 @@
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
             <a href="../index.html" class="icon icon-home"> Celeritas
-            <img src="../_static/celeritas-thumbnail.png" class="logo" alt="Logo"/>
+            <img src="../_static/celeritas-square.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.3.1-dev
+                0.3.0-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -53,9 +53,10 @@
 <li class="toctree-l2"><a class="reference internal" href="orange.html">ORANGE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="celeritas.html">Celeritas</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Acceleritas</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#utilities">Utilities</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#setup">Setup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#transport-interface">Transport interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#high-level-interface">High-level interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#celeritas-setup">Celeritas setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detailed-interface">Detailed interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interface-utilities">Interface utilities</a></li>
 </ul>
 </li>
 </ul>
@@ -100,57 +101,99 @@
   <section id="acceleritas">
 <span id="accel"></span><h1>Acceleritas<a class="headerlink" href="#acceleritas" title="Permalink to this heading"></a></h1>
 <p>The <code class="docutils literal notranslate"><span class="pre">accel</span></code> directory contains components exclusive to coupling Celeritas
-with Geant4 for user-oriented integration. See the
-<code class="file docutils literal notranslate"><span class="pre">app/demo-geant-integration</span></code> for a complete example of how to use
-Celeritas to offload EM tracks to GPU and dispatch hits back to Geant4
-sensitive detectors.</p>
-<section id="utilities">
-<h2>Utilities<a class="headerlink" href="#utilities" title="Permalink to this heading"></a></h2>
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9celeritas14make_mt_loggerERK12G4RunManager">
-<span id="_CPPv3N9celeritas14make_mt_loggerERK12G4RunManager"></span><span id="_CPPv2N9celeritas14make_mt_loggerERK12G4RunManager"></span><span id="celeritas::make_mt_logger__G4RunManagerCR"></span><span class="target" id="d0/d9e/accel_2_logger_8cc_1a3001e55ff6ed9fc7ca39e8214e91df86"></span><a class="reference internal" href="corecel.html#_CPPv4N9celeritas6LoggerE" title="celeritas::Logger"><span class="n"><span class="pre">Logger</span></span></a><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="celeritas.html#_CPPv49celeritas" title="celeritas"><span class="n"><span class="pre">celeritas</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">make_mt_logger</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">G4RunManager</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">runman</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas14make_mt_loggerERK12G4RunManager" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Construct a logger that will redirect Celeritas messages through Geant4. </p>
-<p>This logger writes the current thread (and maximum number of threads) in each output message, and sends each message through the thread-local <code class="docutils literal notranslate"><span class="pre">G4cerr</span></code>.</p>
-<p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> of your application’s exectuable, set the “process-local” (MPI-aware) logger: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">celeritas</span><span class="o">::</span><span class="n">self_logger</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">celeritas</span><span class="o">::</span><span class="n">make_mt_logger</span><span class="p">(</span><span class="o">*</span><span class="n">run_manager</span><span class="p">);</span><span class="w"></span>
-</pre></div>
-</div>
- </p>
-</dd></dl>
-
+with Geant4 for user-oriented integration. See <a class="reference internal" href="../examples/geant4-full.html#example-geant-full"><span class="std std-ref">Geant4 integration</span></a> for a
+detailed example of how to use Celeritas to offload EM tracks to GPU and
+dispatch hits back to Geant4 sensitive detectors. The simpler interface for
+multithreaded or serial applications is demonstrated in
+<a class="reference internal" href="../examples/geant4-minimal.html#example-geant-minimal"><span class="std std-ref">Minimal Geant4 integration</span></a>.</p>
+<section id="high-level-interface">
+<h2>High-level interface<a class="headerlink" href="#high-level-interface" title="Permalink to this heading"></a></h2>
+<p>The SimpleOffload class is an extremely easy-to-use interface for
+offloading tracks to Celeritas in a multithreaded or serial application. The
+class names correspond to user actions and ActionInitialization. It requires a
+few app-owned pieces such as SharedParams and LocalTransporter to be owned by
+the calling application; the options described below must also be set up and
+provided.</p>
 <dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv4N9celeritas18ExceptionConverterE">
-<span id="_CPPv3N9celeritas18ExceptionConverterE"></span><span id="_CPPv2N9celeritas18ExceptionConverterE"></span><span id="celeritas::ExceptionConverter"></span><span class="target" id="d4/df4/classceleritas_1_1_exception_converter"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ExceptionConverter</span></span></span><a class="headerlink" href="#_CPPv4N9celeritas18ExceptionConverterE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Translate Celeritas C++ exceptions into Geant4 G4Exception calls. </p>
-<p>This should generally be used when wrapping calls to Celeritas in a user application.</p>
-<p>For example, the user event action to transport particles on device could be used as: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">EventAction::EndOfEventAction</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">G4Event</span><span class="o">*</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// Transport any tracks left in the buffer</span>
-<span class="w">    </span><span class="n">celeritas</span><span class="o">::</span><span class="n">ExceptionConverter</span><span class="w"> </span><span class="n">call_g4exception</span><span class="p">{</span><span class="s">&quot;celer0003&quot;</span><span class="p">};</span><span class="w"></span>
-<span class="w">    </span><span class="n">CELER_TRY_HANDLE</span><span class="p">(</span><span class="n">transport_</span><span class="o">-&gt;</span><span class="n">Flush</span><span class="p">(),</span><span class="w"> </span><span class="n">call_g4exception</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
- </p>
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas13SimpleOffloadE">
+<span id="_CPPv3N9celeritas13SimpleOffloadE"></span><span id="_CPPv2N9celeritas13SimpleOffloadE"></span><span id="celeritas::SimpleOffload"></span><span class="target" id="d3/d72/classceleritas_1_1_simple_offload"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SimpleOffload</span></span></span><a class="headerlink" href="#_CPPv4N9celeritas13SimpleOffloadE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Compressed interface for running Celeritas in a multithread Geant4 app. </p>
+<p>This class <em>must</em> be a thread-local instance with references to data that exceed the lifetime of the class: e.g. <a class="reference internal" href="#d8/da0/classceleritas_1_1_shared_params"><span class="std std-ref">SharedParams</span></a> can be a global variable, and <a class="reference internal" href="#d2/d13/classceleritas_1_1_local_transporter"><span class="std std-ref">LocalTransporter</span></a> can be a global variable with <code class="docutils literal notranslate"><span class="pre">thread_local</span></code> storage duration.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">CELER_DISABLE</span></code> environment variable, if set and non-empty, will disable offloading so that Celeritas will not be built nor kill tracks.</p>
+<p>The method names correspond to methods in Geant4 User Actions and <em>must</em> be called from all threads, both worker and master. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9celeritas18ExceptionConverter18ExceptionConverterEPKc">
-<span id="_CPPv3N9celeritas18ExceptionConverter18ExceptionConverterEPKc"></span><span id="_CPPv2N9celeritas18ExceptionConverter18ExceptionConverterEPKc"></span><span id="celeritas::ExceptionConverter::ExceptionConverter__cCP"></span><span class="target" id="d4/df4/classceleritas_1_1_exception_converter_1aced6fc67f4e05f50065af95356b66861"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ExceptionConverter</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">err_code</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas18ExceptionConverter18ExceptionConverterEPKc" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Construct with an error code for dispatching to Geant4. </p>
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas13SimpleOffload13SimpleOffloadEv">
+<span id="_CPPv3N9celeritas13SimpleOffload13SimpleOffloadEv"></span><span id="_CPPv2N9celeritas13SimpleOffload13SimpleOffloadEv"></span><span id="celeritas::SimpleOffload::SimpleOffload"></span><span class="target" id="d3/d72/classceleritas_1_1_simple_offload_1ac4f3a563b00b4f85891fb5e5ee86ffa4"></span><span class="sig-name descname"><span class="n"><span class="pre">SimpleOffload</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N9celeritas13SimpleOffload13SimpleOffloadEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct with celeritas disabled. </p>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas18ExceptionConverterclENSt13exception_ptrE">
-<span id="_CPPv3NK9celeritas18ExceptionConverterclENSt13exception_ptrE"></span><span id="_CPPv2NK9celeritas18ExceptionConverterclENSt13exception_ptrE"></span><span id="celeritas::ExceptionConverter::call-operator__std::exception_ptrC"></span><span class="target" id="d4/df4/classceleritas_1_1_exception_converter_1af1414e9418b5b7bc2f5ed0c91a85f12e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">exception_ptr</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas18ExceptionConverterclENSt13exception_ptrE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Capture the current exception and convert it to a G4Exception call. </p>
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas13SimpleOffload13SimpleOffloadEPK12SetupOptionsP12SharedParamsP16LocalTransporter">
+<span id="_CPPv3N9celeritas13SimpleOffload13SimpleOffloadEPK12SetupOptionsP12SharedParamsP16LocalTransporter"></span><span id="_CPPv2N9celeritas13SimpleOffload13SimpleOffloadEPK12SetupOptionsP12SharedParamsP16LocalTransporter"></span><span id="celeritas::SimpleOffload::SimpleOffload__SetupOptionsCP.SharedParamsP.LocalTransporterP"></span><span class="target" id="d3/d72/classceleritas_1_1_simple_offload_1a1ed90e8fb42402d8dbdaab709f340ca4"></span><span class="sig-name descname"><span class="n"><span class="pre">SimpleOffload</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9celeritas12SetupOptionsE" title="celeritas::SetupOptions"><span class="n"><span class="pre">SetupOptions</span></span></a><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">setup</span></span>, <a class="reference internal" href="#_CPPv4N9celeritas12SharedParamsE" title="celeritas::SharedParams"><span class="n"><span class="pre">SharedParams</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">params</span></span>, <a class="reference internal" href="#_CPPv4N9celeritas16LocalTransporterE" title="celeritas::LocalTransporter"><span class="n"><span class="pre">LocalTransporter</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">local</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas13SimpleOffload13SimpleOffloadEPK12SetupOptionsP12SharedParamsP16LocalTransporter" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct from a reference to shared params and local data. </p>
+<p>On construction, this will check for the <code class="docutils literal notranslate"><span class="pre">CELER_DISABLE</span></code> variable and disable offloading if set. Otherwise it will initialize the multithread logging if the run manager is initialized. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas13SimpleOffload5BuildEPK12SetupOptionsP12SharedParamsP16LocalTransporter">
+<span id="_CPPv3N9celeritas13SimpleOffload5BuildEPK12SetupOptionsP12SharedParamsP16LocalTransporter"></span><span id="_CPPv2N9celeritas13SimpleOffload5BuildEPK12SetupOptionsP12SharedParamsP16LocalTransporter"></span><span id="celeritas::SimpleOffload::Build__SetupOptionsCP.SharedParamsP.LocalTransporterP"></span><span class="target" id="d3/d72/classceleritas_1_1_simple_offload_1ad7a1b78feeceafdce8b711f4446201df"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Build</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9celeritas12SetupOptionsE" title="celeritas::SetupOptions"><span class="n"><span class="pre">SetupOptions</span></span></a><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">setup</span></span>, <a class="reference internal" href="#_CPPv4N9celeritas12SharedParamsE" title="celeritas::SharedParams"><span class="n"><span class="pre">SharedParams</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">params</span></span>, <a class="reference internal" href="#_CPPv4N9celeritas16LocalTransporterE" title="celeritas::LocalTransporter"><span class="n"><span class="pre">LocalTransporter</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">local</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas13SimpleOffload5BuildEPK12SetupOptionsP12SharedParamsP16LocalTransporter" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Lazy initialization of this class on a worker thread. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas13SimpleOffload14BuildForMasterEPK12SetupOptionsP12SharedParams">
+<span id="_CPPv3N9celeritas13SimpleOffload14BuildForMasterEPK12SetupOptionsP12SharedParams"></span><span id="_CPPv2N9celeritas13SimpleOffload14BuildForMasterEPK12SetupOptionsP12SharedParams"></span><span id="celeritas::SimpleOffload::BuildForMaster__SetupOptionsCP.SharedParamsP"></span><span class="target" id="d3/d72/classceleritas_1_1_simple_offload_1a389e48d0f34bdd044350bf5624b44048"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BuildForMaster</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9celeritas12SetupOptionsE" title="celeritas::SetupOptions"><span class="n"><span class="pre">SetupOptions</span></span></a><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">setup</span></span>, <a class="reference internal" href="#_CPPv4N9celeritas12SharedParamsE" title="celeritas::SharedParams"><span class="n"><span class="pre">SharedParams</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">params</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas13SimpleOffload14BuildForMasterEPK12SetupOptionsP12SharedParams" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Lazy initialization of this class on the master thread. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas13SimpleOffload16BeginOfRunActionEPK5G4Run">
+<span id="_CPPv3N9celeritas13SimpleOffload16BeginOfRunActionEPK5G4Run"></span><span id="_CPPv2N9celeritas13SimpleOffload16BeginOfRunActionEPK5G4Run"></span><span id="celeritas::SimpleOffload::BeginOfRunAction__G4RunCP"></span><span class="target" id="d3/d72/classceleritas_1_1_simple_offload_1a6518d568c0d905856f086b0fdfbdc964"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BeginOfRunAction</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">G4Run</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">run</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas13SimpleOffload16BeginOfRunActionEPK5G4Run" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Initialize celeritas data from setup options. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas13SimpleOffload18BeginOfEventActionEPK7G4Event">
+<span id="_CPPv3N9celeritas13SimpleOffload18BeginOfEventActionEPK7G4Event"></span><span id="_CPPv2N9celeritas13SimpleOffload18BeginOfEventActionEPK7G4Event"></span><span id="celeritas::SimpleOffload::BeginOfEventAction__G4EventCP"></span><span class="target" id="d3/d72/classceleritas_1_1_simple_offload_1a7ea7ad0431e244daf27727203f0cdc56"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BeginOfEventAction</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">G4Event</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">event</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas13SimpleOffload18BeginOfEventActionEPK7G4Event" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Send Celeritas the event ID. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas13SimpleOffload21PreUserTrackingActionEP7G4Track">
+<span id="_CPPv3N9celeritas13SimpleOffload21PreUserTrackingActionEP7G4Track"></span><span id="_CPPv2N9celeritas13SimpleOffload21PreUserTrackingActionEP7G4Track"></span><span id="celeritas::SimpleOffload::PreUserTrackingAction__G4TrackP"></span><span class="target" id="d3/d72/classceleritas_1_1_simple_offload_1aa4852343c99d9f9ec747ac2363a456e0"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PreUserTrackingAction</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">G4Track</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">track</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas13SimpleOffload21PreUserTrackingActionEP7G4Track" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Send tracks to Celeritas if applicable and “StopAndKill” if so. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas13SimpleOffload16EndOfEventActionEPK7G4Event">
+<span id="_CPPv3N9celeritas13SimpleOffload16EndOfEventActionEPK7G4Event"></span><span id="_CPPv2N9celeritas13SimpleOffload16EndOfEventActionEPK7G4Event"></span><span id="celeritas::SimpleOffload::EndOfEventAction__G4EventCP"></span><span class="target" id="d3/d72/classceleritas_1_1_simple_offload_1a834cdcf15f9f2d27cc250a0bf6ab55cc"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EndOfEventAction</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">G4Event</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">event</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas13SimpleOffload16EndOfEventActionEPK7G4Event" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Flush offloaded tracks from Celeritas. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas13SimpleOffload14EndOfRunActionEPK5G4Run">
+<span id="_CPPv3N9celeritas13SimpleOffload14EndOfRunActionEPK5G4Run"></span><span id="_CPPv2N9celeritas13SimpleOffload14EndOfRunActionEPK5G4Run"></span><span id="celeritas::SimpleOffload::EndOfRunAction__G4RunCP"></span><span class="target" id="d3/d72/classceleritas_1_1_simple_offload_1a48a7710a0948a278f790d042f71680b8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EndOfRunAction</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">G4Run</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">run</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas13SimpleOffload14EndOfRunActionEPK5G4Run" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Finalize Celeritas. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas13SimpleOffloadcvbEv">
+<span id="_CPPv3NK9celeritas13SimpleOffloadcvbEv"></span><span id="_CPPv2NK9celeritas13SimpleOffloadcvbEv"></span><span id="celeritas::SimpleOffload::castto-b-operatorC"></span><span class="target" id="d3/d72/classceleritas_1_1_simple_offload_1a1a897cc727b6327b2a28f57b76625d3e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas13SimpleOffloadcvbEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Whether offloading is enabled. </p>
 </dd></dl>
 
 </div>
 </dd></dl>
 
 </section>
-<section id="setup">
-<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this heading"></a></h2>
+<section id="celeritas-setup">
+<h2>Celeritas setup<a class="headerlink" href="#celeritas-setup" title="Permalink to this heading"></a></h2>
+<p>The setup options help translate the Geant4 physics and problem setup to
+Celeritas. They are also necessary to set up the GPU offloading
+characteristics. Future versions of Celeritas will automate more of these
+settings.</p>
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N9celeritas12SetupOptionsE">
 <span id="_CPPv3N9celeritas12SetupOptionsE"></span><span id="_CPPv2N9celeritas12SetupOptionsE"></span><span id="celeritas::SetupOptions"></span><span class="target" id="d9/df4/structceleritas_1_1_setup_options"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetupOptions</span></span></span><a class="headerlink" href="#_CPPv4N9celeritas12SetupOptionsE" title="Permalink to this definition"></a><br /></dt>
@@ -201,7 +244,7 @@ sensitive detectors.</p>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N9celeritas12SetupOptions22secondary_stack_factorE">
-<span id="_CPPv3N9celeritas12SetupOptions22secondary_stack_factorE"></span><span id="_CPPv2N9celeritas12SetupOptions22secondary_stack_factorE"></span><span id="celeritas::SetupOptions::secondary_stack_factor__real_type"></span><span class="target" id="d9/df4/structceleritas_1_1_setup_options_1a7411ec293757df2b2239e7e4d0429d60"></span><a class="reference internal" href="corecel.html#_CPPv4N9celeritas9real_typeE" title="celeritas::real_type"><span class="n"><span class="pre">real_type</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">secondary_stack_factor</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N9celeritas12SetupOptions22secondary_stack_factorE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N9celeritas12SetupOptions22secondary_stack_factorE"></span><span id="_CPPv2N9celeritas12SetupOptions22secondary_stack_factorE"></span><span id="celeritas::SetupOptions::secondary_stack_factor__real_type"></span><span class="target" id="d9/df4/structceleritas_1_1_setup_options_1a7411ec293757df2b2239e7e4d0429d60"></span><a class="reference internal" href="corecel.html#_CPPv4N9celeritas9real_typeE" title="celeritas::real_type"><span class="n"><span class="pre">real_type</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">secondary_stack_factor</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">3.0</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N9celeritas12SetupOptions22secondary_stack_factorE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>At least the average number of secondaries per track slot. </p>
 </dd></dl>
 
@@ -283,29 +326,53 @@ sensitive detectors.</p>
 </dd></dl>
 
 <dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv4N9celeritas25AlongStepFactoryInterfaceE">
-<span id="_CPPv3N9celeritas25AlongStepFactoryInterfaceE"></span><span id="_CPPv2N9celeritas25AlongStepFactoryInterfaceE"></span><span id="celeritas::AlongStepFactoryInterface"></span><span class="target" id="d3/db3/classceleritas_1_1_along_step_factory_interface"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AlongStepFactoryInterface</span></span></span><a class="headerlink" href="#_CPPv4N9celeritas25AlongStepFactoryInterfaceE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Helper class for emitting an AlongStep action. </p>
-<p>Currently Celeritas accepts a single along-step action (i.e., the same stepper is used for both neutral and charged particles, across all energies and regions of the problem). The along-step action is a single GPU kernel that combines the field stepper selection, the magnetic field, slowing-down calculation, multiple scattering, and energy loss fluctuations.</p>
-<p>The factory will be called from the thread that initializes <code class="docutils literal notranslate"><a class="reference internal" href="#d8/da0/classceleritas_1_1_shared_params"><span class="std std-ref"><span class="pre">SharedParams</span></span></a></code>. Instead of a daughter class, you can provide any function-like object that has the same interface.</p>
-<p>Celeritas provides a few “default” configurations of along-step actions in <code class="docutils literal notranslate"><span class="pre">celeritas/global/alongstep</span></code>. </p>
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas23UniformAlongStepFactoryE">
+<span id="_CPPv3N9celeritas23UniformAlongStepFactoryE"></span><span id="_CPPv2N9celeritas23UniformAlongStepFactoryE"></span><span id="celeritas::UniformAlongStepFactory"></span><span class="target" id="d3/d64/classceleritas_1_1_uniform_along_step_factory"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UniformAlongStepFactory</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="celeritas.html#_CPPv49celeritas" title="celeritas"><span class="n"><span class="pre">celeritas</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N9celeritas25AlongStepFactoryInterfaceE" title="celeritas::AlongStepFactoryInterface"><span class="n"><span class="pre">AlongStepFactoryInterface</span></span></a><a class="headerlink" href="#_CPPv4N9celeritas23UniformAlongStepFactoryE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create an along-step method for a uniform (or zero) field. </p>
+<p>The constructor is a lazily evaluated function that must return the field vector in native Geant4 units. If unspecified, the field is zero. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas23UniformAlongStepFactory23UniformAlongStepFactoryEv">
+<span id="_CPPv3N9celeritas23UniformAlongStepFactory23UniformAlongStepFactoryEv"></span><span id="_CPPv2N9celeritas23UniformAlongStepFactory23UniformAlongStepFactoryEv"></span><span id="celeritas::UniformAlongStepFactory::UniformAlongStepFactory"></span><span class="target" id="d3/d64/classceleritas_1_1_uniform_along_step_factory_1a741db58b9c04043bc164722f553a39d6"></span><span class="sig-name descname"><span class="n"><span class="pre">UniformAlongStepFactory</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N9celeritas23UniformAlongStepFactory23UniformAlongStepFactoryEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct with no field (linear propagation) </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas23UniformAlongStepFactory23UniformAlongStepFactoryE13FieldFunction">
+<span id="_CPPv3N9celeritas23UniformAlongStepFactory23UniformAlongStepFactoryE13FieldFunction"></span><span id="_CPPv2N9celeritas23UniformAlongStepFactory23UniformAlongStepFactoryE13FieldFunction"></span><span id="celeritas::UniformAlongStepFactory::UniformAlongStepFactory__FieldFunction"></span><span class="target" id="d3/d64/classceleritas_1_1_uniform_along_step_factory_1a0a4aa08f6f4730a3d0a506f44aa68bee"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UniformAlongStepFactory</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">FieldFunction</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">f</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas23UniformAlongStepFactory23UniformAlongStepFactoryE13FieldFunction" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct with a function to return the field strength. </p>
+<p>The function is evaluated whenever Celeritas is set up (which is after Geant4 physics is initialized). </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas23UniformAlongStepFactoryclE13argument_type">
+<span id="_CPPv3NK9celeritas23UniformAlongStepFactoryclE13argument_type"></span><span id="_CPPv2NK9celeritas23UniformAlongStepFactoryclE13argument_type"></span><span id="celeritas::UniformAlongStepFactory::call-operator__argument_typeC"></span><span class="target" id="d3/d64/classceleritas_1_1_uniform_along_step_factory_1ad99bbf34d4d9c575c972769591475877"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">result_type</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">argument_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">input</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">final</span></span><a class="headerlink" href="#_CPPv4NK9celeritas23UniformAlongStepFactoryclE13argument_type" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Emit an along-step action. </p>
+<p>The action will embed the linear propagator if the magnetic field strength is zero (or the accessor is unset). </p>
+</dd></dl>
+
+</div>
 </dd></dl>
 
 </section>
-<section id="transport-interface">
-<h2>Transport interface<a class="headerlink" href="#transport-interface" title="Permalink to this heading"></a></h2>
-<p>These classes are usually integrated into UserActions.</p>
+<section id="detailed-interface">
+<h2>Detailed interface<a class="headerlink" href="#detailed-interface" title="Permalink to this heading"></a></h2>
+<p>These classes are usually integrated into UserActions. The <code class="docutils literal notranslate"><span class="pre">SimpleOffload</span></code>
+interface above hides the complexity of these classes, or for more complex
+applications you can choose to use these classes directly instead of it.</p>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N9celeritas12SharedParamsE">
 <span id="_CPPv3N9celeritas12SharedParamsE"></span><span id="_CPPv2N9celeritas12SharedParamsE"></span><span id="celeritas::SharedParams"></span><span class="target" id="d8/da0/classceleritas_1_1_shared_params"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SharedParams</span></span></span><a class="headerlink" href="#_CPPv4N9celeritas12SharedParamsE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Shared (one instance for all threads) Celeritas problem data. </p>
 <p>This should be instantiated on the master thread during problem setup, preferably as a shared pointer. The shared pointer should be passed to a thread-local <code class="docutils literal notranslate"><a class="reference internal" href="#d2/d13/classceleritas_1_1_local_transporter"><span class="std std-ref"><span class="pre">LocalTransporter</span></span></a></code> instance. At the beginning of the run, after Geant4 has initialized physics data, the <code class="docutils literal notranslate"><span class="pre">Initialize</span></code> method must be called first on the “master” thread to populate the Celeritas data structures (geometry, physics). <code class="docutils literal notranslate"><span class="pre">InitializeWorker</span></code> must subsequently be invoked on all worker threads to set up thread-local data (specifically, CUDA device initialization). </p>
 <div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-construction">Construction</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9celeritas12SharedParamsD0Ev">
-<span id="_CPPv3N9celeritas12SharedParamsD0Ev"></span><span id="_CPPv2N9celeritas12SharedParamsD0Ev"></span><span id="celeritas::SharedParams::~SharedParams"></span><span class="target" id="d8/da0/classceleritas_1_1_shared_params_1a232e959edac2fe9cb5e1d8659eb89f71"></span><span class="sig-name descname"><span class="n"><span class="pre">~SharedParams</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas12SharedParamsD0Ev" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Default destructor. </p>
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas12SharedParams12SharedParamsEv">
+<span id="_CPPv3N9celeritas12SharedParams12SharedParamsEv"></span><span id="_CPPv2N9celeritas12SharedParams12SharedParamsEv"></span><span id="celeritas::SharedParams::SharedParams"></span><span class="target" id="d8/da0/classceleritas_1_1_shared_params_1a505bbc17eb3683de90121c7a6c2f1545"></span><span class="sig-name descname"><span class="n"><span class="pre">SharedParams</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N9celeritas12SharedParams12SharedParamsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set up Celeritas using Geant4 data. </p>
+<p>This is a separate step from construction because it has to happen at the beginning of the run, not when user classes are created. It should be called from the “master” thread (for MT mode) or from the main thread (for Serial), and it must complete before any worker thread tries to access the shared data. </p>
 </dd></dl>
 
 <dl class="cpp function">
@@ -329,9 +396,26 @@ sensitive detectors.</p>
 </dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas12SharedParams16InitializeWorkerERK12SetupOptions">
+<span id="_CPPv3N9celeritas12SharedParams16InitializeWorkerERK12SetupOptions"></span><span id="_CPPv2N9celeritas12SharedParams16InitializeWorkerERK12SetupOptions"></span><span id="celeritas::SharedParams::InitializeWorker__SetupOptionsCR"></span><span class="target" id="d8/da0/classceleritas_1_1_shared_params_1a78beb9d97addd34e2766b78f1dbbfca0"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">InitializeWorker</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9celeritas12SetupOptionsE" title="celeritas::SetupOptions"><span class="n"><span class="pre">SetupOptions</span></span></a><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">options</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas12SharedParams16InitializeWorkerERK12SetupOptions" title="Permalink to this definition"></a><br /></dt>
+<dd><p>On worker threads, set up data with thread storage duration. </p>
+<p>Some data that has “static” storage duration (such as CUDA device properties) in single-thread mode has “thread” storage in a multithreaded application. It must be initialized on all threads. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-accessors">Accessors</p>
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK9celeritas12SharedParams6ParamsEv">
 <span id="_CPPv3NK9celeritas12SharedParams6ParamsEv"></span><span id="_CPPv2NK9celeritas12SharedParams6ParamsEv"></span><span id="celeritas::SharedParams::ParamsC"></span><span class="target" id="d8/da0/classceleritas_1_1_shared_params_1a7c5ac0c6ae4a9e40496b3bf6773a608f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">SPConstParams</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Params</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas12SharedParams6ParamsEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Access Celeritas data. </p>
+<p>This can only be called after <code class="docutils literal notranslate"><span class="pre">Initialize</span></code>. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas12SharedParams16OffloadParticlesEv">
+<span id="_CPPv3NK9celeritas12SharedParams16OffloadParticlesEv"></span><span id="_CPPv2NK9celeritas12SharedParams16OffloadParticlesEv"></span><span id="celeritas::SharedParams::OffloadParticlesC"></span><span class="target" id="d8/da0/classceleritas_1_1_shared_params_1a8d27b45e6aad036fca34db0fc15576a7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">VecG4ParticleDef</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">OffloadParticles</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas12SharedParams16OffloadParticlesEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get a vector of particles supported by Celeritas offloading. </p>
 <p>This can only be called after <code class="docutils literal notranslate"><span class="pre">Initialize</span></code>. </p>
 </dd></dl>
 
@@ -343,12 +427,11 @@ sensitive detectors.</p>
 
 </div>
 <div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-internal-use-only">Internal use only</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9celeritas12SharedParams16InitializeWorkerERK12SetupOptions">
-<span id="_CPPv3N9celeritas12SharedParams16InitializeWorkerERK12SetupOptions"></span><span id="_CPPv2N9celeritas12SharedParams16InitializeWorkerERK12SetupOptions"></span><span id="celeritas::SharedParams::InitializeWorker__SetupOptionsCR"></span><span class="target" id="d8/da0/classceleritas_1_1_shared_params_1a78beb9d97addd34e2766b78f1dbbfca0"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">InitializeWorker</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9celeritas12SetupOptionsE" title="celeritas::SetupOptions"><span class="n"><span class="pre">SetupOptions</span></span></a><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">options</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas12SharedParams16InitializeWorkerERK12SetupOptions" title="Permalink to this definition"></a><br /></dt>
-<dd><p>On worker threads, set up data with thread storage duration. </p>
-<p>Some data that has “static” storage duration (such as CUDA device properties) in single-thread mode has “thread” storage in a multithreaded application. It must be initialized on all threads. </p>
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas12SharedParams11hit_managerEv">
+<span id="_CPPv3NK9celeritas12SharedParams11hit_managerEv"></span><span id="_CPPv2NK9celeritas12SharedParams11hit_managerEv"></span><span id="celeritas::SharedParams::hit_managerC"></span><span class="target" id="d8/da0/classceleritas_1_1_shared_params_1a551acaad3c398e4f0fe6f8d298ec6340"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">SPHitManager</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">hit_manager</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas12SharedParams11hit_managerEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Hit manager, to be used only by <a class="reference internal" href="#d2/d13/classceleritas_1_1_local_transporter"><span class="std std-ref">LocalTransporter</span></a>. </p>
 </dd></dl>
 
 </div>
@@ -386,12 +469,6 @@ sensitive detectors.</p>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas16LocalTransporter12IsApplicableERK7G4Track">
-<span id="_CPPv3NK9celeritas16LocalTransporter12IsApplicableERK7G4Track"></span><span id="_CPPv2NK9celeritas16LocalTransporter12IsApplicableERK7G4Track"></span><span id="celeritas::LocalTransporter::IsApplicable__G4TrackCRC"></span><span class="target" id="d2/d13/classceleritas_1_1_local_transporter_1a56f7992b246263f06a6876b4f08f5bb0"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsApplicable</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">G4Track</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas16LocalTransporter12IsApplicableERK7G4Track" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Whether Celeritas supports offloading of this track. </p>
-</dd></dl>
-
-<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9celeritas16LocalTransporter4PushERK7G4Track">
 <span id="_CPPv3N9celeritas16LocalTransporter4PushERK7G4Track"></span><span id="_CPPv2N9celeritas16LocalTransporter4PushERK7G4Track"></span><span id="celeritas::LocalTransporter::Push__G4TrackCR"></span><span class="target" id="d2/d13/classceleritas_1_1_local_transporter_1a4447682ff34959357b8a8e0a22427b99"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Push</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">G4Track</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas16LocalTransporter4PushERK7G4Track" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Convert a Geant4 track to a Celeritas primary and add to buffer. </p>
@@ -417,6 +494,61 @@ sensitive detectors.</p>
 </dd></dl>
 
 </div>
+</dd></dl>
+
+</section>
+<section id="interface-utilities">
+<h2>Interface utilities<a class="headerlink" href="#interface-utilities" title="Permalink to this heading"></a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas12MakeMTLoggerERK12G4RunManager">
+<span id="_CPPv3N9celeritas12MakeMTLoggerERK12G4RunManager"></span><span id="_CPPv2N9celeritas12MakeMTLoggerERK12G4RunManager"></span><span id="celeritas::MakeMTLogger__G4RunManagerCR"></span><span class="target" id="d0/d9e/accel_2_logger_8cc_1a0ab547d3e6f36636d5adc244eb8e5840"></span><a class="reference internal" href="corecel.html#_CPPv4N9celeritas6LoggerE" title="celeritas::Logger"><span class="n"><span class="pre">Logger</span></span></a><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="celeritas.html#_CPPv49celeritas" title="celeritas"><span class="n"><span class="pre">celeritas</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">MakeMTLogger</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">G4RunManager</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">runman</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas12MakeMTLoggerERK12G4RunManager" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct a logger that will redirect Celeritas messages through Geant4. </p>
+<p>This logger writes the current thread (and maximum number of threads) in each output message, and sends each message through the thread-local <code class="docutils literal notranslate"><span class="pre">G4cerr</span></code>.</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> of your application’s exectuable, set the “process-local” (MPI-aware) logger: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">celeritas</span><span class="o">::</span><span class="n">self_logger</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">celeritas</span><span class="o">::</span><span class="n">MakeMTLogger</span><span class="p">(</span><span class="o">*</span><span class="n">run_manager</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas18ExceptionConverterE">
+<span id="_CPPv3N9celeritas18ExceptionConverterE"></span><span id="_CPPv2N9celeritas18ExceptionConverterE"></span><span id="celeritas::ExceptionConverter"></span><span class="target" id="d4/df4/classceleritas_1_1_exception_converter"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ExceptionConverter</span></span></span><a class="headerlink" href="#_CPPv4N9celeritas18ExceptionConverterE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Translate Celeritas C++ exceptions into Geant4 G4Exception calls. </p>
+<p>This should generally be used when wrapping calls to Celeritas in a user application.</p>
+<p>For example, the user event action to transport particles on device could be used as: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">EventAction::EndOfEventAction</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">G4Event</span><span class="o">*</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Transport any tracks left in the buffer</span>
+<span class="w">    </span><span class="n">celeritas</span><span class="o">::</span><span class="n">ExceptionConverter</span><span class="w"> </span><span class="n">call_g4exception</span><span class="p">{</span><span class="s">&quot;celer0003&quot;</span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="n">CELER_TRY_HANDLE</span><span class="p">(</span><span class="n">transport_</span><span class="o">-&gt;</span><span class="n">Flush</span><span class="p">(),</span><span class="w"> </span><span class="n">call_g4exception</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas18ExceptionConverter18ExceptionConverterEPKc">
+<span id="_CPPv3N9celeritas18ExceptionConverter18ExceptionConverterEPKc"></span><span id="_CPPv2N9celeritas18ExceptionConverter18ExceptionConverterEPKc"></span><span id="celeritas::ExceptionConverter::ExceptionConverter__cCP"></span><span class="target" id="d4/df4/classceleritas_1_1_exception_converter_1aced6fc67f4e05f50065af95356b66861"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ExceptionConverter</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">err_code</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9celeritas18ExceptionConverter18ExceptionConverterEPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct with an error code for dispatching to Geant4. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9celeritas18ExceptionConverterclENSt13exception_ptrE">
+<span id="_CPPv3NK9celeritas18ExceptionConverterclENSt13exception_ptrE"></span><span id="_CPPv2NK9celeritas18ExceptionConverterclENSt13exception_ptrE"></span><span id="celeritas::ExceptionConverter::call-operator__std::exception_ptrC"></span><span class="target" id="d4/df4/classceleritas_1_1_exception_converter_1af1414e9418b5b7bc2f5ed0c91a85f12e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">exception_ptr</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9celeritas18ExceptionConverterclENSt13exception_ptrE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Capture the current exception and convert it to a G4Exception call. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N9celeritas25AlongStepFactoryInterfaceE">
+<span id="_CPPv3N9celeritas25AlongStepFactoryInterfaceE"></span><span id="_CPPv2N9celeritas25AlongStepFactoryInterfaceE"></span><span id="celeritas::AlongStepFactoryInterface"></span><span class="target" id="d3/db3/classceleritas_1_1_along_step_factory_interface"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AlongStepFactoryInterface</span></span></span><a class="headerlink" href="#_CPPv4N9celeritas25AlongStepFactoryInterfaceE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Helper class for emitting an AlongStep action. </p>
+<p>Currently Celeritas accepts a single along-step action (i.e., the same stepper is used for both neutral and charged particles, across all energies and regions of the problem). The along-step action is a single GPU kernel that combines the field stepper selection, the magnetic field, slowing-down calculation, multiple scattering, and energy loss fluctuations.</p>
+<p>The factory will be called from the thread that initializes <code class="docutils literal notranslate"><a class="reference internal" href="#d8/da0/classceleritas_1_1_shared_params"><span class="std std-ref"><span class="pre">SharedParams</span></span></a></code>. Instead of a daughter class, you can provide any function-like object that has the same interface.</p>
+<p>Celeritas provides a few “default” configurations of along-step actions in <code class="docutils literal notranslate"><span class="pre">celeritas/global/alongstep</span></code>. </p>
+<p>Subclassed by <a class="reference internal" href="#d3/d64/classceleritas_1_1_uniform_along_step_factory"><span class="std std-ref">celeritas::UniformAlongStepFactory</span></a></p>
 </dd></dl>
 
 </section>

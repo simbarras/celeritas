@@ -6,10 +6,8 @@ var searchData=
   ['celeritas_5fdevice_5fruntime_5fapi_5fh_5f_3',['celeritas_device_runtime_api_h_',['../d3/d0e/device__runtime__api_8h.html#a647901748a0b1aab3d40f875c3928893',1,'device_runtime_api.h']]],
   ['centimeter_4',['centimeter',['../db/df7/_units_8hh.html#a61fc44306fa63ed27de00782bbc9010c',1,'celeritas::units']]],
   ['charge_5',['charge',['../db/ddc/structceleritas_1_1_import_particle.html#affd57c56c6bf963c7e1b9b56c2fe8461',1,'celeritas::ImportParticle::charge()'],['../d3/d1a/structceleritas_1_1_particle_record.html#afaa48b829ed537f08944ca547d865b5c',1,'celeritas::ParticleRecord::charge()'],['../d1/d46/structceleritas_1_1_particle_params_1_1_particle_input.html#a253a8103542a42958eacd37463881775',1,'celeritas::ParticleParams::ParticleInput::charge()']]],
-  ['coeffth1_6',['coeffth1',['../d3/ddf/structceleritas_1_1_urban_msc_material_data.html#ac4c924776d75bfdaab13b3d5dd7ebd8e',1,'celeritas::UrbanMscMaterialData']]],
-  ['coeffth2_7',['coeffth2',['../d3/ddf/structceleritas_1_1_urban_msc_material_data.html#a899490f15a46a52627c3faec3d1ba1c4',1,'celeritas::UrbanMscMaterialData']]],
-  ['const_5fmem_8',['const_mem',['../dc/d2d/structceleritas_1_1_kernel_attributes.html#aa32981ed7cdef759128d3789c00bacdf',1,'celeritas::KernelAttributes']]],
-  ['coulomb_5fcorrection_9',['coulomb_correction',['../da/d0b/structceleritas_1_1_element_record.html#a5b4da969255a69b32c96bd359ada420d',1,'celeritas::ElementRecord']]],
-  ['count_10',['count',['../d8/d97/structceleritas_1_1_atomic_relaxation_1_1result__type.html#a7ae3e343c7eda931d0f1738114f61337',1,'celeritas::AtomicRelaxation::result_type']]],
-  ['cutoffs_11',['cutoffs',['../d8/d81/structceleritas_1_1_cutoff_params_data.html#adeb407d07c5e03f57f7df0f68860fd3d',1,'celeritas::CutoffParamsData']]]
+  ['const_5fmem_6',['const_mem',['../dc/d2d/structceleritas_1_1_kernel_attributes.html#aa32981ed7cdef759128d3789c00bacdf',1,'celeritas::KernelAttributes']]],
+  ['coulomb_5fcorrection_7',['coulomb_correction',['../da/d0b/structceleritas_1_1_element_record.html#a5b4da969255a69b32c96bd359ada420d',1,'celeritas::ElementRecord']]],
+  ['count_8',['count',['../d8/d97/structceleritas_1_1_atomic_relaxation_1_1result__type.html#a7ae3e343c7eda931d0f1738114f61337',1,'celeritas::AtomicRelaxation::result_type']]],
+  ['cutoffs_9',['cutoffs',['../d8/d81/structceleritas_1_1_cutoff_params_data.html#adeb407d07c5e03f57f7df0f68860fd3d',1,'celeritas::CutoffParamsData']]]
 ];

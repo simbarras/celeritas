@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -88,20 +89,22 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:ab1414513982d62a48e946259d9279f1d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df6/classceleritas_1_1_interpolator.html#ab1414513982d62a48e946259d9279f1d">real_type</a> = T</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:ab1414513982d62a48e946259d9279f1d"><td class="memItemLeft" align="right" valign="top"><a id="ab1414513982d62a48e946259d9279f1d" name="ab1414513982d62a48e946259d9279f1d"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>real_type</b> = T</td></tr>
 <tr class="separator:ab1414513982d62a48e946259d9279f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a500dd8f536321f0a475d565d22226fd7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df6/classceleritas_1_1_interpolator.html#a500dd8f536321f0a475d565d22226fd7">Point</a> = <a class="el" href="../../dd/dd6/structceleritas_1_1_array.html">Array</a>&lt; T, 2 &gt;</td></tr>
+<tr class="memitem:a500dd8f536321f0a475d565d22226fd7"><td class="memItemLeft" align="right" valign="top"><a id="a500dd8f536321f0a475d565d22226fd7" name="a500dd8f536321f0a475d565d22226fd7"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Point</b> = <a class="el" href="../../dd/dd6/structceleritas_1_1_array.html">Array</a>&lt; T, 2 &gt;</td></tr>
 <tr class="separator:a500dd8f536321f0a475d565d22226fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9d23e0059911a55923de2357037dfd5a"><td class="memItemLeft" align="right" valign="top"><a id="a9d23e0059911a55923de2357037dfd5a" name="a9d23e0059911a55923de2357037dfd5a"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Interpolator</b> (<a class="el" href="../../dc/df6/classceleritas_1_1_interpolator.html#a500dd8f536321f0a475d565d22226fd7">Point</a> left, <a class="el" href="../../dc/df6/classceleritas_1_1_interpolator.html#a500dd8f536321f0a475d565d22226fd7">Point</a> right)</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Interpolator</b> (<a class="el" href="../../dd/dd6/structceleritas_1_1_array.html">Point</a> left, <a class="el" href="../../dd/dd6/structceleritas_1_1_array.html">Point</a> right)</td></tr>
 <tr class="memdesc:a9d23e0059911a55923de2357037dfd5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with left and right values for x and y. <br /></td></tr>
 <tr class="separator:a9d23e0059911a55923de2357037dfd5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad6b22b67f6edd0fbddf9270bbd82f83"><td class="memItemLeft" align="right" valign="top"><a id="aad6b22b67f6edd0fbddf9270bbd82f83" name="aad6b22b67f6edd0fbddf9270bbd82f83"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../dc/df6/classceleritas_1_1_interpolator.html#ab1414513982d62a48e946259d9279f1d">real_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="../../dc/df6/classceleritas_1_1_interpolator.html#ab1414513982d62a48e946259d9279f1d">real_type</a> x) const</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> real_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (real_type <a class="el" href="../../d7/d97/orange_2_types_8hh.html#a1fc5102eb33d89f16a67be30c02182aca9dd4e461268c8034f5c8564e155c67a6">x</a>) const</td></tr>
 <tr class="memdesc:aad6b22b67f6edd0fbddf9270bbd82f83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolate linearly on the transformed type. <br /></td></tr>
 <tr class="separator:aad6b22b67f6edd0fbddf9270bbd82f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -117,57 +120,22 @@ class celeritas::Interpolator&lt; XI, YI, T &gt;</div><p >Interpolate, with eith
   </dd>
 </dl>
 <p>The inputs are given as two (x,y) pairs. The same two pairs can be used to interpolate successively with this functor.</p>
-<p >Interpolation on the transformed coordinates is the solution for <picture><source srcset="../../form_133_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ y $" src="../../form_133.png" width="8" height="9"/></picture> in </p><p class="formulaDsp">
-<picture><source srcset="../../form_134_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<p >Interpolation on the transformed coordinates is the solution for <picture><source srcset="../../form_138_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ y $" src="../../form_138.png" width="8" height="9"/></picture> in </p><p class="formulaDsp">
+<picture><source srcset="../../form_139_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 \frac{f_y(y) - f_y(y_l)}{f_y(y_r) - f_y(y_l)}
 = \frac{f_x(x) - f_x(x_l)}{f_x(x_r) - f_x(x_l)}
-\]" src="../../form_134.png" width="184" height="31"/></picture>
+\]" src="../../form_139.png" width="184" height="31"/></picture>
 </p>
-<p >where <picture><source srcset="../../form_135_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ f_d(v) = v $" src="../../form_135.png" width="51" height="14"/></picture> for linear interpolation on the <picture><source srcset="../../form_136_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ d $" src="../../form_136.png" width="6" height="10"/></picture> axis and <picture><source srcset="../../form_137_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ f_d(v) = \log v $" src="../../form_137.png" width="69" height="14"/></picture> for log interpolation.</p>
-<p >Solving for <picture><source srcset="../../form_138_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$y$" src="../../form_138.png" width="8" height="9"/></picture>, the interpolation can be rewritten to minimize transcendatal operations and efficiently perform multiple interpolations over the same point range:  </p><p class="formulaDsp">
-<picture><source srcset="../../form_139_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<p >where <picture><source srcset="../../form_140_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ f_d(v) = v $" src="../../form_140.png" width="51" height="14"/></picture> for linear interpolation on the <picture><source srcset="../../form_141_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ d $" src="../../form_141.png" width="6" height="10"/></picture> axis and <picture><source srcset="../../form_142_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ f_d(v) = \log v $" src="../../form_142.png" width="69" height="14"/></picture> for log interpolation.</p>
+<p >Solving for <picture><source srcset="../../form_143_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$y$" src="../../form_143.png" width="8" height="9"/></picture>, the interpolation can be rewritten to minimize transcendatal operations and efficiently perform multiple interpolations over the same point range:  </p><p class="formulaDsp">
+<picture><source srcset="../../form_144_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
  y = f^{-1}_y \left( f_y(y_l) + \frac{ p_y(n_y(y_l), y_r) }{ p_x(n_x(x_l),
 x_r)} \times p_x(n_x(x_l), x) \right)
-\]" src="../../form_139.png" width="271" height="31"/></picture>
+\]" src="../../form_144.png" width="271" height="31"/></picture>
 </p>
-<p >where transformed addition is <picture><source srcset="../../form_140_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$p_y(y_1, y_2) \equiv f_y(y_1) + f_y(y_2)$" src="../../form_140.png" width="150" height="14"/></picture> , transformed negation is <picture><source srcset="../../form_141_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$n_y(y_1) \equiv f^{-1}_y( - f_y(y_1) )$" src="../../form_141.png" width="125" height="16"/></picture> and <picture><source srcset="../../form_142_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ f_y(y) = y $" src="../../form_142.png" width="51" height="14"/></picture> for linear interpolation in y and <picture><source srcset="../../form_143_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ f_y(y) = \log y $" src="../../form_143.png" width="70" height="14"/></picture> for log interpolation in y.</p>
+<p >where transformed addition is <picture><source srcset="../../form_145_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$p_y(y_1, y_2) \equiv f_y(y_1) + f_y(y_2)$" src="../../form_145.png" width="150" height="14"/></picture> , transformed negation is <picture><source srcset="../../form_146_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$n_y(y_1) \equiv f^{-1}_y( - f_y(y_1) )$" src="../../form_146.png" width="125" height="16"/></picture> and <picture><source srcset="../../form_147_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ f_y(y) = y $" src="../../form_147.png" width="51" height="14"/></picture> for linear interpolation in y and <picture><source srcset="../../form_148_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ f_y(y) = \log y $" src="../../form_148.png" width="70" height="14"/></picture> for log interpolation in y.</p>
 <p >Instantiating the interpolator precalculates the transformed intercept and slope terms, as well as the negated x-left term. At each evaluation of the instantiated <a class="el" href="../../dc/df6/classceleritas_1_1_interpolator.html" title="Interpolate, with either linear or log in x and y.">Interpolator</a>, only the inverse-transform and add-transformed operation need be applied. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a500dd8f536321f0a475d565d22226fd7" name="a500dd8f536321f0a475d565d22226fd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a500dd8f536321f0a475d565d22226fd7">&#9670;&#160;</a></span>Point</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a800890e6861f463657c8cd8d797518d9">Interp</a> XI = Interp::linear, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a800890e6861f463657c8cd8d797518d9">Interp</a> YI = Interp::linear, typename T  = ::celeritas::real_type&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../dc/df6/classceleritas_1_1_interpolator.html">celeritas::Interpolator</a>&lt; XI, YI, T &gt;::Point =  <a class="el" href="../../dd/dd6/structceleritas_1_1_array.html">Array</a>&lt;T, 2&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Public type aliases </p>
-
-</div>
-</div>
-<a id="ab1414513982d62a48e946259d9279f1d" name="ab1414513982d62a48e946259d9279f1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1414513982d62a48e946259d9279f1d">&#9670;&#160;</a></span>real_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a800890e6861f463657c8cd8d797518d9">Interp</a> XI = Interp::linear, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a800890e6861f463657c8cd8d797518d9">Interp</a> YI = Interp::linear, typename T  = ::celeritas::real_type&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../dc/df6/classceleritas_1_1_interpolator.html">celeritas::Interpolator</a>&lt; XI, YI, T &gt;::real_type =  T</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Public type aliases </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="../../d5/df8/_interpolator_8hh.html">Interpolator.hh</a></li>
 </ul>
 </div><!-- contents -->

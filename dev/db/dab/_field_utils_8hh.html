@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -106,75 +107,18 @@ template&lt;class T &gt; </td></tr>
 <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> Chord&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::make_chord</b> (Real3 const &amp;src, Real3 const &amp;dst)</td></tr>
 <tr class="memdesc:a73295228251029294c1111ac566a225a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the direction between the source and destination. <br /></td></tr>
 <tr class="separator:a73295228251029294c1111ac566a225a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc367ef7cbfbcc8aaf53adeef1f52379"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> real_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dab/_field_utils_8hh.html#adc367ef7cbfbcc8aaf53adeef1f52379">celeritas::detail::calc_miss_distance</a> (Real3 const &amp;pos, Real3 const &amp;dir, real_type distance, Real3 const &amp;target)</td></tr>
-<tr class="memdesc:adc367ef7cbfbcc8aaf53adeef1f52379"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the distance between a target point and a line segment's endpoint.  <a href="../../db/dab/_field_utils_8hh.html#adc367ef7cbfbcc8aaf53adeef1f52379">More...</a><br /></td></tr>
-<tr class="separator:adc367ef7cbfbcc8aaf53adeef1f52379"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11771ce6ec1cc5560ab4dc9276434bed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dab/_field_utils_8hh.html#a11771ce6ec1cc5560ab4dc9276434bed">celeritas::detail::is_intercept_close</a> (Real3 const &amp;pos, Real3 const &amp;dir, real_type distance, Real3 const &amp;target, real_type tolerance)</td></tr>
 <tr class="memdesc:a11771ce6ec1cc5560ab4dc9276434bed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the straight-line position is within a distance of the target.  <a href="../../db/dab/_field_utils_8hh.html#a11771ce6ec1cc5560ab4dc9276434bed">More...</a><br /></td></tr>
 <tr class="separator:a11771ce6ec1cc5560ab4dc9276434bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65803a0653d2ce1d156191f0b0feb99b"><td class="memItemLeft" align="right" valign="top"><a id="a65803a0653d2ce1d156191f0b0feb99b" name="a65803a0653d2ce1d156191f0b0feb99b"></a>
 <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> real_type&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::truncation_error</b> (real_type step, real_type eps_rel_max, OdeState const &amp;beg_state, OdeState const &amp;err_state)</td></tr>
-<tr class="memdesc:a65803a0653d2ce1d156191f0b0feb99b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the stepper truncation error square: <picture><source srcset="../../form_109_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \Delta = max (\delta_{pos}^{2}, \epsilon \delta_{mom}^{2}) $" src="../../form_109.png" width="120" height="16"/></picture>. <br /></td></tr>
+<tr class="memdesc:a65803a0653d2ce1d156191f0b0feb99b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the stepper truncation error square: <picture><source srcset="../../form_114_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \Delta = max (\delta_{pos}^{2}, \epsilon \delta_{mom}^{2}) $" src="../../form_114.png" width="120" height="16"/></picture>. <br /></td></tr>
 <tr class="separator:a65803a0653d2ce1d156191f0b0feb99b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ded5a1f5179983fae44db2bfab8a5b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> real_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dab/_field_utils_8hh.html#a8ded5a1f5179983fae44db2bfab8a5b7">celeritas::detail::distance_chord</a> (OdeState const &amp;beg_state, OdeState const &amp;mid_state, OdeState const &amp;end_state)</td></tr>
 <tr class="memdesc:a8ded5a1f5179983fae44db2bfab8a5b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closest distance between the segment from beg.pos (<em>A</em>) to end.pos(<em>B</em>) and the mid.pos (<em>M</em>):  <a href="../../db/dab/_field_utils_8hh.html#a8ded5a1f5179983fae44db2bfab8a5b7">More...</a><br /></td></tr>
 <tr class="separator:a8ded5a1f5179983fae44db2bfab8a5b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="adc367ef7cbfbcc8aaf53adeef1f52379" name="adc367ef7cbfbcc8aaf53adeef1f52379"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc367ef7cbfbcc8aaf53adeef1f52379">&#9670;&#160;</a></span>calc_miss_distance()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> real_type celeritas::detail::calc_miss_distance </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dd/dd6/structceleritas_1_1_array.html">Real3</a> const &amp;&#160;</td>
-          <td class="paramname"><em>pos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../dd/dd6/structceleritas_1_1_array.html">Real3</a> const &amp;&#160;</td>
-          <td class="paramname"><em>dir</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>&#160;</td>
-          <td class="paramname"><em>distance</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../dd/dd6/structceleritas_1_1_array.html">Real3</a> const &amp;&#160;</td>
-          <td class="paramname"><em>target</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Calculate the distance between a target point and a line segment's endpoint. </p>
-<p >This is equivalent to: </p><div class="fragment"><div class="line">Real3 temp = pos;</div>
-<div class="line">axpy(distance, dir, &amp;pos);</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordflow">return</span> ipow&lt;2&gt;(distance(pos, target));</div>
-</div><!-- fragment --> 
-</div>
-</div>
 <a id="a8ded5a1f5179983fae44db2bfab8a5b7" name="a8ded5a1f5179983fae44db2bfab8a5b7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8ded5a1f5179983fae44db2bfab8a5b7">&#9670;&#160;</a></span>distance_chord()</h2>
 
@@ -217,9 +161,9 @@ template&lt;class T &gt; </td></tr>
 
 <p>Closest distance between the segment from beg.pos (<em>A</em>) to end.pos(<em>B</em>) and the mid.pos (<em>M</em>): </p>
 <p class="formulaDsp">
-<picture><source srcset="../../form_110_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_115_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
   d = |\vec{AM}| \sin(\theta) = \frac{\vec{AM} \times \vec{AB}}{|\vec{AB}|}
-\]" src="../../form_110.png" width="163" height="36"/></picture>
+\]" src="../../form_115.png" width="163" height="36"/></picture>
 </p>
  
 </div>
@@ -236,13 +180,13 @@ template&lt;class T &gt; </td></tr>
         <tr>
           <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> bool celeritas::detail::is_intercept_close </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dd/dd6/structceleritas_1_1_array.html">Real3</a> const &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d7/d97/orange_2_types_8hh.html#a1e1ba0989db30adaef22d751feb8adb7">Real3</a> const &amp;&#160;</td>
           <td class="paramname"><em>pos</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dd/dd6/structceleritas_1_1_array.html">Real3</a> const &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d7/d97/orange_2_types_8hh.html#a1e1ba0989db30adaef22d751feb8adb7">Real3</a> const &amp;&#160;</td>
           <td class="paramname"><em>dir</em>, </td>
         </tr>
         <tr>
@@ -254,7 +198,7 @@ template&lt;class T &gt; </td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dd/dd6/structceleritas_1_1_array.html">Real3</a> const &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d7/d97/orange_2_types_8hh.html#a1e1ba0989db30adaef22d751feb8adb7">Real3</a> const &amp;&#160;</td>
           <td class="paramname"><em>target</em>, </td>
         </tr>
         <tr>

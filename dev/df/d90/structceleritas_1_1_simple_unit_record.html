@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -90,9 +91,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ab113fed591855122197a8958283631e0"><td class="memItemLeft" align="right" valign="top"><a id="ab113fed591855122197a8958283631e0" name="ab113fed591855122197a8958283631e0"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>VolumeRecordRange</b> = <a class="el" href="../../d3/d95/classceleritas_1_1_range.html">Range</a>&lt; <a class="el" href="../../d1/dd1/_vecgeom_data_8hh.html#a8c97752c08c841e3faf0173adb2e1525">VolumeId</a> &gt;</td></tr>
-<tr class="separator:ab113fed591855122197a8958283631e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a613d5ffdd22d2fd333c6d7447be22e1c"><td class="memItemLeft" align="right" valign="top"><a id="a613d5ffdd22d2fd333c6d7447be22e1c" name="a613d5ffdd22d2fd333c6d7447be22e1c"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>VolumeRecordId</b> = <a class="el" href="../../dd/dbb/classceleritas_1_1_opaque_id.html">OpaqueId</a>&lt; <a class="el" href="../../d2/de3/structceleritas_1_1_volume_record.html">VolumeRecord</a> &gt;</td></tr>
+<tr class="separator:a613d5ffdd22d2fd333c6d7447be22e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -109,16 +110,13 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a7fac298e7e4a06733b96abd820da1bc4"><td class="memItemLeft" align="right" valign="top"><a id="a7fac298e7e4a06733b96abd820da1bc4" name="a7fac298e7e4a06733b96abd820da1bc4"></a>
 <a class="el" href="../../db/d8b/_collection_8hh.html#a89741da60e12f348c4d1fd59e39c5dda">ItemRange</a>&lt; <a class="el" href="../../d9/d25/structceleritas_1_1_connectivity.html">Connectivity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>connectivity</b></td></tr>
 <tr class="separator:a7fac298e7e4a06733b96abd820da1bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7132d49674c684451c78573670b19eec"><td class="memItemLeft" align="right" valign="top"><a id="a7132d49674c684451c78573670b19eec" name="a7132d49674c684451c78573670b19eec"></a>
-<a class="el" href="../../d3/d95/classceleritas_1_1_range.html">VolumeRecordRange</a>&#160;</td><td class="memItemRight" valign="bottom"><b>volumes</b></td></tr>
-<tr class="separator:a7132d49674c684451c78573670b19eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca22594d368d30639c0e13966b6d0aec"><td class="memItemLeft" align="right" valign="top"><a id="aca22594d368d30639c0e13966b6d0aec" name="aca22594d368d30639c0e13966b6d0aec"></a>
-<a class="el" href="../../db/d8b/_collection_8hh.html#a89741da60e12f348c4d1fd59e39c5dda">ItemRange</a>&lt; <a class="el" href="../../d7/d3b/_orange_types_8hh.html#a0f53d6740b99dd9d05b697edf8411b81">Translation</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>translations</b></td></tr>
-<tr class="separator:aca22594d368d30639c0e13966b6d0aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43accdc25d1885a0345fc6784ccde959"><td class="memItemLeft" align="right" valign="top"><a id="a43accdc25d1885a0345fc6784ccde959" name="a43accdc25d1885a0345fc6784ccde959"></a>
-<a class="el" href="../../d1/dd1/_vecgeom_data_8hh.html#a8c97752c08c841e3faf0173adb2e1525">VolumeId</a>&#160;</td><td class="memItemRight" valign="bottom"><b>background</b> {}</td></tr>
-<tr class="memdesc:a43accdc25d1885a0345fc6784ccde959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default if not in any other volume. <br /></td></tr>
-<tr class="separator:a43accdc25d1885a0345fc6784ccde959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a388a9033077bf7fb68bbfac3b5ecdc1c"><td class="memItemLeft" align="right" valign="top"><a id="a388a9033077bf7fb68bbfac3b5ecdc1c" name="a388a9033077bf7fb68bbfac3b5ecdc1c"></a>
+<a class="el" href="../../d4/d15/classceleritas_1_1_item_map.html">ItemMap</a>&lt; <a class="el" href="../../d7/d3b/_orange_types_8hh.html#af87193b89f543ca04da5fafc093ca36d">LocalVolumeId</a>, <a class="el" href="../../dd/dbb/classceleritas_1_1_opaque_id.html">VolumeRecordId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>volumes</b></td></tr>
+<tr class="separator:a388a9033077bf7fb68bbfac3b5ecdc1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a880400d435af0d5e919a49fd2e064584"><td class="memItemLeft" align="right" valign="top"><a id="a880400d435af0d5e919a49fd2e064584" name="a880400d435af0d5e919a49fd2e064584"></a>
+<a class="el" href="../../d7/d3b/_orange_types_8hh.html#af87193b89f543ca04da5fafc093ca36d">LocalVolumeId</a>&#160;</td><td class="memItemRight" valign="bottom"><b>background</b> {}</td></tr>
+<tr class="memdesc:a880400d435af0d5e919a49fd2e064584"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default if not in any other volume. <br /></td></tr>
+<tr class="separator:a880400d435af0d5e919a49fd2e064584"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62148129d7c189cd5f54ff3e83e7d1b6"><td class="memItemLeft" align="right" valign="top"><a id="a62148129d7c189cd5f54ff3e83e7d1b6" name="a62148129d7c189cd5f54ff3e83e7d1b6"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>simple_safety</b> {}</td></tr>
 <tr class="separator:a62148129d7c189cd5f54ff3e83e7d1b6"><td class="memSeparator" colspan="2">&#160;</td></tr>

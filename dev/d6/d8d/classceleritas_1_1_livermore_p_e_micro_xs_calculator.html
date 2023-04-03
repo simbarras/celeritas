@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -88,16 +89,18 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:ae2b63f746aca8d7632d97ce38910f2ff"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d8d/classceleritas_1_1_livermore_p_e_micro_xs_calculator.html#ae2b63f746aca8d7632d97ce38910f2ff">XsUnits</a> = <a class="el" href="../../d6/dcb/structceleritas_1_1units_1_1_barn.html">LivermoreSubshell::XsUnits</a></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:ae2b63f746aca8d7632d97ce38910f2ff"><td class="memItemLeft" align="right" valign="top"><a id="ae2b63f746aca8d7632d97ce38910f2ff" name="ae2b63f746aca8d7632d97ce38910f2ff"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>XsUnits</b> = <a class="el" href="../../d6/dcb/structceleritas_1_1units_1_1_barn.html">LivermoreSubshell::XsUnits</a></td></tr>
 <tr class="separator:ae2b63f746aca8d7632d97ce38910f2ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a7d0dfbc0326697dee24248335d953c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d8d/classceleritas_1_1_livermore_p_e_micro_xs_calculator.html#a3a7d0dfbc0326697dee24248335d953c">Energy</a> = <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Quantity</a>&lt; <a class="el" href="../../d5/d05/structceleritas_1_1units_1_1_mev.html">LivermoreSubshell::EnergyUnits</a> &gt;</td></tr>
+<tr class="memitem:a3a7d0dfbc0326697dee24248335d953c"><td class="memItemLeft" align="right" valign="top"><a id="a3a7d0dfbc0326697dee24248335d953c" name="a3a7d0dfbc0326697dee24248335d953c"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Energy</b> = <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Quantity</a>&lt; <a class="el" href="../../d5/d05/structceleritas_1_1units_1_1_mev.html">LivermoreSubshell::EnergyUnits</a> &gt;</td></tr>
 <tr class="separator:a3a7d0dfbc0326697dee24248335d953c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6e8bb0281f4e728af92814f0895ff348"><td class="memItemLeft" align="right" valign="top"><a id="a6e8bb0281f4e728af92814f0895ff348" name="a6e8bb0281f4e728af92814f0895ff348"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>LivermorePEMicroXsCalculator</b> (LivermorePERef const &amp;shared, <a class="el" href="../../d6/d8d/classceleritas_1_1_livermore_p_e_micro_xs_calculator.html#a3a7d0dfbc0326697dee24248335d953c">Energy</a> energy)</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>LivermorePEMicroXsCalculator</b> (LivermorePERef const &amp;shared, <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a> energy)</td></tr>
 <tr class="memdesc:a6e8bb0281f4e728af92814f0895ff348"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with shared and state data. <br /></td></tr>
 <tr class="separator:a6e8bb0281f4e728af92814f0895ff348"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad94a22b61eb2395d66706ec8e68a819e"><td class="memItemLeft" align="right" valign="top"><a id="ad94a22b61eb2395d66706ec8e68a819e" name="ad94a22b61eb2395d66706ec8e68a819e"></a>
@@ -107,38 +110,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Calculate photoelectric effect cross sections using the Livermore data. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a3a7d0dfbc0326697dee24248335d953c" name="a3a7d0dfbc0326697dee24248335d953c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a7d0dfbc0326697dee24248335d953c">&#9670;&#160;</a></span>Energy</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d6/d8d/classceleritas_1_1_livermore_p_e_micro_xs_calculator.html#a3a7d0dfbc0326697dee24248335d953c">celeritas::LivermorePEMicroXsCalculator::Energy</a> =  <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Quantity</a>&lt;<a class="el" href="../../d5/d05/structceleritas_1_1units_1_1_mev.html">LivermoreSubshell::EnergyUnits</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="ae2b63f746aca8d7632d97ce38910f2ff" name="ae2b63f746aca8d7632d97ce38910f2ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2b63f746aca8d7632d97ce38910f2ff">&#9670;&#160;</a></span>XsUnits</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d6/d8d/classceleritas_1_1_livermore_p_e_micro_xs_calculator.html#ae2b63f746aca8d7632d97ce38910f2ff">celeritas::LivermorePEMicroXsCalculator::XsUnits</a> =  <a class="el" href="../../d6/dcb/structceleritas_1_1units_1_1_barn.html">LivermoreSubshell::XsUnits</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="../../d4/d17/_livermore_p_e_micro_xs_calculator_8hh.html">LivermorePEMicroXsCalculator.hh</a></li>
 </ul>
 </div><!-- contents -->

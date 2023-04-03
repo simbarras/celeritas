@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -81,14 +82,12 @@ $(function() {
 <p>This is the complete list of members for <a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a>, including all inherited members.</p>
 <table class="directory">
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>device</b> (defined in <a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a>)</td><td class="entry"><a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html#ab97ff5ab4d7a2dd3c977fc8228806cc2">get_state</a>(MemSpaceTag&lt; MemSpace::host &gt;)</td><td class="entry"><a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html#ac2cdf43c323fcdc03f3661b3d57f9fbe">get_state</a>(MemSpaceTag&lt; MemSpace::device &gt;)</td><td class="entry"><a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>host</b> (defined in <a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a>)</td><td class="entry"><a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>MemSpaceTag</b> typedef (defined in <a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a>)</td><td class="entry"><a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>mumu</b> (defined in <a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a>)</td><td class="entry"><a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a></td><td class="entry"><span class="mlabel">mutable</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>params</b> (defined in <a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a>)</td><td class="entry"><a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>states</b> (defined in <a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a>)</td><td class="entry"><a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>StepStateCollection</b> typedef (defined in <a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a>)</td><td class="entry"><a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>get_states</b>() (defined in <a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a>)</td><td class="entry"><a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>host</b> (defined in <a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a>)</td><td class="entry"><a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>params</b> (defined in <a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a>)</td><td class="entry"><a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>states</b> (defined in <a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a>)</td><td class="entry"><a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>StepStateCollection</b> typedef (defined in <a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a>)</td><td class="entry"><a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>VecSSC</b> typedef (defined in <a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a>)</td><td class="entry"><a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">celeritas::detail::StepStorage</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

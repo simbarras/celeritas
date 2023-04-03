@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -95,25 +96,32 @@ Inheritance diagram for celeritas::detail::step_range_iter&lt; T &gt;:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a734beba30950a3de2b25ed8cb5758789"><td class="memItemLeft" align="right" valign="top"><a id="a734beba30950a3de2b25ed8cb5758789" name="a734beba30950a3de2b25ed8cb5758789"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>TraitsT</b> = typename <a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html#aeb9f844028f19c70776dca69df1b0bd3">Base::TraitsT</a></td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>TraitsT</b> = typename <a class="el" href="../../dc/ddf/structceleritas_1_1detail_1_1_range_type_traits.html">Base::TraitsT</a></td></tr>
 <tr class="separator:a734beba30950a3de2b25ed8cb5758789"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d796ab8ca836826d6bb6db2511be299"><td class="memItemLeft" align="right" valign="top"><a id="a7d796ab8ca836826d6bb6db2511be299" name="a7d796ab8ca836826d6bb6db2511be299"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>counter_type</b> = typename TraitsT::counter_type</td></tr>
 <tr class="separator:a7d796ab8ca836826d6bb6db2511be299"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classceleritas_1_1detail_1_1range__iter"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classceleritas_1_1detail_1_1range__iter')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html">celeritas::detail::range_iter&lt; T &gt;</a></td></tr>
-<tr class="memitem:aeb9f844028f19c70776dca69df1b0bd3 inherit pub_types_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html#aeb9f844028f19c70776dca69df1b0bd3">TraitsT</a> = <a class="el" href="../../dc/ddf/structceleritas_1_1detail_1_1_range_type_traits.html">RangeTypeTraits</a>&lt; T &gt;</td></tr>
+<tr class="memitem:aeb9f844028f19c70776dca69df1b0bd3 inherit pub_types_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top"><a id="aeb9f844028f19c70776dca69df1b0bd3" name="aeb9f844028f19c70776dca69df1b0bd3"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>TraitsT</b> = <a class="el" href="../../dc/ddf/structceleritas_1_1detail_1_1_range_type_traits.html">RangeTypeTraits</a>&lt; T &gt;</td></tr>
 <tr class="separator:aeb9f844028f19c70776dca69df1b0bd3 inherit pub_types_classceleritas_1_1detail_1_1range__iter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7ebfc697c99eba223433610fd171318 inherit pub_types_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html#af7ebfc697c99eba223433610fd171318">value_type</a> = T</td></tr>
+<tr class="memitem:af7ebfc697c99eba223433610fd171318 inherit pub_types_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top"><a id="af7ebfc697c99eba223433610fd171318" name="af7ebfc697c99eba223433610fd171318"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b> = T</td></tr>
 <tr class="separator:af7ebfc697c99eba223433610fd171318 inherit pub_types_classceleritas_1_1detail_1_1range__iter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3800f274b5e200c8dc832a606bc501f3 inherit pub_types_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html#a3800f274b5e200c8dc832a606bc501f3">counter_type</a> = typename TraitsT::counter_type</td></tr>
+<tr class="memitem:a3800f274b5e200c8dc832a606bc501f3 inherit pub_types_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top"><a id="a3800f274b5e200c8dc832a606bc501f3" name="a3800f274b5e200c8dc832a606bc501f3"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>counter_type</b> = typename TraitsT::counter_type</td></tr>
 <tr class="separator:a3800f274b5e200c8dc832a606bc501f3 inherit pub_types_classceleritas_1_1detail_1_1range__iter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2740d94c05795fb2c108b5a8e592fdc inherit pub_types_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html#ad2740d94c05795fb2c108b5a8e592fdc">iterator_category</a> = std::input_iterator_tag</td></tr>
+<tr class="memitem:ad2740d94c05795fb2c108b5a8e592fdc inherit pub_types_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top"><a id="ad2740d94c05795fb2c108b5a8e592fdc" name="ad2740d94c05795fb2c108b5a8e592fdc"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>iterator_category</b> = std::input_iterator_tag</td></tr>
 <tr class="separator:ad2740d94c05795fb2c108b5a8e592fdc inherit pub_types_classceleritas_1_1detail_1_1range__iter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cd0b0f1de489c8e4499bbae4fa34213 inherit pub_types_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html#a8cd0b0f1de489c8e4499bbae4fa34213">difference_type</a> = <a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html#af7ebfc697c99eba223433610fd171318">value_type</a></td></tr>
+<tr class="memitem:a8cd0b0f1de489c8e4499bbae4fa34213 inherit pub_types_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top"><a id="a8cd0b0f1de489c8e4499bbae4fa34213" name="a8cd0b0f1de489c8e4499bbae4fa34213"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>difference_type</b> = value_type</td></tr>
 <tr class="separator:a8cd0b0f1de489c8e4499bbae4fa34213 inherit pub_types_classceleritas_1_1detail_1_1range__iter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae334e7b70558f3d376c78a13b7187714 inherit pub_types_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html#ae334e7b70558f3d376c78a13b7187714">pointer</a> = void</td></tr>
+<tr class="memitem:ae334e7b70558f3d376c78a13b7187714 inherit pub_types_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top"><a id="ae334e7b70558f3d376c78a13b7187714" name="ae334e7b70558f3d376c78a13b7187714"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>pointer</b> = void</td></tr>
 <tr class="separator:ae334e7b70558f3d376c78a13b7187714 inherit pub_types_classceleritas_1_1detail_1_1range__iter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6323e1a7fdc12565e13ea79bc557b8c inherit pub_types_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html#aa6323e1a7fdc12565e13ea79bc557b8c">reference</a> = <a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html#af7ebfc697c99eba223433610fd171318">value_type</a></td></tr>
+<tr class="memitem:aa6323e1a7fdc12565e13ea79bc557b8c inherit pub_types_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top"><a id="aa6323e1a7fdc12565e13ea79bc557b8c" name="aa6323e1a7fdc12565e13ea79bc557b8c"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>reference</b> = value_type</td></tr>
 <tr class="separator:aa6323e1a7fdc12565e13ea79bc557b8c inherit pub_types_classceleritas_1_1detail_1_1range__iter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -143,16 +151,16 @@ template&lt;class U  = counter_type&gt; </td></tr>
 <tr class="separator:a90abdc04c789f86512fca10b9e60d47a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classceleritas_1_1detail_1_1range__iter"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classceleritas_1_1detail_1_1range__iter')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html">celeritas::detail::range_iter&lt; T &gt;</a></td></tr>
 <tr class="memitem:a0afbf35744c143654dea1f8fe4f1e288 inherit pub_methods_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top"><a id="a0afbf35744c143654dea1f8fe4f1e288" name="a0afbf35744c143654dea1f8fe4f1e288"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>range_iter</b> (<a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html#af7ebfc697c99eba223433610fd171318">value_type</a> <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148a2063c1608d6e0baf80249c42e2be5804">value</a>=TraitsT::zero())</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>range_iter</b> (value_type <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148a2063c1608d6e0baf80249c42e2be5804">value</a>=TraitsT::zero())</td></tr>
 <tr class="separator:a0afbf35744c143654dea1f8fe4f1e288 inherit pub_methods_classceleritas_1_1detail_1_1range__iter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a850c6a5e29b4ab09532cb56c92dcd09b inherit pub_methods_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top"><a id="a850c6a5e29b4ab09532cb56c92dcd09b" name="a850c6a5e29b4ab09532cb56c92dcd09b"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html#af7ebfc697c99eba223433610fd171318">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> () const</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> value_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> () const</td></tr>
 <tr class="separator:a850c6a5e29b4ab09532cb56c92dcd09b inherit pub_methods_classceleritas_1_1detail_1_1range__iter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ce9e3192a7ee887583899bce2e2601a inherit pub_methods_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top"><a id="a6ce9e3192a7ee887583899bce2e2601a" name="a6ce9e3192a7ee887583899bce2e2601a"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html#af7ebfc697c99eba223433610fd171318">value_type</a> const *&#160;</td><td class="memItemRight" valign="bottom"><b>operator-&gt;</b> () const</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> value_type const *&#160;</td><td class="memItemRight" valign="bottom"><b>operator-&gt;</b> () const</td></tr>
 <tr class="separator:a6ce9e3192a7ee887583899bce2e2601a inherit pub_methods_classceleritas_1_1detail_1_1range__iter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ca8298b0eb47ad858807140f6a0aa36 inherit pub_methods_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top"><a id="a6ca8298b0eb47ad858807140f6a0aa36" name="a6ca8298b0eb47ad858807140f6a0aa36"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html#af7ebfc697c99eba223433610fd171318">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html#a3800f274b5e200c8dc832a606bc501f3">counter_type</a> inc) const</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> value_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (counter_type inc) const</td></tr>
 <tr class="separator:a6ca8298b0eb47ad858807140f6a0aa36 inherit pub_methods_classceleritas_1_1detail_1_1range__iter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a313f14dcaa6f72a7adcff579868e4fba inherit pub_methods_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top"><a id="a313f14dcaa6f72a7adcff579868e4fba" name="a313f14dcaa6f72a7adcff579868e4fba"></a>
 <a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html">range_iter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator++</b> ()</td></tr>
@@ -161,7 +169,7 @@ template&lt;class U  = counter_type&gt; </td></tr>
 <a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html">range_iter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator++</b> (int)</td></tr>
 <tr class="separator:a89dda583e0d05262536295389c3fab11 inherit pub_methods_classceleritas_1_1detail_1_1range__iter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10c098ca5fb95aae1cb0d58fa826cb58 inherit pub_methods_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top"><a id="a10c098ca5fb95aae1cb0d58fa826cb58" name="a10c098ca5fb95aae1cb0d58fa826cb58"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html">range_iter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (<a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html#a3800f274b5e200c8dc832a606bc501f3">counter_type</a> inc) const</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html">range_iter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (counter_type inc) const</td></tr>
 <tr class="separator:a10c098ca5fb95aae1cb0d58fa826cb58 inherit pub_methods_classceleritas_1_1detail_1_1range__iter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a3bab286d78c33de907d113a207879f inherit pub_methods_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top"><a id="a0a3bab286d78c33de907d113a207879f" name="a0a3bab286d78c33de907d113a207879f"></a>
 <a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html">range_iter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator--</b> ()</td></tr>
@@ -170,7 +178,7 @@ template&lt;class U  = counter_type&gt; </td></tr>
 <a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html">range_iter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator--</b> (int)</td></tr>
 <tr class="separator:ac5bc0c6a259dedd980105c00534237e7 inherit pub_methods_classceleritas_1_1detail_1_1range__iter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9743dd23f7b9f0b52243c0a2a87b1c04 inherit pub_methods_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top"><a id="a9743dd23f7b9f0b52243c0a2a87b1c04" name="a9743dd23f7b9f0b52243c0a2a87b1c04"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html">range_iter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator-</b> (<a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html#a3800f274b5e200c8dc832a606bc501f3">counter_type</a> inc) const</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html">range_iter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator-</b> (counter_type inc) const</td></tr>
 <tr class="separator:a9743dd23f7b9f0b52243c0a2a87b1c04 inherit pub_methods_classceleritas_1_1detail_1_1range__iter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88a4b6013b7d33422cddec2abe9e7fb4 inherit pub_methods_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top"><a id="a88a4b6013b7d33422cddec2abe9e7fb4" name="a88a4b6013b7d33422cddec2abe9e7fb4"></a>
 <a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (<a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html">range_iter</a> const &amp;other) const</td></tr>
@@ -183,7 +191,7 @@ template&lt;class U  = counter_type&gt; </td></tr>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classceleritas_1_1detail_1_1range__iter"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classceleritas_1_1detail_1_1range__iter')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html">celeritas::detail::range_iter&lt; T &gt;</a></td></tr>
 <tr class="memitem:ae49734d66b3491768fb88bf6efbc63a4 inherit pro_attribs_classceleritas_1_1detail_1_1range__iter"><td class="memItemLeft" align="right" valign="top"><a id="ae49734d66b3491768fb88bf6efbc63a4" name="ae49734d66b3491768fb88bf6efbc63a4"></a>
-<a class="el" href="../../d6/dd0/classceleritas_1_1detail_1_1range__iter.html#af7ebfc697c99eba223433610fd171318">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>value_</b></td></tr>
+value_type&#160;</td><td class="memItemRight" valign="bottom"><b>value_</b></td></tr>
 <tr class="separator:ae49734d66b3491768fb88bf6efbc63a4 inherit pro_attribs_classceleritas_1_1detail_1_1range__iter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>

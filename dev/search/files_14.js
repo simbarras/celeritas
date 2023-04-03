@@ -15,8 +15,9 @@ var searchData=
   ['urbanmsc_2ehh_12',['UrbanMsc.hh',['../d1/dd2/_urban_msc_8hh.html',1,'']]],
   ['urbanmscdata_2ehh_13',['UrbanMscData.hh',['../db/d41/_urban_msc_data_8hh.html',1,'']]],
   ['urbanmschelper_2ehh_14',['UrbanMscHelper.hh',['../d1/d7f/_urban_msc_helper_8hh.html',1,'']]],
-  ['urbanmscmodel_2ecc_15',['UrbanMscModel.cc',['../d6/de2/_urban_msc_model_8cc.html',1,'']]],
-  ['urbanmscmodel_2ehh_16',['UrbanMscModel.hh',['../dd/df4/_urban_msc_model_8hh.html',1,'']]],
+  ['urbanmscparams_2ecc_15',['UrbanMscParams.cc',['../dc/d72/_urban_msc_params_8cc.html',1,'']]],
+  ['urbanmscparams_2ehh_16',['UrbanMscParams.hh',['../d9/d65/_urban_msc_params_8hh.html',1,'']]],
   ['urbanmscscatter_2ehh_17',['UrbanMscScatter.hh',['../d9/d38/_urban_msc_scatter_8hh.html',1,'']]],
-  ['urbanmscsteplimit_2ehh_18',['UrbanMscStepLimit.hh',['../d0/df5/_urban_msc_step_limit_8hh.html',1,'']]]
+  ['urbanmscsteplimit_2ehh_18',['UrbanMscStepLimit.hh',['../d0/df5/_urban_msc_step_limit_8hh.html',1,'']]],
+  ['urbanpositroncorrector_2ehh_19',['UrbanPositronCorrector.hh',['../db/da5/_urban_positron_corrector_8hh.html',1,'']]]
 ];

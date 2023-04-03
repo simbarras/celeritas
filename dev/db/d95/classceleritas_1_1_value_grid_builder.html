@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -100,8 +101,9 @@ Inheritance diagram for celeritas::ValueGridBuilder:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:af3888a2b1aad0fbbfae4c271343c70ca"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d95/classceleritas_1_1_value_grid_builder.html#af3888a2b1aad0fbbfae4c271343c70ca">ValueGridId</a> = <a class="el" href="../../db/d8b/_collection_8hh.html#a6f8d0c7bc5dfadc09ac2b566b3a55c24">ItemId</a>&lt; struct <a class="el" href="../../d5/d2f/structceleritas_1_1_xs_grid_data.html">XsGridData</a> &gt;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:af3888a2b1aad0fbbfae4c271343c70ca"><td class="memItemLeft" align="right" valign="top"><a id="af3888a2b1aad0fbbfae4c271343c70ca" name="af3888a2b1aad0fbbfae4c271343c70ca"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ValueGridId</b> = <a class="el" href="../../db/d8b/_collection_8hh.html#a6f8d0c7bc5dfadc09ac2b566b3a55c24">ItemId</a>&lt; struct <a class="el" href="../../d5/d2f/structceleritas_1_1_xs_grid_data.html">XsGridData</a> &gt;</td></tr>
 <tr class="separator:af3888a2b1aad0fbbfae4c271343c70ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -109,7 +111,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4d8c7f8dbfbd66233126754f41488b8e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d95/classceleritas_1_1_value_grid_builder.html#a4d8c7f8dbfbd66233126754f41488b8e">~ValueGridBuilder</a> ()=0</td></tr>
 <tr class="memdesc:a4d8c7f8dbfbd66233126754f41488b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for polymorphic deletion.  <a href="../../db/d95/classceleritas_1_1_value_grid_builder.html#a4d8c7f8dbfbd66233126754f41488b8e">More...</a><br /></td></tr>
 <tr class="separator:a4d8c7f8dbfbd66233126754f41488b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f2cad718039045f50443d7a2afe338b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d95/classceleritas_1_1_value_grid_builder.html#af3888a2b1aad0fbbfae4c271343c70ca">ValueGridId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d95/classceleritas_1_1_value_grid_builder.html#a9f2cad718039045f50443d7a2afe338b">build</a> (<a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html">ValueGridInserter</a>) const =0</td></tr>
+<tr class="memitem:a9f2cad718039045f50443d7a2afe338b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dd/dbb/classceleritas_1_1_opaque_id.html">ValueGridId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d95/classceleritas_1_1_value_grid_builder.html#a9f2cad718039045f50443d7a2afe338b">build</a> (<a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html">ValueGridInserter</a>) const =0</td></tr>
 <tr class="memdesc:a9f2cad718039045f50443d7a2afe338b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the grid given a mutable reference to a store.  <a href="../../db/d95/classceleritas_1_1_value_grid_builder.html#a9f2cad718039045f50443d7a2afe338b">More...</a><br /></td></tr>
 <tr class="separator:a9f2cad718039045f50443d7a2afe338b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -128,23 +130,7 @@ Protected Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Helper class for constructing on-device physics data for a single material. </p>
 <p >These builder classes are presumed to have a short/temporary lifespan and should not be retained after the setup phase. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="af3888a2b1aad0fbbfae4c271343c70ca" name="af3888a2b1aad0fbbfae4c271343c70ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3888a2b1aad0fbbfae4c271343c70ca">&#9670;&#160;</a></span>ValueGridId</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../db/d95/classceleritas_1_1_value_grid_builder.html#af3888a2b1aad0fbbfae4c271343c70ca">celeritas::ValueGridBuilder::ValueGridId</a> =  <a class="el" href="../../db/d8b/_collection_8hh.html#a6f8d0c7bc5dfadc09ac2b566b3a55c24">ItemId</a>&lt;struct <a class="el" href="../../d5/d2f/structceleritas_1_1_xs_grid_data.html">XsGridData</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4d8c7f8dbfbd66233126754f41488b8e" name="a4d8c7f8dbfbd66233126754f41488b8e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4d8c7f8dbfbd66233126754f41488b8e">&#9670;&#160;</a></span>~ValueGridBuilder()</h2>
 
@@ -238,7 +224,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="../../db/d95/classceleritas_1_1_value_grid_builder.html#af3888a2b1aad0fbbfae4c271343c70ca">ValueGridId</a> celeritas::ValueGridBuilder::build </td>
+          <td class="memname">virtual <a class="el" href="../../dd/dbb/classceleritas_1_1_opaque_id.html">ValueGridId</a> celeritas::ValueGridBuilder::build </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d5/db7/classceleritas_1_1_value_grid_inserter.html">ValueGridInserter</a>&#160;</td>
           <td class="paramname"></td><td>)</td>

@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -88,14 +89,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:afe89d1a2752ac35a61449e55af117002"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d95/classceleritas_1_1_particle_view.html#afe89d1a2752ac35a61449e55af117002">ParticleParamsRef</a> = <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#a35e5b1955aa5d7269b34c6f5044b3b69">NativeCRef</a>&lt; <a class="el" href="../../d9/d5a/structceleritas_1_1_particle_params_data.html">ParticleParamsData</a> &gt;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:afe89d1a2752ac35a61449e55af117002"><td class="memItemLeft" align="right" valign="top"><a id="afe89d1a2752ac35a61449e55af117002" name="afe89d1a2752ac35a61449e55af117002"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ParticleParamsRef</b> = <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#a35e5b1955aa5d7269b34c6f5044b3b69">NativeCRef</a>&lt; <a class="el" href="../../d9/d5a/structceleritas_1_1_particle_params_data.html">ParticleParamsData</a> &gt;</td></tr>
 <tr class="separator:afe89d1a2752ac35a61449e55af117002"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1a31ce7bb1f380487aaeed0722244b94"><td class="memItemLeft" align="right" valign="top"><a id="a1a31ce7bb1f380487aaeed0722244b94" name="a1a31ce7bb1f380487aaeed0722244b94"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ParticleView</b> (<a class="el" href="../../d6/d95/classceleritas_1_1_particle_view.html#afe89d1a2752ac35a61449e55af117002">ParticleParamsRef</a> const &amp;, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a3cea071f272f04902f40d2de68a9d7d6">ParticleId</a>)</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ParticleView</b> (ParticleParamsRef const &amp;, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a3cea071f272f04902f40d2de68a9d7d6">ParticleId</a>)</td></tr>
 <tr class="memdesc:a1a31ce7bb1f380487aaeed0722244b94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from "static" particle definitions. <br /></td></tr>
 <tr class="separator:a1a31ce7bb1f380487aaeed0722244b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2496908a4f7071ff3cbf2ae1a6199a52"><td class="memItemLeft" align="right" valign="top"><a id="a2496908a4f7071ff3cbf2ae1a6199a52" name="a2496908a4f7071ff3cbf2ae1a6199a52"></a>
@@ -114,27 +116,15 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>decay_constant</b> () const</td></tr>
 <tr class="memdesc:ab034bc6fa1288ac3fbb1a4841f173e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decay constant. <br /></td></tr>
 <tr class="separator:ab034bc6fa1288ac3fbb1a4841f173e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27b5af8fc88bfd92daf91c640974fd12"><td class="memItemLeft" align="right" valign="top"><a id="a27b5af8fc88bfd92daf91c640974fd12" name="a27b5af8fc88bfd92daf91c640974fd12"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_antiparticle</b> () const</td></tr>
+<tr class="memdesc:a27b5af8fc88bfd92daf91c640974fd12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether it is an antiparticle. <br /></td></tr>
+<tr class="separator:a27b5af8fc88bfd92daf91c640974fd12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Access invariant particle data. </p>
 <p >A <code><a class="el" href="../../d6/d95/classceleritas_1_1_particle_view.html" title="Access invariant particle data.">ParticleView</a></code> can be used to access properties of a single particle type, e.g. electron or photon. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="afe89d1a2752ac35a61449e55af117002" name="afe89d1a2752ac35a61449e55af117002"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe89d1a2752ac35a61449e55af117002">&#9670;&#160;</a></span>ParticleParamsRef</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d6/d95/classceleritas_1_1_particle_view.html#afe89d1a2752ac35a61449e55af117002">celeritas::ParticleView::ParticleParamsRef</a> =  <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#a35e5b1955aa5d7269b34c6f5044b3b69">NativeCRef</a>&lt;<a class="el" href="../../d9/d5a/structceleritas_1_1_particle_params_data.html">ParticleParamsData</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="../../d1/d43/_particle_view_8hh.html">ParticleView.hh</a></li>
 </ul>
 </div><!-- contents -->

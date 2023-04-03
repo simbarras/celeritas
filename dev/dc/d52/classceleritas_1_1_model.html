@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -82,7 +83,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Abstract base class representing a physics model.  
+<p>Abstract base class representing a physics model with a discrete action.  
  <a href="../../dc/d52/classceleritas_1_1_model.html#details">More...</a></p>
 
 <p><code>#include &lt;Model.hh&gt;</code></p>
@@ -104,7 +105,6 @@ Inheritance diagram for celeritas::Model:</div>
 <area href="../../d4/d9f/classceleritas_1_1_rayleigh_model.html" title="Set up and launch Rayleigh scattering." alt="celeritas::RayleighModel" shape="rect" coords="216,560,422,584"/>
 <area href="../../d4/dae/classceleritas_1_1_relativistic_brem_model.html" title="Set up and launch the relativistic Bremsstrahlung model for high-energy electrons and positrons with ..." alt="celeritas::RelativisticBremModel" shape="rect" coords="216,616,422,640"/>
 <area href="../../df/d20/classceleritas_1_1_seltzer_berger_model.html" title="Manage the Seltzer-Berger model for Bremsstrahlung." alt="celeritas::SeltzerBergerModel" shape="rect" coords="216,672,422,696"/>
-<area href="../../df/d67/classceleritas_1_1_urban_msc_model.html" title="Set up and launch UrbanMsc model." alt="celeritas::UrbanMscModel" shape="rect" coords="216,728,422,752"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -168,14 +168,14 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a8e571b0ab05283851e3c168b1a310622 inherit pro_methods_classceleritas_1_1_explicit_action_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Abstract base class representing a physics model. </p>
-<p >A <a class="el" href="../../dc/d52/classceleritas_1_1_model.html" title="Abstract base class representing a physics model.">Model</a> is a representation (often an approximation) to a physics process such as Compton scattering that is valid for one or more particle types in a given range (or ranges) of energy.</p>
-<p >Each <a class="el" href="../../dc/d52/classceleritas_1_1_model.html" title="Abstract base class representing a physics model.">Model</a> subclass is constructed with a unique ActionId by a <a class="el" href="../../de/db8/classceleritas_1_1_process.html" title="An interface/factory method for creating models.">Process</a>, which is effectively a group of Models. Once constructed, it is essentially immutable.</p>
+<div class="textblock"><p >Abstract base class representing a physics model with a discrete action. </p>
+<p >A <a class="el" href="../../dc/d52/classceleritas_1_1_model.html" title="Abstract base class representing a physics model with a discrete action.">Model</a> is a representation (often an approximation) to a physics process such as Compton scattering that is valid for one or more particle types in a given range (or ranges) of energy.</p>
+<p >Each <a class="el" href="../../dc/d52/classceleritas_1_1_model.html" title="Abstract base class representing a physics model with a discrete action.">Model</a> subclass is constructed with a unique ActionId by a <a class="el" href="../../de/db8/classceleritas_1_1_process.html" title="An interface/factory method for creating models.">Process</a>, which is effectively a group of Models. Once constructed, it is essentially immutable.</p>
 <p >The model assumes a few responsibilities:</p><ul>
 <li>It provides accessors for the ranges of applicability: the same model (interaction kernel) can apply to multiple particles at different energy ranges.</li>
 <li>It precalculates macroscopic cross sections for each range of applicability.</li>
 <li>It precalculates energy loss rates and range limiters for each range.</li>
-<li>If it has an interaction cross section, it provides an "interact" method for undergoing an interaction and possibly emitting secondaries.</li>
+<li>If it has an interaction cross section, it provides an "execute" method for applying the interaction and possibly emitting secondaries.</li>
 </ul>
 <p >This class is similar to Geant4's G4VContinuousDiscrete process, but more limited. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
@@ -204,7 +204,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get the applicable particle type and energy ranges of the model. </p>
 
-<p>Implemented in <a class="el" href="../../d5/d66/classceleritas_1_1_bethe_heitler_model.html#a3c0fbc1d65a029b0511bf4e7d7539071">celeritas::BetheHeitlerModel</a>, <a class="el" href="../../d5/df1/classceleritas_1_1_combined_brem_model.html#a378319d1268ec34d035dc0d0c4a70f50">celeritas::CombinedBremModel</a>, <a class="el" href="../../d0/d11/classceleritas_1_1_e_plus_g_g_model.html#a5baa37dd908b762a589258c6a11119b8">celeritas::EPlusGGModel</a>, <a class="el" href="../../dd/dc0/classceleritas_1_1_klein_nishina_model.html#a5200d69866fa4d228c78728a0c89d308">celeritas::KleinNishinaModel</a>, <a class="el" href="../../dc/dc2/classceleritas_1_1_livermore_p_e_model.html#a88a6e94de02e65203b88112b98143811">celeritas::LivermorePEModel</a>, <a class="el" href="../../de/dd4/classceleritas_1_1_moller_bhabha_model.html#a82759c593d1c6f10e508d9907c120de0">celeritas::MollerBhabhaModel</a>, <a class="el" href="../../db/d88/classceleritas_1_1_mu_bremsstrahlung_model.html#aacf3018f0d42243fbffef5f9f4fb58fb">celeritas::MuBremsstrahlungModel</a>, <a class="el" href="../../d4/d9f/classceleritas_1_1_rayleigh_model.html#a7b1679da9035c466df53c06ef1635d0d">celeritas::RayleighModel</a>, <a class="el" href="../../d4/dae/classceleritas_1_1_relativistic_brem_model.html#ad42e596ba8deceb12a7645a0dd725542">celeritas::RelativisticBremModel</a>, <a class="el" href="../../df/d20/classceleritas_1_1_seltzer_berger_model.html#a5f8f49946cd57e8f03b880cac0535213">celeritas::SeltzerBergerModel</a>, and <a class="el" href="../../df/d67/classceleritas_1_1_urban_msc_model.html#a46e550bfa2ea006b329285c02faae41e">celeritas::UrbanMscModel</a>.</p>
+<p>Implemented in <a class="el" href="../../d5/d66/classceleritas_1_1_bethe_heitler_model.html#a3c0fbc1d65a029b0511bf4e7d7539071">celeritas::BetheHeitlerModel</a>, <a class="el" href="../../d5/df1/classceleritas_1_1_combined_brem_model.html#a378319d1268ec34d035dc0d0c4a70f50">celeritas::CombinedBremModel</a>, <a class="el" href="../../d0/d11/classceleritas_1_1_e_plus_g_g_model.html#a5baa37dd908b762a589258c6a11119b8">celeritas::EPlusGGModel</a>, <a class="el" href="../../dd/dc0/classceleritas_1_1_klein_nishina_model.html#a5200d69866fa4d228c78728a0c89d308">celeritas::KleinNishinaModel</a>, <a class="el" href="../../dc/dc2/classceleritas_1_1_livermore_p_e_model.html#a88a6e94de02e65203b88112b98143811">celeritas::LivermorePEModel</a>, <a class="el" href="../../de/dd4/classceleritas_1_1_moller_bhabha_model.html#a82759c593d1c6f10e508d9907c120de0">celeritas::MollerBhabhaModel</a>, <a class="el" href="../../db/d88/classceleritas_1_1_mu_bremsstrahlung_model.html#aacf3018f0d42243fbffef5f9f4fb58fb">celeritas::MuBremsstrahlungModel</a>, <a class="el" href="../../d4/d9f/classceleritas_1_1_rayleigh_model.html#a7b1679da9035c466df53c06ef1635d0d">celeritas::RayleighModel</a>, <a class="el" href="../../d4/dae/classceleritas_1_1_relativistic_brem_model.html#ad42e596ba8deceb12a7645a0dd725542">celeritas::RelativisticBremModel</a>, and <a class="el" href="../../df/d20/classceleritas_1_1_seltzer_berger_model.html#a5f8f49946cd57e8f03b880cac0535213">celeritas::SeltzerBergerModel</a>.</p>
 
 </div>
 </div>
@@ -234,7 +234,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get the microscopic cross sections for the given particle and material. </p>
 
-<p>Implemented in <a class="el" href="../../d5/d66/classceleritas_1_1_bethe_heitler_model.html#a9e2ee3d15edeeb0eb380648146eeecf3">celeritas::BetheHeitlerModel</a>, <a class="el" href="../../d5/df1/classceleritas_1_1_combined_brem_model.html#a311170a6f2cfada52c533dbf1fe77c3d">celeritas::CombinedBremModel</a>, <a class="el" href="../../d0/d11/classceleritas_1_1_e_plus_g_g_model.html#a4fa0652f8f706dc21938bcd9dae29c80">celeritas::EPlusGGModel</a>, <a class="el" href="../../dd/dc0/classceleritas_1_1_klein_nishina_model.html#a914163cbe3f39574dd59053952b0d132">celeritas::KleinNishinaModel</a>, <a class="el" href="../../dc/dc2/classceleritas_1_1_livermore_p_e_model.html#a4414022f5bc363ad32a149c72d782fb9">celeritas::LivermorePEModel</a>, <a class="el" href="../../de/dd4/classceleritas_1_1_moller_bhabha_model.html#ab3e2948801ec61a1cbf11b2fa4ee8b5c">celeritas::MollerBhabhaModel</a>, <a class="el" href="../../db/d88/classceleritas_1_1_mu_bremsstrahlung_model.html#a9caca1783a2a225f00fbfef07871ea34">celeritas::MuBremsstrahlungModel</a>, <a class="el" href="../../d4/d9f/classceleritas_1_1_rayleigh_model.html#a6edf95aeb4d04d36436c0f5ea6340a19">celeritas::RayleighModel</a>, <a class="el" href="../../d4/dae/classceleritas_1_1_relativistic_brem_model.html#ae469ecf07f2eba1cc66a3ea0686d42c7">celeritas::RelativisticBremModel</a>, <a class="el" href="../../df/d20/classceleritas_1_1_seltzer_berger_model.html#acec4a099517c955cee5aac200e35e6e2">celeritas::SeltzerBergerModel</a>, and <a class="el" href="../../df/d67/classceleritas_1_1_urban_msc_model.html#acebc95d149c329d98cd53a8ffa133df5">celeritas::UrbanMscModel</a>.</p>
+<p>Implemented in <a class="el" href="../../d5/d66/classceleritas_1_1_bethe_heitler_model.html#a9e2ee3d15edeeb0eb380648146eeecf3">celeritas::BetheHeitlerModel</a>, <a class="el" href="../../d5/df1/classceleritas_1_1_combined_brem_model.html#a311170a6f2cfada52c533dbf1fe77c3d">celeritas::CombinedBremModel</a>, <a class="el" href="../../d0/d11/classceleritas_1_1_e_plus_g_g_model.html#a4fa0652f8f706dc21938bcd9dae29c80">celeritas::EPlusGGModel</a>, <a class="el" href="../../dd/dc0/classceleritas_1_1_klein_nishina_model.html#a914163cbe3f39574dd59053952b0d132">celeritas::KleinNishinaModel</a>, <a class="el" href="../../dc/dc2/classceleritas_1_1_livermore_p_e_model.html#a4414022f5bc363ad32a149c72d782fb9">celeritas::LivermorePEModel</a>, <a class="el" href="../../de/dd4/classceleritas_1_1_moller_bhabha_model.html#ab3e2948801ec61a1cbf11b2fa4ee8b5c">celeritas::MollerBhabhaModel</a>, <a class="el" href="../../db/d88/classceleritas_1_1_mu_bremsstrahlung_model.html#a9caca1783a2a225f00fbfef07871ea34">celeritas::MuBremsstrahlungModel</a>, <a class="el" href="../../d4/d9f/classceleritas_1_1_rayleigh_model.html#a6edf95aeb4d04d36436c0f5ea6340a19">celeritas::RayleighModel</a>, <a class="el" href="../../d4/dae/classceleritas_1_1_relativistic_brem_model.html#ae469ecf07f2eba1cc66a3ea0686d42c7">celeritas::RelativisticBremModel</a>, and <a class="el" href="../../df/d20/classceleritas_1_1_seltzer_berger_model.html#acec4a099517c955cee5aac200e35e6e2">celeritas::SeltzerBergerModel</a>.</p>
 
 </div>
 </div>

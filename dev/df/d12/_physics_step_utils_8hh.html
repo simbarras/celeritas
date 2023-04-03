@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -97,7 +98,6 @@ $(function() {
 <code>#include &quot;<a class="el" href="../../d5/da9/_selector_8hh.html">celeritas/random/Selector.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/dca/_bernoulli_distribution_8hh.html">celeritas/random/distribution/BernoulliDistribution.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d0/d5a/_generate_canonical_8hh.html">celeritas/random/distribution/GenerateCanonical.hh</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../db/d51/_cutoff_view_8hh.html">CutoffView.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d0/d1d/_particle_track_view_8hh.html">ParticleTrackView.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d4/d04/_physics_step_view_8hh.html">PhysicsStepView.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d3/dcc/_physics_track_view_8hh.html">PhysicsTrackView.hh</a>&quot;</code><br />
@@ -161,20 +161,20 @@ Functions</h2></td></tr>
 
 <p>Calculate mean energy loss over the given "true" step length. </p>
 <p >See section 7.2.4 Run Time Energy Loss Computation of the Geant4 physics manual. See also the longer discussions in section 8 of PHYS010 of the Geant3 manual (1993). Stopping power is an integral over low-exiting-energy secondaries. Above some threshold energy <em>T_c</em> we treat exiting secondaries discretely; below it, we lump them into this continuous loss term that varies based on the energy, the atomic number density, and the element number:  </p><p class="formulaDsp">
-<picture><source srcset="../../form_159_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_164_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
   \frac{dE}{dx} = N_Z \int_0^{T_c} \frac{d \sigma_Z(E, T)}{dT} T dT
-\]" src="../../form_159.png" width="165" height="33"/></picture>
+\]" src="../../form_164.png" width="165" height="33"/></picture>
 </p>
 <p> Here, the cross section is a function of the primary's energy <em>E</em> and the exiting secondary energy <em>T</em>.</p>
 <p >The stopping range <em>R</em> due to these low-energy processes is an integral over the inverse of the stopping power: basically the distance that will take a particle (without discrete processes at play) from its current energy to an energy of zero.  </p><p class="formulaDsp">
-<picture><source srcset="../../form_160_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_165_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
   R = \int_0 ^{E_0} - \frac{dx}{dE} dE .
-\]" src="../../form_160.png" width="101" height="33"/></picture>
+\]" src="../../form_165.png" width="101" height="33"/></picture>
 </p>
 <p >Both Celeritas and Geant4 approximate the range limit as the minimum range over all processes, rather than the range as a result from integrating all energy loss processes over the allowed energy range. This is usually not a problem in practice because the range will get automatically decreased by <code>range_to_step</code> , and the above range calculation neglects energy loss by discrete processes.</p>
 <p >Both Geant4 and Celeritas integrate the energy loss terms across processes to get a single energy loss vector per particle type. The range table is an integral of the mean stopping power: the total distance for the particle's energy to reach zero.</p>
 <dl class="section note"><dt>Note</dt><dd>The inverse range correction assumes range is always the integral of the stopping power/energy loss.</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000011">Todo:</a></b></dt><dd>The geant3 manual makes the point that linear interpolation of energy loss rate results in a piecewise constant energy deposition curve, which is why they use spline interpolation. Investigate higher-order reconstruction of energy loss curve, e.g. through spline-based interpolation or log-log interpolation.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000013">Todo:</a></b></dt><dd>The geant3 manual makes the point that linear interpolation of energy loss rate results in a piecewise constant energy deposition curve, which is why they use spline interpolation. Investigate higher-order reconstruction of energy loss curve, e.g. through spline-based interpolation or log-log interpolation.</dd></dl>
 <p >Zero energy loss can occur in the following cases:</p><ul>
 <li>The energy loss value at the given energy is zero (e.g. high energy particles)</li>
 <li>The urban model is selected and samples zero collisions (possible in thin materials and/or small steps) </li>

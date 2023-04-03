@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -100,14 +101,14 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6b921906cf392c26c7181168ea92ce94"><td class="memTemplParams" colspan="2">template&lt;MemSpace M&gt; </td></tr>
-<tr class="memitem:a6b921906cf392c26c7181168ea92ce94"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d4c/_xorwow_rng_data_8cc.html#a6b921906cf392c26c7181168ea92ce94">celeritas::resize</a> (XorwowRngStateData&lt; Ownership::value, M &gt; *state, HostCRef&lt; XorwowRngParamsData &gt; const &amp;params, size_type size)</td></tr>
-<tr class="memdesc:a6b921906cf392c26c7181168ea92ce94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize and initialize with the seed stored in params.  <a href="../../d0/d4c/_xorwow_rng_data_8cc.html#a6b921906cf392c26c7181168ea92ce94">More...</a><br /></td></tr>
-<tr class="separator:a6b921906cf392c26c7181168ea92ce94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d87f17e11e92870df43d6ab30b57ea1"><td class="memTemplParams" colspan="2">template&lt;MemSpace M&gt; </td></tr>
+<tr class="memitem:a3d87f17e11e92870df43d6ab30b57ea1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d4c/_xorwow_rng_data_8cc.html#a3d87f17e11e92870df43d6ab30b57ea1">celeritas::resize</a> (XorwowRngStateData&lt; Ownership::value, M &gt; *state, HostCRef&lt; XorwowRngParamsData &gt; const &amp;params, StreamId stream, size_type size)</td></tr>
+<tr class="memdesc:a3d87f17e11e92870df43d6ab30b57ea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize and initialize with the seed stored in params.  <a href="../../d0/d4c/_xorwow_rng_data_8cc.html#a3d87f17e11e92870df43d6ab30b57ea1">More...</a><br /></td></tr>
+<tr class="separator:a3d87f17e11e92870df43d6ab30b57ea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a6b921906cf392c26c7181168ea92ce94" name="a6b921906cf392c26c7181168ea92ce94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b921906cf392c26c7181168ea92ce94">&#9670;&#160;</a></span>resize()</h2>
+<a id="a3d87f17e11e92870df43d6ab30b57ea1" name="a3d87f17e11e92870df43d6ab30b57ea1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d87f17e11e92870df43d6ab30b57ea1">&#9670;&#160;</a></span>resize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -125,6 +126,12 @@ template&lt;MemSpace M&gt; </div>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d0/df5/corecel_2_types_8hh.html#a68689dbf9eb486a67222e2fe2b496e71">HostCRef</a>&lt; <a class="el" href="../../d4/d17/structceleritas_1_1_xorwow_rng_params_data.html">XorwowRngParamsData</a> &gt; const &amp;&#160;</td>
           <td class="paramname"><em>params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d3/d83/_thread_id_8hh.html#a7806481555d1de2f63c29ded6fda4adc">StreamId</a>&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

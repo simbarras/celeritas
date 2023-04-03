@@ -3,7 +3,7 @@ var searchData=
   ['nativeunit_0',['NativeUnit',['../d8/dc6/structceleritas_1_1units_1_1_native_unit.html',1,'celeritas::units']]],
   ['navstatepooldeleter_1',['NavStatePoolDeleter',['../dd/dcd/structceleritas_1_1detail_1_1_nav_state_pool_deleter.html',1,'celeritas::detail']]],
   ['nodata_2',['NoData',['../db/d63/structceleritas_1_1_no_data.html',1,'celeritas']]],
-  ['noelossapplier_3',['NoElossApplier',['../d8/de9/structceleritas_1_1detail_1_1_no_eloss_applier.html',1,'celeritas::detail']]],
+  ['noeloss_3',['NoELoss',['../d1/d8e/structceleritas_1_1detail_1_1_no_e_loss.html',1,'celeritas::detail']]],
   ['nomsc_4',['NoMsc',['../de/def/structceleritas_1_1detail_1_1_no_msc.html',1,'celeritas::detail']]],
   ['nonuniformgrid_5',['NonuniformGrid',['../de/dcc/classceleritas_1_1_nonuniform_grid.html',1,'celeritas']]],
   ['nonuniformgrid_3c_20real_5ftype_20_3e_6',['NonuniformGrid&lt; real_type &gt;',['../de/dcc/classceleritas_1_1_nonuniform_grid.html',1,'celeritas']]],

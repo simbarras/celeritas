@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -99,6 +100,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a12005778fa6da3bed1b9e43966170495"><td class="memItemLeft" align="right" valign="top"><a id="a12005778fa6da3bed1b9e43966170495" name="a12005778fa6da3bed1b9e43966170495"></a>
 std::shared_ptr&lt; <a class="el" href="../../de/d76/classceleritas_1_1_core_params.html">CoreParams</a> const  &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>params</b></td></tr>
 <tr class="separator:a12005778fa6da3bed1b9e43966170495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaef5a6577ec0db96f57a0fcaa5350d07"><td class="memItemLeft" align="right" valign="top"><a id="aaef5a6577ec0db96f57a0fcaa5350d07" name="aaef5a6577ec0db96f57a0fcaa5350d07"></a>
+<a class="el" href="../../d3/d83/_thread_id_8hh.html#a7806481555d1de2f63c29ded6fda4adc">StreamId</a>&#160;</td><td class="memItemRight" valign="bottom"><b>stream_id</b> {}</td></tr>
+<tr class="separator:aaef5a6577ec0db96f57a0fcaa5350d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57d14102c28d6cc34765f5058b3a4d25"><td class="memItemLeft" align="right" valign="top"><a id="a57d14102c28d6cc34765f5058b3a4d25" name="a57d14102c28d6cc34765f5058b3a4d25"></a>
 size_type&#160;</td><td class="memItemRight" valign="bottom"><b>num_track_slots</b> {}</td></tr>
 <tr class="separator:a57d14102c28d6cc34765f5058b3a4d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,7 +114,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>sync</b> {false}</td>
 <div class="textblock"><p >State-specific options for the stepper. </p>
 <ul>
 <li><code>params</code> : Problem definition</li>
-<li><code>num_track_slots</code> : Maximum number of threads to run in parallel on GPU</li>
+<li><code>num_track_slots</code> : Maximum number of threads to run in parallel on GPU <code>stream_id</code> : Unique (thread/task) ID for this process</li>
 <li><code>sync</code> : Whether to synchronize device between actions </li>
 </ul>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>

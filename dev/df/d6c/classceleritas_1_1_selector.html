@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -88,16 +89,18 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a605ccaeb045b2171f9bc97a3807b034a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d6c/classceleritas_1_1_selector.html#a605ccaeb045b2171f9bc97a3807b034a">value_type</a> = T</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a605ccaeb045b2171f9bc97a3807b034a"><td class="memItemLeft" align="right" valign="top"><a id="a605ccaeb045b2171f9bc97a3807b034a" name="a605ccaeb045b2171f9bc97a3807b034a"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b> = T</td></tr>
 <tr class="separator:a605ccaeb045b2171f9bc97a3807b034a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab010d24bfcca17cf326d20b8475f3c7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d6c/classceleritas_1_1_selector.html#aab010d24bfcca17cf326d20b8475f3c7">real_type</a> = typename std::result_of&lt; F(<a class="el" href="../../df/d6c/classceleritas_1_1_selector.html#a605ccaeb045b2171f9bc97a3807b034a">value_type</a>)&gt;::type</td></tr>
+<tr class="memitem:aab010d24bfcca17cf326d20b8475f3c7"><td class="memItemLeft" align="right" valign="top"><a id="aab010d24bfcca17cf326d20b8475f3c7" name="aab010d24bfcca17cf326d20b8475f3c7"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>real_type</b> = typename std::result_of&lt; F(value_type)&gt;::type</td></tr>
 <tr class="separator:aab010d24bfcca17cf326d20b8475f3c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a02e074f83f362ed905f22441036ffcd0"><td class="memItemLeft" align="right" valign="top"><a id="a02e074f83f362ed905f22441036ffcd0" name="a02e074f83f362ed905f22441036ffcd0"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Selector</b> (F &amp;&amp;eval, <a class="el" href="../../df/d6c/classceleritas_1_1_selector.html#a605ccaeb045b2171f9bc97a3807b034a">value_type</a> size, <a class="el" href="../../df/d6c/classceleritas_1_1_selector.html#aab010d24bfcca17cf326d20b8475f3c7">real_type</a> total)</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Selector</b> (F &amp;&amp;eval, value_type size, real_type total)</td></tr>
 <tr class="memdesc:a02e074f83f362ed905f22441036ffcd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with function, size, and accumulated value. <br /></td></tr>
 <tr class="separator:a02e074f83f362ed905f22441036ffcd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a630827c1242fdd021cf06836bd8d13e3"><td class="memTemplParams" colspan="2"><a id="a630827c1242fdd021cf06836bd8d13e3" name="a630827c1242fdd021cf06836bd8d13e3"></a>
@@ -118,46 +121,11 @@ class celeritas::Selector&lt; F, T &gt;</div><p >On-the-fly selection of a weigh
 <div class="line">ElementId el = select_el(rng);</div>
 <div class="ttc" id="a_selector_8hh_html_a14e73b418a71954c335eb18985857521"><div class="ttname"><a href="../../d5/da9/_selector_8hh.html#a14e73b418a71954c335eb18985857521">celeritas::make_selector</a></div><div class="ttdeci">CELER_FUNCTION Selector&lt; F, T &gt; make_selector(F &amp;&amp;func, T size, decltype(func(size)) total=1)</div><div class="ttdoc">Create a selector object from a function and total accumulated value.</div><div class="ttdef"><b>Definition:</b> Selector.hh:87</div></div>
 <div class="ttc" id="aclassceleritas_1_1_opaque_id_html"><div class="ttname"><a href="../../dd/dbb/classceleritas_1_1_opaque_id.html">celeritas::OpaqueId&lt; struct ElementRecord &gt;</a></div></div>
-<div class="ttc" id="aclassceleritas_1_1_opaque_id_html_a7f254e60ab9d65b336d782f834fc5fd1"><div class="ttname"><a href="../../dd/dbb/classceleritas_1_1_opaque_id.html#a7f254e60ab9d65b336d782f834fc5fd1">celeritas::OpaqueId::get</a></div><div class="ttdeci">size_type get() const</div><div class="ttdoc">Get the ID's value.</div><div class="ttdef"><b>Definition:</b> OpaqueId.hh:58</div></div>
+<div class="ttc" id="aclassceleritas_1_1_opaque_id_html_a7f254e60ab9d65b336d782f834fc5fd1"><div class="ttname"><a href="../../dd/dbb/classceleritas_1_1_opaque_id.html#a7f254e60ab9d65b336d782f834fc5fd1">celeritas::OpaqueId::get</a></div><div class="ttdeci">size_type get() const</div><div class="ttdoc">Get the ID's value.</div><div class="ttdef"><b>Definition:</b> OpaqueId.hh:75</div></div>
 </div><!-- fragment --><p> or </p><div class="fragment"><div class="line"><span class="keyword">auto</span> select_val = <a class="code hl_function" href="../../d5/da9/_selector_8hh.html#a14e73b418a71954c335eb18985857521">make_selector</a>([](size_type i) { <span class="keywordflow">return</span> pdf[i]; },</div>
 <div class="line">                                pdf.size());</div>
 <div class="line">size_type idx = select_val(rng);</div>
-</div><!-- fragment --> </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="aab010d24bfcca17cf326d20b8475f3c7" name="aab010d24bfcca17cf326d20b8475f3c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab010d24bfcca17cf326d20b8475f3c7">&#9670;&#160;</a></span>real_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class F , class T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../df/d6c/classceleritas_1_1_selector.html">celeritas::Selector</a>&lt; F, T &gt;::real_type =  typename std::result_of&lt;F(<a class="el" href="../../df/d6c/classceleritas_1_1_selector.html#a605ccaeb045b2171f9bc97a3807b034a">value_type</a>)&gt;::type</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="a605ccaeb045b2171f9bc97a3807b034a" name="a605ccaeb045b2171f9bc97a3807b034a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a605ccaeb045b2171f9bc97a3807b034a">&#9670;&#160;</a></span>value_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class F , class T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../df/d6c/classceleritas_1_1_selector.html">celeritas::Selector</a>&lt; F, T &gt;::value_type =  T</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+</div><!-- fragment --> </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="../../d5/da9/_selector_8hh.html">Selector.hh</a></li>
 </ul>
 </div><!-- contents -->

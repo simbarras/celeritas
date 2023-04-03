@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -88,15 +89,17 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a27f9ab618389513b32ef559efc29f3b7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d58/classceleritas_1_1_energy_loss_gamma_distribution.html#a27f9ab618389513b32ef559efc29f3b7">Energy</a> = <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::MevEnergy</a></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a27f9ab618389513b32ef559efc29f3b7"><td class="memItemLeft" align="right" valign="top"><a id="a27f9ab618389513b32ef559efc29f3b7" name="a27f9ab618389513b32ef559efc29f3b7"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Energy</b> = <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::MevEnergy</a></td></tr>
 <tr class="separator:a27f9ab618389513b32ef559efc29f3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3dd077ee023de8246d7b257079b09ee1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d58/classceleritas_1_1_energy_loss_gamma_distribution.html#a3dd077ee023de8246d7b257079b09ee1">EnergySq</a> = <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Quantity</a>&lt; <a class="el" href="../../d7/dec/structceleritas_1_1_unit_product.html">UnitProduct</a>&lt; <a class="el" href="../../d5/d05/structceleritas_1_1units_1_1_mev.html">units::Mev</a>, <a class="el" href="../../d5/d05/structceleritas_1_1units_1_1_mev.html">units::Mev</a> &gt; &gt;</td></tr>
+<tr class="memitem:a3dd077ee023de8246d7b257079b09ee1"><td class="memItemLeft" align="right" valign="top"><a id="a3dd077ee023de8246d7b257079b09ee1" name="a3dd077ee023de8246d7b257079b09ee1"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>EnergySq</b> = <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Quantity</a>&lt; <a class="el" href="../../d7/dec/structceleritas_1_1_unit_product.html">UnitProduct</a>&lt; <a class="el" href="../../d5/d05/structceleritas_1_1units_1_1_mev.html">units::Mev</a>, <a class="el" href="../../d5/d05/structceleritas_1_1units_1_1_mev.html">units::Mev</a> &gt; &gt;</td></tr>
 <tr class="separator:a3dd077ee023de8246d7b257079b09ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a61f6546539f77213e6f2a936e0e08ef9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d58/classceleritas_1_1_energy_loss_gamma_distribution.html#a61f6546539f77213e6f2a936e0e08ef9">EnergyLossGammaDistribution</a> (<a class="el" href="../../df/d58/classceleritas_1_1_energy_loss_gamma_distribution.html#a27f9ab618389513b32ef559efc29f3b7">Energy</a> mean_loss, <a class="el" href="../../df/d58/classceleritas_1_1_energy_loss_gamma_distribution.html#a3dd077ee023de8246d7b257079b09ee1">EnergySq</a> bohr_var)</td></tr>
+<tr class="memitem:a61f6546539f77213e6f2a936e0e08ef9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d58/classceleritas_1_1_energy_loss_gamma_distribution.html#a61f6546539f77213e6f2a936e0e08ef9">EnergyLossGammaDistribution</a> (<a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a> mean_loss, <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">EnergySq</a> bohr_var)</td></tr>
 <tr class="memdesc:a61f6546539f77213e6f2a936e0e08ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from distribution parameters.  <a href="../../df/d58/classceleritas_1_1_energy_loss_gamma_distribution.html#a61f6546539f77213e6f2a936e0e08ef9">More...</a><br /></td></tr>
 <tr class="separator:a61f6546539f77213e6f2a936e0e08ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad213ebbf910d2bab3d30b78ccbf170c4"><td class="memItemLeft" align="right" valign="top"><a id="ad213ebbf910d2bab3d30b78ccbf170c4" name="ad213ebbf910d2bab3d30b78ccbf170c4"></a>
@@ -105,7 +108,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad213ebbf910d2bab3d30b78ccbf170c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15e2a882ba6c7fb53836eb02523aedeb"><td class="memTemplParams" colspan="2"><a id="a15e2a882ba6c7fb53836eb02523aedeb" name="a15e2a882ba6c7fb53836eb02523aedeb"></a>
 template&lt;class Generator &gt; </td></tr>
-<tr class="memitem:a15e2a882ba6c7fb53836eb02523aedeb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../df/d58/classceleritas_1_1_energy_loss_gamma_distribution.html#a27f9ab618389513b32ef559efc29f3b7">Energy</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (Generator &amp;rng)</td></tr>
+<tr class="memitem:a15e2a882ba6c7fb53836eb02523aedeb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (Generator &amp;rng)</td></tr>
 <tr class="memdesc:a15e2a882ba6c7fb53836eb02523aedeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample energy loss according to the distribution. <br /></td></tr>
 <tr class="separator:a15e2a882ba6c7fb53836eb02523aedeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -113,38 +116,7 @@ template&lt;class Generator &gt; </td></tr>
 <div class="textblock"><p >Sample energy loss from a gamma distribution. </p>
 <p >This model is valid for heavy particles with small mean losses (less than 2 Bohr standard deviations). It is a special case of <code><a class="el" href="../../db/d4b/classceleritas_1_1_energy_loss_gaussian_distribution.html" title="Sample energy loss from a Gaussian distribution.">EnergyLossGaussianDistribution</a></code> (see that class for more documentation).</p>
 <p >Note that while this appears in G4UniversalFluctuation, the Geant4 documentation does not explain why the loss is sampled from a gamma distribution in this case. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a27f9ab618389513b32ef559efc29f3b7" name="a27f9ab618389513b32ef559efc29f3b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27f9ab618389513b32ef559efc29f3b7">&#9670;&#160;</a></span>Energy</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../df/d58/classceleritas_1_1_energy_loss_gamma_distribution.html#a27f9ab618389513b32ef559efc29f3b7">celeritas::EnergyLossGammaDistribution::Energy</a> =  <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::MevEnergy</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="a3dd077ee023de8246d7b257079b09ee1" name="a3dd077ee023de8246d7b257079b09ee1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3dd077ee023de8246d7b257079b09ee1">&#9670;&#160;</a></span>EnergySq</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../df/d58/classceleritas_1_1_energy_loss_gamma_distribution.html#a3dd077ee023de8246d7b257079b09ee1">celeritas::EnergyLossGammaDistribution::EnergySq</a> =  <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Quantity</a>&lt;<a class="el" href="../../d7/dec/structceleritas_1_1_unit_product.html">UnitProduct</a>&lt;<a class="el" href="../../d5/d05/structceleritas_1_1units_1_1_mev.html">units::Mev</a>, <a class="el" href="../../d5/d05/structceleritas_1_1units_1_1_mev.html">units::Mev</a>&gt; &gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a61f6546539f77213e6f2a936e0e08ef9" name="a61f6546539f77213e6f2a936e0e08ef9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a61f6546539f77213e6f2a936e0e08ef9">&#9670;&#160;</a></span>EnergyLossGammaDistribution()</h2>
 
@@ -157,13 +129,13 @@ template&lt;class Generator &gt; </td></tr>
         <tr>
           <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> celeritas::EnergyLossGammaDistribution::EnergyLossGammaDistribution </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../df/d58/classceleritas_1_1_energy_loss_gamma_distribution.html#a27f9ab618389513b32ef559efc29f3b7">Energy</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a>&#160;</td>
           <td class="paramname"><em>mean_loss</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../df/d58/classceleritas_1_1_energy_loss_gamma_distribution.html#a3dd077ee023de8246d7b257079b09ee1">EnergySq</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">EnergySq</a>&#160;</td>
           <td class="paramname"><em>bohr_var</em>&#160;</td>
         </tr>
         <tr>

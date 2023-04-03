@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -77,6 +78,7 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="../../de/dc0/classceleritas_1_1_root_step_writer-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">celeritas::RootStepWriter Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
 </div><!--header-->
@@ -96,6 +98,15 @@ Inheritance diagram for celeritas::RootStepWriter:</div>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d48/structceleritas_1_1_root_step_writer_1_1_t_step_data.html">TStepData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Truth step data; Naming convention must match <a class="el" href="../../dd/d0b/structceleritas_1_1_step_state_data.html" title="Gathered data for a single step for many tracks in parallel.">StepStateData</a>.  <a href="../../dd/d48/structceleritas_1_1_root_step_writer_1_1_t_step_data.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1a/structceleritas_1_1_root_step_writer_1_1_t_step_point.html">TStepPoint</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Truth step point data; Naming convention must match <a class="el" href="../../d7/d97/structceleritas_1_1_step_point_state_data.html" title="Gathered state data for beginning/end of step data for tracks in parallel.">StepPointStateData</a>.  <a href="../../db/d1a/structceleritas_1_1_root_step_writer_1_1_t_step_point.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
@@ -105,25 +116,32 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>SPRootFileManager</b
 <tr class="memitem:a3a6badffacde3696df8f4aeca067b2a2"><td class="memItemLeft" align="right" valign="top"><a id="a3a6badffacde3696df8f4aeca067b2a2" name="a3a6badffacde3696df8f4aeca067b2a2"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>SPParticleParams</b> = std::shared_ptr&lt; <a class="el" href="../../d8/d0b/classceleritas_1_1_particle_params.html">ParticleParams</a> const  &gt;</td></tr>
 <tr class="separator:a3a6badffacde3696df8f4aeca067b2a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f8b0f005703c98d0a756445785085c8"><td class="memItemLeft" align="right" valign="top"><a id="a0f8b0f005703c98d0a756445785085c8" name="a0f8b0f005703c98d0a756445785085c8"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>WriteFilter</b> = std::function&lt; bool(<a class="el" href="../../dd/d48/structceleritas_1_1_root_step_writer_1_1_t_step_data.html">TStepData</a> const  &amp;)&gt;</td></tr>
+<tr class="separator:a0f8b0f005703c98d0a756445785085c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classceleritas_1_1_step_interface"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classceleritas_1_1_step_interface')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../d6/dc0/classceleritas_1_1_step_interface.html">celeritas::StepInterface</a></td></tr>
 <tr class="memitem:a7e422a75399af8523dbcae5445cf109d inherit pub_types_classceleritas_1_1_step_interface"><td class="memItemLeft" align="right" valign="top"><a id="a7e422a75399af8523dbcae5445cf109d" name="a7e422a75399af8523dbcae5445cf109d"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>StateHostRef</b> = <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#afcc496fb064835f19a6c4506a430fec6">HostRef</a>&lt; <a class="el" href="../../dd/d0b/structceleritas_1_1_step_state_data.html">StepStateData</a> &gt;</td></tr>
-<tr class="memdesc:a7e422a75399af8523dbcae5445cf109d inherit pub_types_classceleritas_1_1_step_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selection of data required for this interface. <br /></td></tr>
+<tr class="memdesc:a7e422a75399af8523dbcae5445cf109d inherit pub_types_classceleritas_1_1_step_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detector filtering required for this interface. <br /></td></tr>
 <tr class="separator:a7e422a75399af8523dbcae5445cf109d inherit pub_types_classceleritas_1_1_step_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1a50ef5dcf0d2b72b2d6171bb3092ea inherit pub_types_classceleritas_1_1_step_interface"><td class="memItemLeft" align="right" valign="top"><a id="ab1a50ef5dcf0d2b72b2d6171bb3092ea" name="ab1a50ef5dcf0d2b72b2d6171bb3092ea"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>StateDeviceRef</b> = <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#abd6577dbd8a882077b6b36372a789f68">DeviceRef</a>&lt; <a class="el" href="../../dd/d0b/structceleritas_1_1_step_state_data.html">StepStateData</a> &gt;</td></tr>
-<tr class="memdesc:ab1a50ef5dcf0d2b72b2d6171bb3092ea inherit pub_types_classceleritas_1_1_step_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selection of data required for this interface. <br /></td></tr>
+<tr class="memdesc:ab1a50ef5dcf0d2b72b2d6171bb3092ea inherit pub_types_classceleritas_1_1_step_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detector filtering required for this interface. <br /></td></tr>
 <tr class="separator:ab1a50ef5dcf0d2b72b2d6171bb3092ea inherit pub_types_classceleritas_1_1_step_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada9256c6cc789d3a6ebe0e3862fd3514 inherit pub_types_classceleritas_1_1_step_interface"><td class="memItemLeft" align="right" valign="top"><a id="ada9256c6cc789d3a6ebe0e3862fd3514" name="ada9256c6cc789d3a6ebe0e3862fd3514"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>MapVolumeDetector</b> = std::map&lt; <a class="el" href="../../d1/dd1/_vecgeom_data_8hh.html#a8c97752c08c841e3faf0173adb2e1525">VolumeId</a>, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#ac2659ed100e11ccffa767695ca6b8a81">DetectorId</a> &gt;</td></tr>
-<tr class="memdesc:ada9256c6cc789d3a6ebe0e3862fd3514 inherit pub_types_classceleritas_1_1_step_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selection of data required for this interface. <br /></td></tr>
+<tr class="memdesc:ada9256c6cc789d3a6ebe0e3862fd3514 inherit pub_types_classceleritas_1_1_step_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detector filtering required for this interface. <br /></td></tr>
 <tr class="separator:ada9256c6cc789d3a6ebe0e3862fd3514 inherit pub_types_classceleritas_1_1_step_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a6564df36e736496f715df157aed7b91e"><td class="memItemLeft" align="right" valign="top"><a id="a6564df36e736496f715df157aed7b91e" name="a6564df36e736496f715df157aed7b91e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RootStepWriter</b> (SPRootFileManager root_manager, SPParticleParams particle_params, <a class="el" href="../../d7/d26/structceleritas_1_1_step_selection.html">StepSelection</a> <a class="el" href="../../d9/d56/classceleritas_1_1_root_step_writer.html#a2fef9b5998126183295ffa47728f2ea5">selection</a>, WriteFilter filter)</td></tr>
+<tr class="memdesc:a6564df36e736496f715df157aed7b91e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct writer with user-defined data filtering. <br /></td></tr>
+<tr class="separator:a6564df36e736496f715df157aed7b91e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab26514c5ef26d2ff4947b6ba22ea3f51"><td class="memItemLeft" align="right" valign="top"><a id="ab26514c5ef26d2ff4947b6ba22ea3f51" name="ab26514c5ef26d2ff4947b6ba22ea3f51"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>RootStepWriter</b> (SPRootFileManager root_manager, SPParticleParams particle_params, <a class="el" href="../../d7/d26/structceleritas_1_1_step_selection.html">StepSelection</a> <a class="el" href="../../d9/d56/classceleritas_1_1_root_step_writer.html#a2fef9b5998126183295ffa47728f2ea5">selection</a>)</td></tr>
-<tr class="memdesc:ab26514c5ef26d2ff4947b6ba22ea3f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct writer with <a class="el" href="../../d9/da0/classceleritas_1_1_root_file_manager.html" title="ROOT TFile manager.">RootFileManager</a>, <a class="el" href="../../d8/d0b/classceleritas_1_1_particle_params.html" title="Data management for Standard Model particle classifications.">ParticleParams</a> (to convert particle id to pdg), and the selection of data to be tallied. <br /></td></tr>
+<tr class="memdesc:ab26514c5ef26d2ff4947b6ba22ea3f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct writer without data filtering. <br /></td></tr>
 <tr class="separator:ab26514c5ef26d2ff4947b6ba22ea3f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9717698c02482b65a76c9a07477cbba6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d56/classceleritas_1_1_root_step_writer.html#a9717698c02482b65a76c9a07477cbba6">set_auto_flush</a> (long num_entries)</td></tr>
 <tr class="memdesc:a9717698c02482b65a76c9a07477cbba6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of entries (i.e.  <a href="../../d9/d56/classceleritas_1_1_root_step_writer.html#a9717698c02482b65a76c9a07477cbba6">More...</a><br /></td></tr>
@@ -138,21 +156,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2fef9b5998126183295ffa47728f2ea5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selection of data required for this interface.  <a href="../../d9/d56/classceleritas_1_1_root_step_writer.html#a2fef9b5998126183295ffa47728f2ea5">More...</a><br /></td></tr>
 <tr class="separator:a2fef9b5998126183295ffa47728f2ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b5f0b1e71566ef4eccc6e9111df3fe6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d22/structceleritas_1_1_step_interface_1_1_filters.html">Filters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d56/classceleritas_1_1_root_step_writer.html#a4b5f0b1e71566ef4eccc6e9111df3fe6">filters</a> () const final</td></tr>
-<tr class="memdesc:a4b5f0b1e71566ef4eccc6e9111df3fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selection of data required for this interface.  <a href="../../d9/d56/classceleritas_1_1_root_step_writer.html#a4b5f0b1e71566ef4eccc6e9111df3fe6">More...</a><br /></td></tr>
+<tr class="memdesc:a4b5f0b1e71566ef4eccc6e9111df3fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detector filtering required for this interface.  <a href="../../d9/d56/classceleritas_1_1_root_step_writer.html#a4b5f0b1e71566ef4eccc6e9111df3fe6">More...</a><br /></td></tr>
 <tr class="separator:a4b5f0b1e71566ef4eccc6e9111df3fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classceleritas_1_1_step_interface"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classceleritas_1_1_step_interface')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d6/dc0/classceleritas_1_1_step_interface.html">celeritas::StepInterface</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a95b52167ff2d43b772d0903f46061326"><td class="memItemLeft" align="right" valign="top"><a id="a95b52167ff2d43b772d0903f46061326" name="a95b52167ff2d43b772d0903f46061326"></a>
+static constexpr size_type&#160;</td><td class="memItemRight" valign="bottom"><b>unspecified</b> ()</td></tr>
+<tr class="separator:a95b52167ff2d43b772d0903f46061326"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classceleritas_1_1_step_interface"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classceleritas_1_1_step_interface')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d6/dc0/classceleritas_1_1_step_interface.html">celeritas::StepInterface</a></td></tr>
 <tr class="memitem:a7c4a75bd3e4825b104e9bbf678265e1b inherit pro_methods_classceleritas_1_1_step_interface"><td class="memItemLeft" align="right" valign="top"><a id="a7c4a75bd3e4825b104e9bbf678265e1b" name="a7c4a75bd3e4825b104e9bbf678265e1b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~StepInterface</b> ()=default</td></tr>
-<tr class="memdesc:a7c4a75bd3e4825b104e9bbf678265e1b inherit pro_methods_classceleritas_1_1_step_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selection of data required for this interface. <br /></td></tr>
+<tr class="memdesc:a7c4a75bd3e4825b104e9bbf678265e1b inherit pro_methods_classceleritas_1_1_step_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detector filtering required for this interface. <br /></td></tr>
 <tr class="separator:a7c4a75bd3e4825b104e9bbf678265e1b inherit pro_methods_classceleritas_1_1_step_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Write "MC truth" data to ROOT at every step. </p>
-<p ><code>TTree::Fill()</code> is called for each step and thread id, making each ROOT entry a step. Since the ROOT data is stored in branches with primitive types instead of a full struct, no dictionaries are needed for reading the output file. </p>
+<p ><code>TTree::Fill()</code> is called for each step and thread id, making each ROOT entry a step. Since the ROOT data is stored in branches with primitive types instead of a full struct, no dictionaries are needed for reading the output file.</p>
+<p >The step data that is written to the ROOT file can be filtered by providing a user-defined <code>WriteFilter</code> function. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a15f554c8a7c210102ea5cf0088219545" name="a15f554c8a7c210102ea5cf0088219545"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a15f554c8a7c210102ea5cf0088219545">&#9670;&#160;</a></span>execute() <span class="overload">[1/2]</span></h2>
@@ -237,7 +262,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Selection of data required for this interface. </p>
+<p>Detector filtering required for this interface. </p>
 
 <p>Implements <a class="el" href="../../d6/dc0/classceleritas_1_1_step_interface.html#a8fde9750e57072a4382bf00c6adb09bc">celeritas::StepInterface</a>.</p>
 

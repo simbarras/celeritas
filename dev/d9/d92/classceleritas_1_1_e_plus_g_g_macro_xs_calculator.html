@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -89,10 +90,12 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:afdb4ddaa6323bfee889290ebccf71d7a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d92/classceleritas_1_1_e_plus_g_g_macro_xs_calculator.html#afdb4ddaa6323bfee889290ebccf71d7a">Energy</a> = <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::MevEnergy</a></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:afdb4ddaa6323bfee889290ebccf71d7a"><td class="memItemLeft" align="right" valign="top"><a id="afdb4ddaa6323bfee889290ebccf71d7a" name="afdb4ddaa6323bfee889290ebccf71d7a"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Energy</b> = <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::MevEnergy</a></td></tr>
 <tr class="separator:afdb4ddaa6323bfee889290ebccf71d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2b5a9c20e48a2e62bb9e76017ef0363"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d92/classceleritas_1_1_e_plus_g_g_macro_xs_calculator.html#af2b5a9c20e48a2e62bb9e76017ef0363">XsUnits</a> = <a class="el" href="../../d8/dc6/structceleritas_1_1units_1_1_native_unit.html">units::NativeUnit</a></td></tr>
+<tr class="memitem:af2b5a9c20e48a2e62bb9e76017ef0363"><td class="memItemLeft" align="right" valign="top"><a id="af2b5a9c20e48a2e62bb9e76017ef0363" name="af2b5a9c20e48a2e62bb9e76017ef0363"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>XsUnits</b> = <a class="el" href="../../d8/dc6/structceleritas_1_1units_1_1_native_unit.html">units::NativeUnit</a></td></tr>
 <tr class="separator:af2b5a9c20e48a2e62bb9e76017ef0363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -101,51 +104,20 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>EPlusGGMacroXsCalculator</b> (<a class="el" href="../../d2/db4/structceleritas_1_1_e_plus_g_g_data.html">EPlusGGData</a> const &amp;shared, <a class="el" href="../../d4/de4/classceleritas_1_1_material_view.html">MaterialView</a> const &amp;material)</td></tr>
 <tr class="memdesc:a21b27a56a6bb66fa719c56583a1529b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with material. <br /></td></tr>
 <tr class="separator:a21b27a56a6bb66fa719c56583a1529b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaeeefdb1800cc07eab2ed00f06b1669f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d92/classceleritas_1_1_e_plus_g_g_macro_xs_calculator.html#aaeeefdb1800cc07eab2ed00f06b1669f">operator()</a> (<a class="el" href="../../d9/d92/classceleritas_1_1_e_plus_g_g_macro_xs_calculator.html#afdb4ddaa6323bfee889290ebccf71d7a">Energy</a> energy) const</td></tr>
+<tr class="memitem:aaeeefdb1800cc07eab2ed00f06b1669f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d92/classceleritas_1_1_e_plus_g_g_macro_xs_calculator.html#aaeeefdb1800cc07eab2ed00f06b1669f">operator()</a> (<a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a> energy) const</td></tr>
 <tr class="memdesc:aaeeefdb1800cc07eab2ed00f06b1669f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute macroscopic cross section in native units.  <a href="../../d9/d92/classceleritas_1_1_e_plus_g_g_macro_xs_calculator.html#aaeeefdb1800cc07eab2ed00f06b1669f">More...</a><br /></td></tr>
 <tr class="separator:aaeeefdb1800cc07eab2ed00f06b1669f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a5c769bd5693fb1008c3686a34f432bf0"><td class="memItemLeft" align="right" valign="top"><a id="a5c769bd5693fb1008c3686a34f432bf0" name="a5c769bd5693fb1008c3686a34f432bf0"></a>
-static <a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a> <a class="el" href="../../d9/d92/classceleritas_1_1_e_plus_g_g_macro_xs_calculator.html#afdb4ddaa6323bfee889290ebccf71d7a">Energy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>min_energy</b> ()</td></tr>
+static <a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a> <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>min_energy</b> ()</td></tr>
 <tr class="memdesc:a5c769bd5693fb1008c3686a34f432bf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum energy for Heitler formula validity. <br /></td></tr>
 <tr class="separator:a5c769bd5693fb1008c3686a34f432bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Calculates the macroscopic cross section. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="afdb4ddaa6323bfee889290ebccf71d7a" name="afdb4ddaa6323bfee889290ebccf71d7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afdb4ddaa6323bfee889290ebccf71d7a">&#9670;&#160;</a></span>Energy</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d9/d92/classceleritas_1_1_e_plus_g_g_macro_xs_calculator.html#afdb4ddaa6323bfee889290ebccf71d7a">celeritas::EPlusGGMacroXsCalculator::Energy</a> =  <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::MevEnergy</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="af2b5a9c20e48a2e62bb9e76017ef0363" name="af2b5a9c20e48a2e62bb9e76017ef0363"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2b5a9c20e48a2e62bb9e76017ef0363">&#9670;&#160;</a></span>XsUnits</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d9/d92/classceleritas_1_1_e_plus_g_g_macro_xs_calculator.html#af2b5a9c20e48a2e62bb9e76017ef0363">celeritas::EPlusGGMacroXsCalculator::XsUnits</a> =  <a class="el" href="../../d8/dc6/structceleritas_1_1units_1_1_native_unit.html">units::NativeUnit</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aaeeefdb1800cc07eab2ed00f06b1669f" name="aaeeefdb1800cc07eab2ed00f06b1669f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaeeefdb1800cc07eab2ed00f06b1669f">&#9670;&#160;</a></span>operator()()</h2>
 
@@ -158,7 +130,7 @@ static <a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160
         <tr>
           <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> celeritas::EPlusGGMacroXsCalculator::operator() </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d9/d92/classceleritas_1_1_e_plus_g_g_macro_xs_calculator.html#afdb4ddaa6323bfee889290ebccf71d7a">Energy</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a>&#160;</td>
           <td class="paramname"><em>energy</em></td><td>)</td>
           <td> const</td>
         </tr>

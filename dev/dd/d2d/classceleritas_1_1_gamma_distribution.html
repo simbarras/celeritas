@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -88,82 +89,48 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a2521afca2d155250f20d95f9ca3ccd69"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/classceleritas_1_1_gamma_distribution.html#a2521afca2d155250f20d95f9ca3ccd69">real_type</a> = RealType</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a2521afca2d155250f20d95f9ca3ccd69"><td class="memItemLeft" align="right" valign="top"><a id="a2521afca2d155250f20d95f9ca3ccd69" name="a2521afca2d155250f20d95f9ca3ccd69"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>real_type</b> = RealType</td></tr>
 <tr class="separator:a2521afca2d155250f20d95f9ca3ccd69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5e5e41dac96c1222be74dc2cc602945"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/classceleritas_1_1_gamma_distribution.html#aa5e5e41dac96c1222be74dc2cc602945">result_type</a> = <a class="el" href="../../dd/d2d/classceleritas_1_1_gamma_distribution.html#a2521afca2d155250f20d95f9ca3ccd69">real_type</a></td></tr>
+<tr class="memitem:aa5e5e41dac96c1222be74dc2cc602945"><td class="memItemLeft" align="right" valign="top"><a id="aa5e5e41dac96c1222be74dc2cc602945" name="aa5e5e41dac96c1222be74dc2cc602945"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>result_type</b> = real_type</td></tr>
 <tr class="separator:aa5e5e41dac96c1222be74dc2cc602945"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab4581d69219b1f9158c1a042c2715575"><td class="memItemLeft" align="right" valign="top"><a id="ab4581d69219b1f9158c1a042c2715575" name="ab4581d69219b1f9158c1a042c2715575"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GammaDistribution</b> (<a class="el" href="../../dd/d2d/classceleritas_1_1_gamma_distribution.html#a2521afca2d155250f20d95f9ca3ccd69">real_type</a> alpha=1, <a class="el" href="../../dd/d2d/classceleritas_1_1_gamma_distribution.html#a2521afca2d155250f20d95f9ca3ccd69">real_type</a> beta=1)</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GammaDistribution</b> (real_type alpha=1, real_type beta=1)</td></tr>
 <tr class="memdesc:ab4581d69219b1f9158c1a042c2715575"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from the shape and scale parameters. <br /></td></tr>
 <tr class="separator:ab4581d69219b1f9158c1a042c2715575"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b1cceae08aff64fbde579b615ab7ab0"><td class="memTemplParams" colspan="2"><a id="a2b1cceae08aff64fbde579b615ab7ab0" name="a2b1cceae08aff64fbde579b615ab7ab0"></a>
 template&lt;class Generator &gt; </td></tr>
-<tr class="memitem:a2b1cceae08aff64fbde579b615ab7ab0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../dd/d2d/classceleritas_1_1_gamma_distribution.html#aa5e5e41dac96c1222be74dc2cc602945">result_type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (Generator &amp;rng)</td></tr>
+<tr class="memitem:a2b1cceae08aff64fbde579b615ab7ab0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> result_type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (Generator &amp;rng)</td></tr>
 <tr class="separator:a2b1cceae08aff64fbde579b615ab7ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14388990af9fa8e9a5bda8a6f2c77ab0"><td class="memTemplParams" colspan="2"><a id="a14388990af9fa8e9a5bda8a6f2c77ab0" name="a14388990af9fa8e9a5bda8a6f2c77ab0"></a>
 template&lt;class Generator &gt; </td></tr>
-<tr class="memitem:a14388990af9fa8e9a5bda8a6f2c77ab0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (Generator &amp;rng) -&gt; <a class="el" href="../../dd/d2d/classceleritas_1_1_gamma_distribution.html#aa5e5e41dac96c1222be74dc2cc602945">result_type</a></td></tr>
+<tr class="memitem:a14388990af9fa8e9a5bda8a6f2c77ab0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (Generator &amp;rng) -&gt; result_type</td></tr>
 <tr class="memdesc:a14388990af9fa8e9a5bda8a6f2c77ab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample a random number according to the distribution. <br /></td></tr>
 <tr class="separator:a14388990af9fa8e9a5bda8a6f2c77ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class RealType = ::celeritas::real_type&gt;<br />
 class celeritas::GammaDistribution&lt; RealType &gt;</div><p >Sample from a gamma distribution. </p>
-<p >The gamma distribution can be parameterized with a shape parameter <picture><source srcset="../../form_174_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$
-  \alpha $" src="../../form_174.png" width="8" height="6"/></picture> and a scale parameter <picture><source srcset="../../form_98_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \beta $" src="../../form_98.png" width="9" height="13"/></picture> and has the PDF:  </p><p class="formulaDsp">
-<picture><source srcset="../../form_175_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<p >The gamma distribution can be parameterized with a shape parameter <picture><source srcset="../../form_179_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$
+  \alpha $" src="../../form_179.png" width="8" height="6"/></picture> and a scale parameter <picture><source srcset="../../form_62_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \beta $" src="../../form_62.png" width="9" height="13"/></picture> and has the PDF:  </p><p class="formulaDsp">
+<picture><source srcset="../../form_180_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
   f(x; \alpha, \beta) = \frac{x^{\alpha - 1} e^{-x / \beta}}{\beta^\alpha
 \Gamma(\alpha)} \quad \mathrm{for}\  x &gt; 0, \quad \alpha, \beta &gt; 0
-  \]" src="../../form_175.png" width="253" height="33"/></picture>
+  \]" src="../../form_180.png" width="253" height="33"/></picture>
 </p>
-<p> The algorithm described in Marsaglia, G. and Tsang, W. W. "A simple method
-  for generating gamma variables". ACM Transactions on Mathematical Software. 26, 3, 363–372 2000. is used here to generate gamma-distributed random variables. The steps are:</p><ol type="1">
-<li>Set <picture><source srcset="../../form_176_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ d = \alpha - 1/3 $ and $ c = 1 / \sqrt{9d} $" src="../../form_176.png" width="151" height="16"/></picture></li>
-<li>Generate random variates <picture><source srcset="../../form_177_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ Z \sim N(0,1) $" src="../../form_177.png" width="64" height="14"/></picture> and <picture><source srcset="../../form_178_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ U \sim U(0,1) $" src="../../form_178.png" width="64" height="14"/></picture></li>
-<li>Set <picture><source srcset="../../form_179_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ v = (1 + cZ)^3 $" src="../../form_179.png" width="75" height="15"/></picture></li>
-<li>If <picture><source srcset="../../form_180_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \log U &lt; Z^2 / 2 + d(1 - v + \log v) $" src="../../form_180.png" width="171" height="15"/></picture> return <picture><source srcset="../../form_181_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ dv $" src="../../form_181.png" width="13" height="10"/></picture>. Otherwise, go to step 2. A squeeze function can be used to avoid the two logarithms in most cases by accepting early if <picture><source srcset="../../form_182_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ U &lt; 1 - 0.0331 Z^4 $" src="../../form_182.png" width="98" height="13"/></picture>.</li>
+<p> The algorithm described in Marsaglia and Tsang [MT00] is used here to generate gamma-distributed random variables. The steps are:</p><ol type="1">
+<li>Set <picture><source srcset="../../form_181_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ d = \alpha - 1/3 $" src="../../form_181.png" width="65" height="14"/></picture> and <picture><source srcset="../../form_182_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ c = 1 / \sqrt{9d} $" src="../../form_182.png" width="58" height="16"/></picture></li>
+<li>Generate random variates <picture><source srcset="../../form_183_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ Z \sim N(0,1) $" src="../../form_183.png" width="64" height="14"/></picture> and <picture><source srcset="../../form_184_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ U \sim U(0,1) $" src="../../form_184.png" width="64" height="14"/></picture></li>
+<li>Set <picture><source srcset="../../form_185_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ v = (1 + cZ)^3 $" src="../../form_185.png" width="75" height="15"/></picture></li>
+<li>If <picture><source srcset="../../form_186_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \log U &lt; Z^2 / 2 + d(1 - v + \log v) $" src="../../form_186.png" width="171" height="15"/></picture> return <picture><source srcset="../../form_187_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ dv $" src="../../form_187.png" width="13" height="10"/></picture>. Otherwise, go to step 2. A squeeze function can be used to avoid the two logarithms in most cases by accepting early if <picture><source srcset="../../form_188_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ U &lt; 1 - 0.0331 Z^4 $" src="../../form_188.png" width="98" height="13"/></picture>.</li>
 </ol>
-<p >Though this method is valid for <picture><source srcset="../../form_183_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \alpha \ge 1 $" src="../../form_183.png" width="30" height="11"/></picture>, it can easily be extended for <picture><source srcset="../../form_184_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \alpha &lt; 1 $" src="../../form_184.png" width="30" height="10"/></picture>: if <picture><source srcset="../../form_185_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ X \sim \Gamma(\alpha + 1) $" src="../../form_185.png" width="75" height="14"/></picture> and <picture><source srcset="../../form_178_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ U \sim U(0,1) $" src="../../form_178.png" width="64" height="14"/></picture>, then <picture><source srcset="../../form_186_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ X U^{1/\alpha} \sim \Gamma(\alpha) $" src="../../form_186.png" width="80" height="16"/></picture>. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a2521afca2d155250f20d95f9ca3ccd69" name="a2521afca2d155250f20d95f9ca3ccd69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2521afca2d155250f20d95f9ca3ccd69">&#9670;&#160;</a></span>real_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class RealType  = ::celeritas::real_type&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../dd/d2d/classceleritas_1_1_gamma_distribution.html">celeritas::GammaDistribution</a>&lt; RealType &gt;::real_type =  RealType</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="aa5e5e41dac96c1222be74dc2cc602945" name="aa5e5e41dac96c1222be74dc2cc602945"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5e5e41dac96c1222be74dc2cc602945">&#9670;&#160;</a></span>result_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class RealType  = ::celeritas::real_type&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../dd/d2d/classceleritas_1_1_gamma_distribution.html">celeritas::GammaDistribution</a>&lt; RealType &gt;::result_type =  <a class="el" href="../../dd/d2d/classceleritas_1_1_gamma_distribution.html#a2521afca2d155250f20d95f9ca3ccd69">real_type</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<p >Though this method is valid for <picture><source srcset="../../form_189_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \alpha \ge 1 $" src="../../form_189.png" width="30" height="11"/></picture>, it can easily be extended for <picture><source srcset="../../form_190_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \alpha &lt; 1 $" src="../../form_190.png" width="30" height="10"/></picture>: if <picture><source srcset="../../form_191_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ X \sim \Gamma(\alpha + 1) $" src="../../form_191.png" width="75" height="14"/></picture> and <picture><source srcset="../../form_184_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ U \sim U(0,1) $" src="../../form_184.png" width="64" height="14"/></picture>, then <picture><source srcset="../../form_192_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ X U^{1/\alpha} \sim \Gamma(\alpha) $" src="../../form_192.png" width="80" height="16"/></picture>. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="../../df/d54/_gamma_distribution_8hh.html">GammaDistribution.hh</a></li>
 </ul>
 </div><!-- contents -->

@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -103,14 +104,14 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_applicable</b> (<a class="el" href="../../da/d9d/classceleritas_1_1_core_track_view.html">CoreTrackView</a> const &amp;, <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> step) const</td></tr>
 <tr class="memdesc:a2ff162bf7501a9b64123acd513de3c65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether MSC applies to the current track. <br /></td></tr>
 <tr class="separator:a2ff162bf7501a9b64123acd513de3c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b8b1ee72f145425c54252c80365d8d6"><td class="memItemLeft" align="right" valign="top"><a id="a3b8b1ee72f145425c54252c80365d8d6" name="a3b8b1ee72f145425c54252c80365d8d6"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><b>calc_step</b> (<a class="el" href="../../da/d9d/classceleritas_1_1_core_track_view.html">CoreTrackView</a> const &amp;, <a class="el" href="../../d0/d58/structceleritas_1_1_along_step_local_state.html">AlongStepLocalState</a> *) const</td></tr>
-<tr class="memdesc:a3b8b1ee72f145425c54252c80365d8d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the physical and geometric step lengths. <br /></td></tr>
-<tr class="separator:a3b8b1ee72f145425c54252c80365d8d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e3b20a78b9e3c61ce1763def506e2e9"><td class="memItemLeft" align="right" valign="top"><a id="a1e3b20a78b9e3c61ce1763def506e2e9" name="a1e3b20a78b9e3c61ce1763def506e2e9"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><b>apply_step</b> (<a class="el" href="../../da/d9d/classceleritas_1_1_core_track_view.html">CoreTrackView</a> const &amp;, <a class="el" href="../../d0/d58/structceleritas_1_1_along_step_local_state.html">AlongStepLocalState</a> *) const</td></tr>
-<tr class="memdesc:a1e3b20a78b9e3c61ce1763def506e2e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply MSC. <br /></td></tr>
-<tr class="separator:a1e3b20a78b9e3c61ce1763def506e2e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c4ae655cb691e94162222bf84c35a3d"><td class="memItemLeft" align="right" valign="top"><a id="a5c4ae655cb691e94162222bf84c35a3d" name="a5c4ae655cb691e94162222bf84c35a3d"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><b>limit_step</b> (<a class="el" href="../../da/d9d/classceleritas_1_1_core_track_view.html">CoreTrackView</a> const &amp;, <a class="el" href="../../da/da4/structceleritas_1_1_step_limit.html">StepLimit</a> *)</td></tr>
+<tr class="memdesc:a5c4ae655cb691e94162222bf84c35a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the physical and geometric step lengths. <br /></td></tr>
+<tr class="separator:a5c4ae655cb691e94162222bf84c35a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a939594298408b1e3240b19d29910cd14"><td class="memItemLeft" align="right" valign="top"><a id="a939594298408b1e3240b19d29910cd14" name="a939594298408b1e3240b19d29910cd14"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><b>apply_step</b> (<a class="el" href="../../da/d9d/classceleritas_1_1_core_track_view.html">CoreTrackView</a> const &amp;, <a class="el" href="../../da/da4/structceleritas_1_1_step_limit.html">StepLimit</a> *)</td></tr>
+<tr class="memdesc:a939594298408b1e3240b19d29910cd14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply MSC. <br /></td></tr>
+<tr class="separator:a939594298408b1e3240b19d29910cd14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Apply Urban multiple scattering to a track. </p>

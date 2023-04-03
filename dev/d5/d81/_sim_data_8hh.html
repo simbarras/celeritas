@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -76,7 +77,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">SimData.hh File Reference</div></div>
 </div><!--header-->
@@ -85,67 +85,35 @@ $(function() {
 <code>#include &quot;<a class="el" href="../../db/dc5/_macros_8hh.html">corecel/Macros.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html">corecel/Types.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../db/d8b/_collection_8hh.html">corecel/data/Collection.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d9/de8/_collection_algorithms_8hh.html">corecel/data/CollectionAlgorithms.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d9/dfc/_collection_builder_8hh.html">corecel/data/CollectionBuilder.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d3/d83/_thread_id_8hh.html">corecel/sys/ThreadId.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/d40/_quantities_8hh.html">celeritas/Quantities.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../db/da7/celeritas_2_types_8hh.html">celeritas/Types.hh</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../dc/dad/_secondary_8hh.html">celeritas/phys/Secondary.hh</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/df0/structceleritas_1_1_sim_track_state.html">celeritas::SimTrackState</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulation state of a track.  <a href="../../db/df0/structceleritas_1_1_sim_track_state.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d08/structceleritas_1_1_looping_threshold.html">celeritas::LoopingThreshold</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Particle-dependent parameters for killing looping tracks.  <a href="../../d1/d08/structceleritas_1_1_looping_threshold.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/deb/structceleritas_1_1_sim_params_data.html">celeritas::SimParamsData&lt; W, M &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Persistent simulation data.  <a href="../../d2/deb/structceleritas_1_1_sim_params_data.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d7a/structceleritas_1_1_sim_track_initializer.html">celeritas::SimTrackInitializer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulation state of a track.  <a href="../../d8/d7a/structceleritas_1_1_sim_track_initializer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/structceleritas_1_1_sim_state_data.html">celeritas::SimStateData&lt; W, M &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data storage/access for simulation states.  <a href="../../d2/d6b/structceleritas_1_1_sim_state_data.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a14d7d0aca4a113d282cf935f42f61ca7"><td class="memItemLeft" align="right" valign="top"><a id="a14d7d0aca4a113d282cf935f42f61ca7" name="a14d7d0aca4a113d282cf935f42f61ca7"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::SimTrackInitializer</b> = SimTrackState</td></tr>
-<tr class="separator:a14d7d0aca4a113d282cf935f42f61ca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ada95b917410842b17e91d51e84f233e7"><td class="memTemplParams" colspan="2">template&lt;MemSpace M&gt; </td></tr>
-<tr class="memitem:ada95b917410842b17e91d51e84f233e7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d5/d81/_sim_data_8hh.html#ada95b917410842b17e91d51e84f233e7">celeritas::resize</a> (SimStateData&lt; Ownership::value, M &gt; *data, size_type size)</td></tr>
-<tr class="memdesc:ada95b917410842b17e91d51e84f233e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize simulation states and set <code>alive</code> to be false.  <a href="../../d5/d81/_sim_data_8hh.html#ada95b917410842b17e91d51e84f233e7">More...</a><br /></td></tr>
+<tr class="memitem:ada95b917410842b17e91d51e84f233e7"><td class="memTemplParams" colspan="2"><a id="ada95b917410842b17e91d51e84f233e7" name="ada95b917410842b17e91d51e84f233e7"></a>
+template&lt;MemSpace M&gt; </td></tr>
+<tr class="memitem:ada95b917410842b17e91d51e84f233e7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::resize</b> (SimStateData&lt; Ownership::value, M &gt; *data, size_type size)</td></tr>
+<tr class="memdesc:ada95b917410842b17e91d51e84f233e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize simulation states and set <code>alive</code> to be false. <br /></td></tr>
 <tr class="separator:ada95b917410842b17e91d51e84f233e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ada95b917410842b17e91d51e84f233e7" name="ada95b917410842b17e91d51e84f233e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada95b917410842b17e91d51e84f233e7">&#9670;&#160;</a></span>resize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;MemSpace M&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void celeritas::resize </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d2/d6b/structceleritas_1_1_sim_state_data.html">SimStateData</a>&lt; <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148a2063c1608d6e0baf80249c42e2be5804">Ownership::value</a>, M &gt; *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_type&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Resize simulation states and set <code>alive</code> to be false. </p>
-<p >TODO: replace with resize + fill </p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

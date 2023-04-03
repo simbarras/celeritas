@@ -15,6 +15,6 @@ var searchData=
   ['outputinterfaceadapter_2ehh_12',['OutputInterfaceAdapter.hh',['../d3/df8/_output_interface_adapter_8hh.html',1,'']]],
   ['outputmanager_2ecc_13',['OutputManager.cc',['../dd/d42/_output_manager_8cc.html',1,'']]],
   ['outputmanager_2ehh_14',['OutputManager.hh',['../d3/d03/_output_manager_8hh.html',1,'']]],
-  ['types_2ehh_15',['Types.hh',['../de/d31/orange_2univ_2detail_2_types_8hh.html',1,'']]],
+  ['types_2ehh_15',['Types.hh',['../d7/d97/orange_2_types_8hh.html',1,'(Global Namespace)'],['../de/d31/orange_2univ_2detail_2_types_8hh.html',1,'(Global Namespace)']]],
   ['utils_2ehh_16',['Utils.hh',['../d4/d84/orange_2univ_2detail_2_utils_8hh.html',1,'']]]
 ];

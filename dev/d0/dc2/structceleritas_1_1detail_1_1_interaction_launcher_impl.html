@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -89,8 +90,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a184982b133de556a28aee923fb0931f5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc2/structceleritas_1_1detail_1_1_interaction_launcher_impl.html#a184982b133de556a28aee923fb0931f5">CoreRefNative</a> = <a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreRef</a>&lt; MemSpace::native &gt;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a184982b133de556a28aee923fb0931f5"><td class="memItemLeft" align="right" valign="top"><a id="a184982b133de556a28aee923fb0931f5" name="a184982b133de556a28aee923fb0931f5"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>CoreRefNative</b> = <a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreRef</a>&lt; MemSpace::native &gt;</td></tr>
 <tr class="separator:a184982b133de556a28aee923fb0931f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -103,7 +105,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a9f71a798c337118d076a652fddd28064"><td class="memItemLeft" align="right" valign="top"><a id="a9f71a798c337118d076a652fddd28064" name="a9f71a798c337118d076a652fddd28064"></a>
-<a class="el" href="../../d0/dc2/structceleritas_1_1detail_1_1_interaction_launcher_impl.html#a184982b133de556a28aee923fb0931f5">CoreRefNative</a> const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>core_data</b></td></tr>
+<a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreRefNative</a> const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>core_data</b></td></tr>
 <tr class="separator:a9f71a798c337118d076a652fddd28064"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab16005a4efe4f20a46de07694e5b3774"><td class="memItemLeft" align="right" valign="top"><a id="ab16005a4efe4f20a46de07694e5b3774" name="ab16005a4efe4f20a46de07694e5b3774"></a>
 D const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>model_data</b></td></tr>
@@ -116,25 +118,7 @@ F&#160;</td><td class="memItemRight" valign="bottom"><b>call_with_track</b></td>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class D, class F&gt;<br />
 struct celeritas::detail::InteractionLauncherImpl&lt; D, F &gt;</div><p >Function-like class to launch a "Track"-dependent function from core and model data. </p>
 <p >This class should be used by generated interactor functions. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a184982b133de556a28aee923fb0931f5" name="a184982b133de556a28aee923fb0931f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a184982b133de556a28aee923fb0931f5">&#9670;&#160;</a></span>CoreRefNative</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class D , class F &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d0/dc2/structceleritas_1_1detail_1_1_interaction_launcher_impl.html">celeritas::detail::InteractionLauncherImpl</a>&lt; D, F &gt;::CoreRefNative =  <a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreRef</a>&lt;MemSpace::native&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../de/d46/_interaction_launcher_impl_8hh.html">InteractionLauncherImpl.hh</a></li>
 </ul>
 </div><!-- contents -->

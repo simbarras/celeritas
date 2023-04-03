@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -89,12 +90,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:aefb8fca620765e12ec3561b1c032d2d8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d48/classceleritas_1_1_imported_processes.html#aefb8fca620765e12ec3561b1c032d2d8">ImportProcessId</a> = <a class="el" href="../../dd/dbb/classceleritas_1_1_opaque_id.html">OpaqueId</a>&lt; <a class="el" href="../../d9/d7e/structceleritas_1_1_import_process.html">ImportProcess</a> &gt;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:aefb8fca620765e12ec3561b1c032d2d8"><td class="memItemLeft" align="right" valign="top"><a id="aefb8fca620765e12ec3561b1c032d2d8" name="aefb8fca620765e12ec3561b1c032d2d8"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ImportProcessId</b> = <a class="el" href="../../dd/dbb/classceleritas_1_1_opaque_id.html">OpaqueId</a>&lt; <a class="el" href="../../d9/d7e/structceleritas_1_1_import_process.html">ImportProcess</a> &gt;</td></tr>
 <tr class="separator:aefb8fca620765e12ec3561b1c032d2d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cfaf7f43cf6518bf53c3dbe2be7f59b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d48/classceleritas_1_1_imported_processes.html#a1cfaf7f43cf6518bf53c3dbe2be7f59b">key_type</a> = std::pair&lt; <a class="el" href="../../d2/de8/classceleritas_1_1_p_d_g_number.html">PDGNumber</a>, <a class="el" href="../../de/de8/_import_process_8hh.html#aee9f70862dd95ace9074262973ad3904">ImportProcessClass</a> &gt;</td></tr>
+<tr class="memitem:a1cfaf7f43cf6518bf53c3dbe2be7f59b"><td class="memItemLeft" align="right" valign="top"><a id="a1cfaf7f43cf6518bf53c3dbe2be7f59b" name="a1cfaf7f43cf6518bf53c3dbe2be7f59b"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>key_type</b> = std::pair&lt; <a class="el" href="../../d2/de8/classceleritas_1_1_p_d_g_number.html">PDGNumber</a>, <a class="el" href="../../de/de8/_import_process_8hh.html#aee9f70862dd95ace9074262973ad3904">ImportProcessClass</a> &gt;</td></tr>
 <tr class="separator:a1cfaf7f43cf6518bf53c3dbe2be7f59b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44a1c00f92c18fb1d8148438a50327e9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d48/classceleritas_1_1_imported_processes.html#a44a1c00f92c18fb1d8148438a50327e9">SPConstParticles</a> = std::shared_ptr&lt; <a class="el" href="../../d8/d0b/classceleritas_1_1_particle_params.html">ParticleParams</a> const  &gt;</td></tr>
+<tr class="memitem:a44a1c00f92c18fb1d8148438a50327e9"><td class="memItemLeft" align="right" valign="top"><a id="a44a1c00f92c18fb1d8148438a50327e9" name="a44a1c00f92c18fb1d8148438a50327e9"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstParticles</b> = std::shared_ptr&lt; <a class="el" href="../../d8/d0b/classceleritas_1_1_particle_params.html">ParticleParams</a> const  &gt;</td></tr>
 <tr class="separator:a44a1c00f92c18fb1d8148438a50327e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -103,11 +107,11 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ImportedProcesses</b> (std::vector&lt; <a class="el" href="../../d9/d7e/structceleritas_1_1_import_process.html">ImportProcess</a> &gt; io)</td></tr>
 <tr class="memdesc:acffe3277e7fab8660575717bd112ebc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with imported tabular data. <br /></td></tr>
 <tr class="separator:acffe3277e7fab8660575717bd112ebc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd73b9cb5609ee5cbf83d3fc67f62bbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d48/classceleritas_1_1_imported_processes.html#aefb8fca620765e12ec3561b1c032d2d8">ImportProcessId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d48/classceleritas_1_1_imported_processes.html#abd73b9cb5609ee5cbf83d3fc67f62bbf">find</a> (<a class="el" href="../../d6/d48/classceleritas_1_1_imported_processes.html#a1cfaf7f43cf6518bf53c3dbe2be7f59b">key_type</a>) const</td></tr>
+<tr class="memitem:abd73b9cb5609ee5cbf83d3fc67f62bbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dbb/classceleritas_1_1_opaque_id.html">ImportProcessId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d48/classceleritas_1_1_imported_processes.html#abd73b9cb5609ee5cbf83d3fc67f62bbf">find</a> (key_type) const</td></tr>
 <tr class="memdesc:abd73b9cb5609ee5cbf83d3fc67f62bbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return physics tables for a particle type and process.  <a href="../../d6/d48/classceleritas_1_1_imported_processes.html#abd73b9cb5609ee5cbf83d3fc67f62bbf">More...</a><br /></td></tr>
 <tr class="separator:abd73b9cb5609ee5cbf83d3fc67f62bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44b8dc7205bf1f482810bd6bd66ed74c"><td class="memItemLeft" align="right" valign="top"><a id="a44b8dc7205bf1f482810bd6bd66ed74c" name="a44b8dc7205bf1f482810bd6bd66ed74c"></a>
-<a class="el" href="../../d9/d7e/structceleritas_1_1_import_process.html">ImportProcess</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (<a class="el" href="../../d6/d48/classceleritas_1_1_imported_processes.html#aefb8fca620765e12ec3561b1c032d2d8">ImportProcessId</a> id) const</td></tr>
+<a class="el" href="../../d9/d7e/structceleritas_1_1_import_process.html">ImportProcess</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (<a class="el" href="../../dd/dbb/classceleritas_1_1_opaque_id.html">ImportProcessId</a> id) const</td></tr>
 <tr class="memdesc:a44b8dc7205bf1f482810bd6bd66ed74c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the table for the given process ID. <br /></td></tr>
 <tr class="separator:a44b8dc7205bf1f482810bd6bd66ed74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add7edb65e410d66cf88d0285fd4c3abf"><td class="memItemLeft" align="right" valign="top"><a id="add7edb65e410d66cf88d0285fd4c3abf" name="add7edb65e410d66cf88d0285fd4c3abf"></a>
@@ -118,59 +122,13 @@ ImportProcessId::size_type&#160;</td><td class="memItemRight" valign="bottom"><b
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a71e902bcd6b44a2d81226ad6043fd628"><td class="memItemLeft" align="right" valign="top"><a id="a71e902bcd6b44a2d81226ad6043fd628" name="a71e902bcd6b44a2d81226ad6043fd628"></a>
-static std::shared_ptr&lt; <a class="el" href="../../d6/d48/classceleritas_1_1_imported_processes.html">ImportedProcesses</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>from_import</b> (<a class="el" href="../../d2/dd6/structceleritas_1_1_import_data.html">ImportData</a> const &amp;data, <a class="el" href="../../d6/d48/classceleritas_1_1_imported_processes.html#a44a1c00f92c18fb1d8148438a50327e9">SPConstParticles</a> particle_params)</td></tr>
+static std::shared_ptr&lt; <a class="el" href="../../d6/d48/classceleritas_1_1_imported_processes.html">ImportedProcesses</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>from_import</b> (<a class="el" href="../../d2/dd6/structceleritas_1_1_import_data.html">ImportData</a> const &amp;data, SPConstParticles particle_params)</td></tr>
 <tr class="memdesc:a71e902bcd6b44a2d81226ad6043fd628"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with imported data. <br /></td></tr>
 <tr class="separator:a71e902bcd6b44a2d81226ad6043fd628"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Manage imported physics data. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="aefb8fca620765e12ec3561b1c032d2d8" name="aefb8fca620765e12ec3561b1c032d2d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefb8fca620765e12ec3561b1c032d2d8">&#9670;&#160;</a></span>ImportProcessId</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d6/d48/classceleritas_1_1_imported_processes.html#aefb8fca620765e12ec3561b1c032d2d8">celeritas::ImportedProcesses::ImportProcessId</a> =  <a class="el" href="../../dd/dbb/classceleritas_1_1_opaque_id.html">OpaqueId</a>&lt;<a class="el" href="../../d9/d7e/structceleritas_1_1_import_process.html">ImportProcess</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="a1cfaf7f43cf6518bf53c3dbe2be7f59b" name="a1cfaf7f43cf6518bf53c3dbe2be7f59b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1cfaf7f43cf6518bf53c3dbe2be7f59b">&#9670;&#160;</a></span>key_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d6/d48/classceleritas_1_1_imported_processes.html#a1cfaf7f43cf6518bf53c3dbe2be7f59b">celeritas::ImportedProcesses::key_type</a> =  std::pair&lt;<a class="el" href="../../d2/de8/classceleritas_1_1_p_d_g_number.html">PDGNumber</a>, <a class="el" href="../../de/de8/_import_process_8hh.html#aee9f70862dd95ace9074262973ad3904">ImportProcessClass</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="a44a1c00f92c18fb1d8148438a50327e9" name="a44a1c00f92c18fb1d8148438a50327e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44a1c00f92c18fb1d8148438a50327e9">&#9670;&#160;</a></span>SPConstParticles</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d6/d48/classceleritas_1_1_imported_processes.html#a44a1c00f92c18fb1d8148438a50327e9">celeritas::ImportedProcesses::SPConstParticles</a> =  std::shared_ptr&lt;<a class="el" href="../../d8/d0b/classceleritas_1_1_particle_params.html">ParticleParams</a> const&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="abd73b9cb5609ee5cbf83d3fc67f62bbf" name="abd73b9cb5609ee5cbf83d3fc67f62bbf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abd73b9cb5609ee5cbf83d3fc67f62bbf">&#9670;&#160;</a></span>find()</h2>
 
@@ -180,7 +138,7 @@ static std::shared_ptr&lt; <a class="el" href="../../d6/d48/classceleritas_1_1_i
         <tr>
           <td class="memname">auto celeritas::ImportedProcesses::find </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d6/d48/classceleritas_1_1_imported_processes.html#a1cfaf7f43cf6518bf53c3dbe2be7f59b">key_type</a>&#160;</td>
+          <td class="paramtype">key_type&#160;</td>
           <td class="paramname"><em>particle_process</em></td><td>)</td>
           <td> const</td>
         </tr>

@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -76,7 +77,7 @@ $(function() {
 <div class="textblock"><p >The <code><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html" title="Manage generic array-like data ownership and transfer from host to device.">Collection</a></code> manages data allocation and transfer between CPU and GPU.</p>
 <p >Its primary design goal is facilitating construction of deeply hierarchical data on host at setup time and seamlessly copying to device. The templated <code>T</code> must be trivially copyable&mdash;either a fundamental data type or a struct of such types.</p>
 <p >An individual item in a <code>Collection&lt;T&gt;</code> can be accessed with <code>ItemId&lt;T&gt;</code>, a contiguous subset of items are accessed with <code>ItemRange&lt;T&gt;</code>, and the entirety of the data are accessed with <code>AllItems&lt;T&gt;</code>. All three of these classes are trivially copyable, so they can be embedded in structs that can be managed by a <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html" title="Manage generic array-like data ownership and transfer from host to device.">Collection</a>. A group of Collections, one for each data type, can therefore be trivially copied to the GPU to enable arbitrarily deep and complex data hierarchies.</p>
-<p >By convention, groups of Collections comprising the data for a single class or subsystem (such as <a class="el" href="../../d2/d1c/classceleritas_1_1_rayleigh_interactor.html" title="Brief class description.">RayleighInteractor</a> or Physics) are stored in a helper struct suffixed with <code>Data</code> . For cases where there is both persistent data (problem-specific parameters) and transient data (track-specific states), the collections must be grouped into two separate classes. <code>StateData</code> are meant to be mutable and never directly copied between host and device; its data collections are typically accessed by thread ID. <code>ParamsData</code> are immutable and always "mirrored" on both host and device. Sometimes it's sensible to partition <code>ParamsData</code> into discrete helper structs (stored by value), each with a group of collections, and perhaps another struct that has non-templated scalars (since the default assignment operator is less work than manually copying scalars in a templated assignment operator.</p>
+<p >By convention, groups of Collections comprising the data for a single class or subsystem (such as <a class="el" href="../../d2/d1c/classceleritas_1_1_rayleigh_interactor.html" title="Apply the Livermore model of Rayleigh scattering to photons.">RayleighInteractor</a> or Physics) are stored in a helper struct suffixed with <code>Data</code> . For cases where there is both persistent data (problem-specific parameters) and transient data (track-specific states), the collections must be grouped into two separate classes. <code>StateData</code> are meant to be mutable and never directly copied between host and device; its data collections are typically accessed by thread ID. <code>ParamsData</code> are immutable and always "mirrored" on both host and device. Sometimes it's sensible to partition <code>ParamsData</code> into discrete helper structs (stored by value), each with a group of collections, and perhaps another struct that has non-templated scalars (since the default assignment operator is less work than manually copying scalars in a templated assignment operator.</p>
 <p >A collection group has the following requirements to be compatible with the <code><a class="el" href="../../d9/d90/classceleritas_1_1_collection_mirror.html" title="Helper class for copying setup-time Collection groups to host and device.">CollectionMirror</a></code>, <code><a class="el" href="../../dc/d8c/classceleritas_1_1_collection_state_store.html" title="Helper class for storing Collection classes on host or device.">CollectionStateStore</a></code>, and other such helper classes:</p><ul>
 <li>Be a struct templated with <code>template&lt;Ownership W, MemSpace M&gt;</code> </li>
 <li>Contain only <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html" title="Manage generic array-like data ownership and transfer from host to device.">Collection</a> objects and trivially copyable structs</li>

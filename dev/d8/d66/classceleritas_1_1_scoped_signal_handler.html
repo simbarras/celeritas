@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -89,8 +90,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a8d99851076c49f72d890f9dd237f39f5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d66/classceleritas_1_1_scoped_signal_handler.html#a8d99851076c49f72d890f9dd237f39f5">signal_type</a> = int</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a8d99851076c49f72d890f9dd237f39f5"><td class="memItemLeft" align="right" valign="top"><a id="a8d99851076c49f72d890f9dd237f39f5" name="a8d99851076c49f72d890f9dd237f39f5"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>signal_type</b> = int</td></tr>
 <tr class="separator:a8d99851076c49f72d890f9dd237f39f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -100,11 +102,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aaa2a3c9b2d352c509bf14ccd39429783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default to not handling any signals. <br /></td></tr>
 <tr class="separator:aaa2a3c9b2d352c509bf14ccd39429783"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a564a1b82d036bade9c4cf74829b01580"><td class="memItemLeft" align="right" valign="top"><a id="a564a1b82d036bade9c4cf74829b01580" name="a564a1b82d036bade9c4cf74829b01580"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ScopedSignalHandler</b> (<a class="el" href="../../d8/d66/classceleritas_1_1_scoped_signal_handler.html#a8d99851076c49f72d890f9dd237f39f5">signal_type</a>)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ScopedSignalHandler</b> (signal_type)</td></tr>
 <tr class="memdesc:a564a1b82d036bade9c4cf74829b01580"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle the given signal type. <br /></td></tr>
 <tr class="separator:a564a1b82d036bade9c4cf74829b01580"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac108c3a5d47b41522da76ea51b5dd60a"><td class="memItemLeft" align="right" valign="top"><a id="ac108c3a5d47b41522da76ea51b5dd60a" name="ac108c3a5d47b41522da76ea51b5dd60a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ScopedSignalHandler</b> (std::initializer_list&lt; <a class="el" href="../../d8/d66/classceleritas_1_1_scoped_signal_handler.html#a8d99851076c49f72d890f9dd237f39f5">signal_type</a> &gt;)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ScopedSignalHandler</b> (std::initializer_list&lt; signal_type &gt;)</td></tr>
 <tr class="memdesc:ac108c3a5d47b41522da76ea51b5dd60a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle the given signal type. <br /></td></tr>
 <tr class="separator:ac108c3a5d47b41522da76ea51b5dd60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ba1847d0f1372b52d0b79cd2e9547cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d66/classceleritas_1_1_scoped_signal_handler.html#a8ba1847d0f1372b52d0b79cd2e9547cc">~ScopedSignalHandler</a> ()</td></tr>
@@ -143,7 +145,7 @@ Static Public Member Functions</h2></td></tr>
 static bool&#160;</td><td class="memItemRight" valign="bottom"><b>allow_signals</b> ()</td></tr>
 <tr class="memdesc:accd26e7161e7ddd73c36358c55f4ad9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether signal handling is enabled. <br /></td></tr>
 <tr class="separator:accd26e7161e7ddd73c36358c55f4ad9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdaf16656290600fb8cdd7f6fb72bd04"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d66/classceleritas_1_1_scoped_signal_handler.html#acdaf16656290600fb8cdd7f6fb72bd04">raise</a> (<a class="el" href="../../d8/d66/classceleritas_1_1_scoped_signal_handler.html#a8d99851076c49f72d890f9dd237f39f5">signal_type</a> sig)</td></tr>
+<tr class="memitem:acdaf16656290600fb8cdd7f6fb72bd04"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d66/classceleritas_1_1_scoped_signal_handler.html#acdaf16656290600fb8cdd7f6fb72bd04">raise</a> (signal_type sig)</td></tr>
 <tr class="memdesc:acdaf16656290600fb8cdd7f6fb72bd04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raise a signal visible only to <a class="el" href="../../d8/d66/classceleritas_1_1_scoped_signal_handler.html" title="Catch the given signal type within the scope of the handler.">ScopedSignalHandler</a> (for testing).  <a href="../../d8/d66/classceleritas_1_1_scoped_signal_handler.html#acdaf16656290600fb8cdd7f6fb72bd04">More...</a><br /></td></tr>
 <tr class="separator:acdaf16656290600fb8cdd7f6fb72bd04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -175,24 +177,8 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>allow_signals<
 <div class="line">   <span class="keywordflow">return</span> interrupted() ? 1 : 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassceleritas_1_1_scoped_signal_handler_html"><div class="ttname"><a href="../../d8/d66/classceleritas_1_1_scoped_signal_handler.html">celeritas::ScopedSignalHandler</a></div><div class="ttdoc">Catch the given signal type within the scope of the handler.</div><div class="ttdef"><b>Definition:</b> ScopedSignalHandler.hh:58</div></div>
-<div class="ttc" id="acorecel_2io_2_logger_8hh_html_a6767c46cb976eac864c4b6db274c4fcf"><div class="ttname"><a href="../../d2/d8a/corecel_2io_2_logger_8hh.html#a6767c46cb976eac864c4b6db274c4fcf">CELER_LOG</a></div><div class="ttdeci">#define CELER_LOG(LEVEL)</div><div class="ttdoc">Return a LogMessage object for streaming into at the given level.</div><div class="ttdef"><b>Definition:</b> corecel/io/Logger.hh:38</div></div>
-</div><!-- fragment --> </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a8d99851076c49f72d890f9dd237f39f5" name="a8d99851076c49f72d890f9dd237f39f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d99851076c49f72d890f9dd237f39f5">&#9670;&#160;</a></span>signal_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d8/d66/classceleritas_1_1_scoped_signal_handler.html#a8d99851076c49f72d890f9dd237f39f5">celeritas::ScopedSignalHandler::signal_type</a> =  int</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="ttc" id="acorecel_2io_2_logger_8hh_html_a6767c46cb976eac864c4b6db274c4fcf"><div class="ttname"><a href="../../d2/d8a/corecel_2io_2_logger_8hh.html#a6767c46cb976eac864c4b6db274c4fcf">CELER_LOG</a></div><div class="ttdeci">#define CELER_LOG(LEVEL)</div><div class="ttdoc">Return a LogMessage object for streaming into at the given level.</div><div class="ttdef"><b>Definition:</b> corecel/io/Logger.hh:44</div></div>
+</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8ba1847d0f1372b52d0b79cd2e9547cc" name="a8ba1847d0f1372b52d0b79cd2e9547cc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8ba1847d0f1372b52d0b79cd2e9547cc">&#9670;&#160;</a></span>~ScopedSignalHandler()</h2>
 
@@ -226,7 +212,7 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>allow_signals<
         <tr>
           <td class="memname">int celeritas::ScopedSignalHandler::raise </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d8/d66/classceleritas_1_1_scoped_signal_handler.html#a8d99851076c49f72d890f9dd237f39f5">signal_type</a>&#160;</td>
+          <td class="paramtype">signal_type&#160;</td>
           <td class="paramname"><em>sig</em></td><td>)</td>
           <td></td>
         </tr>

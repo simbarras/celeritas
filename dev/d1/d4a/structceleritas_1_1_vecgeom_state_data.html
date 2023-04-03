@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -92,7 +93,7 @@ $(function() {
 Public Types</h2></td></tr>
 <tr class="memitem:a4309d5b83638ba3f7e0ad40dccd58d95"><td class="memTemplParams" colspan="2"><a id="a4309d5b83638ba3f7e0ad40dccd58d95" name="a4309d5b83638ba3f7e0ad40dccd58d95"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:a4309d5b83638ba3f7e0ad40dccd58d95"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Items</b> = <a class="el" href="../../db/d8b/_collection_8hh.html#a11d129f3d1fd3777e09f1c5c1f103049">celeritas::StateCollection</a>&lt; T, W, M &gt;</td></tr>
+<tr class="memitem:a4309d5b83638ba3f7e0ad40dccd58d95"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Items</b> = <a class="el" href="../../db/d8b/_collection_8hh.html#a3b2cddd69a67a4cca1eb022f8a24bb5b">celeritas::StateCollection</a>&lt; T, W, M &gt;</td></tr>
 <tr class="separator:a4309d5b83638ba3f7e0ad40dccd58d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -101,10 +102,10 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () const</td></tr>
 <tr class="memdesc:a83c20a239c0a5eec1a65d46d6aac12ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if sizes are consistent and states are assigned. <br /></td></tr>
 <tr class="separator:a83c20a239c0a5eec1a65d46d6aac12ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa32e6e5ea2f8012443c575bd4f74f9e6"><td class="memItemLeft" align="right" valign="top"><a id="aa32e6e5ea2f8012443c575bd4f74f9e6" name="aa32e6e5ea2f8012443c575bd4f74f9e6"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> ThreadId::size_type&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const</td></tr>
-<tr class="memdesc:aa32e6e5ea2f8012443c575bd4f74f9e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">State size. <br /></td></tr>
-<tr class="separator:aa32e6e5ea2f8012443c575bd4f74f9e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c55bfba4c0b5127d44fee2eb9d3e931"><td class="memItemLeft" align="right" valign="top"><a id="a0c55bfba4c0b5127d44fee2eb9d3e931" name="a0c55bfba4c0b5127d44fee2eb9d3e931"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> TrackSlotId::size_type&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const</td></tr>
+<tr class="memdesc:a0c55bfba4c0b5127d44fee2eb9d3e931"><td class="mdescLeft">&#160;</td><td class="mdescRight">State size. <br /></td></tr>
+<tr class="separator:a0c55bfba4c0b5127d44fee2eb9d3e931"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71b03cdca81a01a43251280fb3b10e3a"><td class="memTemplParams" colspan="2"><a id="a71b03cdca81a01a43251280fb3b10e3a" name="a71b03cdca81a01a43251280fb3b10e3a"></a>
 template&lt;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148">Ownership</a> W2, <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#af21a33cd854346b7988591378fcfe138">MemSpace</a> M2&gt; </td></tr>
 <tr class="memitem:a71b03cdca81a01a43251280fb3b10e3a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d1/d4a/structceleritas_1_1_vecgeom_state_data.html">VecgeomStateData</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="../../d1/d4a/structceleritas_1_1_vecgeom_state_data.html">VecgeomStateData</a>&lt; W2, M2 &gt; &amp;other)</td></tr>
@@ -114,10 +115,10 @@ template&lt;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfc
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:afe21ca8a68d4460db5793af696561930"><td class="memItemLeft" align="right" valign="top"><a id="afe21ca8a68d4460db5793af696561930" name="afe21ca8a68d4460db5793af696561930"></a>
-<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Items</a>&lt; <a class="el" href="../../dd/dd6/structceleritas_1_1_array.html">Real3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pos</b></td></tr>
+<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Items</a>&lt; <a class="el" href="../../d7/d97/orange_2_types_8hh.html#a1e1ba0989db30adaef22d751feb8adb7">Real3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pos</b></td></tr>
 <tr class="separator:afe21ca8a68d4460db5793af696561930"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4d2b98426aa50f8ab8aea85dfde92e2"><td class="memItemLeft" align="right" valign="top"><a id="af4d2b98426aa50f8ab8aea85dfde92e2" name="af4d2b98426aa50f8ab8aea85dfde92e2"></a>
-<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Items</a>&lt; <a class="el" href="../../dd/dd6/structceleritas_1_1_array.html">Real3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dir</b></td></tr>
+<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Items</a>&lt; <a class="el" href="../../d7/d97/orange_2_types_8hh.html#a1e1ba0989db30adaef22d751feb8adb7">Real3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dir</b></td></tr>
 <tr class="separator:af4d2b98426aa50f8ab8aea85dfde92e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30e93d83b19590a1b721c9fdea3e680d"><td class="memItemLeft" align="right" valign="top"><a id="a30e93d83b19590a1b721c9fdea3e680d" name="a30e93d83b19590a1b721c9fdea3e680d"></a>
 <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Items</a>&lt; <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>next_step</b></td></tr>

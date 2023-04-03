@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -92,14 +93,14 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_applicable</b> (<a class="el" href="../../da/d9d/classceleritas_1_1_core_track_view.html">CoreTrackView</a> const &amp;, <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> step) const</td></tr>
 <tr class="memdesc:a057ce4aa06003e2896d728c476cedb0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">MSC never applies to the current track. <br /></td></tr>
 <tr class="separator:a057ce4aa06003e2896d728c476cedb0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42de16a74d65274b4bee6c0cb675735a"><td class="memItemLeft" align="right" valign="top"><a id="a42de16a74d65274b4bee6c0cb675735a" name="a42de16a74d65274b4bee6c0cb675735a"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><b>calc_step</b> (<a class="el" href="../../da/d9d/classceleritas_1_1_core_track_view.html">CoreTrackView</a> const &amp;, <a class="el" href="../../d0/d58/structceleritas_1_1_along_step_local_state.html">AlongStepLocalState</a> *) const</td></tr>
-<tr class="memdesc:a42de16a74d65274b4bee6c0cb675735a"><td class="mdescLeft">&#160;</td><td class="mdescRight">No updates needed to the physical and geometric step lengths. <br /></td></tr>
-<tr class="separator:a42de16a74d65274b4bee6c0cb675735a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a394e418c790c8e9ed1993acc4c373f9c"><td class="memItemLeft" align="right" valign="top"><a id="a394e418c790c8e9ed1993acc4c373f9c" name="a394e418c790c8e9ed1993acc4c373f9c"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><b>apply_step</b> (<a class="el" href="../../da/d9d/classceleritas_1_1_core_track_view.html">CoreTrackView</a> const &amp;, <a class="el" href="../../d0/d58/structceleritas_1_1_along_step_local_state.html">AlongStepLocalState</a> *) const</td></tr>
-<tr class="memdesc:a394e418c790c8e9ed1993acc4c373f9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">MSC is never applied. <br /></td></tr>
-<tr class="separator:a394e418c790c8e9ed1993acc4c373f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f5301178d4af1316822a440b2a6401c"><td class="memItemLeft" align="right" valign="top"><a id="a7f5301178d4af1316822a440b2a6401c" name="a7f5301178d4af1316822a440b2a6401c"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><b>limit_step</b> (<a class="el" href="../../da/d9d/classceleritas_1_1_core_track_view.html">CoreTrackView</a> const &amp;, <a class="el" href="../../da/da4/structceleritas_1_1_step_limit.html">StepLimit</a> *) const</td></tr>
+<tr class="memdesc:a7f5301178d4af1316822a440b2a6401c"><td class="mdescLeft">&#160;</td><td class="mdescRight">No updates needed to the physical and geometric step lengths. <br /></td></tr>
+<tr class="separator:a7f5301178d4af1316822a440b2a6401c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7556428ea511da28303cd680cecbd158"><td class="memItemLeft" align="right" valign="top"><a id="a7556428ea511da28303cd680cecbd158" name="a7556428ea511da28303cd680cecbd158"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><b>apply_step</b> (<a class="el" href="../../da/d9d/classceleritas_1_1_core_track_view.html">CoreTrackView</a> const &amp;, <a class="el" href="../../da/da4/structceleritas_1_1_step_limit.html">StepLimit</a> *) const</td></tr>
+<tr class="memdesc:a7556428ea511da28303cd680cecbd158"><td class="mdescLeft">&#160;</td><td class="mdescRight">MSC is never applied. <br /></td></tr>
+<tr class="separator:a7556428ea511da28303cd680cecbd158"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Helper class for along-step kernel when no MSC is in use. </p>

@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -76,7 +77,7 @@ $(function() {
 <div class="textblock"><p ><a class="anchor" id="md__Users_seth__local_src_celeritas_temp_README"></a> The Celeritas project implements HEP detector physics on GPU accelerator hardware with the ultimate goal of supporting the massive computational requirements of the <a href="https://home.cern/science/accelerators/high-luminosity-lhc">HL-LHC upgrade</a>.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Documentation</h1>
-<p >Most of the Celeritas documentation is readable through the codebase through a combination of <a href="doc/index.rst">static RST documentation</a> and Doxygen-markup comments in the source code itself. The full <a href="https://celeritas-project.github.io/celeritas/user/index.html)">Celeritas user documentation</a> (including selected code documentation incorporated by Breathe) and the <a href="https://celeritas-project.github.io/celeritas/dev/index.html)">Celeritas code documentation</a> are mirrored on our GitHub pages site. You can generate these yourself by setting the <code>CELERITAS_BUILD_DOCS=ON</code> configuration option and running <code>ninja doc</code> (user) or <code>ninja doxygen</code> (developer). A continuously updated version of the <a href="https://celeritas.readthedocs.io/en/latest/">static Celeritas user documentation</a> (without API documentation) is hosted on <code>readthedocs.io</code>.</p>
+<p >Most of the Celeritas documentation is readable through the codebase through a combination of <a href="doc/index.rst">static RST documentation</a> and Doxygen-markup comments in the source code itself. The full <a href="https://celeritas-project.github.io/celeritas/user/index.html">Celeritas user documentation</a> (including selected code documentation incorporated by Breathe) and the <a href="https://celeritas-project.github.io/celeritas/dev/index.html">Celeritas code documentation</a> are mirrored on our GitHub pages site. You can generate these yourself (if the necessary prerequisites are installed) by setting the <code>CELERITAS_BUILD_DOCS=ON</code> configuration option and running <code>ninja doc</code> (user) or <code>ninja doxygen</code> (developer). A continuously updated version of the <a href="https://celeritas.readthedocs.io/en/latest/">static Celeritas user documentation</a> (without API documentation) is hosted on <code>readthedocs.io</code>.</p>
 <h1><a class="anchor" id="autotoc_md2"></a>
 Installation for applications</h1>
 <p >The easiest way to install Celeritas as a library/app is with Spack:</p><ul>
@@ -88,7 +89,7 @@ Installation for applications</h1>
 <h1><a class="anchor" id="autotoc_md3"></a>
 Installation for developers</h1>
 <p >Since Celeritas is still under heavy development and is not yet full-featured for downstream integration, you are likely installing it for development purposes. The <a href="doc/installation.rst">installation documentation</a> has a complete description of the code's dependencies and installation process for development.</p>
-<p >As an example, if you have the <a href="https://github.com/spack/spack">Spack</a> package manager installed and want to do development on a CUDA system with Volta-class graphics cards, execute the following steps: </p><div class="fragment"><div class="line"># Set up CUDA (optional)</div>
+<p >As an example, if you have the <a href="https://github.com/spack/spack">Spack</a> package manager installed and want to do development on a CUDA system with Volta-class graphics cards, execute the following steps from within the cloned Celeritas source directory: </p><div class="fragment"><div class="line"># Set up CUDA (optional)</div>
 <div class="line">$ spack external find cuda</div>
 <div class="line">$ spack config add packages:all:variants:&quot;+cuda cuda_arch=70&quot;</div>
 <div class="line"># Install celeritas dependencies</div>
@@ -110,7 +111,7 @@ Citing Celeritas</h1>
 <blockquote class="doxtable">
 <p >&zwj;Johnson, Seth R., Amanda Lund, Soon Yung Jun, Stefano Tognini, Guilherme Lima, Paul Romano, Philippe Canal, Ben Morgan, and Tom Evans. “Celeritas,” July 2022. <a href="https://doi.org/10.11578/dc.20221011.1">https://doi.org/10.11578/dc.20221011.1</a>. </p>
 </blockquote>
-<p>Additional references for code implementation details, benchmark problem results, etc., can be found in our continually evolving <a href="doc/_static/celeritas.bib">citation file</a>. </p>
+<p>Additional references for code implementation details, benchmark problem results, etc., can be found in our continually evolving <a href="doc/_static/celeritas.bib">citation file</a>. An <a href="https://github.com/celeritas-project/celeritas-docs/blob/main/presentations/presentations.bib">exhaustive list of Celeritas presentations</a> authored by (or with content authored by) core team members is available in our documents repo. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -81,17 +82,20 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;functional&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../de/de8/_import_process_8hh.html">celeritas/io/ImportProcess.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../da/dfd/_atomic_number_8hh.html">celeritas/phys/AtomicNumber.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d3/d0a/_process_8hh.html">Process.hh</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d26/structceleritas_1_1_process_builder_options.html">celeritas::ProcessBuilderOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options used for constructing built-in Celeritas processes.  <a href="../../d4/d26/structceleritas_1_1_process_builder_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dff/classceleritas_1_1_process_builder.html">celeritas::ProcessBuilder</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct Celeritas EM processes from imported data.  <a href="../../d3/dff/classceleritas_1_1_process_builder.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d68/structceleritas_1_1_process_builder_1_1_options.html">celeritas::ProcessBuilder::Options</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/da0/structceleritas_1_1_process_builder_1_1_user_build_input.html">celeritas::ProcessBuilder::UserBuildInput</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input argument for user-provided process construction.  <a href="../../d0/da0/structceleritas_1_1_process_builder_1_1_user_build_input.html#details">More...</a><br /></td></tr>

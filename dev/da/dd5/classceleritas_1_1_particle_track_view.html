@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -104,10 +105,10 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>Initializer_t</b> = 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae37fb4ced1b7f38ec268b3539b98d305"><td class="memItemLeft" align="right" valign="top"><a id="ae37fb4ced1b7f38ec268b3539b98d305" name="ae37fb4ced1b7f38ec268b3539b98d305"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ParticleTrackView</b> (ParticleParamsRef const &amp;params, ParticleStateRef const &amp;states, <a class="el" href="../../d3/d83/_thread_id_8hh.html#acdbd2b3f5402d42bb1349684a00365a4">ThreadId</a> id)</td></tr>
-<tr class="memdesc:ae37fb4ced1b7f38ec268b3539b98d305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from dynamic and static particle properties. <br /></td></tr>
-<tr class="separator:ae37fb4ced1b7f38ec268b3539b98d305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0b9304cd68fe0afac2c713cb5922732"><td class="memItemLeft" align="right" valign="top"><a id="af0b9304cd68fe0afac2c713cb5922732" name="af0b9304cd68fe0afac2c713cb5922732"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ParticleTrackView</b> (ParticleParamsRef const &amp;params, ParticleStateRef const &amp;states, <a class="el" href="../../d3/d83/_thread_id_8hh.html#a3fffdf8703eae70bc266e8cd92bf4dd5">TrackSlotId</a> id)</td></tr>
+<tr class="memdesc:af0b9304cd68fe0afac2c713cb5922732"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from dynamic and static particle properties. <br /></td></tr>
+<tr class="separator:af0b9304cd68fe0afac2c713cb5922732"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1c931d626d40fa32e918aae94688b20"><td class="memItemLeft" align="right" valign="top"><a id="ad1c931d626d40fa32e918aae94688b20" name="ad1c931d626d40fa32e918aae94688b20"></a>
 <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../da/dd5/classceleritas_1_1_particle_track_view.html">ParticleTrackView</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="../../d0/d64/structceleritas_1_1_particle_track_initializer.html">Initializer_t</a> const &amp;other)</td></tr>
 <tr class="memdesc:ad1c931d626d40fa32e918aae94688b20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the particle. <br /></td></tr>
@@ -147,8 +148,16 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>decay_constant</b> () const</td></tr>
 <tr class="memdesc:a0592dc4c7040dd225212cfd3ce40df5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decay constant. <br /></td></tr>
 <tr class="separator:a0592dc4c7040dd225212cfd3ce40df5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7613034efd7b9504366131b73979236"><td class="memItemLeft" align="right" valign="top"><a id="ab7613034efd7b9504366131b73979236" name="ab7613034efd7b9504366131b73979236"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_antiparticle</b> () const</td></tr>
+<tr class="memdesc:ab7613034efd7b9504366131b73979236"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether it is an antiparticle. <br /></td></tr>
+<tr class="separator:ab7613034efd7b9504366131b73979236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ccb4753ebed6729a7978b2653f6f649"><td class="memItemLeft" align="right" valign="top"><a id="a0ccb4753ebed6729a7978b2653f6f649" name="a0ccb4753ebed6729a7978b2653f6f649"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_stable</b> () const</td></tr>
+<tr class="memdesc:a0ccb4753ebed6729a7978b2653f6f649"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether particle is stable. <br /></td></tr>
+<tr class="separator:a0ccb4753ebed6729a7978b2653f6f649"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa9f0df7f99c00eefdb96b064a478490"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd5/classceleritas_1_1_particle_track_view.html#aaa9f0df7f99c00eefdb96b064a478490">beta_sq</a> () const</td></tr>
-<tr class="memdesc:aaa9f0df7f99c00eefdb96b064a478490"><td class="mdescLeft">&#160;</td><td class="mdescRight">Square of <picture><source srcset="../../form_98_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \beta $" src="../../form_98.png" width="9" height="13"/></picture>, which is the fraction of lightspeed [unitless].  <a href="../../da/dd5/classceleritas_1_1_particle_track_view.html#aaa9f0df7f99c00eefdb96b064a478490">More...</a><br /></td></tr>
+<tr class="memdesc:aaa9f0df7f99c00eefdb96b064a478490"><td class="mdescLeft">&#160;</td><td class="mdescRight">Square of <picture><source srcset="../../form_62_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \beta $" src="../../form_62.png" width="9" height="13"/></picture>, which is the fraction of lightspeed [unitless].  <a href="../../da/dd5/classceleritas_1_1_particle_track_view.html#aaa9f0df7f99c00eefdb96b064a478490">More...</a><br /></td></tr>
 <tr class="separator:aaa9f0df7f99c00eefdb96b064a478490"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a120380b0fd974e0f38bb83482c59cdf6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::LightSpeed</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd5/classceleritas_1_1_particle_track_view.html#a120380b0fd974e0f38bb83482c59cdf6">speed</a> () const</td></tr>
 <tr class="memdesc:a120380b0fd974e0f38bb83482c59cdf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Speed [1/c].  <a href="../../da/dd5/classceleritas_1_1_particle_track_view.html#a120380b0fd974e0f38bb83482c59cdf6">More...</a><br /></td></tr>
@@ -190,31 +199,31 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Square of <picture><source srcset="../../form_98_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \beta $" src="../../form_98.png" width="9" height="13"/></picture>, which is the fraction of lightspeed [unitless]. </p>
+<p>Square of <picture><source srcset="../../form_62_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \beta $" src="../../form_62.png" width="9" height="13"/></picture>, which is the fraction of lightspeed [unitless]. </p>
 <p >Beta is calculated using the equality  </p><p class="formulaDsp">
-<picture><source srcset="../../form_149_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_154_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 pc/E = \beta ; \quad \beta^2 = \frac{p^2 c^2}{E^2}
-\]" src="../../form_149.png" width="125" height="29"/></picture>
+\]" src="../../form_154.png" width="125" height="29"/></picture>
 </p>
 <p>. Using  </p><p class="formulaDsp">
-<picture><source srcset="../../form_150_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_155_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 E^2 = p^2 c^2 + m^2 c^4
-\]" src="../../form_150.png" width="98" height="15"/></picture>
+\]" src="../../form_155.png" width="98" height="15"/></picture>
 </p>
 <p> and  </p><p class="formulaDsp">
-<picture><source srcset="../../form_151_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_156_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 E = K + mc^2
-\]" src="../../form_151.png" width="75" height="14"/></picture>
+\]" src="../../form_156.png" width="75" height="14"/></picture>
 </p>
 <p >the square of the fraction of lightspeed speed is  </p><p class="formulaDsp">
-<picture><source srcset="../../form_152_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_157_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 \beta^2 = 1 - \left( \frac{mc^2}{K + mc^2} \right)^2
         = 1 - \gamma^{-2}
-\]" src="../../form_152.png" width="185" height="35"/></picture>
+\]" src="../../form_157.png" width="185" height="35"/></picture>
 </p>
-<p >where <picture><source srcset="../../form_153_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \gamma $" src="../../form_153.png" width="9" height="9"/></picture> is the Lorentz factor (see below).</p>
+<p >where <picture><source srcset="../../form_158_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \gamma $" src="../../form_158.png" width="9" height="9"/></picture> is the Lorentz factor (see below).</p>
 <p >By choosing not to divide out the mass, this expression will work for massless particles.</p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000010">Todo:</a></b></dt><dd>For nonrelativistic particles (low kinetic energy) this expression may be inaccurate due to rounding error. It is however guaranteed to be in the exact range [0, 1]. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000012">Todo:</a></b></dt><dd>For nonrelativistic particles (low kinetic energy) this expression may be inaccurate due to rounding error. It is however guaranteed to be in the exact range [0, 1]. </dd></dl>
 
 </div>
 </div>
@@ -272,20 +281,20 @@ E = K + mc^2
 
 <p>Lorentz factor [unitless]. </p>
 <p >The Lorentz factor can be viewed as a transformation from classical quantities to relativistic quantities. It's defined as  </p><p class="formulaDsp">
-<picture><source srcset="../../form_154_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_159_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 \gamma = \frac{1}{\sqrt{1 - v^2 / c^2}}
-\]" src="../../form_154.png" width="90" height="33"/></picture>
+\]" src="../../form_159.png" width="90" height="33"/></picture>
 </p>
 <p >Its value is infinite for the massless photon, and greater than or equal to 1 otherwise.</p>
 <p >Gamma can also be calculated from the total (rest + kinetic) energy  </p><p class="formulaDsp">
-<picture><source srcset="../../form_155_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_160_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 E = \gamma mc^2 = K + mc^2
-\]" src="../../form_155.png" width="120" height="15"/></picture>
+\]" src="../../form_160.png" width="120" height="15"/></picture>
 </p>
 <p> which we ues here since <em>K</em> and <em>m</em> are the primary stored quantities of the particles:  </p><p class="formulaDsp">
-<picture><source srcset="../../form_156_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_161_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 \gamma = 1 + \frac{K}{mc^2}
- \]" src="../../form_156.png" width="70" height="28"/></picture>
+ \]" src="../../form_161.png" width="70" height="28"/></picture>
 </p>
  
 </div>
@@ -343,24 +352,24 @@ E = \gamma mc^2 = K + mc^2
 
 <p>Square of relativistic momentum [MeV^2 / c^2]. </p>
 <p >Total energy:  </p><p class="formulaDsp">
-<picture><source srcset="../../form_151_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_156_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 E = K + mc^2
-\]" src="../../form_151.png" width="75" height="14"/></picture>
+\]" src="../../form_156.png" width="75" height="14"/></picture>
 </p>
 <p> Relation between energy and momentum:  </p><p class="formulaDsp">
-<picture><source srcset="../../form_150_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_155_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 E^2 = p^2 c^2 + m^2 c^4
-\]" src="../../form_150.png" width="98" height="15"/></picture>
+\]" src="../../form_155.png" width="98" height="15"/></picture>
 </p>
 <p> therefore  </p><p class="formulaDsp">
-<picture><source srcset="../../form_157_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_162_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 p^2 = \frac{E^2}{c^2} - m^2 c^2
-\]" src="../../form_157.png" width="90" height="29"/></picture>
+\]" src="../../form_162.png" width="90" height="29"/></picture>
 </p>
 <p> or  </p><p class="formulaDsp">
-<picture><source srcset="../../form_158_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_163_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 p^2 = \frac{K^2}{c^2} + 2 * m * K
-\]" src="../../form_158.png" width="118" height="29"/></picture>
+\]" src="../../form_163.png" width="118" height="29"/></picture>
 </p>
  
 </div>

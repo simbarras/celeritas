@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -115,21 +116,21 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Scale SB differential cross sections for positrons. </p>
 <p >This correction factor is the ratio of the positron to electron cross sections. It appears in the bowels of <code>G4SeltzerBergerModel::SampleEnergyTransfer</code> in Geant4 and scales the SB cross section by a factor  </p><p class="formulaDsp">
-<picture><source srcset="../../form_89_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_53_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
  \frac{\sigma^+}{\sigma^-}
      = \exp( 2 \pi \alpha Z [ \beta^{-1}(E - k_c) - \beta^{-1}(E - k) ] )
- \]" src="../../form_89.png" width="246" height="29"/></picture>
+ \]" src="../../form_53.png" width="246" height="29"/></picture>
 </p>
 <p> where the inverse positron speed is : </p><p class="formulaDsp">
-<picture><source srcset="../../form_90_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_54_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 \beta^{-1}(E) = \frac{c}{v} = \sqrt{1 - \left( \frac{m_e c^2}{E + m_e c^2}
 \right)^2}
 \,,
- \]" src="../../form_90.png" width="203" height="39"/></picture>
+ \]" src="../../form_54.png" width="203" height="39"/></picture>
 </p>
-<p> <picture><source srcset="../../form_91_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \alpha $" src="../../form_91.png" width="8" height="6"/></picture> is the fine structure constant, <picture><source srcset="../../form_92_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$E$" src="../../form_92.png" width="10" height="10"/></picture> is the incident positron kinetic energy, <picture><source srcset="../../form_93_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$k_c$" src="../../form_93.png" width="11" height="13"/></picture> is the gamma production cutoff energy, and <picture><source srcset="../../form_94_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ k $" src="../../form_94.png" width="6" height="10"/></picture> is the provisionally sampled energy of the emitted photon.</p>
-<p ><picture><source srcset="../../form_95_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \frac{\sigma^+}{\sigma^-} = 1 $" src="../../form_95.png" width="39" height="19"/></picture> at the low end of the spectrum (where <picture><source srcset="../../form_96_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ k / E = 0 $" src="../../form_96.png" width="45" height="14"/></picture>) and is 0 at the tip of the spectrum where <picture><source srcset="../../form_97_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ k / E \to 1
- $" src="../../form_97.png" width="48" height="14"/></picture>.</p>
+<p> <picture><source srcset="../../form_55_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \alpha $" src="../../form_55.png" width="8" height="6"/></picture> is the fine structure constant, <picture><source srcset="../../form_56_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$E$" src="../../form_56.png" width="10" height="10"/></picture> is the incident positron kinetic energy, <picture><source srcset="../../form_57_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$k_c$" src="../../form_57.png" width="11" height="13"/></picture> is the gamma production cutoff energy, and <picture><source srcset="../../form_58_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ k $" src="../../form_58.png" width="6" height="10"/></picture> is the provisionally sampled energy of the emitted photon.</p>
+<p ><picture><source srcset="../../form_59_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \frac{\sigma^+}{\sigma^-} = 1 $" src="../../form_59.png" width="39" height="19"/></picture> at the low end of the spectrum (where <picture><source srcset="../../form_60_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ k / E = 0 $" src="../../form_60.png" width="45" height="14"/></picture>) and is 0 at the tip of the spectrum where <picture><source srcset="../../form_61_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ k / E \to 1
+ $" src="../../form_61.png" width="48" height="14"/></picture>.</p>
 <p >The correction factor is described in:</p>
 <p >Kim, Longhuan, R. H. Pratt, S. M. Seltzer, and M. J. Berger. “Ratio of Positron to Electron Bremsstrahlung Energy Loss: An Approximate Scaling Law.” Physical Review A 33, no. 5 (May 1, 1986): 3002–9. <a href="https://doi.org/10.1103/PhysRevA.33.3002">https://doi.org/10.1103/PhysRevA.33.3002</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>

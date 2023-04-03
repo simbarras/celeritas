@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -118,9 +119,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>disable_integral_xs</
 <tr class="memitem:a65e2b2419670d5c12387d7c3436a3cf9"><td class="memItemLeft" align="right" valign="top"><a id="a65e2b2419670d5c12387d7c3436a3cf9" name="a65e2b2419670d5c12387d7c3436a3cf9"></a>
 <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>linear_loss_limit</b> = 0.01</td></tr>
 <tr class="separator:a65e2b2419670d5c12387d7c3436a3cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a361b82e6f0cd853b9e17fc984c5ac8fa"><td class="memItemLeft" align="right" valign="top"><a id="a361b82e6f0cd853b9e17fc984c5ac8fa" name="a361b82e6f0cd853b9e17fc984c5ac8fa"></a>
-<a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eloss_calc_limit</b> = <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a>{0.001}</td></tr>
-<tr class="separator:a361b82e6f0cd853b9e17fc984c5ac8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64342c204e3adde6a07b9d220c95e34d"><td class="memItemLeft" align="right" valign="top"><a id="a64342c204e3adde6a07b9d220c95e34d" name="a64342c204e3adde6a07b9d220c95e34d"></a>
+<a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lowest_electron_energy</b> = <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a>{0.001}</td></tr>
+<tr class="separator:a64342c204e3adde6a07b9d220c95e34d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Physics configuration options. </p>
@@ -130,11 +131,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>disable_integral_xs</
 <li><code>fixed_step_limiter:</code> if nonzero, prevent any tracks from taking a step longer than this length.</li>
 <li><code>min_eprime_over_e:</code> energy scaling fraction used to estimate the maximum cross section over the step in the integral approach for energy loss processes.</li>
 <li><code>linear_loss_limit:</code> if the mean energy loss along a step is greater than this fractional value of the pre-step kinetic energy, recalculate the energy loss.</li>
-<li><code>eloss_calc_limit:</code> kill charged particles below this energy at the end of a step.</li>
+<li><code>lowest_electron_energy:</code> lowest kinetic energy for electrons/positrons</li>
 <li><code>secondary_stack_factor:</code> the number of secondary slots per track slot allocated.</li>
 <li><code>disable_integral_xs:</code> for particles with energy loss processes, the particle energy changes over the step, so the assumption that the cross section is constant is no longer valid. By default, many charged particle processes use MC integration to sample the discrete interaction length with the correct probability. Disable this integral approach for all processes.</li>
 </ul>
-<p >NOTE: min_range/max_step_over_range are not accessible through Geant4, and they can also be set to be different for electrons, mu/hadrons, and ions. </p>
+<p >NOTE: min_range/max_step_over_range are not accessible through Geant4, and they can also be set to be different for electrons, mu/hadrons, and ions (they are set in Geant4 with <code>G4EmParameters::SetStepFunction()</code>). </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../d4/d3c/_physics_params_8hh.html">PhysicsParams.hh</a></li>
 </ul>

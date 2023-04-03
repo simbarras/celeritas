@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -75,7 +76,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">AlongStep.hh File Reference</div></div>
 </div><!--header-->
@@ -87,32 +87,26 @@ $(function() {
 <code>#include &quot;<a class="el" href="../../db/dc5/_macros_8hh.html">corecel/Macros.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d0/d5c/_opaque_id_8hh.html">corecel/OpaqueId.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html">corecel/Types.hh</a>&quot;</code><br />
-<code>#include &quot;orange/Types.hh&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d97/orange_2_types_8hh.html">orange/Types.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../db/da7/celeritas_2_types_8hh.html">celeritas/Types.hh</a>&quot;</code><br />
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d58/structceleritas_1_1_along_step_local_state.html">celeritas::AlongStepLocalState</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Within-kernel state for step limits and action.  <a href="../../d0/d58/structceleritas_1_1_along_step_local_state.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a63351356e77e5466c1db9bc28676bc26"><td class="memTemplParams" colspan="2">template&lt;class MH , class MP , class AE &gt; </td></tr>
-<tr class="memitem:a63351356e77e5466c1db9bc28676bc26"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d42/_along_step_8hh.html#a63351356e77e5466c1db9bc28676bc26">celeritas::along_step</a> (MH &amp;&amp;msc, MP &amp;&amp;make_propagator, AE &amp;&amp;apply_eloss, CoreTrackView const &amp;track)</td></tr>
-<tr class="memdesc:a63351356e77e5466c1db9bc28676bc26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform the along-step action using helper functions.  <a href="../../d1/d42/_along_step_8hh.html#a63351356e77e5466c1db9bc28676bc26">More...</a><br /></td></tr>
-<tr class="separator:a63351356e77e5466c1db9bc28676bc26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65f42d6995c044bc7c15de63df805ec5"><td class="memTemplParams" colspan="2">template&lt;class MH , class MP , class EH &gt; </td></tr>
+<tr class="memitem:a65f42d6995c044bc7c15de63df805ec5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d42/_along_step_8hh.html#a65f42d6995c044bc7c15de63df805ec5">celeritas::along_step</a> (MH &amp;&amp;msc, MP &amp;&amp;make_propagator, EH &amp;&amp;eloss, CoreTrackView const &amp;track)</td></tr>
+<tr class="memdesc:a65f42d6995c044bc7c15de63df805ec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform the along-step action using helper functions.  <a href="../../d1/d42/_along_step_8hh.html#a65f42d6995c044bc7c15de63df805ec5">More...</a><br /></td></tr>
+<tr class="separator:a65f42d6995c044bc7c15de63df805ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Along-step function and helper classes. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a63351356e77e5466c1db9bc28676bc26" name="a63351356e77e5466c1db9bc28676bc26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63351356e77e5466c1db9bc28676bc26">&#9670;&#160;</a></span>along_step()</h2>
+<a id="a65f42d6995c044bc7c15de63df805ec5" name="a65f42d6995c044bc7c15de63df805ec5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65f42d6995c044bc7c15de63df805ec5">&#9670;&#160;</a></span>along_step()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MH , class MP , class AE &gt; </div>
+template&lt;class MH , class MP , class EH &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -132,8 +126,8 @@ template&lt;class MH , class MP , class AE &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">AE &amp;&amp;&#160;</td>
-          <td class="paramname"><em>apply_eloss</em>, </td>
+          <td class="paramtype">EH &amp;&amp;&#160;</td>
+          <td class="paramname"><em>eloss</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -159,7 +153,7 @@ template&lt;class MH , class MP , class AE &gt; </div>
   <table class="tparams">
     <tr><td class="paramname">MH</td><td>MSC helper, e.g. <code>detail::NoMsc</code> </td></tr>
     <tr><td class="paramname">MP</td><td>Propagator factory, e.g. <code>detail::LinearPropagatorFactory</code> </td></tr>
-    <tr><td class="paramname">AE</td><td>Energy loss applier, e.g. <code>detail::NoElossApplier</code> </td></tr>
+    <tr><td class="paramname">EH</td><td>Energy loss helper, e.g. <code>detail::TrackNoEloss</code> </td></tr>
   </table>
   </dd>
 </dl>

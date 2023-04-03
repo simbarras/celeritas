@@ -1,9 +1,9 @@
 var searchData=
 [
   ['safety_0',['safety',['../d4/dc7/structceleritas_1_1_field_driver_options.html#acc121bab1b2b354ee7482e9f59205cc2',1,'celeritas::FieldDriverOptions']]],
-  ['safety_5ffact_1',['safety_fact',['../dc/dbd/structceleritas_1_1_urban_msc_parameters.html#a857afbf026f495019958b7b2382cf7b2',1,'celeritas::UrbanMscParameters']]],
+  ['safety_5ffact_1',['safety_fact',['../dc/dbd/structceleritas_1_1_urban_msc_parameters.html#a857afbf026f495019958b7b2382cf7b2',1,'celeritas::UrbanMscParameters::safety_fact()'],['../de/d83/structceleritas_1_1_urban_msc_params_1_1_options.html#a961008ad9e5cf8afdff31edd2385e836',1,'celeritas::UrbanMscParams::Options::safety_fact()']]],
   ['safety_5ftol_2',['safety_tol',['../dc/dbd/structceleritas_1_1_urban_msc_parameters.html#a6b14a334b5c6bcacd96595c196177e78',1,'celeritas::UrbanMscParameters']]],
-  ['scaled_5fzeff_3',['scaled_zeff',['../d3/ddf/structceleritas_1_1_urban_msc_material_data.html#a18ceedfcd1a1710ac3b00bb7c1060cf6',1,'celeritas::UrbanMscMaterialData']]],
+  ['scaled_5fzeff_3',['scaled_zeff',['../da/d36/structceleritas_1_1_urban_msc_par_mat_data.html#a7251cb7c37f4d5fcfc44dbc4bd9fe749',1,'celeritas::UrbanMscParMatData']]],
   ['scratch_4',['scratch',['../d3/d81/structceleritas_1_1_atomic_relax_state_data.html#acdda93e620c89ca82bd27d93899b61b0',1,'celeritas::AtomicRelaxStateData']]],
   ['second_5',['second',['../db/df7/_units_8hh.html#a6c5db0b24b85e449def1b229165f945f',1,'celeritas::units']]],
   ['secondaries_6',['secondaries',['../d3/df8/structceleritas_1_1_interaction.html#a4f2e859cb6bd2e9022844b17fbe9a9ee',1,'celeritas::Interaction::secondaries()'],['../df/d90/structceleritas_1_1_physics_track_state.html#a9c60cbe5924fb1e469354ce88f7c57bb',1,'celeritas::PhysicsTrackState::secondaries()'],['../d1/dfb/structceleritas_1_1_physics_state_data.html#ae32670e0374b8dee83e0d11a2667e07a',1,'celeritas::PhysicsStateData::secondaries()']]],
@@ -14,11 +14,10 @@ var searchData=
   ['sizes_11',['sizes',['../d9/d26/structceleritas_1_1_surface_input.html#af956a31815b7c0e77b964cc7f007e5a9',1,'celeritas::SurfaceInput']]],
   ['spin_12',['spin',['../db/ddc/structceleritas_1_1_import_particle.html#a977f5de5e3473fb37e9dde46f0175621',1,'celeritas::ImportParticle']]],
   ['state_13',['state',['../d1/d89/structceleritas_1_1_driver_result.html#a6bc7037bb9ca1412e3e9523acbf94c85',1,'celeritas::DriverResult::state()'],['../d1/dfb/structceleritas_1_1_physics_state_data.html#a2c152722904efb9d0c03dc536aaf3e4a',1,'celeritas::PhysicsStateData::state()'],['../de/d01/structceleritas_1_1_xorwow_rng_state_data.html#aae36f5571981c39778dd7b2771b942ea',1,'celeritas::XorwowRngStateData::state()']]],
-  ['step_14',['step',['../d1/d89/structceleritas_1_1_driver_result.html#a3529eb63a6829b395267aca4b38ae8c4',1,'celeritas::DriverResult']]],
-  ['step_5flength_15',['step_length',['../d6/d34/structceleritas_1_1_msc_interaction.html#ae45e65eeea7ff5038e8c9e07c9d44296',1,'celeritas::MscInteraction']]],
-  ['step_5flimit_16',['step_limit',['../d0/d58/structceleritas_1_1_along_step_local_state.html#a193ffc64aa1abc364cc9e483eb9ae958',1,'celeritas::AlongStepLocalState']]],
-  ['stepmin_5fa_17',['stepmin_a',['../d3/ddf/structceleritas_1_1_urban_msc_material_data.html#ae27ea8d930f1d3d6688ca079bc5d9882',1,'celeritas::UrbanMscMaterialData']]],
-  ['stepmin_5fb_18',['stepmin_b',['../d3/ddf/structceleritas_1_1_urban_msc_material_data.html#af2f38fde4464adee65eafdc1c12f3899',1,'celeritas::UrbanMscMaterialData']]],
-  ['storage_19',['storage',['../d7/d9d/structceleritas_1_1_stack_allocator_data.html#a1ae89746b554bd6b9c747eb28dc81c92',1,'celeritas::StackAllocatorData']]],
-  ['sync_20',['sync',['../d9/df4/structceleritas_1_1_setup_options.html#a8762949e2e942a9526dfb4fe7976c27c',1,'celeritas::SetupOptions::sync()'],['../db/d01/structceleritas_1_1detail_1_1_action_sequence_1_1_options.html#ab91d3b1b3bebc7756a0a3b0da9c5b2a6',1,'celeritas::detail::ActionSequence::Options::sync()']]]
+  ['step_14',['step',['../d4/da1/structceleritas_1_1detail_1_1_msc_step_to_geo_1_1result__type.html#a2b909b88e799b163dfa226b03b42b0ad',1,'celeritas::detail::MscStepToGeo::result_type::step()'],['../d1/d89/structceleritas_1_1_driver_result.html#a3529eb63a6829b395267aca4b38ae8c4',1,'celeritas::DriverResult::step()']]],
+  ['step_5flength_15',['step_length',['../dd/d48/structceleritas_1_1_root_step_writer_1_1_t_step_data.html#a86125b76a05e63928f4c06fa99506bc5',1,'celeritas::RootStepWriter::TStepData']]],
+  ['stepmin_5fcoeff_16',['stepmin_coeff',['../d3/ddf/structceleritas_1_1_urban_msc_material_data.html#a233b4cf4c91448508f345b0ed61c09ca',1,'celeritas::UrbanMscMaterialData']]],
+  ['storage_17',['storage',['../d7/d9d/structceleritas_1_1_stack_allocator_data.html#a1ae89746b554bd6b9c747eb28dc81c92',1,'celeritas::StackAllocatorData']]],
+  ['stream_5fid_18',['stream_id',['../d2/d29/structceleritas_1_1_core_state_data.html#a7945644dbd9fccd6541e9fca7c0fb704',1,'celeritas::CoreStateData']]],
+  ['sync_19',['sync',['../d9/df4/structceleritas_1_1_setup_options.html#a8762949e2e942a9526dfb4fe7976c27c',1,'celeritas::SetupOptions::sync()'],['../db/d01/structceleritas_1_1detail_1_1_action_sequence_1_1_options.html#ab91d3b1b3bebc7756a0a3b0da9c5b2a6',1,'celeritas::detail::ActionSequence::Options::sync()']]]
 ];

@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -88,8 +89,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a457f3fbd64ccbbf8bdcb5ec4de522099"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de4/classceleritas_1_1_action_registry.html#a457f3fbd64ccbbf8bdcb5ec4de522099">SPConstAction</a> = std::shared_ptr&lt; <a class="el" href="../../d7/d6f/classceleritas_1_1_action_interface.html">ActionInterface</a> const  &gt;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a457f3fbd64ccbbf8bdcb5ec4de522099"><td class="memItemLeft" align="right" valign="top"><a id="a457f3fbd64ccbbf8bdcb5ec4de522099" name="a457f3fbd64ccbbf8bdcb5ec4de522099"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstAction</b> = std::shared_ptr&lt; <a class="el" href="../../d7/d6f/classceleritas_1_1_action_interface.html">ActionInterface</a> const  &gt;</td></tr>
 <tr class="separator:a457f3fbd64ccbbf8bdcb5ec4de522099"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -103,7 +105,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a16800fdd3009c8ec4d162a23370d423a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the next available action ID. <br /></td></tr>
 <tr class="separator:a16800fdd3009c8ec4d162a23370d423a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a129008edda6fd70cd4b14e888d16d851"><td class="memItemLeft" align="right" valign="top"><a id="a129008edda6fd70cd4b14e888d16d851" name="a129008edda6fd70cd4b14e888d16d851"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>insert</b> (<a class="el" href="../../d4/de4/classceleritas_1_1_action_registry.html#a457f3fbd64ccbbf8bdcb5ec4de522099">SPConstAction</a>)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>insert</b> (SPConstAction)</td></tr>
 <tr class="memdesc:a129008edda6fd70cd4b14e888d16d851"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register an implicit action. <br /></td></tr>
 <tr class="separator:a129008edda6fd70cd4b14e888d16d851"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae72ff94a2e3b974bc225ea1247513016"><td class="memItemLeft" align="right" valign="top"><a id="ae72ff94a2e3b974bc225ea1247513016" name="ae72ff94a2e3b974bc225ea1247513016"></a>
@@ -111,7 +113,7 @@ ActionId::size_type&#160;</td><td class="memItemRight" valign="bottom"><b>num_ac
 <tr class="memdesc:ae72ff94a2e3b974bc225ea1247513016"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of defined actions. <br /></td></tr>
 <tr class="separator:ae72ff94a2e3b974bc225ea1247513016"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19a5dcea7eb5b4da9735f0bab102e2fe"><td class="memItemLeft" align="right" valign="top"><a id="a19a5dcea7eb5b4da9735f0bab102e2fe" name="a19a5dcea7eb5b4da9735f0bab102e2fe"></a>
-<a class="el" href="../../d4/de4/classceleritas_1_1_action_registry.html#a457f3fbd64ccbbf8bdcb5ec4de522099">SPConstAction</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>action</b> (<a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a98b21e11852c06d3845c53dd5df84797">ActionId</a> id) const</td></tr>
+SPConstAction const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>action</b> (<a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a98b21e11852c06d3845c53dd5df84797">ActionId</a> id) const</td></tr>
 <tr class="memdesc:a19a5dcea7eb5b4da9735f0bab102e2fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access an action. <br /></td></tr>
 <tr class="separator:a19a5dcea7eb5b4da9735f0bab102e2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a147e6638a4fa74632ff06cf170fd148d"><td class="memItemLeft" align="right" valign="top"><a id="a147e6638a4fa74632ff06cf170fd148d" name="a147e6638a4fa74632ff06cf170fd148d"></a>
@@ -128,23 +130,7 @@ std::string const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>id
 <p >The action manager helps create and retain access to "actions" (possible control paths for a track) over the program's lifetime. "Implicit" actions are primarily for debugging, but "explicit" actions indicate that a kernel will change the state of a track on device.</p>
 <p >Associated actions use the <code><a class="el" href="../../d7/d6f/classceleritas_1_1_action_interface.html" title="Pure abstract interface for an end-of-step action.">ActionInterface</a></code> class to provide debugging information, and the <code><a class="el" href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html" title="Interface for an action that launches a kernel or performs an action.">ExplicitActionInterface</a></code> is used to invoke kernels with core data.</p>
 <p >New actions should be created with an action ID corresponding to <code>next_id</code> . Registering an action checks its ID. Actions are always added sequentially and can never be removed from the registry once added. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a457f3fbd64ccbbf8bdcb5ec4de522099" name="a457f3fbd64ccbbf8bdcb5ec4de522099"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a457f3fbd64ccbbf8bdcb5ec4de522099">&#9670;&#160;</a></span>SPConstAction</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d4/de4/classceleritas_1_1_action_registry.html#a457f3fbd64ccbbf8bdcb5ec4de522099">celeritas::ActionRegistry::SPConstAction</a> =  std::shared_ptr&lt;<a class="el" href="../../d7/d6f/classceleritas_1_1_action_interface.html">ActionInterface</a> const&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../de/d6a/_action_registry_8hh.html">ActionRegistry.hh</a></li>
 <li><a class="el" href="../../d9/d6d/_action_registry_8cc.html">ActionRegistry.cc</a></li>
 </ul>

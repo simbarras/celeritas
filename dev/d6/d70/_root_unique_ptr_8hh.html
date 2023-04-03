@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -70,7 +71,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_54b4dc0a5a8b71d7ed2a0028b382827b.html">celeritas</a></li><li class="navelem"><a class="el" href="../../dir_82b52a59f244e1c68a9d2b9870c16eba.html">ext</a></li><li class="navelem"><a class="el" href="../../dir_355b93f185e03e341aa5fe8e216d7e47.html">detail</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_54b4dc0a5a8b71d7ed2a0028b382827b.html">celeritas</a></li><li class="navelem"><a class="el" href="../../dir_82b52a59f244e1c68a9d2b9870c16eba.html">ext</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -80,24 +81,36 @@ $(function() {
   <div class="headertitle"><div class="title">RootUniquePtr.hh File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Helpers to prevent ROOT from propagating to downstream code.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;memory&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d8/d28/celeritas__config_8h.html">celeritas_config.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d10/_assert_8hh.html">corecel/Assert.hh</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/de0/structceleritas_1_1detail_1_1_root_deleter.html">celeritas::detail::RootDeleter&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to prevent ROOT from propagating to downstream code.  <a href="../../d9/de0/structceleritas_1_1detail_1_1_root_deleter.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc8/structceleritas_1_1_root_writable_deleter.html">celeritas::RootWritableDeleter&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call <code>TObject-&gt;Write()</code> before deletion.  <a href="../../d0/dc8/structceleritas_1_1_root_writable_deleter.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dfb/structceleritas_1_1_extern_deleter.html">celeritas::ExternDeleter&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom deleter to avoid propagating any dependency-specific implementation downstream the code.  <a href="../../d2/dfb/structceleritas_1_1_extern_deleter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a6a168bef2a1b468d514614100bb31709"><td class="memTemplParams" colspan="2"><a id="a6a168bef2a1b468d514614100bb31709" name="a6a168bef2a1b468d514614100bb31709"></a>
+<tr class="memitem:abebcc75de91be605989012a920b4ea7f"><td class="memTemplParams" colspan="2"><a id="abebcc75de91be605989012a920b4ea7f" name="abebcc75de91be605989012a920b4ea7f"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:a6a168bef2a1b468d514614100bb31709"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::detail::RootUniquePtr</b> = std::unique_ptr&lt; T, RootDeleter&lt; T &gt; &gt;</td></tr>
-<tr class="separator:a6a168bef2a1b468d514614100bb31709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abebcc75de91be605989012a920b4ea7f"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::UPRootWritable</b> = std::unique_ptr&lt; T, RootWritableDeleter&lt; T &gt; &gt;</td></tr>
+<tr class="separator:abebcc75de91be605989012a920b4ea7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6280f10441556f8b7a534f550a01dab5"><td class="memTemplParams" colspan="2"><a id="a6280f10441556f8b7a534f550a01dab5" name="a6280f10441556f8b7a534f550a01dab5"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a6280f10441556f8b7a534f550a01dab5"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::UPExtern</b> = std::unique_ptr&lt; T, ExternDeleter&lt; T &gt; &gt;</td></tr>
+<tr class="separator:a6280f10441556f8b7a534f550a01dab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Helpers to prevent ROOT from propagating to downstream code. </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5

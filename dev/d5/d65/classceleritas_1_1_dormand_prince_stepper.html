@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -88,8 +89,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:ad4059e5cec24579b0d275231f89ded32"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d65/classceleritas_1_1_dormand_prince_stepper.html#ad4059e5cec24579b0d275231f89ded32">result_type</a> = <a class="el" href="../../dc/d34/structceleritas_1_1_field_stepper_result.html">FieldStepperResult</a></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:ad4059e5cec24579b0d275231f89ded32"><td class="memItemLeft" align="right" valign="top"><a id="ad4059e5cec24579b0d275231f89ded32" name="ad4059e5cec24579b0d275231f89ded32"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>result_type</b> = <a class="el" href="../../dc/d34/structceleritas_1_1_field_stepper_result.html">FieldStepperResult</a></td></tr>
 <tr class="separator:ad4059e5cec24579b0d275231f89ded32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -99,7 +101,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a948d507e592926473dec8f9e9263f4ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with the equation of motion. <br /></td></tr>
 <tr class="separator:a948d507e592926473dec8f9e9263f4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae18488cab1a2cdd31aec47f92b580b2e"><td class="memItemLeft" align="right" valign="top"><a id="ae18488cab1a2cdd31aec47f92b580b2e" name="ae18488cab1a2cdd31aec47f92b580b2e"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d5/d65/classceleritas_1_1_dormand_prince_stepper.html#ad4059e5cec24579b0d275231f89ded32">result_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> step, <a class="el" href="../../d6/d7e/structceleritas_1_1_ode_state.html">OdeState</a> const &amp;beg_state) const</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../dc/d34/structceleritas_1_1_field_stepper_result.html">result_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> step, <a class="el" href="../../d6/d7e/structceleritas_1_1_ode_state.html">OdeState</a> const &amp;beg_state) const</td></tr>
 <tr class="memdesc:ae18488cab1a2cdd31aec47f92b580b2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adaptive step size control for the DormandPrince RK5(4)7M method. <br /></td></tr>
 <tr class="separator:ae18488cab1a2cdd31aec47f92b580b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -107,14 +109,14 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class EquationT&gt;<br />
 class celeritas::DormandPrinceStepper&lt; EquationT &gt;</div><p >Integrate the field ODEs using Dormand-Prince RK5(4)7M. </p>
 <p >The algorithm, RK5(4)7M and the coefficients have been adapted from J. R. Dormand and P. J. Prince, "A family of embedded Runge-Kutta formulae" Journal Computational and Applied Mathematics, volume 6, no 1 (1980) and the coefficients to locate the mid point are taken from L. F. Shampine, "Some Practical Runge-Kutta Formulas", Mathematics of * Computation, volume 46, number 17, pp 147 (1986).</p>
-<p >For a given ordinary differential equation, <picture><source srcset="../../form_111_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$dy/dx = f(x, y)$" src="../../form_111.png" width="85" height="14"/></picture>, the fifth order solution, <picture><source srcset="../../form_112_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ y_{n+1} $" src="../../form_112.png" width="25" height="10"/></picture>, an embedded fourth order solution, <picture><source srcset="../../form_113_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ y^{*}_{n+1} $" src="../../form_113.png" width="25" height="15"/></picture>, and the error estimate as difference between them are as follows,  </p><p class="formulaDsp">
-<picture><source srcset="../../form_114_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<p >For a given ordinary differential equation, <picture><source srcset="../../form_116_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$dy/dx = f(x, y)$" src="../../form_116.png" width="85" height="14"/></picture>, the fifth order solution, <picture><source srcset="../../form_117_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ y_{n+1} $" src="../../form_117.png" width="25" height="10"/></picture>, an embedded fourth order solution, <picture><source srcset="../../form_118_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ y^{*}_{n+1} $" src="../../form_118.png" width="25" height="15"/></picture>, and the error estimate as difference between them are as follows,  </p><p class="formulaDsp">
+<picture><source srcset="../../form_119_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
    y_{n+1}     = y_n + h \sum_{n=1}^{6} b_i  k_i + O(h^6)
    y^{*}_{n+1} = y_n + h \sum_{n=1}^{7} b*_i k_i + O(h^5)
    y_{error}   = y_{n+1} - y^{*}_{n+1} = \sum_{n=1}^{7} (b^{*}_i - b_i) k_i
- \]" src="../../form_114.png" width="514" height="38"/></picture>
+ \]" src="../../form_119.png" width="514" height="38"/></picture>
 </p>
-<p> where <picture><source srcset="../../form_115_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$h$" src="../../form_115.png" width="8" height="10"/></picture> is the step to advance and k_i is the right hand side of the function at <picture><source srcset="../../form_116_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$x_n + h c_i$" src="../../form_116.png" width="46" height="13"/></picture>, and the coefficients (The Butcher table) for Dormand-Prince RK5(4)7M are </p><pre class="fragment"> c_i | a_ij
+<p> where <picture><source srcset="../../form_120_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$h$" src="../../form_120.png" width="8" height="10"/></picture> is the step to advance and k_i is the right hand side of the function at <picture><source srcset="../../form_121_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$x_n + h c_i$" src="../../form_121.png" width="46" height="13"/></picture>, and the coefficients (The Butcher table) for Dormand-Prince RK5(4)7M are </p><pre class="fragment"> c_i | a_ij
  0   |
  1/5 | 1/5
  3/10| 3/40        9/40
@@ -126,30 +128,12 @@ class celeritas::DormandPrinceStepper&lt; EquationT &gt;</div><p >Integrate the 
  b*_i| 35/384      0          500/1113    125/192 -2187/6784    11/84    0
  b_i | 5179/57600  0          7571/16695  393/640 -92097/339200 187/2100 1/40
 </pre><p >The result at the mid point is computed  </p><p class="formulaDsp">
-<picture><source srcset="../../form_117_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_122_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
    y_{n+1/2}   = y_n + (h/2) \Sigma_{n=1}^{7} c^{*}_i k_i
- \]" src="../../form_117.png" width="159" height="18"/></picture>
+ \]" src="../../form_122.png" width="159" height="18"/></picture>
 </p>
-<p> with the coefficients <picture><source srcset="../../form_118_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$c^{*}$" src="../../form_118.png" width="10" height="10"/></picture> taken from L. F. Shampine (1986). </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ad4059e5cec24579b0d275231f89ded32" name="ad4059e5cec24579b0d275231f89ded32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4059e5cec24579b0d275231f89ded32">&#9670;&#160;</a></span>result_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class EquationT &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d5/d65/classceleritas_1_1_dormand_prince_stepper.html">celeritas::DormandPrinceStepper</a>&lt; EquationT &gt;::result_type =  <a class="el" href="../../dc/d34/structceleritas_1_1_field_stepper_result.html">FieldStepperResult</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<p> with the coefficients <picture><source srcset="../../form_123_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$c^{*}$" src="../../form_123.png" width="10" height="10"/></picture> taken from L. F. Shampine (1986). </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="../../df/d13/_dormand_prince_stepper_8hh.html">DormandPrinceStepper.hh</a></li>
 </ul>
 </div><!-- contents -->

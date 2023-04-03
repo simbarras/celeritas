@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Version 0.1.5 &mdash; Celeritas v0.3.0-dev.62+f351e714 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Development Guide" href="../development.html" />
+    <link rel="prev" title="Version 0.2.1" href="v0.2.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Celeritas
+            <img src="../../_static/celeritas-square.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3.0-dev
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../acknowledgments.html">Acknowledgments</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../release-history.html">Release History</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="v0.2.html">Version 0.2.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v0.2.html#version-0-2-0">Version 0.2.0</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Version 0.1.5</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bug-fixes">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#documentation-improvements">Documentation improvements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#minor-internal-changes">Minor internal changes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-1-4">Version 0.1.4</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Bug fixes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-1-3">Version 0.1.3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Bug fixes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-1-2">Version 0.1.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#new-features">New features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Bug fixes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-1-1">Version 0.1.1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">New features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#internal-changes">Internal changes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-1-0">Version 0.1.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">New features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#known-bugs">Known bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contributors">Contributors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Development Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../administration.html">Administration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Celeritas</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../release-history.html">Release History</a> &raquo;</li>
+      <li>Version 0.1.5</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/appendices/release-history/v0.1.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="version-0-1-5">
+<span id="release-v0-1-5"></span><h1>Version 0.1.5<a class="headerlink" href="#version-0-1-5" title="Permalink to this heading"></a></h1>
+<p><em>Release date: 2023/02/19</em></p>
+<p>Version 0.1.5 corrects several major tracking and physics bugs
+in the 0.1.x series. Notably:</p>
+<ul class="simple">
+<li><p>Positron annihilation is no longer ignored.</p></li>
+<li><p>The 1 keV standard EM physics cutoff applies to electrons and positrons
+<em>after</em> slowing down in addition to before, reducing the number of
+low-energy particles being tracked.</p></li>
+<li><p>Field propagation no longer advances particles to boundaries slightly
+past their physics path length. This previously produced numerous
+instances of a coincident boundary crossing plus physics interaction.</p></li>
+<li><p>In high-Z materials, Geant4 produces MSC cross sections for positrons
+that are not monotonically decreasing with increasing energy (there is
+a discontinuity around 10 MeV). This behavior previously caused a
+miscalculation of the step length when slowing down near 10 MeV.</p></li>
+</ul>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Fix build documentation and issues with newer toolchains <em>(&#64;sethrj, #571)</em></p></li>
+<li><p>Fix missing positron annihilation process and process diagnostic <em>(&#64;amandalund, #625)</em></p></li>
+<li><p>Fix NaN/assertion when taking extremely small steps in a field <em>(&#64;sethrj, #628)</em></p></li>
+<li><p>Fix ORANGE intersection along cylinder axis <em>(&#64;sethrj, #627)</em></p></li>
+<li><p>Fix incorrect Urban MSC path length correction due to discontinuity in positron cross section <em>(&#64;amandalund, #642)</em></p></li>
+<li><p>Check for unlikely “zero speed” condition <em>(&#64;sethrj, #646)</em></p></li>
+<li><p>Avoid XS scaling factor &gt; 1 in <cite>SBPositronXSCorrector</cite> <em>(&#64;stognini, #649)</em></p></li>
+<li><p>Fix coincident boundary/step created by field propagator <em>(&#64;sethrj, #654)</em></p></li>
+<li><p>VecGeom/Cuda: set the stack limit to 16K when CELERITAS_DEBUG=ON <em>(&#64;pcanal, #638)</em></p></li>
+<li><p>Apply electron tracking cut <em>after</em> slowing down in addition to before <em>(&#64;sethrj, #648)</em></p></li>
+</ul>
+<p>Reviewers: &#64;sethrj <em>(4)</em>, &#64;whokion <em>(4)</em>, &#64;amandalund <em>(2)</em>, &#64;paulromano <em>(1)</em>, &#64;elliottbiondo <em>(1)</em></p>
+</section>
+<section id="documentation-improvements">
+<h2>Documentation improvements<a class="headerlink" href="#documentation-improvements" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Characterize and remove field driver convergence assertions <em>(&#64;sethrj, #650)</em></p></li>
+</ul>
+<p>Reviewers: &#64;whokion <em>(1)</em></p>
+</section>
+<section id="minor-internal-changes">
+<h2>Minor internal changes<a class="headerlink" href="#minor-internal-changes" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>CI: use Geant4 11, C++17, VecGeom 1.2, CUDA 11.8, GCC 11 <em>(&#64;sethrj, #566)</em></p></li>
+<li><p>CI: add no-debug HIP (ROCM 5.4) build <em>(&#64;sethrj, #569)</em></p></li>
+</ul>
+<p>Reviewers: &#64;pcanal <em>(1)</em></p>
+</section>
+</section>
+<section id="version-0-1-4">
+<span id="release-v0-1-4"></span><h1>Version 0.1.4<a class="headerlink" href="#version-0-1-4" title="Permalink to this heading"></a></h1>
+<p><em>Released 2023/01/10</em></p>
+<p>This version fixes significant errors in along-step tracking when multiple
+scattering and/or magnetic fields are in use.</p>
+<section id="id1">
+<h2>Bug fixes<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Fix additional failures resulting from direction change on a boundary after crossing <em>(&#64;amandalund, #517)</em></p></li>
+<li><p>Fix the true path length limit of UrbanMsc <em>(&#64;whokion, #521)</em></p></li>
+<li><p>Fix field propagation for stuck and long-track particles <em>(&#64;sethrj, #518)</em></p></li>
+<li><p>Don’t slow particles to zero when hitting boundary <em>(&#64;sethrj, #524)</em></p></li>
+<li><p>Cache multiple scattering range at the first step in a new volume <em>(&#64;whokion, #527)</em></p></li>
+<li><p>Reset physics state when a secondary is initialized in the parent’s track slot <em>(&#64;amandalund, #528)</em></p></li>
+</ul>
+</section>
+</section>
+<section id="version-0-1-3">
+<span id="release-v0-1-3"></span><h1>Version 0.1.3<a class="headerlink" href="#version-0-1-3" title="Permalink to this heading"></a></h1>
+<p><em>Release date:  2023/01/11</em></p>
+<p>This patch fixes additional issues with tracking in a magnetic field.</p>
+<section id="id2">
+<h2>Bug fixes<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Fix near-infinite loop in field propagation <em>(&#64;sethrj, #511)</em></p></li>
+<li><p>Allow tracks taking small steps to propagate in field <em>(&#64;amandalund, #513)</em></p></li>
+<li><p>Fix ability to disable Rayleigh scattering when running demo-loop app</p></li>
+<li><p>Fix failure when changing direction on boundary immediately after crossing <em>(&#64;sethrj, #515)</em></p></li>
+<li><p>Escape rather than segfault on boundary crossing failure in release mode in ORANGE <em>(&#64;sethrj, #516)</em></p></li>
+</ul>
+</section>
+</section>
+<section id="version-0-1-2">
+<h1>Version 0.1.2<a class="headerlink" href="#version-0-1-2" title="Permalink to this heading"></a></h1>
+<p><em>Released 2022/09/07</em></p>
+<p>This is a bug-fixing patch that addresses a few outstanding build issues,
+targeted at making it easier to run and debug the regression problem suite.</p>
+<section id="new-features">
+<h2>New features<a class="headerlink" href="#new-features" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Save JSON exception output if demo loop fails by <em>(&#64;sethrj, #507)</em></p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>Bug fixes<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Fix class name conflict, remove default initializers, and tweak field driver <em>(&#64;sethrj, #504)</em></p></li>
+<li><p>Fix no-ROOT demo loop for 0.1.x and other summit changes by <em>(&#64;sethrj, #508)</em></p></li>
+</ul>
+</section>
+</section>
+<section id="version-0-1-1">
+<h1>Version 0.1.1<a class="headerlink" href="#version-0-1-1" title="Permalink to this heading"></a></h1>
+<p><em>Released 2022/08/26</em></p>
+<p>This is a bug-fixing patch that addresses numerous outstanding issues with the
+transport loop.</p>
+<section id="id4">
+<h2>New features<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Filter imported data from Geant4 based on user options by <em>(&#64;sethrj, #482)</em></p></li>
+<li><p>Add contributing guide and development docs by <em>(&#64;sethrj, #502)</em></p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>Bug fixes<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Fix uninitialized data access in primary generator by <em>(&#64;sethrj, #472)</em></p></li>
+<li><p>Build processes based on exported data by <em>(&#64;sethrj, #483)</em></p></li>
+<li><p>NVHPC: silence warnings by <em>(&#64;sethrj, #486)</em></p></li>
+<li><p>Bring latest upstream updates to the BVHNavigator by <em>(&#64;mrguilima, #484)</em></p></li>
+<li><p>Force disabling of shared libs for VecGeom 1.2.0+ by <em>(&#64;sethrj, #489)</em></p></li>
+<li><p>Add minor fixes for UrbanMsc by <em>(&#64;whokion, #492)</em></p></li>
+<li><p>Set remaining model lower limits to zero and make sure demo loop runs with integral approach off by <em>(&#64;amandalund, #490)</em></p></li>
+<li><p>Fix VecGeomTrack::move_internal assertion failure by <em>(&#64;mrguilima, #493)</em></p></li>
+<li><p>Fix clang-14/ROCM build with JSON enabled by <em>(&#64;sethrj, #496)</em></p></li>
+<li><p>Better workaround for VecGeom 1.2 crashes by <em>(&#64;sethrj, #495)</em></p></li>
+<li><p>Fix imported model microscopic cross sections by <em>(&#64;amandalund, #487)</em></p></li>
+<li><p>Fix unintentional MSC enable and some displacement logic by <em>(&#64;sethrj, #500)</em></p></li>
+<li><p>Fix unusual errors in field propagation by <em>(&#64;sethrj, #499)</em></p></li>
+<li><p>Fix vecgeom boundary state and add more thorough testing by <em>(&#64;sethrj, #494)</em></p></li>
+<li><p>Improve static/shared CUDA library choice when linking VecGeom by <em>(&#64;pcanal, #497)</em></p></li>
+<li><p>Fix ORANGE reentrant boundary crossings by <em>(&#64;sethrj, #501)</em></p></li>
+</ul>
+</section>
+<section id="internal-changes">
+<h2>Internal changes<a class="headerlink" href="#internal-changes" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Rewrite field tests by <em>(&#64;sethrj, #471)</em></p></li>
+<li><p>Add range-to-step tests and remove min by <em>(&#64;sethrj, #479)</em></p></li>
+<li><p>Add unit tests and make minor changes to FieldDriver by <em>(&#64;sethrj, #478)</em></p></li>
+<li><p>Unify units in EM interactors/data by <em>(&#64;sethrj, #477)</em></p></li>
+<li><p>Add tests for field propagator near boundaries by <em>(&#64;sethrj, #480)</em></p></li>
+<li><p>Return one event at a time from EventReader and PrimaryGenerator by <em>(&#64;amandalund, #488)</em></p></li>
+<li><p>Infrastructure changes for geo heuristic test by <em>(&#64;sethrj, #498)</em></p></li>
+</ul>
+</section>
+</section>
+<section id="version-0-1-0">
+<h1>Version 0.1.0<a class="headerlink" href="#version-0-1-0" title="Permalink to this heading"></a></h1>
+<p><em>Released 2022/07/31</em></p>
+<p>“Initial viable product” release of Celeritas. This release is focused on unit
+testing and stabilizing the API for exploratory use by downstream applications
+and frameworks. Some initial code verification problems (looking at energy and
+step distributions for simple problems such as TestEM3) are promising, but the
+code is far from validated.</p>
+<section id="id6">
+<h2>New features<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Standard EM physics including multiple scattering and energy loss
+fluctuations</p></li>
+<li><p>VecGeom for GDML navigation, ORANGE for testing</p></li>
+<li><p>Support for CUDA, HIP, and CPU (with and without OpenMP)</p></li>
+<li><p>Magnetic field support with runtime-swappable field types</p></li>
+</ul>
+</section>
+<section id="known-bugs">
+<h2>Known bugs<a class="headerlink" href="#known-bugs" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Magnetic field propagation can fail at geometry boundaries, especially with
+ORANGE.</p></li>
+<li><p>Multiple scattering requires more steps than expected compared to Geant4.</p></li>
+</ul>
+</section>
+<section id="contributors">
+<h2>Contributors<a class="headerlink" href="#contributors" title="Permalink to this heading"></a></h2>
+<p>Thanks to the contributors at Argonne National Lab, Lawrence Berkeley Lab,
+Fermilab, Oak Ridge National Laboratory, and other collaborating institutions.</p>
+<ul class="simple">
+<li><p>Philippe Canal (&#64;pcanal): #115, #119, #130, #171, #172, #166, #222, #239,
+#242, #243, #254, #338</p></li>
+<li><p>Doaa Deeb (&#64;DoaaDeeb): #257</p></li>
+<li><p>Tom Evans (&#64;tmdelellis): #57, #65, #112</p></li>
+<li><p>Seth R Johnson (&#64;sethrj): #4, #8, #13, #16, #15, #21, #24, #25, #32, #17,
+#35, #39, #36, #40, #45, #44, #50, #51, #61, #59, #62, #63, #64, #69, #78,
+#80, #79, #76, #73, #82, #83, #84, #85, #86, #87, #88, #91, #92, #93, #95,
+#99, #98, #106, #104, #108, #114, #116, #105, #117, #118, #122, #120, #124,
+#128, #129, #133, #135, #131, #136, #137, #138, #139, #142, #143, #144, #141,
+#147, #148, #151, #149, #153, #150, #156, #157, #162, #160, #170, #168, #174,
+#169, #177, #178, #179, #184, #189, #190, #193, #195, #191, #199, #204, #196,
+#205, #201, #207, #208, #211, #218, #217, #219, #220, #224, #225, #226, #228,
+#235, #237, #236, #238, #247, #276, #292, #293, #294, #296, #298, #291, #306,
+#301, #307, #311, #313, #314, #315, #312, #321, #322, #325, #329, #331, #332,
+#335, #333, #336, #337, #340, #339, #343, #344, #342, #345, #347, #348, #349,
+#351, #359, #360, #364, #365, #366, #378, #374, #373, #379, #381, #384, #380,
+#387, #386, #388, #389, #391, #394, #393, #395, #397, #398, #399, #400, #405,
+#403, #404, #410, #408, #406, #411, #402, #414, #415, #417, #416, #422, #424,
+#426, #427, #428, #433, #432, #435, #436, #434, #437, #441, #439, #445, #443,
+#448, #449, #453, #456, #455, #458, #457, #464, #465, #468</p></li>
+<li><p>Soon Yung Jun (&#64;whokion): #41, #70, #173, #200, #214, #221, #230, #250, #259,
+#258, #260, #316, #317, #320, #324, #370, #375, #390, #396, #407, #413, #430,
+#454, #467</p></li>
+<li><p>Guilherme Lima (&#64;mrguilima): #42, #38, #109, #90, #167, #229, #234, #232,
+#328, #383, #446, #452</p></li>
+<li><p>Amanda Lund (&#64;amandalund): #6, #20, #47, #52, #89, #100, #113, #134, #154,
+#159, #161, #186, #185, #198, #216, #215, #209, #227, #240, #245, #255, #251,
+#264, #274, #269, #285, #290, #297, #304, #309, #319, #323, #330, #346, #350,
+#353, #362, #368, #369, #372, #376, #382, #385, #401, #440, #444, #450, #463</p></li>
+<li><p>Ben Morgan (&#64;drbenmorgan): #53, #56, #110, #121, #367, #371</p></li>
+<li><p>Vincent R Pascuzzi (&#64;vrpascuzzi): #68, #72, #111, #241, #248, #246, #287</p></li>
+<li><p>Paul Romano (&#64;paulromano): #107, #197, #265, #268, #270, #275, #273, #289,
+#299, #303, #305, #308, #310, #318</p></li>
+<li><p>Stefano C Tognini (&#64;stognini): #30, #55, #81, #132, #175, #188, #194, #203,
+#210, #231, #244, #271, #302, #327, #326, #341, #423</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="v0.2.html" class="btn btn-neutral float-left" title="Version 0.2.1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../development.html" class="btn btn-neutral float-right" title="Development Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, UT–Battelle/ORNL and Celeritas team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

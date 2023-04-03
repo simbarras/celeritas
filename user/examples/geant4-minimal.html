@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Minimal Geant4 integration &mdash; Celeritas v0.3.0-dev-24+65ba1f71 documentation</title>
+  <title>Minimal Geant4 integration &mdash; Celeritas v0.3.0-dev.62+f351e714 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -30,10 +30,10 @@
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
             <a href="../index.html" class="icon icon-home"> Celeritas
-            <img src="../_static/celeritas-thumbnail.png" class="logo" alt="Logo"/>
+            <img src="../_static/celeritas-square.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.3.1-dev
+                0.3.0-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -96,8 +96,13 @@
            <div itemprop="articleBody">
              
   <section id="minimal-geant4-integration">
-<h1>Minimal Geant4 integration<a class="headerlink" href="#minimal-geant4-integration" title="Permalink to this heading"></a></h1>
-<p>This small example demonstrates how to offload tracks to Celeritas.</p>
+<span id="example-geant-minimal"></span><h1>Minimal Geant4 integration<a class="headerlink" href="#minimal-geant4-integration" title="Permalink to this heading"></a></h1>
+<p>This small example demonstrates how to offload tracks to Celeritas in a serial
+or multithreaded environment. The <a class="reference internal" href="../api/accel.html#accel"><span class="std std-ref">Acceleritas</span></a> library is the only part of
+Celeritas that needs to be understood for it to work. The key components are
+global SetupOptions and SharedParams, coupled to thread-local SimpleOffload and
+LocalTransporter. The SimpleOffload provides all the methods needed to
+integrate into Geant4 application’s UserActions.</p>
 <section id="cmake-infrastructure">
 <span id="example-cmake"></span><h2>CMake infrastructure<a class="headerlink" href="#cmake-infrastructure" title="Permalink to this heading"></a></h2>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">project</span><span class="p">(</span><span class="s">CeleritasAccelExample</span><span class="w"> </span><span class="s">VERSION</span><span class="w"> </span><span class="s">0.0.1</span><span class="w"> </span><span class="s">LANGUAGES</span><span class="w"> </span><span class="s">CXX</span><span class="p">)</span>
@@ -157,18 +162,12 @@ with experiment frameworks or other apps that use a task-based runner.</p>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;G4VUserDetectorConstruction.hh&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;G4VUserPrimaryGeneratorAction.hh&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;accel/AlongStepFactory.hh&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;accel/ExceptionConverter.hh&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;accel/LocalTransporter.hh&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;accel/Logger.hh&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;accel/SetupOptions.hh&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;accel/SharedParams.hh&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;celeritas/em/UrbanMscParams.hh&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;celeritas/global/alongstep/AlongStepGeneralLinearAction.hh&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;celeritas/io/ImportData.hh&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;accel/SimpleOffload.hh&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;corecel/Macros.hh&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;corecel/io/Logger.hh&gt;</span><span class="cp"></span>
-
-<span class="k">using</span><span class="w"> </span><span class="n">celeritas</span><span class="o">::</span><span class="n">ExceptionConverter</span><span class="p">;</span><span class="w"></span>
 
 <span class="k">namespace</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
@@ -180,18 +179,8 @@ with experiment frameworks or other apps that use a task-based runner.</p>
 <span class="c1">// Thread-local transporter</span>
 <span class="n">G4ThreadLocal</span><span class="w"> </span><span class="n">celeritas</span><span class="o">::</span><span class="n">LocalTransporter</span><span class="w"> </span><span class="n">local_transporter</span><span class="p">;</span><span class="w"></span>
 
-<span class="c1">//---------------------------------------------------------------------------//</span>
-<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">celeritas</span><span class="o">::</span><span class="n">ExplicitActionInterface</span><span class="w"> </span><span class="k">const</span><span class="o">&gt;</span><span class="w"></span>
-<span class="n">make_nofield_along_step</span><span class="p">(</span><span class="n">celeritas</span><span class="o">::</span><span class="n">AlongStepFactoryInput</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">input</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">celeritas</span><span class="o">::</span><span class="n">AlongStepGeneralLinearAction</span><span class="o">::</span><span class="n">from_params</span><span class="p">(</span><span class="w"></span>
-<span class="w">        </span><span class="n">input</span><span class="p">.</span><span class="n">action_id</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="o">*</span><span class="n">input</span><span class="p">.</span><span class="n">material</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="o">*</span><span class="n">input</span><span class="p">.</span><span class="n">particle</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="n">celeritas</span><span class="o">::</span><span class="n">UrbanMscParams</span><span class="o">::</span><span class="n">from_import</span><span class="p">(</span><span class="w"></span>
-<span class="w">            </span><span class="o">*</span><span class="n">input</span><span class="p">.</span><span class="n">particle</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">input</span><span class="p">.</span><span class="n">material</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">input</span><span class="p">.</span><span class="n">imported</span><span class="p">),</span><span class="w"></span>
-<span class="w">        </span><span class="n">input</span><span class="p">.</span><span class="n">imported</span><span class="o">-&gt;</span><span class="n">em_params</span><span class="p">.</span><span class="n">energy_loss_fluct</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="c1">// Simple interface to running celeritas</span>
+<span class="n">G4ThreadLocal</span><span class="w"> </span><span class="n">celeritas</span><span class="o">::</span><span class="n">SimpleOffload</span><span class="w"> </span><span class="n">simple_offload</span><span class="p">;</span><span class="w"></span>
 
 <span class="c1">//---------------------------------------------------------------------------//</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">DetectorConstruction</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">G4VUserDetectorConstruction</span><span class="w"></span>
@@ -201,6 +190,7 @@ with experiment frameworks or other apps that use a task-based runner.</p>
 <span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">aluminum_</span><span class="p">{</span><span class="k">new</span><span class="w"> </span><span class="n">G4Material</span><span class="p">{</span><span class="w"></span>
 <span class="w">            </span><span class="s">&quot;Aluminium&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">13.</span><span class="p">,</span><span class="w"> </span><span class="mf">26.98</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">mole</span><span class="p">,</span><span class="w"> </span><span class="mf">2.700</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">cm3</span><span class="p">}}</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">setup_options</span><span class="p">.</span><span class="n">make_along_step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">celeritas</span><span class="o">::</span><span class="n">UniformAlongStepFactory</span><span class="p">();</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 
 <span class="w">    </span><span class="n">G4VPhysicalVolume</span><span class="o">*</span><span class="w"> </span><span class="n">Construct</span><span class="p">()</span><span class="w"> </span><span class="k">final</span><span class="w"></span>
@@ -250,45 +240,11 @@ with experiment frameworks or other apps that use a task-based runner.</p>
 <span class="w">  </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">BeginOfRunAction</span><span class="p">(</span><span class="n">G4Run</span><span class="w"> </span><span class="k">const</span><span class="o">*</span><span class="w"> </span><span class="n">run</span><span class="p">)</span><span class="w"> </span><span class="k">final</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">ExceptionConverter</span><span class="w"> </span><span class="n">call_g4exception</span><span class="p">{</span><span class="s">&quot;celer0001&quot;</span><span class="p">};</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">G4Threading</span><span class="o">::</span><span class="n">IsMasterThread</span><span class="p">())</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">CELER_LOG_LOCAL</span><span class="p">(</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Setting up field propagation&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">            </span><span class="n">setup_options</span><span class="p">.</span><span class="n">make_along_step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">make_nofield_along_step</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">CELER_TRY_HANDLE</span><span class="p">(</span><span class="n">shared_params</span><span class="p">.</span><span class="n">Initialize</span><span class="p">(</span><span class="n">setup_options</span><span class="p">),</span><span class="w"></span>
-<span class="w">                             </span><span class="n">call_g4exception</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="k">else</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">CELER_TRY_HANDLE</span><span class="p">(</span><span class="w"></span>
-<span class="w">                </span><span class="n">celeritas</span><span class="o">::</span><span class="n">SharedParams</span><span class="o">::</span><span class="n">InitializeWorker</span><span class="p">(</span><span class="n">setup_options</span><span class="p">),</span><span class="w"></span>
-<span class="w">                </span><span class="n">call_g4exception</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">G4Threading</span><span class="o">::</span><span class="n">IsWorkerThread</span><span class="p">()</span><span class="w"></span>
-<span class="w">            </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">G4Threading</span><span class="o">::</span><span class="n">IsMultithreadedApplication</span><span class="p">())</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">CELER_TRY_HANDLE</span><span class="p">(</span><span class="w"></span>
-<span class="w">                </span><span class="n">local_transporter</span><span class="p">.</span><span class="n">Initialize</span><span class="p">(</span><span class="n">setup_options</span><span class="p">,</span><span class="w"> </span><span class="n">shared_params</span><span class="p">),</span><span class="w"></span>
-<span class="w">                </span><span class="n">call_g4exception</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="n">simple_offload</span><span class="p">.</span><span class="n">BeginOfRunAction</span><span class="p">(</span><span class="n">run</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">EndOfRunAction</span><span class="p">(</span><span class="n">G4Run</span><span class="w"> </span><span class="k">const</span><span class="o">*</span><span class="w"> </span><span class="n">run</span><span class="p">)</span><span class="w"> </span><span class="k">final</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">CELER_LOG_LOCAL</span><span class="p">(</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Finalizing Celeritas&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="n">ExceptionConverter</span><span class="w"> </span><span class="n">call_g4exception</span><span class="p">{</span><span class="s">&quot;celer0005&quot;</span><span class="p">};</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">local_transporter</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">CELER_TRY_HANDLE</span><span class="p">(</span><span class="n">local_transporter</span><span class="p">.</span><span class="n">Finalize</span><span class="p">(),</span><span class="w"> </span><span class="n">call_g4exception</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">G4Threading</span><span class="o">::</span><span class="n">IsMasterThread</span><span class="p">())</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">CELER_TRY_HANDLE</span><span class="p">(</span><span class="n">shared_params</span><span class="p">.</span><span class="n">Finalize</span><span class="p">(),</span><span class="w"> </span><span class="n">call_g4exception</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="n">simple_offload</span><span class="p">.</span><span class="n">EndOfRunAction</span><span class="p">(</span><span class="n">run</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
@@ -298,16 +254,12 @@ with experiment frameworks or other apps that use a task-based runner.</p>
 <span class="w">  </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">BeginOfEventAction</span><span class="p">(</span><span class="n">G4Event</span><span class="w"> </span><span class="k">const</span><span class="o">*</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="k">final</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="c1">// Set event ID in local transporter</span>
-<span class="w">        </span><span class="n">ExceptionConverter</span><span class="w"> </span><span class="n">call_g4exception</span><span class="p">{</span><span class="s">&quot;celer0002&quot;</span><span class="p">};</span><span class="w"></span>
-<span class="w">        </span><span class="n">CELER_TRY_HANDLE</span><span class="p">(</span><span class="n">local_transporter</span><span class="p">.</span><span class="n">SetEventId</span><span class="p">(</span><span class="n">event</span><span class="o">-&gt;</span><span class="n">GetEventID</span><span class="p">()),</span><span class="w"></span>
-<span class="w">                         </span><span class="n">call_g4exception</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">simple_offload</span><span class="p">.</span><span class="n">BeginOfEventAction</span><span class="p">(</span><span class="n">event</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">EndOfEventAction</span><span class="p">(</span><span class="n">G4Event</span><span class="w"> </span><span class="k">const</span><span class="o">*</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="k">final</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">ExceptionConverter</span><span class="w"> </span><span class="n">call_g4exception</span><span class="p">{</span><span class="s">&quot;celer0004&quot;</span><span class="p">};</span><span class="w"></span>
-<span class="w">        </span><span class="n">CELER_TRY_HANDLE</span><span class="p">(</span><span class="n">local_transporter</span><span class="p">.</span><span class="n">Flush</span><span class="p">(),</span><span class="w"> </span><span class="n">call_g4exception</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">simple_offload</span><span class="p">.</span><span class="n">EndOfEventAction</span><span class="p">(</span><span class="n">event</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
@@ -316,22 +268,7 @@ with experiment frameworks or other apps that use a task-based runner.</p>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">PreUserTrackingAction</span><span class="p">(</span><span class="n">G4Track</span><span class="w"> </span><span class="k">const</span><span class="o">*</span><span class="w"> </span><span class="n">track</span><span class="p">)</span><span class="w"> </span><span class="k">final</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="n">G4ParticleDefinition</span><span class="w"> </span><span class="k">const</span><span class="o">*</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">allowed_particles</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">G4Gamma</span><span class="o">::</span><span class="n">Gamma</span><span class="p">(),</span><span class="w"></span>
-<span class="w">            </span><span class="n">G4Electron</span><span class="o">::</span><span class="n">Electron</span><span class="p">(),</span><span class="w"></span>
-<span class="w">            </span><span class="n">G4Positron</span><span class="o">::</span><span class="n">Positron</span><span class="p">(),</span><span class="w"></span>
-<span class="w">        </span><span class="p">};</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">find</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">begin</span><span class="p">(</span><span class="n">allowed_particles</span><span class="p">),</span><span class="w"></span>
-<span class="w">                      </span><span class="n">std</span><span class="o">::</span><span class="n">end</span><span class="p">(</span><span class="n">allowed_particles</span><span class="p">),</span><span class="w"></span>
-<span class="w">                      </span><span class="n">track</span><span class="o">-&gt;</span><span class="n">GetDefinition</span><span class="p">())</span><span class="w"></span>
-<span class="w">            </span><span class="o">!=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">end</span><span class="p">(</span><span class="n">allowed_particles</span><span class="p">))</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="c1">// Celeritas is transporting this track</span>
-<span class="w">            </span><span class="n">ExceptionConverter</span><span class="w"> </span><span class="n">call_g4exception</span><span class="p">{</span><span class="s">&quot;celer0003&quot;</span><span class="p">};</span><span class="w"></span>
-<span class="w">            </span><span class="n">CELER_TRY_HANDLE</span><span class="p">(</span><span class="n">local_transporter</span><span class="p">.</span><span class="n">Push</span><span class="p">(</span><span class="o">*</span><span class="n">track</span><span class="p">),</span><span class="w"> </span><span class="n">call_g4exception</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="k">const_cast</span><span class="o">&lt;</span><span class="n">G4Track</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">track</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">SetTrackStatus</span><span class="p">(</span><span class="n">fStopAndKill</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="n">simple_offload</span><span class="p">.</span><span class="n">PreUserTrackingAction</span><span class="p">(</span><span class="k">const_cast</span><span class="o">&lt;</span><span class="n">G4Track</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">track</span><span class="p">));</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
@@ -339,9 +276,19 @@ with experiment frameworks or other apps that use a task-based runner.</p>
 <span class="k">class</span><span class="w"> </span><span class="nc">ActionInitialization</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">G4VUserActionInitialization</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">BuildForMaster</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">Build</span><span class="p">();</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">BuildForMaster</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">final</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">simple_offload</span><span class="p">.</span><span class="n">BuildForMaster</span><span class="p">(</span><span class="o">&amp;</span><span class="n">setup_options</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">shared_params</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">CELER_LOG_LOCAL</span><span class="p">(</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Constructing user actions&quot;</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">SetUserAction</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">RunAction</span><span class="p">{});</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">Build</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">final</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">simple_offload</span><span class="p">.</span><span class="n">Build</span><span class="p">(</span><span class="w"></span>
+<span class="w">            </span><span class="o">&amp;</span><span class="n">setup_options</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">shared_params</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">local_transporter</span><span class="p">);</span><span class="w"></span>
+
 <span class="w">        </span><span class="n">CELER_LOG_LOCAL</span><span class="p">(</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Constructing user actions&quot;</span><span class="p">;</span><span class="w"></span>
 
 <span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">SetUserAction</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">PrimaryGeneratorAction</span><span class="p">{});</span><span class="w"></span>
@@ -357,19 +304,19 @@ with experiment frameworks or other apps that use a task-based runner.</p>
 <span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">G4RunManager</span><span class="o">&gt;</span><span class="w"> </span><span class="n">run_manager</span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">G4RunManagerFactory</span><span class="o">::</span><span class="n">CreateRunManager</span><span class="p">(</span><span class="n">G4RunManagerType</span><span class="o">::</span><span class="n">SerialOnly</span><span class="p">)};</span><span class="w"></span>
+<span class="w">        </span><span class="n">G4RunManagerFactory</span><span class="o">::</span><span class="n">CreateRunManager</span><span class="p">()};</span><span class="w">  </span><span class="c1">// G4RunManagerType::SerialOnly)};</span>
 
-<span class="w">    </span><span class="n">celeritas</span><span class="o">::</span><span class="n">self_logger</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">celeritas</span><span class="o">::</span><span class="n">make_mt_logger</span><span class="p">(</span><span class="o">*</span><span class="n">run_manager</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="n">run_manager</span><span class="o">-&gt;</span><span class="n">SetUserInitialization</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">DetectorConstruction</span><span class="p">{});</span><span class="w"></span>
 <span class="w">    </span><span class="n">run_manager</span><span class="o">-&gt;</span><span class="n">SetUserInitialization</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FTFP_BERT</span><span class="p">{</span><span class="cm">/* verbosity = */</span><span class="w"> </span><span class="mi">0</span><span class="p">});</span><span class="w"></span>
 <span class="w">    </span><span class="n">run_manager</span><span class="o">-&gt;</span><span class="n">SetUserInitialization</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ActionInitialization</span><span class="p">());</span><span class="w"></span>
 
+<span class="w">    </span><span class="c1">// NOTE: these numbers are appropriate for CPU execution</span>
 <span class="w">    </span><span class="n">setup_options</span><span class="p">.</span><span class="n">max_num_tracks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1024</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">setup_options</span><span class="p">.</span><span class="n">max_num_events</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1024</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">setup_options</span><span class="p">.</span><span class="n">initializer_capacity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">128</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">setup_options</span><span class="p">.</span><span class="n">secondary_stack_factor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">setup_options</span><span class="p">.</span><span class="n">ignore_processes</span><span class="w"></span>
-<span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;CoulombScat&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;muIoni&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;muBrems&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;muPairProd&quot;</span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// This parameter will eventually be removed</span>
+<span class="w">    </span><span class="n">setup_options</span><span class="p">.</span><span class="n">max_num_events</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1024</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Celeritas does not support EmStandard MSC physics above 100 MeV</span>
+<span class="w">    </span><span class="n">setup_options</span><span class="p">.</span><span class="n">ignore_processes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;CoulombScat&quot;</span><span class="p">};</span><span class="w"></span>
 
 <span class="w">    </span><span class="n">run_manager</span><span class="o">-&gt;</span><span class="n">Initialize</span><span class="p">();</span><span class="w"></span>
 <span class="w">    </span><span class="n">run_manager</span><span class="o">-&gt;</span><span class="n">BeamOn</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>

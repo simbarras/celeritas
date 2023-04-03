@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -100,9 +101,9 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="../../dd/dbd/structceleritas_1_1detail_1_1_vecgeom_nav_collection.html">VecgeomNavCollection</a>&lt; <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148a2063c1608d6e0baf80249c42e2be5804">Ownership::value</a>, MemSpace::device &gt; &amp;other)</td></tr>
 <tr class="memdesc:a101c6b49f834d1f1743d34f16551ca9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy the GPU pointer from the host-managed pool. <br /></td></tr>
 <tr class="separator:a101c6b49f834d1f1743d34f16551ca9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dcc41cd923dc5dc4ee4b321c740dd69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> NavState &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da9/structceleritas_1_1detail_1_1_vecgeom_nav_collection_3_01_ownership_1_1reference_00_01_mem_space_1_1device_01_4.html#a7dcc41cd923dc5dc4ee4b321c740dd69">at</a> (int max_depth, <a class="el" href="../../d3/d83/_thread_id_8hh.html#acdbd2b3f5402d42bb1349684a00365a4">ThreadId</a> thread) const</td></tr>
-<tr class="memdesc:a7dcc41cd923dc5dc4ee4b321c740dd69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the navigation state at the given thread.  <a href="../../dd/da9/structceleritas_1_1detail_1_1_vecgeom_nav_collection_3_01_ownership_1_1reference_00_01_mem_space_1_1device_01_4.html#a7dcc41cd923dc5dc4ee4b321c740dd69">More...</a><br /></td></tr>
-<tr class="separator:a7dcc41cd923dc5dc4ee4b321c740dd69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a624956a3183426fc3fb102d9c0ad9e5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> NavState &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da9/structceleritas_1_1detail_1_1_vecgeom_nav_collection_3_01_ownership_1_1reference_00_01_mem_space_1_1device_01_4.html#a624956a3183426fc3fb102d9c0ad9e5b">at</a> (int max_depth, <a class="el" href="../../d3/d83/_thread_id_8hh.html#a3fffdf8703eae70bc266e8cd92bf4dd5">TrackSlotId</a> tid) const</td></tr>
+<tr class="memdesc:a624956a3183426fc3fb102d9c0ad9e5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the navigation state at the given track slot.  <a href="../../dd/da9/structceleritas_1_1detail_1_1_vecgeom_nav_collection_3_01_ownership_1_1reference_00_01_mem_space_1_1device_01_4.html#a624956a3183426fc3fb102d9c0ad9e5b">More...</a><br /></td></tr>
+<tr class="separator:a624956a3183426fc3fb102d9c0ad9e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9dde9ca5b7ff39376129eafd41a7a7e"><td class="memItemLeft" align="right" valign="top"><a id="ae9dde9ca5b7ff39376129eafd41a7a7e" name="ae9dde9ca5b7ff39376129eafd41a7a7e"></a>
 <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () const</td></tr>
 <tr class="memdesc:ae9dde9ca5b7ff39376129eafd41a7a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the collection is assigned/valid. <br /></td></tr>
@@ -118,8 +119,8 @@ vecgeom::NavStatePoolView&#160;</td><td class="memItemRight" valign="bottom"><b>
 <div class="textblock"><p >Reference on-device memory owned by VecgeomNavCollection&lt;value, device&gt;. </p>
 <p >The NavStatePool underpinning the storage returns a void pointer that must be manually manipulated to get a single state pointer. The max_depth argument must be the same as the GeoParams. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7dcc41cd923dc5dc4ee4b321c740dd69" name="a7dcc41cd923dc5dc4ee4b321c740dd69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7dcc41cd923dc5dc4ee4b321c740dd69">&#9670;&#160;</a></span>at()</h2>
+<a id="a624956a3183426fc3fb102d9c0ad9e5b" name="a624956a3183426fc3fb102d9c0ad9e5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a624956a3183426fc3fb102d9c0ad9e5b">&#9670;&#160;</a></span>at()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -136,8 +137,8 @@ vecgeom::NavStatePoolView&#160;</td><td class="memItemRight" valign="bottom"><b>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d3/d83/_thread_id_8hh.html#acdbd2b3f5402d42bb1349684a00365a4">ThreadId</a>&#160;</td>
-          <td class="paramname"><em>thread</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d3/d83/_thread_id_8hh.html#a3fffdf8703eae70bc266e8cd92bf4dd5">TrackSlotId</a>&#160;</td>
+          <td class="paramname"><em>tid</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -152,7 +153,7 @@ vecgeom::NavStatePoolView&#160;</td><td class="memItemRight" valign="bottom"><b>
 </table>
 </div><div class="memdoc">
 
-<p>Get the navigation state at the given thread. </p>
+<p>Get the navigation state at the given track slot. </p>
 <p >The max_depth_param is used for error checking against the allocated max_depth. </p>
 
 </div>

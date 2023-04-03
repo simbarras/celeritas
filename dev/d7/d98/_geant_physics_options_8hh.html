@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -76,7 +77,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">GeantPhysicsOptions.hh File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -97,12 +99,18 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a52dd41185099c946893d59a78dd72393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Brems selection (TODO: make bitset) <br /></td></tr>
 <tr class="separator:a52dd41185099c946893d59a78dd72393"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f683a34fef933febc46736cd3f4edbf"><td class="memItemLeft" align="right" valign="top"><a id="a4f683a34fef933febc46736cd3f4edbf" name="a4f683a34fef933febc46736cd3f4edbf"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d98/_geant_physics_options_8hh.html#a4f683a34fef933febc46736cd3f4edbf">celeritas::MscModelSelection</a> { <b>none</b>
+<tr class="memitem:a4f683a34fef933febc46736cd3f4edbf"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d98/_geant_physics_options_8hh.html#a4f683a34fef933febc46736cd3f4edbf">celeritas::MscModelSelection</a> { <br />
+&#160;&#160;<b>none</b>
 , <b>urban</b>
+, <a class="el" href="../../d7/d98/_geant_physics_options_8hh.html#a4f683a34fef933febc46736cd3f4edbfad698b9a44743532b5d503a026d9df1bb">urban_extended</a>
 , <b>wentzel_vi</b>
+, <br />
+&#160;&#160;<a class="el" href="../../d7/d98/_geant_physics_options_8hh.html#a4f683a34fef933febc46736cd3f4edbfa5552955db5e84896ba89f64e5a2766df">urban_wentzel</a>
+, <b>goudsmit_saunderson</b>
 , <b>size_</b>
+<br />
  }</td></tr>
-<tr class="memdesc:a4f683a34fef933febc46736cd3f4edbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">MSC selection (TODO: make bitset) <br /></td></tr>
+<tr class="memdesc:a4f683a34fef933febc46736cd3f4edbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">MSC selection (TODO: make bitset?)  <a href="../../d7/d98/_geant_physics_options_8hh.html#a4f683a34fef933febc46736cd3f4edbf">More...</a><br /></td></tr>
 <tr class="separator:a4f683a34fef933febc46736cd3f4edbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f2911f461c6f4865a1a5d9a37e1b3c6"><td class="memItemLeft" align="right" valign="top"><a id="a9f2911f461c6f4865a1a5d9a37e1b3c6" name="a9f2911f461c6f4865a1a5d9a37e1b3c6"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d98/_geant_physics_options_8hh.html#a9f2911f461c6f4865a1a5d9a37e1b3c6">celeritas::RelaxationSelection</a> { <b>none</b>
 , <b>radiative</b>
@@ -111,7 +119,57 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a9f2911f461c6f4865a1a5d9a37e1b3c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomic relaxation options. <br /></td></tr>
 <tr class="separator:a9f2911f461c6f4865a1a5d9a37e1b3c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a09d5ff7a87fce70f6f2219fbdb2f94af"><td class="memItemLeft" align="right" valign="top"><a id="a09d5ff7a87fce70f6f2219fbdb2f94af" name="a09d5ff7a87fce70f6f2219fbdb2f94af"></a>
+constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::operator==</b> (GeantPhysicsOptions const &amp;a, GeantPhysicsOptions const &amp;b)</td></tr>
+<tr class="memdesc:a09d5ff7a87fce70f6f2219fbdb2f94af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality operator, mainly for test harness. <br /></td></tr>
+<tr class="separator:a09d5ff7a87fce70f6f2219fbdb2f94af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0d76481a09c82b3473e5a827bf8a560"><td class="memItemLeft" align="right" valign="top"><a id="ad0d76481a09c82b3473e5a827bf8a560" name="ad0d76481a09c82b3473e5a827bf8a560"></a>
+char const *&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to_cstring</b> (BremsModelSelection value)</td></tr>
+<tr class="memdesc:ad0d76481a09c82b3473e5a827bf8a560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a string corresponding to the Bremsstrahlung model selection. <br /></td></tr>
+<tr class="separator:ad0d76481a09c82b3473e5a827bf8a560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d86bc65db7fb172e49b18d97db7c7a4"><td class="memItemLeft" align="right" valign="top"><a id="a7d86bc65db7fb172e49b18d97db7c7a4" name="a7d86bc65db7fb172e49b18d97db7c7a4"></a>
+char const *&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to_cstring</b> (MscModelSelection value)</td></tr>
+<tr class="memdesc:a7d86bc65db7fb172e49b18d97db7c7a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a string corresponding to the multiple scattering model selection. <br /></td></tr>
+<tr class="separator:a7d86bc65db7fb172e49b18d97db7c7a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a642b895dffafb5ebf5b0ee2b4657f3a0"><td class="memItemLeft" align="right" valign="top"><a id="a642b895dffafb5ebf5b0ee2b4657f3a0" name="a642b895dffafb5ebf5b0ee2b4657f3a0"></a>
+char const *&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to_cstring</b> (RelaxationSelection value)</td></tr>
+<tr class="memdesc:a642b895dffafb5ebf5b0ee2b4657f3a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a string corresponding to the atomic relaxation option. <br /></td></tr>
+<tr class="separator:a642b895dffafb5ebf5b0ee2b4657f3a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a4f683a34fef933febc46736cd3f4edbf" name="a4f683a34fef933febc46736cd3f4edbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f683a34fef933febc46736cd3f4edbf">&#9670;&#160;</a></span>MscModelSelection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="../../d7/d98/_geant_physics_options_8hh.html#a4f683a34fef933febc46736cd3f4edbf">celeritas::MscModelSelection</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>MSC selection (TODO: make bitset?) </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4f683a34fef933febc46736cd3f4edbfad698b9a44743532b5d503a026d9df1bb" name="a4f683a34fef933febc46736cd3f4edbfad698b9a44743532b5d503a026d9df1bb"></a>urban_extended&#160;</td><td class="fielddoc"><p >Use 100 TeV as upper bound instead of 100 MeV. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4f683a34fef933febc46736cd3f4edbfa5552955db5e84896ba89f64e5a2766df" name="a4f683a34fef933febc46736cd3f4edbfa5552955db5e84896ba89f64e5a2766df"></a>urban_wentzel&#160;</td><td class="fielddoc"><p >Urban for low-E, Wentzel_VI for high-E. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

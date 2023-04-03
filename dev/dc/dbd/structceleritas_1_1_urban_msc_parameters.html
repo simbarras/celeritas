@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -83,7 +84,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="../../df/d67/classceleritas_1_1_urban_msc_model.html" title="Set up and launch UrbanMsc model.">UrbanMscModel</a> settable parameters and default values.  
+<p>Settable parameters and default values for Urban multiple scattering.  
  <a href="../../dc/dbd/structceleritas_1_1_urban_msc_parameters.html#details">More...</a></p>
 
 <p><code>#include &lt;UrbanMscData.hh&gt;</code></p>
@@ -106,7 +107,7 @@ static <a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160
 <tr class="separator:a56612bbb37d2c7834625b479fe2d67db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42c324e806fbe01fd5d5253b5a1ea606"><td class="memItemLeft" align="right" valign="top"><a id="a42c324e806fbe01fd5d5253b5a1ea606" name="a42c324e806fbe01fd5d5253b5a1ea606"></a>
 static <a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a> <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>limit_min</b> ()</td></tr>
-<tr class="memdesc:a42c324e806fbe01fd5d5253b5a1ea606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default minimum of the true path limit: 1e-8 cm. <br /></td></tr>
+<tr class="memdesc:a42c324e806fbe01fd5d5253b5a1ea606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum true path when not calculated in the step limiting. <br /></td></tr>
 <tr class="separator:a42c324e806fbe01fd5d5253b5a1ea606"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a5b78eb40de175addc4ef3dd9579ea5"><td class="memItemLeft" align="right" valign="top"><a id="a9a5b78eb40de175addc4ef3dd9579ea5" name="a9a5b78eb40de175addc4ef3dd9579ea5"></a>
 static <a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a> <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>min_step</b> ()</td></tr>
@@ -116,6 +117,10 @@ static <a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160
 static <a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a> <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>min_sampling_energy</b> ()</td></tr>
 <tr class="memdesc:a7e97e4c53aa744c99ba0b5acc02f806e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Below this endpoint energy, don't sample scattering: 1 eV. <br /></td></tr>
 <tr class="separator:a7e97e4c53aa744c99ba0b5acc02f806e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67bfb4eb143f780025cf7e6ccfe43f1d"><td class="memItemLeft" align="right" valign="top"><a id="a67bfb4eb143f780025cf7e6ccfe43f1d" name="a67bfb4eb143f780025cf7e6ccfe43f1d"></a>
+static <a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a> <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>min_scaling_energy</b> ()</td></tr>
+<tr class="memdesc:a67bfb4eb143f780025cf7e6ccfe43f1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The lower bound of energy to scale the minimum true path length limit. <br /></td></tr>
+<tr class="separator:a67bfb4eb143f780025cf7e6ccfe43f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -152,16 +157,14 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a4d1f94c87d8d0198c2d05cf46cd459a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">minimum step <br /></td></tr>
 <tr class="separator:a4d1f94c87d8d0198c2d05cf46cd459a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af662d19f21639abe931f1a9828be6769"><td class="memItemLeft" align="right" valign="top"><a id="af662d19f21639abe931f1a9828be6769" name="af662d19f21639abe931f1a9828be6769"></a>
-<a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>low_energy_limit</b> {1e-5}</td></tr>
-<tr class="memdesc:af662d19f21639abe931f1a9828be6769"><td class="mdescLeft">&#160;</td><td class="mdescRight">10 eV <br /></td></tr>
+<a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>low_energy_limit</b> {0}</td></tr>
 <tr class="separator:af662d19f21639abe931f1a9828be6769"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1dadf46e24d3e3d1f07036414f233d58"><td class="memItemLeft" align="right" valign="top"><a id="a1dadf46e24d3e3d1f07036414f233d58" name="a1dadf46e24d3e3d1f07036414f233d58"></a>
-<a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>high_energy_limit</b> {1e+2}</td></tr>
-<tr class="memdesc:a1dadf46e24d3e3d1f07036414f233d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">100 MeV <br /></td></tr>
+<a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>high_energy_limit</b> {0}</td></tr>
 <tr class="separator:a1dadf46e24d3e3d1f07036414f233d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p ><a class="el" href="../../df/d67/classceleritas_1_1_urban_msc_model.html" title="Set up and launch UrbanMsc model.">UrbanMscModel</a> settable parameters and default values. </p>
+<div class="textblock"><p >Settable parameters and default values for Urban multiple scattering. </p>
 <p ><picture><source srcset="../../form_6_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \tau = t/\lambda $" src="../../form_6.png" width="43" height="14"/></picture> where t is the true path length and <picture><source srcset="../../form_7_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \lambda $" src="../../form_7.png" width="8" height="10"/></picture> is the mean free path of the multiple scattering. The range and safety factors are used in step limitation algorithms and default values are chosen to balance between simulation time and precision. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../db/d41/_urban_msc_data_8hh.html">UrbanMscData.hh</a></li>

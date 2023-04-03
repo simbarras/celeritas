@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -75,8 +76,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="../../d6/de2/classceleritas_1_1detail_1_1_logic_evaluator-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">celeritas::detail::LogicEvaluator Class Reference</div></div>
 </div><!--header-->
@@ -87,24 +86,21 @@ $(function() {
 
 <p><code>#include &lt;LogicEvaluator.hh&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
-Public Types</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Type aliases</h2></td></tr>
 <tr class="memitem:aa3e0b629ac98bc9631fa4a8f49963600"><td class="memItemLeft" align="right" valign="top"><a id="aa3e0b629ac98bc9631fa4a8f49963600" name="aa3e0b629ac98bc9631fa4a8f49963600"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>SpanConstLogic</b> = <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a>&lt; <a class="el" href="../../d7/d3b/_orange_types_8hh.html#adbbba02a0d046cbac4c60629cac9d31b">logic_int</a> const  &gt;</td></tr>
-<tr class="memdesc:aa3e0b629ac98bc9631fa4a8f49963600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Public type aliases. <br /></td></tr>
+<tr class="memdesc:aa3e0b629ac98bc9631fa4a8f49963600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with a view to some logic definition. <br /></td></tr>
 <tr class="separator:aa3e0b629ac98bc9631fa4a8f49963600"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac20fb06e306947dc7fb4d6738e7c3792"><td class="memItemLeft" align="right" valign="top"><a id="ac20fb06e306947dc7fb4d6738e7c3792" name="ac20fb06e306947dc7fb4d6738e7c3792"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>SpanConstSense</b> = <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a>&lt; <a class="el" href="../../d7/d3b/_orange_types_8hh.html#a71ab8678dcf1b07beab18d3cc954e297">Sense</a> const  &gt;</td></tr>
+<tr class="memdesc:ac20fb06e306947dc7fb4d6738e7c3792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with a view to some logic definition. <br /></td></tr>
 <tr class="separator:ac20fb06e306947dc7fb4d6738e7c3792"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
 <tr class="memitem:aff1a3502ac3eb39eadd8dcbaffdda6ce"><td class="memItemLeft" align="right" valign="top"><a id="aff1a3502ac3eb39eadd8dcbaffdda6ce" name="aff1a3502ac3eb39eadd8dcbaffdda6ce"></a>
 <a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>LogicEvaluator</b> (<a class="el" href="../../d5/dca/classceleritas_1_1detail_1_1_logic_evaluator.html#aa3e0b629ac98bc9631fa4a8f49963600">SpanConstLogic</a> logic)</td></tr>
 <tr class="memdesc:aff1a3502ac3eb39eadd8dcbaffdda6ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with a view to some logic definition. <br /></td></tr>
 <tr class="separator:aff1a3502ac3eb39eadd8dcbaffdda6ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf850be38f8866ae00ebf0d735dd5dbd"><td class="memItemLeft" align="right" valign="top"><a id="adf850be38f8866ae00ebf0d735dd5dbd" name="adf850be38f8866ae00ebf0d735dd5dbd"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="../../dd/d15/classceleritas_1_1_span.html">SpanConstSense</a> values) const</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="../../d5/dca/classceleritas_1_1detail_1_1_logic_evaluator.html#ac20fb06e306947dc7fb4d6738e7c3792">SpanConstSense</a> values) const</td></tr>
 <tr class="memdesc:adf850be38f8866ae00ebf0d735dd5dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate a logical expression, substituting bools from the sense view. <br /></td></tr>
 <tr class="separator:adf850be38f8866ae00ebf0d735dd5dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>

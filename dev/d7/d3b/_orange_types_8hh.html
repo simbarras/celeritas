@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -75,6 +76,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
@@ -93,8 +95,14 @@ $(function() {
 <code>#include &quot;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html">corecel/Types.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../dc/de9/_array_8hh.html">corecel/cont/Array.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d2/d78/_numeric_limits_8hh.html">corecel/math/NumericLimits.hh</a>&quot;</code><br />
-<code>#include &quot;orange/Types.hh&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d97/orange_2_types_8hh.html">orange/Types.hh</a>&quot;</code><br />
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d1b/structceleritas_1_1_daughter.html">celeritas::Daughter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data specifying a daughter universe embedded in a volume.  <a href="../../df/d1b/structceleritas_1_1_daughter.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:de/d0b/namespaceceleritas_1_1logic"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d0b/namespaceceleritas_1_1logic.html">celeritas::logic</a></td></tr>
@@ -107,10 +115,30 @@ Typedefs</h2></td></tr>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::logic_int</b> = unsigned short int</td></tr>
 <tr class="memdesc:adbbba02a0d046cbac4c60629cac9d31b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer type for volume CSG tree representation. <br /></td></tr>
 <tr class="separator:adbbba02a0d046cbac4c60629cac9d31b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43e9f81854398069ac4d09bb747a52a8"><td class="memItemLeft" align="right" valign="top"><a id="a43e9f81854398069ac4d09bb747a52a8" name="a43e9f81854398069ac4d09bb747a52a8"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::DaughterId</b> = OpaqueId&lt; struct Daughter &gt;</td></tr>
+<tr class="memdesc:a43e9f81854398069ac4d09bb747a52a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifier for a daughter universe. <br /></td></tr>
+<tr class="separator:a43e9f81854398069ac4d09bb747a52a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3a1246f78635710aec7b2447c9d5960"><td class="memItemLeft" align="right" valign="top"><a id="ac3a1246f78635710aec7b2447c9d5960" name="ac3a1246f78635710aec7b2447c9d5960"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::FaceId</b> = OpaqueId&lt; struct Face &gt;</td></tr>
 <tr class="memdesc:ac3a1246f78635710aec7b2447c9d5960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifier for a face local to a particular volume (internal use only) <br /></td></tr>
 <tr class="separator:ac3a1246f78635710aec7b2447c9d5960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eea67f47b3f29d0264703a05f63e5ff"><td class="memItemLeft" align="right" valign="top"><a id="a4eea67f47b3f29d0264703a05f63e5ff" name="a4eea67f47b3f29d0264703a05f63e5ff"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::LevelId</b> = OpaqueId&lt; struct Level &gt;</td></tr>
+<tr class="memdesc:a4eea67f47b3f29d0264703a05f63e5ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifier for the current "level", i.e. depth of embedded universe. <br /></td></tr>
+<tr class="separator:a4eea67f47b3f29d0264703a05f63e5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9f1c8e91b980e18a717338796ffd2b4"><td class="memItemLeft" align="right" valign="top"><a id="ab9f1c8e91b980e18a717338796ffd2b4" name="ab9f1c8e91b980e18a717338796ffd2b4"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::LocalSurfaceId</b> = OpaqueId&lt; struct LocalSurface &gt;</td></tr>
+<tr class="memdesc:ab9f1c8e91b980e18a717338796ffd2b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Local Identifier for a surface within within a universe. <br /></td></tr>
+<tr class="separator:ab9f1c8e91b980e18a717338796ffd2b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af87193b89f543ca04da5fafc093ca36d"><td class="memItemLeft" align="right" valign="top"><a id="af87193b89f543ca04da5fafc093ca36d" name="af87193b89f543ca04da5fafc093ca36d"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::LocalVolumeId</b> = OpaqueId&lt; struct LocalVolume &gt;</td></tr>
+<tr class="memdesc:af87193b89f543ca04da5fafc093ca36d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Local identifier for a geometry volume in a universe. <br /></td></tr>
+<tr class="separator:af87193b89f543ca04da5fafc093ca36d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20575a64c44727763a967e883fcf086e"><td class="memItemLeft" align="right" valign="top"><a id="a20575a64c44727763a967e883fcf086e" name="a20575a64c44727763a967e883fcf086e"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::SimpleUnitId</b> = OpaqueId&lt; struct SimpleUnitRecord &gt;</td></tr>
+<tr class="memdesc:a20575a64c44727763a967e883fcf086e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opaque index for "simple unit" data. <br /></td></tr>
+<tr class="separator:a20575a64c44727763a967e883fcf086e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f53d6740b99dd9d05b697edf8411b81"><td class="memItemLeft" align="right" valign="top"><a id="a0f53d6740b99dd9d05b697edf8411b81" name="a0f53d6740b99dd9d05b697edf8411b81"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::Translation</b> = Real3</td></tr>
 <tr class="memdesc:a0f53d6740b99dd9d05b697edf8411b81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Translation of a single embedded universe. <br /></td></tr>
@@ -123,10 +151,6 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::Translati
 using&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::UniverseId</b> = OpaqueId&lt; struct Universe &gt;</td></tr>
 <tr class="memdesc:a9a8aa9e9bf4ec70552060e7fe2757334"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifier for a relocatable set of volumes. <br /></td></tr>
 <tr class="separator:a9a8aa9e9bf4ec70552060e7fe2757334"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20575a64c44727763a967e883fcf086e"><td class="memItemLeft" align="right" valign="top"><a id="a20575a64c44727763a967e883fcf086e" name="a20575a64c44727763a967e883fcf086e"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::SimpleUnitId</b> = OpaqueId&lt; struct SimpleUnitRecord &gt;</td></tr>
-<tr class="memdesc:a20575a64c44727763a967e883fcf086e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opaque index for "simple unit" data. <br /></td></tr>
-<tr class="separator:a20575a64c44727763a967e883fcf086e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -228,7 +252,6 @@ char const *&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Type definitions for ORANGE geometry. </p>
-<p >Shared (VecGeom + ORANGE) geometry type definitions.</p>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a6706538d5234d462546b4083dd2840e2" name="a6706538d5234d462546b4083dd2840e2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6706538d5234d462546b4083dd2840e2">&#9670;&#160;</a></span>BoundaryResult</h2>
@@ -278,9 +301,9 @@ changed" (reflecting/periodic), "position changed" (bump/periodic). </p>
 
 <p>Whether a position is logically "inside" or "outside" a surface. </p>
 <p >For a plane, "outside" (true) is the "positive" sense and equivalent to  </p><p class="formulaDsp">
-<picture><source srcset="../../form_201_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_207_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 \vec x \cdot \vec n &gt;= 0
-\]" src="../../form_201.png" width="56" height="11"/></picture>
+\]" src="../../form_207.png" width="56" height="11"/></picture>
 </p>
 <p> and "inside" is to the left of the plane's normal. Likewise, for a sphere, "inside" is where the dot product of the position and outward normal is negative. </p>
 <table class="fieldtable">
@@ -314,9 +337,9 @@ changed" (reflecting/periodic), "position changed" (bump/periodic). </p>
 
 <p>Evaluated quadric expression allowing for distinct 'on surface' state. </p>
 <p >For a plane, "outside" is equivalent to  </p><p class="formulaDsp">
-<picture><source srcset="../../form_202_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_208_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 \vec x \cdot \vec n &gt; 0
-\]" src="../../form_202.png" width="46" height="11"/></picture>
+\]" src="../../form_208.png" width="46" height="11"/></picture>
 </p>
 <p> and "inside" is to the left of the plane's normal (a negative dot product). The exact equality to zero is literally an "edge case" but it can happen with inter-universe coincident surfaces as well as carefully placed particle sources and ray tracing.</p>
 <p >As an implementataion detail, the "on" case is currently <em>exact</em>, but future changes might increase the width of "on" to a finite but small range ("fuzziness"). </p>
@@ -438,7 +461,7 @@ changed" (reflecting/periodic), "position changed" (bump/periodic). </p>
 </div><div class="memdoc">
 
 <p>Sentinel value indicating "no intersection". </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000023">Todo:</a></b></dt><dd><p class="startdd">There is probably a better place to put this since it's not a "type". </p>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000025">Todo:</a></b></dt><dd><p class="startdd">There is probably a better place to put this since it's not a "type". </p>
 <p class="enddd">A value of zero might also work since zero-length steps are prohibited. But we'll need custom <code>min</code> and <code>min_element</code> in that case. </p>
 </dd></dl>
 

@@ -1,20 +1,5 @@
 var searchData=
 [
-  ['mapped_5ftype_0',['mapped_type',['../da/def/classceleritas_1_1_environment.html#a8f1a8cf5978f7b2e3e1753277cdc8d05',1,'celeritas::Environment']]],
-  ['mapstrint_1',['MapStrInt',['../d6/def/classceleritas_1_1_device.html#a5f98665ebf50d43fcda42a816f626ede',1,'celeritas::Device']]],
-  ['mapvolumedetector_2',['MapVolumeDetector',['../d6/dc0/classceleritas_1_1_step_interface.html#ada9256c6cc789d3a6ebe0e3862fd3514',1,'celeritas::StepInterface']]],
-  ['mass_3',['Mass',['../d5/d7c/classceleritas_1_1_energy_loss_urban_distribution.html#a992deaeb14401cb912ce71d115744923',1,'celeritas::EnergyLossUrbanDistribution::Mass()'],['../dd/da0/classceleritas_1_1_tsai_urban_distribution.html#ab0701c56d066cac97eab1828e8b0e913',1,'celeritas::TsaiUrbanDistribution::Mass()'],['../dd/d95/classceleritas_1_1_urban_msc_step_limit.html#adae269f377708252ab8e0a59414ed08f',1,'celeritas::UrbanMscStepLimit::Mass()'],['../de/d90/classceleritas_1_1detail_1_1_brem_final_state_helper.html#a60d376d77a377dfd30f697cc411858bc',1,'celeritas::detail::BremFinalStateHelper::Mass()'],['../d0/db5/classceleritas_1_1detail_1_1_s_b_energy_sampler.html#a3027f57c7e3cd30f1257053873c4c4ee',1,'celeritas::detail::SBEnergySampler::Mass()']]],
-  ['materialdata_4',['MaterialData',['../d3/d1c/classceleritas_1_1_urban_msc_helper.html#a3a7b0eef134f3a62674a94bf13e23b8b',1,'celeritas::UrbanMscHelper::MaterialData()'],['../dd/d95/classceleritas_1_1_urban_msc_step_limit.html#ad5a0fdfaca8df1cdf6025ed6cb39dea9',1,'celeritas::UrbanMscStepLimit::MaterialData()']]],
-  ['materialid_5',['MaterialId',['../db/da7/celeritas_2_types_8hh.html#a1cade572974306b924a14c099e1a5ef0',1,'celeritas']]],
-  ['materialparamsref_6',['MaterialParamsRef',['../dc/de6/classceleritas_1_1_element_view.html#a1be2aaa7ee42607574ab26fec08d6ac4',1,'celeritas::ElementView::MaterialParamsRef()'],['../db/dbf/classceleritas_1_1_material_track_view.html#aae6d4826e33f0ff043103fbc7a11c91a',1,'celeritas::MaterialTrackView::MaterialParamsRef()'],['../d4/de4/classceleritas_1_1_material_view.html#a331c6e61b452aaf0e67ad2d242a1df84',1,'celeritas::MaterialView::MaterialParamsRef()']]],
-  ['materialstateref_7',['MaterialStateRef',['../db/dbf/classceleritas_1_1_material_track_view.html#af683776c58f43f0ec97ac063a9da7d35',1,'celeritas::MaterialTrackView']]],
-  ['mevpercm_8',['MevPerCm',['../d6/dee/_physics_constants_8hh.html#a5411b4f2f174cd3a4dfa9bf9ca5db566',1,'celeritas::detail']]],
-  ['microxsbuilders_9',['MicroXsBuilders',['../db/d4f/classceleritas_1_1_imported_model_adapter.html#af4e25785e6e0c55d1797d6b1226a78da',1,'celeritas::ImportedModelAdapter']]],
-  ['microxsunits_10',['MicroXsUnits',['../da/d40/classceleritas_1_1_livermore_p_e_macro_xs_calculator.html#a01802413afc3f55dd1fcaa3bc25d120b',1,'celeritas::LivermorePEMacroXsCalculator']]],
-  ['modelfinder_11',['ModelFinder',['../d4/dd9/classceleritas_1_1_physics_track_view.html#a7706b56df15a98edd26f13d5f781549e',1,'celeritas::PhysicsTrackView']]],
-  ['modelid_12',['ModelId',['../db/da7/celeritas_2_types_8hh.html#a5fd58fac38548ff1ee78d4a2145e1d12',1,'celeritas']]],
-  ['modelmicroxs_13',['ModelMicroXS',['../d9/d7e/structceleritas_1_1_import_process.html#a72dc29c8df94d1278c73766257576fb0',1,'celeritas::ImportProcess']]],
-  ['momentum_14',['Momentum',['../de/d90/classceleritas_1_1detail_1_1_brem_final_state_helper.html#ad015e8522f67799b66679d6bbb0ed983',1,'celeritas::detail::BremFinalStateHelper::Momentum()'],['../d7/dd7/classceleritas_1_1_relativistic_brem_interactor.html#ab911eaebd045643d01edf1a0de7fda03',1,'celeritas::RelativisticBremInteractor::Momentum()']]],
-  ['mpicomm_15',['MpiComm',['../d1/d7a/classceleritas_1_1_mpi_communicator.html#ab1442e61448d8cbb2c1624e264872a0a',1,'celeritas::MpiCommunicator']]],
-  ['mscparameters_16',['MscParameters',['../dd/d95/classceleritas_1_1_urban_msc_step_limit.html#aa3dca67fcbb8e3cfbcc5ea133f97fce9',1,'celeritas::UrbanMscStepLimit']]]
+  ['nativecref_0',['NativeCRef',['../d0/df5/corecel_2_types_8hh.html#a35e5b1955aa5d7269b34c6f5044b3b69',1,'celeritas']]],
+  ['nativeref_1',['NativeRef',['../d0/df5/corecel_2_types_8hh.html#a611908e2307d8e68abc7f152c856cbf6',1,'celeritas']]]
 ];

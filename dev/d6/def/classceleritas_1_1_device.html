@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -89,8 +90,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a5f98665ebf50d43fcda42a816f626ede"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/def/classceleritas_1_1_device.html#a5f98665ebf50d43fcda42a816f626ede">MapStrInt</a> = std::map&lt; std::string, int &gt;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a5f98665ebf50d43fcda42a816f626ede"><td class="memItemLeft" align="right" valign="top"><a id="a5f98665ebf50d43fcda42a816f626ede" name="a5f98665ebf50d43fcda42a816f626ede"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>MapStrInt</b> = std::map&lt; std::string, int &gt;</td></tr>
 <tr class="separator:a5f98665ebf50d43fcda42a816f626ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -140,7 +142,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>default_block
 <tr class="memdesc:ab7dc31b7078fd494c345932207909d17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default number of threads per block. <br /></td></tr>
 <tr class="separator:ab7dc31b7078fd494c345932207909d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70a1b0433c70515aad096b20f085d77d"><td class="memItemLeft" align="right" valign="top"><a id="a70a1b0433c70515aad096b20f085d77d" name="a70a1b0433c70515aad096b20f085d77d"></a>
-<a class="el" href="../../d6/def/classceleritas_1_1_device.html#a5f98665ebf50d43fcda42a816f626ede">MapStrInt</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>extra</b> () const</td></tr>
+MapStrInt const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>extra</b> () const</td></tr>
 <tr class="memdesc:a70a1b0433c70515aad096b20f085d77d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additional potentially interesting diagnostics. <br /></td></tr>
 <tr class="separator:a70a1b0433c70515aad096b20f085d77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -171,25 +173,9 @@ Static Public Member Functions</h2></td></tr>
 <td class="markdownTableBodyNone">multiprocessor   </td><td class="markdownTableBodyNone">execution unit   </td><td class="markdownTableBodyNone">hardware executing one or more warps   </td></tr>
 </table>
 <p >Each block/workgroup operates on the same hardware (compute unit) until completion. Similarly, a warp/wavefront is tied to a single execution unit. Each compute unit can execute one or more blocks: the higher the number of blocks resident, the more latency can be hidden.</p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000020">Todo:</a></b></dt><dd>The active CUDA device is a global property&mdash;so this should probably be a singleton, or we could use lower-level API calls.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000022">Todo:</a></b></dt><dd>The active CUDA device is a global property&mdash;so this should probably be a singleton, or we could use lower-level API calls.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The current multithreading/multiprocess model is intended to have one GPU serving multiple CPU threads simultaneously, and one MPI process per GPU. If we need to add multiple GPUs per process, then <code>global_device</code> will go away in favor of a thread-independent model. </dd></dl>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a5f98665ebf50d43fcda42a816f626ede" name="a5f98665ebf50d43fcda42a816f626ede"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f98665ebf50d43fcda42a816f626ede">&#9670;&#160;</a></span>MapStrInt</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d6/def/classceleritas_1_1_device.html#a5f98665ebf50d43fcda42a816f626ede">celeritas::Device::MapStrInt</a> =  std::map&lt;std::string, int&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="adde69237dfdac2bbae37a41b370e8c96" name="adde69237dfdac2bbae37a41b370e8c96"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adde69237dfdac2bbae37a41b370e8c96">&#9670;&#160;</a></span>debug()</h2>
 

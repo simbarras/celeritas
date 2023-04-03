@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -207,7 +208,7 @@ template&lt;class T , size_type N&gt; </div>
 
 <p>Test for being approximately a unit vector. </p>
 <p >Example: </p><div class="fragment"><div class="line"><a class="code hl_define" href="../../d5/d10/_assert_8hh.html#a114be0f44dbd308a170e6ae599bdc57b">CELER_EXPECT</a>(is_soft_unit_vector(v));</div>
-<div class="ttc" id="a_assert_8hh_html_a114be0f44dbd308a170e6ae599bdc57b"><div class="ttname"><a href="../../d5/d10/_assert_8hh.html#a114be0f44dbd308a170e6ae599bdc57b">CELER_EXPECT</a></div><div class="ttdeci">#define CELER_EXPECT(COND)</div><div class="ttdoc">Precondition debug assertion macro.</div><div class="ttdef"><b>Definition:</b> Assert.hh:162</div></div>
+<div class="ttc" id="a_assert_8hh_html_a114be0f44dbd308a170e6ae599bdc57b"><div class="ttname"><a href="../../d5/d10/_assert_8hh.html#a114be0f44dbd308a170e6ae599bdc57b">CELER_EXPECT</a></div><div class="ttdeci">#define CELER_EXPECT(COND)</div><div class="ttdoc">Precondition debug assertion macro.</div><div class="ttdef"><b>Definition:</b> Assert.hh:163</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -256,11 +257,11 @@ template&lt;class T &gt; </div>
 </div><!-- fragment --><p >This code effectively decomposes the given rotation vector <code>rot</code> into two sequential transform matrices, one with an angle <em>theta</em> about the <em>y</em> axis and one about <em>phi</em> rotating around the <em>z</em> axis. These two angles are the spherical coordinate transform of the given <code>rot</code> cartesian direction vector.</p>
 <p >There is some extra code in here to deal with loss of precision when the incident direction is along the <em>z</em> axis. As <code>rot</code> approaches <em>z</em>, the azimuthal angle <em>phi</em> must be calculated carefully from both the x and y components of the vector, not independently. If <code>rot</code> actually equals <em>z</em> then the azimuthal angle is completely indeterminate so we arbitrarily choose <code>phi</code> = 0.</p>
 <p >This function is often used for calculating exiting scattering angles. In that case, <code>dir</code> is the exiting angle from the scattering calculation, and <code>rot</code> is the original direction of the particle. The direction vectors are defined as  </p><p class="formulaDsp">
-<picture><source srcset="../../form_200_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_206_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 \Omega =   \sin\theta\cos\phi\mathbf{i}
          + \sin\theta\sin\phi\mathbf{j}
          + \cos\theta\mathbf{k} \,.
-\]" src="../../form_200.png" width="204" height="13"/></picture>
+\]" src="../../form_206.png" width="204" height="13"/></picture>
 </p>
  
 </div>

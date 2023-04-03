@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -145,7 +146,7 @@ size_type&#160;</td><td class="memItemRight" valign="bottom"><b>initializer_capa
 <tr class="memdesc:a01e955fc0a93f0fe28c96b76eda3742b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of track initializers (primaries+secondaries) <br /></td></tr>
 <tr class="separator:a01e955fc0a93f0fe28c96b76eda3742b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7411ec293757df2b2239e7e4d0429d60"><td class="memItemLeft" align="right" valign="top"><a id="a7411ec293757df2b2239e7e4d0429d60" name="a7411ec293757df2b2239e7e4d0429d60"></a>
-real_type&#160;</td><td class="memItemRight" valign="bottom"><b>secondary_stack_factor</b> {}</td></tr>
+real_type&#160;</td><td class="memItemRight" valign="bottom"><b>secondary_stack_factor</b> {3.0}</td></tr>
 <tr class="memdesc:a7411ec293757df2b2239e7e4d0429d60"><td class="mdescLeft">&#160;</td><td class="mdescRight">At least the average number of secondaries per track slot. <br /></td></tr>
 <tr class="separator:a7411ec293757df2b2239e7e4d0429d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8762949e2e942a9526dfb4fe7976c27c"><td class="memItemLeft" align="right" valign="top"><a id="a8762949e2e942a9526dfb4fe7976c27c" name="a8762949e2e942a9526dfb4fe7976c27c"></a>
@@ -171,6 +172,10 @@ size_type&#160;</td><td class="memItemRight" valign="bottom"><b>cuda_stack_size<
 <tr class="memitem:a91a9bea92346873ffae832f5abcde01f"><td class="memItemLeft" align="right" valign="top"><a id="a91a9bea92346873ffae832f5abcde01f" name="a91a9bea92346873ffae832f5abcde01f"></a>
 size_type&#160;</td><td class="memItemRight" valign="bottom"><b>cuda_heap_size</b> {}</td></tr>
 <tr class="separator:a91a9bea92346873ffae832f5abcde01f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Track init options</div></td></tr>
+<tr class="memitem:a2bed2b8cf624140ce0b73e6b8ef7b385"><td class="memItemLeft" align="right" valign="top"><a id="a2bed2b8cf624140ce0b73e6b8ef7b385" name="a2bed2b8cf624140ce0b73e6b8ef7b385"></a>
+<a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a235414f18146be6e98cf4e1e5ccf0fe6">TrackOrder</a>&#160;</td><td class="memItemRight" valign="bottom"><b>track_order</b> {TrackOrder::unsorted}</td></tr>
+<tr class="separator:a2bed2b8cf624140ce0b73e6b8ef7b385"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Control options for initializing Celeritas. </p>

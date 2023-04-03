@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -122,12 +123,12 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span>                                             \</div>
-<div class="line">    {                                              \</div>
-<div class="line">        if (this-&gt;step_params.selection.ATTR)      \</div>
-<div class="line">        {                                          \</div>
-<div class="line">            this-&gt;step_state.ATTR[thread] = VALUE; \</div>
-<div class="line">        }                                          \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span>                                                            \</div>
+<div class="line">    {                                                             \</div>
+<div class="line">        if (this-&gt;step_params.selection.ATTR)                     \</div>
+<div class="line">        {                                                         \</div>
+<div class="line">            this-&gt;step_state.ATTR[track.track_slot_id()] = VALUE; \</div>
+<div class="line">        }                                                         \</div>
 <div class="line">    } <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
 </div>

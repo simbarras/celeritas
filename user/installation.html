@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation &mdash; Celeritas v0.3.0-dev-24+65ba1f71 documentation</title>
+  <title>Installation &mdash; Celeritas v0.3.0-dev.62+f351e714 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -30,10 +30,10 @@
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
             <a href="index.html" class="icon icon-home"> Celeritas
-            <img src="_static/celeritas-thumbnail.png" class="logo" alt="Logo"/>
+            <img src="_static/celeritas-square.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.3.1-dev
+                0.3.0-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -210,13 +210,12 @@ including those used in HEP. Celeritas includes a Spack environment at
 of dependencies (including testing and documentation). To install these
 dependencies:</p>
 <ul class="simple">
-<li><p>Clone and load Spack following its <cite>getting started instructions
-&lt;spack-start&gt;</cite>.</p></li>
+<li><p>Clone and load Spack following its <a class="reference external" href="https://spack.readthedocs.io/en/latest/getting_started.html">getting started instructions</a>.</p></li>
 <li><p>If using CUDA: run <code class="docutils literal notranslate"><span class="pre">spack</span> <span class="pre">external</span> <span class="pre">find</span> <span class="pre">cuda</span></code> to inform Spack of the existing
 installation, and tell Spack to default to building with CUDA support with
 the command <code class="docutils literal notranslate"><span class="pre">spack</span> <span class="pre">config</span> <span class="pre">add</span> <span class="pre">packages:all:variants:&quot;+cuda</span>
-<span class="pre">cuda_arch=&lt;ARCH&gt;&quot;</span></code>, where <code class="docutils literal notranslate"><span class="pre">&lt;ARCH&gt;</span></code> is the numeric portion of the <cite>CUDA
-architecture flags &lt;cuda-arch&gt;</cite>.</p></li>
+<span class="pre">cuda_arch=&lt;ARCH&gt;&quot;</span></code>, where <code class="docutils literal notranslate"><span class="pre">&lt;ARCH&gt;</span></code> is the numeric portion of the
+<a class="reference external" href="https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards/">CUDA architecture flags</a>.</p></li>
 <li><p>Create the Celeritas development environment with <code class="docutils literal notranslate"><span class="pre">spack</span> <span class="pre">env</span> <span class="pre">create</span>
 <span class="pre">celeritas</span> <span class="pre">scripts/spack.yaml</span></code>.</p></li>
 <li><p>Install all the dependencies with <code class="docutils literal notranslate"><span class="pre">spack</span> <span class="pre">-e</span> <span class="pre">celeritas</span> <span class="pre">install</span></code>.</p></li>
@@ -226,7 +225,7 @@ architecture flags &lt;cuda-arch&gt;</cite>.</p></li>
 <span class="w">  </span><span class="nt">specs</span><span class="p">:</span><span class="w"> </span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cmake</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doxygen</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;geant4@11</span><span class="nv"> </span><span class="s">cxxstd=17&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;geant4@11:11.0</span><span class="nv"> </span><span class="s">cxxstd=17&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">git</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">git-lfs</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;googletest@1.10:&quot;</span><span class="w"></span>
@@ -234,12 +233,12 @@ architecture flags &lt;cuda-arch&gt;</cite>.</p></li>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ninja</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nlohmann-json</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mpi</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;python@3.6:&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">py-breathe</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">py-sphinx</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">py-sphinx-rtd-theme</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">py-sphinxcontrib-bibtex</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root cxxstd=17</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;root@6.24:</span><span class="nv"> </span><span class="s">cxxstd=17&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;swig@4.1:&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;vecgeom@1.2:</span><span class="nv"> </span><span class="s">+gdml</span><span class="nv"> </span><span class="s">cxxstd=17&quot;</span><span class="w"></span>
 <span class="w">  </span><span class="nt">view</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
@@ -263,14 +262,21 @@ architecture flags &lt;cuda-arch&gt;</cite>.</p></li>
 <section id="building-celeritas">
 <h2>Building Celeritas<a class="headerlink" href="#building-celeritas" title="Permalink to this heading"></a></h2>
 <p>Once the Celeritas Spack environment has been installed, set your shell’s environment
-variables (<code class="docutils literal notranslate"><span class="pre">PATH</span></code>, <code class="docutils literal notranslate"><span class="pre">CMAKE_PREFIX_PATH</span></code>, …) by activating it. Then, you
-can configure, build, and test using the provided helper script:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>spack env activate celeritas
+variables (<code class="docutils literal notranslate"><span class="pre">PATH</span></code>, <code class="docutils literal notranslate"><span class="pre">CMAKE_PREFIX_PATH</span></code>, …) by activating it.</p>
+<p>To clone the latest development version of Celeritas:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git clone https://github.com/celeritas-project/celeritas.git
+</pre></div>
+</div>
+<p>or download it from the GitHub-generated <a class="reference external" href="https://github.com/celeritas-project/celeritas/archive/refs/heads/develop.zip">zip file</a>.</p>
+<p>, you can configure, build, and test using the provided helper script:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span> celeritas
+<span class="gp">$ </span>spack env activate celeritas
 <span class="gp">$ </span>./scripts/build.sh base
 </pre></div>
 </div>
 <p>or manually with:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>spack env activate celeritas
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span> celeritas
+<span class="gp">$ </span>spack env activate celeritas
 <span class="gp">$ </span>mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
 <span class="gp">$ </span>cmake ..
 <span class="gp">$ </span>make <span class="o">&amp;&amp;</span> ctest

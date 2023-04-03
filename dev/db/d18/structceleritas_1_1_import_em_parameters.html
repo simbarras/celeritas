@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -85,7 +86,7 @@ $(function() {
 <p>Common electromagnetic physics parameters (see G4EmParameters.hh).  
  <a href="../../db/d18/structceleritas_1_1_import_em_parameters.html#details">More...</a></p>
 
-<p><code>#include &lt;ImportData.hh&gt;</code></p>
+<p><code>#include &lt;ImportParameters.hh&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -112,16 +113,38 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>integral_approach</b>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>linear_loss_limit</b> {0.01}</td></tr>
 <tr class="memdesc:a3e32bd892197997c60dd10d25618c6e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slowing down threshold for linearity assumption. <br /></td></tr>
 <tr class="separator:a3e32bd892197997c60dd10d25618c6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c7094ceac8f2ef884a34b7f24f79f5b"><td class="memItemLeft" align="right" valign="top"><a id="a8c7094ceac8f2ef884a34b7f24f79f5b" name="a8c7094ceac8f2ef884a34b7f24f79f5b"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>lowest_electron_energy</b> {0.001}</td></tr>
+<tr class="memdesc:a8c7094ceac8f2ef884a34b7f24f79f5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lowest e-/e+ kinetic energy [MeV]. <br /></td></tr>
+<tr class="separator:a8c7094ceac8f2ef884a34b7f24f79f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc3b705acad3d94698142f409a1e7867"><td class="memItemLeft" align="right" valign="top"><a id="afc3b705acad3d94698142f409a1e7867" name="afc3b705acad3d94698142f409a1e7867"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>auger</b> {false}</td></tr>
 <tr class="memdesc:afc3b705acad3d94698142f409a1e7867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether auger emission should be enabled (valid only for relaxation) <br /></td></tr>
 <tr class="separator:afc3b705acad3d94698142f409a1e7867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad11b89dd9797a8dd0e073486ec9bd56e"><td class="memItemLeft" align="right" valign="top"><a id="ad11b89dd9797a8dd0e073486ec9bd56e" name="ad11b89dd9797a8dd0e073486ec9bd56e"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>msc_range_factor</b> {0.04}</td></tr>
+<tr class="memdesc:ad11b89dd9797a8dd0e073486ec9bd56e"><td class="mdescLeft">&#160;</td><td class="mdescRight">MSC range factor for e-/e+. <br /></td></tr>
+<tr class="separator:ad11b89dd9797a8dd0e073486ec9bd56e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae56e411be9f7143d942870db97a27a6e"><td class="memItemLeft" align="right" valign="top"><a id="ae56e411be9f7143d942870db97a27a6e" name="ae56e411be9f7143d942870db97a27a6e"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>msc_safety_factor</b> {0.6}</td></tr>
+<tr class="memdesc:ae56e411be9f7143d942870db97a27a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">MSC safety factor. <br /></td></tr>
+<tr class="separator:ae56e411be9f7143d942870db97a27a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c46d387c371749538335f6d562f917f"><td class="memItemLeft" align="right" valign="top"><a id="a7c46d387c371749538335f6d562f917f" name="a7c46d387c371749538335f6d562f917f"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>msc_lambda_limit</b> {0.1}</td></tr>
+<tr class="memdesc:a7c46d387c371749538335f6d562f917f"><td class="mdescLeft">&#160;</td><td class="mdescRight">MSC lambda limit [cm]. <br /></td></tr>
+<tr class="separator:a7c46d387c371749538335f6d562f917f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8428de7c440ebd453f598531a528d77"><td class="memItemLeft" align="right" valign="top"><a id="af8428de7c440ebd453f598531a528d77" name="af8428de7c440ebd453f598531a528d77"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>apply_cuts</b> {false}</td></tr>
+<tr class="memdesc:af8428de7c440ebd453f598531a528d77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kill secondaries below production cut. <br /></td></tr>
+<tr class="separator:af8428de7c440ebd453f598531a528d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Common electromagnetic physics parameters (see G4EmParameters.hh). </p>
-<dl class="section note"><dt>Note</dt><dd>Geant4 v11 removed the Spline() option from G4EmParameters.hh. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Geant4 v11 removed the Spline() option from G4EmParameters.hh. </dd>
+<dd>
+The Geant4 MSC models use the values in <code>G4EmParameters</code> as the defaults; however, the MSC parameters can also be set directly using the model setter methods (there is no way to retrieve the values from the model in that case). </dd></dl>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="../../db/db2/_import_data_8hh.html">ImportData.hh</a></li>
+<li><a class="el" href="../../d4/d90/_import_parameters_8hh.html">ImportParameters.hh</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

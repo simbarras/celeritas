@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -91,7 +92,7 @@ Inheritance diagram for celeritas::SeltzerBergerModel:</div>
  <div class="center">
   <img src="../../df/d20/classceleritas_1_1_seltzer_berger_model.png" usemap="#celeritas::SeltzerBergerModel_map" alt=""/>
   <map id="celeritas::SeltzerBergerModel_map" name="celeritas::SeltzerBergerModel_map">
-<area href="../../dc/d52/classceleritas_1_1_model.html" title="Abstract base class representing a physics model." alt="celeritas::Model" shape="rect" coords="0,112,192,136"/>
+<area href="../../dc/d52/classceleritas_1_1_model.html" title="Abstract base class representing a physics model with a discrete action." alt="celeritas::Model" shape="rect" coords="0,112,192,136"/>
 <area href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html" title="Interface for an action that launches a kernel or performs an action." alt="celeritas::ExplicitActionInterface" shape="rect" coords="0,56,192,80"/>
 <area href="../../d7/d6f/classceleritas_1_1_action_interface.html" title="Pure abstract interface for an end-of-step action." alt="celeritas::ActionInterface" shape="rect" coords="0,0,192,24"/>
   </map>
@@ -204,11 +205,11 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Manage the Seltzer-Berger model for Bremsstrahlung. </p>
 <p >The total scaled bremsstrahlung differential cross section for an element Z is defined as  </p><p class="formulaDsp">
-<picture><source srcset="../../form_102_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_66_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
   \chi(Z,E,\kappa) = \frac{\beta^2}{Z^2} k \frac{\dif \sigma}{\dif k},
-\]" src="../../form_102.png" width="120" height="29"/></picture>
+\]" src="../../form_66.png" width="120" height="29"/></picture>
 </p>
-<p> where <picture><source srcset="../../form_23_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \kappa = k / E $" src="../../form_23.png" width="46" height="14"/></picture> is the ratio of the emitted photon energy to the incident charged particle energy, <picture><source srcset="../../form_98_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \beta $" src="../../form_98.png" width="9" height="13"/></picture> is the ratio of the charged particle velocity to the speed of light, and <picture><source srcset="../../form_103_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \frac{\dif \sigma}{\dif k} $" src="../../form_103.png" width="16" height="18"/></picture> is the bremsstrahlung differential cross section.</p>
+<p> where <picture><source srcset="../../form_23_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \kappa = k / E $" src="../../form_23.png" width="46" height="14"/></picture> is the ratio of the emitted photon energy to the incident charged particle energy, <picture><source srcset="../../form_62_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \beta $" src="../../form_62.png" width="9" height="13"/></picture> is the ratio of the charged particle velocity to the speed of light, and <picture><source srcset="../../form_67_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ \frac{\dif \sigma}{\dif k} $" src="../../form_67.png" width="16" height="18"/></picture> is the bremsstrahlung differential cross section.</p>
 <p >Seltzer and Berger have tabulated the scaled DCS (in mb) for elements Z = 1</p><ul>
 <li>100 and for incident charged particle energies from 1 keV to 10 GeV (reported in MeV) in Seltzer S.M. and M.J. Berger (1986), "Bremsstrahlung
 energy spectra from electrons with kinetic energy 1 keV–10 GeV incident on

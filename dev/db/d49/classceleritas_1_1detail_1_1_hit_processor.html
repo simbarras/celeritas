@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -89,31 +90,65 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
-<tr class="memitem:aedbd0ac1c3f342c95c633f3e33c1e99e"><td class="memItemLeft" align="right" valign="top"><a id="aedbd0ac1c3f342c95c633f3e33c1e99e" name="aedbd0ac1c3f342c95c633f3e33c1e99e"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>VecLV</b> = std::vector&lt; G4LogicalVolume * &gt;</td></tr>
-<tr class="separator:aedbd0ac1c3f342c95c633f3e33c1e99e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace9f77e16850957c811b672e9bdf0078"><td class="memItemLeft" align="right" valign="top"><a id="ace9f77e16850957c811b672e9bdf0078" name="ace9f77e16850957c811b672e9bdf0078"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>StepStateHostRef</b> = <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#afcc496fb064835f19a6c4506a430fec6">HostRef</a>&lt; <a class="el" href="../../dd/d0b/structceleritas_1_1_step_state_data.html">StepStateData</a> &gt;</td></tr>
+<tr class="separator:ace9f77e16850957c811b672e9bdf0078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e50d040758d6ef068c86c1cb4ed9a9d"><td class="memItemLeft" align="right" valign="top"><a id="a1e50d040758d6ef068c86c1cb4ed9a9d" name="a1e50d040758d6ef068c86c1cb4ed9a9d"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>StepStateDeviceRef</b> = <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#abd6577dbd8a882077b6b36372a789f68">DeviceRef</a>&lt; <a class="el" href="../../dd/d0b/structceleritas_1_1_step_state_data.html">StepStateData</a> &gt;</td></tr>
+<tr class="separator:a1e50d040758d6ef068c86c1cb4ed9a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e0a2ed753bc697c3b7201e2d5ce5d34"><td class="memItemLeft" align="right" valign="top"><a id="a5e0a2ed753bc697c3b7201e2d5ce5d34" name="a5e0a2ed753bc697c3b7201e2d5ce5d34"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstVecLV</b> = std::shared_ptr&lt; const std::vector&lt; G4LogicalVolume * &gt; &gt;</td></tr>
+<tr class="separator:a5e0a2ed753bc697c3b7201e2d5ce5d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aac9e71521ec7192d2199d0c5fa41d595"><td class="memItemLeft" align="right" valign="top"><a id="aac9e71521ec7192d2199d0c5fa41d595" name="aac9e71521ec7192d2199d0c5fa41d595"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>HitProcessor</b> (VecLV detector_volumes, <a class="el" href="../../d7/d26/structceleritas_1_1_step_selection.html">StepSelection</a> const &amp;selection, bool locate_touchable)</td></tr>
-<tr class="memdesc:aac9e71521ec7192d2199d0c5fa41d595"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct local navigator and step data. <br /></td></tr>
-<tr class="separator:aac9e71521ec7192d2199d0c5fa41d595"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7eaeab9b804ba6339bd153177ed6df2a"><td class="memItemLeft" align="right" valign="top"><a id="a7eaeab9b804ba6339bd153177ed6df2a" name="a7eaeab9b804ba6339bd153177ed6df2a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="../../db/dfe/structceleritas_1_1_detector_step_output.html">DetectorStepOutput</a> const &amp;out) const</td></tr>
-<tr class="memdesc:a7eaeab9b804ba6339bd153177ed6df2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate and call hits from a detector output. <br /></td></tr>
+<tr class="memitem:a267630ab2f207818bf68a4e0a3f8f407"><td class="memItemLeft" align="right" valign="top"><a id="a267630ab2f207818bf68a4e0a3f8f407" name="a267630ab2f207818bf68a4e0a3f8f407"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>HitProcessor</b> (SPConstVecLV detector_volumes, <a class="el" href="../../d7/d26/structceleritas_1_1_step_selection.html">StepSelection</a> const &amp;selection, bool locate_touchable)</td></tr>
+<tr class="memdesc:a267630ab2f207818bf68a4e0a3f8f407"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct local navigator and step data. <br /></td></tr>
+<tr class="separator:a267630ab2f207818bf68a4e0a3f8f407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad881806d01b1b4fa75bac2fe0308da27"><td class="memItemLeft" align="right" valign="top"><a id="ad881806d01b1b4fa75bac2fe0308da27" name="ad881806d01b1b4fa75bac2fe0308da27"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (StepStateHostRef const &amp;)</td></tr>
+<tr class="memdesc:ad881806d01b1b4fa75bac2fe0308da27"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../de/db8/classceleritas_1_1_process.html" title="An interface/factory method for creating models.">Process</a> detector tallies (CPU). <br /></td></tr>
+<tr class="separator:ad881806d01b1b4fa75bac2fe0308da27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add5d6928fdca84630526863de4fea32c"><td class="memItemLeft" align="right" valign="top"><a id="add5d6928fdca84630526863de4fea32c" name="add5d6928fdca84630526863de4fea32c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (StepStateDeviceRef const &amp;)</td></tr>
+<tr class="memdesc:add5d6928fdca84630526863de4fea32c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../de/db8/classceleritas_1_1_process.html" title="An interface/factory method for creating models.">Process</a> detector tallies (GPU). <br /></td></tr>
+<tr class="separator:add5d6928fdca84630526863de4fea32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eaeab9b804ba6339bd153177ed6df2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d49/classceleritas_1_1detail_1_1_hit_processor.html#a7eaeab9b804ba6339bd153177ed6df2a">operator()</a> (<a class="el" href="../../db/dfe/structceleritas_1_1_detector_step_output.html">DetectorStepOutput</a> const &amp;out) const</td></tr>
+<tr class="memdesc:a7eaeab9b804ba6339bd153177ed6df2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate and call hits from a detector output.  <a href="../../db/d49/classceleritas_1_1detail_1_1_hit_processor.html#a7eaeab9b804ba6339bd153177ed6df2a">More...</a><br /></td></tr>
 <tr class="separator:a7eaeab9b804ba6339bd153177ed6df2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Transfer Celeritas sensitive detector hits to Geant4. </p>
-<p >This serves a similar purpose to the <code>G4FastSimHitMaker</code> class for generating hit objects. It should be "stream local" but by necessity has to share the same <a class="el" href="../../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html" title="Manage the conversion of hits from Celeritas to Geant4.">HitManager</a> which takes the input detector names, maps them to detector IDs, and adds a HitCollector to the action manager.</p>
+<p >This serves a similar purpose to the <code>G4FastSimHitMaker</code> class for generating hit objects. It <b>must</b> be thread-local because the sensitive detectors it stores are thread-local, and additionally Geant4 makes assumptions about object allocations that cause crashes if the <a class="el" href="../../db/d49/classceleritas_1_1detail_1_1_hit_processor.html" title="Transfer Celeritas sensitive detector hits to Geant4.">HitProcessor</a> is allocated on one thread and destroyed on another.</p>
 <p >Call operator:</p><ul>
 <li>Loop over detector steps</li>
 <li>Update step attributes based on hit selection for the detector (TODO: selection is global for now)</li>
-<li>Call the local detector (based on detector ID from map) with the step</li>
+<li>Call the local detector (based on detector ID from map) with the step </li>
 </ul>
-<dl class="section note"><dt>Note</dt><dd>For now we store the LogicalVolume rather than the SD in order to work better with multithreaded code. (The LV <code>GetSensitiveDetector</code> returns thread-local data.) This means you can (and should) share the <code><a class="el" href="../../db/d49/classceleritas_1_1detail_1_1_hit_processor.html" title="Transfer Celeritas sensitive detector hits to Geant4.">HitProcessor</a></code> instance across threads. Once multithreading is better integrated into Celeritas and we can check how it interacts with CMSSW, then we can make the whole kernel thread safe by ensuring independent hit processors (and state data) for every thread. </dd></dl>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7eaeab9b804ba6339bd153177ed6df2a" name="a7eaeab9b804ba6339bd153177ed6df2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eaeab9b804ba6339bd153177ed6df2a">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void celeritas::detail::HitProcessor::operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/dfe/structceleritas_1_1_detector_step_output.html">DetectorStepOutput</a> const &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate and call hits from a detector output. </p>
+<p >In an application setting, this is always called with our local data <code>steps_</code> as an argument. For tests, we can call this function explicitly using local test data. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../d9/d67/_hit_processor_8hh.html">HitProcessor.hh</a></li>
 <li><a class="el" href="../../d8/df2/_hit_processor_8cc.html">HitProcessor.cc</a></li>
 </ul>

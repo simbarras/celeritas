@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -93,66 +94,75 @@ Public Types</h2></td></tr>
 <tr class="memitem:a167b78db86b2f60e7867066e478a10db"><td class="memItemLeft" align="right" valign="top"><a id="a167b78db86b2f60e7867066e478a10db" name="a167b78db86b2f60e7867066e478a10db"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>N</b> = static_cast&lt;size_type&gt;(key_type::size_)
  }</td></tr>
 <tr class="separator:a167b78db86b2f60e7867066e478a10db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a0a18f623acca12ab8fe6450ac134aa8f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a0a18f623acca12ab8fe6450ac134aa8f">key_type</a> = E</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a0a18f623acca12ab8fe6450ac134aa8f"><td class="memItemLeft" align="right" valign="top"><a id="a0a18f623acca12ab8fe6450ac134aa8f" name="a0a18f623acca12ab8fe6450ac134aa8f"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>key_type</b> = E</td></tr>
 <tr class="separator:a0a18f623acca12ab8fe6450ac134aa8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b0e90cb1f01c18855691a0f5274214c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a9b0e90cb1f01c18855691a0f5274214c">value_type</a> = T</td></tr>
+<tr class="memitem:a9b0e90cb1f01c18855691a0f5274214c"><td class="memItemLeft" align="right" valign="top"><a id="a9b0e90cb1f01c18855691a0f5274214c" name="a9b0e90cb1f01c18855691a0f5274214c"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b> = T</td></tr>
 <tr class="separator:a9b0e90cb1f01c18855691a0f5274214c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3934af63bfe24bf0aa1eb5f506cffdad"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a3934af63bfe24bf0aa1eb5f506cffdad">size_type</a> = std::underlying_type_t&lt; E &gt;</td></tr>
+<tr class="memitem:a3934af63bfe24bf0aa1eb5f506cffdad"><td class="memItemLeft" align="right" valign="top"><a id="a3934af63bfe24bf0aa1eb5f506cffdad" name="a3934af63bfe24bf0aa1eb5f506cffdad"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>size_type</b> = std::underlying_type_t&lt; E &gt;</td></tr>
 <tr class="separator:a3934af63bfe24bf0aa1eb5f506cffdad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8349609e1f3ef37749102a7888e02e77"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a8349609e1f3ef37749102a7888e02e77">pointer</a> = <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a9b0e90cb1f01c18855691a0f5274214c">value_type</a> *</td></tr>
+<tr class="memitem:a8349609e1f3ef37749102a7888e02e77"><td class="memItemLeft" align="right" valign="top"><a id="a8349609e1f3ef37749102a7888e02e77" name="a8349609e1f3ef37749102a7888e02e77"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>pointer</b> = value_type *</td></tr>
 <tr class="separator:a8349609e1f3ef37749102a7888e02e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a356866ba885840336fa107f0ebf8f57f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a356866ba885840336fa107f0ebf8f57f">const_pointer</a> = <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a9b0e90cb1f01c18855691a0f5274214c">value_type</a> const  *</td></tr>
+<tr class="memitem:a356866ba885840336fa107f0ebf8f57f"><td class="memItemLeft" align="right" valign="top"><a id="a356866ba885840336fa107f0ebf8f57f" name="a356866ba885840336fa107f0ebf8f57f"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>const_pointer</b> = value_type const  *</td></tr>
 <tr class="separator:a356866ba885840336fa107f0ebf8f57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd12506ff074440bcca215265756ea05"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#acd12506ff074440bcca215265756ea05">reference</a> = <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a9b0e90cb1f01c18855691a0f5274214c">value_type</a> &amp;</td></tr>
+<tr class="memitem:acd12506ff074440bcca215265756ea05"><td class="memItemLeft" align="right" valign="top"><a id="acd12506ff074440bcca215265756ea05" name="acd12506ff074440bcca215265756ea05"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>reference</b> = value_type &amp;</td></tr>
 <tr class="separator:acd12506ff074440bcca215265756ea05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9e0f4d0f4fda8920b17b833ee941fb8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#ad9e0f4d0f4fda8920b17b833ee941fb8">const_reference</a> = <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a9b0e90cb1f01c18855691a0f5274214c">value_type</a> const  &amp;</td></tr>
+<tr class="memitem:ad9e0f4d0f4fda8920b17b833ee941fb8"><td class="memItemLeft" align="right" valign="top"><a id="ad9e0f4d0f4fda8920b17b833ee941fb8" name="ad9e0f4d0f4fda8920b17b833ee941fb8"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>const_reference</b> = value_type const  &amp;</td></tr>
 <tr class="separator:ad9e0f4d0f4fda8920b17b833ee941fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d319410242bfcb6d08b11d788ce8645"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a5d319410242bfcb6d08b11d788ce8645">iterator</a> = <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a8349609e1f3ef37749102a7888e02e77">pointer</a></td></tr>
+<tr class="memitem:a5d319410242bfcb6d08b11d788ce8645"><td class="memItemLeft" align="right" valign="top"><a id="a5d319410242bfcb6d08b11d788ce8645" name="a5d319410242bfcb6d08b11d788ce8645"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>iterator</b> = pointer</td></tr>
 <tr class="separator:a5d319410242bfcb6d08b11d788ce8645"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a3671182bdb8e7255a9818546d91ad5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a4a3671182bdb8e7255a9818546d91ad5">const_iterator</a> = <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a356866ba885840336fa107f0ebf8f57f">const_pointer</a></td></tr>
+<tr class="memitem:a4a3671182bdb8e7255a9818546d91ad5"><td class="memItemLeft" align="right" valign="top"><a id="a4a3671182bdb8e7255a9818546d91ad5" name="a4a3671182bdb8e7255a9818546d91ad5"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>const_iterator</b> = const_pointer</td></tr>
 <tr class="separator:a4a3671182bdb8e7255a9818546d91ad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a36c8c1ba0a08b22a545cb80c563e04c1"><td class="memItemLeft" align="right" valign="top"><a id="a36c8c1ba0a08b22a545cb80c563e04c1" name="a36c8c1ba0a08b22a545cb80c563e04c1"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#acd12506ff074440bcca215265756ea05">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a0a18f623acca12ab8fe6450ac134aa8f">key_type</a> const &amp;k)</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> reference&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (key_type const &amp;k)</td></tr>
 <tr class="memdesc:a36c8c1ba0a08b22a545cb80c563e04c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an element. <br /></td></tr>
 <tr class="separator:a36c8c1ba0a08b22a545cb80c563e04c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a724e76ed8d0248bb5437e46c35a641e3"><td class="memItemLeft" align="right" valign="top"><a id="a724e76ed8d0248bb5437e46c35a641e3" name="a724e76ed8d0248bb5437e46c35a641e3"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#ad9e0f4d0f4fda8920b17b833ee941fb8">const_reference</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a0a18f623acca12ab8fe6450ac134aa8f">key_type</a> const &amp;k) const</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> const_reference&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (key_type const &amp;k) const</td></tr>
 <tr class="memdesc:a724e76ed8d0248bb5437e46c35a641e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an element (const) <br /></td></tr>
 <tr class="separator:a724e76ed8d0248bb5437e46c35a641e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:af32ed8c15ab315c78cb57d2b22cd7abb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#ad9e0f4d0f4fda8920b17b833ee941fb8">const_reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#af32ed8c15ab315c78cb57d2b22cd7abb">front</a> () const</td></tr>
+<tr class="memitem:af32ed8c15ab315c78cb57d2b22cd7abb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> const_reference&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#af32ed8c15ab315c78cb57d2b22cd7abb">front</a> () const</td></tr>
 <tr class="separator:af32ed8c15ab315c78cb57d2b22cd7abb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f03a09ba7e8cf4763f10c5045236da2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#acd12506ff074440bcca215265756ea05">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a3f03a09ba7e8cf4763f10c5045236da2">front</a> ()</td></tr>
+<tr class="memitem:a3f03a09ba7e8cf4763f10c5045236da2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> reference&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a3f03a09ba7e8cf4763f10c5045236da2">front</a> ()</td></tr>
 <tr class="separator:a3f03a09ba7e8cf4763f10c5045236da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb57ad1753f486c0cb5049ab5e3a8ef1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#ad9e0f4d0f4fda8920b17b833ee941fb8">const_reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#adb57ad1753f486c0cb5049ab5e3a8ef1">back</a> () const</td></tr>
+<tr class="memitem:adb57ad1753f486c0cb5049ab5e3a8ef1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> const_reference&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#adb57ad1753f486c0cb5049ab5e3a8ef1">back</a> () const</td></tr>
 <tr class="separator:adb57ad1753f486c0cb5049ab5e3a8ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab4a3dff5cef510eea5c98fcd194a33d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#acd12506ff074440bcca215265756ea05">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#aab4a3dff5cef510eea5c98fcd194a33d">back</a> ()</td></tr>
+<tr class="memitem:aab4a3dff5cef510eea5c98fcd194a33d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> reference&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#aab4a3dff5cef510eea5c98fcd194a33d">back</a> ()</td></tr>
 <tr class="separator:aab4a3dff5cef510eea5c98fcd194a33d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab26729d77eb5603fd1cc91a262980049"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a356866ba885840336fa107f0ebf8f57f">const_pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#ab26729d77eb5603fd1cc91a262980049">data</a> () const</td></tr>
+<tr class="memitem:ab26729d77eb5603fd1cc91a262980049"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> const_pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#ab26729d77eb5603fd1cc91a262980049">data</a> () const</td></tr>
 <tr class="separator:ab26729d77eb5603fd1cc91a262980049"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c9567ade36118dab722adc4b81eaf47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a8349609e1f3ef37749102a7888e02e77">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a1c9567ade36118dab722adc4b81eaf47">data</a> ()</td></tr>
+<tr class="memitem:a1c9567ade36118dab722adc4b81eaf47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a1c9567ade36118dab722adc4b81eaf47">data</a> ()</td></tr>
 <tr class="separator:a1c9567ade36118dab722adc4b81eaf47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a0a225e5f5816e4f1c1c150ea06fe5732"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a5d319410242bfcb6d08b11d788ce8645">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a0a225e5f5816e4f1c1c150ea06fe5732">begin</a> ()</td></tr>
+<tr class="memitem:a0a225e5f5816e4f1c1c150ea06fe5732"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a0a225e5f5816e4f1c1c150ea06fe5732">begin</a> ()</td></tr>
 <tr class="separator:a0a225e5f5816e4f1c1c150ea06fe5732"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65f7611bae409fa138eba7e68259b1cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a5d319410242bfcb6d08b11d788ce8645">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a65f7611bae409fa138eba7e68259b1cc">end</a> ()</td></tr>
+<tr class="memitem:a65f7611bae409fa138eba7e68259b1cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a65f7611bae409fa138eba7e68259b1cc">end</a> ()</td></tr>
 <tr class="separator:a65f7611bae409fa138eba7e68259b1cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fbd7ad0953321ce77c39a35a6db8a3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a4a3671182bdb8e7255a9818546d91ad5">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a6fbd7ad0953321ce77c39a35a6db8a3d">begin</a> () const</td></tr>
+<tr class="memitem:a6fbd7ad0953321ce77c39a35a6db8a3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a6fbd7ad0953321ce77c39a35a6db8a3d">begin</a> () const</td></tr>
 <tr class="separator:a6fbd7ad0953321ce77c39a35a6db8a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe0ff4d16d9d06a57dfb99761b28f149"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a4a3671182bdb8e7255a9818546d91ad5">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#abe0ff4d16d9d06a57dfb99761b28f149">end</a> () const</td></tr>
+<tr class="memitem:abe0ff4d16d9d06a57dfb99761b28f149"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#abe0ff4d16d9d06a57dfb99761b28f149">end</a> () const</td></tr>
 <tr class="separator:abe0ff4d16d9d06a57dfb99761b28f149"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c94693d8f1cd8ea51fb85f5f5cdd93e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a4a3671182bdb8e7255a9818546d91ad5">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a5c94693d8f1cd8ea51fb85f5f5cdd93e">cbegin</a> () const</td></tr>
+<tr class="memitem:a5c94693d8f1cd8ea51fb85f5f5cdd93e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a5c94693d8f1cd8ea51fb85f5f5cdd93e">cbegin</a> () const</td></tr>
 <tr class="separator:a5c94693d8f1cd8ea51fb85f5f5cdd93e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18801c93cfab57dd33b58cb3b7517b33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a4a3671182bdb8e7255a9818546d91ad5">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a18801c93cfab57dd33b58cb3b7517b33">cend</a> () const</td></tr>
+<tr class="memitem:a18801c93cfab57dd33b58cb3b7517b33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a18801c93cfab57dd33b58cb3b7517b33">cend</a> () const</td></tr>
 <tr class="separator:a18801c93cfab57dd33b58cb3b7517b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a45c97b41bc1de59a167285548c38eb01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a45c97b41bc1de59a167285548c38eb01">empty</a> () const</td></tr>
 <tr class="separator:a45c97b41bc1de59a167285548c38eb01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a340f312999330c04b289af347729bd34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a3934af63bfe24bf0aa1eb5f506cffdad">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a340f312999330c04b289af347729bd34">size</a> () const</td></tr>
+<tr class="memitem:a340f312999330c04b289af347729bd34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a> size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a340f312999330c04b289af347729bd34">size</a> () const</td></tr>
 <tr class="separator:a340f312999330c04b289af347729bd34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -166,161 +176,7 @@ T&#160;</td><td class="memItemRight" valign="bottom"><b>data_</b> [N]</td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class E, class T&gt;<br />
 struct celeritas::EnumArray&lt; E, T &gt;</div><p >Thin wrapper for an array of enums for accessing by enum instead of int. </p>
 <p >The enum <em>must</em> be a zero-indexed contiguous enumeration with a <code>size_</code> enumeration as its last value. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a4a3671182bdb8e7255a9818546d91ad5" name="a4a3671182bdb8e7255a9818546d91ad5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a3671182bdb8e7255a9818546d91ad5">&#9670;&#160;</a></span>const_iterator</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class E , class T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::const_iterator =  <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a356866ba885840336fa107f0ebf8f57f">const_pointer</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="a356866ba885840336fa107f0ebf8f57f" name="a356866ba885840336fa107f0ebf8f57f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a356866ba885840336fa107f0ebf8f57f">&#9670;&#160;</a></span>const_pointer</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class E , class T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::const_pointer =  <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a9b0e90cb1f01c18855691a0f5274214c">value_type</a> const*</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="ad9e0f4d0f4fda8920b17b833ee941fb8" name="ad9e0f4d0f4fda8920b17b833ee941fb8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9e0f4d0f4fda8920b17b833ee941fb8">&#9670;&#160;</a></span>const_reference</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class E , class T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::const_reference =  <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a9b0e90cb1f01c18855691a0f5274214c">value_type</a> const&amp;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="a5d319410242bfcb6d08b11d788ce8645" name="a5d319410242bfcb6d08b11d788ce8645"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d319410242bfcb6d08b11d788ce8645">&#9670;&#160;</a></span>iterator</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class E , class T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::iterator =  <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a8349609e1f3ef37749102a7888e02e77">pointer</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="a0a18f623acca12ab8fe6450ac134aa8f" name="a0a18f623acca12ab8fe6450ac134aa8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a18f623acca12ab8fe6450ac134aa8f">&#9670;&#160;</a></span>key_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class E , class T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::key_type =  E</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="a8349609e1f3ef37749102a7888e02e77" name="a8349609e1f3ef37749102a7888e02e77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8349609e1f3ef37749102a7888e02e77">&#9670;&#160;</a></span>pointer</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class E , class T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::pointer =  <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a9b0e90cb1f01c18855691a0f5274214c">value_type</a>*</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="acd12506ff074440bcca215265756ea05" name="acd12506ff074440bcca215265756ea05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd12506ff074440bcca215265756ea05">&#9670;&#160;</a></span>reference</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class E , class T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::reference =  <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a9b0e90cb1f01c18855691a0f5274214c">value_type</a>&amp;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="a3934af63bfe24bf0aa1eb5f506cffdad" name="a3934af63bfe24bf0aa1eb5f506cffdad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3934af63bfe24bf0aa1eb5f506cffdad">&#9670;&#160;</a></span>size_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class E , class T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::size_type =  std::underlying_type_t&lt;E&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="a9b0e90cb1f01c18855691a0f5274214c" name="a9b0e90cb1f01c18855691a0f5274214c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b0e90cb1f01c18855691a0f5274214c">&#9670;&#160;</a></span>value_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class E , class T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::value_type =  T</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aab4a3dff5cef510eea5c98fcd194a33d" name="aab4a3dff5cef510eea5c98fcd194a33d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aab4a3dff5cef510eea5c98fcd194a33d">&#9670;&#160;</a></span>back() <span class="overload">[1/2]</span></h2>
 
@@ -333,7 +189,7 @@ template&lt;class E , class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#acd12506ff074440bcca215265756ea05">reference</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::back </td>
+          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> reference <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::back </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -361,7 +217,7 @@ template&lt;class E , class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#ad9e0f4d0f4fda8920b17b833ee941fb8">const_reference</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::back </td>
+          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> const_reference <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::back </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -389,7 +245,7 @@ template&lt;class E , class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a5d319410242bfcb6d08b11d788ce8645">iterator</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::begin </td>
+          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> iterator <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::begin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -401,7 +257,7 @@ template&lt;class E , class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Iterator acces </p>
+<p >Iterator access </p>
 
 </div>
 </div>
@@ -417,7 +273,7 @@ template&lt;class E , class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a4a3671182bdb8e7255a9818546d91ad5">const_iterator</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::begin </td>
+          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> const_iterator <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::begin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -429,7 +285,7 @@ template&lt;class E , class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Iterator acces </p>
+<p >Iterator access </p>
 
 </div>
 </div>
@@ -445,7 +301,7 @@ template&lt;class E , class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a4a3671182bdb8e7255a9818546d91ad5">const_iterator</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::cbegin </td>
+          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> const_iterator <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::cbegin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -457,7 +313,7 @@ template&lt;class E , class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Iterator acces </p>
+<p >Iterator access </p>
 
 </div>
 </div>
@@ -473,7 +329,7 @@ template&lt;class E , class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a4a3671182bdb8e7255a9818546d91ad5">const_iterator</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::cend </td>
+          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> const_iterator <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::cend </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -485,7 +341,7 @@ template&lt;class E , class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Iterator acces </p>
+<p >Iterator access </p>
 
 </div>
 </div>
@@ -501,7 +357,7 @@ template&lt;class E , class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a8349609e1f3ef37749102a7888e02e77">pointer</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::data </td>
+          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> pointer <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::data </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -529,7 +385,7 @@ template&lt;class E , class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a356866ba885840336fa107f0ebf8f57f">const_pointer</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::data </td>
+          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> const_pointer <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::data </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -585,7 +441,7 @@ template&lt;class E , class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a5d319410242bfcb6d08b11d788ce8645">iterator</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::end </td>
+          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> iterator <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::end </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -597,7 +453,7 @@ template&lt;class E , class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Iterator acces </p>
+<p >Iterator access </p>
 
 </div>
 </div>
@@ -613,7 +469,7 @@ template&lt;class E , class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a4a3671182bdb8e7255a9818546d91ad5">const_iterator</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::end </td>
+          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> const_iterator <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::end </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -625,7 +481,7 @@ template&lt;class E , class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Iterator acces </p>
+<p >Iterator access </p>
 
 </div>
 </div>
@@ -641,7 +497,7 @@ template&lt;class E , class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#acd12506ff074440bcca215265756ea05">reference</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::front </td>
+          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> reference <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::front </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -669,7 +525,7 @@ template&lt;class E , class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#ad9e0f4d0f4fda8920b17b833ee941fb8">const_reference</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::front </td>
+          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> const_reference <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::front </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -697,7 +553,7 @@ template&lt;class E , class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html#a3934af63bfe24bf0aa1eb5f506cffdad">size_type</a> <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::size </td>
+          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a> size_type <a class="el" href="../../da/d24/structceleritas_1_1_enum_array.html">celeritas::EnumArray</a>&lt; E, T &gt;::size </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

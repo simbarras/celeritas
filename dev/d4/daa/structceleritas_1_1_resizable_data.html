@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -90,15 +91,12 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aa5d9bec01a119dded59e8d23ae85ae5d"><td class="memItemLeft" align="right" valign="top"><a id="aa5d9bec01a119dded59e8d23ae85ae5d" name="aa5d9bec01a119dded59e8d23ae85ae5d"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>CollectionT</b> = <a class="el" href="../../db/d8b/_collection_8hh.html#a11d129f3d1fd3777e09f1c5c1f103049">StateCollection</a>&lt; T, W, M &gt;</td></tr>
-<tr class="separator:aa5d9bec01a119dded59e8d23ae85ae5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0eb6cba3e2834fed8978f7a2d9e6a1ab"><td class="memItemLeft" align="right" valign="top"><a id="a0eb6cba3e2834fed8978f7a2d9e6a1ab" name="a0eb6cba3e2834fed8978f7a2d9e6a1ab"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>ItemIdT</b> = typename <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a87df3f38469d1b7d82e529fc53e245bb">CollectionT::ItemIdT</a></td></tr>
-<tr class="separator:a0eb6cba3e2834fed8978f7a2d9e6a1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6bd93d01c12609ef1d36e5a61e8e642"><td class="memItemLeft" align="right" valign="top"><a id="ae6bd93d01c12609ef1d36e5a61e8e642" name="ae6bd93d01c12609ef1d36e5a61e8e642"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>ItemRangeT</b> = typename <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a1ff88e5de52902e2b26af9373d21dd91">CollectionT::ItemRangeT</a></td></tr>
-<tr class="separator:ae6bd93d01c12609ef1d36e5a61e8e642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b358402a74b5b6ea655d9ff7b7c8ecc"><td class="memItemLeft" align="right" valign="top"><a id="a5b358402a74b5b6ea655d9ff7b7c8ecc" name="a5b358402a74b5b6ea655d9ff7b7c8ecc"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>CollectionT</b> = <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Collection</a>&lt; T, W, M &gt;</td></tr>
+<tr class="separator:a5b358402a74b5b6ea655d9ff7b7c8ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa48c03b073fb2962a168e6ddd624aecd"><td class="memItemLeft" align="right" valign="top"><a id="aa48c03b073fb2962a168e6ddd624aecd" name="aa48c03b073fb2962a168e6ddd624aecd"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>size_type</b> = typename <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a229a59da2907add39377abea653982d1">CollectionT::size_type</a></td></tr>
+<tr class="separator:aa48c03b073fb2962a168e6ddd624aecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af65da41e159290e4f1024428e7d79148"><td class="memItemLeft" align="right" valign="top"><a id="af65da41e159290e4f1024428e7d79148" name="af65da41e159290e4f1024428e7d79148"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>reference_type</b> = typename <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a1f3e69463e9d33b1ba2d9a9f85d52abd">CollectionT::reference_type</a></td></tr>
 <tr class="separator:af65da41e159290e4f1024428e7d79148"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,6 +108,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>SpanT</b> = typename
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a060dbb4c0ad543a94e664aff493884e1"><td class="memItemLeft" align="right" valign="top"><a id="a060dbb4c0ad543a94e664aff493884e1" name="a060dbb4c0ad543a94e664aff493884e1"></a>
 <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () const</td></tr>
+<tr class="memdesc:a060dbb4c0ad543a94e664aff493884e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the underlying allocation has been made. <br /></td></tr>
 <tr class="separator:a060dbb4c0ad543a94e664aff493884e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d7f578f9f7a72c64518effacebb90fe"><td class="memItemLeft" align="right" valign="top"><a id="a7d7f578f9f7a72c64518effacebb90fe" name="a7d7f578f9f7a72c64518effacebb90fe"></a>
 <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> size_type&#160;</td><td class="memItemRight" valign="bottom"><b>capacity</b> () const</td></tr>
@@ -123,18 +122,18 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><b>resize</b> (size_type <a class="el" href="../../d4/daa/structceleritas_1_1_resizable_data.html#a2aff60e96a4b6f980acb0d30ecbb28eb">size</a>)</td></tr>
 <tr class="memdesc:ad36c6f558e22d573ad5f2c25c139ca6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the size without changing capacity. <br /></td></tr>
 <tr class="separator:ad36c6f558e22d573ad5f2c25c139ca6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38bf88a596699edcb3589731ff2e2f2e"><td class="memItemLeft" align="right" valign="top"><a id="a38bf88a596699edcb3589731ff2e2f2e" name="a38bf88a596699edcb3589731ff2e2f2e"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> reference_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (ItemIdT i) const</td></tr>
-<tr class="memdesc:a38bf88a596699edcb3589731ff2e2f2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access a single element. <br /></td></tr>
-<tr class="separator:a38bf88a596699edcb3589731ff2e2f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75299968a1a1140a24a95543188c64ea"><td class="memItemLeft" align="right" valign="top"><a id="a75299968a1a1140a24a95543188c64ea" name="a75299968a1a1140a24a95543188c64ea"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> reference_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (size_type i) const</td></tr>
+<tr class="memdesc:a75299968a1a1140a24a95543188c64ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access a single element. <br /></td></tr>
+<tr class="separator:a75299968a1a1140a24a95543188c64ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6cb1242b8f900949b39fc974b3f211e"><td class="memItemLeft" align="right" valign="top"><a id="ae6cb1242b8f900949b39fc974b3f211e" name="ae6cb1242b8f900949b39fc974b3f211e"></a>
 <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> SpanT&#160;</td><td class="memItemRight" valign="bottom"><b>data</b> ()</td></tr>
-<tr class="memdesc:ae6cb1242b8f900949b39fc974b3f211e"><td class="mdescLeft">&#160;</td><td class="mdescRight">View to the data. <br /></td></tr>
+<tr class="memdesc:ae6cb1242b8f900949b39fc974b3f211e"><td class="mdescLeft">&#160;</td><td class="mdescRight">View to the data (up to <em>resized</em> count) <br /></td></tr>
 <tr class="separator:ae6cb1242b8f900949b39fc974b3f211e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e297d2e20099547ed06081569ad8da0"><td class="memTemplParams" colspan="2"><a id="a3e297d2e20099547ed06081569ad8da0" name="a3e297d2e20099547ed06081569ad8da0"></a>
 template&lt;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148">Ownership</a> W2, <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#af21a33cd854346b7988591378fcfe138">MemSpace</a> M2&gt; </td></tr>
 <tr class="memitem:a3e297d2e20099547ed06081569ad8da0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d4/daa/structceleritas_1_1_resizable_data.html">ResizableData</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="../../d4/daa/structceleritas_1_1_resizable_data.html">ResizableData</a>&lt; T, W2, M2 &gt; &amp;other)</td></tr>
-<tr class="memdesc:a3e297d2e20099547ed06081569ad8da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another set of data. <br /></td></tr>
+<tr class="memdesc:a3e297d2e20099547ed06081569ad8da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another resizeable data. <br /></td></tr>
 <tr class="separator:a3e297d2e20099547ed06081569ad8da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -149,6 +148,7 @@ size_type&#160;</td><td class="memItemRight" valign="bottom"><b>count</b> {}</td
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class T, <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148">Ownership</a> W, <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#af21a33cd854346b7988591378fcfe138">MemSpace</a> M&gt;<br />
 struct celeritas::ResizableData&lt; T, W, M &gt;</div><p >StateCollection with a fixed capacity and dynamic size. </p>
+<p >The allocation (storage) is fixed-size and cannot be increased. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../de/d7e/_track_init_data_8hh.html">TrackInitData.hh</a></li>
 </ul>

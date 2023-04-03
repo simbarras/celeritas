@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -143,7 +144,8 @@ static std::shared_ptr&lt; <a class="el" href="../../df/d54/classceleritas_1_1_c
 <div class="textblock"><p >Data management for particle and material cutoff values. </p>
 <p >Geant4 provides accessors to its production cuts from its <code>G4MaterialCutsCouple</code> class, which couples cutoff and material data. During import, for simplicity, G4's production cuts are stored alongside the material information, in <code><a class="el" href="../../d4/d4c/structceleritas_1_1_import_material.html" title="Store material data.">ImportMaterial</a></code> . Since this is a direct import, the cutoff map in <code><a class="el" href="../../d4/d4c/structceleritas_1_1_import_material.html" title="Store material data.">ImportMaterial</a></code> stores only the cuts available in Geant4, i.e. only values for gammas, electrons, positrons, and protons.</p>
 <p >In Celeritas, particle cutoff is stored contiguously in a single vector of size num_particles * num_materials, which stores all particle cutoffs for all materials. During import, any particle that is not in Geant4's list receives a zero cutoff value. This opens the possibility to expand cutoffs in the future, when data is not imported anymore.</p>
-<p >The <code><a class="el" href="../../db/d8a/structceleritas_1_1_cutoff_params_1_1_input.html" title="Input data to construct this class.">Input</a></code> structure provides a failsafe mechanism to construct the host/device data. </p>
+<p >The <code><a class="el" href="../../db/d8a/structceleritas_1_1_cutoff_params_1_1_input.html" title="Input data to construct this class.">Input</a></code> structure provides a failsafe mechanism to construct the host/device data.</p>
+<p >Some processes (e.g. photoelectric effect, decay) can produce secondaries below the production threshold, while others (e.g. bremsstrahlung, ionization) use the production cut as their instrinsic limit. By default all of these secondaries are transported, even if their energy is below the threshold. If the <code>apply_post_interaction</code> option is enabled, any secondary photon, electron, or positron with energy below the cutoff will be killed (the flag will be ignored for other particle types). </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../d4/dc1/_cutoff_params_8hh.html">CutoffParams.hh</a></li>
 <li><a class="el" href="../../dc/d0e/_cutoff_params_8cc.html">CutoffParams.cc</a></li>

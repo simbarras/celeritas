@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -86,7 +87,7 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a50bebc5f20ae79568ac92fc6e5c227b2"><td class="memItemLeft" align="right" valign="top"><a id="a50bebc5f20ae79568ac92fc6e5c227b2" name="a50bebc5f20ae79568ac92fc6e5c227b2"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () const</td></tr>
-<tr class="memdesc:a50bebc5f20ae79568ac92fc6e5c227b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if all params are assigned. <br /></td></tr>
+<tr class="memdesc:a50bebc5f20ae79568ac92fc6e5c227b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if all params are assigned and valid. <br /></td></tr>
 <tr class="separator:a50bebc5f20ae79568ac92fc6e5c227b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -112,12 +113,19 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a6300292484d90650bbe75694aab6aabe"><td class="memItemLeft" align="right" valign="top"><a id="a6300292484d90650bbe75694aab6aabe" name="a6300292484d90650bbe75694aab6aabe"></a>
 <a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#abea0195e7339602e12e951b2862940c5">SPConstRng</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rng</b></td></tr>
 <tr class="separator:a6300292484d90650bbe75694aab6aabe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a562bb8deba871145534e3c2bca9654df"><td class="memItemLeft" align="right" valign="top"><a id="a562bb8deba871145534e3c2bca9654df" name="a562bb8deba871145534e3c2bca9654df"></a>
+<a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#aeb71d9477af22737d37dd4113eabdcb4">SPConstSim</a>&#160;</td><td class="memItemRight" valign="bottom"><b>sim</b></td></tr>
+<tr class="separator:a562bb8deba871145534e3c2bca9654df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb73abd4dc06db10e07833a84cbbcf77"><td class="memItemLeft" align="right" valign="top"><a id="adb73abd4dc06db10e07833a84cbbcf77" name="adb73abd4dc06db10e07833a84cbbcf77"></a>
 <a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#a156c53f43da00235bad757a57df4a47d">SPConstTrackInit</a>&#160;</td><td class="memItemRight" valign="bottom"><b>init</b></td></tr>
 <tr class="separator:adb73abd4dc06db10e07833a84cbbcf77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5002efe3f10385aa6cc87419a26724eb"><td class="memItemLeft" align="right" valign="top"><a id="a5002efe3f10385aa6cc87419a26724eb" name="a5002efe3f10385aa6cc87419a26724eb"></a>
 <a class="el" href="../../de/d76/classceleritas_1_1_core_params.html#ad415691e8db05506fd8d3f64c25764d9">SPActionRegistry</a>&#160;</td><td class="memItemRight" valign="bottom"><b>action_reg</b></td></tr>
 <tr class="separator:a5002efe3f10385aa6cc87419a26724eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e3e90a81273bd4cfb7a0f30d968fa4c"><td class="memItemLeft" align="right" valign="top"><a id="a7e3e90a81273bd4cfb7a0f30d968fa4c" name="a7e3e90a81273bd4cfb7a0f30d968fa4c"></a>
+StreamId::size_type&#160;</td><td class="memItemRight" valign="bottom"><b>max_streams</b> {1}</td></tr>
+<tr class="memdesc:a7e3e90a81273bd4cfb7a0f30d968fa4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of simultaneous threads/tasks per process. <br /></td></tr>
+<tr class="separator:a7e3e90a81273bd4cfb7a0f30d968fa4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../df/d5d/_core_params_8hh.html">CoreParams.hh</a></li>

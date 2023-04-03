@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -105,6 +106,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d74/classceleritas_1_1_runtime_error.html">celeritas::RuntimeError</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error thrown by working code from unexpected runtime conditions.  <a href="../../db/d74/classceleritas_1_1_runtime_error.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df5/classceleritas_1_1_rich_context_exception.html">celeritas::RichContextException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for writing arbitrary exception context to JSON.  <a href="../../d9/df5/classceleritas_1_1_rich_context_exception.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -257,7 +261,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::unreachabl
 <p >If it fails, we call <code>cudaGetLastError</code> to clear the error code.</p>
 <div class="fragment"><div class="line"><a class="code hl_define" href="../../d5/d10/_assert_8hh.html#ab57ceb600f6dc1c4c18852cf71d10052">CELER_CUDA_CALL</a>(cudaMalloc(&amp;ptr_gpu, 100 * <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>)));</div>
 <div class="line"><a class="code hl_define" href="../../d5/d10/_assert_8hh.html#ab57ceb600f6dc1c4c18852cf71d10052">CELER_CUDA_CALL</a>(cudaDeviceSynchronize());</div>
-<div class="ttc" id="a_assert_8hh_html_ab57ceb600f6dc1c4c18852cf71d10052"><div class="ttname"><a href="../../d5/d10/_assert_8hh.html#ab57ceb600f6dc1c4c18852cf71d10052">CELER_CUDA_CALL</a></div><div class="ttdeci">#define CELER_CUDA_CALL(STATEMENT)</div><div class="ttdoc">When CUDA support is enabled, execute the wrapped statement and throw a RuntimeError if it fails.</div><div class="ttdef"><b>Definition:</b> Assert.hh:222</div></div>
+<div class="ttc" id="a_assert_8hh_html_ab57ceb600f6dc1c4c18852cf71d10052"><div class="ttname"><a href="../../d5/d10/_assert_8hh.html#ab57ceb600f6dc1c4c18852cf71d10052">CELER_CUDA_CALL</a></div><div class="ttdeci">#define CELER_CUDA_CALL(STATEMENT)</div><div class="ttdoc">When CUDA support is enabled, execute the wrapped statement and throw a RuntimeError if it fails.</div><div class="ttdef"><b>Definition:</b> Assert.hh:223</div></div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>A file that uses this macro must include <code><a class="el" href="../../d3/d0e/device__runtime__api_8h.html" title="Include CUDA or HIP runtime APIs for compiling with host/cc compiler.">corecel/device_runtime_api.h</a></code> . </dd></dl>
 
 </div>
@@ -287,7 +291,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::unreachabl
 <p >Example:</p>
 <div class="fragment"><div class="line"><a class="code hl_define" href="../../d5/d10/_assert_8hh.html#a936af6c80523727f697dafe5c080dffb">CELER_DEVICE_CALL_PREFIX</a>(Malloc(&amp;ptr_gpu, 100 * <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>)));</div>
 <div class="line"><a class="code hl_define" href="../../d5/d10/_assert_8hh.html#a936af6c80523727f697dafe5c080dffb">CELER_DEVICE_CALL_PREFIX</a>(DeviceSynchronize());</div>
-<div class="ttc" id="a_assert_8hh_html_a936af6c80523727f697dafe5c080dffb"><div class="ttname"><a href="../../d5/d10/_assert_8hh.html#a936af6c80523727f697dafe5c080dffb">CELER_DEVICE_CALL_PREFIX</a></div><div class="ttdeci">#define CELER_DEVICE_CALL_PREFIX(STMT)</div><div class="ttdoc">Prepend the argument with &quot;cuda&quot; or &quot;hip&quot; and call with the appropriate checking statement as above.</div><div class="ttdef"><b>Definition:</b> Assert.hh:294</div></div>
+<div class="ttc" id="a_assert_8hh_html_a936af6c80523727f697dafe5c080dffb"><div class="ttname"><a href="../../d5/d10/_assert_8hh.html#a936af6c80523727f697dafe5c080dffb">CELER_DEVICE_CALL_PREFIX</a></div><div class="ttdeci">#define CELER_DEVICE_CALL_PREFIX(STMT)</div><div class="ttdoc">Prepend the argument with &quot;cuda&quot; or &quot;hip&quot; and call with the appropriate checking statement as above.</div><div class="ttdef"><b>Definition:</b> Assert.hh:295</div></div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>A file that uses this macro must include <code><a class="el" href="../../d3/d0e/device__runtime__api_8h.html" title="Include CUDA or HIP runtime APIs for compiling with host/cc compiler.">corecel/device_runtime_api.h</a></code> . The <code>celeritas_device_runtime_api_h_</code> declaration enforces this when CUDA/HIP are disabled. </dd></dl>
 
 </div>
@@ -380,7 +384,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::unreachabl
 <p >If it fails, we call <code>hipGetLastError</code> to clear the error code.</p>
 <div class="fragment"><div class="line"><a class="code hl_define" href="../../d5/d10/_assert_8hh.html#a875878efdb721c1a406ae869c53fe12f">CELER_HIP_CALL</a>(hipMalloc(&amp;ptr_gpu, 100 * <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>)));</div>
 <div class="line"><a class="code hl_define" href="../../d5/d10/_assert_8hh.html#a875878efdb721c1a406ae869c53fe12f">CELER_HIP_CALL</a>(hipDeviceSynchronize());</div>
-<div class="ttc" id="a_assert_8hh_html_a875878efdb721c1a406ae869c53fe12f"><div class="ttname"><a href="../../d5/d10/_assert_8hh.html#a875878efdb721c1a406ae869c53fe12f">CELER_HIP_CALL</a></div><div class="ttdeci">#define CELER_HIP_CALL(STATEMENT)</div><div class="ttdoc">When HIP support is enabled, execute the wrapped statement and throw a RuntimeError if it fails.</div><div class="ttdef"><b>Definition:</b> Assert.hh:264</div></div>
+<div class="ttc" id="a_assert_8hh_html_a875878efdb721c1a406ae869c53fe12f"><div class="ttname"><a href="../../d5/d10/_assert_8hh.html#a875878efdb721c1a406ae869c53fe12f">CELER_HIP_CALL</a></div><div class="ttdeci">#define CELER_HIP_CALL(STATEMENT)</div><div class="ttdoc">When HIP support is enabled, execute the wrapped statement and throw a RuntimeError if it fails.</div><div class="ttdef"><b>Definition:</b> Assert.hh:265</div></div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>A file that uses this macro must include <code><a class="el" href="../../d3/d0e/device__runtime__api_8h.html" title="Include CUDA or HIP runtime APIs for compiling with host/cc compiler.">corecel/device_runtime_api.h</a></code> . The <code>celeritas_device_runtime_api_h_</code> declaration enforces this when HIP is disabled. </dd></dl>
 
 </div>
@@ -432,7 +436,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::unreachabl
 <div class="line">{</div>
 <div class="line">    <a class="code hl_define" href="../../d5/d10/_assert_8hh.html#a52e9a3b68665d86ccaecad2279cc1cf1">CELER_NOT_CONFIGURED</a>(<span class="stringliteral">&quot;CUDA&quot;</span>);</div>
 <div class="line">}</div>
-<div class="ttc" id="a_assert_8hh_html_a52e9a3b68665d86ccaecad2279cc1cf1"><div class="ttname"><a href="../../d5/d10/_assert_8hh.html#a52e9a3b68665d86ccaecad2279cc1cf1">CELER_NOT_CONFIGURED</a></div><div class="ttdeci">#define CELER_NOT_CONFIGURED(WHAT)</div><div class="ttdoc">Assert if the code point is reached because an optional feature is disabled.</div><div class="ttdef"><b>Definition:</b> Assert.hh:186</div></div>
+<div class="ttc" id="a_assert_8hh_html_a52e9a3b68665d86ccaecad2279cc1cf1"><div class="ttname"><a href="../../d5/d10/_assert_8hh.html#a52e9a3b68665d86ccaecad2279cc1cf1">CELER_NOT_CONFIGURED</a></div><div class="ttdeci">#define CELER_NOT_CONFIGURED(WHAT)</div><div class="ttdoc">Assert if the code point is reached because an optional feature is disabled.</div><div class="ttdef"><b>Definition:</b> Assert.hh:187</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -497,17 +501,20 @@ defined" and implementations safely postponed in a greppable manner. </p>
 </div><!-- fragment -->
 <p>Always-on runtime assertion macro. </p>
 <p >This can check user input and input data consistency, and will raise RuntimeError on failure with a descriptive error message that is streamed as the second argument. This macro cannot be used in <code>__device__</code> -annotated code.</p>
-<p >The error message should read: </p><pre class="fragment"> &lt;PROBLEM&gt; (&lt;WHY IT'S A PROBLEM&gt;) &lt;SUGGESTION&gt;?
+<p >The error message should read: </p><pre class="fragment"> "&lt;PROBLEM&gt; (&lt;WHY IT'S A PROBLEM&gt;) &lt;SUGGESTION&gt;?"
 </pre><p >Examples with correct casing and punctuation:</p><ul>
-<li>failed to open '{filename}' (should contain relaxation data)</li>
-<li>unexpected end of file '{filename}' (data is inconsistent with boundaries)</li>
-<li>MPI was not initialized (needed to construct a communicator). Maybe set the environment variable CELER_DISABLE_PARALLEL=1 to disable externally?"
- - min_range={opts.min_range} (must be positive)"</li>
+<li>"failed to open '{filename}' (should contain relaxation data)"</li>
+<li>"unexpected end of file '{filename}' (data is inconsistent with
+   boundaries)"</li>
+<li>"MPI was not initialized (needed to construct a communicator). Maybe set
+   the environment variable CELER_DISABLE_PARALLEL=1 to disable
+   externally?"</li>
+<li>"invalid min_range={opts.min_range} (must be positive)"</li>
 </ul>
-<div class="fragment"><div class="line"><a class="code hl_define" href="../../d5/d10/_assert_8hh.html#a4de52d03e37eae77ac2a03ab5a1ea67c">CELER_VALIDATE</a>(file_stream,</div>
+<p >This looks in pracice like: </p><div class="fragment"><div class="line"><a class="code hl_define" href="../../d5/d10/_assert_8hh.html#a4de52d03e37eae77ac2a03ab5a1ea67c">CELER_VALIDATE</a>(file_stream,</div>
 <div class="line">               &lt;&lt; <span class="stringliteral">&quot;failed to open &#39;&quot;</span> &lt;&lt; filename</div>
 <div class="line">               &lt;&lt; <span class="stringliteral">&quot;&#39; (should contain relaxation data)&quot;</span>);</div>
-<div class="ttc" id="a_assert_8hh_html_a4de52d03e37eae77ac2a03ab5a1ea67c"><div class="ttname"><a href="../../d5/d10/_assert_8hh.html#a4de52d03e37eae77ac2a03ab5a1ea67c">CELER_VALIDATE</a></div><div class="ttdeci">#define CELER_VALIDATE(COND, MSG)</div><div class="ttdoc">Always-on runtime assertion macro.</div><div class="ttdef"><b>Definition:</b> Assert.hh:169</div></div>
+<div class="ttc" id="a_assert_8hh_html_a4de52d03e37eae77ac2a03ab5a1ea67c"><div class="ttname"><a href="../../d5/d10/_assert_8hh.html#a4de52d03e37eae77ac2a03ab5a1ea67c">CELER_VALIDATE</a></div><div class="ttdeci">#define CELER_VALIDATE(COND, MSG)</div><div class="ttdoc">Always-on runtime assertion macro.</div><div class="ttdef"><b>Definition:</b> Assert.hh:170</div></div>
 </div><!-- fragment --><p >An always-on debug-type assertion without a detailed message can be constructed by omitting the stream (but leaving the comma): </p><div class="fragment"><div class="line"><a class="code hl_define" href="../../d5/d10/_assert_8hh.html#a4de52d03e37eae77ac2a03ab5a1ea67c">CELER_VALIDATE</a>(file_stream,);</div>
 </div><!-- fragment --> 
 </div>

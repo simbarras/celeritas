@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -92,8 +93,12 @@ $(function() {
 Public Types</h2></td></tr>
 <tr class="memitem:aa6ef928f2b4bb8bea6107b45d2e1d124"><td class="memTemplParams" colspan="2"><a id="aa6ef928f2b4bb8bea6107b45d2e1d124" name="aa6ef928f2b4bb8bea6107b45d2e1d124"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:aa6ef928f2b4bb8bea6107b45d2e1d124"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Items</b> = <a class="el" href="../../db/d8b/_collection_8hh.html#a11d129f3d1fd3777e09f1c5c1f103049">StateCollection</a>&lt; T, W, M &gt;</td></tr>
+<tr class="memitem:aa6ef928f2b4bb8bea6107b45d2e1d124"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Items</b> = <a class="el" href="../../db/d8b/_collection_8hh.html#a3b2cddd69a67a4cca1eb022f8a24bb5b">StateCollection</a>&lt; T, W, M &gt;</td></tr>
 <tr class="separator:aa6ef928f2b4bb8bea6107b45d2e1d124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09c5fec15d068701a2282d4594bb7252"><td class="memTemplParams" colspan="2"><a id="a09c5fec15d068701a2282d4594bb7252" name="a09c5fec15d068701a2282d4594bb7252"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a09c5fec15d068701a2282d4594bb7252"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>ThreadItems</b> = <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Collection</a>&lt; T, W, M, <a class="el" href="../../d3/d83/_thread_id_8hh.html#acdbd2b3f5402d42bb1349684a00365a4">ThreadId</a> &gt;</td></tr>
+<tr class="separator:a09c5fec15d068701a2282d4594bb7252"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -134,6 +139,13 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a1582ca978924798ab3df52f8b0512b7f"><td class="memItemLeft" align="right" valign="top"><a id="a1582ca978924798ab3df52f8b0512b7f" name="a1582ca978924798ab3df52f8b0512b7f"></a>
 <a class="el" href="../../df/dae/structceleritas_1_1_track_init_state_data.html">TrackInitStateData</a>&lt; W, M &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>init</b></td></tr>
 <tr class="separator:a1582ca978924798ab3df52f8b0512b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5da014e7166658c78a05ca86bcc72184"><td class="memItemLeft" align="right" valign="top"><a id="a5da014e7166658c78a05ca86bcc72184" name="a5da014e7166658c78a05ca86bcc72184"></a>
+<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">ThreadItems</a>&lt; TrackSlotId::size_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>track_slots</b></td></tr>
+<tr class="separator:a5da014e7166658c78a05ca86bcc72184"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7945644dbd9fccd6541e9fca7c0fb704"><td class="memItemLeft" align="right" valign="top"><a id="a7945644dbd9fccd6541e9fca7c0fb704" name="a7945644dbd9fccd6541e9fca7c0fb704"></a>
+<a class="el" href="../../d3/d83/_thread_id_8hh.html#a7806481555d1de2f63c29ded6fda4adc">StreamId</a>&#160;</td><td class="memItemRight" valign="bottom"><b>stream_id</b></td></tr>
+<tr class="memdesc:a7945644dbd9fccd6541e9fca7c0fb704"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique identifier for "thread-local" data. <br /></td></tr>
+<tr class="separator:a7945644dbd9fccd6541e9fca7c0fb704"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148">Ownership</a> W, <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#af21a33cd854346b7988591378fcfe138">MemSpace</a> M&gt;<br />

@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -79,13 +80,17 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../dd/d98/_geant_physics_list_8hh.html">GeantPhysicsList.hh</a>&quot;</code><br />
 <code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;CLHEP/Units/SystemOfUnits.h&gt;</code><br />
 <code>#include &lt;G4ComptonScattering.hh&gt;</code><br />
 <code>#include &lt;G4CoulombScattering.hh&gt;</code><br />
 <code>#include &lt;G4Electron.hh&gt;</code><br />
 <code>#include &lt;G4EmParameters.hh&gt;</code><br />
 <code>#include &lt;G4Gamma.hh&gt;</code><br />
 <code>#include &lt;G4GammaConversion.hh&gt;</code><br />
+<code>#include &lt;G4GammaGeneralProcess.hh&gt;</code><br />
+<code>#include &lt;G4GoudsmitSaundersonMscModel.hh&gt;</code><br />
 <code>#include &lt;G4LivermorePhotoElectricModel.hh&gt;</code><br />
+<code>#include &lt;G4LossTableManager.hh&gt;</code><br />
 <code>#include &lt;G4MollerBhabhaModel.hh&gt;</code><br />
 <code>#include &lt;G4PairProductionRelModel.hh&gt;</code><br />
 <code>#include &lt;G4PhotoElectricEffect.hh&gt;</code><br />
@@ -94,7 +99,6 @@ $(function() {
 <code>#include &lt;G4ProcessType.hh&gt;</code><br />
 <code>#include &lt;G4Proton.hh&gt;</code><br />
 <code>#include &lt;G4RayleighScattering.hh&gt;</code><br />
-<code>#include &lt;G4SystemOfUnits.hh&gt;</code><br />
 <code>#include &lt;G4UrbanMscModel.hh&gt;</code><br />
 <code>#include &lt;G4WentzelVIModel.hh&gt;</code><br />
 <code>#include &lt;G4eCoulombScatteringModel.hh&gt;</code><br />

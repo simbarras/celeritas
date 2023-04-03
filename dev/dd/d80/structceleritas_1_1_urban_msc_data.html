@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -83,13 +84,17 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="../../d6/def/classceleritas_1_1_device.html" title="Manage attributes of the GPU.">Device</a> data for step limitation algorithms and angular scattering.  
+<p><a class="el" href="../../d6/def/classceleritas_1_1_device.html" title="Manage attributes of the GPU.">Device</a> data for Urban MSC.  
  <a href="../../dd/d80/structceleritas_1_1_urban_msc_data.html#details">More...</a></p>
 
 <p><code>#include &lt;UrbanMscData.hh&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr class="memitem:ac7d45e9acfc6165315d654523505ef75"><td class="memTemplParams" colspan="2"><a id="ac7d45e9acfc6165315d654523505ef75" name="ac7d45e9acfc6165315d654523505ef75"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:ac7d45e9acfc6165315d654523505ef75"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Items</b> = <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Collection</a>&lt; T, W, M &gt;</td></tr>
+<tr class="separator:ac7d45e9acfc6165315d654523505ef75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6621abe16cf3fe647feda919408f15ae"><td class="memTemplParams" colspan="2"><a id="a6621abe16cf3fe647feda919408f15ae" name="a6621abe16cf3fe647feda919408f15ae"></a>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:a6621abe16cf3fe647feda919408f15ae"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>MaterialItems</b> = <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">celeritas::Collection</a>&lt; T, W, M, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a1cade572974306b924a14c099e1a5ef0">MaterialId</a> &gt;</td></tr>
@@ -106,12 +111,16 @@ template&lt;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfc
 <tr class="memitem:aee7e1e771352296836a15e316a1bfa85"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d80/structceleritas_1_1_urban_msc_data.html">UrbanMscData</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="../../dd/d80/structceleritas_1_1_urban_msc_data.html">UrbanMscData</a>&lt; W2, M2 &gt; const &amp;other)</td></tr>
 <tr class="memdesc:aee7e1e771352296836a15e316a1bfa85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another set of data. <br /></td></tr>
 <tr class="separator:aee7e1e771352296836a15e316a1bfa85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56fcb354372734aad7a71b4ada239f37"><td class="memItemLeft" align="right" valign="top"><a id="a56fcb354372734aad7a71b4ada239f37" name="a56fcb354372734aad7a71b4ada239f37"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../db/d8b/_collection_8hh.html#a6f8d0c7bc5dfadc09ac2b566b3a55c24">ItemId</a>&lt; <a class="el" href="../../da/d36/structceleritas_1_1_urban_msc_par_mat_data.html">UrbanMscParMatData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>at</b> (<a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a1cade572974306b924a14c099e1a5ef0">MaterialId</a> mat, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a3cea071f272f04902f40d2de68a9d7d6">ParticleId</a> par) const</td></tr>
+<tr class="memdesc:a56fcb354372734aad7a71b4ada239f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the data location for a material + particle. <br /></td></tr>
+<tr class="separator:a56fcb354372734aad7a71b4ada239f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a629eddd233403a8a175e85818047b565"><td class="memItemLeft" align="right" valign="top"><a id="a629eddd233403a8a175e85818047b565" name="a629eddd233403a8a175e85818047b565"></a>
 <a class="el" href="../../d9/df9/structceleritas_1_1_urban_msc_ids.html">UrbanMscIds</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ids</b></td></tr>
-<tr class="memdesc:a629eddd233403a8a175e85818047b565"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type-free IDs. <br /></td></tr>
+<tr class="memdesc:a629eddd233403a8a175e85818047b565"><td class="mdescLeft">&#160;</td><td class="mdescRight">Particle IDs. <br /></td></tr>
 <tr class="separator:a629eddd233403a8a175e85818047b565"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f21e3483ab627cc5149c001d6caf5b8"><td class="memItemLeft" align="right" valign="top"><a id="a7f21e3483ab627cc5149c001d6caf5b8" name="a7f21e3483ab627cc5149c001d6caf5b8"></a>
 <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::MevMass</a>&#160;</td><td class="memItemRight" valign="bottom"><b>electron_mass</b></td></tr>
@@ -121,14 +130,22 @@ Public Attributes</h2></td></tr>
 <a class="el" href="../../dc/dbd/structceleritas_1_1_urban_msc_parameters.html">UrbanMscParameters</a>&#160;</td><td class="memItemRight" valign="bottom"><b>params</b></td></tr>
 <tr class="memdesc:a9995b51f4b264699092ca0703eda6238"><td class="mdescLeft">&#160;</td><td class="mdescRight">User-assignable options. <br /></td></tr>
 <tr class="separator:a9995b51f4b264699092ca0703eda6238"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac876c8b21f9715aa3976d1ebf36f9a42"><td class="memItemLeft" align="right" valign="top"><a id="ac876c8b21f9715aa3976d1ebf36f9a42" name="ac876c8b21f9715aa3976d1ebf36f9a42"></a>
-<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">MaterialItems</a>&lt; <a class="el" href="../../d3/ddf/structceleritas_1_1_urban_msc_material_data.html">UrbanMscMaterialData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>msc_data</b></td></tr>
-<tr class="memdesc:ac876c8b21f9715aa3976d1ebf36f9a42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Material-dependent data. <br /></td></tr>
-<tr class="separator:ac876c8b21f9715aa3976d1ebf36f9a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ae6fcb43b2e3d1357029dcf20556df7"><td class="memItemLeft" align="right" valign="top"><a id="a5ae6fcb43b2e3d1357029dcf20556df7" name="a5ae6fcb43b2e3d1357029dcf20556df7"></a>
+<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">MaterialItems</a>&lt; <a class="el" href="../../d3/ddf/structceleritas_1_1_urban_msc_material_data.html">UrbanMscMaterialData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>material_data</b></td></tr>
+<tr class="memdesc:a5ae6fcb43b2e3d1357029dcf20556df7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Material-dependent data. <br /></td></tr>
+<tr class="separator:a5ae6fcb43b2e3d1357029dcf20556df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a685d937c0d427e72570eb2d0a9920eca"><td class="memItemLeft" align="right" valign="top"><a id="a685d937c0d427e72570eb2d0a9920eca" name="a685d937c0d427e72570eb2d0a9920eca"></a>
+<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Items</a>&lt; <a class="el" href="../../da/d36/structceleritas_1_1_urban_msc_par_mat_data.html">UrbanMscParMatData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>par_mat_data</b></td></tr>
+<tr class="memdesc:a685d937c0d427e72570eb2d0a9920eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Particle and material-dependent data. <br /></td></tr>
+<tr class="separator:a685d937c0d427e72570eb2d0a9920eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6572fcbf482cbc119621bb92585aebd9"><td class="memItemLeft" align="right" valign="top"><a id="a6572fcbf482cbc119621bb92585aebd9" name="a6572fcbf482cbc119621bb92585aebd9"></a>
+<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Items</a>&lt; <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>reals</b></td></tr>
+<tr class="separator:a6572fcbf482cbc119621bb92585aebd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148">Ownership</a> W, <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#af21a33cd854346b7988591378fcfe138">MemSpace</a> M&gt;<br />
-struct celeritas::UrbanMscData&lt; W, M &gt;</div><p ><a class="el" href="../../d6/def/classceleritas_1_1_device.html" title="Manage attributes of the GPU.">Device</a> data for step limitation algorithms and angular scattering. </p>
+struct celeritas::UrbanMscData&lt; W, M &gt;</div><p ><a class="el" href="../../d6/def/classceleritas_1_1_device.html" title="Manage attributes of the GPU.">Device</a> data for Urban MSC. </p>
+<p >Since the model currently applies only to electrons and positrons, the particles are hardcoded to be length 2. TODO: extend to other charged particles when further physics is implemented. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../db/d41/_urban_msc_data_8hh.html">UrbanMscData.hh</a></li>
 </ul>

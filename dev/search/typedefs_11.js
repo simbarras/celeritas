@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['ull_5fint_0',['ull_int',['../d0/df5/corecel_2_types_8hh.html#a2c098de95d0e3420f5fa4d26f60ea5f9',1,'celeritas']]],
-  ['unit_5ftype_1',['unit_type',['../dc/dff/classceleritas_1_1_quantity.html#a3e3b7a131723f1c85e63912da6cbfcd4',1,'celeritas::Quantity']]],
-  ['unitless_2',['Unitless',['../dc/dff/classceleritas_1_1_quantity.html#a2f631128d2d41badb1f3795f600c8a0b',1,'celeritas::Quantity']]],
-  ['universeid_3',['UniverseId',['../d7/d3b/_orange_types_8hh.html#a9a8aa9e9bf4ec70552060e7fe2757334',1,'celeritas']]],
-  ['upconstgridbuilder_4',['UPConstGridBuilder',['../dc/d52/classceleritas_1_1_model.html#a67885e83c5523f670dedbbd36f891edb',1,'celeritas::Model::UPConstGridBuilder()'],['../de/db8/classceleritas_1_1_process.html#a19d6df82629f7c38787e36486ea4f9b1',1,'celeritas::Process::UPConstGridBuilder()']]],
-  ['upg4physicalvolume_5',['UPG4PhysicalVolume',['../dc/ddc/_load_gdml_8hh.html#aa0734513a41cbd870cf78c100b510a49',1,'celeritas']]],
-  ['uplogbuilder_6',['UPLogBuilder',['../d8/dae/classceleritas_1_1_value_grid_log_builder.html#a11dd4a8796dcff4960db2d75fbcc5e16',1,'celeritas::ValueGridLogBuilder']]]
+  ['value_0',['Value',['../dc/d8c/classceleritas_1_1_collection_state_store.html#a123178e6fe2fa03788e8c0daa186d7c0',1,'celeritas::CollectionStateStore']]],
+  ['value_5ftype_1',['value_type',['../d3/d95/classceleritas_1_1_range.html#a5c6a500f0e00933e72e22795187f5af2',1,'celeritas::Range::value_type()'],['../d7/dd4/classceleritas_1_1_collection.html#a89ea650c4cc5509b8bf8435c9c5861b6',1,'celeritas::Collection::value_type()'],['../d6/d42/classceleritas_1_1detail_1_1_disabled_storage.html#a5c10be196e702403ae1d8afe18c4e451',1,'celeritas::detail::DisabledStorage::value_type()'],['../d4/dd2/classceleritas_1_1detail_1_1_fnv_hasher.html#ac939c3b4ee4a798cfc82ab146c1dbc1f',1,'celeritas::detail::FnvHasher::value_type()'],['../d6/d43/classceleritas_1_1detail_1_1_logic_stack.html#a8d5c488139dc7a248cac1ac42d427a89',1,'celeritas::detail::LogicStack::value_type()']]],
+  ['valuegrid_2',['ValueGrid',['../de/d8b/_physics_data_8hh.html#ad026afe329377c15daefcfb2c7ed4077',1,'celeritas']]],
+  ['values_3',['Values',['../d8/dca/classceleritas_1_1_generic_xs_calculator.html#a09a1e4e54bed463a6d3177be28df010e',1,'celeritas::GenericXsCalculator']]],
+  ['volumeid_4',['VolumeId',['../d1/dd1/_vecgeom_data_8hh.html#a8c97752c08c841e3faf0173adb2e1525',1,'celeritas']]]
 ];

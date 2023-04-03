@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -93,9 +94,9 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>RootFileManager</b> (char const *filename)</td></tr>
 <tr class="memdesc:a17c4741c1090244c5d81cd4351911d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with ROOT filename. <br /></td></tr>
 <tr class="separator:a17c4741c1090244c5d81cd4351911d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a840d597ac55ff05dc0368a448b6ecb89"><td class="memItemLeft" align="right" valign="top">detail::RootUniquePtr&lt; TTree &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/da0/classceleritas_1_1_root_file_manager.html#a840d597ac55ff05dc0368a448b6ecb89">make_tree</a> (char const *name, char const *title)</td></tr>
-<tr class="memdesc:a840d597ac55ff05dc0368a448b6ecb89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create tree by providing its name and title.  <a href="../../d9/da0/classceleritas_1_1_root_file_manager.html#a840d597ac55ff05dc0368a448b6ecb89">More...</a><br /></td></tr>
-<tr class="separator:a840d597ac55ff05dc0368a448b6ecb89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c3d6b2377bb4a369d8f0452ce209d4a"><td class="memItemLeft" align="right" valign="top">UPRootWritable&lt; TTree &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/da0/classceleritas_1_1_root_file_manager.html#a3c3d6b2377bb4a369d8f0452ce209d4a">make_tree</a> (char const *name, char const *title)</td></tr>
+<tr class="memdesc:a3c3d6b2377bb4a369d8f0452ce209d4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create tree by providing its name and title.  <a href="../../d9/da0/classceleritas_1_1_root_file_manager.html#a3c3d6b2377bb4a369d8f0452ce209d4a">More...</a><br /></td></tr>
+<tr class="separator:a3c3d6b2377bb4a369d8f0452ce209d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0fbd05083053408807215e58387dc15"><td class="memItemLeft" align="right" valign="top"><a id="ab0fbd05083053408807215e58387dc15" name="ab0fbd05083053408807215e58387dc15"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> ()</td></tr>
 <tr class="memdesc:ab0fbd05083053408807215e58387dc15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write TFile to disk. <br /></td></tr>
@@ -103,17 +104,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> ()</td></tr
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:add1f2d239f3ffdaf3ee90ad611d6dfc9"><td class="memItemLeft" align="right" valign="top"><a id="add1f2d239f3ffdaf3ee90ad611d6dfc9" name="add1f2d239f3ffdaf3ee90ad611d6dfc9"></a>
-detail::RootUniquePtr&lt; TFile &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tfile_</b></td></tr>
-<tr class="separator:add1f2d239f3ffdaf3ee90ad611d6dfc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a950584e908a8095f1cc2e7d3f31a40a2"><td class="memItemLeft" align="right" valign="top"><a id="a950584e908a8095f1cc2e7d3f31a40a2" name="a950584e908a8095f1cc2e7d3f31a40a2"></a>
+UPRootWritable&lt; TFile &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tfile_</b></td></tr>
+<tr class="separator:a950584e908a8095f1cc2e7d3f31a40a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >ROOT TFile manager. </p>
 <p >Currently this class is <em>not</em> thread-safe. Since there is only one TFile*, any writer class (such as <code><a class="el" href="../../d2/d64/_root_step_writer_8hh.html">RootStepWriter.hh</a></code>) can just create their own TTrees and ROOT will know how to handle them.</p>
 <p >If this is expanded to store one TFile per thread, we will need to expand <code>make_tree("name, "title")</code> to include a thread id as input parameter. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a840d597ac55ff05dc0368a448b6ecb89" name="a840d597ac55ff05dc0368a448b6ecb89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a840d597ac55ff05dc0368a448b6ecb89">&#9670;&#160;</a></span>make_tree()</h2>
+<a id="a3c3d6b2377bb4a369d8f0452ce209d4a" name="a3c3d6b2377bb4a369d8f0452ce209d4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c3d6b2377bb4a369d8f0452ce209d4a">&#9670;&#160;</a></span>make_tree()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -122,7 +123,7 @@ detail::RootUniquePtr&lt; TFile &gt;&#160;</td><td class="memItemRight" valign="
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">detail::RootUniquePtr&lt; TTree &gt; celeritas::RootFileManager::make_tree </td>
+          <td class="memname">UPRootWritable&lt; TTree &gt; celeritas::RootFileManager::make_tree </td>
           <td>(</td>
           <td class="paramtype">char const *&#160;</td>
           <td class="paramname"><em>name</em>, </td>

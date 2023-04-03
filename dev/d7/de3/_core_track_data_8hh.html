@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -81,7 +82,8 @@ $(function() {
   <div class="headertitle"><div class="title">CoreTrackData.hh File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="../../db/da6/_geo_data_8hh.html">celeritas/geo/GeoData.hh</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d5/d10/_assert_8hh.html">corecel/Assert.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/da6/_geo_data_8hh.html">celeritas/geo/GeoData.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d9/deb/_geo_material_data_8hh.html">celeritas/geo/GeoMaterialData.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../df/d83/_material_data_8hh.html">celeritas/mat/MaterialData.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d2/d85/_cutoff_data_8hh.html">celeritas/phys/CutoffData.hh</a>&quot;</code><br />
@@ -129,12 +131,57 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::CoreDevic
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:abf69c7398b5f45ebcb12168c099517de"><td class="memTemplParams" colspan="2"><a id="abf69c7398b5f45ebcb12168c099517de" name="abf69c7398b5f45ebcb12168c099517de"></a>
-template&lt;MemSpace M&gt; </td></tr>
-<tr class="memitem:abf69c7398b5f45ebcb12168c099517de"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::resize</b> (CoreStateData&lt; Ownership::value, M &gt; *state, HostCRef&lt; CoreParamsData &gt; const &amp;params, size_type size)</td></tr>
-<tr class="memdesc:abf69c7398b5f45ebcb12168c099517de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize states in host code. <br /></td></tr>
-<tr class="separator:abf69c7398b5f45ebcb12168c099517de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7b26149e9550ac02f6e1d18b4eea969"><td class="memTemplParams" colspan="2">template&lt;MemSpace M&gt; </td></tr>
+<tr class="memitem:ad7b26149e9550ac02f6e1d18b4eea969"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d62/_core_track_data_8cc.html#ad7b26149e9550ac02f6e1d18b4eea969">celeritas::resize</a> (CoreStateData&lt; Ownership::value, M &gt; *state, HostCRef&lt; CoreParamsData &gt; const &amp;params, StreamId stream_id, size_type size)</td></tr>
+<tr class="memdesc:ad7b26149e9550ac02f6e1d18b4eea969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize states in host code.  <a href="../../d1/d62/_core_track_data_8cc.html#ad7b26149e9550ac02f6e1d18b4eea969">More...</a><br /></td></tr>
+<tr class="separator:ad7b26149e9550ac02f6e1d18b4eea969"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ad7b26149e9550ac02f6e1d18b4eea969" name="ad7b26149e9550ac02f6e1d18b4eea969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7b26149e9550ac02f6e1d18b4eea969">&#9670;&#160;</a></span>resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MemSpace M&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void celeritas::resize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d29/structceleritas_1_1_core_state_data.html">CoreStateData</a>&lt; <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148a2063c1608d6e0baf80249c42e2be5804">Ownership::value</a>, M &gt; *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/df5/corecel_2_types_8hh.html#a68689dbf9eb486a67222e2fe2b496e71">HostCRef</a>&lt; <a class="el" href="../../d2/d1a/structceleritas_1_1_core_params_data.html">CoreParamsData</a> &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d3/d83/_thread_id_8hh.html#a7806481555d1de2f63c29ded6fda4adc">StreamId</a>&#160;</td>
+          <td class="paramname"><em>stream_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_type&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resize states in host code. </p>
+<p >Initialize threads to track slots mapping. Resize core states using parameter data, stream ID, and track slots. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

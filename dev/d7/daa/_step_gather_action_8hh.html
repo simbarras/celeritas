@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -75,7 +76,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">StepGatherAction.hh File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -97,7 +99,48 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dfb/classceleritas_1_1detail_1_1_step_gather_action.html">celeritas::detail::StepGatherAction&lt; P &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gather track step properties at a point during the step.  <a href="../../d0/dfb/classceleritas_1_1detail_1_1_step_gather_action.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aed1f87c1468b57fd26a1b053ef65b860"><td class="memTemplParams" colspan="2">template&lt;MemSpace M&gt; </td></tr>
+<tr class="memitem:aed1f87c1468b57fd26a1b053ef65b860"><td class="memTemplItemLeft" align="right" valign="top">StepStateData&lt; Ownership::reference, M &gt; const &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d65/_step_gather_action_8cc.html#aed1f87c1468b57fd26a1b053ef65b860">celeritas::detail::get_stream_state</a> (CoreRef&lt; M &gt; const &amp;core, StepStorage *storage)</td></tr>
+<tr class="memdesc:aed1f87c1468b57fd26a1b053ef65b860"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the stream-local step state data, allocating if needed.  <a href="../../d1/d65/_step_gather_action_8cc.html#aed1f87c1468b57fd26a1b053ef65b860">More...</a><br /></td></tr>
+<tr class="separator:aed1f87c1468b57fd26a1b053ef65b860"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aed1f87c1468b57fd26a1b053ef65b860" name="aed1f87c1468b57fd26a1b053ef65b860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed1f87c1468b57fd26a1b053ef65b860">&#9670;&#160;</a></span>get_stream_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MemSpace M&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">StepStateData&lt; Ownership::reference, M &gt; const  &amp; celeritas::detail::get_stream_state </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreRef</a>&lt; M &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>core</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">StepStorage</a> *&#160;</td>
+          <td class="paramname"><em>storage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a reference to the stream-local step state data, allocating if needed. </p>
+<p >This is thread-safe and allocates storage on demand for each stream <em>and</em> device type. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

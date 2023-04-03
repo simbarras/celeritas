@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -88,11 +89,16 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a88bf78cac0551b4d995d649548a8992f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d60/classceleritas_1_1_poly_evaluator.html#a88bf78cac0551b4d995d649548a8992f">result_type</a> = T</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a88bf78cac0551b4d995d649548a8992f"><td class="memItemLeft" align="right" valign="top"><a id="a88bf78cac0551b4d995d649548a8992f" name="a88bf78cac0551b4d995d649548a8992f"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>result_type</b> = T</td></tr>
 <tr class="separator:a88bf78cac0551b4d995d649548a8992f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c5686a8fe98edbded890d1c26cb7059"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d60/classceleritas_1_1_poly_evaluator.html#a4c5686a8fe98edbded890d1c26cb7059">argument_type</a> = T</td></tr>
+<tr class="memitem:a4c5686a8fe98edbded890d1c26cb7059"><td class="memItemLeft" align="right" valign="top"><a id="a4c5686a8fe98edbded890d1c26cb7059" name="a4c5686a8fe98edbded890d1c26cb7059"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>argument_type</b> = T</td></tr>
 <tr class="separator:a4c5686a8fe98edbded890d1c26cb7059"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46a5277630032b4f9944cd57734c305b"><td class="memItemLeft" align="right" valign="top"><a id="a46a5277630032b4f9944cd57734c305b" name="a46a5277630032b4f9944cd57734c305b"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ArrayT</b> = <a class="el" href="../../dd/dd6/structceleritas_1_1_array.html">Array</a>&lt; T, N+1 &gt;</td></tr>
+<tr class="separator:a46a5277630032b4f9944cd57734c305b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -101,6 +107,10 @@ template&lt;class... Ts&gt; </td></tr>
 <tr class="memitem:af99dbef87f730d60c9b66e01307a5650"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>PolyEvaluator</b> (Ts... coeffs)</td></tr>
 <tr class="memdesc:af99dbef87f730d60c9b66e01307a5650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with the polynomial to evaluate. <br /></td></tr>
 <tr class="separator:af99dbef87f730d60c9b66e01307a5650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7807be90d4cf54d63f952e62f33e5071"><td class="memItemLeft" align="right" valign="top"><a id="a7807be90d4cf54d63f952e62f33e5071" name="a7807be90d4cf54d63f952e62f33e5071"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>PolyEvaluator</b> (<a class="el" href="../../dd/dd6/structceleritas_1_1_array.html">ArrayT</a> const &amp;coeffs)</td></tr>
+<tr class="memdesc:a7807be90d4cf54d63f952e62f33e5071"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from an array of data. <br /></td></tr>
+<tr class="separator:a7807be90d4cf54d63f952e62f33e5071"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15a93b2001464dc4b4a0f4d47f72fb68"><td class="memItemLeft" align="right" valign="top"><a id="a15a93b2001464dc4b4a0f4d47f72fb68" name="a15a93b2001464dc4b4a0f4d47f72fb68"></a>
 <a class="el" href="../../db/dc5/_macros_8hh.html#ae6277d86d031ef7cf2b160eeb8bbdb4e">CELER_CONSTEXPR_FUNCTION</a> T&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (T arg) const</td></tr>
 <tr class="memdesc:a15a93b2001464dc4b4a0f4d47f72fb68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the polynomial at the given value. <br /></td></tr>
@@ -110,54 +120,19 @@ template&lt;class... Ts&gt; </td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class T, unsigned int N&gt;<br />
 class celeritas::PolyEvaluator&lt; T, N &gt;</div><p >Functor class to evaluate a polynomial. </p>
 <p >This is an efficient and foolproof way of storing and evaluating a polynomial expansion:  </p><p class="formulaDsp">
-<picture><source srcset="../../form_145_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="../../form_150_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 f(x) = a_0 + x * (a_1 + x * (a_2 + ...))
-\]" src="../../form_145.png" width="190" height="14"/></picture>
+\]" src="../../form_150.png" width="190" height="14"/></picture>
 </p>
 <p >It replaces opaque expressions such as: </p><div class="fragment"><div class="line">corr = (zeff * (<a class="code hl_typedef" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>(1.84035e-4) * zeff - <a class="code hl_typedef" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>(1.86427e-2))</div>
 <div class="line">         + <a class="code hl_typedef" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>(1.41125));</div>
 <div class="ttc" id="acorecel_2_types_8hh_html_ac97c7d9259eb113cfcc54c671fd2173d"><div class="ttname"><a href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">celeritas::real_type</a></div><div class="ttdeci">double real_type</div><div class="ttdoc">Numerical type for real numbers.</div><div class="ttdef"><b>Definition:</b> corecel/Types.hh:26</div></div>
 </div><!-- fragment --><p> with </p><div class="fragment"><div class="line">corr = <a class="code hl_function" href="../../d0/df1/_poly_evaluator_8hh.html#a511d762e21a1ef521ebcad3bc4a2451b">make_poly_evaluator</a>(1.41125, -1.86427e-2, 1.84035e-4)(zeff);</div>
-<div class="ttc" id="a_poly_evaluator_8hh_html_a511d762e21a1ef521ebcad3bc4a2451b"><div class="ttname"><a href="../../d0/df1/_poly_evaluator_8hh.html#a511d762e21a1ef521ebcad3bc4a2451b">celeritas::make_poly_evaluator</a></div><div class="ttdeci">constexpr auto make_poly_evaluator(Ts... args)</div><div class="ttdoc">Create a polynomial evaluator from the given arguments.</div><div class="ttdef"><b>Definition:</b> PolyEvaluator.hh:91</div></div>
+<div class="ttc" id="a_poly_evaluator_8hh_html_a511d762e21a1ef521ebcad3bc4a2451b"><div class="ttname"><a href="../../d0/df1/_poly_evaluator_8hh.html#a511d762e21a1ef521ebcad3bc4a2451b">celeritas::make_poly_evaluator</a></div><div class="ttdeci">constexpr auto make_poly_evaluator(Ts... args)</div><div class="ttdoc">Create a polynomial evaluator from the given arguments.</div><div class="ttdef"><b>Definition:</b> PolyEvaluator.hh:99</div></div>
 </div><!-- fragment --><p> or, to use an explicit type without having to cast each coefficient: </p><div class="fragment"><div class="line"><span class="keyword">using </span>PolyQuad = <a class="code hl_class" href="../../dc/d60/classceleritas_1_1_poly_evaluator.html">PolyEvaluator&lt;real_type, N&gt;</a>;</div>
 <div class="line">corr = PolyQuad{1.41125, -1.86427e-2, 1.84035e-4)(zeff);</div>
-<div class="ttc" id="aclassceleritas_1_1_poly_evaluator_html"><div class="ttname"><a href="../../dc/d60/classceleritas_1_1_poly_evaluator.html">celeritas::PolyEvaluator</a></div><div class="ttdoc">Functor class to evaluate a polynomial.</div><div class="ttdef"><b>Definition:</b> PolyEvaluator.hh:44</div></div>
-</div><!-- fragment --> </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a4c5686a8fe98edbded890d1c26cb7059" name="a4c5686a8fe98edbded890d1c26cb7059"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c5686a8fe98edbded890d1c26cb7059">&#9670;&#160;</a></span>argument_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T , unsigned int N&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../dc/d60/classceleritas_1_1_poly_evaluator.html">celeritas::PolyEvaluator</a>&lt; T, N &gt;::argument_type =  T</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="a88bf78cac0551b4d995d649548a8992f" name="a88bf78cac0551b4d995d649548a8992f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88bf78cac0551b4d995d649548a8992f">&#9670;&#160;</a></span>result_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T , unsigned int N&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../dc/d60/classceleritas_1_1_poly_evaluator.html">celeritas::PolyEvaluator</a>&lt; T, N &gt;::result_type =  T</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<div class="ttc" id="aclassceleritas_1_1_poly_evaluator_html"><div class="ttname"><a href="../../dc/d60/classceleritas_1_1_poly_evaluator.html">celeritas::PolyEvaluator</a></div><div class="ttdoc">Functor class to evaluate a polynomial.</div><div class="ttdef"><b>Definition:</b> PolyEvaluator.hh:45</div></div>
+</div><!-- fragment --> </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="../../d0/df1/_poly_evaluator_8hh.html">PolyEvaluator.hh</a></li>
 </ul>
 </div><!-- contents -->

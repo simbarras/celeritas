@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -87,28 +88,6 @@ $(function() {
 
 <p><code>#include &lt;Collection.hh&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:ad01982200cb40b11be453ff90f5801a9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#ad01982200cb40b11be453ff90f5801a9">SpanT</a> = typename <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">CollectionTraitsT::SpanT</a></td></tr>
-<tr class="separator:ad01982200cb40b11be453ff90f5801a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a074cd023823d407fadd9a77fc524ad6b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a074cd023823d407fadd9a77fc524ad6b">SpanConstT</a> = typename <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">CollectionTraitsT::SpanConstT</a></td></tr>
-<tr class="separator:a074cd023823d407fadd9a77fc524ad6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f3e69463e9d33b1ba2d9a9f85d52abd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a1f3e69463e9d33b1ba2d9a9f85d52abd">reference_type</a> = typename CollectionTraitsT::reference_type</td></tr>
-<tr class="separator:a1f3e69463e9d33b1ba2d9a9f85d52abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a91bb186908e6f88c0518668927c0c1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a1a91bb186908e6f88c0518668927c0c1">const_reference_type</a> = typename CollectionTraitsT::const_reference_type</td></tr>
-<tr class="separator:a1a91bb186908e6f88c0518668927c0c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a229a59da2907add39377abea653982d1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a229a59da2907add39377abea653982d1">size_type</a> = typename I::size_type</td></tr>
-<tr class="separator:a229a59da2907add39377abea653982d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89ea650c4cc5509b8bf8435c9c5861b6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a89ea650c4cc5509b8bf8435c9c5861b6">value_type</a> = T</td></tr>
-<tr class="separator:a89ea650c4cc5509b8bf8435c9c5861b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87df3f38469d1b7d82e529fc53e245bb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a87df3f38469d1b7d82e529fc53e245bb">ItemIdT</a> = I</td></tr>
-<tr class="separator:a87df3f38469d1b7d82e529fc53e245bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ff88e5de52902e2b26af9373d21dd91"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a1ff88e5de52902e2b26af9373d21dd91">ItemRangeT</a> = <a class="el" href="../../d3/d95/classceleritas_1_1_range.html">Range</a>&lt; <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a87df3f38469d1b7d82e529fc53e245bb">ItemIdT</a> &gt;</td></tr>
-<tr class="separator:a1ff88e5de52902e2b26af9373d21dd91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c38d68f643659c433e456921dc17650"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a1c38d68f643659c433e456921dc17650">AllItemsT</a> = <a class="el" href="../../d8/d0f/structceleritas_1_1_all_items.html">AllItems</a>&lt; T, M &gt;</td></tr>
-<tr class="separator:a1c38d68f643659c433e456921dc17650"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6dea665895005c6f764697c9b48d5d3d"><td class="memTemplParams" colspan="2"><a id="a6dea665895005c6f764697c9b48d5d3d" name="a6dea665895005c6f764697c9b48d5d3d"></a>
@@ -144,13 +123,6 @@ template&lt;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfc
 <tr class="memdesc:a2633d15c95f40dda70680e78ae19d6a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access all of the data as a <a class="el" href="../../dd/d15/classceleritas_1_1_span.html" title="Modified backport of C++20 span.">Span</a> (const). <br /></td></tr>
 <tr class="separator:a2633d15c95f40dda70680e78ae19d6a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a8af55f30766e9d01ca62de70794ccd5b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a8af55f30766e9d01ca62de70794ccd5b">Collection</a> ()=default</td></tr>
-<tr class="separator:a8af55f30766e9d01ca62de70794ccd5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf4bc4970d989631fc7a699c955c7de0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#abf4bc4970d989631fc7a699c955c7de0">Collection</a> (<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Collection</a> const &amp;)=default</td></tr>
-<tr class="separator:abf4bc4970d989631fc7a699c955c7de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f5a428dd7b61830340901adcd8eab1c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a6f5a428dd7b61830340901adcd8eab1c">Collection</a> (<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Collection</a> &amp;&amp;)=default</td></tr>
-<tr class="separator:a6f5a428dd7b61830340901adcd8eab1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a944346490bb364024ab1e79b5962760f"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148">Ownership</a> W2, <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#af21a33cd854346b7988591378fcfe138">MemSpace</a> M2&gt; </td></tr>
 <tr class="memitem:a944346490bb364024ab1e79b5962760f"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a944346490bb364024ab1e79b5962760f">Collection</a> (<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Collection</a>&lt; T, W2, M2, I &gt; const &amp;other)</td></tr>
 <tr class="memdesc:a944346490bb364024ab1e79b5962760f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct or assign from another collection.  <a href="../../d7/dd4/classceleritas_1_1_collection.html#a944346490bb364024ab1e79b5962760f">More...</a><br /></td></tr>
@@ -184,6 +156,32 @@ Friends</h2></td></tr>
 template&lt;class T2 , <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#af21a33cd854346b7988591378fcfe138">MemSpace</a> M2, class Id2 &gt; </td></tr>
 <tr class="memitem:a1b88a3bece844580521981c732c9892a"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><b>CollectionBuilder</b></td></tr>
 <tr class="separator:a1b88a3bece844580521981c732c9892a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Type aliases</h2></td></tr>
+<tr class="memitem:ad01982200cb40b11be453ff90f5801a9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#ad01982200cb40b11be453ff90f5801a9">SpanT</a> = typename <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">CollectionTraitsT::SpanT</a></td></tr>
+<tr class="separator:ad01982200cb40b11be453ff90f5801a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a074cd023823d407fadd9a77fc524ad6b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a074cd023823d407fadd9a77fc524ad6b">SpanConstT</a> = typename <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">CollectionTraitsT::SpanConstT</a></td></tr>
+<tr class="separator:a074cd023823d407fadd9a77fc524ad6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f3e69463e9d33b1ba2d9a9f85d52abd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a1f3e69463e9d33b1ba2d9a9f85d52abd">reference_type</a> = typename CollectionTraitsT::reference_type</td></tr>
+<tr class="separator:a1f3e69463e9d33b1ba2d9a9f85d52abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a91bb186908e6f88c0518668927c0c1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a1a91bb186908e6f88c0518668927c0c1">const_reference_type</a> = typename CollectionTraitsT::const_reference_type</td></tr>
+<tr class="separator:a1a91bb186908e6f88c0518668927c0c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a229a59da2907add39377abea653982d1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a229a59da2907add39377abea653982d1">size_type</a> = typename I::size_type</td></tr>
+<tr class="separator:a229a59da2907add39377abea653982d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89ea650c4cc5509b8bf8435c9c5861b6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a89ea650c4cc5509b8bf8435c9c5861b6">value_type</a> = T</td></tr>
+<tr class="separator:a89ea650c4cc5509b8bf8435c9c5861b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87df3f38469d1b7d82e529fc53e245bb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a87df3f38469d1b7d82e529fc53e245bb">ItemIdT</a> = I</td></tr>
+<tr class="separator:a87df3f38469d1b7d82e529fc53e245bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ff88e5de52902e2b26af9373d21dd91"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a1ff88e5de52902e2b26af9373d21dd91">ItemRangeT</a> = <a class="el" href="../../d3/d95/classceleritas_1_1_range.html">Range</a>&lt; <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a87df3f38469d1b7d82e529fc53e245bb">ItemIdT</a> &gt;</td></tr>
+<tr class="separator:a1ff88e5de52902e2b26af9373d21dd91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c38d68f643659c433e456921dc17650"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a1c38d68f643659c433e456921dc17650">AllItemsT</a> = <a class="el" href="../../d8/d0f/structceleritas_1_1_all_items.html">AllItems</a>&lt; T, M &gt;</td></tr>
+<tr class="separator:a1c38d68f643659c433e456921dc17650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8af55f30766e9d01ca62de70794ccd5b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a8af55f30766e9d01ca62de70794ccd5b">Collection</a> ()=default</td></tr>
+<tr class="separator:a8af55f30766e9d01ca62de70794ccd5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf4bc4970d989631fc7a699c955c7de0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#abf4bc4970d989631fc7a699c955c7de0">Collection</a> (<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Collection</a> const &amp;)=default</td></tr>
+<tr class="separator:abf4bc4970d989631fc7a699c955c7de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f5a428dd7b61830340901adcd8eab1c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html#a6f5a428dd7b61830340901adcd8eab1c">Collection</a> (<a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html">Collection</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a6f5a428dd7b61830340901adcd8eab1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d30ebcb7c469b338dbbad2eedc071f1"><td class="memItemLeft" align="right" valign="top"><a id="a5d30ebcb7c469b338dbbad2eedc071f1" name="a5d30ebcb7c469b338dbbad2eedc071f1"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>StorageT</b> = typename <a class="el" href="../../df/d91/structceleritas_1_1detail_1_1_collection_storage.html">detail::CollectionStorage</a>&lt; T, W, M &gt;::type</td></tr>
 <tr class="separator:a5d30ebcb7c469b338dbbad2eedc071f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,7 +198,7 @@ class celeritas::Collection&lt; T, W, M, I &gt;</div><p >Manage generic array-li
 <p >Data are constructed incrementally on the host, then copied (along with their associated ItemRange) to device. A <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html" title="Manage generic array-like data ownership and transfer from host to device.">Collection</a> can act as a std::vector&lt;T&gt;, DeviceVector&lt;T&gt;, Span&lt;T&gt;, or Span&lt;const T&gt;. The Spans can point to host or device memory, but the MemSpace template argument protects against accidental accesses from the wrong memory space.</p>
 <p >Each <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html" title="Manage generic array-like data ownership and transfer from host to device.">Collection</a> object is usually accessed with an ItemRange, which references a contiguous set of elements in the <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html" title="Manage generic array-like data ownership and transfer from host to device.">Collection</a>. For example, setup code on the host would extend the <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html" title="Manage generic array-like data ownership and transfer from host to device.">Collection</a> with a series of vectors, the addition of which returns a ItemRange that returns the equivalent data on host or device. This methodology allows complex nested data structures to be built up quickly at setup time without knowing the size requirements beforehand.</p>
 <p >Host-device functions and classes should use <code><a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html" title="Manage generic array-like data ownership and transfer from host to device.">Collection</a></code> with a reference or const_reference Ownership, and the <code>MemSpace::native</code> type, which expects device memory when compiled inside a CUDA file and host memory when used inside a C++ source or test. (This design choice prevents a single CUDA file from compiling separate host-compatible and device-compatible compute kernels, but in the case of Celeritas this situation won't arise, because we always want to build host code in C++ files for development ease and to allow testing when CUDA is disabled.)</p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000015">Todo:</a></b></dt><dd>It would be easy to specialize the traits for the const_reference ownership so that for device primitive data types (int, double) we access via __ldg &ndash; speeding up everywhere in the code without any invasive changes. This is another good argument for using <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html" title="Manage generic array-like data ownership and transfer from host to device.">Collection</a> instead of <a class="el" href="../../dd/d15/classceleritas_1_1_span.html" title="Modified backport of C++20 span.">Span</a> for device-compatible helper classes (e.g. grid calculator). </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000017">Todo:</a></b></dt><dd>It would be easy to specialize the traits for the const_reference ownership so that for device primitive data types (int, double) we access via __ldg &ndash; speeding up everywhere in the code without any invasive changes. This is another good argument for using <a class="el" href="../../d7/dd4/classceleritas_1_1_collection.html" title="Manage generic array-like data ownership and transfer from host to device.">Collection</a> instead of <a class="el" href="../../dd/d15/classceleritas_1_1_span.html" title="Modified backport of C++20 span.">Span</a> for device-compatible helper classes (e.g. grid calculator). </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a1c38d68f643659c433e456921dc17650" name="a1c38d68f643659c433e456921dc17650"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1c38d68f643659c433e456921dc17650">&#9670;&#160;</a></span>AllItemsT</h2>
@@ -215,7 +213,7 @@ template&lt;class T , <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Type aliases </p>
+<p >Default constructors </p>
 
 </div>
 </div>
@@ -232,7 +230,7 @@ template&lt;class T , <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Type aliases </p>
+<p >Default constructors </p>
 
 </div>
 </div>
@@ -249,7 +247,7 @@ template&lt;class T , <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Type aliases </p>
+<p >Default constructors </p>
 
 </div>
 </div>
@@ -266,7 +264,7 @@ template&lt;class T , <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Type aliases </p>
+<p >Default constructors </p>
 
 </div>
 </div>
@@ -283,7 +281,7 @@ template&lt;class T , <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Type aliases </p>
+<p >Default constructors </p>
 
 </div>
 </div>
@@ -300,7 +298,7 @@ template&lt;class T , <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Type aliases </p>
+<p >Default constructors </p>
 
 </div>
 </div>
@@ -317,7 +315,7 @@ template&lt;class T , <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Type aliases </p>
+<p >Default constructors </p>
 
 </div>
 </div>
@@ -334,7 +332,7 @@ template&lt;class T , <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Type aliases </p>
+<p >Default constructors </p>
 
 </div>
 </div>
@@ -351,7 +349,7 @@ template&lt;class T , <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Type aliases </p>
+<p >Default constructors </p>
 
 </div>
 </div>

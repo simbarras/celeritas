@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -88,10 +89,12 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a87fdfbd1fb6b753e2dd67db0a5adff89"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d50/classceleritas_1_1_uniform_grid.html#a87fdfbd1fb6b753e2dd67db0a5adff89">size_type</a> = ::celeritas::size_type</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a87fdfbd1fb6b753e2dd67db0a5adff89"><td class="memItemLeft" align="right" valign="top"><a id="a87fdfbd1fb6b753e2dd67db0a5adff89" name="a87fdfbd1fb6b753e2dd67db0a5adff89"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>size_type</b> = ::celeritas::size_type</td></tr>
 <tr class="separator:a87fdfbd1fb6b753e2dd67db0a5adff89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc96d541c85d6b245af20e8f6f065faf"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d50/classceleritas_1_1_uniform_grid.html#adc96d541c85d6b245af20e8f6f065faf">value_type</a> = <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">::celeritas::real_type</a></td></tr>
+<tr class="memitem:adc96d541c85d6b245af20e8f6f065faf"><td class="memItemLeft" align="right" valign="top"><a id="adc96d541c85d6b245af20e8f6f065faf" name="adc96d541c85d6b245af20e8f6f065faf"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b> = <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">::celeritas::real_type</a></td></tr>
 <tr class="separator:adc96d541c85d6b245af20e8f6f065faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -101,22 +104,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aec8bdeb133bf4bffc6f5c5d61e64e44c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with data. <br /></td></tr>
 <tr class="separator:aec8bdeb133bf4bffc6f5c5d61e64e44c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac700d6608c424af77a85154e08b0d635"><td class="memItemLeft" align="right" valign="top"><a id="ac700d6608c424af77a85154e08b0d635" name="ac700d6608c424af77a85154e08b0d635"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../d4/d50/classceleritas_1_1_uniform_grid.html#a87fdfbd1fb6b753e2dd67db0a5adff89">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> size_type&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const</td></tr>
 <tr class="memdesc:ac700d6608c424af77a85154e08b0d635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of grid points. <br /></td></tr>
 <tr class="separator:ac700d6608c424af77a85154e08b0d635"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bab42b2faa2273de918107fcef3501e"><td class="memItemLeft" align="right" valign="top"><a id="a5bab42b2faa2273de918107fcef3501e" name="a5bab42b2faa2273de918107fcef3501e"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../d4/d50/classceleritas_1_1_uniform_grid.html#adc96d541c85d6b245af20e8f6f065faf">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>front</b> () const</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> value_type&#160;</td><td class="memItemRight" valign="bottom"><b>front</b> () const</td></tr>
 <tr class="memdesc:a5bab42b2faa2273de918107fcef3501e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum/first value. <br /></td></tr>
 <tr class="separator:a5bab42b2faa2273de918107fcef3501e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54669165ae80ef5c44b8c28104f4e182"><td class="memItemLeft" align="right" valign="top"><a id="a54669165ae80ef5c44b8c28104f4e182" name="a54669165ae80ef5c44b8c28104f4e182"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../d4/d50/classceleritas_1_1_uniform_grid.html#adc96d541c85d6b245af20e8f6f065faf">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>back</b> () const</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> value_type&#160;</td><td class="memItemRight" valign="bottom"><b>back</b> () const</td></tr>
 <tr class="memdesc:a54669165ae80ef5c44b8c28104f4e182"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum/last value. <br /></td></tr>
 <tr class="separator:a54669165ae80ef5c44b8c28104f4e182"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa88e635c8411d70e6731493085229702"><td class="memItemLeft" align="right" valign="top"><a id="aa88e635c8411d70e6731493085229702" name="aa88e635c8411d70e6731493085229702"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d4/d50/classceleritas_1_1_uniform_grid.html#adc96d541c85d6b245af20e8f6f065faf">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="../../d4/d50/classceleritas_1_1_uniform_grid.html#a87fdfbd1fb6b753e2dd67db0a5adff89">size_type</a> i) const</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> value_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (size_type i) const</td></tr>
 <tr class="memdesc:aa88e635c8411d70e6731493085229702"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value at the given grid point. <br /></td></tr>
 <tr class="separator:aa88e635c8411d70e6731493085229702"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae492cf7a4d1cd36ef85b16cd7ed36152"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d4/d50/classceleritas_1_1_uniform_grid.html#a87fdfbd1fb6b753e2dd67db0a5adff89">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d50/classceleritas_1_1_uniform_grid.html#ae492cf7a4d1cd36ef85b16cd7ed36152">find</a> (<a class="el" href="../../d4/d50/classceleritas_1_1_uniform_grid.html#adc96d541c85d6b245af20e8f6f065faf">value_type</a> <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148a2063c1608d6e0baf80249c42e2be5804">value</a>) const</td></tr>
+<tr class="memitem:ae492cf7a4d1cd36ef85b16cd7ed36152"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d50/classceleritas_1_1_uniform_grid.html#ae492cf7a4d1cd36ef85b16cd7ed36152">find</a> (value_type <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148a2063c1608d6e0baf80249c42e2be5804">value</a>) const</td></tr>
 <tr class="memdesc:ae492cf7a4d1cd36ef85b16cd7ed36152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the value bin such that data[result] &lt;= value &lt; data[result + 1].  <a href="../../d4/d50/classceleritas_1_1_uniform_grid.html#ae492cf7a4d1cd36ef85b16cd7ed36152">More...</a><br /></td></tr>
 <tr class="separator:ae492cf7a4d1cd36ef85b16cd7ed36152"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e9ee57729fb1f9e5a4430cecfb2a577"><td class="memItemLeft" align="right" valign="top"><a id="a1e9ee57729fb1f9e5a4430cecfb2a577" name="a1e9ee57729fb1f9e5a4430cecfb2a577"></a>
@@ -127,38 +130,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Interact with a uniform grid of increasing values. </p>
 <p >This simple class is used by physics vectors and classes that need to do lookups on a uniform grid. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a87fdfbd1fb6b753e2dd67db0a5adff89" name="a87fdfbd1fb6b753e2dd67db0a5adff89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87fdfbd1fb6b753e2dd67db0a5adff89">&#9670;&#160;</a></span>size_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d4/d50/classceleritas_1_1_uniform_grid.html#a87fdfbd1fb6b753e2dd67db0a5adff89">celeritas::UniformGrid::size_type</a> =  ::celeritas::size_type</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="adc96d541c85d6b245af20e8f6f065faf" name="adc96d541c85d6b245af20e8f6f065faf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc96d541c85d6b245af20e8f6f065faf">&#9670;&#160;</a></span>value_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d4/d50/classceleritas_1_1_uniform_grid.html#adc96d541c85d6b245af20e8f6f065faf">celeritas::UniformGrid::value_type</a> =  <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">::celeritas::real_type</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae492cf7a4d1cd36ef85b16cd7ed36152" name="ae492cf7a4d1cd36ef85b16cd7ed36152"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae492cf7a4d1cd36ef85b16cd7ed36152">&#9670;&#160;</a></span>find()</h2>
 
@@ -169,9 +141,9 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d4/d50/classceleritas_1_1_uniform_grid.html#a87fdfbd1fb6b753e2dd67db0a5adff89">size_type</a> celeritas::UniformGrid::find </td>
+          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> size_type celeritas::UniformGrid::find </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d50/classceleritas_1_1_uniform_grid.html#adc96d541c85d6b245af20e8f6f065faf">value_type</a>&#160;</td>
+          <td class="paramtype">value_type&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td> const</td>
         </tr>

@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -88,10 +89,10 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0128a9c59a49d4e0cb273b404935a367"><td class="memItemLeft" align="right" valign="top"><a id="a0128a9c59a49d4e0cb273b404935a367" name="a0128a9c59a49d4e0cb273b404935a367"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>AtomicRelaxationHelper</b> (AtomicRelaxParamsRef const &amp;shared, AtomicRelaxStateRef const &amp;states, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#ab9ec76ea37164a7e42b557b38e4aacbb">ElementId</a> el_id, <a class="el" href="../../d3/d83/_thread_id_8hh.html#acdbd2b3f5402d42bb1349684a00365a4">ThreadId</a> tid)</td></tr>
-<tr class="memdesc:a0128a9c59a49d4e0cb273b404935a367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with shared and state data. <br /></td></tr>
-<tr class="separator:a0128a9c59a49d4e0cb273b404935a367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90cb9535e516da48337b18fa777bddba"><td class="memItemLeft" align="right" valign="top"><a id="a90cb9535e516da48337b18fa777bddba" name="a90cb9535e516da48337b18fa777bddba"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>AtomicRelaxationHelper</b> (AtomicRelaxParamsRef const &amp;shared, AtomicRelaxStateRef const &amp;states, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#ab9ec76ea37164a7e42b557b38e4aacbb">ElementId</a> el_id, <a class="el" href="../../d3/d83/_thread_id_8hh.html#a3fffdf8703eae70bc266e8cd92bf4dd5">TrackSlotId</a> tid)</td></tr>
+<tr class="memdesc:a90cb9535e516da48337b18fa777bddba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with shared and state data. <br /></td></tr>
+<tr class="separator:a90cb9535e516da48337b18fa777bddba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a8bd1fd5ba80359ce627ae8df3c4b91"><td class="memItemLeft" align="right" valign="top"><a id="a9a8bd1fd5ba80359ce627ae8df3c4b91" name="a9a8bd1fd5ba80359ce627ae8df3c4b91"></a>
 <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () const</td></tr>
 <tr class="memdesc:a9a8bd1fd5ba80359ce627ae8df3c4b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether atomic relaxation should be applied. <br /></td></tr>
@@ -127,14 +128,13 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="comment">// ...</span></div>
 <div class="line"> </div>
 <div class="line">AtomicRelaxation sample_relaxation = relax_helper.build_distribution(</div>
-<div class="line">    cutoffs, shell_id, secondaries.<a class="code hl_function" href="../../dd/d15/classceleritas_1_1_span.html#a94387714a531e0421e79ef1b70ba4bb8">subspan</a>(1));</div>
+<div class="line">    cutoffs, shell_id, secondaries.subspan(1));</div>
 <div class="line"><span class="keyword">auto</span> outgoing             = sample_relaxation(rng);</div>
 <div class="line">result.secondaries        = outgoing.secondaries;</div>
 <div class="line">result.energy_deposition -= outgoing.energy;</div>
 <div class="ttc" id="a_range_8hh_html_a9e392ec9be1ac3dc65ca9b6c44bb5f31"><div class="ttname"><a href="../../d3/de4/_range_8hh.html#a9e392ec9be1ac3dc65ca9b6c44bb5f31">celeritas::count</a></div><div class="ttdeci">CELER_FUNCTION Count&lt; T &gt; count()</div><div class="ttdoc">Count upward from zero.</div><div class="ttdef"><b>Definition:</b> Range.hh:207</div></div>
 <div class="ttc" id="aclassceleritas_1_1_span_html"><div class="ttname"><a href="../../dd/d15/classceleritas_1_1_span.html">celeritas::Span</a></div><div class="ttdoc">Modified backport of C++20 span.</div><div class="ttdef"><b>Definition:</b> Span.hh:39</div></div>
-<div class="ttc" id="aclassceleritas_1_1_span_html_a94387714a531e0421e79ef1b70ba4bb8"><div class="ttname"><a href="../../dd/d15/classceleritas_1_1_span.html#a94387714a531e0421e79ef1b70ba4bb8">celeritas::Span::subspan</a></div><div class="ttdeci">CELER_FUNCTION Span&lt; T, detail::subspan_extent(Extent, Offset, Count)&gt; subspan() const</div><div class="ttdef"><b>Definition:</b> Span.hh:141</div></div>
-<div class="ttc" id="astructceleritas_1_1_interaction_html_ab6f1263907dce5f32cd32fe53084f5ae"><div class="ttname"><a href="../../d3/df8/structceleritas_1_1_interaction.html#ab6f1263907dce5f32cd32fe53084f5ae">celeritas::Interaction::from_failure</a></div><div class="ttdeci">static CELER_FUNCTION Interaction from_failure()</div><div class="ttdoc">Indicate a failure to allocate memory for secondaries.</div><div class="ttdef"><b>Definition:</b> Interaction.hh:132</div></div>
+<div class="ttc" id="astructceleritas_1_1_interaction_html_ab6f1263907dce5f32cd32fe53084f5ae"><div class="ttname"><a href="../../d3/df8/structceleritas_1_1_interaction.html#ab6f1263907dce5f32cd32fe53084f5ae">celeritas::Interaction::from_failure</a></div><div class="ttdeci">static CELER_FUNCTION Interaction from_failure()</div><div class="ttdoc">Indicate a failure to allocate memory for secondaries.</div><div class="ttdef"><b>Definition:</b> Interaction.hh:139</div></div>
 <div class="ttc" id="astructceleritas_1_1_secondary_html"><div class="ttname"><a href="../../d6/d91/structceleritas_1_1_secondary.html">celeritas::Secondary</a></div><div class="ttdoc">New particle created via an Interaction.</div><div class="ttdef"><b>Definition:</b> Secondary.hh:24</div></div>
 </div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa1077c44946ae7f76058b8be47b33a4f" name="aa1077c44946ae7f76058b8be47b33a4f"></a>

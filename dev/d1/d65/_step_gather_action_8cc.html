@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -85,6 +86,7 @@ $(function() {
 <code>#include &quot;<a class="el" href="../../d5/d10/_assert_8hh.html">corecel/Assert.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../db/dc5/_macros_8hh.html">corecel/Macros.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d3/de4/_range_8hh.html">corecel/cont/Range.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d8a/corecel_2io_2_logger_8hh.html">corecel/io/Logger.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d5d/_multi_exception_handler_8hh.html">corecel/sys/MultiExceptionHandler.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d7/de3/_core_track_data_8hh.html">celeritas/global/CoreTrackData.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d9/dec/_step_data_8hh.html">celeritas/user/StepData.hh</a>&quot;</code><br />
@@ -97,7 +99,51 @@ template&lt;StepPoint P&gt; </td></tr>
 <tr class="memitem:a08648af04e41247acc6e4a1556496736"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>celeritas::detail::step_gather_device</b> (CoreRef&lt; MemSpace::device &gt; const  &amp;core, DeviceCRef&lt; StepParamsData &gt; const  &amp;step_params, DeviceRef&lt; StepStateData &gt; const  &amp;step_state)</td></tr>
 <tr class="memdesc:a08648af04e41247acc6e4a1556496736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launch the action on device. <br /></td></tr>
 <tr class="separator:a08648af04e41247acc6e4a1556496736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed1f87c1468b57fd26a1b053ef65b860"><td class="memTemplParams" colspan="2">template&lt;MemSpace M&gt; </td></tr>
+<tr class="memitem:aed1f87c1468b57fd26a1b053ef65b860"><td class="memTemplItemLeft" align="right" valign="top">StepStateData&lt; Ownership::reference, M &gt; const &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d65/_step_gather_action_8cc.html#aed1f87c1468b57fd26a1b053ef65b860">celeritas::detail::get_stream_state</a> (CoreRef&lt; M &gt; const &amp;core, StepStorage *storage)</td></tr>
+<tr class="memdesc:aed1f87c1468b57fd26a1b053ef65b860"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the stream-local step state data, allocating if needed.  <a href="../../d1/d65/_step_gather_action_8cc.html#aed1f87c1468b57fd26a1b053ef65b860">More...</a><br /></td></tr>
+<tr class="separator:aed1f87c1468b57fd26a1b053ef65b860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adef16cd340e104713bf12e4a1bb4bcbf"><td class="memItemLeft" align="right" valign="top"><a id="adef16cd340e104713bf12e4a1bb4bcbf" name="adef16cd340e104713bf12e4a1bb4bcbf"></a>
+template StepStateData&lt; Ownership::reference, MemSpace::host &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::get_stream_state</b> (CoreRef&lt; MemSpace::host &gt; const &amp;, StepStorage *)</td></tr>
+<tr class="separator:adef16cd340e104713bf12e4a1bb4bcbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1033deb324c24870edcd42abd8c723a"><td class="memItemLeft" align="right" valign="top"><a id="ac1033deb324c24870edcd42abd8c723a" name="ac1033deb324c24870edcd42abd8c723a"></a>
+template StepStateData&lt; Ownership::reference, MemSpace::device &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::detail::get_stream_state</b> (CoreRef&lt; MemSpace::device &gt; const &amp;, StepStorage *)</td></tr>
+<tr class="separator:ac1033deb324c24870edcd42abd8c723a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aed1f87c1468b57fd26a1b053ef65b860" name="aed1f87c1468b57fd26a1b053ef65b860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed1f87c1468b57fd26a1b053ef65b860">&#9670;&#160;</a></span>get_stream_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MemSpace M&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">StepStateData&lt; Ownership::reference, M &gt; const  &amp; celeritas::detail::get_stream_state </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreRef</a>&lt; M &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>core</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d3/d31/structceleritas_1_1detail_1_1_step_storage.html">StepStorage</a> *&#160;</td>
+          <td class="paramname"><em>storage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a reference to the stream-local step state data, allocating if needed. </p>
+<p >This is thread-safe and allocates storage on demand for each stream <em>and</em> device type. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

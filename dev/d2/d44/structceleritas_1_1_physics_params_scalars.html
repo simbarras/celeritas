@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -100,6 +101,10 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () const</td></tr>
 <tr class="memdesc:a4ca85efc70f657bb03f0487f6258de57"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if assigned. <br /></td></tr>
 <tr class="separator:a4ca85efc70f657bb03f0487f6258de57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad1c750493bf86ead7a2ed6e696332a9"><td class="memItemLeft" align="right" valign="top"><a id="aad1c750493bf86ead7a2ed6e696332a9" name="aad1c750493bf86ead7a2ed6e696332a9"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a98b21e11852c06d3845c53dd5df84797">ActionId</a>&#160;</td><td class="memItemRight" valign="bottom"><b>msc_action</b> () const</td></tr>
+<tr class="memdesc:aad1c750493bf86ead7a2ed6e696332a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop early due to MSC limitation. <br /></td></tr>
+<tr class="separator:aad1c750493bf86ead7a2ed6e696332a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8679a26d8a358c313772d312a0e5e3de"><td class="memItemLeft" align="right" valign="top"><a id="a8679a26d8a358c313772d312a0e5e3de" name="a8679a26d8a358c313772d312a0e5e3de"></a>
 <a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a98b21e11852c06d3845c53dd5df84797">ActionId</a>&#160;</td><td class="memItemRight" valign="bottom"><b>range_action</b> () const</td></tr>
 <tr class="memdesc:a8679a26d8a358c313772d312a0e5e3de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop early due to range limitation. <br /></td></tr>
@@ -143,10 +148,10 @@ ModelId::size_type&#160;</td><td class="memItemRight" valign="bottom"><b>num_mod
 <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>min_eprime_over_e</b> {}</td></tr>
 <tr class="memdesc:ad5b57ce2701406ede4baa333ae42f060"><td class="mdescLeft">&#160;</td><td class="mdescRight">xi [unitless] <br /></td></tr>
 <tr class="separator:ad5b57ce2701406ede4baa333ae42f060"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71b513a5e2ff9c98e04f71c59f6e7615"><td class="memItemLeft" align="right" valign="top"><a id="a71b513a5e2ff9c98e04f71c59f6e7615" name="a71b513a5e2ff9c98e04f71c59f6e7615"></a>
-<a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eloss_calc_limit</b> {}</td></tr>
-<tr class="memdesc:a71b513a5e2ff9c98e04f71c59f6e7615"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lowest energy for eloss calculation. <br /></td></tr>
-<tr class="separator:a71b513a5e2ff9c98e04f71c59f6e7615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ff5530e9bc59292fd09bfe80a18d8c7"><td class="memItemLeft" align="right" valign="top"><a id="a9ff5530e9bc59292fd09bfe80a18d8c7" name="a9ff5530e9bc59292fd09bfe80a18d8c7"></a>
+<a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lowest_electron_energy</b> {}</td></tr>
+<tr class="memdesc:a9ff5530e9bc59292fd09bfe80a18d8c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lowest e-/e+ kinetic energy. <br /></td></tr>
+<tr class="separator:a9ff5530e9bc59292fd09bfe80a18d8c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a956b2cb7dc332fdde8ca2f5db5f3775e"><td class="memItemLeft" align="right" valign="top"><a id="a956b2cb7dc332fdde8ca2f5db5f3775e" name="a956b2cb7dc332fdde8ca2f5db5f3775e"></a>
 <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>linear_loss_limit</b> {}</td></tr>
 <tr class="memdesc:a956b2cb7dc332fdde8ca2f5db5f3775e"><td class="mdescLeft">&#160;</td><td class="mdescRight">For scaled range calculation. <br /></td></tr>

@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -91,7 +92,7 @@ Inheritance diagram for celeritas::MuBremsstrahlungModel:</div>
  <div class="center">
   <img src="../../db/d88/classceleritas_1_1_mu_bremsstrahlung_model.png" usemap="#celeritas::MuBremsstrahlungModel_map" alt=""/>
   <map id="celeritas::MuBremsstrahlungModel_map" name="celeritas::MuBremsstrahlungModel_map">
-<area href="../../dc/d52/classceleritas_1_1_model.html" title="Abstract base class representing a physics model." alt="celeritas::Model" shape="rect" coords="0,112,206,136"/>
+<area href="../../dc/d52/classceleritas_1_1_model.html" title="Abstract base class representing a physics model with a discrete action." alt="celeritas::Model" shape="rect" coords="0,112,206,136"/>
 <area href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html" title="Interface for an action that launches a kernel or performs an action." alt="celeritas::ExplicitActionInterface" shape="rect" coords="0,56,206,80"/>
 <area href="../../d7/d6f/classceleritas_1_1_action_interface.html" title="Pure abstract interface for an end-of-step action." alt="celeritas::ActionInterface" shape="rect" coords="0,0,206,24"/>
   </map>
@@ -99,8 +100,9 @@ Inheritance diagram for celeritas::MuBremsstrahlungModel:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a524b9ad22d054dbf424907aad48d242c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d88/classceleritas_1_1_mu_bremsstrahlung_model.html#a524b9ad22d054dbf424907aad48d242c">SPConstImported</a> = std::shared_ptr&lt; <a class="el" href="../../d6/d48/classceleritas_1_1_imported_processes.html">ImportedProcesses</a> const  &gt;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a524b9ad22d054dbf424907aad48d242c"><td class="memItemLeft" align="right" valign="top"><a id="a524b9ad22d054dbf424907aad48d242c" name="a524b9ad22d054dbf424907aad48d242c"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstImported</b> = std::shared_ptr&lt; <a class="el" href="../../d6/d48/classceleritas_1_1_imported_processes.html">ImportedProcesses</a> const  &gt;</td></tr>
 <tr class="separator:a524b9ad22d054dbf424907aad48d242c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classceleritas_1_1_model"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classceleritas_1_1_model')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../dc/d52/classceleritas_1_1_model.html">celeritas::Model</a></td></tr>
 <tr class="memitem:a67885e83c5523f670dedbbd36f891edb inherit pub_types_classceleritas_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a67885e83c5523f670dedbbd36f891edb" name="a67885e83c5523f670dedbbd36f891edb"></a>
@@ -126,7 +128,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>CoreDeviceRef</b> = 
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a355fe980852b5fa9e4737cb0217d5052"><td class="memItemLeft" align="right" valign="top"><a id="a355fe980852b5fa9e4737cb0217d5052" name="a355fe980852b5fa9e4737cb0217d5052"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MuBremsstrahlungModel</b> (<a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a98b21e11852c06d3845c53dd5df84797">ActionId</a> id, <a class="el" href="../../d8/d0b/classceleritas_1_1_particle_params.html">ParticleParams</a> const &amp;particles, <a class="el" href="../../db/d88/classceleritas_1_1_mu_bremsstrahlung_model.html#a524b9ad22d054dbf424907aad48d242c">SPConstImported</a> data)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MuBremsstrahlungModel</b> (<a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a98b21e11852c06d3845c53dd5df84797">ActionId</a> id, <a class="el" href="../../d8/d0b/classceleritas_1_1_particle_params.html">ParticleParams</a> const &amp;particles, SPConstImported data)</td></tr>
 <tr class="memdesc:a355fe980852b5fa9e4737cb0217d5052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from model ID and other necessary data. <br /></td></tr>
 <tr class="separator:a355fe980852b5fa9e4737cb0217d5052"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacf3018f0d42243fbffef5f9f4fb58fb"><td class="memItemLeft" align="right" valign="top">SetApplicability&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d88/classceleritas_1_1_mu_bremsstrahlung_model.html#aacf3018f0d42243fbffef5f9f4fb58fb">applicability</a> () const final</td></tr>
@@ -182,23 +184,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Set up and launch the Muon Bremsstrahlung model interaction. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a524b9ad22d054dbf424907aad48d242c" name="a524b9ad22d054dbf424907aad48d242c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a524b9ad22d054dbf424907aad48d242c">&#9670;&#160;</a></span>SPConstImported</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../db/d88/classceleritas_1_1_mu_bremsstrahlung_model.html#a524b9ad22d054dbf424907aad48d242c">celeritas::MuBremsstrahlungModel::SPConstImported</a> =  std::shared_ptr&lt;<a class="el" href="../../d6/d48/classceleritas_1_1_imported_processes.html">ImportedProcesses</a> const&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3ac12573219a4b4420a3f9a1ca11831e" name="a3ac12573219a4b4420a3f9a1ca11831e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3ac12573219a4b4420a3f9a1ca11831e">&#9670;&#160;</a></span>action_id()</h2>
 

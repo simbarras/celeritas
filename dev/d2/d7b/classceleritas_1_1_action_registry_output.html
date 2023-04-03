@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -97,8 +98,9 @@ Inheritance diagram for celeritas::ActionRegistryOutput:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:ad488d5536a1390e927959a72d5bcc4f2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d7b/classceleritas_1_1_action_registry_output.html#ad488d5536a1390e927959a72d5bcc4f2">SPConstActionRegistry</a> = std::shared_ptr&lt; <a class="el" href="../../d4/de4/classceleritas_1_1_action_registry.html">ActionRegistry</a> const  &gt;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:ad488d5536a1390e927959a72d5bcc4f2"><td class="memItemLeft" align="right" valign="top"><a id="ad488d5536a1390e927959a72d5bcc4f2" name="ad488d5536a1390e927959a72d5bcc4f2"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstActionRegistry</b> = std::shared_ptr&lt; <a class="el" href="../../d4/de4/classceleritas_1_1_action_registry.html">ActionRegistry</a> const  &gt;</td></tr>
 <tr class="separator:ad488d5536a1390e927959a72d5bcc4f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classceleritas_1_1_output_interface"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classceleritas_1_1_output_interface')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../d1/d7c/classceleritas_1_1_output_interface.html">celeritas::OutputInterface</a></td></tr>
 <tr class="memitem:a018e207aa7411123505fbaf08fd1c3f1 inherit pub_types_classceleritas_1_1_output_interface"><td class="memItemLeft" align="right" valign="top"><a id="a018e207aa7411123505fbaf08fd1c3f1" name="a018e207aa7411123505fbaf08fd1c3f1"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7c/classceleritas_1_1_output_interface.html#a018e207aa7411123505fbaf08fd1c3f1">Category</a> { <br />
@@ -116,7 +118,7 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a899e43457caf2f111da8a9288863edc4"><td class="memItemLeft" align="right" valign="top"><a id="a899e43457caf2f111da8a9288863edc4" name="a899e43457caf2f111da8a9288863edc4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ActionRegistryOutput</b> (<a class="el" href="../../d2/d7b/classceleritas_1_1_action_registry_output.html#ad488d5536a1390e927959a72d5bcc4f2">SPConstActionRegistry</a> actions)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ActionRegistryOutput</b> (SPConstActionRegistry actions)</td></tr>
 <tr class="memdesc:a899e43457caf2f111da8a9288863edc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a shared action manager. <br /></td></tr>
 <tr class="separator:a899e43457caf2f111da8a9288863edc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2fcef8e389120d58c68bd2d5b47ec51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d7c/classceleritas_1_1_output_interface.html#a018e207aa7411123505fbaf08fd1c3f1">Category</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d7b/classceleritas_1_1_action_registry_output.html#aa2fcef8e389120d58c68bd2d5b47ec51">category</a> () const final</td></tr>
@@ -139,23 +141,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Save action manager data. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ad488d5536a1390e927959a72d5bcc4f2" name="ad488d5536a1390e927959a72d5bcc4f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad488d5536a1390e927959a72d5bcc4f2">&#9670;&#160;</a></span>SPConstActionRegistry</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d2/d7b/classceleritas_1_1_action_registry_output.html#ad488d5536a1390e927959a72d5bcc4f2">celeritas::ActionRegistryOutput::SPConstActionRegistry</a> =  std::shared_ptr&lt;<a class="el" href="../../d4/de4/classceleritas_1_1_action_registry.html">ActionRegistry</a> const&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa2fcef8e389120d58c68bd2d5b47ec51" name="aa2fcef8e389120d58c68bd2d5b47ec51"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa2fcef8e389120d58c68bd2d5b47ec51">&#9670;&#160;</a></span>category()</h2>
 

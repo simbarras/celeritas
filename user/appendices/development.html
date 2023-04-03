@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Development Guide &mdash; Celeritas v0.3.0-dev-24+65ba1f71 documentation</title>
+  <title>Development Guide &mdash; Celeritas v0.3.0-dev.62+f351e714 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -21,7 +21,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Administration" href="administration.html" />
-    <link rel="prev" title="Release History" href="release-history.html" /> 
+    <link rel="prev" title="Version 0.1.5" href="release-history/v0.1.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -30,10 +30,10 @@
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
             <a href="../index.html" class="icon icon-home"> Celeritas
-            <img src="../_static/celeritas-thumbnail.png" class="logo" alt="Logo"/>
+            <img src="../_static/celeritas-square.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.3.1-dev
+                0.3.0-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -274,9 +274,9 @@ integer identifiers that aren’t supposed to be arithmetical.</p></li>
 <ul class="simple">
 <li><p>Random number sampling: write a unit sphere sampling functor instead of
 replicating a polar-to-Cartesian transform in a thousand places.</p></li>
-<li><p>Cell IDs: Opaque IDs add type safety so that you can’t accidentally convert a
-cell identifier into a double or switch a cell and material ID. It also makes
-code more readable of course.</p></li>
+<li><p>Volume IDs: Opaque IDs add type safety so that you can’t accidentally convert
+a volume identifier into a double or switch a volume and material ID. It also
+makes code more readable of course.</p></li>
 </ul>
 <p>Encapsulation is also useful for code reuse. Always avoid copy-pasting code, as
 it means potentially duplicating bugs, duplicating the amount of work needed
@@ -564,7 +564,7 @@ depends on particle track state).</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="release-history.html" class="btn btn-neutral float-left" title="Release History" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="release-history/v0.1.html" class="btn btn-neutral float-left" title="Version 0.1.5" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="administration.html" class="btn btn-neutral float-right" title="Administration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

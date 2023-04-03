@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -98,10 +99,12 @@ Inheritance diagram for celeritas::OutputInterfaceAdapter&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:acb4848db056469d06d50453031e24030"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html#acb4848db056469d06d50453031e24030">SPConstT</a> = std::shared_ptr&lt; T const  &gt;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:acb4848db056469d06d50453031e24030"><td class="memItemLeft" align="right" valign="top"><a id="acb4848db056469d06d50453031e24030" name="acb4848db056469d06d50453031e24030"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstT</b> = std::shared_ptr&lt; T const  &gt;</td></tr>
 <tr class="separator:acb4848db056469d06d50453031e24030"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e5620c4906225075dbc93f435fceb95"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html#a6e5620c4906225075dbc93f435fceb95">SPThis</a> = std::shared_ptr&lt; <a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html">OutputInterfaceAdapter</a>&lt; T &gt; &gt;</td></tr>
+<tr class="memitem:a6e5620c4906225075dbc93f435fceb95"><td class="memItemLeft" align="right" valign="top"><a id="a6e5620c4906225075dbc93f435fceb95" name="a6e5620c4906225075dbc93f435fceb95"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SPThis</b> = std::shared_ptr&lt; <a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html">OutputInterfaceAdapter</a>&lt; T &gt; &gt;</td></tr>
 <tr class="separator:a6e5620c4906225075dbc93f435fceb95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classceleritas_1_1_output_interface"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classceleritas_1_1_output_interface')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../d1/d7c/classceleritas_1_1_output_interface.html">celeritas::OutputInterface</a></td></tr>
 <tr class="memitem:a018e207aa7411123505fbaf08fd1c3f1 inherit pub_types_classceleritas_1_1_output_interface"><td class="memItemLeft" align="right" valign="top"><a id="a018e207aa7411123505fbaf08fd1c3f1" name="a018e207aa7411123505fbaf08fd1c3f1"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7c/classceleritas_1_1_output_interface.html#a018e207aa7411123505fbaf08fd1c3f1">Category</a> { <br />
@@ -119,7 +122,7 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aada784f04f9631ae2ad452e74733bfd4"><td class="memItemLeft" align="right" valign="top"><a id="aada784f04f9631ae2ad452e74733bfd4" name="aada784f04f9631ae2ad452e74733bfd4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>OutputInterfaceAdapter</b> (<a class="el" href="../../d1/d7c/classceleritas_1_1_output_interface.html#a018e207aa7411123505fbaf08fd1c3f1">Category</a> cat, std::string <a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html#a59d1e68e1400bd4fd626f8007f6b0842">label</a>, <a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html#acb4848db056469d06d50453031e24030">SPConstT</a> obj)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>OutputInterfaceAdapter</b> (<a class="el" href="../../d1/d7c/classceleritas_1_1_output_interface.html#a018e207aa7411123505fbaf08fd1c3f1">Category</a> cat, std::string <a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html#a59d1e68e1400bd4fd626f8007f6b0842">label</a>, SPConstT obj)</td></tr>
 <tr class="memdesc:aada784f04f9631ae2ad452e74733bfd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from category, label, and shared pointer. <br /></td></tr>
 <tr class="separator:aada784f04f9631ae2ad452e74733bfd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef4f1523c846051eea90f142f9bb165e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d7c/classceleritas_1_1_output_interface.html#a018e207aa7411123505fbaf08fd1c3f1">Category</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html#aef4f1523c846051eea90f142f9bb165e">category</a> () const final</td></tr>
@@ -142,11 +145,11 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a9cd2492bf6f0e39baac7627a012a4b13"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html#a6e5620c4906225075dbc93f435fceb95">SPThis</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html#a9cd2492bf6f0e39baac7627a012a4b13">from_const_ref</a> (<a class="el" href="../../d1/d7c/classceleritas_1_1_output_interface.html#a018e207aa7411123505fbaf08fd1c3f1">Category</a> cat, std::string <a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html#a59d1e68e1400bd4fd626f8007f6b0842">label</a>, T const &amp;obj)</td></tr>
+<tr class="memitem:a9cd2492bf6f0e39baac7627a012a4b13"><td class="memItemLeft" align="right" valign="top">static SPThis&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html#a9cd2492bf6f0e39baac7627a012a4b13">from_const_ref</a> (<a class="el" href="../../d1/d7c/classceleritas_1_1_output_interface.html#a018e207aa7411123505fbaf08fd1c3f1">Category</a> cat, std::string <a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html#a59d1e68e1400bd4fd626f8007f6b0842">label</a>, T const &amp;obj)</td></tr>
 <tr class="memdesc:a9cd2492bf6f0e39baac7627a012a4b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a long-lived const reference.  <a href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html#a9cd2492bf6f0e39baac7627a012a4b13">More...</a><br /></td></tr>
 <tr class="separator:a9cd2492bf6f0e39baac7627a012a4b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03d9b6e3cd398b6c5ae51fa8297f2a97"><td class="memItemLeft" align="right" valign="top"><a id="a03d9b6e3cd398b6c5ae51fa8297f2a97" name="a03d9b6e3cd398b6c5ae51fa8297f2a97"></a>
-static <a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html#a6e5620c4906225075dbc93f435fceb95">SPThis</a>&#160;</td><td class="memItemRight" valign="bottom"><b>from_rvalue_ref</b> (<a class="el" href="../../d1/d7c/classceleritas_1_1_output_interface.html#a018e207aa7411123505fbaf08fd1c3f1">Category</a> cat, std::string <a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html#a59d1e68e1400bd4fd626f8007f6b0842">label</a>, T &amp;&amp;obj)</td></tr>
+static SPThis&#160;</td><td class="memItemRight" valign="bottom"><b>from_rvalue_ref</b> (<a class="el" href="../../d1/d7c/classceleritas_1_1_output_interface.html#a018e207aa7411123505fbaf08fd1c3f1">Category</a> cat, std::string <a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html#a59d1e68e1400bd4fd626f8007f6b0842">label</a>, T &amp;&amp;obj)</td></tr>
 <tr class="memdesc:a03d9b6e3cd398b6c5ae51fa8297f2a97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct by capturing an object. <br /></td></tr>
 <tr class="separator:a03d9b6e3cd398b6c5ae51fa8297f2a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -154,42 +157,7 @@ static <a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adap
 <div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
 class celeritas::OutputInterfaceAdapter&lt; T &gt;</div><p >Adapter class for writing a JSON-serializable data to output. </p>
 <p >This class is to be used only when JSON is available and when a <code>to_json</code> free function has been defined for <code>T</code>. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="acb4848db056469d06d50453031e24030" name="acb4848db056469d06d50453031e24030"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb4848db056469d06d50453031e24030">&#9670;&#160;</a></span>SPConstT</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html">celeritas::OutputInterfaceAdapter</a>&lt; T &gt;::SPConstT =  std::shared_ptr&lt;T const&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="a6e5620c4906225075dbc93f435fceb95" name="a6e5620c4906225075dbc93f435fceb95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e5620c4906225075dbc93f435fceb95">&#9670;&#160;</a></span>SPThis</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html">celeritas::OutputInterfaceAdapter</a>&lt; T &gt;::SPThis =  std::shared_ptr&lt;<a class="el" href="../../d4/dab/classceleritas_1_1_output_interface_adapter.html">OutputInterfaceAdapter</a>&lt;T&gt; &gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aef4f1523c846051eea90f142f9bb165e" name="aef4f1523c846051eea90f142f9bb165e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aef4f1523c846051eea90f142f9bb165e">&#9670;&#160;</a></span>category()</h2>
 

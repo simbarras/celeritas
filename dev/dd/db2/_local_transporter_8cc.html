@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -78,18 +79,23 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d3/d46/_local_transporter_8hh.html">LocalTransporter.hh</a>&quot;</code><br />
+<code>#include &lt;csignal&gt;</code><br />
 <code>#include &lt;type_traits&gt;</code><br />
 <code>#include &lt;CLHEP/Units/SystemOfUnits.h&gt;</code><br />
 <code>#include &lt;G4ParticleDefinition.hh&gt;</code><br />
 <code>#include &lt;G4ThreeVector.hh&gt;</code><br />
+<code>#include &lt;G4Track.hh&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../df/dbd/_span_8hh.html">corecel/cont/Span.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d2/d8a/corecel_2io_2_logger_8hh.html">corecel/io/Logger.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../df/dfb/_device_8hh.html">corecel/sys/Device.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/d27/_scoped_signal_handler_8hh.html">corecel/sys/ScopedSignalHandler.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../de/d40/_quantities_8hh.html">celeritas/Quantities.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d1/de0/_p_d_g_number_8hh.html">celeritas/phys/PDGNumber.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d7/d90/_particle_params_8hh.html">celeritas/phys/ParticleParams.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d0/d8b/_setup_options_8hh.html">SetupOptions.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d7/d8f/_shared_params_8hh.html">SharedParams.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/d54/_convert_8hh.html">detail/Convert.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d19/_hit_manager_8hh.html">detail/HitManager.hh</a>&quot;</code><br />
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

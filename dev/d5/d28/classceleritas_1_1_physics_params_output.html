@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -97,8 +98,9 @@ Inheritance diagram for celeritas::PhysicsParamsOutput:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:ac6e842c469c9d5798aa2e9ed2c683957"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d28/classceleritas_1_1_physics_params_output.html#ac6e842c469c9d5798aa2e9ed2c683957">SPConstPhysicsParams</a> = std::shared_ptr&lt; <a class="el" href="../../db/da1/classceleritas_1_1_physics_params.html">PhysicsParams</a> const  &gt;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:ac6e842c469c9d5798aa2e9ed2c683957"><td class="memItemLeft" align="right" valign="top"><a id="ac6e842c469c9d5798aa2e9ed2c683957" name="ac6e842c469c9d5798aa2e9ed2c683957"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstPhysicsParams</b> = std::shared_ptr&lt; <a class="el" href="../../db/da1/classceleritas_1_1_physics_params.html">PhysicsParams</a> const  &gt;</td></tr>
 <tr class="separator:ac6e842c469c9d5798aa2e9ed2c683957"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classceleritas_1_1_output_interface"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classceleritas_1_1_output_interface')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../d1/d7c/classceleritas_1_1_output_interface.html">celeritas::OutputInterface</a></td></tr>
 <tr class="memitem:a018e207aa7411123505fbaf08fd1c3f1 inherit pub_types_classceleritas_1_1_output_interface"><td class="memItemLeft" align="right" valign="top"><a id="a018e207aa7411123505fbaf08fd1c3f1" name="a018e207aa7411123505fbaf08fd1c3f1"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7c/classceleritas_1_1_output_interface.html#a018e207aa7411123505fbaf08fd1c3f1">Category</a> { <br />
@@ -116,8 +118,8 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ade32b5a59c981f9171a3137baec4e7ec"><td class="memItemLeft" align="right" valign="top"><a id="ade32b5a59c981f9171a3137baec4e7ec" name="ade32b5a59c981f9171a3137baec4e7ec"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>PhysicsParamsOutput</b> (<a class="el" href="../../d5/d28/classceleritas_1_1_physics_params_output.html#ac6e842c469c9d5798aa2e9ed2c683957">SPConstPhysicsParams</a> physics)</td></tr>
-<tr class="memdesc:ade32b5a59c981f9171a3137baec4e7ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a shared action manager. <br /></td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>PhysicsParamsOutput</b> (SPConstPhysicsParams physics)</td></tr>
+<tr class="memdesc:ade32b5a59c981f9171a3137baec4e7ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from shared physics data. <br /></td></tr>
 <tr class="separator:ade32b5a59c981f9171a3137baec4e7ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90671c3bfa4efc5a4c7c3aa0d66c9c23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d7c/classceleritas_1_1_output_interface.html#a018e207aa7411123505fbaf08fd1c3f1">Category</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d28/classceleritas_1_1_physics_params_output.html#a90671c3bfa4efc5a4c7c3aa0d66c9c23">category</a> () const final</td></tr>
 <tr class="memdesc:a90671c3bfa4efc5a4c7c3aa0d66c9c23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Category of data to write.  <a href="../../d5/d28/classceleritas_1_1_physics_params_output.html#a90671c3bfa4efc5a4c7c3aa0d66c9c23">More...</a><br /></td></tr>
@@ -139,23 +141,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Save detailed debugging information about the physics in use. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ac6e842c469c9d5798aa2e9ed2c683957" name="ac6e842c469c9d5798aa2e9ed2c683957"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6e842c469c9d5798aa2e9ed2c683957">&#9670;&#160;</a></span>SPConstPhysicsParams</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d5/d28/classceleritas_1_1_physics_params_output.html#ac6e842c469c9d5798aa2e9ed2c683957">celeritas::PhysicsParamsOutput::SPConstPhysicsParams</a> =  std::shared_ptr&lt;<a class="el" href="../../db/da1/classceleritas_1_1_physics_params.html">PhysicsParams</a> const&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a90671c3bfa4efc5a4c7c3aa0d66c9c23" name="a90671c3bfa4efc5a4c7c3aa0d66c9c23"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a90671c3bfa4efc5a4c7c3aa0d66c9c23">&#9670;&#160;</a></span>category()</h2>
 

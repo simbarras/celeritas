@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -88,15 +89,17 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a301799d20044cec4a87fd7c3fd063153"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2a/classceleritas_1_1_generate_canonical.html#a301799d20044cec4a87fd7c3fd063153">real_type</a> = RealType</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a301799d20044cec4a87fd7c3fd063153"><td class="memItemLeft" align="right" valign="top"><a id="a301799d20044cec4a87fd7c3fd063153" name="a301799d20044cec4a87fd7c3fd063153"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>real_type</b> = RealType</td></tr>
 <tr class="separator:a301799d20044cec4a87fd7c3fd063153"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2ef81eca3d5dad722894d5593888847"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2a/classceleritas_1_1_generate_canonical.html#ad2ef81eca3d5dad722894d5593888847">result_type</a> = <a class="el" href="../../d2/d2a/classceleritas_1_1_generate_canonical.html#a301799d20044cec4a87fd7c3fd063153">real_type</a></td></tr>
+<tr class="memitem:ad2ef81eca3d5dad722894d5593888847"><td class="memItemLeft" align="right" valign="top"><a id="ad2ef81eca3d5dad722894d5593888847" name="ad2ef81eca3d5dad722894d5593888847"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>result_type</b> = real_type</td></tr>
 <tr class="separator:ad2ef81eca3d5dad722894d5593888847"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae9672d0389260aa9ce6bf28f1e2f7dc4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d2a/classceleritas_1_1_generate_canonical.html#ad2ef81eca3d5dad722894d5593888847">result_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2a/classceleritas_1_1_generate_canonical.html#ae9672d0389260aa9ce6bf28f1e2f7dc4">operator()</a> (Generator &amp;rng)</td></tr>
+<tr class="memitem:ae9672d0389260aa9ce6bf28f1e2f7dc4"><td class="memItemLeft" align="right" valign="top">result_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2a/classceleritas_1_1_generate_canonical.html#ae9672d0389260aa9ce6bf28f1e2f7dc4">operator()</a> (Generator &amp;rng)</td></tr>
 <tr class="memdesc:ae9672d0389260aa9ce6bf28f1e2f7dc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate random numbers in [0, 1).  <a href="../../d2/d2a/classceleritas_1_1_generate_canonical.html#ae9672d0389260aa9ce6bf28f1e2f7dc4">More...</a><br /></td></tr>
 <tr class="separator:ae9672d0389260aa9ce6bf28f1e2f7dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -104,42 +107,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class Generator, class RealType = ::celeritas::real_type&gt;<br />
 class celeritas::GenerateCanonical&lt; Generator, RealType &gt;</div><p >Generate random numbers in [0, 1). </p>
 <p >This is essentially an implementation detail; partial specialization can be used to sample using special functions with a given generator. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a301799d20044cec4a87fd7c3fd063153" name="a301799d20044cec4a87fd7c3fd063153"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a301799d20044cec4a87fd7c3fd063153">&#9670;&#160;</a></span>real_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Generator , class RealType  = ::celeritas::real_type&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d2/d2a/classceleritas_1_1_generate_canonical.html">celeritas::GenerateCanonical</a>&lt; Generator, RealType &gt;::real_type =  RealType</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="ad2ef81eca3d5dad722894d5593888847" name="ad2ef81eca3d5dad722894d5593888847"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2ef81eca3d5dad722894d5593888847">&#9670;&#160;</a></span>result_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Generator , class RealType  = ::celeritas::real_type&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d2/d2a/classceleritas_1_1_generate_canonical.html">celeritas::GenerateCanonical</a>&lt; Generator, RealType &gt;::result_type =  <a class="el" href="../../d2/d2a/classceleritas_1_1_generate_canonical.html#a301799d20044cec4a87fd7c3fd063153">real_type</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae9672d0389260aa9ce6bf28f1e2f7dc4" name="ae9672d0389260aa9ce6bf28f1e2f7dc4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae9672d0389260aa9ce6bf28f1e2f7dc4">&#9670;&#160;</a></span>operator()()</h2>
 

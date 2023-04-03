@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -88,10 +89,12 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a28e6c388e688b2aa022e6cf904c2d7ba"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/daf/classceleritas_1_1detail_1_1_locate_alive_launcher.html#a28e6c388e688b2aa022e6cf904c2d7ba">ParamsRef</a> = <a class="el" href="../../d2/d1a/structceleritas_1_1_core_params_data.html">CoreParamsData</a>&lt; <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148ad94c6b535266ab339640e84b2f13f3c1">Ownership::const_reference</a>, M &gt;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a28e6c388e688b2aa022e6cf904c2d7ba"><td class="memItemLeft" align="right" valign="top"><a id="a28e6c388e688b2aa022e6cf904c2d7ba" name="a28e6c388e688b2aa022e6cf904c2d7ba"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ParamsRef</b> = <a class="el" href="../../d2/d1a/structceleritas_1_1_core_params_data.html">CoreParamsData</a>&lt; <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148ad94c6b535266ab339640e84b2f13f3c1">Ownership::const_reference</a>, M &gt;</td></tr>
 <tr class="separator:a28e6c388e688b2aa022e6cf904c2d7ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c8d2e0962afdccaac2252bdf31ea54f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/daf/classceleritas_1_1detail_1_1_locate_alive_launcher.html#a4c8d2e0962afdccaac2252bdf31ea54f">StateRef</a> = <a class="el" href="../../d2/d29/structceleritas_1_1_core_state_data.html">CoreStateData</a>&lt; <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148ab8af13ea9c8fe890c9979a1fa8dbde22">Ownership::reference</a>, M &gt;</td></tr>
+<tr class="memitem:a4c8d2e0962afdccaac2252bdf31ea54f"><td class="memItemLeft" align="right" valign="top"><a id="a4c8d2e0962afdccaac2252bdf31ea54f" name="a4c8d2e0962afdccaac2252bdf31ea54f"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>StateRef</b> = <a class="el" href="../../d2/d29/structceleritas_1_1_core_state_data.html">CoreStateData</a>&lt; <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148ab8af13ea9c8fe890c9979a1fa8dbde22">Ownership::reference</a>, M &gt;</td></tr>
 <tr class="separator:a4c8d2e0962afdccaac2252bdf31ea54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -99,51 +102,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa8e6d955913d4136d37cef39aeeb7bc7"><td class="memItemLeft" align="right" valign="top"><a id="aa8e6d955913d4136d37cef39aeeb7bc7" name="aa8e6d955913d4136d37cef39aeeb7bc7"></a>
 <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>LocateAliveLauncher</b> (<a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreRef</a>&lt; M &gt; const &amp;core_data)</td></tr>
 <tr class="separator:aa8e6d955913d4136d37cef39aeeb7bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a885558681d369b8aac01405412a15c92"><td class="memItemLeft" align="right" valign="top"><a id="a885558681d369b8aac01405412a15c92" name="a885558681d369b8aac01405412a15c92"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="../../d3/d83/_thread_id_8hh.html#acdbd2b3f5402d42bb1349684a00365a4">ThreadId</a> tid) const</td></tr>
-<tr class="memdesc:a885558681d369b8aac01405412a15c92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine which tracks are alive and count secondaries. <br /></td></tr>
-<tr class="separator:a885558681d369b8aac01405412a15c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62b32ed158cd60f2342ed9c56afcf397"><td class="memItemLeft" align="right" valign="top"><a id="a62b32ed158cd60f2342ed9c56afcf397" name="a62b32ed158cd60f2342ed9c56afcf397"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="../../d3/d83/_thread_id_8hh.html#a3fffdf8703eae70bc266e8cd92bf4dd5">TrackSlotId</a> tid) const</td></tr>
+<tr class="memdesc:a62b32ed158cd60f2342ed9c56afcf397"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine which tracks are alive and count secondaries. <br /></td></tr>
+<tr class="separator:a62b32ed158cd60f2342ed9c56afcf397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41f5afea2f39c5dd2cd833fa12697056"><td class="memItemLeft" align="right" valign="top"><a id="a41f5afea2f39c5dd2cd833fa12697056" name="a41f5afea2f39c5dd2cd833fa12697056"></a>
+<a class="el" href="../../db/dc5/_macros_8hh.html#a6432ab370302dc0ea4c1534472544182">CELER_FORCEINLINE_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="../../d3/d83/_thread_id_8hh.html#acdbd2b3f5402d42bb1349684a00365a4">ThreadId</a> tid) const</td></tr>
+<tr class="separator:a41f5afea2f39c5dd2cd833fa12697056"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#af21a33cd854346b7988591378fcfe138">MemSpace</a> M&gt;<br />
 class celeritas::detail::LocateAliveLauncher&lt; M &gt;</div><p >Determine which tracks are alive and count secondaries. </p>
 <p >This finds empty slots in the track vector and counts the number of secondaries created in each interaction. If the track was killed and produced secondaries, the empty track slot is filled with the first secondary. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a28e6c388e688b2aa022e6cf904c2d7ba" name="a28e6c388e688b2aa022e6cf904c2d7ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28e6c388e688b2aa022e6cf904c2d7ba">&#9670;&#160;</a></span>ParamsRef</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#af21a33cd854346b7988591378fcfe138">MemSpace</a> M&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d4/daf/classceleritas_1_1detail_1_1_locate_alive_launcher.html">celeritas::detail::LocateAliveLauncher</a>&lt; M &gt;::ParamsRef =  <a class="el" href="../../d2/d1a/structceleritas_1_1_core_params_data.html">CoreParamsData</a>&lt;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148ad94c6b535266ab339640e84b2f13f3c1">Ownership::const_reference</a>, M&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<a id="a4c8d2e0962afdccaac2252bdf31ea54f" name="a4c8d2e0962afdccaac2252bdf31ea54f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c8d2e0962afdccaac2252bdf31ea54f">&#9670;&#160;</a></span>StateRef</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#af21a33cd854346b7988591378fcfe138">MemSpace</a> M&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d4/daf/classceleritas_1_1detail_1_1_locate_alive_launcher.html">celeritas::detail::LocateAliveLauncher</a>&lt; M &gt;::StateRef =  <a class="el" href="../../d2/d29/structceleritas_1_1_core_state_data.html">CoreStateData</a>&lt;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148ab8af13ea9c8fe890c9979a1fa8dbde22">Ownership::reference</a>, M&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="../../d6/de1/_locate_alive_launcher_8hh.html">LocateAliveLauncher.hh</a></li>
 </ul>
 </div><!-- contents -->

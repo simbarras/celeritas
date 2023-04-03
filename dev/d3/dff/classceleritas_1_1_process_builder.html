@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -77,6 +78,7 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="../../d7/ddd/classceleritas_1_1_process_builder-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">celeritas::ProcessBuilder Class Reference</div></div>
 </div><!--header-->
@@ -89,8 +91,6 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d68/structceleritas_1_1_process_builder_1_1_options.html">Options</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/da0/structceleritas_1_1_process_builder_1_1_user_build_input.html">UserBuildInput</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input argument for user-provided process construction.  <a href="../../d0/da0/structceleritas_1_1_process_builder_1_1_user_build_input.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -101,6 +101,9 @@ Public Types</h2></td></tr>
 <tr class="memitem:a7de29e525f36c0439f28c87dbe2827cb"><td class="memItemLeft" align="right" valign="top"><a id="a7de29e525f36c0439f28c87dbe2827cb" name="a7de29e525f36c0439f28c87dbe2827cb"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>IPC</b> = <a class="el" href="../../de/de8/_import_process_8hh.html#aee9f70862dd95ace9074262973ad3904">ImportProcessClass</a></td></tr>
 <tr class="separator:a7de29e525f36c0439f28c87dbe2827cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a573e0cebb21b69236e1f338beba240fa"><td class="memItemLeft" align="right" valign="top"><a id="a573e0cebb21b69236e1f338beba240fa" name="a573e0cebb21b69236e1f338beba240fa"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Options</b> = <a class="el" href="../../d4/d26/structceleritas_1_1_process_builder_options.html">ProcessBuilderOptions</a></td></tr>
+<tr class="separator:a573e0cebb21b69236e1f338beba240fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ef2d594a76cb7aa356fb3e1b12dca26"><td class="memItemLeft" align="right" valign="top"><a id="a5ef2d594a76cb7aa356fb3e1b12dca26" name="a5ef2d594a76cb7aa356fb3e1b12dca26"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>SPProcess</b> = std::shared_ptr&lt; <a class="el" href="../../de/db8/classceleritas_1_1_process.html">Process</a> &gt;</td></tr>
 <tr class="separator:a5ef2d594a76cb7aa356fb3e1b12dca26"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,11 +126,11 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>UserBuildMap</b> = s
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0e3a8d2329d86b5fc6e58f6154924a6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dff/classceleritas_1_1_process_builder.html#a0e3a8d2329d86b5fc6e58f6154924a6d">ProcessBuilder</a> (<a class="el" href="../../d2/dd6/structceleritas_1_1_import_data.html">ImportData</a> const &amp;data, SPConstParticle particle, SPConstMaterial material, UserBuildMap user_build, <a class="el" href="../../df/d68/structceleritas_1_1_process_builder_1_1_options.html">Options</a> options)</td></tr>
+<tr class="memitem:a0e3a8d2329d86b5fc6e58f6154924a6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dff/classceleritas_1_1_process_builder.html#a0e3a8d2329d86b5fc6e58f6154924a6d">ProcessBuilder</a> (<a class="el" href="../../d2/dd6/structceleritas_1_1_import_data.html">ImportData</a> const &amp;data, SPConstParticle particle, SPConstMaterial material, UserBuildMap user_build, <a class="el" href="../../d4/d26/structceleritas_1_1_process_builder_options.html">Options</a> options)</td></tr>
 <tr class="memdesc:a0e3a8d2329d86b5fc6e58f6154924a6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct imported process data.  <a href="../../d3/dff/classceleritas_1_1_process_builder.html#a0e3a8d2329d86b5fc6e58f6154924a6d">More...</a><br /></td></tr>
 <tr class="separator:a0e3a8d2329d86b5fc6e58f6154924a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0be056f07747af34b110172a5f3f7587"><td class="memItemLeft" align="right" valign="top"><a id="a0be056f07747af34b110172a5f3f7587" name="a0be056f07747af34b110172a5f3f7587"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessBuilder</b> (<a class="el" href="../../d2/dd6/structceleritas_1_1_import_data.html">ImportData</a> const &amp;data, SPConstParticle particle, SPConstMaterial material, <a class="el" href="../../df/d68/structceleritas_1_1_process_builder_1_1_options.html">Options</a> options)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessBuilder</b> (<a class="el" href="../../d2/dd6/structceleritas_1_1_import_data.html">ImportData</a> const &amp;data, SPConstParticle particle, SPConstMaterial material, <a class="el" href="../../d4/d26/structceleritas_1_1_process_builder_options.html">Options</a> options)</td></tr>
 <tr class="memdesc:a0be056f07747af34b110172a5f3f7587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct without custom user builders. <br /></td></tr>
 <tr class="separator:a0be056f07747af34b110172a5f3f7587"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1acba9c5a3ccef67c5aa86c984a7b350"><td class="memItemLeft" align="right" valign="top"><a id="a1acba9c5a3ccef67c5aa86c984a7b350" name="a1acba9c5a3ccef67c5aa86c984a7b350"></a>
@@ -137,6 +140,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a57f96faab4261c81640da82d51aedf44"><td class="memItemLeft" align="right" valign="top">SPProcess&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dff/classceleritas_1_1_process_builder.html#a57f96faab4261c81640da82d51aedf44">operator()</a> (<a class="el" href="../../de/de8/_import_process_8hh.html#aee9f70862dd95ace9074262973ad3904">IPC</a> ipc)</td></tr>
 <tr class="memdesc:a57f96faab4261c81640da82d51aedf44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <code><a class="el" href="../../de/db8/classceleritas_1_1_process.html" title="An interface/factory method for creating models.">Process</a></code> from a given processs class.  <a href="../../d3/dff/classceleritas_1_1_process_builder.html#a57f96faab4261c81640da82d51aedf44">More...</a><br /></td></tr>
 <tr class="separator:a57f96faab4261c81640da82d51aedf44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a3ca997253b7f1ef88ec2a895b07b0f2c"><td class="memItemLeft" align="right" valign="top"><a id="a3ca997253b7f1ef88ec2a895b07b0f2c" name="a3ca997253b7f1ef88ec2a895b07b0f2c"></a>
+static std::set&lt; <a class="el" href="../../de/de8/_import_process_8hh.html#aee9f70862dd95ace9074262973ad3904">IPC</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_all_process_classes</b> (std::vector&lt; <a class="el" href="../../d9/d7e/structceleritas_1_1_import_process.html">ImportProcess</a> &gt; const &amp;processes)</td></tr>
+<tr class="memdesc:a3ca997253b7f1ef88ec2a895b07b0f2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an ordered set of all available processes. <br /></td></tr>
+<tr class="separator:a3ca997253b7f1ef88ec2a895b07b0f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Construct Celeritas EM processes from imported data. </p>
@@ -177,7 +187,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../df/d68/structceleritas_1_1_process_builder_1_1_options.html">Options</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d4/d26/structceleritas_1_1_process_builder_options.html">Options</a>&#160;</td>
           <td class="paramname"><em>options</em>&#160;</td>
         </tr>
         <tr>
@@ -211,7 +221,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construct a <code><a class="el" href="../../de/db8/classceleritas_1_1_process.html" title="An interface/factory method for creating models.">Process</a></code> from a given processs class. </p>
-<p >This may return a null process (with a warning) if the user specifically </p>
+<p >This may return a null process (with a warning) if the user specifically requests that the process be omitted. </p>
 
 </div>
 </div>

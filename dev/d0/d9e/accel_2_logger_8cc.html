@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -82,10 +83,13 @@ $(function() {
 <div class="textblock"><code>#include &quot;<a class="el" href="../../da/d31/accel_2_logger_8hh.html">Logger.hh</a>&quot;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;mutex&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;G4RunManager.hh&gt;</code><br />
 <code>#include &lt;G4Threading.hh&gt;</code><br />
+<code>#include &lt;G4Version.hh&gt;</code><br />
 <code>#include &lt;G4ios.hh&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../de/d02/_geant_setup_8hh.html">celeritas/ext/GeantSetup.hh</a>&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d10/_assert_8hh.html">corecel/Assert.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../de/d2f/_color_utils_8hh.html">corecel/io/ColorUtils.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d2/d8a/corecel_2io_2_logger_8hh.html">corecel/io/Logger.hh</a>&quot;</code><br />
@@ -94,19 +98,19 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a3001e55ff6ed9fc7ca39e8214e91df86"><td class="memItemLeft" align="right" valign="top">Logger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d9e/accel_2_logger_8cc.html#a3001e55ff6ed9fc7ca39e8214e91df86">celeritas::make_mt_logger</a> (G4RunManager const &amp;runman)</td></tr>
-<tr class="memdesc:a3001e55ff6ed9fc7ca39e8214e91df86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a logger that will redirect Celeritas messages through Geant4.  <a href="../../d0/d9e/accel_2_logger_8cc.html#a3001e55ff6ed9fc7ca39e8214e91df86">More...</a><br /></td></tr>
-<tr class="separator:a3001e55ff6ed9fc7ca39e8214e91df86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ab547d3e6f36636d5adc244eb8e5840"><td class="memItemLeft" align="right" valign="top">Logger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d9e/accel_2_logger_8cc.html#a0ab547d3e6f36636d5adc244eb8e5840">celeritas::MakeMTLogger</a> (G4RunManager const &amp;runman)</td></tr>
+<tr class="memdesc:a0ab547d3e6f36636d5adc244eb8e5840"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a logger that will redirect Celeritas messages through Geant4.  <a href="../../d0/d9e/accel_2_logger_8cc.html#a0ab547d3e6f36636d5adc244eb8e5840">More...</a><br /></td></tr>
+<tr class="separator:a0ab547d3e6f36636d5adc244eb8e5840"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a3001e55ff6ed9fc7ca39e8214e91df86" name="a3001e55ff6ed9fc7ca39e8214e91df86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3001e55ff6ed9fc7ca39e8214e91df86">&#9670;&#160;</a></span>make_mt_logger()</h2>
+<a id="a0ab547d3e6f36636d5adc244eb8e5840" name="a0ab547d3e6f36636d5adc244eb8e5840"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ab547d3e6f36636d5adc244eb8e5840">&#9670;&#160;</a></span>MakeMTLogger()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Logger celeritas::make_mt_logger </td>
+          <td class="memname">Logger celeritas::MakeMTLogger </td>
           <td>(</td>
           <td class="paramtype">G4RunManager const &amp;&#160;</td>
           <td class="paramname"><em>runman</em></td><td>)</td>
@@ -117,7 +121,7 @@ Functions</h2></td></tr>
 
 <p>Construct a logger that will redirect Celeritas messages through Geant4. </p>
 <p >This logger writes the current thread (and maximum number of threads) in each output message, and sends each message through the thread-local <code>G4cerr</code>.</p>
-<p >In the <code>main</code> of your application's exectuable, set the "process-local" (MPI-aware) logger: </p><div class="fragment"><div class="line">celeritas::self_logger() = celeritas::make_mt_logger(*run_manager);</div>
+<p >In the <code>main</code> of your application's exectuable, set the "process-local" (MPI-aware) logger: </p><div class="fragment"><div class="line">celeritas::self_logger() = celeritas::MakeMTLogger(*run_manager);</div>
 </div><!-- fragment --> 
 </div>
 </div>

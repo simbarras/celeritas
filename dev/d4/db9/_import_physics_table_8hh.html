@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -93,22 +94,23 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:ade92a0a20d624cf5bb80797e1fe627f3"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db9/_import_physics_table_8hh.html#ade92a0a20d624cf5bb80797e1fe627f3">celeritas::ImportTableType</a> { <br />
-&#160;&#160;<a class="el" href="../../d4/db9/_import_physics_table_8hh.html#ade92a0a20d624cf5bb80797e1fe627f3a21a4b1370e997ac64c3a3ab73b0259c7">dedx</a>
+&#160;&#160;<a class="el" href="../../d4/db9/_import_physics_table_8hh.html#ade92a0a20d624cf5bb80797e1fe627f3a945f3fc449518a73b9f5f32868db466c">lambda</a>
+, <a class="el" href="../../d4/db9/_import_physics_table_8hh.html#ade92a0a20d624cf5bb80797e1fe627f3acc479623cd53fb358d62f310c756711e">lambda_prim</a>
+, <a class="el" href="../../d4/db9/_import_physics_table_8hh.html#ade92a0a20d624cf5bb80797e1fe627f3a21a4b1370e997ac64c3a3ab73b0259c7">dedx</a>
+, <a class="el" href="../../d4/db9/_import_physics_table_8hh.html#ade92a0a20d624cf5bb80797e1fe627f3a37b19816109a32106d109e83bbb3c97d">range</a>
+, <br />
+&#160;&#160;<a class="el" href="../../d4/db9/_import_physics_table_8hh.html#ade92a0a20d624cf5bb80797e1fe627f3add73f856471589a47a611a02e8b00f4e">msc_xs</a>
 , <a class="el" href="../../d4/db9/_import_physics_table_8hh.html#ade92a0a20d624cf5bb80797e1fe627f3a595bd8578eab7401252f185378c82fee">dedx_process</a>
-, <b>dedx_subsec</b>
 , <b>dedx_unrestricted</b>
-, <br />
-&#160;&#160;<b>ionization</b>
-, <b>ionization_subsec</b>
 , <a class="el" href="../../d4/db9/_import_physics_table_8hh.html#ade92a0a20d624cf5bb80797e1fe627f3aa10e0d42e6e94c38d449cbfede72b626">csda_range</a>
-, <b>range</b>
 , <br />
-&#160;&#160;<b>secondary_range</b>
+&#160;&#160;<b>dedx_subsec</b>
+, <b>ionization_subsec</b>
+, <b>secondary_range</b>
 , <a class="el" href="../../d4/db9/_import_physics_table_8hh.html#ade92a0a20d624cf5bb80797e1fe627f3aecfb241470b5a3a2346fcfbaa65da79f">inverse_range</a>
-, <a class="el" href="../../d4/db9/_import_physics_table_8hh.html#ade92a0a20d624cf5bb80797e1fe627f3a945f3fc449518a73b9f5f32868db466c">lambda</a>
-, <a class="el" href="../../d4/db9/_import_physics_table_8hh.html#ade92a0a20d624cf5bb80797e1fe627f3a7e4d57496afc602ce3656a87ae921180">sublambda</a>
 , <br />
-&#160;&#160;<a class="el" href="../../d4/db9/_import_physics_table_8hh.html#ade92a0a20d624cf5bb80797e1fe627f3acc479623cd53fb358d62f310c756711e">lambda_prim</a>
+&#160;&#160;<a class="el" href="../../d4/db9/_import_physics_table_8hh.html#ade92a0a20d624cf5bb80797e1fe627f3a7e4d57496afc602ce3656a87ae921180">sublambda</a>
+, <b>size_</b>
 <br />
  }</td></tr>
 <tr class="memdesc:ade92a0a20d624cf5bb80797e1fe627f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Property being described by the physics table.  <a href="../../d4/db9/_import_physics_table_8hh.html#ade92a0a20d624cf5bb80797e1fe627f3">More...</a><br /></td></tr>
@@ -121,6 +123,10 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="../../d4/db9/_import_physics_table_8hh.html#a784fe5e889a18317c1c1d195ab9d37d3aed4bbaf29595aa2e254bc9ab6fb0977b">cm_inv</a>
 , <a class="el" href="../../d4/db9/_import_physics_table_8hh.html#a784fe5e889a18317c1c1d195ab9d37d3aec8d059cf2e2e49867ec66d71c378859">cm_mev_inv</a>
+, <a class="el" href="../../d4/db9/_import_physics_table_8hh.html#a784fe5e889a18317c1c1d195ab9d37d3a652f7eeaaf5437d2c27e24849ace2bbd">mev_2_per_cm</a>
+, <a class="el" href="../../d4/db9/_import_physics_table_8hh.html#a784fe5e889a18317c1c1d195ab9d37d3a80dbd1a98f40d585f1d264b4ec2e5057">cm_2</a>
+, <br />
+&#160;&#160;<b>size_</b>
 <br />
  }</td></tr>
 <tr class="memdesc:a784fe5e889a18317c1c1d195ab9d37d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Units of a physics table.  <a href="../../d4/db9/_import_physics_table_8hh.html#a784fe5e889a18317c1c1d195ab9d37d3">More...</a><br /></td></tr>
@@ -134,7 +140,7 @@ char const *&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to
 <tr class="separator:ab8dc74d76e621dc1930c50c322a1ee64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3616c50eea5196e7a7d5a7a9fc7b9f1"><td class="memItemLeft" align="right" valign="top"><a id="ad3616c50eea5196e7a7d5a7a9fc7b9f1" name="ad3616c50eea5196e7a7d5a7a9fc7b9f1"></a>
 char const *&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to_cstring</b> (ImportUnits value)</td></tr>
-<tr class="memdesc:ad3616c50eea5196e7a7d5a7a9fc7b9f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the string value for units. <br /></td></tr>
+<tr class="memdesc:ad3616c50eea5196e7a7d5a7a9fc7b9f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a printable label for units. <br /></td></tr>
 <tr class="separator:ad3616c50eea5196e7a7d5a7a9fc7b9f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
@@ -161,7 +167,15 @@ char const *&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to
 <p>Property being described by the physics table. </p>
 <p >These are named based on accessors in G4VEnergyLossProcess, with one new table type, <code>dedx_process</code>, introduced to disambiguate the tables. In Geant4, the <code>dedx</code> table belonging to the ionization process is actually the sum of the de/dx for all processes that contribute to energy loss for the given particle, while the <code>dedx</code> tables for the remaining processes are the per-process energy loss. Here the tables are named to distinguish the summed energy loss (<code>dedx</code>) from the energy loss for an individual process (<code>dedx_process</code>). The <code>ionization</code> table is really just the <code>dedx_process</code> table for ionization, so it is redundant. The <code>range</code> table is calculated from the summed <code>dedx</code> table. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ade92a0a20d624cf5bb80797e1fe627f3a21a4b1370e997ac64c3a3ab73b0259c7" name="ade92a0a20d624cf5bb80797e1fe627f3a21a4b1370e997ac64c3a3ab73b0259c7"></a>dedx&#160;</td><td class="fielddoc"><p >Energy loss summed over processes. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ade92a0a20d624cf5bb80797e1fe627f3a945f3fc449518a73b9f5f32868db466c" name="ade92a0a20d624cf5bb80797e1fe627f3a945f3fc449518a73b9f5f32868db466c"></a>lambda&#160;</td><td class="fielddoc"><p >Macroscopic cross section. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ade92a0a20d624cf5bb80797e1fe627f3acc479623cd53fb358d62f310c756711e" name="ade92a0a20d624cf5bb80797e1fe627f3acc479623cd53fb358d62f310c756711e"></a>lambda_prim&#160;</td><td class="fielddoc"><p >Cross section scaled by energy. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ade92a0a20d624cf5bb80797e1fe627f3a21a4b1370e997ac64c3a3ab73b0259c7" name="ade92a0a20d624cf5bb80797e1fe627f3a21a4b1370e997ac64c3a3ab73b0259c7"></a>dedx&#160;</td><td class="fielddoc"><p >Energy loss summed over processes. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ade92a0a20d624cf5bb80797e1fe627f3a37b19816109a32106d109e83bbb3c97d" name="ade92a0a20d624cf5bb80797e1fe627f3a37b19816109a32106d109e83bbb3c97d"></a>range&#160;</td><td class="fielddoc"><p >Integrated inverse energy loss. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ade92a0a20d624cf5bb80797e1fe627f3add73f856471589a47a611a02e8b00f4e" name="ade92a0a20d624cf5bb80797e1fe627f3add73f856471589a47a611a02e8b00f4e"></a>msc_xs&#160;</td><td class="fielddoc"><p >Scaled transport cross section. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ade92a0a20d624cf5bb80797e1fe627f3a595bd8578eab7401252f185378c82fee" name="ade92a0a20d624cf5bb80797e1fe627f3a595bd8578eab7401252f185378c82fee"></a>dedx_process&#160;</td><td class="fielddoc"><p >Energy loss table for a process. </p>
 </td></tr>
@@ -169,11 +183,7 @@ char const *&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to
 </td></tr>
 <tr><td class="fieldname"><a id="ade92a0a20d624cf5bb80797e1fe627f3aecfb241470b5a3a2346fcfbaa65da79f" name="ade92a0a20d624cf5bb80797e1fe627f3aecfb241470b5a3a2346fcfbaa65da79f"></a>inverse_range&#160;</td><td class="fielddoc"><p >Inverse mapping of range: (range -&gt; energy) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ade92a0a20d624cf5bb80797e1fe627f3a945f3fc449518a73b9f5f32868db466c" name="ade92a0a20d624cf5bb80797e1fe627f3a945f3fc449518a73b9f5f32868db466c"></a>lambda&#160;</td><td class="fielddoc"><p >Macroscopic cross section. </p>
-</td></tr>
 <tr><td class="fieldname"><a id="ade92a0a20d624cf5bb80797e1fe627f3a7e4d57496afc602ce3656a87ae921180" name="ade92a0a20d624cf5bb80797e1fe627f3a7e4d57496afc602ce3656a87ae921180"></a>sublambda&#160;</td><td class="fielddoc"><p >For subcutoff regions. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ade92a0a20d624cf5bb80797e1fe627f3acc479623cd53fb358d62f310c756711e" name="ade92a0a20d624cf5bb80797e1fe627f3acc479623cd53fb358d62f310c756711e"></a>lambda_prim&#160;</td><td class="fielddoc"><p >Cross section scaled by energy. </p>
 </td></tr>
 </table>
 
@@ -212,6 +222,10 @@ char const *&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::to
 <tr><td class="fieldname"><a id="a784fe5e889a18317c1c1d195ab9d37d3aed4bbaf29595aa2e254bc9ab6fb0977b" name="a784fe5e889a18317c1c1d195ab9d37d3aed4bbaf29595aa2e254bc9ab6fb0977b"></a>cm_inv&#160;</td><td class="fielddoc"><p >Macroscopic xs [1/cm]. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a784fe5e889a18317c1c1d195ab9d37d3aec8d059cf2e2e49867ec66d71c378859" name="a784fe5e889a18317c1c1d195ab9d37d3aec8d059cf2e2e49867ec66d71c378859"></a>cm_mev_inv&#160;</td><td class="fielddoc"><p >Macroscopic xs divided by energy [1/cm-MeV]. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a784fe5e889a18317c1c1d195ab9d37d3a652f7eeaaf5437d2c27e24849ace2bbd" name="a784fe5e889a18317c1c1d195ab9d37d3a652f7eeaaf5437d2c27e24849ace2bbd"></a>mev_2_per_cm&#160;</td><td class="fielddoc"><p >Macroscopic xs with energy^2 factored in [MeV^2/cm]. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a784fe5e889a18317c1c1d195ab9d37d3a80dbd1a98f40d585f1d264b4ec2e5057" name="a784fe5e889a18317c1c1d195ab9d37d3a80dbd1a98f40d585f1d264b4ec2e5057"></a>cm_2&#160;</td><td class="fielddoc"><p >Microscopic cross section [cm^2]. </p>
 </td></tr>
 </table>
 

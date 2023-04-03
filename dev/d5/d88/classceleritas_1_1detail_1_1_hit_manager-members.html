@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -83,13 +84,14 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="../../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html#a1d01782de50a913373ecf2c3f5614925">execute</a>(StateHostRef const &amp;) final</td><td class="entry"><a class="el" href="../../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html">celeritas::detail::HitManager</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="../../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html#a5ca7e13a04f50aa6224a65bab3dadc67">execute</a>(StateDeviceRef const &amp;) final</td><td class="entry"><a class="el" href="../../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html">celeritas::detail::HitManager</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html#afcaae9ed7dbb85c061e296d5afa78114">filters</a>() const final</td><td class="entry"><a class="el" href="../../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html">celeritas::detail::HitManager</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html#a1cccfc69bb8a85e1ce38b014d195e8a0">HitManager</a>(GeoParams const &amp;geo, SDSetupOptions const &amp;setup)</td><td class="entry"><a class="el" href="../../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html">celeritas::detail::HitManager</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d6/dc0/classceleritas_1_1_step_interface.html#ada9256c6cc789d3a6ebe0e3862fd3514">MapVolumeDetector</a> typedef</td><td class="entry"><a class="el" href="../../d6/dc0/classceleritas_1_1_step_interface.html">celeritas::StepInterface</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html#a35813a0da1552b3b492f6e14a903f25a">selection</a>() const final</td><td class="entry"><a class="el" href="../../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html">celeritas::detail::HitManager</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d6/dc0/classceleritas_1_1_step_interface.html#ab1a50ef5dcf0d2b72b2d6171bb3092ea">StateDeviceRef</a> typedef</td><td class="entry"><a class="el" href="../../d6/dc0/classceleritas_1_1_step_interface.html">celeritas::StepInterface</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d6/dc0/classceleritas_1_1_step_interface.html#a7e422a75399af8523dbcae5445cf109d">StateHostRef</a> typedef</td><td class="entry"><a class="el" href="../../d6/dc0/classceleritas_1_1_step_interface.html">celeritas::StepInterface</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html#ac3b8a85d2a00c03f58c45881d4be4c2d">~HitManager</a>()</td><td class="entry"><a class="el" href="../../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html">celeritas::detail::HitManager</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d6/dc0/classceleritas_1_1_step_interface.html#a7c4a75bd3e4825b104e9bbf678265e1b">~StepInterface</a>()=default</td><td class="entry"><a class="el" href="../../d6/dc0/classceleritas_1_1_step_interface.html">celeritas::StepInterface</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html#ad22053ea25afcfe1efafee73746e59b0">finalize</a>()</td><td class="entry"><a class="el" href="../../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html">celeritas::detail::HitManager</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html#a1cccfc69bb8a85e1ce38b014d195e8a0">HitManager</a>(GeoParams const &amp;geo, SDSetupOptions const &amp;setup)</td><td class="entry"><a class="el" href="../../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html">celeritas::detail::HitManager</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d6/dc0/classceleritas_1_1_step_interface.html#ada9256c6cc789d3a6ebe0e3862fd3514">MapVolumeDetector</a> typedef</td><td class="entry"><a class="el" href="../../d6/dc0/classceleritas_1_1_step_interface.html">celeritas::StepInterface</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html#a35813a0da1552b3b492f6e14a903f25a">selection</a>() const final</td><td class="entry"><a class="el" href="../../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html">celeritas::detail::HitManager</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d6/dc0/classceleritas_1_1_step_interface.html#ab1a50ef5dcf0d2b72b2d6171bb3092ea">StateDeviceRef</a> typedef</td><td class="entry"><a class="el" href="../../d6/dc0/classceleritas_1_1_step_interface.html">celeritas::StepInterface</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d6/dc0/classceleritas_1_1_step_interface.html#a7e422a75399af8523dbcae5445cf109d">StateHostRef</a> typedef</td><td class="entry"><a class="el" href="../../d6/dc0/classceleritas_1_1_step_interface.html">celeritas::StepInterface</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html#ac3b8a85d2a00c03f58c45881d4be4c2d">~HitManager</a>()</td><td class="entry"><a class="el" href="../../d9/d84/classceleritas_1_1detail_1_1_hit_manager.html">celeritas::detail::HitManager</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d6/dc0/classceleritas_1_1_step_interface.html#a7c4a75bd3e4825b104e9bbf678265e1b">~StepInterface</a>()=default</td><td class="entry"><a class="el" href="../../d6/dc0/classceleritas_1_1_step_interface.html">celeritas::StepInterface</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -88,45 +89,30 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:ac0a7d641fa2a9a7ebcdc0ea104388b43"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd6/classceleritas_1_1detail_1_1_r_b_energy_sampler.html#ac0a7d641fa2a9a7ebcdc0ea104388b43">Energy</a> = <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::MevEnergy</a></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:ac0a7d641fa2a9a7ebcdc0ea104388b43"><td class="memItemLeft" align="right" valign="top"><a id="ac0a7d641fa2a9a7ebcdc0ea104388b43" name="ac0a7d641fa2a9a7ebcdc0ea104388b43"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Energy</b> = <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::MevEnergy</a></td></tr>
 <tr class="separator:ac0a7d641fa2a9a7ebcdc0ea104388b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a41d68c0b5c485a48074911f9c8656410"><td class="memItemLeft" align="right" valign="top"><a id="a41d68c0b5c485a48074911f9c8656410" name="a41d68c0b5c485a48074911f9c8656410"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RBEnergySampler</b> (RelativisticBremRef const &amp;shared, <a class="el" href="../../d0/dd6/classceleritas_1_1detail_1_1_r_b_energy_sampler.html#ac0a7d641fa2a9a7ebcdc0ea104388b43">Energy</a> const &amp;inc_energy, <a class="el" href="../../dd/d82/classceleritas_1_1_cutoff_view.html">CutoffView</a> const &amp;cutoffs, <a class="el" href="../../d4/de4/classceleritas_1_1_material_view.html">MaterialView</a> const &amp;material, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a10c227542094bac9e84cc8430c944f38">ElementComponentId</a> const &amp;elcomp_id)</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RBEnergySampler</b> (RelativisticBremRef const &amp;shared, <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a> const &amp;inc_energy, <a class="el" href="../../dd/d82/classceleritas_1_1_cutoff_view.html">CutoffView</a> const &amp;cutoffs, <a class="el" href="../../d4/de4/classceleritas_1_1_material_view.html">MaterialView</a> const &amp;material, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a10c227542094bac9e84cc8430c944f38">ElementComponentId</a> const &amp;elcomp_id)</td></tr>
 <tr class="memdesc:a41d68c0b5c485a48074911f9c8656410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from incident particle and energy. <br /></td></tr>
 <tr class="separator:a41d68c0b5c485a48074911f9c8656410"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16ac7e1b92bd289b7ff0041776302e48"><td class="memTemplParams" colspan="2"><a id="a16ac7e1b92bd289b7ff0041776302e48" name="a16ac7e1b92bd289b7ff0041776302e48"></a>
 template&lt;class Engine &gt; </td></tr>
-<tr class="memitem:a16ac7e1b92bd289b7ff0041776302e48"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d0/dd6/classceleritas_1_1detail_1_1_r_b_energy_sampler.html#ac0a7d641fa2a9a7ebcdc0ea104388b43">Energy</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (Engine &amp;rng)</td></tr>
+<tr class="memitem:a16ac7e1b92bd289b7ff0041776302e48"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (Engine &amp;rng)</td></tr>
 <tr class="separator:a16ac7e1b92bd289b7ff0041776302e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace11f6b12751869193761187ac765d80"><td class="memTemplParams" colspan="2"><a id="ace11f6b12751869193761187ac765d80" name="ace11f6b12751869193761187ac765d80"></a>
 template&lt;class Engine &gt; </td></tr>
-<tr class="memitem:ace11f6b12751869193761187ac765d80"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (Engine &amp;rng) -&gt; <a class="el" href="../../d0/dd6/classceleritas_1_1detail_1_1_r_b_energy_sampler.html#ac0a7d641fa2a9a7ebcdc0ea104388b43">Energy</a></td></tr>
+<tr class="memitem:ace11f6b12751869193761187ac765d80"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (Engine &amp;rng) -&gt; <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">Energy</a></td></tr>
 <tr class="memdesc:ace11f6b12751869193761187ac765d80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample the bremsstrahlung photon energy based on G4eBremsstrahlungRelModel of the Geant4 10.7 release. <br /></td></tr>
 <tr class="separator:ace11f6b12751869193761187ac765d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Sample the bremsstrahlung photon energy from the relativistic model. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ac0a7d641fa2a9a7ebcdc0ea104388b43" name="ac0a7d641fa2a9a7ebcdc0ea104388b43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0a7d641fa2a9a7ebcdc0ea104388b43">&#9670;&#160;</a></span>Energy</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d0/dd6/classceleritas_1_1detail_1_1_r_b_energy_sampler.html#ac0a7d641fa2a9a7ebcdc0ea104388b43">celeritas::detail::RBEnergySampler::Energy</a> =  <a class="el" href="../../dc/dff/classceleritas_1_1_quantity.html">units::MevEnergy</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="../../d0/d3b/_r_b_energy_sampler_8hh.html">RBEnergySampler.hh</a></li>
 </ul>
 </div><!-- contents -->

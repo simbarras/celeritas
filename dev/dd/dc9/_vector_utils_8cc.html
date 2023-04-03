@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -70,7 +71,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_e19e48231890b7299e0b239a0279643b.html">corecel</a></li><li class="navelem"><a class="el" href="../../dir_f83ad8e1429c574aa4cd0362bd7dc5da.html">math</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_54b4dc0a5a8b71d7ed2a0028b382827b.html">celeritas</a></li><li class="navelem"><a class="el" href="../../dir_7c877df78ca685e67114011869646118.html">grid</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -83,14 +84,56 @@ $(function() {
 <code>#include &quot;<a class="el" href="../../d5/d10/_assert_8hh.html">corecel/Assert.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d0/df5/corecel_2_types_8hh.html">corecel/Types.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d3/de4/_range_8hh.html">corecel/cont/Range.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/df8/_interpolator_8hh.html">Interpolator.hh</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac1e84c60a1a81da1d9ad44a45a061c22"><td class="memItemLeft" align="right" valign="top"><a id="ac1e84c60a1a81da1d9ad44a45a061c22" name="ac1e84c60a1a81da1d9ad44a45a061c22"></a>
-std::vector&lt; real_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::linspace</b> (real_type start, real_type stop, size_type n)</td></tr>
-<tr class="memdesc:ac1e84c60a1a81da1d9ad44a45a061c22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return evenly spaced numbers over a given interval. <br /></td></tr>
-<tr class="separator:ac1e84c60a1a81da1d9ad44a45a061c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af14c074ffdc268ebfad371bd5c4abbc5"><td class="memItemLeft" align="right" valign="top"><a id="af14c074ffdc268ebfad371bd5c4abbc5" name="af14c074ffdc268ebfad371bd5c4abbc5"></a>
+std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::linspace</b> (double start, double stop, size_type n)</td></tr>
+<tr class="memdesc:af14c074ffdc268ebfad371bd5c4abbc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return evenly spaced numbers over a given interval. <br /></td></tr>
+<tr class="separator:af14c074ffdc268ebfad371bd5c4abbc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c116b0197921d8274c7e0ddf0a60a13"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc9/_vector_utils_8cc.html#a9c116b0197921d8274c7e0ddf0a60a13">celeritas::logspace</a> (double start, double stop, size_type n)</td></tr>
+<tr class="memdesc:a9c116b0197921d8274c7e0ddf0a60a13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return logarithmically spaced numbers over a given interval.  <a href="../../dd/dc9/_vector_utils_8cc.html#a9c116b0197921d8274c7e0ddf0a60a13">More...</a><br /></td></tr>
+<tr class="separator:a9c116b0197921d8274c7e0ddf0a60a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a9c116b0197921d8274c7e0ddf0a60a13" name="a9c116b0197921d8274c7e0ddf0a60a13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c116b0197921d8274c7e0ddf0a60a13">&#9670;&#160;</a></span>logspace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; double &gt; celeritas::logspace </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>stop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_type&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return logarithmically spaced numbers over a given interval. </p>
+<p >Unlike numpy's logspace which assumes the start and stop are log-10 values (unless given another argument), the start and stop are the <em>actual</em> first and last values of the resulting vector. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

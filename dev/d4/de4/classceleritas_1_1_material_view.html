@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -88,14 +89,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a331c6e61b452aaf0e67ad2d242a1df84"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de4/classceleritas_1_1_material_view.html#a331c6e61b452aaf0e67ad2d242a1df84">MaterialParamsRef</a> = <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#a35e5b1955aa5d7269b34c6f5044b3b69">NativeCRef</a>&lt; <a class="el" href="../../de/d29/structceleritas_1_1_material_params_data.html">MaterialParamsData</a> &gt;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a331c6e61b452aaf0e67ad2d242a1df84"><td class="memItemLeft" align="right" valign="top"><a id="a331c6e61b452aaf0e67ad2d242a1df84" name="a331c6e61b452aaf0e67ad2d242a1df84"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>MaterialParamsRef</b> = <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#a35e5b1955aa5d7269b34c6f5044b3b69">NativeCRef</a>&lt; <a class="el" href="../../de/d29/structceleritas_1_1_material_params_data.html">MaterialParamsData</a> &gt;</td></tr>
 <tr class="separator:a331c6e61b452aaf0e67ad2d242a1df84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a757817d81e98627c0233d9fee46efabf"><td class="memItemLeft" align="right" valign="top"><a id="a757817d81e98627c0233d9fee46efabf" name="a757817d81e98627c0233d9fee46efabf"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>MaterialView</b> (<a class="el" href="../../d4/de4/classceleritas_1_1_material_view.html#a331c6e61b452aaf0e67ad2d242a1df84">MaterialParamsRef</a> const &amp;params, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a1cade572974306b924a14c099e1a5ef0">MaterialId</a> id)</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>MaterialView</b> (MaterialParamsRef const &amp;params, <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a1cade572974306b924a14c099e1a5ef0">MaterialId</a> id)</td></tr>
 <tr class="memdesc:a757817d81e98627c0233d9fee46efabf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from dynamic and static particle properties. <br /></td></tr>
 <tr class="separator:a757817d81e98627c0233d9fee46efabf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a019a9a9132266cb03fd5c5632bbdf8e6"><td class="memItemLeft" align="right" valign="top"><a id="a019a9a9132266cb03fd5c5632bbdf8e6" name="a019a9a9132266cb03fd5c5632bbdf8e6"></a>
@@ -134,6 +136,9 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../dd/d15/classceleritas_1_1_span.html">Span</a>&lt; <a class="el" href="../../dd/de8/structceleritas_1_1_mat_element_component.html">MatElementComponent</a> const &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>elements</b> () const</td></tr>
 <tr class="memdesc:a49c88ef9e90936a4b6ef3cb78c6db76b"><td class="mdescLeft">&#160;</td><td class="mdescRight">View the elemental components (id/fraction) of this material. <br /></td></tr>
 <tr class="separator:a49c88ef9e90936a4b6ef3cb78c6db76b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8603eba9f309b6ca97e3e6b7dc10df45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de4/classceleritas_1_1_material_view.html#a8603eba9f309b6ca97e3e6b7dc10df45">zeff</a> () const</td></tr>
+<tr class="memdesc:a8603eba9f309b6ca97e3e6b7dc10df45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weighted atomic number.  <a href="../../d4/de4/classceleritas_1_1_material_view.html#a8603eba9f309b6ca97e3e6b7dc10df45">More...</a><br /></td></tr>
+<tr class="separator:a8603eba9f309b6ca97e3e6b7dc10df45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb9b60e7d6e06a40b693e024a03b5c81"><td class="memItemLeft" align="right" valign="top"><a id="afb9b60e7d6e06a40b693e024a03b5c81" name="afb9b60e7d6e06a40b693e024a03b5c81"></a>
 <a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>density</b> () const</td></tr>
 <tr class="memdesc:afb9b60e7d6e06a40b693e024a03b5c81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Material's density [g/cm^3]. <br /></td></tr>
@@ -159,19 +164,32 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p >Access material properties. </p>
 <p >A material is a combination of nuclides/elements at a particular state (e.g. density, temperature). The proportions and identities of a material's constitutents are encoded in the <code>elements</code> accessor, where each index of the returned span corresponds to an <code>ElementComponentId</code> for this material. The <code>get_element_density</code> and <code>element_view</code> helper functions can be used to calculate elemental densities and properties.</p>
 <dl class="section note"><dt>Note</dt><dd>The material -&gt; nuclide mapping will be implemented when we add hadronic physics. A separate NuclideComponentId and NuclideView will operate analogously to the element access. </dd></dl>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a331c6e61b452aaf0e67ad2d242a1df84" name="a331c6e61b452aaf0e67ad2d242a1df84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a331c6e61b452aaf0e67ad2d242a1df84">&#9670;&#160;</a></span>MaterialParamsRef</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8603eba9f309b6ca97e3e6b7dc10df45" name="a8603eba9f309b6ca97e3e6b7dc10df45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8603eba9f309b6ca97e3e6b7dc10df45">&#9670;&#160;</a></span>zeff()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d4/de4/classceleritas_1_1_material_view.html#a331c6e61b452aaf0e67ad2d242a1df84">celeritas::MaterialView::MaterialParamsRef</a> =  <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#a35e5b1955aa5d7269b34c6f5044b3b69">NativeCRef</a>&lt;<a class="el" href="../../de/d29/structceleritas_1_1_material_params_data.html">MaterialParamsData</a>&gt;</td>
+          <td class="memname"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#ac97c7d9259eb113cfcc54c671fd2173d">real_type</a> celeritas::MaterialView::zeff </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p >Type aliases </p>
+
+<p>Weighted atomic number. </p>
+<p >This is Z weighted by the atomic fraction of each element in the material. </p>
 
 </div>
 </div>

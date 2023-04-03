@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -88,42 +89,25 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a186f83add1f2b731c1b1f3908c316a7a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da7/classceleritas_1_1_delta_distribution.html#a186f83add1f2b731c1b1f3908c316a7a">value_type</a> = T</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a186f83add1f2b731c1b1f3908c316a7a"><td class="memItemLeft" align="right" valign="top"><a id="a186f83add1f2b731c1b1f3908c316a7a" name="a186f83add1f2b731c1b1f3908c316a7a"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b> = T</td></tr>
 <tr class="separator:a186f83add1f2b731c1b1f3908c316a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0eb595e565d70ac61d6443db1c3dac60"><td class="memItemLeft" align="right" valign="top"><a id="a0eb595e565d70ac61d6443db1c3dac60" name="a0eb595e565d70ac61d6443db1c3dac60"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>DeltaDistribution</b> (<a class="el" href="../../d7/da7/classceleritas_1_1_delta_distribution.html#a186f83add1f2b731c1b1f3908c316a7a">value_type</a> <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148a2063c1608d6e0baf80249c42e2be5804">value</a>)</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>DeltaDistribution</b> (value_type <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#aeb6446bfcf4853c1dd9248791d829148a2063c1608d6e0baf80249c42e2be5804">value</a>)</td></tr>
 <tr class="separator:a0eb595e565d70ac61d6443db1c3dac60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8d32f633fd23cada00211df78869437"><td class="memTemplParams" colspan="2"><a id="ad8d32f633fd23cada00211df78869437" name="ad8d32f633fd23cada00211df78869437"></a>
 template&lt;class Generator &gt; </td></tr>
-<tr class="memitem:ad8d32f633fd23cada00211df78869437"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../d7/da7/classceleritas_1_1_delta_distribution.html#a186f83add1f2b731c1b1f3908c316a7a">value_type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (Generator &amp;) const</td></tr>
+<tr class="memitem:ad8d32f633fd23cada00211df78869437"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> value_type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (Generator &amp;) const</td></tr>
 <tr class="separator:ad8d32f633fd23cada00211df78869437"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
 class celeritas::DeltaDistribution&lt; T &gt;</div><p >Distribution where the "sampled" value is just the given value. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a186f83add1f2b731c1b1f3908c316a7a" name="a186f83add1f2b731c1b1f3908c316a7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a186f83add1f2b731c1b1f3908c316a7a">&#9670;&#160;</a></span>value_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d7/da7/classceleritas_1_1_delta_distribution.html">celeritas::DeltaDistribution</a>&lt; T &gt;::value_type =  T</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="../../d4/d45/_delta_distribution_8hh.html">DeltaDistribution.hh</a></li>
 </ul>
 </div><!-- contents -->

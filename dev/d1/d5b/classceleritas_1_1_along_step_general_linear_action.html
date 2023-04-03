@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -104,9 +105,9 @@ Public Types</h2></td></tr>
 <tr class="memitem:a7f3ae5f4983f8014f0373385efa3df72"><td class="memItemLeft" align="right" valign="top"><a id="a7f3ae5f4983f8014f0373385efa3df72" name="a7f3ae5f4983f8014f0373385efa3df72"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstFluctuations</b> = std::shared_ptr&lt; <a class="el" href="../../d2/dae/classceleritas_1_1_fluctuation_params.html">FluctuationParams</a> const  &gt;</td></tr>
 <tr class="separator:a7f3ae5f4983f8014f0373385efa3df72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9694ee82c6bb816617deccde9fab1f5"><td class="memItemLeft" align="right" valign="top"><a id="ad9694ee82c6bb816617deccde9fab1f5" name="ad9694ee82c6bb816617deccde9fab1f5"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstMsc</b> = std::shared_ptr&lt; <a class="el" href="../../df/d67/classceleritas_1_1_urban_msc_model.html">UrbanMscModel</a> const  &gt;</td></tr>
-<tr class="separator:ad9694ee82c6bb816617deccde9fab1f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5074d5d5f1046adce6129d548a45bd9d"><td class="memItemLeft" align="right" valign="top"><a id="a5074d5d5f1046adce6129d548a45bd9d" name="a5074d5d5f1046adce6129d548a45bd9d"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SPConstMsc</b> = std::shared_ptr&lt; <a class="el" href="../../d4/d50/classceleritas_1_1_urban_msc_params.html">UrbanMscParams</a> const  &gt;</td></tr>
+<tr class="separator:a5074d5d5f1046adce6129d548a45bd9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classceleritas_1_1_explicit_action_interface"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classceleritas_1_1_explicit_action_interface')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../d8/d6b/classceleritas_1_1_explicit_action_interface.html">celeritas::ExplicitActionInterface</a></td></tr>
 <tr class="memitem:a17841c8c8ad66279eefbdc22604c1cc3 inherit pub_types_classceleritas_1_1_explicit_action_interface"><td class="memItemLeft" align="right" valign="top"><a id="a17841c8c8ad66279eefbdc22604c1cc3" name="a17841c8c8ad66279eefbdc22604c1cc3"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>CoreHostRef</b> = <a class="el" href="../../dd/da8/structceleritas_1_1_core_ref.html">CoreRef</a>&lt; MemSpace::host &gt;</td></tr>
@@ -166,10 +167,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_msc</b> () const<
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a64c83cb3d2180983e8309c9ec7b15d24"><td class="memItemLeft" align="right" valign="top"><a id="a64c83cb3d2180983e8309c9ec7b15d24" name="a64c83cb3d2180983e8309c9ec7b15d24"></a>
-static std::shared_ptr&lt; <a class="el" href="../../d1/d5b/classceleritas_1_1_along_step_general_linear_action.html">AlongStepGeneralLinearAction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>from_params</b> (<a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a98b21e11852c06d3845c53dd5df84797">ActionId</a> id, <a class="el" href="../../df/d18/classceleritas_1_1_material_params.html">MaterialParams</a> const &amp;materials, <a class="el" href="../../d8/d0b/classceleritas_1_1_particle_params.html">ParticleParams</a> const &amp;particles, <a class="el" href="../../db/da1/classceleritas_1_1_physics_params.html">PhysicsParams</a> const &amp;physics, bool eloss_fluctuation)</td></tr>
-<tr class="memdesc:a64c83cb3d2180983e8309c9ec7b15d24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the along-step action from input parameters. <br /></td></tr>
-<tr class="separator:a64c83cb3d2180983e8309c9ec7b15d24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab08d8a97c787d85305a436729f846f30"><td class="memItemLeft" align="right" valign="top"><a id="ab08d8a97c787d85305a436729f846f30" name="ab08d8a97c787d85305a436729f846f30"></a>
+static std::shared_ptr&lt; <a class="el" href="../../d1/d5b/classceleritas_1_1_along_step_general_linear_action.html">AlongStepGeneralLinearAction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>from_params</b> (<a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a98b21e11852c06d3845c53dd5df84797">ActionId</a> id, <a class="el" href="../../df/d18/classceleritas_1_1_material_params.html">MaterialParams</a> const &amp;materials, <a class="el" href="../../d8/d0b/classceleritas_1_1_particle_params.html">ParticleParams</a> const &amp;particles, SPConstMsc const &amp;msc, bool eloss_fluctuation)</td></tr>
+<tr class="memdesc:ab08d8a97c787d85305a436729f846f30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the along-step action from input parameters. <br /></td></tr>
+<tr class="separator:ab08d8a97c787d85305a436729f846f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['importmaterialstate_0',['ImportMaterialState',['../d6/d70/_import_material_8hh.html#a8636399326b6c3c13961c1b3ca4ca161',1,'celeritas']]],
-  ['importmodelclass_1',['ImportModelClass',['../de/de8/_import_process_8hh.html#a1b287483adb07ba06a198644b6cb0114',1,'celeritas']]],
+  ['importmodelclass_1',['ImportModelClass',['../d3/d48/_import_model_8hh.html#a1b287483adb07ba06a198644b6cb0114',1,'celeritas']]],
   ['importphysicsvectortype_2',['ImportPhysicsVectorType',['../d8/d05/_import_physics_vector_8hh.html#a3938adc79cedec70e2dba5e71e099c58',1,'celeritas']]],
   ['importprocessclass_3',['ImportProcessClass',['../de/de8/_import_process_8hh.html#aee9f70862dd95ace9074262973ad3904',1,'celeritas']]],
   ['importprocesstype_4',['ImportProcessType',['../de/de8/_import_process_8hh.html#acf5f32379a6c7a59d83d33cb15bf5d89',1,'celeritas']]],

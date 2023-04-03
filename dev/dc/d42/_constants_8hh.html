@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -75,7 +76,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">Constants.hh File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -90,6 +92,12 @@ Namespaces</h2></td></tr>
 <tr class="memitem:d7/d28/namespaceconstants"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d28/namespaceconstants.html">constants</a></td></tr>
 <tr class="memdesc:d7/d28/namespaceconstants"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mathematical, numerical, and physical constants. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a4361eba32bb2c57d3b938c8d616d3cbc"><td class="memItemLeft" align="right" valign="top"><a id="a4361eba32bb2c57d3b938c8d616d3cbc" name="a4361eba32bb2c57d3b938c8d616d3cbc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CELER_ICRT</b>&#160;&#160;&#160;inline constexpr real_type</td></tr>
+<tr class="separator:a4361eba32bb2c57d3b938c8d616d3cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -142,7 +150,8 @@ constexpr real_type&#160;</td><td class="memItemRight" valign="bottom"><b>celeri
 <tr class="memitem:ac1a1023ddd7822271d8a85f69a56f8e9"><td class="memItemLeft" align="right" valign="top"><a id="ac1a1023ddd7822271d8a85f69a56f8e9" name="ac1a1023ddd7822271d8a85f69a56f8e9"></a>
 constexpr real_type&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::constants::electron_mass</b> = 9.1093837015e-28 * units::gram</td></tr>
 <tr class="separator:ac1a1023ddd7822271d8a85f69a56f8e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91606177455a36a14ad6382dcc5a5e7d"><td class="memItemLeft" align="right" valign="top">constexpr real_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/_constants_8hh.html#a91606177455a36a14ad6382dcc5a5e7d">celeritas::constants::eps_electric</a></td></tr>
+<tr class="memitem:a91606177455a36a14ad6382dcc5a5e7d"><td class="memItemLeft" align="right" valign="top"><a id="a91606177455a36a14ad6382dcc5a5e7d" name="a91606177455a36a14ad6382dcc5a5e7d"></a>
+constexpr real_type&#160;</td><td class="memItemRight" valign="bottom"><b>celeritas::constants::eps_electric</b> = 8.8541878128e-12 * units::farad / units::meter</td></tr>
 <tr class="separator:a91606177455a36a14ad6382dcc5a5e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91f0952c7fbbc7014ae97d88bf85d5db"><td class="memItemLeft" align="right" valign="top">constexpr real_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/_constants_8hh.html#a91f0952c7fbbc7014ae97d88bf85d5db">celeritas::constants::mu_magnetic</a></td></tr>
 <tr class="separator:a91f0952c7fbbc7014ae97d88bf85d5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,30 +171,6 @@ constexpr real_type&#160;</td><td class="memItemRight" valign="bottom"><b>celeri
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Mathematical, numerical, and physical constants. </p>
 </div><h2 class="groupheader">Variable Documentation</h2>
-<a id="a91606177455a36a14ad6382dcc5a5e7d" name="a91606177455a36a14ad6382dcc5a5e7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91606177455a36a14ad6382dcc5a5e7d">&#9670;&#160;</a></span>eps_electric</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr real_type celeritas::constants::eps_electric</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= 8.8541878128e-12 * units::farad</div>
-<div class="line">                                   / units::meter</div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="a91f0952c7fbbc7014ae97d88bf85d5db" name="a91f0952c7fbbc7014ae97d88bf85d5db"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a91f0952c7fbbc7014ae97d88bf85d5db">&#9670;&#160;</a></span>mu_magnetic</h2>
 
@@ -201,12 +186,12 @@ constexpr real_type&#160;</td><td class="memItemRight" valign="bottom"><b>celeri
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= 1.25663706212e-6 * units::newton</div>
-<div class="line">                                  / (units::ampere * units::ampere)</div>
+<div class="line">                         / (units::ampere * units::ampere)</div>
 </div><!-- fragment -->
 </div>
 </div>

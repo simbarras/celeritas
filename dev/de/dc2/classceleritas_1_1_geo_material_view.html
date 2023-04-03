@@ -13,6 +13,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,9 +21,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../celeritas-thumbnail.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../celeritas-square.svg"/></td>
   <td id="projectalign">
-   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.2.0</span>
+   <div id="projectname">Celeritas<span id="projectnumber">&#160;v0.3.0-dev.62+f351e714</span>
    </div>
   </td>
  </tr>
@@ -88,14 +89,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a8f0e75c052572d94a0e5027ddd54a9ed"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dc2/classceleritas_1_1_geo_material_view.html#a8f0e75c052572d94a0e5027ddd54a9ed">GeoMaterialData</a> = <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#a35e5b1955aa5d7269b34c6f5044b3b69">NativeCRef</a>&lt; <a class="el" href="../../d6/ddd/structceleritas_1_1_geo_material_params_data.html">GeoMaterialParamsData</a> &gt;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Type aliases</div></td></tr>
+<tr class="memitem:a8f0e75c052572d94a0e5027ddd54a9ed"><td class="memItemLeft" align="right" valign="top"><a id="a8f0e75c052572d94a0e5027ddd54a9ed" name="a8f0e75c052572d94a0e5027ddd54a9ed"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>GeoMaterialData</b> = <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#a35e5b1955aa5d7269b34c6f5044b3b69">NativeCRef</a>&lt; <a class="el" href="../../d6/ddd/structceleritas_1_1_geo_material_params_data.html">GeoMaterialParamsData</a> &gt;</td></tr>
 <tr class="separator:a8f0e75c052572d94a0e5027ddd54a9ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab856b4c5c5454eca9f2cd76ec741d682"><td class="memItemLeft" align="right" valign="top"><a id="ab856b4c5c5454eca9f2cd76ec741d682" name="ab856b4c5c5454eca9f2cd76ec741d682"></a>
-<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GeoMaterialView</b> (<a class="el" href="../../de/dc2/classceleritas_1_1_geo_material_view.html#a8f0e75c052572d94a0e5027ddd54a9ed">GeoMaterialData</a> const &amp;params)</td></tr>
+<a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GeoMaterialView</b> (GeoMaterialData const &amp;params)</td></tr>
 <tr class="memdesc:ab856b4c5c5454eca9f2cd76ec741d682"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from shared data. <br /></td></tr>
 <tr class="separator:ab856b4c5c5454eca9f2cd76ec741d682"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89c17355d2bcb20f902008d81cf6bcef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc5/_macros_8hh.html#ac631c1bc86fa5c49ade05cca94ae1794">CELER_FUNCTION</a> <a class="el" href="../../db/da7/celeritas_2_types_8hh.html#a1cade572974306b924a14c099e1a5ef0">MaterialId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dc2/classceleritas_1_1_geo_material_view.html#a89c17355d2bcb20f902008d81cf6bcef">material_id</a> (<a class="el" href="../../d1/dd1/_vecgeom_data_8hh.html#a8c97752c08c841e3faf0173adb2e1525">VolumeId</a> volume) const</td></tr>
@@ -104,23 +106,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Access geometry-to-material conversion. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a8f0e75c052572d94a0e5027ddd54a9ed" name="a8f0e75c052572d94a0e5027ddd54a9ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f0e75c052572d94a0e5027ddd54a9ed">&#9670;&#160;</a></span>GeoMaterialData</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../de/dc2/classceleritas_1_1_geo_material_view.html#a8f0e75c052572d94a0e5027ddd54a9ed">celeritas::GeoMaterialView::GeoMaterialData</a> =  <a class="el" href="../../d0/df5/corecel_2_types_8hh.html#a35e5b1955aa5d7269b34c6f5044b3b69">NativeCRef</a>&lt;<a class="el" href="../../d6/ddd/structceleritas_1_1_geo_material_params_data.html">GeoMaterialParamsData</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Type aliases </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a89c17355d2bcb20f902008d81cf6bcef" name="a89c17355d2bcb20f902008d81cf6bcef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a89c17355d2bcb20f902008d81cf6bcef">&#9670;&#160;</a></span>material_id()</h2>
 
