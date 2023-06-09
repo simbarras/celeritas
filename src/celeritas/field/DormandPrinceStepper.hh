@@ -11,7 +11,7 @@
 #include "corecel/Types.hh"
 #include "corecel/math/Algorithms.hh"
 
-#include "Types.hh"
+#include "Types.hh"  
 
 namespace celeritas
 {
