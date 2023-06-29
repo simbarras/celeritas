@@ -157,8 +157,10 @@ CELER_FUNCTION auto CoreTrackView::make_material_view() const
 CELER_FUNCTION auto CoreTrackView::make_particle_view() const
     -> ParticleTrackView
 {
+    // HACK: Link track to particle
+    TrackSlotId slot_id = TrackSlotId{this->track_slot_id().get() / 4};
     return ParticleTrackView{
-        params_.particles, states_.particles, this->track_slot_id()};
+        params_.particles, states_.particles, slot_id};
 }
 
 //---------------------------------------------------------------------------//

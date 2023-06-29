@@ -72,6 +72,7 @@ inline double convert_to_geant(units::MevEnergy const& energy, double units)
  */
 inline void axpy(double a, G4ThreeVector const& x, G4ThreeVector* y)
 {
+    // HACK: To parallelize
     CELER_EXPECT(y);
     for (int i = 0; i < 3; ++i)
     {

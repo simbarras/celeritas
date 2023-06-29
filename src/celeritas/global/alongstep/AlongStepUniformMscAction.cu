@@ -16,6 +16,7 @@
 #include "celeritas/global/CoreParams.hh"
 #include "celeritas/global/CoreState.hh"
 #include "celeritas/global/TrackExecutor.hh"
+#include "corecel/io/Logger.hh"
 
 #include "detail/AlongStepKernels.hh"
 #include "detail/PropagationApplier.hh"
@@ -36,15 +37,23 @@ void AlongStepUniformMscAction::execute(CoreParams const& params,
             *this, msc_->ref<MemSpace::native>(), params, state);
     }
     {
+        // Object that will be executed by the kernel
         auto execute_thread = make_along_step_track_executor(
             params.ptr<MemSpace::native>(),
             state.ptr(),
             this->action_id(),
+            // Propagator
             detail::PropagationApplier{
                 detail::UniformFieldPropagatorFactory{field_params_}});
         static ActionLauncher<decltype(execute_thread)> const launch_kernel(
             *this, "propagate");
-        launch_kernel(params, state, *this, execute_thread);
+
+        // HACK: Changed to launch 4 threads per track
+        // launch_kernel(params, state, *this, execute_thread); // old
+        size_type num_threads = state.size() * 4;
+        StreamId stream_id = state.stream_id();
+        CELER_LOG(debug) << "Launching " << num_threads << " threads";
+        launch_kernel(num_threads, stream_id, execute_thread); // new
     }
     if (this->has_msc())
     {
