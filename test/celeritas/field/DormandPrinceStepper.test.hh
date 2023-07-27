@@ -29,7 +29,7 @@ using Stepper_multi = celeritas::DormandPrinceMultiStepper<Evaluator_t&>;
 //---------------------------------------------------------------------------//
 constexpr int one_thread = 1;
 constexpr int multi_thread = 4;
-constexpr int number_iterations = 1;
+constexpr int number_iterations = 100;
 constexpr OdeState initial_states [5]= {
     OdeState{{1, 2, 3}, {1, 1, 1}},
     OdeState{{0, 0, 0}, {0, 0, 1}},

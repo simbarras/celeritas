@@ -91,13 +91,23 @@ DormandPrinceMultiStepper<E>::run_aside(real_type step,
     constexpr R dxx[] = {d71, d73, d74, d75, d76, d77};
     constexpr R cxx[] = {c71, c73, c74, c75, c76, c77};
 
+    R axx_coef[20];
+    R dxx_coef[6];
+    R cxx_coef[6];
+    for (int i = 0; i < 20; i++){
+        axx_coef[i] = step * axx[i];
+        if (i >= 6) continue;
+        dxx_coef[i] = step * dxx[i];
+        cxx_coef[i] = step / R(2) * cxx[i];
+    }
+
     // Vector multiplication for step one to five
     int coef_counter = 0;
     for (int i = 0; i < 5; i++){
         __syncwarp(mask);
         for (int j = 0; j <= i; j++){
-            along_state->pos[index-1] = (step * axx[coef_counter]) * ks[j].pos[index-1] + along_state->pos[index-1];
-            along_state->mom[index-1] = (step * axx[coef_counter]) * ks[j].mom[index-1] + along_state->mom[index-1];
+            along_state->pos[index-1] = axx_coef[coef_counter] * ks[j].pos[index-1] + along_state->pos[index-1];
+            along_state->mom[index-1] = axx_coef[coef_counter] * ks[j].mom[index-1] + along_state->mom[index-1];
             coef_counter++;
         }
         __syncwarp(mask);
@@ -107,8 +117,8 @@ DormandPrinceMultiStepper<E>::run_aside(real_type step,
     __syncwarp(mask);
     for (int j = 0; j < 6; j++){
         if (j==1) continue; // because a62 = 0
-        result->end_state.pos[index-1] = (step * axx[coef_counter]) * ks[j].pos[index-1] + result->end_state.pos[index-1];
-        result->end_state.mom[index-1] = (step * axx[coef_counter]) * ks[j].mom[index-1] + result->end_state.mom[index-1];
+        result->end_state.pos[index-1] = axx_coef[coef_counter] * ks[j].pos[index-1] + result->end_state.pos[index-1];
+        result->end_state.mom[index-1] = axx_coef[coef_counter] * ks[j].mom[index-1] + result->end_state.mom[index-1];
         coef_counter++;
     }
     __syncwarp(mask);
@@ -118,10 +128,10 @@ DormandPrinceMultiStepper<E>::run_aside(real_type step,
     coef_counter = 0;
     for (int j = 0; j < 7; j++){
         if (j==1) continue; // because d72 and c72 = 0
-        result->err_state.pos[index-1] = (step * dxx[coef_counter]) * ks[j].pos[index-1] + result->err_state.pos[index-1];
-        result->err_state.mom[index-1] = (step * dxx[coef_counter]) * ks[j].mom[index-1] + result->err_state.mom[index-1];
-        result->mid_state.pos[index-1] = (step * cxx[coef_counter] / R(2)) * ks[j].pos[index-1] + result->mid_state.pos[index-1];
-        result->mid_state.mom[index-1] = (step * cxx[coef_counter] / R(2)) * ks[j].mom[index-1] + result->mid_state.mom[index-1];
+        result->err_state.pos[index-1] = dxx_coef[coef_counter] * ks[j].pos[index-1] + result->err_state.pos[index-1];
+        result->err_state.mom[index-1] = dxx_coef[coef_counter] * ks[j].mom[index-1] + result->err_state.mom[index-1];
+        result->mid_state.pos[index-1] = cxx_coef[coef_counter] * ks[j].pos[index-1] + result->mid_state.pos[index-1];
+        result->mid_state.mom[index-1] = cxx_coef[coef_counter] * ks[j].mom[index-1] + result->mid_state.mom[index-1];
         coef_counter++;
     }
     __syncwarp(mask);
