@@ -23,29 +23,29 @@ DormandPrinceMultiStepper<E>::operator()(real_type step,
                                          int num_threads) const
     -> result_type
 {
+    constexpr int num_k = 7;
+    constexpr int num_coef = 32;
+
     int num_states = (blockDim.x * gridDim.x) / num_threads;
     int id = (threadIdx.x + blockIdx.x * blockDim.x) / num_threads;
     int index = (threadIdx.x + blockIdx.x * blockDim.x) % num_threads;
 
     extern __shared__ void* shared_memory[];
     OdeState* shared_ks = (OdeState*)shared_memory;
-    OdeState* shared_along_state = reinterpret_cast<OdeState*>(&shared_ks[7*num_states]);
+    OdeState* shared_along_state = reinterpret_cast<OdeState*>(&shared_ks[num_k*num_states]);
     FieldStepperResult* shared_result = reinterpret_cast<FieldStepperResult*>(&shared_along_state[num_states]);
-    // printf("Void size: %d\n", sizeof(void));
-    // printf("OdeState size: %d\n", sizeof(OdeState));
-    // printf("FieldStepperResult size: %d\n", sizeof(FieldStepperResult));
 
-    int mask = (4 * 4 - 1) << (id * 4);
+
+    int mask = (num_threads * num_threads - 1) << (id * num_threads);
 
     if (index == 0)
     {
-        // run_sequential(step, beg_state, id, mask, ks, &shared_along_state[id], result);
-        run_sequential(step, beg_state, id, mask, &shared_ks[7*id], &shared_along_state[id], &shared_result[id]);
+        run_sequential(step, beg_state, id, mask, &shared_ks[num_k * id], &shared_along_state[id], &shared_result[id]);
     }
     else
     {
-        // run_aside(step, beg_state, id, index, mask, ks, &shared_along_state[id], result);
-        run_aside(step, beg_state, id, index, mask, &shared_ks[7*id], &shared_along_state[id], &shared_result[id]);
+        R* shared_coef = reinterpret_cast<R*>(&shared_result[num_states]);
+        run_aside(step, beg_state, id, index, mask, &shared_ks[num_k * id], &shared_along_state[id], &shared_result[id], &shared_coef[num_coef * id]);
     }
 
     // return *result;
@@ -61,9 +61,9 @@ DormandPrinceMultiStepper<E>::run_aside(real_type step,
                                         int mask,
                                         OdeState* ks,
                                         OdeState* along_state,
-                                        FieldStepperResult* result) const
+                                        FieldStepperResult* result,
+                                        R* computed_coef) const
 {
-    using R = real_type;
     // Coefficients for Dormand-Prince Rks[4](4)7M
     constexpr R a11 = 0.2;
 
@@ -107,18 +107,31 @@ DormandPrinceMultiStepper<E>::run_aside(real_type step,
     constexpr R c77 = 11237099 / R(235043384);
 
     // Coefficients for the vector multiplication
-    constexpr R axx[] = {a11, a21, a22, a31, a32, a33, a41, a42, a43, a44,
-                         a51, a52, a53, a54, a55, a61, a63, a64, a65, a66};
-    constexpr R dxx[] = {d71, d73, d74, d75, d76, d77};
-    constexpr R cxx[] = {c71, c73, c74, c75, c76, c77};
+    constexpr R coef[] = {
+                         a11, a21, a22, a31, a32, a33, a41, a42, a43, a44,
+                         a51, a52, a53, a54, a55, a61, a63, a64, a65, a66,
+                         d71, d73, d74, d75, d76, d77, c71, c73, c74, c75,
+                         c76, c77};
+    constexpr int coef_offset = 6;
+    int coef_counter = 0;
+    int pre_coef_counter = index-1;
+
+    while (pre_coef_counter < 32 - coef_offset){
+        computed_coef[pre_coef_counter] = step * coef[pre_coef_counter];
+        pre_coef_counter += 3;
+    }
+    while (pre_coef_counter < 32){
+        computed_coef[pre_coef_counter] = step * coef[pre_coef_counter] / R(2);
+        pre_coef_counter += 3;
+    }
+
 
     // Vector multiplication for step one to five
-    int coef_counter = 0;
     for (int i = 0; i < 5; i++){
         __syncwarp(mask);
         for (int j = 0; j <= i; j++){
             UPDATE_STATE(
-                index, (*along_state), step * axx[coef_counter], ks[j]);
+                index, (*along_state), computed_coef[coef_counter], ks[j]);
             coef_counter++;
         }
         __syncwarp(mask);
@@ -128,19 +141,18 @@ DormandPrinceMultiStepper<E>::run_aside(real_type step,
     __syncwarp(mask);
     for (int j = 0; j < 6; j++){
         if (j==1) continue; // because a62 = 0
-        UPDATE_STATE(index, result->end_state, step * axx[coef_counter], ks[j]);
+        UPDATE_STATE(index, result->end_state, computed_coef[coef_counter], ks[j]);
         coef_counter++;
     }
     __syncwarp(mask);
 
     // Vector mutltiplication for step eight and nine: error and mid state
     __syncwarp(mask);
-    coef_counter = 0;
     for (int j = 0; j < 7; j++){
         if (j==1) continue; // because d72 and c72 = 0
-        UPDATE_STATE(index, result->err_state, step * dxx[coef_counter], ks[j]);
+        UPDATE_STATE(index, result->err_state, computed_coef[coef_counter], ks[j]);
         UPDATE_STATE(
-            index, result->mid_state, step * cxx[coef_counter] / R(2), ks[j]);
+            index, result->mid_state, computed_coef[coef_counter + coef_offset], ks[j]);
         coef_counter++;
     }
     __syncwarp(mask);

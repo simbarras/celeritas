@@ -26,6 +26,7 @@ class DormandPrinceMultiStepper
     //!@{
     //! \name Type aliases
     using result_type = FieldStepperResult;
+    using R           = real_type;
     //!@}
 
   public:
@@ -50,7 +51,8 @@ class DormandPrinceMultiStepper
                                   OdeState const& beg_state,
                                   int id, int index, int mask,
                                   OdeState *ks, OdeState *along_state,
-                                  FieldStepperResult *result) const;
+                                  FieldStepperResult *result,
+                                  R* computed_coe) const;
 
   private:
     // Functor to calculate the force applied to a particle

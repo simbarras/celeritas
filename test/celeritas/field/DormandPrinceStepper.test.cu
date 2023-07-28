@@ -148,7 +148,8 @@ KernelResult simulate_multi_next_chord(int number_threads)
     int thread_dimension = number_threads * number_of_states;
     int shared_memory = number_of_states * 7 * sizeof(OdeState) +
                     number_of_states * sizeof(OdeState) +
-                    number_of_states * sizeof(FieldStepperResult);
+                    number_of_states * sizeof(FieldStepperResult) +
+                    number_of_states * 32 * sizeof(real_type);
 
     // Launch the kernel
     cudaEventRecord(start);
