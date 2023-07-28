@@ -38,7 +38,7 @@ class DormandPrinceMultiStepper
     // Adaptive step size control
     CELER_FUNCTION result_type operator()(real_type step,
                                           OdeState const& beg_state,
-                                          int id, int index, int num_states) const;
+                                          int num_threads) const;
 
     CELER_FUNCTION void run_sequential(real_type step,
                                           OdeState const& beg_state,

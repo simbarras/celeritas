@@ -20,11 +20,13 @@ template<class E>
 CELER_FUNCTION auto
 DormandPrinceMultiStepper<E>::operator()(real_type step,
                                          OdeState const& beg_state,
-                                         int id,
-                                         int index,
-                                         int num_states) const
+                                         int num_threads) const
     -> result_type
 {
+    int num_states = (blockDim.x * gridDim.x) / num_threads;
+    int id = (threadIdx.x + blockIdx.x * blockDim.x) / num_threads;
+    int index = (threadIdx.x + blockIdx.x * blockDim.x) % num_threads;
+
     extern __shared__ void* shared_memory[];
     OdeState* shared_ks = (OdeState*)shared_memory;
     OdeState* shared_along_state = reinterpret_cast<OdeState*>(&shared_ks[7*num_states]);
