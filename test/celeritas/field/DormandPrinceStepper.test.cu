@@ -43,9 +43,7 @@ __device__ FieldStepperResult run_stepper(Stepper_impl stepper,
                                           OdeState state,
                                           int id,
                                           int index,
-                                          OdeState* ks,
-                                          OdeState* along_state,
-                                          FieldStepperResult* result)
+                                          int num_states)
 {
     return FieldStepperResult();
 }
@@ -56,9 +54,7 @@ __device__ FieldStepperResult run_stepper(Stepper_uni stepper,
                                           OdeState state,
                                           int id,
                                           int index,
-                                          OdeState* ks,
-                                          OdeState* along_state,
-                                          FieldStepperResult* result)
+                                          int num_states)
 {
     if (index != 0) return FieldStepperResult();
     return stepper(step, state);
@@ -70,13 +66,11 @@ __device__ FieldStepperResult run_stepper(Stepper_multi stepper,
                                           OdeState state,
                                           int id,
                                           int index,
-                                          OdeState* ks,
-                                          OdeState* along_state,
-                                          FieldStepperResult* result)
+                                          int num_states)
 {
     // printf("thread %d, index %d\n", id, index);
 
-    return stepper(step, state, id, index, ks, along_state, result);
+    return stepper(step, state, id, index, num_states);
 }
 
 template<class Stepper_impl>
@@ -84,9 +78,7 @@ __global__ void dormand_test_arg_kernel(OdeState* states,
                                         FieldStepperResult* results,
                                         int* num_states,
                                         int* number_iterations,
-                                        int* number_threads,
-                                        OdeState* ks,
-                                        OdeState* along_state)
+                                        int* number_threads)
 {
     constexpr double initial_step_size = 10000.0;
     constexpr double delta_chord = 1e-4;
@@ -110,9 +102,7 @@ __global__ void dormand_test_arg_kernel(OdeState* states,
                           state,
                           id,
                           index,
-                          &ks[id * 7],
-                          &along_state[id],
-                          &results[id]);
+                          *num_states);
         auto dchord
             = detail::distance_chord(state, res.mid_state, res.end_state);
         step *= max(std::sqrt(delta_chord / dchord), half);
@@ -144,19 +134,7 @@ KernelResult simulate_multi_next_chord(int number_threads)
         h_results[i] = FieldStepperResult();
     }
 
-    OdeState *h_along_state, *d_along_state, *d_states;
-    h_along_state = new OdeState[number_of_states];
-    for (int i = 0; i < number_of_states; ++i)
-    {
-        h_along_state[i] = OdeState();
-    }
-
-    OdeState *h_ks, *d_ks;
-    h_ks = new OdeState[number_of_states * 7];
-    for (int i = 0; i < number_of_states * 7; ++i)
-    {
-        h_ks[i] = OdeState();
-    }
+    OdeState *d_states;
 
     // Create events
     cudaEvent_t start, stop;
@@ -169,8 +147,6 @@ KernelResult simulate_multi_next_chord(int number_threads)
     cudaMalloc(&d_num_states, sizeof(int));
     cudaMalloc(&d_number_iterations, sizeof(int));
     cudaMalloc(&d_number_threads, sizeof(int));
-    cudaMalloc(&d_ks, number_of_states * 7 * sizeof(OdeState));
-    cudaMalloc(&d_along_state, number_of_states * sizeof(OdeState));
 
     // Copy initial states to device
     cudaMemcpy(d_states,
@@ -185,39 +161,29 @@ KernelResult simulate_multi_next_chord(int number_threads)
                cudaMemcpyHostToDevice);
     cudaMemcpy(
         d_number_threads, &number_threads, sizeof(int), cudaMemcpyHostToDevice);
-    cudaMemcpy(d_ks,
-               h_ks,
-               number_of_states * 7 * sizeof(OdeState),
-               cudaMemcpyHostToDevice);
-    cudaMemcpy(d_along_state,
-               &h_along_state,
-               number_of_states * sizeof(OdeState),
-               cudaMemcpyHostToDevice);
 
-    // Launch the kernel with the desired streamId
-    // ScopedProfiling profile_this{"Dormand-Prince-test"};
+    // Kernel configuration
+    int thread_dimension = number_threads * number_of_states;
+    int shared_memory = number_of_states * 7 * sizeof(OdeState) +
+                    number_of_states * sizeof(OdeState) +
+                    number_of_states * sizeof(FieldStepperResult);
+
+    // Launch the kernel
     cudaEventRecord(start);
-    // CELER_LAUNCH_KERNEL(dormand_test_arg,
-    //                     device().threads_per_warp(), number_of_states, 0,
-    //                     d_states, d_results, d_num_states);
     if (number_threads > 1){
         dormand_test_arg_kernel<Stepper_multi>
-            <<<1, number_of_states * number_threads>>>(d_states,
+            <<<1, thread_dimension, shared_memory>>>(d_states,
                                                        d_results,
                                                        d_num_states,
                                                        d_number_iterations,
-                                                       d_number_threads,
-                                                       d_ks,
-                                                       d_along_state);
+                                                       d_number_threads);
     } else {
         dormand_test_arg_kernel<Stepper_uni>
-            <<<1, number_of_states>>>(d_states,
+            <<<1, thread_dimension>>>(d_states,
                                       d_results,
                                       d_num_states,
                                       d_number_iterations,
-                                      d_number_threads,
-                                      d_ks,
-                                      d_along_state);
+                                      d_number_threads);
     }
 
     cudaDeviceSynchronize();
@@ -243,8 +209,6 @@ KernelResult simulate_multi_next_chord(int number_threads)
     cudaFree(d_num_states);
     cudaFree(d_number_iterations);
     cudaFree(d_number_threads);
-    cudaFree(d_ks);
-    cudaFree(d_along_state);
 
     // Return results
     result.results = h_results;

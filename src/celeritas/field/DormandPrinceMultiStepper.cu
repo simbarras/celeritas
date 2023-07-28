@@ -22,23 +22,32 @@ DormandPrinceMultiStepper<E>::operator()(real_type step,
                                          OdeState const& beg_state,
                                          int id,
                                          int index,
-                                         OdeState* ks,
-                                         OdeState* along_state,
-                                         FieldStepperResult* result) const
+                                         int num_states) const
     -> result_type
 {
+    extern __shared__ void* shared_memory[];
+    OdeState* shared_ks = (OdeState*)shared_memory;
+    OdeState* shared_along_state = reinterpret_cast<OdeState*>(&shared_ks[7*num_states]);
+    FieldStepperResult* shared_result = reinterpret_cast<FieldStepperResult*>(&shared_along_state[num_states]);
+    // printf("Void size: %d\n", sizeof(void));
+    // printf("OdeState size: %d\n", sizeof(OdeState));
+    // printf("FieldStepperResult size: %d\n", sizeof(FieldStepperResult));
+
     int mask = (4 * 4 - 1) << (id * 4);
 
     if (index == 0)
     {
-        run_sequential(step, beg_state, id, mask, ks, along_state, result);
+        // run_sequential(step, beg_state, id, mask, ks, &shared_along_state[id], result);
+        run_sequential(step, beg_state, id, mask, &shared_ks[7*id], &shared_along_state[id], &shared_result[id]);
     }
     else
     {
-        run_aside(step, beg_state, id, index, mask, ks, along_state, result);
+        // run_aside(step, beg_state, id, index, mask, ks, &shared_along_state[id], result);
+        run_aside(step, beg_state, id, index, mask, &shared_ks[7*id], &shared_along_state[id], &shared_result[id]);
     }
 
-    return *result;
+    // return *result;
+    return shared_result[id];
 }
 
 template<class E>
